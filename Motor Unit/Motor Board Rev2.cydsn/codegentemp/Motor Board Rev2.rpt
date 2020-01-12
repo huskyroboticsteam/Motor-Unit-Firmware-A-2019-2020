@@ -1,0 +1,592 @@
+Loading plugins phase: Elapsed time ==> 0s.567ms
+<CYPRESSTAG name="CyDsfit arguments...">
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\austc\OneDrive\Documents\GitHub\Electronics2018-19\Psoc Arm\Motor Board Rev2.cydsn\Motor Board Rev2.cyprj -d CY8C4248AZI-L485 -s C:\Users\austc\OneDrive\Documents\GitHub\Electronics2018-19\Psoc Arm\Motor Board Rev2.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+</CYPRESSTAG>
+<CYPRESSTAG name="Design elaboration results...">
+ADD: sdb.M0061: information: Info from component: ADC_SAR_Seq_1. The actual sample rate (156250 SPS) differs from the desired sample rate (166666 SPS) due to the clock configuration in the DWR.
+ * C:\Users\austc\OneDrive\Documents\GitHub\Electronics2018-19\Psoc Arm\Motor Board Rev2.cydsn\TopDesign\TopDesign.cysch (Instance:ADC_SAR_Seq_1)
+
+</CYPRESSTAG>
+Elaboration phase: Elapsed time ==> 5s.582ms
+<CYPRESSTAG name="HDL generation results...">
+</CYPRESSTAG>
+HDL generation phase: Elapsed time ==> 0s.275ms
+<CYPRESSTAG name="Synthesis results...">
+
+     | | | | | | |
+   _________________
+  -|               |-
+  -|               |-
+  -|               |-
+  -|    CYPRESS    |-
+  -|               |-
+  -|               |-   Warp Verilog Synthesis Compiler: Version 6.3 IR 41
+  -|               |-   Copyright (C) 1991-2001 Cypress Semiconductor
+   |_______________|
+     | | | | | | |
+
+======================================================================
+Compiling:  Motor Board Rev2.v
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\austc\OneDrive\Documents\GitHub\Electronics2018-19\Psoc Arm\Motor Board Rev2.cydsn\Motor Board Rev2.cyprj -dcpsoc3 Motor Board Rev2.v -verilog
+======================================================================
+
+======================================================================
+Compiling:  Motor Board Rev2.v
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\austc\OneDrive\Documents\GitHub\Electronics2018-19\Psoc Arm\Motor Board Rev2.cydsn\Motor Board Rev2.cyprj -dcpsoc3 Motor Board Rev2.v -verilog
+======================================================================
+
+======================================================================
+Compiling:  Motor Board Rev2.v
+Program  :   vlogfe
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\austc\OneDrive\Documents\GitHub\Electronics2018-19\Psoc Arm\Motor Board Rev2.cydsn\Motor Board Rev2.cyprj -dcpsoc3 -verilog Motor Board Rev2.v
+======================================================================
+
+vlogfe V6.3 IR 41:  Verilog parser
+Mon Jan 06 19:17:03 2020
+
+
+======================================================================
+Compiling:  Motor Board Rev2.v
+Program  :   vpp
+Options  :    -yv2 -q10 Motor Board Rev2.v
+======================================================================
+
+vpp V6.3 IR 41:  Verilog Pre-Processor
+Mon Jan 06 19:17:03 2020
+
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Counter_v3_0\B_Counter_v3_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\bQuadDec_v3_0\bQuadDec_v3_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\not_v1_0\not_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\and_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Debouncer_v1_0\Debouncer_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyStatusReg_v1_90\CyStatusReg_v1_90.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
+
+vpp:  No errors.
+
+Library 'work' => directory 'lcpsoc3'
+General_symbol_table
+General_symbol_table
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Using control file 'Motor Board Rev2.ctl'.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v (line 368, col 46):  Note: Substituting module 'cmp_vv_vv' for '='.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v (line 374, col 62):  Note: Substituting module 'add_vv_vv' for '+'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
+
+vlogfe:  No errors.
+
+
+======================================================================
+Compiling:  Motor Board Rev2.v
+Program  :   tovif
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\austc\OneDrive\Documents\GitHub\Electronics2018-19\Psoc Arm\Motor Board Rev2.cydsn\Motor Board Rev2.cyprj -dcpsoc3 -verilog Motor Board Rev2.v
+======================================================================
+
+tovif V6.3 IR 41:  High-level synthesis
+Mon Jan 06 19:17:04 2020
+
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\austc\OneDrive\Documents\GitHub\Electronics2018-19\Psoc Arm\Motor Board Rev2.cydsn\codegentemp\Motor Board Rev2.ctl'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Users\austc\OneDrive\Documents\GitHub\Electronics2018-19\Psoc Arm\Motor Board Rev2.cydsn\codegentemp\Motor Board Rev2.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Counter_v3_0\B_Counter_v3_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\bQuadDec_v3_0\bQuadDec_v3_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\not_v1_0\not_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\and_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Debouncer_v1_0\Debouncer_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyStatusReg_v1_90\CyStatusReg_v1_90.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
+
+tovif:  No errors.
+
+
+======================================================================
+Compiling:  Motor Board Rev2.v
+Program  :   topld
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\austc\OneDrive\Documents\GitHub\Electronics2018-19\Psoc Arm\Motor Board Rev2.cydsn\Motor Board Rev2.cyprj -dcpsoc3 -verilog Motor Board Rev2.v
+======================================================================
+
+topld V6.3 IR 41:  Synthesis and optimization
+Mon Jan 06 19:17:06 2020
+
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\austc\OneDrive\Documents\GitHub\Electronics2018-19\Psoc Arm\Motor Board Rev2.cydsn\codegentemp\Motor Board Rev2.ctl'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Users\austc\OneDrive\Documents\GitHub\Electronics2018-19\Psoc Arm\Motor Board Rev2.cydsn\codegentemp\Motor Board Rev2.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Counter_v3_0\B_Counter_v3_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\bQuadDec_v3_0\bQuadDec_v3_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\not_v1_0\not_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\and_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Debouncer_v1_0\Debouncer_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyStatusReg_v1_90\CyStatusReg_v1_90.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
+
+----------------------------------------------------------
+Detecting unused logic.
+----------------------------------------------------------
+    User names
+	\QuadDec:Cnt16:Net_95\
+	\QuadDec:Cnt16:CounterUDB:ctrl_cmod_2\
+	\QuadDec:Cnt16:CounterUDB:ctrl_cmod_1\
+	\QuadDec:Cnt16:CounterUDB:ctrl_cmod_0\
+	\Status_Reg_Switches:status_7\
+	\ADC_SAR_Seq_1:Net_3125\
+	\ADC_SAR_Seq_1:Net_3126\
+	\CAN:Net_15\
+	\CAN:Net_13\
+	\UART:Net_1257\
+	\UART:uncfg_rx_irq\
+	\UART:Net_1099\
+	\UART:Net_1258\
+	Net_484
+	Net_493
+	Net_494
+	Net_495
+	Net_496
+	Net_497
+	Net_498
+	Net_499
+	Net_501
+	Net_504
+	\Timer_1:TimerUDB:ctrl_ten\
+	\Timer_1:TimerUDB:ctrl_cmode_0\
+	\Timer_1:TimerUDB:ctrl_tmode_1\
+	\Timer_1:TimerUDB:ctrl_tmode_0\
+	\Timer_1:TimerUDB:ctrl_ic_1\
+	\Timer_1:TimerUDB:ctrl_ic_0\
+	Net_1297
+	Net_1296
+	\Timer_1:TimerUDB:zeros_3\
+	\I2C_1:Net_1257\
+	\I2C_1:uncfg_rx_irq\
+	\I2C_1:Net_1099\
+	\I2C_1:Net_1258\
+	Net_1326
+	Net_1335
+	Net_1336
+	Net_1337
+	Net_1338
+	Net_1339
+	Net_1340
+	Net_1341
+	Net_1343
+	Net_1346
+
+
+Deleted 46 User equations/components.
+Deleted 0 Synthesized equations/components.
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+Aliasing one to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Pin_Limit_2_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing \PWM_Motor:Net_75\ to zero
+Aliasing \PWM_Motor:Net_69\ to tmpOE__Pin_Limit_1_net_0
+Aliasing \PWM_Motor:Net_66\ to zero
+Aliasing \PWM_Motor:Net_82\ to zero
+Aliasing \PWM_Motor:Net_72\ to zero
+Aliasing tmpOE__Pin_Motor_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Pin_Pot_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Pin_Direction_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__SLP_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing \QuadDec:Cnt16:CounterUDB:ctrl_capmode_1\ to zero
+Aliasing \QuadDec:Cnt16:CounterUDB:ctrl_capmode_0\ to zero
+Aliasing \QuadDec:Cnt16:CounterUDB:capt_rising\ to zero
+Aliasing \QuadDec:Cnt16:CounterUDB:underflow\ to \QuadDec:Cnt16:CounterUDB:status_1\
+Aliasing \QuadDec:Cnt16:CounterUDB:tc_i\ to \QuadDec:Cnt16:CounterUDB:reload_tc\
+Aliasing \QuadDec:bQuadDec:status_4\ to zero
+Aliasing \QuadDec:bQuadDec:status_5\ to zero
+Aliasing \QuadDec:bQuadDec:status_6\ to zero
+Aliasing \QuadDec:Net_1229\ to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Pin_Encoder_A_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Pin_Encoder_B_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Spare1_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Spare4_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing \Status_Reg_Switches:status_6\ to zero
+Aliasing \Status_Reg_Switches:status_5\ to zero
+Aliasing \Status_Reg_Switches:status_4\ to zero
+Aliasing \Status_Reg_Switches:status_3\ to zero
+Aliasing \Status_Reg_Switches:status_2\ to zero
+Aliasing \ADC_SAR_Seq_1:Net_3107\ to zero
+Aliasing \ADC_SAR_Seq_1:Net_3106\ to zero
+Aliasing \ADC_SAR_Seq_1:Net_3105\ to zero
+Aliasing \ADC_SAR_Seq_1:Net_3104\ to zero
+Aliasing \ADC_SAR_Seq_1:Net_3103\ to zero
+Aliasing \ADC_SAR_Seq_1:tmpOE__Bypass_net_0\ to tmpOE__Pin_Limit_1_net_0
+Aliasing \ADC_SAR_Seq_1:Net_3207_1\ to zero
+Aliasing \ADC_SAR_Seq_1:Net_3207_0\ to zero
+Aliasing \ADC_SAR_Seq_1:Net_3235\ to zero
+Aliasing tmpOE__RX_1_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__TX_1_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing \UART:select_s_wire\ to zero
+Aliasing \UART:sclk_s_wire\ to zero
+Aliasing \UART:mosi_s_wire\ to zero
+Aliasing \UART:miso_m_wire\ to zero
+Aliasing \UART:tmpOE__tx_net_0\ to tmpOE__Pin_Limit_1_net_0
+Aliasing \UART:tmpOE__rx_net_0\ to tmpOE__Pin_Limit_1_net_0
+Aliasing \UART:cts_wire\ to zero
+Aliasing tmpOE__Dip_3_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Dip_2_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Dip_4_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing \Can_addr:status_3\ to zero
+Aliasing \Can_addr:status_4\ to zero
+Aliasing \Can_addr:status_5\ to zero
+Aliasing \Can_addr:status_6\ to zero
+Aliasing \Can_addr:status_7\ to zero
+Aliasing tmpOE__Current_sense_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__fault_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing Net_1291 to zero
+Aliasing \Timer_1:TimerUDB:ctrl_cmode_1\ to zero
+Aliasing \Timer_1:TimerUDB:trigger_enable\ to tmpOE__Pin_Limit_1_net_0
+Aliasing \Timer_1:TimerUDB:status_6\ to zero
+Aliasing \Timer_1:TimerUDB:status_5\ to zero
+Aliasing \Timer_1:TimerUDB:status_4\ to zero
+Aliasing \Timer_1:TimerUDB:status_0\ to \Timer_1:TimerUDB:tc_i\
+Aliasing \I2C_1:select_s_wire\ to zero
+Aliasing \I2C_1:rx_wire\ to zero
+Aliasing \I2C_1:sclk_s_wire\ to zero
+Aliasing \I2C_1:mosi_s_wire\ to zero
+Aliasing \I2C_1:miso_m_wire\ to zero
+Aliasing \I2C_1:tmpOE__sda_net_0\ to tmpOE__Pin_Limit_1_net_0
+Aliasing \I2C_1:tmpOE__scl_net_0\ to tmpOE__Pin_Limit_1_net_0
+Aliasing \I2C_1:cts_wire\ to zero
+Aliasing tmpOE__Spare5_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Spare6_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Error_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__vin_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__vout_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Test_LED_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Laser_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing tmpOE__Alert_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing \PWM_Servo:Net_81\ to \PWM_Motor:Net_81\
+Aliasing \PWM_Servo:Net_75\ to zero
+Aliasing \PWM_Servo:Net_69\ to tmpOE__Pin_Limit_1_net_0
+Aliasing \PWM_Servo:Net_66\ to zero
+Aliasing \PWM_Servo:Net_82\ to zero
+Aliasing \PWM_Servo:Net_72\ to zero
+Aliasing tmpOE__Servo_net_0 to tmpOE__Pin_Limit_1_net_0
+Aliasing \QuadDec:Cnt16:CounterUDB:prevCapture\\D\ to zero
+Aliasing \QuadDec:Cnt16:CounterUDB:cmp_out_reg_i\\D\ to \QuadDec:Cnt16:CounterUDB:prevCompare\\D\
+Aliasing \Debouncer_1:DEBOUNCER[0]:d_sync_1\\D\ to Net_966_0
+Aliasing Net_1203_0D to zero
+Aliasing Net_1201_0D to zero
+Aliasing Net_1202_0D to zero
+Aliasing \Debouncer_1:DEBOUNCER[1]:d_sync_1\\D\ to Net_966_1
+Aliasing Net_1203_1D to zero
+Aliasing Net_1201_1D to zero
+Aliasing Net_1202_1D to zero
+Aliasing \Timer_1:TimerUDB:capture_last\\D\ to zero
+Aliasing \Timer_1:TimerUDB:hwEnable_reg\\D\ to \Timer_1:TimerUDB:run_mode\
+Aliasing \Timer_1:TimerUDB:capture_out_reg_i\\D\ to \Timer_1:TimerUDB:capt_fifo_load_int\
+Removing Lhs of wire one[7] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__Pin_Limit_2_net_0[10] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \PWM_Motor:Net_81\[17] = Net_32[29]
+Removing Lhs of wire \PWM_Motor:Net_75\[18] = zero[2]
+Removing Lhs of wire \PWM_Motor:Net_69\[19] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \PWM_Motor:Net_66\[20] = zero[2]
+Removing Lhs of wire \PWM_Motor:Net_82\[21] = zero[2]
+Removing Lhs of wire \PWM_Motor:Net_72\[22] = zero[2]
+Removing Lhs of wire tmpOE__Pin_Motor_net_0[33] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__Pin_Pot_net_0[40] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__Pin_Direction_net_0[47] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__SLP_net_0[59] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \QuadDec:Cnt16:Net_89\[64] = \QuadDec:Net_1251\[65]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:ctrl_capmode_1\[73] = zero[2]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:ctrl_capmode_0\[74] = zero[2]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:ctrl_enable\[86] = \QuadDec:Cnt16:CounterUDB:control_7\[78]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:capt_rising\[88] = zero[2]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:capt_falling\[89] = \QuadDec:Cnt16:CounterUDB:prevCapture\[87]
+Removing Rhs of wire \QuadDec:Net_1260\[93] = \QuadDec:bQuadDec:state_2\[219]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:final_enable\[95] = \QuadDec:Cnt16:CounterUDB:control_7\[78]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:counter_enable\[96] = \QuadDec:Cnt16:CounterUDB:control_7\[78]
+Removing Rhs of wire \QuadDec:Cnt16:CounterUDB:status_0\[97] = \QuadDec:Cnt16:CounterUDB:cmp_out_status\[98]
+Removing Rhs of wire \QuadDec:Cnt16:CounterUDB:status_1\[99] = \QuadDec:Cnt16:CounterUDB:per_zero\[100]
+Removing Rhs of wire \QuadDec:Cnt16:CounterUDB:status_2\[101] = \QuadDec:Cnt16:CounterUDB:overflow_status\[102]
+Removing Rhs of wire \QuadDec:Cnt16:CounterUDB:status_3\[103] = \QuadDec:Cnt16:CounterUDB:underflow_status\[104]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:status_4\[105] = \QuadDec:Cnt16:CounterUDB:hwCapture\[91]
+Removing Rhs of wire \QuadDec:Cnt16:CounterUDB:status_5\[106] = \QuadDec:Cnt16:CounterUDB:fifo_full\[107]
+Removing Rhs of wire \QuadDec:Cnt16:CounterUDB:status_6\[108] = \QuadDec:Cnt16:CounterUDB:fifo_nempty\[109]
+Removing Rhs of wire \QuadDec:Cnt16:CounterUDB:overflow\[112] = \QuadDec:Cnt16:CounterUDB:per_FF\[113]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:underflow\[114] = \QuadDec:Cnt16:CounterUDB:status_1\[99]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:tc_i\[117] = \QuadDec:Cnt16:CounterUDB:reload_tc\[94]
+Removing Rhs of wire \QuadDec:Net_1275\[119] = \QuadDec:Cnt16:CounterUDB:tc_reg_i\[118]
+Removing Rhs of wire \QuadDec:Cnt16:CounterUDB:cmp_out_i\[120] = \QuadDec:Cnt16:CounterUDB:cmp_equal\[121]
+Removing Rhs of wire \QuadDec:Net_1264\[124] = \QuadDec:Cnt16:CounterUDB:cmp_out_reg_i\[123]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:dp_dir\[128] = \QuadDec:Net_1251\[65]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:cs_addr_2\[129] = \QuadDec:Net_1251\[65]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:cs_addr_1\[130] = \QuadDec:Cnt16:CounterUDB:count_enable\[127]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:cs_addr_0\[131] = \QuadDec:Cnt16:CounterUDB:reload\[92]
+Removing Lhs of wire \QuadDec:Net_1290\[208] = \QuadDec:Net_1275\[119]
+Removing Lhs of wire \QuadDec:bQuadDec:index_filt\[217] = \QuadDec:Net_1232\[218]
+Removing Lhs of wire \QuadDec:Net_1232\[218] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Rhs of wire \QuadDec:bQuadDec:error\[220] = \QuadDec:bQuadDec:state_3\[221]
+Removing Lhs of wire \QuadDec:bQuadDec:status_0\[224] = \QuadDec:Net_530\[225]
+Removing Lhs of wire \QuadDec:bQuadDec:status_1\[226] = \QuadDec:Net_611\[227]
+Removing Lhs of wire \QuadDec:bQuadDec:status_2\[228] = \QuadDec:Net_1260\[93]
+Removing Lhs of wire \QuadDec:bQuadDec:status_3\[229] = \QuadDec:bQuadDec:error\[220]
+Removing Lhs of wire \QuadDec:bQuadDec:status_4\[230] = zero[2]
+Removing Lhs of wire \QuadDec:bQuadDec:status_5\[231] = zero[2]
+Removing Lhs of wire \QuadDec:bQuadDec:status_6\[232] = zero[2]
+Removing Lhs of wire \QuadDec:Net_1229\[237] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \QuadDec:Net_1272\[238] = \QuadDec:Net_1264\[124]
+Removing Lhs of wire tmpOE__Pin_Encoder_A_net_0[241] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__Pin_Encoder_B_net_0[246] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__Spare1_net_0[252] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__Spare4_net_0[258] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Rhs of wire Net_966_0[269] = \Debouncer_1:DEBOUNCER[0]:d_sync_0\[266]
+Removing Rhs of wire Net_966_1[276] = \Debouncer_1:DEBOUNCER[1]:d_sync_0\[273]
+Removing Lhs of wire \Status_Reg_Switches:status_6\[281] = zero[2]
+Removing Lhs of wire \Status_Reg_Switches:status_5\[282] = zero[2]
+Removing Lhs of wire \Status_Reg_Switches:status_4\[283] = zero[2]
+Removing Lhs of wire \Status_Reg_Switches:status_3\[284] = zero[2]
+Removing Lhs of wire \Status_Reg_Switches:status_2\[285] = zero[2]
+Removing Lhs of wire \Status_Reg_Switches:status_1\[286] = Net_966_1[276]
+Removing Lhs of wire \Status_Reg_Switches:status_0\[287] = Net_966_0[269]
+Removing Lhs of wire \ADC_SAR_Seq_1:Net_3107\[364] = zero[2]
+Removing Lhs of wire \ADC_SAR_Seq_1:Net_3106\[365] = zero[2]
+Removing Lhs of wire \ADC_SAR_Seq_1:Net_3105\[366] = zero[2]
+Removing Lhs of wire \ADC_SAR_Seq_1:Net_3104\[367] = zero[2]
+Removing Lhs of wire \ADC_SAR_Seq_1:Net_3103\[368] = zero[2]
+Removing Lhs of wire \ADC_SAR_Seq_1:tmpOE__Bypass_net_0\[370] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \ADC_SAR_Seq_1:Net_17\[419] = \ADC_SAR_Seq_1:Net_1845\[292]
+Removing Lhs of wire \ADC_SAR_Seq_1:Net_3207_1\[441] = zero[2]
+Removing Lhs of wire \ADC_SAR_Seq_1:Net_3207_0\[442] = zero[2]
+Removing Lhs of wire \ADC_SAR_Seq_1:Net_3235\[443] = zero[2]
+Removing Lhs of wire tmpOE__RX_1_net_0[512] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__TX_1_net_0[518] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \UART:select_s_wire\[534] = zero[2]
+Removing Rhs of wire \UART:rx_wire\[535] = \UART:Net_1268\[536]
+Removing Lhs of wire \UART:Net_1170\[539] = \UART:Net_847\[533]
+Removing Lhs of wire \UART:sclk_s_wire\[540] = zero[2]
+Removing Lhs of wire \UART:mosi_s_wire\[541] = zero[2]
+Removing Lhs of wire \UART:miso_m_wire\[542] = zero[2]
+Removing Lhs of wire \UART:tmpOE__tx_net_0\[544] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \UART:tmpOE__rx_net_0\[553] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \UART:cts_wire\[557] = zero[2]
+Removing Lhs of wire tmpOE__Dip_3_net_0[584] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__Dip_2_net_0[590] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__Dip_4_net_0[596] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \Can_addr:status_0\[601] = Net_525[597]
+Removing Lhs of wire \Can_addr:status_1\[602] = Net_526[585]
+Removing Lhs of wire \Can_addr:status_2\[603] = Net_527[591]
+Removing Lhs of wire \Can_addr:status_3\[604] = zero[2]
+Removing Lhs of wire \Can_addr:status_4\[605] = zero[2]
+Removing Lhs of wire \Can_addr:status_5\[606] = zero[2]
+Removing Lhs of wire \Can_addr:status_6\[607] = zero[2]
+Removing Lhs of wire \Can_addr:status_7\[608] = zero[2]
+Removing Lhs of wire tmpOE__Current_sense_net_0[611] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__fault_net_0[617] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire Net_1291[624] = zero[2]
+Removing Lhs of wire \Timer_1:TimerUDB:ctrl_enable\[638] = \Timer_1:TimerUDB:control_7\[630]
+Removing Lhs of wire \Timer_1:TimerUDB:ctrl_cmode_1\[640] = zero[2]
+Removing Rhs of wire \Timer_1:TimerUDB:timer_enable\[649] = \Timer_1:TimerUDB:runmode_enable\[662]
+Removing Rhs of wire \Timer_1:TimerUDB:run_mode\[650] = \Timer_1:TimerUDB:hwEnable\[651]
+Removing Lhs of wire \Timer_1:TimerUDB:run_mode\[650] = \Timer_1:TimerUDB:control_7\[630]
+Removing Lhs of wire \Timer_1:TimerUDB:trigger_enable\[653] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \Timer_1:TimerUDB:tc_i\[655] = \Timer_1:TimerUDB:status_tc\[652]
+Removing Lhs of wire \Timer_1:TimerUDB:capt_fifo_load_int\[661] = \Timer_1:TimerUDB:capt_fifo_load\[648]
+Removing Lhs of wire \Timer_1:TimerUDB:status_6\[664] = zero[2]
+Removing Lhs of wire \Timer_1:TimerUDB:status_5\[665] = zero[2]
+Removing Lhs of wire \Timer_1:TimerUDB:status_4\[666] = zero[2]
+Removing Lhs of wire \Timer_1:TimerUDB:status_0\[667] = \Timer_1:TimerUDB:status_tc\[652]
+Removing Lhs of wire \Timer_1:TimerUDB:status_1\[668] = \Timer_1:TimerUDB:capt_fifo_load\[648]
+Removing Rhs of wire \Timer_1:TimerUDB:status_2\[669] = \Timer_1:TimerUDB:fifo_full\[670]
+Removing Rhs of wire \Timer_1:TimerUDB:status_3\[671] = \Timer_1:TimerUDB:fifo_nempty\[672]
+Removing Lhs of wire \Timer_1:TimerUDB:cs_addr_2\[675] = zero[2]
+Removing Lhs of wire \Timer_1:TimerUDB:cs_addr_1\[676] = \Timer_1:TimerUDB:trig_reg\[663]
+Removing Lhs of wire \Timer_1:TimerUDB:cs_addr_0\[677] = \Timer_1:TimerUDB:per_zero\[654]
+Removing Lhs of wire \I2C_1:select_s_wire\[808] = zero[2]
+Removing Lhs of wire \I2C_1:rx_wire\[809] = zero[2]
+Removing Lhs of wire \I2C_1:Net_1170\[812] = \I2C_1:Net_847\[807]
+Removing Lhs of wire \I2C_1:sclk_s_wire\[813] = zero[2]
+Removing Lhs of wire \I2C_1:mosi_s_wire\[814] = zero[2]
+Removing Lhs of wire \I2C_1:miso_m_wire\[815] = zero[2]
+Removing Lhs of wire \I2C_1:tmpOE__sda_net_0\[817] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \I2C_1:tmpOE__scl_net_0\[823] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \I2C_1:cts_wire\[832] = zero[2]
+Removing Lhs of wire tmpOE__Spare5_net_0[857] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__Spare6_net_0[863] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__Error_net_0[869] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__vin_net_0[886] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__vout_net_0[892] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__Test_LED_net_0[898] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__Laser_net_0[904] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire tmpOE__Alert_net_0[910] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \PWM_Servo:Net_81\[916] = Net_32[29]
+Removing Lhs of wire \PWM_Servo:Net_75\[917] = zero[2]
+Removing Lhs of wire \PWM_Servo:Net_69\[918] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \PWM_Servo:Net_66\[919] = zero[2]
+Removing Lhs of wire \PWM_Servo:Net_82\[920] = zero[2]
+Removing Lhs of wire \PWM_Servo:Net_72\[921] = zero[2]
+Removing Lhs of wire tmpOE__Servo_net_0[929] = tmpOE__Pin_Limit_1_net_0[1]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:prevCapture\\D\[935] = zero[2]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:overflow_reg_i\\D\[936] = \QuadDec:Cnt16:CounterUDB:overflow\[112]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:underflow_reg_i\\D\[937] = \QuadDec:Cnt16:CounterUDB:status_1\[99]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:tc_reg_i\\D\[938] = \QuadDec:Cnt16:CounterUDB:reload_tc\[94]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:prevCompare\\D\[939] = \QuadDec:Cnt16:CounterUDB:cmp_out_i\[120]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:cmp_out_reg_i\\D\[940] = \QuadDec:Cnt16:CounterUDB:cmp_out_i\[120]
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:count_stored_i\\D\[941] = \QuadDec:Net_1203\[126]
+Removing Lhs of wire \Debouncer_1:DEBOUNCER[0]:d_sync_0\\D\[947] = Net_1096_0[267]
+Removing Lhs of wire \Debouncer_1:DEBOUNCER[0]:d_sync_1\\D\[948] = Net_966_0[269]
+Removing Lhs of wire Net_1203_0D[949] = zero[2]
+Removing Lhs of wire Net_1201_0D[950] = zero[2]
+Removing Lhs of wire Net_1202_0D[951] = zero[2]
+Removing Lhs of wire \Debouncer_1:DEBOUNCER[1]:d_sync_0\\D\[952] = Net_1096_1[274]
+Removing Lhs of wire \Debouncer_1:DEBOUNCER[1]:d_sync_1\\D\[953] = Net_966_1[276]
+Removing Lhs of wire Net_1203_1D[954] = zero[2]
+Removing Lhs of wire Net_1201_1D[955] = zero[2]
+Removing Lhs of wire Net_1202_1D[956] = zero[2]
+Removing Lhs of wire \Timer_1:TimerUDB:capture_last\\D\[957] = zero[2]
+Removing Lhs of wire \Timer_1:TimerUDB:tc_reg_i\\D\[958] = \Timer_1:TimerUDB:status_tc\[652]
+Removing Lhs of wire \Timer_1:TimerUDB:hwEnable_reg\\D\[959] = \Timer_1:TimerUDB:control_7\[630]
+Removing Lhs of wire \Timer_1:TimerUDB:capture_out_reg_i\\D\[960] = \Timer_1:TimerUDB:capt_fifo_load\[648]
+
+------------------------------------------------------
+Aliased 0 equations, 162 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+Substituting virtuals - pass 1:
+
+Note:  Expanding virtual equation for 'tmpOE__Pin_Limit_1_net_0' (cost = 0):
+tmpOE__Pin_Limit_1_net_0 <=  ('1') ;
+
+Note:  Expanding virtual equation for 'zero' (cost = 0):
+zero <=  ('0') ;
+
+Note:  Expanding virtual equation for '\QuadDec:Cnt16:CounterUDB:capt_either_edge\' (cost = 0):
+\QuadDec:Cnt16:CounterUDB:capt_either_edge\ <= (\QuadDec:Cnt16:CounterUDB:prevCapture\);
+
+Note:  Expanding virtual equation for '\QuadDec:Cnt16:CounterUDB:reload_tc\' (cost = 2):
+\QuadDec:Cnt16:CounterUDB:reload_tc\ <= (\QuadDec:Cnt16:CounterUDB:status_1\
+	OR \QuadDec:Cnt16:CounterUDB:overflow\);
+
+Note:  Expanding virtual equation for '\QuadDec:Net_1151\' (cost = 0):
+\QuadDec:Net_1151\ <= (not \QuadDec:Net_1251\);
+
+Note:  Expanding virtual equation for '\QuadDec:Net_1287\' (cost = 0):
+\QuadDec:Net_1287\ <= (not \QuadDec:Net_1264\);
+
+Note:  Expanding virtual equation for '\Timer_1:TimerUDB:fifo_load_polarized\' (cost = 0):
+\Timer_1:TimerUDB:fifo_load_polarized\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\Timer_1:TimerUDB:timer_enable\' (cost = 0):
+\Timer_1:TimerUDB:timer_enable\ <= (\Timer_1:TimerUDB:control_7\);
+
+
+Substituting virtuals - pass 2:
+
+Note:  Expanding virtual equation for '\QuadDec:Net_1248\' (cost = 2):
+\QuadDec:Net_1248\ <= ((not \QuadDec:Net_1264\ and \QuadDec:Net_1275\));
+
+
+Substituting virtuals - pass 3:
+
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 9 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 3.
+----------------------------------------------------------
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+Aliasing \QuadDec:Cnt16:CounterUDB:hwCapture\ to zero
+Aliasing \Timer_1:TimerUDB:capt_fifo_load\ to zero
+Removing Lhs of wire \QuadDec:Cnt16:CounterUDB:hwCapture\[91] = zero[2]
+Removing Lhs of wire \Timer_1:TimerUDB:capt_fifo_load\[648] = zero[2]
+Removing Lhs of wire \Timer_1:TimerUDB:trig_reg\[663] = \Timer_1:TimerUDB:control_7\[630]
+
+------------------------------------------------------
+Aliased 0 equations, 3 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+Eliminating unused logic - pass 1:
+
+
+Eliminating unused logic - pass 2:
+
+
+Substituting virtuals - pass 1:
+
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 0 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 3.
+----------------------------------------------------------
+
+topld:  No errors.
+
