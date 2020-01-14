@@ -1,0 +1,18 @@
+--------------- Rebuild Started: 01/13/2020 19:51:20 Project: MotorDrive.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/MotorDrive.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c MotorDrive.c -o .\CortexM0\ARM_GCC_541\Debug\MotorDrive.o
+MotorDrive.c:21:16: error: initializer element is not constant
+ uint8 status = Status_Reg_Switches_Read();
+                ^
+MotorDrive.c:23:6: error: conflicting types for 'set_PWM'
+ void set_PWM(int compare, uint8_t disable_limit, uint8 limitSW) {
+      ^
+In file included from MotorDrive.c:15:0:
+MotorDrive.h:18:6: note: previous declaration of 'set_PWM' was here
+ void set_PWM(int period);
+      ^
+MotorDrive.c: In function 'set_PWM':
+MotorDrive.c:27:9: warning: unused variable 'pwm_compare' [-Wunused-variable]
+     int pwm_compare = compare;
+         ^
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Rebuild Failed: 01/13/2020 19:51:21 ---------------

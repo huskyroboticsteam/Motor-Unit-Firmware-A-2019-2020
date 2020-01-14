@@ -12,6 +12,8 @@
 #include <project.h>
 #include "cyapicallbacks.h"
 #include <stdio.h>
+#include <stdint.h>
+
 
 #define REV2
 #define LED_ON   (0u)
@@ -35,7 +37,6 @@ CY_ISR_PROTO(ISR_CAN);
 
 //Uart variables
 volatile uint8 uart_debug = 2;
-#define TX_DATA_SIZE            (100u)
 #define PWM_PERIOD = 255;
 
 
@@ -395,30 +396,6 @@ void set_CAN_ID(uint32 priority) {
     message.id = (priority << 10) | (message_id << 5) | 0b00010;
 }
 
-    // takes between -255 and 255
-void set_PWM(int compare) {
-    pwm_compare = compare;
-    #ifdef REV2
-    compare = -compare;
-    #endif
-     if(uart_debug) {
-        sprintf(txData, "PWM:%d disable_limit: %d\r\n",compare,disable_limit);
-        UART_UartPutString(txData); 
-    }
-    invalidate = 0;
-    if (compare < -255 || compare > 255) { return; }
-    uint8 status = Status_Reg_Switches_Read();
-    if (compare < 0 && (!(status & 0b01) || disable_limit) ) {
-        Pin_Direction_Write(0);
-        PWM_Motor_WriteCompare(-compare);
-    } else if (compare > 0 && (!(status & 0b10) || disable_limit) ){
-        Pin_Direction_Write(1);
-        PWM_Motor_WriteCompare(compare);
-    } else {
-        PWM_Motor_WriteCompare(0);
-        
-    }
-}
 
 void CAN_Send_Encoder(void){
     int16 ticks = QuadDec_GetCounter();

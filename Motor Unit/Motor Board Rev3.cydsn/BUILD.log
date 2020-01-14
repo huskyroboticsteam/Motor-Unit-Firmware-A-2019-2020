@@ -1,0 +1,32 @@
+--------------- Build Started: 01/13/2020 19:56:37 Project: Motor Board Rev3, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
+main.c: In function 'Period_Reset_Handler':
+main.c:93:9: warning: implicit declaration of function 'set_PWM' [-Wimplicit-function-declaration]
+         set_PWM(0);   
+         ^
+main.c: In function 'main':
+main.c:143:9: warning: unused variable 'test' [-Wunused-variable]
+     int test = 0;
+         ^
+main.c:142:9: warning: unused variable 'up' [-Wunused-variable]
+     int up = 0;
+         ^
+main.c:127:11: warning: unused variable 'error' [-Wunused-variable]
+     uint8 error;
+           ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/Initialize_CAN_addr.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Initialize_CAN_addr.c -o .\CortexM0\ARM_GCC_541\Debug\Initialize_CAN_addr.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/MotorDrive.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c MotorDrive.c -o .\CortexM0\ARM_GCC_541\Debug\MotorDrive.o
+MotorDrive.c:24:6: error: conflicting types for 'set_PWM'
+ void set_PWM(int compare, uint8_t disable_limit, uint8 limitSW) {
+      ^
+In file included from MotorDrive.c:15:0:
+MotorDrive.h:16:6: note: previous declaration of 'set_PWM' was here
+ void set_PWM(int period);
+      ^
+MotorDrive.c: In function 'set_PWM':
+MotorDrive.c:28:9: warning: unused variable 'pwm_compare' [-Wunused-variable]
+     int pwm_compare = compare;
+         ^
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Build Failed: 01/13/2020 19:56:39 ---------------

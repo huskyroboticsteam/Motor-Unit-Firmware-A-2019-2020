@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Motor Unit\Motor Board Rev3">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Motor Unit\Motor Board Rev3\Source Files\main.c">
 <ExpandedNodeIds>
 <v>Motor Unit</v>
 <v>Motor Unit\Motor Board Rev1\TopDesign</v>
@@ -106,13 +106,16 @@
 <v>Motor Unit\Motor Board Rev3\Generated_Source\PSoC4\ADC_SAR_Seq_1</v>
 <v>Motor Unit\Motor Board Rev3\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock</v>
 <v>Motor Unit\Motor Board Rev3\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ</v>
+<v>Motor Unit\Motor Board Rev3\Generated_Source\PSoC4\Alert</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Motor Unit\Motor Board Rev3">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Motor Unit</v>
+<v>Motor Unit\Motor Board Rev1</v>
 <v>Motor Unit\Motor Board Rev1\TopDesign</v>
 <v>Motor Unit\Motor Board Rev1\TopDesign\TopDesign.cysch</v>
+<v>Motor Unit\Motor Board Rev2</v>
 <v>Motor Unit\Motor Board Rev2\TopDesign</v>
 <v>Motor Unit\Motor Board Rev2\TopDesign\TopDesign.cysch</v>
 <v>Motor Unit\Motor Board Rev3</v>
@@ -122,7 +125,11 @@
 <VisibleNodeIds>
 <v>Motor Unit</v>
 <v>Motor Unit\Motor Board Rev1</v>
+<v>Motor Unit\Motor Board Rev1\TopDesign</v>
+<v>Motor Unit\Motor Board Rev1\TopDesign\TopDesign.cysch</v>
 <v>Motor Unit\Motor Board Rev2</v>
+<v>Motor Unit\Motor Board Rev2\TopDesign</v>
+<v>Motor Unit\Motor Board Rev2\TopDesign\TopDesign.cysch</v>
 <v>Motor Unit\Motor Board Rev3</v>
 <v>Motor Unit\Motor Board Rev3\TopDesign</v>
 <v>Motor Unit\Motor Board Rev3\TopDesign\TopDesign.cysch</v>
@@ -366,6 +373,9 @@
 <v>Motor Unit\Motor Board Rev3\CortexM0</v>
 <v>Motor Unit\Motor Board Rev3\CortexM0\ARM_GCC_541</v>
 <v>Motor Unit\Motor Board Rev3\CortexM0\ARM_GCC_541\Debug</v>
+<v>Motor Unit\Motor Board Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
+<v>Motor Unit\Motor Board Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Initialize_CAN_addr.lst</v>
+<v>Motor Unit\Motor Board Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>Motor Unit\Motor Board Rev3\CortexM0\ARM_GCC_541\Debug\Motor Board Rev3.elf</v>
 <v>Motor Unit\Motor Board Rev3\CortexM0\ARM_GCC_541\Debug\Motor Board Rev3.hex</v>
 <v>Motor Unit\Motor Board Rev3\CortexM0\ARM_GCC_541\Debug\Motor Board Rev3.map</v>
@@ -405,6 +415,7 @@
 <v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\Dip_2_PM.lst</v>
 <v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\Dip_3.lst</v>
 <v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\Dip_3_PM.lst</v>
+<v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\Dip_4.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -541,6 +552,7 @@
 <v>Motor Unit\Motor Board Rev1\Timer_v2_80.pdf</v>
 <v>Motor Unit\Motor Board Rev1\ZeroTerminal.pdf</v>
 <v>Motor Unit\Motor Board Rev2</v>
+<v>Motor Unit\Motor Board Rev2\PSoC 4 Architecture TRM</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -555,17 +567,9 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Motor Board Rev3.cydsn\main.c" />
-<name v=".\Motor Board Rev3.cydsn\Initialize_CAN_addr.c" />
 <name v=".\Motor Board Rev3.cydsn\MotorDrive.c" />
-<name v=".\Motor Board Rev3.cydsn\SendCAN.c" />
-<name v=".\Motor Board Rev3.cydsn\PositionPID.c" />
 <name v=".\Motor Board Rev3.cydsn\MotorDrive.h" />
-<name v=".\Motor Board Rev3.cydsn\Initialize_CAN_addr.h" />
-<name v=".\Motor Board Rev3.cydsn\PositionPID.h" />
-<name v=".\Motor Board Rev3.cydsn\SendCAN.h" />
-<name v=".\Motor Board Rev3.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Motor Board Rev3.cydsn\Motor Board Rev3.cydwr" />
+<name v=".\Motor Board Rev3.cydsn\main.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -573,7 +577,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="740, 596" SelectedTabbedMdiWindow="dfbb8c85-39b9-46b5-a6a5-5f7b5be709be"><ToolWindow Key="Output Window Plugin:7305390e-eabe-4963-b21f-3a0f11b4b1d5:Output Window" Guid="65a2808c-7838-423a-a6c5-f3e50ff64fe6" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="5b7b8485-d0ab-4e37-a0a7-90eeea460fea" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\main.c" Guid="405f3e9d-ed17-4509-85eb-49721f6fc861" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\Initialize_CAN_addr.c" Guid="4b05172b-0ee2-4e89-a716-6786c1af6ef8" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\MotorDrive.c" Guid="0e29d5e5-3108-4466-aafd-00e2c95deef5" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\SendCAN.c" Guid="3662732e-6c72-4372-a334-d776323b362b" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\PositionPID.c" Guid="f6c05871-e71e-4e4c-96e4-abfacefd6c97" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\MotorDrive.h" Guid="a32176c5-1f4d-4c7e-8c37-a55420a16e0d" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\Initialize_CAN_addr.h" Guid="0725b676-89fd-4426-88d1-00f499ab477c" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\PositionPID.h" Guid="b3592c16-a7f0-4ad3-88be-9e5437374a2b" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\SendCAN.h" Guid="52290bbf-f9e4-42f6-9c8c-c4e8915e7271" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\TopDesign\TopDesign.cysch" Guid="80b5de08-8b9a-45c3-8792-81158037fbec" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\Motor Board Rev3.cydwr" Guid="dfbb8c85-39b9-46b5-a6a5-5f7b5be709be" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="740, 596" SelectedTabbedMdiWindow="273398bc-c1aa-443d-b2e3-40596fc4e6e2"><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\MotorDrive.c" Guid="273398bc-c1aa-443d-b2e3-40596fc4e6e2" /><ToolWindow Key="Output Window Plugin:7305390e-eabe-4963-b21f-3a0f11b4b1d5:Output Window" Guid="65a2808c-7838-423a-a6c5-f3e50ff64fe6" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\MotorDrive.h" Guid="a347fa39-efb7-4785-b8d1-3a5932d1c00b" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\main.c" Guid="33bd32f5-7db1-4ff5-bef2-840c4ff94883" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -14,6 +14,7 @@
 
 #include "project.h"
 
+#define TX_DATA_SIZE            (100u)
 
     
 //void check_Pin(void);
@@ -37,7 +38,6 @@ int encoder(void);
 void emergency_Stop(void);
 void initialize(void);
 uint32 pot_Read(void);
-void set_PWM(int period);
 int degrees_to_tick(int16 degrees);
 int position_PID(int target);
 void set_Position(int16 degrees);

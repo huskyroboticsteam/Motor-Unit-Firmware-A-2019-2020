@@ -9,5 +9,12 @@
  *
  * ========================================
 */
+#ifndef MotorDrive
+    #define MotorDrive
+#endif
+
+#include <stdio.h>
+
+void set_PWM(int compare, uint8_t disable_limit, uint8_t limitSW);
 
 /* [] END OF FILE */
