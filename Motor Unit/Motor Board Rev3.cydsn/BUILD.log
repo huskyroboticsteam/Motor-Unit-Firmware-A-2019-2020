@@ -1,32 +1,76 @@
---------------- Build Started: 01/13/2020 19:56:37 Project: Motor Board Rev3, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 01/15/2020 19:26:51 Project: Motor Board Rev3, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 main.c: In function 'Period_Reset_Handler':
-main.c:93:9: warning: implicit declaration of function 'set_PWM' [-Wimplicit-function-declaration]
+main.c:95:9: warning: implicit declaration of function 'set_PWM' [-Wimplicit-function-declaration]
          set_PWM(0);   
          ^
 main.c: In function 'main':
-main.c:143:9: warning: unused variable 'test' [-Wunused-variable]
+main.c:145:9: warning: unused variable 'test' [-Wunused-variable]
      int test = 0;
          ^
-main.c:142:9: warning: unused variable 'up' [-Wunused-variable]
+main.c:144:9: warning: unused variable 'up' [-Wunused-variable]
      int up = 0;
          ^
-main.c:127:11: warning: unused variable 'error' [-Wunused-variable]
+main.c:129:11: warning: unused variable 'error' [-Wunused-variable]
      uint8 error;
            ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/Initialize_CAN_addr.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Initialize_CAN_addr.c -o .\CortexM0\ARM_GCC_541\Debug\Initialize_CAN_addr.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/MotorDrive.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c MotorDrive.c -o .\CortexM0\ARM_GCC_541\Debug\MotorDrive.o
-MotorDrive.c:24:6: error: conflicting types for 'set_PWM'
- void set_PWM(int compare, uint8_t disable_limit, uint8 limitSW) {
-      ^
-In file included from MotorDrive.c:15:0:
-MotorDrive.h:16:6: note: previous declaration of 'set_PWM' was here
- void set_PWM(int period);
-      ^
-MotorDrive.c: In function 'set_PWM':
-MotorDrive.c:28:9: warning: unused variable 'pwm_compare' [-Wunused-variable]
-     int pwm_compare = compare;
+Initialize_CAN_addr.c: In function 'initialize_can_addr':
+Initialize_CAN_addr.c:15:5: error: unknown type name 'uint8'
+     uint8 setting = Can_addr_Read();
+     ^
+Initialize_CAN_addr.c:15:21: warning: implicit declaration of function 'Can_addr_Read' [-Wimplicit-function-declaration]
+     uint8 setting = Can_addr_Read();
+                     ^
+Initialize_CAN_addr.c:16:5: error: unknown type name 'uint8'
+     uint8 shift = 0;
+     ^
+Initialize_CAN_addr.c:19:13: error: 'message_id' undeclared (first use in this function)
+             message_id = 0b10000;
+             ^
+Initialize_CAN_addr.c:19:13: note: each undeclared identifier is reported only once for each function it appears in
+Initialize_CAN_addr.c:21:13: error: 'ratio' undeclared (first use in this function)
+             ratio = 1;
+             ^
+Initialize_CAN_addr.c:30:13: error: 'kp' undeclared (first use in this function)
+             kp = 50;
+             ^
+Initialize_CAN_addr.c:31:13: error: 'ki' undeclared (first use in this function)
+             ki = 12;
+             ^
+Initialize_CAN_addr.c:32:13: error: 'kd' undeclared (first use in this function)
+             kd = 10;
+             ^
+Initialize_CAN_addr.c:41:13: error: 'disable_limit' undeclared (first use in this function)
+             disable_limit = 1;
+             ^
+Initialize_CAN_addr.c:54:13: error: 'flipEncoder' undeclared (first use in this function)
+             flipEncoder = -1;
+             ^
+Initialize_CAN_addr.c:73:5: error: 'CAN_RX_MAILBOX_0_SHIFT' undeclared (first use in this function)
+     CAN_RX_MAILBOX_0_SHIFT = CAN_RX_MAILBOX_0_SHIFT << shift;
+     ^
+Initialize_CAN_addr.c:74:5: error: 'CAN_RX_MAILBOX_1_SHIFT' undeclared (first use in this function)
+     CAN_RX_MAILBOX_1_SHIFT = CAN_RX_MAILBOX_1_SHIFT << shift;
+     ^
+Initialize_CAN_addr.c:75:5: error: 'CAN_RX_MAILBOX_0' undeclared (first use in this function)
+     CAN_RX_MAILBOX_0 += shift;
+     ^
+Initialize_CAN_addr.c:76:5: error: 'CAN_RX_MAILBOX_1' undeclared (first use in this function)
+     CAN_RX_MAILBOX_1 += shift;
+     ^
+Initialize_CAN_addr.c:77:5: warning: implicit declaration of function 'set_CAN_ID' [-Wimplicit-function-declaration]
+     set_CAN_ID(0b1);
+     ^
+Initialize_CAN_addr.c:79:8: error: 'uart_debug' undeclared (first use in this function)
+     if(uart_debug) {
+        ^
+Initialize_CAN_addr.c:80:17: error: 'txData' undeclared (first use in this function)
+         sprintf(txData, "CAN dip setting:  %x Message ID: %ld\r\n",setting, message_id);
+                 ^
+Initialize_CAN_addr.c:81:9: warning: implicit declaration of function 'UART_UartPutString' [-Wimplicit-function-declaration]
+         UART_UartPutString(txData); 
          ^
 The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
---------------- Build Failed: 01/13/2020 19:56:39 ---------------
+--------------- Build Failed: 01/15/2020 19:26:53 ---------------
