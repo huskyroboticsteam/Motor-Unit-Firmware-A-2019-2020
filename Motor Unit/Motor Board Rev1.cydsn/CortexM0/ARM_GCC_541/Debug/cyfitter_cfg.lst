@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
   29:Generated_Source\PSoC4/cyfitter_cfg.c **** #if defined(__GNUC__) || defined(__ARMCC_VERSION)
   30:Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CYPACKED 
   31:Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CYPACKED_ATTR __attribute__ ((packed))
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 2
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 2
 
 
   32:Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CYALIGNED __attribute__ ((aligned))
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
   86:Generated_Source\PSoC4/cyfitter_cfg.c **** }
   87:Generated_Source\PSoC4/cyfitter_cfg.c **** CY_CFG_UNUSED
   88:Generated_Source\PSoC4/cyfitter_cfg.c **** static void CYCONFIGCPYCODE(void *dest, const void *src, size_t n);
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 3
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 3
 
 
   89:Generated_Source\PSoC4/cyfitter_cfg.c **** CY_CFG_UNUSED
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  143:Generated_Source\PSoC4/cyfitter_cfg.c ****     /* `#END` */
  144:Generated_Source\PSoC4/cyfitter_cfg.c **** 
  145:Generated_Source\PSoC4/cyfitter_cfg.c ****     while(1) {}
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 4
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 4
 
 
  146:Generated_Source\PSoC4/cyfitter_cfg.c **** #endif /* CY_CFG_CLOCK_STARTUP_ERROR_CALLBACK */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  179:Generated_Source\PSoC4/cyfitter_cfg.c **** 	{
  180:Generated_Source\PSoC4/cyfitter_cfg.c **** 		uint32 baseAddr = addr_table[i];
   48              		.loc 1 180 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 5
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 5
 
 
   49 0008 BB00     		lsls	r3, r7, #2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
   90              		@ sp needed
   91              	.LVL10:
   92              	.LVL11:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 6
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 6
 
 
   93 0030 F0BD     		pop	{r4, r5, r6, r7, pc}
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  234:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF45u);
  235:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL4, 0x00001800u);
  236:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF44u);
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 7
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 7
 
 
  237:Generated_Source\PSoC4/cyfitter_cfg.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  106              		@ args = 0, pretend = 0, frame = 0
  107              		@ frame_needed = 0, uses_anonymous_args = 0
  108              		@ link register save eliminated.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 8
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 8
 
 
  289:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_XTND_REG32((void CYFAR *)CYREG_CTBM0_DFT_CTRL, 0x00000003u);
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  156 000a 10BD     		pop	{r4, pc}
  157              		.cfi_endproc
  158              	.LFE34:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 9
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 9
 
 
  159              		.size	CYMEMZERO, .-CYMEMZERO
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  205 002c 1960     		str	r1, [r3]
  227:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FFC0u);
  206              		.loc 1 227 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 10
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 10
 
 
  207 002e 2548     		ldr	r0, .L11+28
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  250 006e 224B     		ldr	r3, .L11+80
  251 0070 1A60     		str	r2, [r3]
  245:Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 11
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 11
 
 
  252              		.loc 1 245 0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  297 00b8 40FF0080 		.word	-2147418304
  298 00bc 08030140 		.word	1073808136
  299 00c0 42FF0080 		.word	-2147418302
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 12
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 12
 
 
  300 00c4 007F1A06 		.word	102399744
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  331              		.loc 1 315 0
  332              		.cfi_startproc
  333              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 13
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 13
 
 
  334              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -747,578 +747,578 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  321:Generated_Source\PSoC4/cyfitter_cfg.c **** 	{
  322:Generated_Source\PSoC4/cyfitter_cfg.c **** 		static const uint32 CYCODE cy_cfg_addr_table[] = {
  323:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F0004u, /* Base address: 0x400F0000 Count: 4 */
- 324:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3031u, /* Base address: 0x400F3000 Count: 49 */
- 325:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3123u, /* Base address: 0x400F3100 Count: 35 */
- 326:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3259u, /* Base address: 0x400F3200 Count: 89 */
+ 324:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F303Bu, /* Base address: 0x400F3000 Count: 59 */
+ 325:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F312Au, /* Base address: 0x400F3100 Count: 42 */
+ 326:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3254u, /* Base address: 0x400F3200 Count: 84 */
  327:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F333Eu, /* Base address: 0x400F3300 Count: 62 */
- 328:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F344Du, /* Base address: 0x400F3400 Count: 77 */
- 329:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3536u, /* Base address: 0x400F3500 Count: 54 */
- 330:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3641u, /* Base address: 0x400F3600 Count: 65 */
- 331:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3738u, /* Base address: 0x400F3700 Count: 56 */
+ 328:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3450u, /* Base address: 0x400F3400 Count: 80 */
+ 329:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F353Eu, /* Base address: 0x400F3500 Count: 62 */
+ 330:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3639u, /* Base address: 0x400F3600 Count: 57 */
+ 331:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F3726u, /* Base address: 0x400F3700 Count: 38 */
  332:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F4003u, /* Base address: 0x400F4000 Count: 3 */
- 333:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F4106u, /* Base address: 0x400F4100 Count: 6 */
- 334:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F420Au, /* Base address: 0x400F4200 Count: 10 */
- 335:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F4304u, /* Base address: 0x400F4300 Count: 4 */
- 336:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F4504u, /* Base address: 0x400F4500 Count: 4 */
- 337:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F4605u, /* Base address: 0x400F4600 Count: 5 */
+ 333:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F4105u, /* Base address: 0x400F4100 Count: 5 */
+ 334:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F420Bu, /* Base address: 0x400F4200 Count: 11 */
+ 335:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F4305u, /* Base address: 0x400F4300 Count: 5 */
+ 336:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F4507u, /* Base address: 0x400F4500 Count: 7 */
+ 337:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F4604u, /* Base address: 0x400F4600 Count: 4 */
  338:Generated_Source\PSoC4/cyfitter_cfg.c **** 			0x400F6003u, /* Base address: 0x400F6000 Count: 3 */
  339:Generated_Source\PSoC4/cyfitter_cfg.c **** 		};
  340:Generated_Source\PSoC4/cyfitter_cfg.c **** 
  341:Generated_Source\PSoC4/cyfitter_cfg.c **** 		static const cy_cfg_addrvalue_t CYCODE cy_cfg_data_table[] = {
- 342:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x80u, 0x0Fu},
- 343:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x83u, 0x6Fu},
- 344:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x86u, 0x0Du},
- 345:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x87u, 0x03u},
- 346:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x08u, 0x06u},
- 347:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Eu, 0x06u},
- 348:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x14u, 0x04u},
- 349:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x16u, 0x02u},
- 350:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Fu, 0x01u},
- 351:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x22u, 0x01u},
- 352:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x25u, 0x01u},
- 353:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x32u, 0x01u},
- 354:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x34u, 0x04u},
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 14
+ 342:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x81u, 0x0Fu},
+ 343:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x82u, 0x6Fu},
+ 344:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x85u, 0x03u},
+ 345:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x86u, 0x0Du},
+ 346:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x01u, 0xFDu},
+ 347:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x03u, 0x02u},
+ 348:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x06u, 0x08u},
+ 349:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x08u, 0x01u},
+ 350:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x09u, 0xCFu},
+ 351:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Au, 0x02u},
+ 352:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Bu, 0x30u},
+ 353:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Cu, 0x04u},
+ 354:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Du, 0x94u},
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 14
 
 
- 355:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x36u, 0x02u},
- 356:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x37u, 0x01u},
- 357:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Eu, 0x50u},
- 358:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Fu, 0x40u},
- 359:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x54u, 0x0Fu},
- 360:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x58u, 0x04u},
- 361:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x59u, 0x04u},
- 362:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x04u},
- 363:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Cu, 0x01u},
- 364:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Du, 0x10u},
- 365:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Fu, 0x01u},
- 366:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x85u, 0x73u},
- 367:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x86u, 0x07u},
- 368:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x89u, 0xFDu},
- 369:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Bu, 0x02u},
- 370:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Du, 0xCFu},
- 371:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Fu, 0x30u},
- 372:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x91u, 0x30u},
- 373:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x92u, 0x04u},
- 374:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x93u, 0xC9u},
- 375:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x94u, 0x07u},
- 376:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x95u, 0x94u},
- 377:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x97u, 0x60u},
- 378:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x98u, 0x01u},
- 379:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Au, 0x02u},
- 380:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Cu, 0x04u},
- 381:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA4u, 0x01u},
- 382:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA5u, 0x9Eu},
- 383:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA6u, 0x02u},
- 384:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA7u, 0x60u},
- 385:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA8u, 0x07u},
- 386:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xABu, 0x0Fu},
- 387:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAEu, 0x08u},
- 388:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB1u, 0xFFu},
- 389:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB2u, 0x0Fu},
- 390:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xBFu, 0x01u},
- 391:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x04u},
- 392:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD9u, 0x04u},
- 393:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDCu, 0x01u},
- 394:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDFu, 0x01u},
- 395:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x00u, 0x10u},
- 396:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x03u, 0x02u},
- 397:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x05u, 0x04u},
- 398:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x09u, 0x08u},
- 399:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Eu, 0x4Au},
- 400:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Fu, 0x10u},
- 401:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x10u, 0x80u},
- 402:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x15u, 0x04u},
- 403:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x16u, 0x08u},
- 404:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x17u, 0x80u},
- 405:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x18u, 0x10u},
- 406:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x19u, 0x98u},
- 407:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Du, 0x0Cu},
- 408:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Fu, 0x08u},
- 409:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x22u, 0x40u},
- 410:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x27u, 0x80u},
- 411:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x29u, 0x08u},
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 15
+ 355:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Fu, 0x60u},
+ 356:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x11u, 0x30u},
+ 357:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x13u, 0xC9u},
+ 358:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x15u, 0x73u},
+ 359:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x16u, 0x04u},
+ 360:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Au, 0x07u},
+ 361:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Bu, 0x0Fu},
+ 362:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x20u, 0x01u},
+ 363:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x22u, 0x02u},
+ 364:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x24u, 0x07u},
+ 365:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x29u, 0x9Eu},
+ 366:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Bu, 0x60u},
+ 367:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Cu, 0x07u},
+ 368:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x34u, 0x0Fu},
+ 369:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x35u, 0xFFu},
+ 370:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Fu, 0x10u},
+ 371:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x58u, 0x04u},
+ 372:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x59u, 0x04u},
+ 373:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Cu, 0x01u},
+ 374:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Fu, 0x01u},
+ 375:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x86u, 0x10u},
+ 376:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Au, 0x10u},
+ 377:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Eu, 0x0Fu},
+ 378:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x93u, 0x01u},
+ 379:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x97u, 0x02u},
+ 380:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x98u, 0x0Cu},
+ 381:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Au, 0x02u},
+ 382:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Cu, 0x08u},
+ 383:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Du, 0x02u},
+ 384:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Eu, 0x01u},
+ 385:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA0u, 0x10u},
+ 386:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA4u, 0x07u},
+ 387:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA5u, 0x02u},
+ 388:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA8u, 0x0Cu},
+ 389:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAAu, 0x01u},
+ 390:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xACu, 0x0Bu},
+ 391:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAEu, 0x04u},
+ 392:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB0u, 0x10u},
+ 393:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB2u, 0x0Fu},
+ 394:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB3u, 0x02u},
+ 395:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB7u, 0x01u},
+ 396:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xBEu, 0x01u},
+ 397:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xBFu, 0x04u},
+ 398:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD4u, 0x0Fu},
+ 399:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x04u},
+ 400:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD9u, 0x04u},
+ 401:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDBu, 0x04u},
+ 402:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDCu, 0x11u},
+ 403:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDDu, 0x10u},
+ 404:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDFu, 0x01u},
+ 405:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x00u, 0x04u},
+ 406:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x03u, 0x09u},
+ 407:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x05u, 0x14u},
+ 408:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x07u, 0x01u},
+ 409:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Au, 0x08u},
+ 410:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Bu, 0x20u},
+ 411:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Du, 0x40u},
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 15
 
 
- 412:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Du, 0x04u},
- 413:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Fu, 0x28u},
- 414:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x30u, 0x80u},
- 415:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x36u, 0x05u},
- 416:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Cu, 0x08u},
- 417:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Eu, 0x4Cu},
- 418:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Fu, 0x30u},
- 419:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x59u, 0x90u},
- 420:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Au, 0x04u},
- 421:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x02u},
- 422:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Fu, 0x12u},
- 423:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x23u},
- 424:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC2u, 0xF4u},
- 425:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC4u, 0xE8u},
- 426:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0x62u},
- 427:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCCu, 0xC8u},
- 428:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0x70u},
- 429:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD6u, 0x0Fu},
- 430:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x03u, 0x02u},
- 431:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x06u, 0x01u},
- 432:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x12u, 0x02u},
- 433:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Du, 0x02u},
- 434:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x23u, 0x03u},
- 435:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x33u, 0x02u},
- 436:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x34u, 0x02u},
- 437:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x36u, 0x01u},
- 438:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x37u, 0x01u},
- 439:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Fu, 0x04u},
- 440:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x40u, 0x26u},
- 441:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x41u, 0x03u},
- 442:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x49u, 0xFFu},
- 443:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Au, 0xFFu},
- 444:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Bu, 0xFFu},
- 445:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Du, 0xA0u},
- 446:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Fu, 0x01u},
- 447:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x50u, 0x18u},
- 448:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x52u, 0x80u},
- 449:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x58u, 0x04u},
- 450:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x59u, 0x04u},
- 451:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Au, 0x04u},
- 452:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x04u},
- 453:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Cu, 0x11u},
- 454:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Du, 0x11u},
- 455:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Fu, 0x01u},
- 456:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x60u, 0x40u},
- 457:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x62u, 0x80u},
- 458:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x64u, 0x40u},
- 459:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x65u, 0x40u},
- 460:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x66u, 0x80u},
- 461:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x68u, 0x40u},
- 462:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Au, 0x80u},
- 463:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Cu, 0x40u},
- 464:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Du, 0x20u},
- 465:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Eu, 0x80u},
- 466:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x83u, 0x18u},
- 467:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x84u, 0x01u},
- 468:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x85u, 0x03u},
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 16
+ 412:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Fu, 0x08u},
+ 413:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x12u, 0x41u},
+ 414:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x13u, 0x08u},
+ 415:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x15u, 0x20u},
+ 416:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x16u, 0x01u},
+ 417:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x17u, 0x0Au},
+ 418:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x19u, 0x10u},
+ 419:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Au, 0x08u},
+ 420:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Bu, 0x20u},
+ 421:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Eu, 0x40u},
+ 422:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Fu, 0x08u},
+ 423:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x20u, 0x04u},
+ 424:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x24u, 0x10u},
+ 425:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x26u, 0x80u},
+ 426:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x27u, 0x02u},
+ 427:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Bu, 0x0Cu},
+ 428:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Fu, 0x20u},
+ 429:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x31u, 0x10u},
+ 430:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x33u, 0x05u},
+ 431:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x35u, 0x05u},
+ 432:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x36u, 0x80u},
+ 433:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x38u, 0x82u},
+ 434:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x39u, 0xA0u},
+ 435:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Au, 0x41u},
+ 436:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Bu, 0x21u},
+ 437:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Cu, 0x10u},
+ 438:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Eu, 0x40u},
+ 439:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Fu, 0x09u},
+ 440:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0xE7u},
+ 441:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC2u, 0xC6u},
+ 442:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC4u, 0xFDu},
+ 443:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0x44u},
+ 444:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCCu, 0xD7u},
+ 445:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0x0Du},
+ 446:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD6u, 0xF0u},
+ 447:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x02u, 0x04u},
+ 448:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x05u, 0x06u},
+ 449:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x09u, 0x03u},
+ 450:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Cu, 0x04u},
+ 451:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Bu, 0x08u},
+ 452:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Cu, 0x03u},
+ 453:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x20u, 0x03u},
+ 454:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x24u, 0x01u},
+ 455:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x29u, 0x06u},
+ 456:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Du, 0x05u},
+ 457:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x30u, 0x04u},
+ 458:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x31u, 0x08u},
+ 459:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x32u, 0x02u},
+ 460:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x35u, 0x07u},
+ 461:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x36u, 0x01u},
+ 462:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x38u, 0x88u},
+ 463:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x39u, 0x20u},
+ 464:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Eu, 0x41u},
+ 465:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x40u, 0x51u},
+ 466:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x41u, 0x06u},
+ 467:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x49u, 0xFFu},
+ 468:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Au, 0xFFu},
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 16
 
 
- 469:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x89u, 0x05u},
- 470:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x95u, 0x10u},
- 471:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x99u, 0x06u},
- 472:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Cu, 0x08u},
- 473:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA1u, 0x06u},
- 474:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA4u, 0x03u},
- 475:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA6u, 0x0Cu},
- 476:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xACu, 0x03u},
- 477:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB0u, 0x02u},
- 478:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB2u, 0x08u},
- 479:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB3u, 0x08u},
- 480:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB4u, 0x01u},
- 481:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB5u, 0x07u},
- 482:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB6u, 0x04u},
- 483:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB7u, 0x10u},
- 484:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB8u, 0x22u},
- 485:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB9u, 0x20u},
- 486:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xBEu, 0x14u},
- 487:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xBFu, 0x40u},
- 488:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x62u},
- 489:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC1u, 0x03u},
- 490:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC5u, 0x43u},
- 491:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC6u, 0xC0u},
- 492:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC7u, 0x2Eu},
- 493:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC8u, 0x3Bu},
- 494:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC9u, 0xFFu},
- 495:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0xFFu},
- 496:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCBu, 0xFFu},
- 497:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCDu, 0xAFu},
- 498:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0x07u},
- 499:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCFu, 0x01u},
- 500:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0x18u},
- 501:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD4u, 0x0Fu},
- 502:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x04u},
- 503:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD9u, 0x04u},
- 504:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDAu, 0x04u},
- 505:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDBu, 0x04u},
- 506:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDCu, 0x11u},
- 507:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDDu, 0x11u},
- 508:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDFu, 0x05u},
- 509:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE0u, 0x40u},
- 510:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE2u, 0x80u},
- 511:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE4u, 0x40u},
- 512:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE5u, 0x40u},
- 513:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE6u, 0x80u},
- 514:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE8u, 0x40u},
- 515:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEAu, 0x80u},
- 516:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xECu, 0x40u},
- 517:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEDu, 0x20u},
- 518:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEEu, 0x80u},
- 519:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x00u, 0x08u},
- 520:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x07u, 0x10u},
- 521:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Au, 0x01u},
- 522:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Fu, 0x40u},
- 523:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x10u, 0x22u},
- 524:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x18u, 0x04u},
- 525:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x19u, 0x04u},
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 17
+ 469:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Bu, 0xFFu},
+ 470:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Du, 0xA0u},
+ 471:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Fu, 0x01u},
+ 472:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x50u, 0x18u},
+ 473:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x54u, 0x0Fu},
+ 474:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x58u, 0x04u},
+ 475:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x59u, 0x04u},
+ 476:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Au, 0x04u},
+ 477:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x04u},
+ 478:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Cu, 0x11u},
+ 479:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Du, 0x11u},
+ 480:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Fu, 0x05u},
+ 481:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x60u, 0x40u},
+ 482:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x62u, 0x80u},
+ 483:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x64u, 0x40u},
+ 484:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x65u, 0x40u},
+ 485:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x66u, 0x80u},
+ 486:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x68u, 0x40u},
+ 487:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Au, 0x80u},
+ 488:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Cu, 0x40u},
+ 489:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Du, 0x20u},
+ 490:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Eu, 0x80u},
+ 491:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x86u, 0x03u},
+ 492:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x92u, 0x01u},
+ 493:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x94u, 0x08u},
+ 494:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x98u, 0x01u},
+ 495:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA2u, 0x0Cu},
+ 496:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB0u, 0x08u},
+ 497:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB2u, 0x04u},
+ 498:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB4u, 0x02u},
+ 499:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB6u, 0x01u},
+ 500:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xBEu, 0x41u},
+ 501:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x15u},
+ 502:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC1u, 0x06u},
+ 503:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC5u, 0x4Eu},
+ 504:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC6u, 0x02u},
+ 505:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC7u, 0x3Cu},
+ 506:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC8u, 0x37u},
+ 507:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC9u, 0xFFu},
+ 508:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0xFFu},
+ 509:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCBu, 0xFFu},
+ 510:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCDu, 0xAFu},
+ 511:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0x07u},
+ 512:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCFu, 0x01u},
+ 513:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0x18u},
+ 514:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD2u, 0x80u},
+ 515:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x04u},
+ 516:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDAu, 0x04u},
+ 517:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDBu, 0x04u},
+ 518:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDCu, 0x01u},
+ 519:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDDu, 0x11u},
+ 520:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDFu, 0x01u},
+ 521:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE0u, 0x40u},
+ 522:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE2u, 0x80u},
+ 523:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE4u, 0x40u},
+ 524:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE5u, 0x40u},
+ 525:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE6u, 0x80u},
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 17
 
 
- 526:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Au, 0x01u},
- 527:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Bu, 0x12u},
- 528:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Du, 0x30u},
- 529:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Eu, 0x0Au},
- 530:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x20u, 0x08u},
- 531:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x21u, 0x10u},
- 532:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x22u, 0x04u},
- 533:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x23u, 0x06u},
- 534:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x26u, 0x88u},
- 535:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x27u, 0x20u},
- 536:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x29u, 0x01u},
- 537:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Fu, 0x40u},
- 538:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x32u, 0x04u},
- 539:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x33u, 0x20u},
- 540:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x36u, 0x80u},
- 541:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x38u, 0x02u},
- 542:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Bu, 0x14u},
- 543:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Cu, 0x02u},
- 544:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x40u, 0x04u},
- 545:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x41u, 0x08u},
- 546:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x45u, 0x08u},
- 547:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x47u, 0x20u},
- 548:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x48u, 0xA0u},
- 549:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Au, 0x08u},
- 550:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Fu, 0x20u},
- 551:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x50u, 0x03u},
- 552:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x52u, 0x14u},
- 553:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x59u, 0x04u},
- 554:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Au, 0xA0u},
- 555:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x02u},
- 556:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x62u, 0x14u},
- 557:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x74u, 0x01u},
- 558:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x79u, 0x20u},
- 559:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x80u, 0x01u},
- 560:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x82u, 0x10u},
- 561:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x88u, 0x40u},
- 562:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x92u, 0x80u},
- 563:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x96u, 0x40u},
- 564:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x97u, 0x10u},
- 565:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA1u, 0x08u},
- 566:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA4u, 0x84u},
- 567:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA6u, 0x05u},
- 568:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA7u, 0x22u},
- 569:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x24u},
- 570:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC2u, 0x11u},
- 571:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC4u, 0x05u},
- 572:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0x81u},
- 573:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCCu, 0x16u},
- 574:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0x87u},
- 575:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0x66u},
- 576:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD2u, 0x24u},
- 577:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD6u, 0x0Fu},
- 578:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x06u},
- 579:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDEu, 0x04u},
- 580:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE2u, 0x80u},
- 581:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x04u, 0x07u},
- 582:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x05u, 0x07u},
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 18
+ 526:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE8u, 0x40u},
+ 527:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEAu, 0x80u},
+ 528:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xECu, 0x40u},
+ 529:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEDu, 0x20u},
+ 530:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEEu, 0x80u},
+ 531:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x00u, 0x04u},
+ 532:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x05u, 0x01u},
+ 533:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x07u, 0x02u},
+ 534:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x09u, 0x02u},
+ 535:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Au, 0x24u},
+ 536:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Du, 0x40u},
+ 537:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x10u, 0x80u},
+ 538:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x15u, 0x02u},
+ 539:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x17u, 0x08u},
+ 540:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x19u, 0x02u},
+ 541:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Au, 0x24u},
+ 542:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Bu, 0xC0u},
+ 543:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Cu, 0x02u},
+ 544:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Du, 0x84u},
+ 545:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Eu, 0x40u},
+ 546:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x24u, 0x80u},
+ 547:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x25u, 0x10u},
+ 548:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x27u, 0x0Cu},
+ 549:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Fu, 0x09u},
+ 550:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x34u, 0x20u},
+ 551:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Du, 0x28u},
+ 552:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x43u, 0x80u},
+ 553:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x45u, 0x80u},
+ 554:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x48u, 0x01u},
+ 555:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x49u, 0x19u},
+ 556:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Eu, 0x04u},
+ 557:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Fu, 0x80u},
+ 558:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x50u, 0x80u},
+ 559:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x51u, 0x41u},
+ 560:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x52u, 0x02u},
+ 561:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x53u, 0x04u},
+ 562:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x58u, 0x86u},
+ 563:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x10u},
+ 564:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Du, 0x02u},
+ 565:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Eu, 0x58u},
+ 566:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x65u, 0x08u},
+ 567:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x67u, 0x08u},
+ 568:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x71u, 0x02u},
+ 569:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x7Du, 0x28u},
+ 570:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x7Fu, 0x10u},
+ 571:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x88u, 0x04u},
+ 572:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Du, 0x40u},
+ 573:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Eu, 0x10u},
+ 574:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x92u, 0x08u},
+ 575:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x94u, 0x82u},
+ 576:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x97u, 0x20u},
+ 577:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x99u, 0x10u},
+ 578:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Bu, 0x02u},
+ 579:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Du, 0x05u},
+ 580:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Fu, 0x0Du},
+ 581:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA3u, 0x08u},
+ 582:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x94u},
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 18
 
 
- 583:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x09u, 0x0Fu},
- 584:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x10u, 0x0Cu},
- 585:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x12u, 0x02u},
- 586:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x19u, 0x0Au},
- 587:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Au, 0x0Fu},
- 588:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Bu, 0x05u},
- 589:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x21u, 0x0Cu},
- 590:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x23u, 0x03u},
- 591:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x24u, 0x0Cu},
- 592:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x26u, 0x01u},
- 593:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x28u, 0x0Bu},
- 594:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x29u, 0x03u},
- 595:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Au, 0x04u},
- 596:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Bu, 0x0Cu},
- 597:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Cu, 0x08u},
- 598:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Du, 0x05u},
- 599:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Eu, 0x01u},
- 600:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Fu, 0x0Au},
- 601:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x30u, 0x0Fu},
- 602:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x33u, 0x0Fu},
- 603:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x40u, 0x54u},
- 604:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x49u, 0xFFu},
- 605:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Au, 0xFFu},
- 606:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Bu, 0xFFu},
- 607:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Fu, 0x01u},
- 608:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x50u, 0x18u},
- 609:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x52u, 0x80u},
- 610:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x58u, 0x04u},
- 611:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x59u, 0x04u},
- 612:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Au, 0x04u},
- 613:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x04u},
- 614:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Cu, 0x11u},
- 615:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Du, 0x33u},
- 616:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Fu, 0x01u},
- 617:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x60u, 0x40u},
- 618:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x62u, 0x40u},
- 619:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x64u, 0x40u},
- 620:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x65u, 0x40u},
- 621:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x66u, 0x80u},
- 622:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x68u, 0x80u},
- 623:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Au, 0x80u},
- 624:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Cu, 0x80u},
- 625:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Eu, 0x80u},
- 626:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x88u, 0x01u},
- 627:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Eu, 0x02u},
- 628:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x90u, 0x01u},
- 629:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x94u, 0x01u},
- 630:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x98u, 0x01u},
- 631:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA5u, 0x01u},
- 632:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAEu, 0x01u},
- 633:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB3u, 0x01u},
- 634:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB6u, 0x03u},
- 635:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x54u},
- 636:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC9u, 0xFFu},
- 637:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0xFFu},
- 638:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCBu, 0xFFu},
- 639:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCDu, 0x83u},
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 19
+ 583:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC2u, 0x8Eu},
+ 584:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC4u, 0x38u},
+ 585:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0x30u},
+ 586:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCCu, 0x20u},
+ 587:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0x60u},
+ 588:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0x18u},
+ 589:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD2u, 0x3Cu},
+ 590:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD6u, 0xFFu},
+ 591:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x60u},
+ 592:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDEu, 0x20u},
+ 593:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x01u, 0xFEu},
+ 594:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x03u, 0x01u},
+ 595:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x04u, 0x01u},
+ 596:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x07u, 0x01u},
+ 597:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x08u, 0x01u},
+ 598:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x09u, 0xA3u},
+ 599:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Bu, 0x5Cu},
+ 600:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Du, 0x0Eu},
+ 601:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Eu, 0x01u},
+ 602:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Fu, 0xF0u},
+ 603:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x11u, 0x96u},
+ 604:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x13u, 0x68u},
+ 605:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x15u, 0x7Fu},
+ 606:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x16u, 0x02u},
+ 607:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Cu, 0x01u},
+ 608:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x20u, 0x01u},
+ 609:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x29u, 0xC5u},
+ 610:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Bu, 0x3Au},
+ 611:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x33u, 0xFFu},
+ 612:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x34u, 0x03u},
+ 613:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Fu, 0x04u},
+ 614:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x40u, 0x52u},
+ 615:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x49u, 0xFFu},
+ 616:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Au, 0xFFu},
+ 617:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Bu, 0xFFu},
+ 618:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Fu, 0x01u},
+ 619:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x50u, 0x18u},
+ 620:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x58u, 0x04u},
+ 621:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x59u, 0x04u},
+ 622:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Au, 0x04u},
+ 623:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Cu, 0x01u},
+ 624:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Du, 0x03u},
+ 625:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Fu, 0x01u},
+ 626:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x60u, 0x40u},
+ 627:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x62u, 0x40u},
+ 628:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x64u, 0x40u},
+ 629:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x65u, 0x40u},
+ 630:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x66u, 0x80u},
+ 631:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x68u, 0x80u},
+ 632:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Au, 0x80u},
+ 633:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Cu, 0x80u},
+ 634:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Eu, 0x80u},
+ 635:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x84u, 0x04u},
+ 636:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Bu, 0x01u},
+ 637:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x93u, 0x02u},
+ 638:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Cu, 0x01u},
+ 639:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA2u, 0x04u},
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 19
 
 
- 640:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0x03u},
- 641:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCFu, 0x01u},
- 642:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0x18u},
- 643:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x04u},
- 644:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD9u, 0x04u},
- 645:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDAu, 0x04u},
- 646:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDCu, 0x21u},
- 647:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDDu, 0x03u},
- 648:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDFu, 0x01u},
- 649:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE0u, 0x40u},
- 650:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE2u, 0x40u},
- 651:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE4u, 0x40u},
- 652:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE5u, 0x40u},
- 653:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE6u, 0x80u},
- 654:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE8u, 0x80u},
- 655:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEAu, 0x80u},
- 656:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xECu, 0x80u},
- 657:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEEu, 0x80u},
- 658:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x00u, 0x08u},
- 659:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x05u, 0x10u},
- 660:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x07u, 0x02u},
- 661:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x09u, 0x20u},
- 662:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Au, 0x40u},
- 663:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Cu, 0x10u},
- 664:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Eu, 0x40u},
- 665:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Fu, 0x10u},
- 666:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x10u, 0x11u},
- 667:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x13u, 0x10u},
- 668:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x14u, 0x01u},
- 669:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x19u, 0x01u},
- 670:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Au, 0x40u},
- 671:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Fu, 0xC0u},
- 672:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x23u, 0x10u},
- 673:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x27u, 0x10u},
- 674:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x28u, 0x01u},
- 675:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x29u, 0x11u},
- 676:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Fu, 0x10u},
- 677:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x30u, 0x10u},
- 678:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x33u, 0x20u},
- 679:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Bu, 0x14u},
- 680:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x42u, 0x80u},
- 681:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x46u, 0x80u},
- 682:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x48u, 0x02u},
- 683:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Cu, 0x02u},
- 684:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x58u, 0xA0u},
- 685:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x08u},
- 686:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x70u, 0x02u},
- 687:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x86u, 0x02u},
- 688:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Fu, 0x08u},
- 689:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x93u, 0x04u},
- 690:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x96u, 0x40u},
- 691:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x97u, 0x90u},
- 692:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x98u, 0xA0u},
- 693:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x99u, 0x10u},
- 694:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Cu, 0x40u},
- 695:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Du, 0x01u},
- 696:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA0u, 0x04u},
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 20
+ 640:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA4u, 0x02u},
+ 641:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB0u, 0x02u},
+ 642:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB2u, 0x01u},
+ 643:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB3u, 0x02u},
+ 644:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB4u, 0x04u},
+ 645:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB7u, 0x01u},
+ 646:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xBEu, 0x10u},
+ 647:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x42u},
+ 648:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC9u, 0xFFu},
+ 649:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0xFFu},
+ 650:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCBu, 0xFFu},
+ 651:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCDu, 0x83u},
+ 652:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0x03u},
+ 653:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCFu, 0x01u},
+ 654:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0x18u},
+ 655:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD2u, 0x80u},
+ 656:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD6u, 0x04u},
+ 657:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x04u},
+ 658:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD9u, 0x04u},
+ 659:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDAu, 0x04u},
+ 660:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDBu, 0x04u},
+ 661:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDCu, 0x12u},
+ 662:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDDu, 0x33u},
+ 663:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDFu, 0x01u},
+ 664:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE0u, 0x40u},
+ 665:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE2u, 0x40u},
+ 666:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE4u, 0x40u},
+ 667:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE5u, 0x40u},
+ 668:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE6u, 0x80u},
+ 669:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE8u, 0x80u},
+ 670:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEAu, 0x80u},
+ 671:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xECu, 0x80u},
+ 672:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEEu, 0x80u},
+ 673:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x00u, 0x10u},
+ 674:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x02u, 0x10u},
+ 675:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x03u, 0x01u},
+ 676:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x07u, 0x20u},
+ 677:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x09u, 0x08u},
+ 678:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Bu, 0x02u},
+ 679:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Fu, 0x01u},
+ 680:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x12u, 0x40u},
+ 681:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x15u, 0x02u},
+ 682:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x17u, 0x08u},
+ 683:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x18u, 0x04u},
+ 684:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Eu, 0x68u},
+ 685:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x21u, 0x08u},
+ 686:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x27u, 0x21u},
+ 687:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x28u, 0x04u},
+ 688:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Au, 0x10u},
+ 689:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Bu, 0x08u},
+ 690:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x32u, 0x04u},
+ 691:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x33u, 0x05u},
+ 692:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x36u, 0x02u},
+ 693:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x38u, 0x96u},
+ 694:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Au, 0x40u},
+ 695:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Bu, 0x22u},
+ 696:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Fu, 0x10u},
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 20
 
 
- 697:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA1u, 0x20u},
- 698:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA2u, 0x01u},
- 699:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA7u, 0x20u},
- 700:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xABu, 0x10u},
- 701:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAFu, 0x40u},
- 702:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB4u, 0xA0u},
- 703:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0xC4u},
- 704:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC2u, 0x7Au},
- 705:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC4u, 0x87u},
- 706:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0x4Du},
- 707:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCCu, 0x04u},
- 708:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0x06u},
- 709:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0x81u},
- 710:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD2u, 0x18u},
- 711:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD6u, 0x0Eu},
- 712:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x02u, 0x01u},
- 713:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x05u, 0x7Fu},
- 714:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x09u, 0xFEu},
- 715:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Bu, 0x01u},
- 716:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x11u, 0x96u},
- 717:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x12u, 0x01u},
- 718:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x13u, 0x68u},
- 719:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x19u, 0x0Eu},
- 720:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Bu, 0xF0u},
- 721:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x23u, 0x01u},
- 722:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x25u, 0xC5u},
- 723:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x27u, 0x3Au},
- 724:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Du, 0xA3u},
- 725:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Fu, 0x5Cu},
- 726:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x30u, 0x01u},
- 727:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x37u, 0xFFu},
- 728:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Eu, 0x01u},
- 729:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Fu, 0x40u},
- 730:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x40u, 0x54u},
- 731:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x45u, 0xECu},
- 732:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x46u, 0x02u},
- 733:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x48u, 0x07u},
- 734:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x49u, 0xFFu},
- 735:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Au, 0xFFu},
- 736:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Bu, 0xFFu},
- 737:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Du, 0x83u},
- 738:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Eu, 0x03u},
- 739:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Fu, 0x01u},
- 740:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x50u, 0x18u},
- 741:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x54u, 0x01u},
- 742:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x56u, 0x04u},
- 743:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x58u, 0x04u},
- 744:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x59u, 0x04u},
- 745:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Au, 0x04u},
- 746:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x04u},
- 747:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Du, 0x33u},
- 748:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Fu, 0x01u},
- 749:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x60u, 0x40u},
- 750:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x62u, 0x40u},
- 751:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x64u, 0x40u},
- 752:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x65u, 0x40u},
- 753:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x66u, 0x80u},
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 21
+ 697:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x42u, 0x08u},
+ 698:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x46u, 0x88u},
+ 699:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x48u, 0x01u},
+ 700:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Eu, 0x60u},
+ 701:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x67u, 0x40u},
+ 702:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x74u, 0x01u},
+ 703:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x76u, 0x80u},
+ 704:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x87u, 0x40u},
+ 705:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Fu, 0x01u},
+ 706:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x90u, 0x80u},
+ 707:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x91u, 0x02u},
+ 708:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x93u, 0x10u},
+ 709:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x94u, 0x06u},
+ 710:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x97u, 0x22u},
+ 711:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Bu, 0x04u},
+ 712:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Fu, 0x01u},
+ 713:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA2u, 0x02u},
+ 714:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA3u, 0x08u},
+ 715:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA6u, 0x04u},
+ 716:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xABu, 0x10u},
+ 717:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xACu, 0x02u},
+ 718:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAFu, 0x10u},
+ 719:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB0u, 0x20u},
+ 720:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB4u, 0x80u},
+ 721:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x27u},
+ 722:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC2u, 0x85u},
+ 723:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC4u, 0x38u},
+ 724:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0x04u},
+ 725:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCCu, 0x83u},
+ 726:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0x2Fu},
+ 727:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0xA4u},
+ 728:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD2u, 0x08u},
+ 729:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD6u, 0x30u},
+ 730:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x80u},
+ 731:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE4u, 0x10u},
+ 732:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE8u, 0x80u},
+ 733:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEAu, 0x04u},
+ 734:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEEu, 0x02u},
+ 735:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x02u, 0x01u},
+ 736:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x08u, 0x0Eu},
+ 737:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Cu, 0x10u},
+ 738:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Eu, 0x02u},
+ 739:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x14u, 0x18u},
+ 740:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x16u, 0x02u},
+ 741:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x18u, 0x18u},
+ 742:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Au, 0x04u},
+ 743:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Cu, 0x16u},
+ 744:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Eu, 0x08u},
+ 745:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x22u, 0x1Eu},
+ 746:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Au, 0x01u},
+ 747:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x30u, 0x01u},
+ 748:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x34u, 0x1Eu},
+ 749:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Eu, 0x01u},
+ 750:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x40u, 0x42u},
+ 751:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x45u, 0xECu},
+ 752:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x47u, 0x02u},
+ 753:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x48u, 0x13u},
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 21
 
 
- 754:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x68u, 0x80u},
- 755:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Au, 0x80u},
- 756:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Cu, 0x80u},
- 757:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Eu, 0x80u},
- 758:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x81u, 0x01u},
- 759:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x84u, 0x07u},
- 760:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Cu, 0x0Cu},
- 761:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Eu, 0x01u},
- 762:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x92u, 0x0Fu},
- 763:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x98u, 0x08u},
- 764:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Au, 0x01u},
- 765:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA4u, 0x0Cu},
- 766:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA6u, 0x02u},
- 767:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA8u, 0x0Bu},
- 768:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAAu, 0x04u},
- 769:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB4u, 0x0Fu},
- 770:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB7u, 0x01u},
- 771:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD6u, 0x04u},
- 772:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x04u},
- 773:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD9u, 0x04u},
- 774:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDBu, 0x04u},
- 775:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDCu, 0x21u},
- 776:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDFu, 0x01u},
- 777:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x00u, 0x08u},
- 778:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x01u, 0x40u},
- 779:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x06u, 0x80u},
- 780:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x08u, 0x21u},
- 781:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Cu, 0x02u},
- 782:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x10u, 0x10u},
- 783:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x13u, 0x10u},
- 784:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Bu, 0x20u},
- 785:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Eu, 0x80u},
- 786:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x22u, 0x40u},
- 787:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x27u, 0x02u},
- 788:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Cu, 0x10u},
- 789:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Du, 0x40u},
- 790:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Eu, 0x40u},
- 791:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x2Fu, 0xA0u},
- 792:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x34u, 0x21u},
- 793:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x35u, 0x10u},
- 794:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x36u, 0x01u},
- 795:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Au, 0x01u},
- 796:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Cu, 0x08u},
- 797:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x3Fu, 0x10u},
- 798:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x46u, 0x80u},
- 799:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Cu, 0x02u},
- 800:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Du, 0x05u},
- 801:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x56u, 0x80u},
- 802:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Au, 0x80u},
- 803:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x10u},
- 804:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Du, 0x05u},
- 805:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Eu, 0x80u},
- 806:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x62u, 0x02u},
- 807:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x64u, 0x40u},
- 808:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x92u, 0x40u},
- 809:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x93u, 0x10u},
- 810:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x99u, 0x10u},
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 22
+ 754:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x49u, 0xFFu},
+ 755:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Au, 0xFFu},
+ 756:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Bu, 0xFFu},
+ 757:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Du, 0x83u},
+ 758:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Eu, 0x03u},
+ 759:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Fu, 0x01u},
+ 760:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x50u, 0x18u},
+ 761:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x54u, 0x01u},
+ 762:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x56u, 0x04u},
+ 763:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x58u, 0x04u},
+ 764:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Au, 0x04u},
+ 765:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Bu, 0x04u},
+ 766:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Cu, 0x01u},
+ 767:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Du, 0x33u},
+ 768:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Fu, 0x01u},
+ 769:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x60u, 0x40u},
+ 770:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x62u, 0x40u},
+ 771:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x64u, 0x40u},
+ 772:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x65u, 0x40u},
+ 773:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x66u, 0x80u},
+ 774:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x68u, 0x80u},
+ 775:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Au, 0x80u},
+ 776:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Cu, 0x80u},
+ 777:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Eu, 0x80u},
+ 778:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x80u, 0x0Fu},
+ 779:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Cu, 0x05u},
+ 780:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Eu, 0x0Au},
+ 781:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x94u, 0x0Cu},
+ 782:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x96u, 0x03u},
+ 783:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x98u, 0x07u},
+ 784:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA0u, 0x03u},
+ 785:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA2u, 0x0Cu},
+ 786:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA8u, 0x0Au},
+ 787:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAAu, 0x05u},
+ 788:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB6u, 0x0Fu},
+ 789:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x04u},
+ 790:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDCu, 0x01u},
+ 791:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDFu, 0x01u},
+ 792:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x03u, 0x81u},
+ 793:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x06u, 0x80u},
+ 794:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x07u, 0x05u},
+ 795:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Au, 0x08u},
+ 796:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Bu, 0x20u},
+ 797:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Cu, 0x04u},
+ 798:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Eu, 0x09u},
+ 799:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x10u, 0x04u},
+ 800:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x12u, 0x40u},
+ 801:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x16u, 0x48u},
+ 802:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x18u, 0x02u},
+ 803:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Au, 0x01u},
+ 804:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Bu, 0x80u},
+ 805:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Eu, 0x48u},
+ 806:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x1Fu, 0x10u},
+ 807:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x46u, 0x88u},
+ 808:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Du, 0x04u},
+ 809:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x4Fu, 0x01u},
+ 810:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x56u, 0x08u},
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 22
 
 
- 811:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Au, 0x01u},
- 812:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Bu, 0x10u},
- 813:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Cu, 0x41u},
- 814:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Eu, 0x80u},
- 815:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Fu, 0x02u},
- 816:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA0u, 0x06u},
- 817:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA2u, 0x01u},
- 818:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA3u, 0x80u},
- 819:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA6u, 0x02u},
- 820:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA7u, 0x20u},
- 821:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAAu, 0x01u},
- 822:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAFu, 0x10u},
- 823:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x15u},
- 824:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC2u, 0x1Au},
- 825:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC4u, 0x06u},
- 826:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCAu, 0xD0u},
- 827:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCCu, 0xA0u},
- 828:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xCEu, 0x61u},
- 829:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0x80u},
- 830:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD2u, 0x10u},
- 831:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD6u, 0xDCu},
- 832:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x81u},
- 833:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Bu, 0x01u},
- 834:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Eu, 0x20u},
- 835:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDAu, 0xC0u},
- 836:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x00u, 0x08u},
- 837:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x06u, 0x20u},
- 838:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Au, 0x10u},
- 839:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Fu, 0x01u},
- 840:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA6u, 0x10u},
- 841:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x30u},
- 842:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Au, 0x40u},
- 843:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Fu, 0x40u},
- 844:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x87u, 0x01u},
- 845:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Fu, 0x01u},
- 846:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAAu, 0x20u},
- 847:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xACu, 0x04u},
- 848:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC2u, 0x30u},
- 849:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE2u, 0x40u},
- 850:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE8u, 0x20u},
- 851:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xECu, 0x40u},
- 852:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAAu, 0x40u},
- 853:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAFu, 0x40u},
- 854:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE8u, 0x20u},
- 855:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xECu, 0x40u},
- 856:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x00u, 0x40u},
- 857:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x04u, 0x10u},
- 858:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x05u, 0x01u},
- 859:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x07u},
- 860:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Du, 0x01u},
- 861:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x99u, 0x01u},
- 862:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB4u, 0x50u},
- 863:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE6u, 0x02u},
- 864:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEAu, 0x0Au},
+ 811:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Du, 0x04u},
+ 812:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Eu, 0x40u},
+ 813:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x5Fu, 0x01u},
+ 814:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x67u, 0x80u},
+ 815:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x87u, 0x40u},
+ 816:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x92u, 0x08u},
+ 817:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x94u, 0x02u},
+ 818:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x97u, 0x20u},
+ 819:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x98u, 0x04u},
+ 820:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Au, 0xC0u},
+ 821:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Bu, 0x05u},
+ 822:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Eu, 0x08u},
+ 823:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAFu, 0x08u},
+ 824:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0xD9u},
+ 825:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC2u, 0xE6u},
+ 826:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC4u, 0x5Au},
+ 827:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD0u, 0xA0u},
+ 828:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD6u, 0xD0u},
+ 829:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xD8u, 0x80u},
+ 830:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Bu, 0x02u},
+ 831:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x6Fu, 0x02u},
+ 832:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xDAu, 0xC0u},
+ 833:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x03u, 0x20u},
+ 834:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x06u, 0x20u},
+ 835:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Fu, 0x02u},
+ 836:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA7u, 0x02u},
+ 837:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x30u},
+ 838:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Bu, 0x10u},
+ 839:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x0Eu, 0x10u},
+ 840:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x87u, 0x02u},
+ 841:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Eu, 0x10u},
+ 842:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x9Fu, 0x02u},
+ 843:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA7u, 0x02u},
+ 844:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAEu, 0x20u},
+ 845:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB3u, 0x20u},
+ 846:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC2u, 0x30u},
+ 847:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE6u, 0x40u},
+ 848:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE8u, 0x10u},
+ 849:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x87u, 0x02u},
+ 850:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA7u, 0x02u},
+ 851:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xAFu, 0x10u},
+ 852:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE2u, 0x10u},
+ 853:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE8u, 0x10u},
+ 854:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x00u, 0x08u},
+ 855:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x01u, 0x80u},
+ 856:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x04u, 0x10u},
+ 857:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x06u, 0x20u},
+ 858:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x8Au, 0x20u},
+ 859:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xC0u, 0x0Fu},
+ 860:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xE6u, 0x01u},
+ 861:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xA9u, 0x80u},
+ 862:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xACu, 0x04u},
+ 863:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xB4u, 0x10u},
+ 864:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0xEAu, 0x08u},
  865:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x01u, 0x0Eu},
  866:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x10u, 0x02u},
  867:Generated_Source\PSoC4/cyfitter_cfg.c **** 			{0x12u, 0x0Eu},
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 23
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 23
 
 
  868:Generated_Source\PSoC4/cyfitter_cfg.c **** 		};
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  382 0148 EDD9     		bls	.L15
  890:Generated_Source\PSoC4/cyfitter_cfg.c **** 		}
  891:Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 24
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 24
 
 
  892:Generated_Source\PSoC4/cyfitter_cfg.c **** 		cfg_write_bytes32(cy_cfg_addr_table, cy_cfg_data_table);
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  420              		.loc 1 908 0
  421 0184 2E4A     		ldr	r2, .L16+44
  422 0186 1360     		str	r3, [r2]
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 25
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 25
 
 
  909:Generated_Source\PSoC4/cyfitter_cfg.c **** 
@@ -1454,8 +1454,8 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  427 018c 2E4A     		ldr	r2, .L16+52
  428 018e 1360     		str	r3, [r2]
  915:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 916:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_P1_U1_CFG24 Starting address: CYDEV_UDB_P1_U1_CFG24 */
- 917:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_UDB_P1_U1_CFG24), 0x44040404u);
+ 916:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_P1_U0_CFG24 Starting address: CYDEV_UDB_P1_U0_CFG24 */
+ 917:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_UDB_P1_U0_CFG24), 0x44040404u);
  429              		.loc 1 917 0
  430 0190 2E4A     		ldr	r2, .L16+56
  431 0192 2F4B     		ldr	r3, .L16+60
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  929:Generated_Source\PSoC4/cyfitter_cfg.c **** 
  930:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Perform second pass device configuration. These items must be configured in specific order afte
  931:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_0 Starting address: CYDEV_GPIO_PRT0_BASE */
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 26
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 26
 
 
  932:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT0_BASE), 0x00000002u);
@@ -1544,12 +1544,12 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  484 01e4 1A60     		str	r2, [r3]
  945:Generated_Source\PSoC4/cyfitter_cfg.c **** 
  946:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_4 Starting address: CYDEV_GPIO_PRT4_BASE */
- 947:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT4_BASE), 0x0000004Eu);
+ 947:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT4_BASE), 0x0000004Fu);
  485              		.loc 1 947 0
- 486 01e6 4E22     		movs	r2, #78
+ 486 01e6 4F22     		movs	r2, #79
  487 01e8 274B     		ldr	r3, .L16+116
  488 01ea 1A60     		str	r2, [r3]
- 948:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT4_PC), 0x00080490u);
+ 948:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT4_PC), 0x00080492u);
  489              		.loc 1 948 0
  490 01ec 274A     		ldr	r2, .L16+120
  491 01ee 284B     		ldr	r3, .L16+124
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  950:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_6 Starting address: CYDEV_GPIO_PRT6_BASE */
  951:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT6_BASE), 0x00000033u);
  493              		.loc 1 951 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 27
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 27
 
 
  494 01f2 3322     		movs	r2, #51
@@ -1618,10 +1618,10 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  534 0244 50500F40 		.word	1074745424
  535 0248 70500F40 		.word	1074745456
  536 024c 04040444 		.word	1141113860
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 28
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 28
 
 
- 537 0250 D8320F40 		.word	1074737880
+ 537 0250 58320F40 		.word	1074737752
  538 0254 20001040 		.word	1074790432
  539 0258 00800F40 		.word	1074757632
  540 025c 01700F40 		.word	1074753537
@@ -1636,7 +1636,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  549 0280 18020440 		.word	1074004504
  550 0284 08030440 		.word	1074004744
  551 0288 00040440 		.word	1074004992
- 552 028c 90040800 		.word	525456
+ 552 028c 92040800 		.word	525458
  553 0290 08040440 		.word	1074005000
  554 0294 00060440 		.word	1074005504
  555 0298 12400200 		.word	147474
@@ -1650,1143 +1650,1143 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  563              		.align	2
  564              		.set	.LANCHOR0,. + 0
  565              		.set	.LANCHOR1,. + 1024
- 566              		.type	cfg_memset_list.6661, %object
- 567              		.size	cfg_memset_list.6661, 12
- 568              	cfg_memset_list.6661:
+ 566              		.type	cfg_memset_list.6687, %object
+ 567              		.size	cfg_memset_list.6687, 12
+ 568              	cfg_memset_list.6687:
  569 0000 00300F40 		.word	1074737152
  570 0004 0008     		.short	2048
  571 0006 00400F40 		.4byte	1074741248
  572 000a 0008     		.short	2048
- 573              		.type	cy_cfg_data_table.6656, %object
- 574              		.size	cy_cfg_data_table.6656, 1052
- 575              	cy_cfg_data_table.6656:
- 576 000c 80       		.byte	-128
+ 573              		.type	cy_cfg_data_table.6682, %object
+ 574              		.size	cy_cfg_data_table.6682, 1052
+ 575              	cy_cfg_data_table.6682:
+ 576 000c 81       		.byte	-127
  577 000d 0F       		.byte	15
- 578 000e 83       		.byte	-125
+ 578 000e 82       		.byte	-126
  579 000f 6F       		.byte	111
- 580 0010 86       		.byte	-122
- 581 0011 0D       		.byte	13
- 582 0012 87       		.byte	-121
- 583 0013 03       		.byte	3
- 584 0014 08       		.byte	8
- 585 0015 06       		.byte	6
- 586 0016 0E       		.byte	14
- 587 0017 06       		.byte	6
- 588 0018 14       		.byte	20
- 589 0019 04       		.byte	4
- 590 001a 16       		.byte	22
- 591 001b 02       		.byte	2
- 592 001c 1F       		.byte	31
- 593 001d 01       		.byte	1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 29
+ 580 0010 85       		.byte	-123
+ 581 0011 03       		.byte	3
+ 582 0012 86       		.byte	-122
+ 583 0013 0D       		.byte	13
+ 584 0014 01       		.byte	1
+ 585 0015 FD       		.byte	-3
+ 586 0016 03       		.byte	3
+ 587 0017 02       		.byte	2
+ 588 0018 06       		.byte	6
+ 589 0019 08       		.byte	8
+ 590 001a 08       		.byte	8
+ 591 001b 01       		.byte	1
+ 592 001c 09       		.byte	9
+ 593 001d CF       		.byte	-49
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 29
 
 
- 594 001e 22       		.byte	34
- 595 001f 01       		.byte	1
- 596 0020 25       		.byte	37
- 597 0021 01       		.byte	1
- 598 0022 32       		.byte	50
- 599 0023 01       		.byte	1
- 600 0024 34       		.byte	52
- 601 0025 04       		.byte	4
- 602 0026 36       		.byte	54
- 603 0027 02       		.byte	2
- 604 0028 37       		.byte	55
- 605 0029 01       		.byte	1
- 606 002a 3E       		.byte	62
- 607 002b 50       		.byte	80
- 608 002c 3F       		.byte	63
- 609 002d 40       		.byte	64
- 610 002e 54       		.byte	84
- 611 002f 0F       		.byte	15
- 612 0030 58       		.byte	88
- 613 0031 04       		.byte	4
- 614 0032 59       		.byte	89
- 615 0033 04       		.byte	4
- 616 0034 5B       		.byte	91
- 617 0035 04       		.byte	4
- 618 0036 5C       		.byte	92
- 619 0037 01       		.byte	1
- 620 0038 5D       		.byte	93
- 621 0039 10       		.byte	16
- 622 003a 5F       		.byte	95
- 623 003b 01       		.byte	1
- 624 003c 85       		.byte	-123
- 625 003d 73       		.byte	115
- 626 003e 86       		.byte	-122
+ 594 001e 0A       		.byte	10
+ 595 001f 02       		.byte	2
+ 596 0020 0B       		.byte	11
+ 597 0021 30       		.byte	48
+ 598 0022 0C       		.byte	12
+ 599 0023 04       		.byte	4
+ 600 0024 0D       		.byte	13
+ 601 0025 94       		.byte	-108
+ 602 0026 0F       		.byte	15
+ 603 0027 60       		.byte	96
+ 604 0028 11       		.byte	17
+ 605 0029 30       		.byte	48
+ 606 002a 13       		.byte	19
+ 607 002b C9       		.byte	-55
+ 608 002c 15       		.byte	21
+ 609 002d 73       		.byte	115
+ 610 002e 16       		.byte	22
+ 611 002f 04       		.byte	4
+ 612 0030 1A       		.byte	26
+ 613 0031 07       		.byte	7
+ 614 0032 1B       		.byte	27
+ 615 0033 0F       		.byte	15
+ 616 0034 20       		.byte	32
+ 617 0035 01       		.byte	1
+ 618 0036 22       		.byte	34
+ 619 0037 02       		.byte	2
+ 620 0038 24       		.byte	36
+ 621 0039 07       		.byte	7
+ 622 003a 29       		.byte	41
+ 623 003b 9E       		.byte	-98
+ 624 003c 2B       		.byte	43
+ 625 003d 60       		.byte	96
+ 626 003e 2C       		.byte	44
  627 003f 07       		.byte	7
- 628 0040 89       		.byte	-119
- 629 0041 FD       		.byte	-3
- 630 0042 8B       		.byte	-117
- 631 0043 02       		.byte	2
- 632 0044 8D       		.byte	-115
- 633 0045 CF       		.byte	-49
- 634 0046 8F       		.byte	-113
- 635 0047 30       		.byte	48
- 636 0048 91       		.byte	-111
- 637 0049 30       		.byte	48
- 638 004a 92       		.byte	-110
- 639 004b 04       		.byte	4
- 640 004c 93       		.byte	-109
- 641 004d C9       		.byte	-55
- 642 004e 94       		.byte	-108
- 643 004f 07       		.byte	7
- 644 0050 95       		.byte	-107
- 645 0051 94       		.byte	-108
- 646 0052 97       		.byte	-105
- 647 0053 60       		.byte	96
- 648 0054 98       		.byte	-104
+ 628 0040 34       		.byte	52
+ 629 0041 0F       		.byte	15
+ 630 0042 35       		.byte	53
+ 631 0043 FF       		.byte	-1
+ 632 0044 3F       		.byte	63
+ 633 0045 10       		.byte	16
+ 634 0046 58       		.byte	88
+ 635 0047 04       		.byte	4
+ 636 0048 59       		.byte	89
+ 637 0049 04       		.byte	4
+ 638 004a 5C       		.byte	92
+ 639 004b 01       		.byte	1
+ 640 004c 5F       		.byte	95
+ 641 004d 01       		.byte	1
+ 642 004e 86       		.byte	-122
+ 643 004f 10       		.byte	16
+ 644 0050 8A       		.byte	-118
+ 645 0051 10       		.byte	16
+ 646 0052 8E       		.byte	-114
+ 647 0053 0F       		.byte	15
+ 648 0054 93       		.byte	-109
  649 0055 01       		.byte	1
- 650 0056 9A       		.byte	-102
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 30
+ 650 0056 97       		.byte	-105
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 30
 
 
  651 0057 02       		.byte	2
- 652 0058 9C       		.byte	-100
- 653 0059 04       		.byte	4
- 654 005a A4       		.byte	-92
- 655 005b 01       		.byte	1
- 656 005c A5       		.byte	-91
- 657 005d 9E       		.byte	-98
- 658 005e A6       		.byte	-90
+ 652 0058 98       		.byte	-104
+ 653 0059 0C       		.byte	12
+ 654 005a 9A       		.byte	-102
+ 655 005b 02       		.byte	2
+ 656 005c 9C       		.byte	-100
+ 657 005d 08       		.byte	8
+ 658 005e 9D       		.byte	-99
  659 005f 02       		.byte	2
- 660 0060 A7       		.byte	-89
- 661 0061 60       		.byte	96
- 662 0062 A8       		.byte	-88
- 663 0063 07       		.byte	7
- 664 0064 AB       		.byte	-85
- 665 0065 0F       		.byte	15
- 666 0066 AE       		.byte	-82
- 667 0067 08       		.byte	8
- 668 0068 B1       		.byte	-79
- 669 0069 FF       		.byte	-1
- 670 006a B2       		.byte	-78
- 671 006b 0F       		.byte	15
- 672 006c BF       		.byte	-65
- 673 006d 01       		.byte	1
- 674 006e D8       		.byte	-40
+ 660 0060 9E       		.byte	-98
+ 661 0061 01       		.byte	1
+ 662 0062 A0       		.byte	-96
+ 663 0063 10       		.byte	16
+ 664 0064 A4       		.byte	-92
+ 665 0065 07       		.byte	7
+ 666 0066 A5       		.byte	-91
+ 667 0067 02       		.byte	2
+ 668 0068 A8       		.byte	-88
+ 669 0069 0C       		.byte	12
+ 670 006a AA       		.byte	-86
+ 671 006b 01       		.byte	1
+ 672 006c AC       		.byte	-84
+ 673 006d 0B       		.byte	11
+ 674 006e AE       		.byte	-82
  675 006f 04       		.byte	4
- 676 0070 D9       		.byte	-39
- 677 0071 04       		.byte	4
- 678 0072 DC       		.byte	-36
- 679 0073 01       		.byte	1
- 680 0074 DF       		.byte	-33
- 681 0075 01       		.byte	1
- 682 0076 00       		.byte	0
- 683 0077 10       		.byte	16
- 684 0078 03       		.byte	3
- 685 0079 02       		.byte	2
- 686 007a 05       		.byte	5
+ 676 0070 B0       		.byte	-80
+ 677 0071 10       		.byte	16
+ 678 0072 B2       		.byte	-78
+ 679 0073 0F       		.byte	15
+ 680 0074 B3       		.byte	-77
+ 681 0075 02       		.byte	2
+ 682 0076 B7       		.byte	-73
+ 683 0077 01       		.byte	1
+ 684 0078 BE       		.byte	-66
+ 685 0079 01       		.byte	1
+ 686 007a BF       		.byte	-65
  687 007b 04       		.byte	4
- 688 007c 09       		.byte	9
- 689 007d 08       		.byte	8
- 690 007e 0E       		.byte	14
- 691 007f 4A       		.byte	74
- 692 0080 0F       		.byte	15
- 693 0081 10       		.byte	16
- 694 0082 10       		.byte	16
- 695 0083 80       		.byte	-128
- 696 0084 15       		.byte	21
- 697 0085 04       		.byte	4
- 698 0086 16       		.byte	22
- 699 0087 08       		.byte	8
- 700 0088 17       		.byte	23
- 701 0089 80       		.byte	-128
- 702 008a 18       		.byte	24
- 703 008b 10       		.byte	16
- 704 008c 19       		.byte	25
- 705 008d 98       		.byte	-104
- 706 008e 1D       		.byte	29
- 707 008f 0C       		.byte	12
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 31
+ 688 007c D4       		.byte	-44
+ 689 007d 0F       		.byte	15
+ 690 007e D8       		.byte	-40
+ 691 007f 04       		.byte	4
+ 692 0080 D9       		.byte	-39
+ 693 0081 04       		.byte	4
+ 694 0082 DB       		.byte	-37
+ 695 0083 04       		.byte	4
+ 696 0084 DC       		.byte	-36
+ 697 0085 11       		.byte	17
+ 698 0086 DD       		.byte	-35
+ 699 0087 10       		.byte	16
+ 700 0088 DF       		.byte	-33
+ 701 0089 01       		.byte	1
+ 702 008a 00       		.byte	0
+ 703 008b 04       		.byte	4
+ 704 008c 03       		.byte	3
+ 705 008d 09       		.byte	9
+ 706 008e 05       		.byte	5
+ 707 008f 14       		.byte	20
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 31
 
 
- 708 0090 1F       		.byte	31
- 709 0091 08       		.byte	8
- 710 0092 22       		.byte	34
- 711 0093 40       		.byte	64
- 712 0094 27       		.byte	39
- 713 0095 80       		.byte	-128
- 714 0096 29       		.byte	41
- 715 0097 08       		.byte	8
- 716 0098 2D       		.byte	45
- 717 0099 04       		.byte	4
- 718 009a 2F       		.byte	47
- 719 009b 28       		.byte	40
- 720 009c 30       		.byte	48
- 721 009d 80       		.byte	-128
- 722 009e 36       		.byte	54
- 723 009f 05       		.byte	5
- 724 00a0 3C       		.byte	60
- 725 00a1 08       		.byte	8
- 726 00a2 3E       		.byte	62
- 727 00a3 4C       		.byte	76
- 728 00a4 3F       		.byte	63
- 729 00a5 30       		.byte	48
- 730 00a6 59       		.byte	89
- 731 00a7 90       		.byte	-112
- 732 00a8 5A       		.byte	90
- 733 00a9 04       		.byte	4
- 734 00aa 5B       		.byte	91
- 735 00ab 02       		.byte	2
- 736 00ac 8F       		.byte	-113
- 737 00ad 12       		.byte	18
- 738 00ae C0       		.byte	-64
- 739 00af 23       		.byte	35
- 740 00b0 C2       		.byte	-62
- 741 00b1 F4       		.byte	-12
- 742 00b2 C4       		.byte	-60
- 743 00b3 E8       		.byte	-24
- 744 00b4 CA       		.byte	-54
- 745 00b5 62       		.byte	98
- 746 00b6 CC       		.byte	-52
- 747 00b7 C8       		.byte	-56
- 748 00b8 CE       		.byte	-50
- 749 00b9 70       		.byte	112
- 750 00ba D6       		.byte	-42
- 751 00bb 0F       		.byte	15
- 752 00bc 03       		.byte	3
- 753 00bd 02       		.byte	2
- 754 00be 06       		.byte	6
- 755 00bf 01       		.byte	1
- 756 00c0 12       		.byte	18
- 757 00c1 02       		.byte	2
- 758 00c2 1D       		.byte	29
- 759 00c3 02       		.byte	2
- 760 00c4 23       		.byte	35
- 761 00c5 03       		.byte	3
- 762 00c6 33       		.byte	51
- 763 00c7 02       		.byte	2
- 764 00c8 34       		.byte	52
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 32
+ 708 0090 07       		.byte	7
+ 709 0091 01       		.byte	1
+ 710 0092 0A       		.byte	10
+ 711 0093 08       		.byte	8
+ 712 0094 0B       		.byte	11
+ 713 0095 20       		.byte	32
+ 714 0096 0D       		.byte	13
+ 715 0097 40       		.byte	64
+ 716 0098 0F       		.byte	15
+ 717 0099 08       		.byte	8
+ 718 009a 12       		.byte	18
+ 719 009b 41       		.byte	65
+ 720 009c 13       		.byte	19
+ 721 009d 08       		.byte	8
+ 722 009e 15       		.byte	21
+ 723 009f 20       		.byte	32
+ 724 00a0 16       		.byte	22
+ 725 00a1 01       		.byte	1
+ 726 00a2 17       		.byte	23
+ 727 00a3 0A       		.byte	10
+ 728 00a4 19       		.byte	25
+ 729 00a5 10       		.byte	16
+ 730 00a6 1A       		.byte	26
+ 731 00a7 08       		.byte	8
+ 732 00a8 1B       		.byte	27
+ 733 00a9 20       		.byte	32
+ 734 00aa 1E       		.byte	30
+ 735 00ab 40       		.byte	64
+ 736 00ac 1F       		.byte	31
+ 737 00ad 08       		.byte	8
+ 738 00ae 20       		.byte	32
+ 739 00af 04       		.byte	4
+ 740 00b0 24       		.byte	36
+ 741 00b1 10       		.byte	16
+ 742 00b2 26       		.byte	38
+ 743 00b3 80       		.byte	-128
+ 744 00b4 27       		.byte	39
+ 745 00b5 02       		.byte	2
+ 746 00b6 2B       		.byte	43
+ 747 00b7 0C       		.byte	12
+ 748 00b8 2F       		.byte	47
+ 749 00b9 20       		.byte	32
+ 750 00ba 31       		.byte	49
+ 751 00bb 10       		.byte	16
+ 752 00bc 33       		.byte	51
+ 753 00bd 05       		.byte	5
+ 754 00be 35       		.byte	53
+ 755 00bf 05       		.byte	5
+ 756 00c0 36       		.byte	54
+ 757 00c1 80       		.byte	-128
+ 758 00c2 38       		.byte	56
+ 759 00c3 82       		.byte	-126
+ 760 00c4 39       		.byte	57
+ 761 00c5 A0       		.byte	-96
+ 762 00c6 3A       		.byte	58
+ 763 00c7 41       		.byte	65
+ 764 00c8 3B       		.byte	59
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 32
 
 
- 765 00c9 02       		.byte	2
- 766 00ca 36       		.byte	54
- 767 00cb 01       		.byte	1
- 768 00cc 37       		.byte	55
- 769 00cd 01       		.byte	1
- 770 00ce 3F       		.byte	63
- 771 00cf 04       		.byte	4
- 772 00d0 40       		.byte	64
- 773 00d1 26       		.byte	38
- 774 00d2 41       		.byte	65
- 775 00d3 03       		.byte	3
- 776 00d4 49       		.byte	73
- 777 00d5 FF       		.byte	-1
- 778 00d6 4A       		.byte	74
- 779 00d7 FF       		.byte	-1
- 780 00d8 4B       		.byte	75
- 781 00d9 FF       		.byte	-1
- 782 00da 4D       		.byte	77
- 783 00db A0       		.byte	-96
- 784 00dc 4F       		.byte	79
- 785 00dd 01       		.byte	1
- 786 00de 50       		.byte	80
- 787 00df 18       		.byte	24
- 788 00e0 52       		.byte	82
- 789 00e1 80       		.byte	-128
- 790 00e2 58       		.byte	88
- 791 00e3 04       		.byte	4
- 792 00e4 59       		.byte	89
+ 765 00c9 21       		.byte	33
+ 766 00ca 5C       		.byte	92
+ 767 00cb 10       		.byte	16
+ 768 00cc 5E       		.byte	94
+ 769 00cd 40       		.byte	64
+ 770 00ce 5F       		.byte	95
+ 771 00cf 09       		.byte	9
+ 772 00d0 C0       		.byte	-64
+ 773 00d1 E7       		.byte	-25
+ 774 00d2 C2       		.byte	-62
+ 775 00d3 C6       		.byte	-58
+ 776 00d4 C4       		.byte	-60
+ 777 00d5 FD       		.byte	-3
+ 778 00d6 CA       		.byte	-54
+ 779 00d7 44       		.byte	68
+ 780 00d8 CC       		.byte	-52
+ 781 00d9 D7       		.byte	-41
+ 782 00da CE       		.byte	-50
+ 783 00db 0D       		.byte	13
+ 784 00dc D6       		.byte	-42
+ 785 00dd F0       		.byte	-16
+ 786 00de 02       		.byte	2
+ 787 00df 04       		.byte	4
+ 788 00e0 05       		.byte	5
+ 789 00e1 06       		.byte	6
+ 790 00e2 09       		.byte	9
+ 791 00e3 03       		.byte	3
+ 792 00e4 0C       		.byte	12
  793 00e5 04       		.byte	4
- 794 00e6 5A       		.byte	90
- 795 00e7 04       		.byte	4
- 796 00e8 5B       		.byte	91
- 797 00e9 04       		.byte	4
- 798 00ea 5C       		.byte	92
- 799 00eb 11       		.byte	17
- 800 00ec 5D       		.byte	93
- 801 00ed 11       		.byte	17
- 802 00ee 5F       		.byte	95
- 803 00ef 01       		.byte	1
- 804 00f0 60       		.byte	96
- 805 00f1 40       		.byte	64
- 806 00f2 62       		.byte	98
- 807 00f3 80       		.byte	-128
- 808 00f4 64       		.byte	100
- 809 00f5 40       		.byte	64
- 810 00f6 65       		.byte	101
- 811 00f7 40       		.byte	64
- 812 00f8 66       		.byte	102
- 813 00f9 80       		.byte	-128
- 814 00fa 68       		.byte	104
- 815 00fb 40       		.byte	64
- 816 00fc 6A       		.byte	106
- 817 00fd 80       		.byte	-128
- 818 00fe 6C       		.byte	108
- 819 00ff 40       		.byte	64
- 820 0100 6D       		.byte	109
- 821 0101 20       		.byte	32
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 33
+ 794 00e6 1B       		.byte	27
+ 795 00e7 08       		.byte	8
+ 796 00e8 1C       		.byte	28
+ 797 00e9 03       		.byte	3
+ 798 00ea 20       		.byte	32
+ 799 00eb 03       		.byte	3
+ 800 00ec 24       		.byte	36
+ 801 00ed 01       		.byte	1
+ 802 00ee 29       		.byte	41
+ 803 00ef 06       		.byte	6
+ 804 00f0 2D       		.byte	45
+ 805 00f1 05       		.byte	5
+ 806 00f2 30       		.byte	48
+ 807 00f3 04       		.byte	4
+ 808 00f4 31       		.byte	49
+ 809 00f5 08       		.byte	8
+ 810 00f6 32       		.byte	50
+ 811 00f7 02       		.byte	2
+ 812 00f8 35       		.byte	53
+ 813 00f9 07       		.byte	7
+ 814 00fa 36       		.byte	54
+ 815 00fb 01       		.byte	1
+ 816 00fc 38       		.byte	56
+ 817 00fd 88       		.byte	-120
+ 818 00fe 39       		.byte	57
+ 819 00ff 20       		.byte	32
+ 820 0100 3E       		.byte	62
+ 821 0101 41       		.byte	65
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 33
 
 
- 822 0102 6E       		.byte	110
- 823 0103 80       		.byte	-128
- 824 0104 83       		.byte	-125
- 825 0105 18       		.byte	24
- 826 0106 84       		.byte	-124
- 827 0107 01       		.byte	1
- 828 0108 85       		.byte	-123
- 829 0109 03       		.byte	3
- 830 010a 89       		.byte	-119
- 831 010b 05       		.byte	5
- 832 010c 95       		.byte	-107
- 833 010d 10       		.byte	16
- 834 010e 99       		.byte	-103
- 835 010f 06       		.byte	6
- 836 0110 9C       		.byte	-100
- 837 0111 08       		.byte	8
- 838 0112 A1       		.byte	-95
- 839 0113 06       		.byte	6
- 840 0114 A4       		.byte	-92
- 841 0115 03       		.byte	3
- 842 0116 A6       		.byte	-90
- 843 0117 0C       		.byte	12
- 844 0118 AC       		.byte	-84
- 845 0119 03       		.byte	3
- 846 011a B0       		.byte	-80
- 847 011b 02       		.byte	2
- 848 011c B2       		.byte	-78
- 849 011d 08       		.byte	8
- 850 011e B3       		.byte	-77
- 851 011f 08       		.byte	8
- 852 0120 B4       		.byte	-76
- 853 0121 01       		.byte	1
- 854 0122 B5       		.byte	-75
- 855 0123 07       		.byte	7
- 856 0124 B6       		.byte	-74
- 857 0125 04       		.byte	4
- 858 0126 B7       		.byte	-73
- 859 0127 10       		.byte	16
- 860 0128 B8       		.byte	-72
- 861 0129 22       		.byte	34
- 862 012a B9       		.byte	-71
- 863 012b 20       		.byte	32
- 864 012c BE       		.byte	-66
- 865 012d 14       		.byte	20
- 866 012e BF       		.byte	-65
- 867 012f 40       		.byte	64
- 868 0130 C0       		.byte	-64
- 869 0131 62       		.byte	98
- 870 0132 C1       		.byte	-63
- 871 0133 03       		.byte	3
- 872 0134 C5       		.byte	-59
- 873 0135 43       		.byte	67
- 874 0136 C6       		.byte	-58
- 875 0137 C0       		.byte	-64
- 876 0138 C7       		.byte	-57
- 877 0139 2E       		.byte	46
- 878 013a C8       		.byte	-56
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 34
+ 822 0102 40       		.byte	64
+ 823 0103 51       		.byte	81
+ 824 0104 41       		.byte	65
+ 825 0105 06       		.byte	6
+ 826 0106 49       		.byte	73
+ 827 0107 FF       		.byte	-1
+ 828 0108 4A       		.byte	74
+ 829 0109 FF       		.byte	-1
+ 830 010a 4B       		.byte	75
+ 831 010b FF       		.byte	-1
+ 832 010c 4D       		.byte	77
+ 833 010d A0       		.byte	-96
+ 834 010e 4F       		.byte	79
+ 835 010f 01       		.byte	1
+ 836 0110 50       		.byte	80
+ 837 0111 18       		.byte	24
+ 838 0112 54       		.byte	84
+ 839 0113 0F       		.byte	15
+ 840 0114 58       		.byte	88
+ 841 0115 04       		.byte	4
+ 842 0116 59       		.byte	89
+ 843 0117 04       		.byte	4
+ 844 0118 5A       		.byte	90
+ 845 0119 04       		.byte	4
+ 846 011a 5B       		.byte	91
+ 847 011b 04       		.byte	4
+ 848 011c 5C       		.byte	92
+ 849 011d 11       		.byte	17
+ 850 011e 5D       		.byte	93
+ 851 011f 11       		.byte	17
+ 852 0120 5F       		.byte	95
+ 853 0121 05       		.byte	5
+ 854 0122 60       		.byte	96
+ 855 0123 40       		.byte	64
+ 856 0124 62       		.byte	98
+ 857 0125 80       		.byte	-128
+ 858 0126 64       		.byte	100
+ 859 0127 40       		.byte	64
+ 860 0128 65       		.byte	101
+ 861 0129 40       		.byte	64
+ 862 012a 66       		.byte	102
+ 863 012b 80       		.byte	-128
+ 864 012c 68       		.byte	104
+ 865 012d 40       		.byte	64
+ 866 012e 6A       		.byte	106
+ 867 012f 80       		.byte	-128
+ 868 0130 6C       		.byte	108
+ 869 0131 40       		.byte	64
+ 870 0132 6D       		.byte	109
+ 871 0133 20       		.byte	32
+ 872 0134 6E       		.byte	110
+ 873 0135 80       		.byte	-128
+ 874 0136 86       		.byte	-122
+ 875 0137 03       		.byte	3
+ 876 0138 92       		.byte	-110
+ 877 0139 01       		.byte	1
+ 878 013a 94       		.byte	-108
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 34
 
 
- 879 013b 3B       		.byte	59
- 880 013c C9       		.byte	-55
- 881 013d FF       		.byte	-1
- 882 013e CA       		.byte	-54
- 883 013f FF       		.byte	-1
- 884 0140 CB       		.byte	-53
- 885 0141 FF       		.byte	-1
- 886 0142 CD       		.byte	-51
- 887 0143 AF       		.byte	-81
- 888 0144 CE       		.byte	-50
- 889 0145 07       		.byte	7
- 890 0146 CF       		.byte	-49
+ 879 013b 08       		.byte	8
+ 880 013c 98       		.byte	-104
+ 881 013d 01       		.byte	1
+ 882 013e A2       		.byte	-94
+ 883 013f 0C       		.byte	12
+ 884 0140 B0       		.byte	-80
+ 885 0141 08       		.byte	8
+ 886 0142 B2       		.byte	-78
+ 887 0143 04       		.byte	4
+ 888 0144 B4       		.byte	-76
+ 889 0145 02       		.byte	2
+ 890 0146 B6       		.byte	-74
  891 0147 01       		.byte	1
- 892 0148 D0       		.byte	-48
- 893 0149 18       		.byte	24
- 894 014a D4       		.byte	-44
- 895 014b 0F       		.byte	15
- 896 014c D8       		.byte	-40
- 897 014d 04       		.byte	4
- 898 014e D9       		.byte	-39
- 899 014f 04       		.byte	4
- 900 0150 DA       		.byte	-38
- 901 0151 04       		.byte	4
- 902 0152 DB       		.byte	-37
- 903 0153 04       		.byte	4
- 904 0154 DC       		.byte	-36
- 905 0155 11       		.byte	17
- 906 0156 DD       		.byte	-35
- 907 0157 11       		.byte	17
- 908 0158 DF       		.byte	-33
- 909 0159 05       		.byte	5
- 910 015a E0       		.byte	-32
- 911 015b 40       		.byte	64
- 912 015c E2       		.byte	-30
- 913 015d 80       		.byte	-128
- 914 015e E4       		.byte	-28
- 915 015f 40       		.byte	64
- 916 0160 E5       		.byte	-27
- 917 0161 40       		.byte	64
- 918 0162 E6       		.byte	-26
- 919 0163 80       		.byte	-128
- 920 0164 E8       		.byte	-24
- 921 0165 40       		.byte	64
- 922 0166 EA       		.byte	-22
- 923 0167 80       		.byte	-128
- 924 0168 EC       		.byte	-20
- 925 0169 40       		.byte	64
- 926 016a ED       		.byte	-19
- 927 016b 20       		.byte	32
- 928 016c EE       		.byte	-18
- 929 016d 80       		.byte	-128
- 930 016e 00       		.byte	0
- 931 016f 08       		.byte	8
- 932 0170 07       		.byte	7
- 933 0171 10       		.byte	16
- 934 0172 0A       		.byte	10
- 935 0173 01       		.byte	1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 35
+ 892 0148 BE       		.byte	-66
+ 893 0149 41       		.byte	65
+ 894 014a C0       		.byte	-64
+ 895 014b 15       		.byte	21
+ 896 014c C1       		.byte	-63
+ 897 014d 06       		.byte	6
+ 898 014e C5       		.byte	-59
+ 899 014f 4E       		.byte	78
+ 900 0150 C6       		.byte	-58
+ 901 0151 02       		.byte	2
+ 902 0152 C7       		.byte	-57
+ 903 0153 3C       		.byte	60
+ 904 0154 C8       		.byte	-56
+ 905 0155 37       		.byte	55
+ 906 0156 C9       		.byte	-55
+ 907 0157 FF       		.byte	-1
+ 908 0158 CA       		.byte	-54
+ 909 0159 FF       		.byte	-1
+ 910 015a CB       		.byte	-53
+ 911 015b FF       		.byte	-1
+ 912 015c CD       		.byte	-51
+ 913 015d AF       		.byte	-81
+ 914 015e CE       		.byte	-50
+ 915 015f 07       		.byte	7
+ 916 0160 CF       		.byte	-49
+ 917 0161 01       		.byte	1
+ 918 0162 D0       		.byte	-48
+ 919 0163 18       		.byte	24
+ 920 0164 D2       		.byte	-46
+ 921 0165 80       		.byte	-128
+ 922 0166 D8       		.byte	-40
+ 923 0167 04       		.byte	4
+ 924 0168 DA       		.byte	-38
+ 925 0169 04       		.byte	4
+ 926 016a DB       		.byte	-37
+ 927 016b 04       		.byte	4
+ 928 016c DC       		.byte	-36
+ 929 016d 01       		.byte	1
+ 930 016e DD       		.byte	-35
+ 931 016f 11       		.byte	17
+ 932 0170 DF       		.byte	-33
+ 933 0171 01       		.byte	1
+ 934 0172 E0       		.byte	-32
+ 935 0173 40       		.byte	64
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 35
 
 
- 936 0174 0F       		.byte	15
- 937 0175 40       		.byte	64
- 938 0176 10       		.byte	16
- 939 0177 22       		.byte	34
- 940 0178 18       		.byte	24
- 941 0179 04       		.byte	4
- 942 017a 19       		.byte	25
- 943 017b 04       		.byte	4
- 944 017c 1A       		.byte	26
- 945 017d 01       		.byte	1
- 946 017e 1B       		.byte	27
- 947 017f 12       		.byte	18
- 948 0180 1D       		.byte	29
- 949 0181 30       		.byte	48
- 950 0182 1E       		.byte	30
- 951 0183 0A       		.byte	10
- 952 0184 20       		.byte	32
- 953 0185 08       		.byte	8
- 954 0186 21       		.byte	33
- 955 0187 10       		.byte	16
- 956 0188 22       		.byte	34
- 957 0189 04       		.byte	4
- 958 018a 23       		.byte	35
- 959 018b 06       		.byte	6
- 960 018c 26       		.byte	38
- 961 018d 88       		.byte	-120
- 962 018e 27       		.byte	39
- 963 018f 20       		.byte	32
- 964 0190 29       		.byte	41
- 965 0191 01       		.byte	1
- 966 0192 2F       		.byte	47
- 967 0193 40       		.byte	64
- 968 0194 32       		.byte	50
- 969 0195 04       		.byte	4
- 970 0196 33       		.byte	51
- 971 0197 20       		.byte	32
- 972 0198 36       		.byte	54
- 973 0199 80       		.byte	-128
- 974 019a 38       		.byte	56
- 975 019b 02       		.byte	2
- 976 019c 3B       		.byte	59
- 977 019d 14       		.byte	20
- 978 019e 3C       		.byte	60
+ 936 0174 E2       		.byte	-30
+ 937 0175 80       		.byte	-128
+ 938 0176 E4       		.byte	-28
+ 939 0177 40       		.byte	64
+ 940 0178 E5       		.byte	-27
+ 941 0179 40       		.byte	64
+ 942 017a E6       		.byte	-26
+ 943 017b 80       		.byte	-128
+ 944 017c E8       		.byte	-24
+ 945 017d 40       		.byte	64
+ 946 017e EA       		.byte	-22
+ 947 017f 80       		.byte	-128
+ 948 0180 EC       		.byte	-20
+ 949 0181 40       		.byte	64
+ 950 0182 ED       		.byte	-19
+ 951 0183 20       		.byte	32
+ 952 0184 EE       		.byte	-18
+ 953 0185 80       		.byte	-128
+ 954 0186 00       		.byte	0
+ 955 0187 04       		.byte	4
+ 956 0188 05       		.byte	5
+ 957 0189 01       		.byte	1
+ 958 018a 07       		.byte	7
+ 959 018b 02       		.byte	2
+ 960 018c 09       		.byte	9
+ 961 018d 02       		.byte	2
+ 962 018e 0A       		.byte	10
+ 963 018f 24       		.byte	36
+ 964 0190 0D       		.byte	13
+ 965 0191 40       		.byte	64
+ 966 0192 10       		.byte	16
+ 967 0193 80       		.byte	-128
+ 968 0194 15       		.byte	21
+ 969 0195 02       		.byte	2
+ 970 0196 17       		.byte	23
+ 971 0197 08       		.byte	8
+ 972 0198 19       		.byte	25
+ 973 0199 02       		.byte	2
+ 974 019a 1A       		.byte	26
+ 975 019b 24       		.byte	36
+ 976 019c 1B       		.byte	27
+ 977 019d C0       		.byte	-64
+ 978 019e 1C       		.byte	28
  979 019f 02       		.byte	2
- 980 01a0 40       		.byte	64
- 981 01a1 04       		.byte	4
- 982 01a2 41       		.byte	65
- 983 01a3 08       		.byte	8
- 984 01a4 45       		.byte	69
- 985 01a5 08       		.byte	8
- 986 01a6 47       		.byte	71
- 987 01a7 20       		.byte	32
- 988 01a8 48       		.byte	72
- 989 01a9 A0       		.byte	-96
- 990 01aa 4A       		.byte	74
- 991 01ab 08       		.byte	8
- 992 01ac 4F       		.byte	79
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 36
+ 980 01a0 1D       		.byte	29
+ 981 01a1 84       		.byte	-124
+ 982 01a2 1E       		.byte	30
+ 983 01a3 40       		.byte	64
+ 984 01a4 24       		.byte	36
+ 985 01a5 80       		.byte	-128
+ 986 01a6 25       		.byte	37
+ 987 01a7 10       		.byte	16
+ 988 01a8 27       		.byte	39
+ 989 01a9 0C       		.byte	12
+ 990 01aa 2F       		.byte	47
+ 991 01ab 09       		.byte	9
+ 992 01ac 34       		.byte	52
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 36
 
 
  993 01ad 20       		.byte	32
- 994 01ae 50       		.byte	80
- 995 01af 03       		.byte	3
- 996 01b0 52       		.byte	82
- 997 01b1 14       		.byte	20
- 998 01b2 59       		.byte	89
- 999 01b3 04       		.byte	4
- 1000 01b4 5A       		.byte	90
- 1001 01b5 A0       		.byte	-96
- 1002 01b6 5B       		.byte	91
- 1003 01b7 02       		.byte	2
- 1004 01b8 62       		.byte	98
- 1005 01b9 14       		.byte	20
- 1006 01ba 74       		.byte	116
- 1007 01bb 01       		.byte	1
- 1008 01bc 79       		.byte	121
- 1009 01bd 20       		.byte	32
- 1010 01be 80       		.byte	-128
- 1011 01bf 01       		.byte	1
- 1012 01c0 82       		.byte	-126
- 1013 01c1 10       		.byte	16
- 1014 01c2 88       		.byte	-120
- 1015 01c3 40       		.byte	64
- 1016 01c4 92       		.byte	-110
- 1017 01c5 80       		.byte	-128
- 1018 01c6 96       		.byte	-106
- 1019 01c7 40       		.byte	64
- 1020 01c8 97       		.byte	-105
- 1021 01c9 10       		.byte	16
- 1022 01ca A1       		.byte	-95
- 1023 01cb 08       		.byte	8
- 1024 01cc A4       		.byte	-92
- 1025 01cd 84       		.byte	-124
- 1026 01ce A6       		.byte	-90
- 1027 01cf 05       		.byte	5
- 1028 01d0 A7       		.byte	-89
- 1029 01d1 22       		.byte	34
- 1030 01d2 C0       		.byte	-64
- 1031 01d3 24       		.byte	36
- 1032 01d4 C2       		.byte	-62
- 1033 01d5 11       		.byte	17
- 1034 01d6 C4       		.byte	-60
- 1035 01d7 05       		.byte	5
- 1036 01d8 CA       		.byte	-54
- 1037 01d9 81       		.byte	-127
- 1038 01da CC       		.byte	-52
- 1039 01db 16       		.byte	22
- 1040 01dc CE       		.byte	-50
- 1041 01dd 87       		.byte	-121
- 1042 01de D0       		.byte	-48
- 1043 01df 66       		.byte	102
- 1044 01e0 D2       		.byte	-46
- 1045 01e1 24       		.byte	36
- 1046 01e2 D6       		.byte	-42
- 1047 01e3 0F       		.byte	15
- 1048 01e4 D8       		.byte	-40
- 1049 01e5 06       		.byte	6
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 37
+ 994 01ae 3D       		.byte	61
+ 995 01af 28       		.byte	40
+ 996 01b0 43       		.byte	67
+ 997 01b1 80       		.byte	-128
+ 998 01b2 45       		.byte	69
+ 999 01b3 80       		.byte	-128
+ 1000 01b4 48       		.byte	72
+ 1001 01b5 01       		.byte	1
+ 1002 01b6 49       		.byte	73
+ 1003 01b7 19       		.byte	25
+ 1004 01b8 4E       		.byte	78
+ 1005 01b9 04       		.byte	4
+ 1006 01ba 4F       		.byte	79
+ 1007 01bb 80       		.byte	-128
+ 1008 01bc 50       		.byte	80
+ 1009 01bd 80       		.byte	-128
+ 1010 01be 51       		.byte	81
+ 1011 01bf 41       		.byte	65
+ 1012 01c0 52       		.byte	82
+ 1013 01c1 02       		.byte	2
+ 1014 01c2 53       		.byte	83
+ 1015 01c3 04       		.byte	4
+ 1016 01c4 58       		.byte	88
+ 1017 01c5 86       		.byte	-122
+ 1018 01c6 5B       		.byte	91
+ 1019 01c7 10       		.byte	16
+ 1020 01c8 5D       		.byte	93
+ 1021 01c9 02       		.byte	2
+ 1022 01ca 5E       		.byte	94
+ 1023 01cb 58       		.byte	88
+ 1024 01cc 65       		.byte	101
+ 1025 01cd 08       		.byte	8
+ 1026 01ce 67       		.byte	103
+ 1027 01cf 08       		.byte	8
+ 1028 01d0 71       		.byte	113
+ 1029 01d1 02       		.byte	2
+ 1030 01d2 7D       		.byte	125
+ 1031 01d3 28       		.byte	40
+ 1032 01d4 7F       		.byte	127
+ 1033 01d5 10       		.byte	16
+ 1034 01d6 88       		.byte	-120
+ 1035 01d7 04       		.byte	4
+ 1036 01d8 8D       		.byte	-115
+ 1037 01d9 40       		.byte	64
+ 1038 01da 8E       		.byte	-114
+ 1039 01db 10       		.byte	16
+ 1040 01dc 92       		.byte	-110
+ 1041 01dd 08       		.byte	8
+ 1042 01de 94       		.byte	-108
+ 1043 01df 82       		.byte	-126
+ 1044 01e0 97       		.byte	-105
+ 1045 01e1 20       		.byte	32
+ 1046 01e2 99       		.byte	-103
+ 1047 01e3 10       		.byte	16
+ 1048 01e4 9B       		.byte	-101
+ 1049 01e5 02       		.byte	2
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 37
 
 
- 1050 01e6 DE       		.byte	-34
- 1051 01e7 04       		.byte	4
- 1052 01e8 E2       		.byte	-30
- 1053 01e9 80       		.byte	-128
- 1054 01ea 04       		.byte	4
- 1055 01eb 07       		.byte	7
- 1056 01ec 05       		.byte	5
- 1057 01ed 07       		.byte	7
- 1058 01ee 09       		.byte	9
- 1059 01ef 0F       		.byte	15
- 1060 01f0 10       		.byte	16
- 1061 01f1 0C       		.byte	12
- 1062 01f2 12       		.byte	18
- 1063 01f3 02       		.byte	2
- 1064 01f4 19       		.byte	25
- 1065 01f5 0A       		.byte	10
- 1066 01f6 1A       		.byte	26
- 1067 01f7 0F       		.byte	15
- 1068 01f8 1B       		.byte	27
- 1069 01f9 05       		.byte	5
- 1070 01fa 21       		.byte	33
- 1071 01fb 0C       		.byte	12
- 1072 01fc 23       		.byte	35
- 1073 01fd 03       		.byte	3
- 1074 01fe 24       		.byte	36
- 1075 01ff 0C       		.byte	12
- 1076 0200 26       		.byte	38
- 1077 0201 01       		.byte	1
- 1078 0202 28       		.byte	40
- 1079 0203 0B       		.byte	11
- 1080 0204 29       		.byte	41
- 1081 0205 03       		.byte	3
- 1082 0206 2A       		.byte	42
- 1083 0207 04       		.byte	4
- 1084 0208 2B       		.byte	43
- 1085 0209 0C       		.byte	12
- 1086 020a 2C       		.byte	44
- 1087 020b 08       		.byte	8
- 1088 020c 2D       		.byte	45
- 1089 020d 05       		.byte	5
- 1090 020e 2E       		.byte	46
- 1091 020f 01       		.byte	1
- 1092 0210 2F       		.byte	47
- 1093 0211 0A       		.byte	10
- 1094 0212 30       		.byte	48
- 1095 0213 0F       		.byte	15
- 1096 0214 33       		.byte	51
- 1097 0215 0F       		.byte	15
- 1098 0216 40       		.byte	64
- 1099 0217 54       		.byte	84
- 1100 0218 49       		.byte	73
- 1101 0219 FF       		.byte	-1
- 1102 021a 4A       		.byte	74
- 1103 021b FF       		.byte	-1
- 1104 021c 4B       		.byte	75
- 1105 021d FF       		.byte	-1
- 1106 021e 4F       		.byte	79
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 38
+ 1050 01e6 9D       		.byte	-99
+ 1051 01e7 05       		.byte	5
+ 1052 01e8 9F       		.byte	-97
+ 1053 01e9 0D       		.byte	13
+ 1054 01ea A3       		.byte	-93
+ 1055 01eb 08       		.byte	8
+ 1056 01ec C0       		.byte	-64
+ 1057 01ed 94       		.byte	-108
+ 1058 01ee C2       		.byte	-62
+ 1059 01ef 8E       		.byte	-114
+ 1060 01f0 C4       		.byte	-60
+ 1061 01f1 38       		.byte	56
+ 1062 01f2 CA       		.byte	-54
+ 1063 01f3 30       		.byte	48
+ 1064 01f4 CC       		.byte	-52
+ 1065 01f5 20       		.byte	32
+ 1066 01f6 CE       		.byte	-50
+ 1067 01f7 60       		.byte	96
+ 1068 01f8 D0       		.byte	-48
+ 1069 01f9 18       		.byte	24
+ 1070 01fa D2       		.byte	-46
+ 1071 01fb 3C       		.byte	60
+ 1072 01fc D6       		.byte	-42
+ 1073 01fd FF       		.byte	-1
+ 1074 01fe D8       		.byte	-40
+ 1075 01ff 60       		.byte	96
+ 1076 0200 DE       		.byte	-34
+ 1077 0201 20       		.byte	32
+ 1078 0202 01       		.byte	1
+ 1079 0203 FE       		.byte	-2
+ 1080 0204 03       		.byte	3
+ 1081 0205 01       		.byte	1
+ 1082 0206 04       		.byte	4
+ 1083 0207 01       		.byte	1
+ 1084 0208 07       		.byte	7
+ 1085 0209 01       		.byte	1
+ 1086 020a 08       		.byte	8
+ 1087 020b 01       		.byte	1
+ 1088 020c 09       		.byte	9
+ 1089 020d A3       		.byte	-93
+ 1090 020e 0B       		.byte	11
+ 1091 020f 5C       		.byte	92
+ 1092 0210 0D       		.byte	13
+ 1093 0211 0E       		.byte	14
+ 1094 0212 0E       		.byte	14
+ 1095 0213 01       		.byte	1
+ 1096 0214 0F       		.byte	15
+ 1097 0215 F0       		.byte	-16
+ 1098 0216 11       		.byte	17
+ 1099 0217 96       		.byte	-106
+ 1100 0218 13       		.byte	19
+ 1101 0219 68       		.byte	104
+ 1102 021a 15       		.byte	21
+ 1103 021b 7F       		.byte	127
+ 1104 021c 16       		.byte	22
+ 1105 021d 02       		.byte	2
+ 1106 021e 1C       		.byte	28
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 38
 
 
  1107 021f 01       		.byte	1
- 1108 0220 50       		.byte	80
- 1109 0221 18       		.byte	24
- 1110 0222 52       		.byte	82
- 1111 0223 80       		.byte	-128
- 1112 0224 58       		.byte	88
- 1113 0225 04       		.byte	4
- 1114 0226 59       		.byte	89
- 1115 0227 04       		.byte	4
- 1116 0228 5A       		.byte	90
- 1117 0229 04       		.byte	4
- 1118 022a 5B       		.byte	91
+ 1108 0220 20       		.byte	32
+ 1109 0221 01       		.byte	1
+ 1110 0222 29       		.byte	41
+ 1111 0223 C5       		.byte	-59
+ 1112 0224 2B       		.byte	43
+ 1113 0225 3A       		.byte	58
+ 1114 0226 33       		.byte	51
+ 1115 0227 FF       		.byte	-1
+ 1116 0228 34       		.byte	52
+ 1117 0229 03       		.byte	3
+ 1118 022a 3F       		.byte	63
  1119 022b 04       		.byte	4
- 1120 022c 5C       		.byte	92
- 1121 022d 11       		.byte	17
- 1122 022e 5D       		.byte	93
- 1123 022f 33       		.byte	51
- 1124 0230 5F       		.byte	95
- 1125 0231 01       		.byte	1
- 1126 0232 60       		.byte	96
- 1127 0233 40       		.byte	64
- 1128 0234 62       		.byte	98
- 1129 0235 40       		.byte	64
- 1130 0236 64       		.byte	100
- 1131 0237 40       		.byte	64
- 1132 0238 65       		.byte	101
- 1133 0239 40       		.byte	64
- 1134 023a 66       		.byte	102
- 1135 023b 80       		.byte	-128
- 1136 023c 68       		.byte	104
- 1137 023d 80       		.byte	-128
- 1138 023e 6A       		.byte	106
- 1139 023f 80       		.byte	-128
- 1140 0240 6C       		.byte	108
- 1141 0241 80       		.byte	-128
- 1142 0242 6E       		.byte	110
- 1143 0243 80       		.byte	-128
- 1144 0244 88       		.byte	-120
- 1145 0245 01       		.byte	1
- 1146 0246 8E       		.byte	-114
- 1147 0247 02       		.byte	2
- 1148 0248 90       		.byte	-112
- 1149 0249 01       		.byte	1
- 1150 024a 94       		.byte	-108
- 1151 024b 01       		.byte	1
- 1152 024c 98       		.byte	-104
- 1153 024d 01       		.byte	1
- 1154 024e A5       		.byte	-91
- 1155 024f 01       		.byte	1
- 1156 0250 AE       		.byte	-82
- 1157 0251 01       		.byte	1
- 1158 0252 B3       		.byte	-77
- 1159 0253 01       		.byte	1
- 1160 0254 B6       		.byte	-74
- 1161 0255 03       		.byte	3
- 1162 0256 C0       		.byte	-64
- 1163 0257 54       		.byte	84
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 39
+ 1120 022c 40       		.byte	64
+ 1121 022d 52       		.byte	82
+ 1122 022e 49       		.byte	73
+ 1123 022f FF       		.byte	-1
+ 1124 0230 4A       		.byte	74
+ 1125 0231 FF       		.byte	-1
+ 1126 0232 4B       		.byte	75
+ 1127 0233 FF       		.byte	-1
+ 1128 0234 4F       		.byte	79
+ 1129 0235 01       		.byte	1
+ 1130 0236 50       		.byte	80
+ 1131 0237 18       		.byte	24
+ 1132 0238 58       		.byte	88
+ 1133 0239 04       		.byte	4
+ 1134 023a 59       		.byte	89
+ 1135 023b 04       		.byte	4
+ 1136 023c 5A       		.byte	90
+ 1137 023d 04       		.byte	4
+ 1138 023e 5C       		.byte	92
+ 1139 023f 01       		.byte	1
+ 1140 0240 5D       		.byte	93
+ 1141 0241 03       		.byte	3
+ 1142 0242 5F       		.byte	95
+ 1143 0243 01       		.byte	1
+ 1144 0244 60       		.byte	96
+ 1145 0245 40       		.byte	64
+ 1146 0246 62       		.byte	98
+ 1147 0247 40       		.byte	64
+ 1148 0248 64       		.byte	100
+ 1149 0249 40       		.byte	64
+ 1150 024a 65       		.byte	101
+ 1151 024b 40       		.byte	64
+ 1152 024c 66       		.byte	102
+ 1153 024d 80       		.byte	-128
+ 1154 024e 68       		.byte	104
+ 1155 024f 80       		.byte	-128
+ 1156 0250 6A       		.byte	106
+ 1157 0251 80       		.byte	-128
+ 1158 0252 6C       		.byte	108
+ 1159 0253 80       		.byte	-128
+ 1160 0254 6E       		.byte	110
+ 1161 0255 80       		.byte	-128
+ 1162 0256 84       		.byte	-124
+ 1163 0257 04       		.byte	4
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 39
 
 
- 1164 0258 C9       		.byte	-55
- 1165 0259 FF       		.byte	-1
- 1166 025a CA       		.byte	-54
- 1167 025b FF       		.byte	-1
- 1168 025c CB       		.byte	-53
- 1169 025d FF       		.byte	-1
- 1170 025e CD       		.byte	-51
- 1171 025f 83       		.byte	-125
- 1172 0260 CE       		.byte	-50
- 1173 0261 03       		.byte	3
- 1174 0262 CF       		.byte	-49
- 1175 0263 01       		.byte	1
- 1176 0264 D0       		.byte	-48
- 1177 0265 18       		.byte	24
- 1178 0266 D8       		.byte	-40
- 1179 0267 04       		.byte	4
- 1180 0268 D9       		.byte	-39
+ 1164 0258 8B       		.byte	-117
+ 1165 0259 01       		.byte	1
+ 1166 025a 93       		.byte	-109
+ 1167 025b 02       		.byte	2
+ 1168 025c 9C       		.byte	-100
+ 1169 025d 01       		.byte	1
+ 1170 025e A2       		.byte	-94
+ 1171 025f 04       		.byte	4
+ 1172 0260 A4       		.byte	-92
+ 1173 0261 02       		.byte	2
+ 1174 0262 B0       		.byte	-80
+ 1175 0263 02       		.byte	2
+ 1176 0264 B2       		.byte	-78
+ 1177 0265 01       		.byte	1
+ 1178 0266 B3       		.byte	-77
+ 1179 0267 02       		.byte	2
+ 1180 0268 B4       		.byte	-76
  1181 0269 04       		.byte	4
- 1182 026a DA       		.byte	-38
- 1183 026b 04       		.byte	4
- 1184 026c DC       		.byte	-36
- 1185 026d 21       		.byte	33
- 1186 026e DD       		.byte	-35
- 1187 026f 03       		.byte	3
- 1188 0270 DF       		.byte	-33
- 1189 0271 01       		.byte	1
- 1190 0272 E0       		.byte	-32
- 1191 0273 40       		.byte	64
- 1192 0274 E2       		.byte	-30
- 1193 0275 40       		.byte	64
- 1194 0276 E4       		.byte	-28
- 1195 0277 40       		.byte	64
- 1196 0278 E5       		.byte	-27
- 1197 0279 40       		.byte	64
- 1198 027a E6       		.byte	-26
- 1199 027b 80       		.byte	-128
- 1200 027c E8       		.byte	-24
- 1201 027d 80       		.byte	-128
- 1202 027e EA       		.byte	-22
+ 1182 026a B7       		.byte	-73
+ 1183 026b 01       		.byte	1
+ 1184 026c BE       		.byte	-66
+ 1185 026d 10       		.byte	16
+ 1186 026e C0       		.byte	-64
+ 1187 026f 42       		.byte	66
+ 1188 0270 C9       		.byte	-55
+ 1189 0271 FF       		.byte	-1
+ 1190 0272 CA       		.byte	-54
+ 1191 0273 FF       		.byte	-1
+ 1192 0274 CB       		.byte	-53
+ 1193 0275 FF       		.byte	-1
+ 1194 0276 CD       		.byte	-51
+ 1195 0277 83       		.byte	-125
+ 1196 0278 CE       		.byte	-50
+ 1197 0279 03       		.byte	3
+ 1198 027a CF       		.byte	-49
+ 1199 027b 01       		.byte	1
+ 1200 027c D0       		.byte	-48
+ 1201 027d 18       		.byte	24
+ 1202 027e D2       		.byte	-46
  1203 027f 80       		.byte	-128
- 1204 0280 EC       		.byte	-20
- 1205 0281 80       		.byte	-128
- 1206 0282 EE       		.byte	-18
- 1207 0283 80       		.byte	-128
- 1208 0284 00       		.byte	0
- 1209 0285 08       		.byte	8
- 1210 0286 05       		.byte	5
- 1211 0287 10       		.byte	16
- 1212 0288 07       		.byte	7
- 1213 0289 02       		.byte	2
- 1214 028a 09       		.byte	9
- 1215 028b 20       		.byte	32
- 1216 028c 0A       		.byte	10
- 1217 028d 40       		.byte	64
- 1218 028e 0C       		.byte	12
- 1219 028f 10       		.byte	16
- 1220 0290 0E       		.byte	14
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 40
+ 1204 0280 D6       		.byte	-42
+ 1205 0281 04       		.byte	4
+ 1206 0282 D8       		.byte	-40
+ 1207 0283 04       		.byte	4
+ 1208 0284 D9       		.byte	-39
+ 1209 0285 04       		.byte	4
+ 1210 0286 DA       		.byte	-38
+ 1211 0287 04       		.byte	4
+ 1212 0288 DB       		.byte	-37
+ 1213 0289 04       		.byte	4
+ 1214 028a DC       		.byte	-36
+ 1215 028b 12       		.byte	18
+ 1216 028c DD       		.byte	-35
+ 1217 028d 33       		.byte	51
+ 1218 028e DF       		.byte	-33
+ 1219 028f 01       		.byte	1
+ 1220 0290 E0       		.byte	-32
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 40
 
 
  1221 0291 40       		.byte	64
- 1222 0292 0F       		.byte	15
- 1223 0293 10       		.byte	16
- 1224 0294 10       		.byte	16
- 1225 0295 11       		.byte	17
- 1226 0296 13       		.byte	19
- 1227 0297 10       		.byte	16
- 1228 0298 14       		.byte	20
- 1229 0299 01       		.byte	1
- 1230 029a 19       		.byte	25
- 1231 029b 01       		.byte	1
- 1232 029c 1A       		.byte	26
- 1233 029d 40       		.byte	64
- 1234 029e 1F       		.byte	31
- 1235 029f C0       		.byte	-64
- 1236 02a0 23       		.byte	35
- 1237 02a1 10       		.byte	16
- 1238 02a2 27       		.byte	39
+ 1222 0292 E2       		.byte	-30
+ 1223 0293 40       		.byte	64
+ 1224 0294 E4       		.byte	-28
+ 1225 0295 40       		.byte	64
+ 1226 0296 E5       		.byte	-27
+ 1227 0297 40       		.byte	64
+ 1228 0298 E6       		.byte	-26
+ 1229 0299 80       		.byte	-128
+ 1230 029a E8       		.byte	-24
+ 1231 029b 80       		.byte	-128
+ 1232 029c EA       		.byte	-22
+ 1233 029d 80       		.byte	-128
+ 1234 029e EC       		.byte	-20
+ 1235 029f 80       		.byte	-128
+ 1236 02a0 EE       		.byte	-18
+ 1237 02a1 80       		.byte	-128
+ 1238 02a2 00       		.byte	0
  1239 02a3 10       		.byte	16
- 1240 02a4 28       		.byte	40
- 1241 02a5 01       		.byte	1
- 1242 02a6 29       		.byte	41
- 1243 02a7 11       		.byte	17
- 1244 02a8 2F       		.byte	47
- 1245 02a9 10       		.byte	16
- 1246 02aa 30       		.byte	48
- 1247 02ab 10       		.byte	16
- 1248 02ac 33       		.byte	51
- 1249 02ad 20       		.byte	32
- 1250 02ae 3B       		.byte	59
- 1251 02af 14       		.byte	20
- 1252 02b0 42       		.byte	66
- 1253 02b1 80       		.byte	-128
- 1254 02b2 46       		.byte	70
- 1255 02b3 80       		.byte	-128
- 1256 02b4 48       		.byte	72
- 1257 02b5 02       		.byte	2
- 1258 02b6 4C       		.byte	76
- 1259 02b7 02       		.byte	2
- 1260 02b8 58       		.byte	88
- 1261 02b9 A0       		.byte	-96
- 1262 02ba 5B       		.byte	91
+ 1240 02a4 02       		.byte	2
+ 1241 02a5 10       		.byte	16
+ 1242 02a6 03       		.byte	3
+ 1243 02a7 01       		.byte	1
+ 1244 02a8 07       		.byte	7
+ 1245 02a9 20       		.byte	32
+ 1246 02aa 09       		.byte	9
+ 1247 02ab 08       		.byte	8
+ 1248 02ac 0B       		.byte	11
+ 1249 02ad 02       		.byte	2
+ 1250 02ae 0F       		.byte	15
+ 1251 02af 01       		.byte	1
+ 1252 02b0 12       		.byte	18
+ 1253 02b1 40       		.byte	64
+ 1254 02b2 15       		.byte	21
+ 1255 02b3 02       		.byte	2
+ 1256 02b4 17       		.byte	23
+ 1257 02b5 08       		.byte	8
+ 1258 02b6 18       		.byte	24
+ 1259 02b7 04       		.byte	4
+ 1260 02b8 1E       		.byte	30
+ 1261 02b9 68       		.byte	104
+ 1262 02ba 21       		.byte	33
  1263 02bb 08       		.byte	8
- 1264 02bc 70       		.byte	112
- 1265 02bd 02       		.byte	2
- 1266 02be 86       		.byte	-122
- 1267 02bf 02       		.byte	2
- 1268 02c0 8F       		.byte	-113
- 1269 02c1 08       		.byte	8
- 1270 02c2 93       		.byte	-109
- 1271 02c3 04       		.byte	4
- 1272 02c4 96       		.byte	-106
- 1273 02c5 40       		.byte	64
- 1274 02c6 97       		.byte	-105
- 1275 02c7 90       		.byte	-112
- 1276 02c8 98       		.byte	-104
- 1277 02c9 A0       		.byte	-96
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 41
+ 1264 02bc 27       		.byte	39
+ 1265 02bd 21       		.byte	33
+ 1266 02be 28       		.byte	40
+ 1267 02bf 04       		.byte	4
+ 1268 02c0 2A       		.byte	42
+ 1269 02c1 10       		.byte	16
+ 1270 02c2 2B       		.byte	43
+ 1271 02c3 08       		.byte	8
+ 1272 02c4 32       		.byte	50
+ 1273 02c5 04       		.byte	4
+ 1274 02c6 33       		.byte	51
+ 1275 02c7 05       		.byte	5
+ 1276 02c8 36       		.byte	54
+ 1277 02c9 02       		.byte	2
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 41
 
 
- 1278 02ca 99       		.byte	-103
- 1279 02cb 10       		.byte	16
- 1280 02cc 9C       		.byte	-100
+ 1278 02ca 38       		.byte	56
+ 1279 02cb 96       		.byte	-106
+ 1280 02cc 3A       		.byte	58
  1281 02cd 40       		.byte	64
- 1282 02ce 9D       		.byte	-99
- 1283 02cf 01       		.byte	1
- 1284 02d0 A0       		.byte	-96
- 1285 02d1 04       		.byte	4
- 1286 02d2 A1       		.byte	-95
- 1287 02d3 20       		.byte	32
- 1288 02d4 A2       		.byte	-94
- 1289 02d5 01       		.byte	1
- 1290 02d6 A7       		.byte	-89
- 1291 02d7 20       		.byte	32
- 1292 02d8 AB       		.byte	-85
- 1293 02d9 10       		.byte	16
- 1294 02da AF       		.byte	-81
+ 1282 02ce 3B       		.byte	59
+ 1283 02cf 22       		.byte	34
+ 1284 02d0 3F       		.byte	63
+ 1285 02d1 10       		.byte	16
+ 1286 02d2 42       		.byte	66
+ 1287 02d3 08       		.byte	8
+ 1288 02d4 46       		.byte	70
+ 1289 02d5 88       		.byte	-120
+ 1290 02d6 48       		.byte	72
+ 1291 02d7 01       		.byte	1
+ 1292 02d8 5E       		.byte	94
+ 1293 02d9 60       		.byte	96
+ 1294 02da 67       		.byte	103
  1295 02db 40       		.byte	64
- 1296 02dc B4       		.byte	-76
- 1297 02dd A0       		.byte	-96
- 1298 02de C0       		.byte	-64
- 1299 02df C4       		.byte	-60
- 1300 02e0 C2       		.byte	-62
- 1301 02e1 7A       		.byte	122
- 1302 02e2 C4       		.byte	-60
- 1303 02e3 87       		.byte	-121
- 1304 02e4 CA       		.byte	-54
- 1305 02e5 4D       		.byte	77
- 1306 02e6 CC       		.byte	-52
- 1307 02e7 04       		.byte	4
- 1308 02e8 CE       		.byte	-50
- 1309 02e9 06       		.byte	6
- 1310 02ea D0       		.byte	-48
- 1311 02eb 81       		.byte	-127
- 1312 02ec D2       		.byte	-46
- 1313 02ed 18       		.byte	24
- 1314 02ee D6       		.byte	-42
- 1315 02ef 0E       		.byte	14
- 1316 02f0 02       		.byte	2
+ 1296 02dc 74       		.byte	116
+ 1297 02dd 01       		.byte	1
+ 1298 02de 76       		.byte	118
+ 1299 02df 80       		.byte	-128
+ 1300 02e0 87       		.byte	-121
+ 1301 02e1 40       		.byte	64
+ 1302 02e2 8F       		.byte	-113
+ 1303 02e3 01       		.byte	1
+ 1304 02e4 90       		.byte	-112
+ 1305 02e5 80       		.byte	-128
+ 1306 02e6 91       		.byte	-111
+ 1307 02e7 02       		.byte	2
+ 1308 02e8 93       		.byte	-109
+ 1309 02e9 10       		.byte	16
+ 1310 02ea 94       		.byte	-108
+ 1311 02eb 06       		.byte	6
+ 1312 02ec 97       		.byte	-105
+ 1313 02ed 22       		.byte	34
+ 1314 02ee 9B       		.byte	-101
+ 1315 02ef 04       		.byte	4
+ 1316 02f0 9F       		.byte	-97
  1317 02f1 01       		.byte	1
- 1318 02f2 05       		.byte	5
- 1319 02f3 7F       		.byte	127
- 1320 02f4 09       		.byte	9
- 1321 02f5 FE       		.byte	-2
- 1322 02f6 0B       		.byte	11
- 1323 02f7 01       		.byte	1
- 1324 02f8 11       		.byte	17
- 1325 02f9 96       		.byte	-106
- 1326 02fa 12       		.byte	18
- 1327 02fb 01       		.byte	1
- 1328 02fc 13       		.byte	19
- 1329 02fd 68       		.byte	104
- 1330 02fe 19       		.byte	25
- 1331 02ff 0E       		.byte	14
- 1332 0300 1B       		.byte	27
- 1333 0301 F0       		.byte	-16
- 1334 0302 23       		.byte	35
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 42
+ 1318 02f2 A2       		.byte	-94
+ 1319 02f3 02       		.byte	2
+ 1320 02f4 A3       		.byte	-93
+ 1321 02f5 08       		.byte	8
+ 1322 02f6 A6       		.byte	-90
+ 1323 02f7 04       		.byte	4
+ 1324 02f8 AB       		.byte	-85
+ 1325 02f9 10       		.byte	16
+ 1326 02fa AC       		.byte	-84
+ 1327 02fb 02       		.byte	2
+ 1328 02fc AF       		.byte	-81
+ 1329 02fd 10       		.byte	16
+ 1330 02fe B0       		.byte	-80
+ 1331 02ff 20       		.byte	32
+ 1332 0300 B4       		.byte	-76
+ 1333 0301 80       		.byte	-128
+ 1334 0302 C0       		.byte	-64
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 42
 
 
- 1335 0303 01       		.byte	1
- 1336 0304 25       		.byte	37
- 1337 0305 C5       		.byte	-59
- 1338 0306 27       		.byte	39
- 1339 0307 3A       		.byte	58
- 1340 0308 2D       		.byte	45
- 1341 0309 A3       		.byte	-93
- 1342 030a 2F       		.byte	47
- 1343 030b 5C       		.byte	92
- 1344 030c 30       		.byte	48
- 1345 030d 01       		.byte	1
- 1346 030e 37       		.byte	55
- 1347 030f FF       		.byte	-1
- 1348 0310 3E       		.byte	62
- 1349 0311 01       		.byte	1
- 1350 0312 3F       		.byte	63
- 1351 0313 40       		.byte	64
- 1352 0314 40       		.byte	64
- 1353 0315 54       		.byte	84
- 1354 0316 45       		.byte	69
- 1355 0317 EC       		.byte	-20
- 1356 0318 46       		.byte	70
- 1357 0319 02       		.byte	2
- 1358 031a 48       		.byte	72
- 1359 031b 07       		.byte	7
- 1360 031c 49       		.byte	73
- 1361 031d FF       		.byte	-1
- 1362 031e 4A       		.byte	74
- 1363 031f FF       		.byte	-1
- 1364 0320 4B       		.byte	75
- 1365 0321 FF       		.byte	-1
- 1366 0322 4D       		.byte	77
- 1367 0323 83       		.byte	-125
- 1368 0324 4E       		.byte	78
- 1369 0325 03       		.byte	3
- 1370 0326 4F       		.byte	79
- 1371 0327 01       		.byte	1
- 1372 0328 50       		.byte	80
- 1373 0329 18       		.byte	24
- 1374 032a 54       		.byte	84
- 1375 032b 01       		.byte	1
- 1376 032c 56       		.byte	86
+ 1335 0303 27       		.byte	39
+ 1336 0304 C2       		.byte	-62
+ 1337 0305 85       		.byte	-123
+ 1338 0306 C4       		.byte	-60
+ 1339 0307 38       		.byte	56
+ 1340 0308 CA       		.byte	-54
+ 1341 0309 04       		.byte	4
+ 1342 030a CC       		.byte	-52
+ 1343 030b 83       		.byte	-125
+ 1344 030c CE       		.byte	-50
+ 1345 030d 2F       		.byte	47
+ 1346 030e D0       		.byte	-48
+ 1347 030f A4       		.byte	-92
+ 1348 0310 D2       		.byte	-46
+ 1349 0311 08       		.byte	8
+ 1350 0312 D6       		.byte	-42
+ 1351 0313 30       		.byte	48
+ 1352 0314 D8       		.byte	-40
+ 1353 0315 80       		.byte	-128
+ 1354 0316 E4       		.byte	-28
+ 1355 0317 10       		.byte	16
+ 1356 0318 E8       		.byte	-24
+ 1357 0319 80       		.byte	-128
+ 1358 031a EA       		.byte	-22
+ 1359 031b 04       		.byte	4
+ 1360 031c EE       		.byte	-18
+ 1361 031d 02       		.byte	2
+ 1362 031e 02       		.byte	2
+ 1363 031f 01       		.byte	1
+ 1364 0320 08       		.byte	8
+ 1365 0321 0E       		.byte	14
+ 1366 0322 0C       		.byte	12
+ 1367 0323 10       		.byte	16
+ 1368 0324 0E       		.byte	14
+ 1369 0325 02       		.byte	2
+ 1370 0326 14       		.byte	20
+ 1371 0327 18       		.byte	24
+ 1372 0328 16       		.byte	22
+ 1373 0329 02       		.byte	2
+ 1374 032a 18       		.byte	24
+ 1375 032b 18       		.byte	24
+ 1376 032c 1A       		.byte	26
  1377 032d 04       		.byte	4
- 1378 032e 58       		.byte	88
- 1379 032f 04       		.byte	4
- 1380 0330 59       		.byte	89
- 1381 0331 04       		.byte	4
- 1382 0332 5A       		.byte	90
- 1383 0333 04       		.byte	4
- 1384 0334 5B       		.byte	91
- 1385 0335 04       		.byte	4
- 1386 0336 5D       		.byte	93
- 1387 0337 33       		.byte	51
- 1388 0338 5F       		.byte	95
- 1389 0339 01       		.byte	1
- 1390 033a 60       		.byte	96
- 1391 033b 40       		.byte	64
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 43
+ 1378 032e 1C       		.byte	28
+ 1379 032f 16       		.byte	22
+ 1380 0330 1E       		.byte	30
+ 1381 0331 08       		.byte	8
+ 1382 0332 22       		.byte	34
+ 1383 0333 1E       		.byte	30
+ 1384 0334 2A       		.byte	42
+ 1385 0335 01       		.byte	1
+ 1386 0336 30       		.byte	48
+ 1387 0337 01       		.byte	1
+ 1388 0338 34       		.byte	52
+ 1389 0339 1E       		.byte	30
+ 1390 033a 3E       		.byte	62
+ 1391 033b 01       		.byte	1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 43
 
 
- 1392 033c 62       		.byte	98
- 1393 033d 40       		.byte	64
- 1394 033e 64       		.byte	100
- 1395 033f 40       		.byte	64
- 1396 0340 65       		.byte	101
- 1397 0341 40       		.byte	64
- 1398 0342 66       		.byte	102
- 1399 0343 80       		.byte	-128
- 1400 0344 68       		.byte	104
- 1401 0345 80       		.byte	-128
- 1402 0346 6A       		.byte	106
- 1403 0347 80       		.byte	-128
- 1404 0348 6C       		.byte	108
- 1405 0349 80       		.byte	-128
- 1406 034a 6E       		.byte	110
- 1407 034b 80       		.byte	-128
- 1408 034c 81       		.byte	-127
- 1409 034d 01       		.byte	1
- 1410 034e 84       		.byte	-124
- 1411 034f 07       		.byte	7
- 1412 0350 8C       		.byte	-116
- 1413 0351 0C       		.byte	12
- 1414 0352 8E       		.byte	-114
+ 1392 033c 40       		.byte	64
+ 1393 033d 42       		.byte	66
+ 1394 033e 45       		.byte	69
+ 1395 033f EC       		.byte	-20
+ 1396 0340 47       		.byte	71
+ 1397 0341 02       		.byte	2
+ 1398 0342 48       		.byte	72
+ 1399 0343 13       		.byte	19
+ 1400 0344 49       		.byte	73
+ 1401 0345 FF       		.byte	-1
+ 1402 0346 4A       		.byte	74
+ 1403 0347 FF       		.byte	-1
+ 1404 0348 4B       		.byte	75
+ 1405 0349 FF       		.byte	-1
+ 1406 034a 4D       		.byte	77
+ 1407 034b 83       		.byte	-125
+ 1408 034c 4E       		.byte	78
+ 1409 034d 03       		.byte	3
+ 1410 034e 4F       		.byte	79
+ 1411 034f 01       		.byte	1
+ 1412 0350 50       		.byte	80
+ 1413 0351 18       		.byte	24
+ 1414 0352 54       		.byte	84
  1415 0353 01       		.byte	1
- 1416 0354 92       		.byte	-110
- 1417 0355 0F       		.byte	15
- 1418 0356 98       		.byte	-104
- 1419 0357 08       		.byte	8
- 1420 0358 9A       		.byte	-102
- 1421 0359 01       		.byte	1
- 1422 035a A4       		.byte	-92
- 1423 035b 0C       		.byte	12
- 1424 035c A6       		.byte	-90
- 1425 035d 02       		.byte	2
- 1426 035e A8       		.byte	-88
- 1427 035f 0B       		.byte	11
- 1428 0360 AA       		.byte	-86
- 1429 0361 04       		.byte	4
- 1430 0362 B4       		.byte	-76
- 1431 0363 0F       		.byte	15
- 1432 0364 B7       		.byte	-73
- 1433 0365 01       		.byte	1
- 1434 0366 D6       		.byte	-42
- 1435 0367 04       		.byte	4
- 1436 0368 D8       		.byte	-40
- 1437 0369 04       		.byte	4
- 1438 036a D9       		.byte	-39
- 1439 036b 04       		.byte	4
- 1440 036c DB       		.byte	-37
- 1441 036d 04       		.byte	4
- 1442 036e DC       		.byte	-36
- 1443 036f 21       		.byte	33
- 1444 0370 DF       		.byte	-33
- 1445 0371 01       		.byte	1
- 1446 0372 00       		.byte	0
- 1447 0373 08       		.byte	8
- 1448 0374 01       		.byte	1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 44
+ 1416 0354 56       		.byte	86
+ 1417 0355 04       		.byte	4
+ 1418 0356 58       		.byte	88
+ 1419 0357 04       		.byte	4
+ 1420 0358 5A       		.byte	90
+ 1421 0359 04       		.byte	4
+ 1422 035a 5B       		.byte	91
+ 1423 035b 04       		.byte	4
+ 1424 035c 5C       		.byte	92
+ 1425 035d 01       		.byte	1
+ 1426 035e 5D       		.byte	93
+ 1427 035f 33       		.byte	51
+ 1428 0360 5F       		.byte	95
+ 1429 0361 01       		.byte	1
+ 1430 0362 60       		.byte	96
+ 1431 0363 40       		.byte	64
+ 1432 0364 62       		.byte	98
+ 1433 0365 40       		.byte	64
+ 1434 0366 64       		.byte	100
+ 1435 0367 40       		.byte	64
+ 1436 0368 65       		.byte	101
+ 1437 0369 40       		.byte	64
+ 1438 036a 66       		.byte	102
+ 1439 036b 80       		.byte	-128
+ 1440 036c 68       		.byte	104
+ 1441 036d 80       		.byte	-128
+ 1442 036e 6A       		.byte	106
+ 1443 036f 80       		.byte	-128
+ 1444 0370 6C       		.byte	108
+ 1445 0371 80       		.byte	-128
+ 1446 0372 6E       		.byte	110
+ 1447 0373 80       		.byte	-128
+ 1448 0374 80       		.byte	-128
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 44
 
 
- 1449 0375 40       		.byte	64
- 1450 0376 06       		.byte	6
- 1451 0377 80       		.byte	-128
- 1452 0378 08       		.byte	8
- 1453 0379 21       		.byte	33
- 1454 037a 0C       		.byte	12
- 1455 037b 02       		.byte	2
- 1456 037c 10       		.byte	16
- 1457 037d 10       		.byte	16
- 1458 037e 13       		.byte	19
- 1459 037f 10       		.byte	16
- 1460 0380 1B       		.byte	27
- 1461 0381 20       		.byte	32
- 1462 0382 1E       		.byte	30
- 1463 0383 80       		.byte	-128
- 1464 0384 22       		.byte	34
- 1465 0385 40       		.byte	64
- 1466 0386 27       		.byte	39
- 1467 0387 02       		.byte	2
- 1468 0388 2C       		.byte	44
- 1469 0389 10       		.byte	16
- 1470 038a 2D       		.byte	45
- 1471 038b 40       		.byte	64
- 1472 038c 2E       		.byte	46
- 1473 038d 40       		.byte	64
- 1474 038e 2F       		.byte	47
- 1475 038f A0       		.byte	-96
- 1476 0390 34       		.byte	52
- 1477 0391 21       		.byte	33
- 1478 0392 35       		.byte	53
- 1479 0393 10       		.byte	16
- 1480 0394 36       		.byte	54
- 1481 0395 01       		.byte	1
- 1482 0396 3A       		.byte	58
- 1483 0397 01       		.byte	1
- 1484 0398 3C       		.byte	60
- 1485 0399 08       		.byte	8
- 1486 039a 3F       		.byte	63
- 1487 039b 10       		.byte	16
- 1488 039c 46       		.byte	70
- 1489 039d 80       		.byte	-128
- 1490 039e 4C       		.byte	76
- 1491 039f 02       		.byte	2
- 1492 03a0 4D       		.byte	77
- 1493 03a1 05       		.byte	5
- 1494 03a2 56       		.byte	86
- 1495 03a3 80       		.byte	-128
- 1496 03a4 5A       		.byte	90
- 1497 03a5 80       		.byte	-128
- 1498 03a6 5B       		.byte	91
- 1499 03a7 10       		.byte	16
- 1500 03a8 5D       		.byte	93
- 1501 03a9 05       		.byte	5
- 1502 03aa 5E       		.byte	94
- 1503 03ab 80       		.byte	-128
- 1504 03ac 62       		.byte	98
- 1505 03ad 02       		.byte	2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 45
+ 1449 0375 0F       		.byte	15
+ 1450 0376 8C       		.byte	-116
+ 1451 0377 05       		.byte	5
+ 1452 0378 8E       		.byte	-114
+ 1453 0379 0A       		.byte	10
+ 1454 037a 94       		.byte	-108
+ 1455 037b 0C       		.byte	12
+ 1456 037c 96       		.byte	-106
+ 1457 037d 03       		.byte	3
+ 1458 037e 98       		.byte	-104
+ 1459 037f 07       		.byte	7
+ 1460 0380 A0       		.byte	-96
+ 1461 0381 03       		.byte	3
+ 1462 0382 A2       		.byte	-94
+ 1463 0383 0C       		.byte	12
+ 1464 0384 A8       		.byte	-88
+ 1465 0385 0A       		.byte	10
+ 1466 0386 AA       		.byte	-86
+ 1467 0387 05       		.byte	5
+ 1468 0388 B6       		.byte	-74
+ 1469 0389 0F       		.byte	15
+ 1470 038a D8       		.byte	-40
+ 1471 038b 04       		.byte	4
+ 1472 038c DC       		.byte	-36
+ 1473 038d 01       		.byte	1
+ 1474 038e DF       		.byte	-33
+ 1475 038f 01       		.byte	1
+ 1476 0390 03       		.byte	3
+ 1477 0391 81       		.byte	-127
+ 1478 0392 06       		.byte	6
+ 1479 0393 80       		.byte	-128
+ 1480 0394 07       		.byte	7
+ 1481 0395 05       		.byte	5
+ 1482 0396 0A       		.byte	10
+ 1483 0397 08       		.byte	8
+ 1484 0398 0B       		.byte	11
+ 1485 0399 20       		.byte	32
+ 1486 039a 0C       		.byte	12
+ 1487 039b 04       		.byte	4
+ 1488 039c 0E       		.byte	14
+ 1489 039d 09       		.byte	9
+ 1490 039e 10       		.byte	16
+ 1491 039f 04       		.byte	4
+ 1492 03a0 12       		.byte	18
+ 1493 03a1 40       		.byte	64
+ 1494 03a2 16       		.byte	22
+ 1495 03a3 48       		.byte	72
+ 1496 03a4 18       		.byte	24
+ 1497 03a5 02       		.byte	2
+ 1498 03a6 1A       		.byte	26
+ 1499 03a7 01       		.byte	1
+ 1500 03a8 1B       		.byte	27
+ 1501 03a9 80       		.byte	-128
+ 1502 03aa 1E       		.byte	30
+ 1503 03ab 48       		.byte	72
+ 1504 03ac 1F       		.byte	31
+ 1505 03ad 10       		.byte	16
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 45
 
 
- 1506 03ae 64       		.byte	100
- 1507 03af 40       		.byte	64
- 1508 03b0 92       		.byte	-110
- 1509 03b1 40       		.byte	64
- 1510 03b2 93       		.byte	-109
- 1511 03b3 10       		.byte	16
- 1512 03b4 99       		.byte	-103
- 1513 03b5 10       		.byte	16
- 1514 03b6 9A       		.byte	-102
- 1515 03b7 01       		.byte	1
- 1516 03b8 9B       		.byte	-101
- 1517 03b9 10       		.byte	16
- 1518 03ba 9C       		.byte	-100
- 1519 03bb 41       		.byte	65
- 1520 03bc 9E       		.byte	-98
+ 1506 03ae 46       		.byte	70
+ 1507 03af 88       		.byte	-120
+ 1508 03b0 4D       		.byte	77
+ 1509 03b1 04       		.byte	4
+ 1510 03b2 4F       		.byte	79
+ 1511 03b3 01       		.byte	1
+ 1512 03b4 56       		.byte	86
+ 1513 03b5 08       		.byte	8
+ 1514 03b6 5D       		.byte	93
+ 1515 03b7 04       		.byte	4
+ 1516 03b8 5E       		.byte	94
+ 1517 03b9 40       		.byte	64
+ 1518 03ba 5F       		.byte	95
+ 1519 03bb 01       		.byte	1
+ 1520 03bc 67       		.byte	103
  1521 03bd 80       		.byte	-128
- 1522 03be 9F       		.byte	-97
- 1523 03bf 02       		.byte	2
- 1524 03c0 A0       		.byte	-96
- 1525 03c1 06       		.byte	6
- 1526 03c2 A2       		.byte	-94
- 1527 03c3 01       		.byte	1
- 1528 03c4 A3       		.byte	-93
- 1529 03c5 80       		.byte	-128
- 1530 03c6 A6       		.byte	-90
- 1531 03c7 02       		.byte	2
- 1532 03c8 A7       		.byte	-89
- 1533 03c9 20       		.byte	32
- 1534 03ca AA       		.byte	-86
- 1535 03cb 01       		.byte	1
- 1536 03cc AF       		.byte	-81
- 1537 03cd 10       		.byte	16
- 1538 03ce C0       		.byte	-64
- 1539 03cf 15       		.byte	21
- 1540 03d0 C2       		.byte	-62
- 1541 03d1 1A       		.byte	26
- 1542 03d2 C4       		.byte	-60
- 1543 03d3 06       		.byte	6
- 1544 03d4 CA       		.byte	-54
- 1545 03d5 D0       		.byte	-48
- 1546 03d6 CC       		.byte	-52
+ 1522 03be 87       		.byte	-121
+ 1523 03bf 40       		.byte	64
+ 1524 03c0 92       		.byte	-110
+ 1525 03c1 08       		.byte	8
+ 1526 03c2 94       		.byte	-108
+ 1527 03c3 02       		.byte	2
+ 1528 03c4 97       		.byte	-105
+ 1529 03c5 20       		.byte	32
+ 1530 03c6 98       		.byte	-104
+ 1531 03c7 04       		.byte	4
+ 1532 03c8 9A       		.byte	-102
+ 1533 03c9 C0       		.byte	-64
+ 1534 03ca 9B       		.byte	-101
+ 1535 03cb 05       		.byte	5
+ 1536 03cc 9E       		.byte	-98
+ 1537 03cd 08       		.byte	8
+ 1538 03ce AF       		.byte	-81
+ 1539 03cf 08       		.byte	8
+ 1540 03d0 C0       		.byte	-64
+ 1541 03d1 D9       		.byte	-39
+ 1542 03d2 C2       		.byte	-62
+ 1543 03d3 E6       		.byte	-26
+ 1544 03d4 C4       		.byte	-60
+ 1545 03d5 5A       		.byte	90
+ 1546 03d6 D0       		.byte	-48
  1547 03d7 A0       		.byte	-96
- 1548 03d8 CE       		.byte	-50
- 1549 03d9 61       		.byte	97
- 1550 03da D0       		.byte	-48
+ 1548 03d8 D6       		.byte	-42
+ 1549 03d9 D0       		.byte	-48
+ 1550 03da D8       		.byte	-40
  1551 03db 80       		.byte	-128
- 1552 03dc D2       		.byte	-46
- 1553 03dd 10       		.byte	16
- 1554 03de D6       		.byte	-42
- 1555 03df DC       		.byte	-36
- 1556 03e0 D8       		.byte	-40
- 1557 03e1 81       		.byte	-127
- 1558 03e2 6B       		.byte	107
- 1559 03e3 01       		.byte	1
- 1560 03e4 6E       		.byte	110
+ 1552 03dc 6B       		.byte	107
+ 1553 03dd 02       		.byte	2
+ 1554 03de 6F       		.byte	111
+ 1555 03df 02       		.byte	2
+ 1556 03e0 DA       		.byte	-38
+ 1557 03e1 C0       		.byte	-64
+ 1558 03e2 03       		.byte	3
+ 1559 03e3 20       		.byte	32
+ 1560 03e4 06       		.byte	6
  1561 03e5 20       		.byte	32
- 1562 03e6 DA       		.byte	-38
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 46
+ 1562 03e6 9F       		.byte	-97
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 46
 
 
- 1563 03e7 C0       		.byte	-64
- 1564 03e8 00       		.byte	0
- 1565 03e9 08       		.byte	8
- 1566 03ea 06       		.byte	6
- 1567 03eb 20       		.byte	32
- 1568 03ec 8A       		.byte	-118
+ 1563 03e7 02       		.byte	2
+ 1564 03e8 A7       		.byte	-89
+ 1565 03e9 02       		.byte	2
+ 1566 03ea C0       		.byte	-64
+ 1567 03eb 30       		.byte	48
+ 1568 03ec 0B       		.byte	11
  1569 03ed 10       		.byte	16
- 1570 03ee 9F       		.byte	-97
- 1571 03ef 01       		.byte	1
- 1572 03f0 A6       		.byte	-90
- 1573 03f1 10       		.byte	16
- 1574 03f2 C0       		.byte	-64
- 1575 03f3 30       		.byte	48
- 1576 03f4 0A       		.byte	10
- 1577 03f5 40       		.byte	64
- 1578 03f6 0F       		.byte	15
- 1579 03f7 40       		.byte	64
- 1580 03f8 87       		.byte	-121
- 1581 03f9 01       		.byte	1
- 1582 03fa 9F       		.byte	-97
- 1583 03fb 01       		.byte	1
- 1584 03fc AA       		.byte	-86
- 1585 03fd 20       		.byte	32
- 1586 03fe AC       		.byte	-84
- 1587 03ff 04       		.byte	4
- 1588 0400 C2       		.byte	-62
- 1589 0401 30       		.byte	48
- 1590 0402 E2       		.byte	-30
- 1591 0403 40       		.byte	64
- 1592 0404 E8       		.byte	-24
- 1593 0405 20       		.byte	32
- 1594 0406 EC       		.byte	-20
- 1595 0407 40       		.byte	64
- 1596 0408 AA       		.byte	-86
- 1597 0409 40       		.byte	64
- 1598 040a AF       		.byte	-81
- 1599 040b 40       		.byte	64
- 1600 040c E8       		.byte	-24
- 1601 040d 20       		.byte	32
- 1602 040e EC       		.byte	-20
- 1603 040f 40       		.byte	64
- 1604 0410 00       		.byte	0
- 1605 0411 40       		.byte	64
- 1606 0412 04       		.byte	4
- 1607 0413 10       		.byte	16
- 1608 0414 05       		.byte	5
- 1609 0415 01       		.byte	1
+ 1570 03ee 0E       		.byte	14
+ 1571 03ef 10       		.byte	16
+ 1572 03f0 87       		.byte	-121
+ 1573 03f1 02       		.byte	2
+ 1574 03f2 8E       		.byte	-114
+ 1575 03f3 10       		.byte	16
+ 1576 03f4 9F       		.byte	-97
+ 1577 03f5 02       		.byte	2
+ 1578 03f6 A7       		.byte	-89
+ 1579 03f7 02       		.byte	2
+ 1580 03f8 AE       		.byte	-82
+ 1581 03f9 20       		.byte	32
+ 1582 03fa B3       		.byte	-77
+ 1583 03fb 20       		.byte	32
+ 1584 03fc C2       		.byte	-62
+ 1585 03fd 30       		.byte	48
+ 1586 03fe E6       		.byte	-26
+ 1587 03ff 40       		.byte	64
+ 1588 0400 E8       		.byte	-24
+ 1589 0401 10       		.byte	16
+ 1590 0402 87       		.byte	-121
+ 1591 0403 02       		.byte	2
+ 1592 0404 A7       		.byte	-89
+ 1593 0405 02       		.byte	2
+ 1594 0406 AF       		.byte	-81
+ 1595 0407 10       		.byte	16
+ 1596 0408 E2       		.byte	-30
+ 1597 0409 10       		.byte	16
+ 1598 040a E8       		.byte	-24
+ 1599 040b 10       		.byte	16
+ 1600 040c 00       		.byte	0
+ 1601 040d 08       		.byte	8
+ 1602 040e 01       		.byte	1
+ 1603 040f 80       		.byte	-128
+ 1604 0410 04       		.byte	4
+ 1605 0411 10       		.byte	16
+ 1606 0412 06       		.byte	6
+ 1607 0413 20       		.byte	32
+ 1608 0414 8A       		.byte	-118
+ 1609 0415 20       		.byte	32
  1610 0416 C0       		.byte	-64
- 1611 0417 07       		.byte	7
- 1612 0418 8D       		.byte	-115
+ 1611 0417 0F       		.byte	15
+ 1612 0418 E6       		.byte	-26
  1613 0419 01       		.byte	1
- 1614 041a 99       		.byte	-103
- 1615 041b 01       		.byte	1
- 1616 041c B4       		.byte	-76
- 1617 041d 50       		.byte	80
- 1618 041e E6       		.byte	-26
- 1619 041f 02       		.byte	2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 47
+ 1614 041a A9       		.byte	-87
+ 1615 041b 80       		.byte	-128
+ 1616 041c AC       		.byte	-84
+ 1617 041d 04       		.byte	4
+ 1618 041e B4       		.byte	-76
+ 1619 041f 10       		.byte	16
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 47
 
 
  1620 0420 EA       		.byte	-22
- 1621 0421 0A       		.byte	10
+ 1621 0421 08       		.byte	8
  1622 0422 01       		.byte	1
  1623 0423 0E       		.byte	14
  1624 0424 10       		.byte	16
  1625 0425 02       		.byte	2
  1626 0426 12       		.byte	18
  1627 0427 0E       		.byte	14
- 1628              		.type	cy_cfg_addr_table.6655, %object
- 1629              		.size	cy_cfg_addr_table.6655, 64
- 1630              	cy_cfg_addr_table.6655:
+ 1628              		.type	cy_cfg_addr_table.6681, %object
+ 1629              		.size	cy_cfg_addr_table.6681, 64
+ 1630              	cy_cfg_addr_table.6681:
  1631 0428 04000F40 		.word	1074724868
- 1632 042c 31300F40 		.word	1074737201
- 1633 0430 23310F40 		.word	1074737443
- 1634 0434 59320F40 		.word	1074737753
+ 1632 042c 3B300F40 		.word	1074737211
+ 1633 0430 2A310F40 		.word	1074737450
+ 1634 0434 54320F40 		.word	1074737748
  1635 0438 3E330F40 		.word	1074737982
- 1636 043c 4D340F40 		.word	1074738253
- 1637 0440 36350F40 		.word	1074738486
- 1638 0444 41360F40 		.word	1074738753
- 1639 0448 38370F40 		.word	1074739000
+ 1636 043c 50340F40 		.word	1074738256
+ 1637 0440 3E350F40 		.word	1074738494
+ 1638 0444 39360F40 		.word	1074738745
+ 1639 0448 26370F40 		.word	1074738982
  1640 044c 03400F40 		.word	1074741251
- 1641 0450 06410F40 		.word	1074741510
- 1642 0454 0A420F40 		.word	1074741770
- 1643 0458 04430F40 		.word	1074742020
- 1644 045c 04450F40 		.word	1074742532
- 1645 0460 05460F40 		.word	1074742789
+ 1641 0450 05410F40 		.word	1074741509
+ 1642 0454 0B420F40 		.word	1074741771
+ 1643 0458 05430F40 		.word	1074742021
+ 1644 045c 07450F40 		.word	1074742535
+ 1645 0460 04460F40 		.word	1074742788
  1646 0464 03600F40 		.word	1074749443
  1647              		.text
  1648              	.Letext0:
@@ -2800,10 +2800,10 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  1656 0006 00000000 		.4byte	.Ldebug_abbrev0
  1657 000a 04       		.byte	0x4
  1658 000b 01       		.uleb128 0x1
- 1659 000c 94010000 		.4byte	.LASF39
+ 1659 000c A3010000 		.4byte	.LASF39
  1660 0010 0C       		.byte	0xc
- 1661 0011 CA020000 		.4byte	.LASF40
- 1662 0015 2C000000 		.4byte	.LASF41
+ 1661 0011 D9020000 		.4byte	.LASF40
+ 1662 0015 E8000000 		.4byte	.LASF41
  1663 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1664 001d 00000000 		.4byte	0
  1665 0021 00000000 		.4byte	.Ldebug_line0
@@ -2818,11 +2818,11 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  1674 0033 37000000 		.4byte	0x37
  1675 0037 04       		.uleb128 0x4
  1676 0038 04       		.byte	0x4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 48
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 48
 
 
  1677 0039 07       		.byte	0x7
- 1678 003a 68010000 		.4byte	.LASF0
+ 1678 003a 6C010000 		.4byte	.LASF0
  1679 003e 04       		.uleb128 0x4
  1680 003f 08       		.byte	0x8
  1681 0040 05       		.byte	0x5
@@ -2830,73 +2830,73 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  1683 0045 04       		.uleb128 0x4
  1684 0046 08       		.byte	0x8
  1685 0047 04       		.byte	0x4
- 1686 0048 A6020000 		.4byte	.LASF2
+ 1686 0048 B5020000 		.4byte	.LASF2
  1687 004c 04       		.uleb128 0x4
  1688 004d 01       		.byte	0x1
  1689 004e 06       		.byte	0x6
- 1690 004f BE020000 		.4byte	.LASF3
+ 1690 004f CD020000 		.4byte	.LASF3
  1691 0053 04       		.uleb128 0x4
  1692 0054 01       		.byte	0x1
  1693 0055 08       		.byte	0x8
- 1694 0056 1B010000 		.4byte	.LASF4
+ 1694 0056 BF000000 		.4byte	.LASF4
  1695 005a 04       		.uleb128 0x4
  1696 005b 02       		.byte	0x2
  1697 005c 05       		.byte	0x5
- 1698 005d 78020000 		.4byte	.LASF5
+ 1698 005d 87020000 		.4byte	.LASF5
  1699 0061 04       		.uleb128 0x4
  1700 0062 02       		.byte	0x2
  1701 0063 07       		.byte	0x7
- 1702 0064 FE000000 		.4byte	.LASF6
+ 1702 0064 A2000000 		.4byte	.LASF6
  1703 0068 04       		.uleb128 0x4
  1704 0069 04       		.byte	0x4
  1705 006a 05       		.byte	0x5
- 1706 006b 9D020000 		.4byte	.LASF7
+ 1706 006b AC020000 		.4byte	.LASF7
  1707 006f 04       		.uleb128 0x4
  1708 0070 04       		.byte	0x4
  1709 0071 07       		.byte	0x7
- 1710 0072 EC000000 		.4byte	.LASF8
+ 1710 0072 90000000 		.4byte	.LASF8
  1711 0076 04       		.uleb128 0x4
  1712 0077 08       		.byte	0x8
  1713 0078 07       		.byte	0x7
- 1714 0079 7D010000 		.4byte	.LASF9
+ 1714 0079 81010000 		.4byte	.LASF9
  1715 007d 04       		.uleb128 0x4
  1716 007e 04       		.byte	0x4
  1717 007f 07       		.byte	0x7
- 1718 0080 38020000 		.4byte	.LASF10
+ 1718 0080 47020000 		.4byte	.LASF10
  1719 0084 05       		.uleb128 0x5
  1720 0085 04       		.byte	0x4
  1721 0086 04       		.uleb128 0x4
  1722 0087 01       		.byte	0x1
  1723 0088 08       		.byte	0x8
- 1724 0089 53020000 		.4byte	.LASF11
+ 1724 0089 62020000 		.4byte	.LASF11
  1725 008d 06       		.uleb128 0x6
- 1726 008e 97020000 		.4byte	.LASF13
+ 1726 008e A6020000 		.4byte	.LASF13
  1727 0092 03       		.byte	0x3
  1728 0093 E401     		.2byte	0x1e4
  1729 0095 53000000 		.4byte	0x53
  1730 0099 06       		.uleb128 0x6
- 1731 009a 4F010000 		.4byte	.LASF14
+ 1731 009a 53010000 		.4byte	.LASF14
  1732 009e 03       		.byte	0x3
  1733 009f E501     		.2byte	0x1e5
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 49
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 49
 
 
  1734 00a1 61000000 		.4byte	0x61
  1735 00a5 06       		.uleb128 0x6
- 1736 00a6 61010000 		.4byte	.LASF15
+ 1736 00a6 65010000 		.4byte	.LASF15
  1737 00aa 03       		.byte	0x3
  1738 00ab E601     		.2byte	0x1e6
  1739 00ad 6F000000 		.4byte	0x6f
  1740 00b1 04       		.uleb128 0x4
  1741 00b2 04       		.byte	0x4
  1742 00b3 04       		.byte	0x4
- 1743 00b4 CC000000 		.4byte	.LASF16
+ 1743 00b4 70000000 		.4byte	.LASF16
  1744 00b8 04       		.uleb128 0x4
  1745 00b9 08       		.byte	0x8
  1746 00ba 04       		.byte	0x4
- 1747 00bb 30010000 		.4byte	.LASF17
+ 1747 00bb D4000000 		.4byte	.LASF17
  1748 00bf 06       		.uleb128 0x6
- 1749 00c0 E7000000 		.4byte	.LASF18
+ 1749 00c0 8B000000 		.4byte	.LASF18
  1750 00c4 03       		.byte	0x3
  1751 00c5 8E02     		.2byte	0x28e
  1752 00c7 CB000000 		.4byte	0xcb
@@ -2915,44 +2915,44 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  1765 00e4 97       		.byte	0x97
  1766 00e5 02010000 		.4byte	0x102
  1767 00e9 09       		.uleb128 0x9
- 1768 00ea 71020000 		.4byte	.LASF20
+ 1768 00ea 80020000 		.4byte	.LASF20
  1769 00ee 01       		.byte	0x1
  1770 00ef 99       		.byte	0x99
  1771 00f0 8D000000 		.4byte	0x8d
  1772 00f4 00       		.byte	0
  1773 00f5 09       		.uleb128 0x9
- 1774 00f6 58020000 		.4byte	.LASF21
+ 1774 00f6 67020000 		.4byte	.LASF21
  1775 00fa 01       		.byte	0x1
  1776 00fb 9A       		.byte	0x9a
  1777 00fc 8D000000 		.4byte	0x8d
  1778 0100 01       		.byte	0x1
  1779 0101 00       		.byte	0
  1780 0102 03       		.uleb128 0x3
- 1781 0103 5E020000 		.4byte	.LASF22
+ 1781 0103 6D020000 		.4byte	.LASF22
  1782 0107 01       		.byte	0x1
  1783 0108 9B       		.byte	0x9b
  1784 0109 E1000000 		.4byte	0xe1
  1785 010d 0A       		.uleb128 0xa
- 1786 010e 41020000 		.4byte	.LASF27
+ 1786 010e 50020000 		.4byte	.LASF27
  1787 0112 01       		.byte	0x1
  1788 0113 AE       		.byte	0xae
  1789 0114 00000000 		.4byte	.LFB37
  1790 0118 32000000 		.4byte	.LFE37-.LFB37
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 50
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 50
 
 
  1791 011c 01       		.uleb128 0x1
  1792 011d 9C       		.byte	0x9c
  1793 011e 7F010000 		.4byte	0x17f
  1794 0122 0B       		.uleb128 0xb
- 1795 0123 44010000 		.4byte	.LASF23
+ 1795 0123 98010000 		.4byte	.LASF23
  1796 0127 01       		.byte	0x1
  1797 0128 AE       		.byte	0xae
  1798 0129 7F010000 		.4byte	0x17f
  1799 012d 01       		.uleb128 0x1
  1800 012e 50       		.byte	0x50
  1801 012f 0B       		.uleb128 0xb
- 1802 0130 56010000 		.4byte	.LASF24
+ 1802 0130 5A010000 		.4byte	.LASF24
  1803 0134 01       		.byte	0x1
  1804 0135 AE       		.byte	0xae
  1805 0136 8A010000 		.4byte	0x18a
@@ -2974,13 +2974,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  1821 0157 08000000 		.4byte	.LBB2
  1822 015b 22000000 		.4byte	.LBE2-.LBB2
  1823 015f 0E       		.uleb128 0xe
- 1824 0160 2F020000 		.4byte	.LASF25
+ 1824 0160 3E020000 		.4byte	.LASF25
  1825 0164 01       		.byte	0x1
  1826 0165 B4       		.byte	0xb4
  1827 0166 A5000000 		.4byte	0xa5
  1828 016a 3E000000 		.4byte	.LLST2
  1829 016e 0E       		.uleb128 0xe
- 1830 016f 97000000 		.4byte	.LASF26
+ 1830 016f 3B000000 		.4byte	.LASF26
  1831 0173 01       		.byte	0x1
  1832 0174 B5       		.byte	0xb5
  1833 0175 8D000000 		.4byte	0x8d
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  1845 0190 10       		.uleb128 0x10
  1846 0191 02010000 		.4byte	0x102
  1847 0195 11       		.uleb128 0x11
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 51
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 51
 
 
  1848 0196 1B000000 		.4byte	.LASF42
@@ -3009,7 +3009,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  1853 01a5 01       		.uleb128 0x1
  1854 01a6 9C       		.byte	0x9c
  1855 01a7 0A       		.uleb128 0xa
- 1856 01a8 11010000 		.4byte	.LASF28
+ 1856 01a8 B5000000 		.4byte	.LASF28
  1857 01ac 01       		.byte	0x1
  1858 01ad 4C       		.byte	0x4c
  1859 01ae 00000000 		.4byte	.LFB34
@@ -3054,11 +3054,11 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  1898 01f2 00       		.byte	0
  1899 01f3 00       		.byte	0
  1900 01f4 0A       		.uleb128 0xa
- 1901 01f5 9D000000 		.4byte	.LASF29
+ 1901 01f5 41000000 		.4byte	.LASF29
  1902 01f9 01       		.byte	0x1
  1903 01fa D3       		.byte	0xd3
  1904 01fb 00000000 		.4byte	.LFB38
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 52
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 52
 
 
  1905 01ff 18010000 		.4byte	.LFE38-.LFB38
@@ -3097,7 +3097,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  1938 023e 00       		.byte	0
  1939 023f 00       		.byte	0
  1940 0240 16       		.uleb128 0x16
- 1941 0241 37010000 		.4byte	.LASF43
+ 1941 0241 DB000000 		.4byte	.LASF43
  1942 0245 01       		.byte	0x1
  1943 0246 3A01     		.2byte	0x13a
  1944 0248 18010000 		.4byte	.LFB40
@@ -3110,44 +3110,44 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  1951 025b 9A000000 		.4byte	.LBE3-.LBB3
  1952 025f 54030000 		.4byte	0x354
  1953 0263 18       		.uleb128 0x18
- 1954 0264 A8000000 		.4byte	.LASF30
+ 1954 0264 4C000000 		.4byte	.LASF30
  1955 0268 01       		.byte	0x1
  1956 0269 4201     		.2byte	0x142
  1957 026b 77030000 		.4byte	0x377
  1958 026f 05       		.uleb128 0x5
  1959 0270 03       		.byte	0x3
- 1960 0271 28040000 		.4byte	cy_cfg_addr_table.6655
+ 1960 0271 28040000 		.4byte	cy_cfg_addr_table.6681
  1961 0275 18       		.uleb128 0x18
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 53
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 53
 
 
- 1962 0276 BA000000 		.4byte	.LASF31
+ 1962 0276 5E000000 		.4byte	.LASF31
  1963 027a 01       		.byte	0x1
  1964 027b 5501     		.2byte	0x155
  1965 027d 8D030000 		.4byte	0x38d
  1966 0281 05       		.uleb128 0x5
  1967 0282 03       		.byte	0x3
- 1968 0283 0C000000 		.4byte	cy_cfg_data_table.6656
+ 1968 0283 0C000000 		.4byte	cy_cfg_data_table.6682
  1969 0287 19       		.uleb128 0x19
  1970 0288 06       		.byte	0x6
  1971 0289 01       		.byte	0x1
  1972 028a 6803     		.2byte	0x368
  1973 028c AB020000 		.4byte	0x2ab
  1974 0290 1A       		.uleb128 0x1a
- 1975 0291 75010000 		.4byte	.LASF32
+ 1975 0291 79010000 		.4byte	.LASF32
  1976 0295 01       		.byte	0x1
  1977 0296 6903     		.2byte	0x369
  1978 0298 84000000 		.4byte	0x84
  1979 029c 00       		.byte	0
  1980 029d 1A       		.uleb128 0x1a
- 1981 029e E2000000 		.4byte	.LASF33
+ 1981 029e 86000000 		.4byte	.LASF33
  1982 02a2 01       		.byte	0x1
  1983 02a3 6A03     		.2byte	0x36a
  1984 02a5 99000000 		.4byte	0x99
  1985 02a9 04       		.byte	0x4
  1986 02aa 00       		.byte	0
  1987 02ab 06       		.uleb128 0x6
- 1988 02ac 22020000 		.4byte	.LASF34
+ 1988 02ac 31020000 		.4byte	.LASF34
  1989 02b0 01       		.byte	0x1
  1990 02b1 6B03     		.2byte	0x36b
  1991 02b3 87020000 		.4byte	0x287
@@ -3161,13 +3161,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  1999 02c7 10       		.uleb128 0x10
  2000 02c8 AB020000 		.4byte	0x2ab
  2001 02cc 18       		.uleb128 0x18
- 2002 02cd D2000000 		.4byte	.LASF35
+ 2002 02cd 76000000 		.4byte	.LASF35
  2003 02d1 01       		.byte	0x1
  2004 02d2 6D03     		.2byte	0x36d
  2005 02d4 DE020000 		.4byte	0x2de
  2006 02d8 05       		.uleb128 0x5
  2007 02d9 03       		.byte	0x3
- 2008 02da 00000000 		.4byte	cfg_memset_list.6661
+ 2008 02da 00000000 		.4byte	cfg_memset_list.6687
  2009 02de 10       		.uleb128 0x10
  2010 02df B7020000 		.4byte	0x2b7
  2011 02e3 1D       		.uleb128 0x1d
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2016 02ed BC000000 		.4byte	.LLST6
  2017 02f1 17       		.uleb128 0x17
  2018 02f2 26010000 		.4byte	.LBB4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 54
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 54
 
 
  2019 02f6 1C000000 		.4byte	.LBE4-.LBB4
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2073 0354 1E       		.uleb128 0x1e
  2074 0355 0E020000 		.4byte	.LVL24
  2075 0359 F4010000 		.4byte	0x1f4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 55
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 55
 
 
  2076 035d 1E       		.uleb128 0x1e
@@ -3264,21 +3264,21 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2096 038d 10       		.uleb128 0x10
  2097 038e 7C030000 		.4byte	0x37c
  2098 0392 20       		.uleb128 0x20
- 2099 0393 29010000 		.4byte	.LASF44
- 2100 0397 29010000 		.4byte	.LASF44
+ 2099 0393 CD000000 		.4byte	.LASF44
+ 2100 0397 CD000000 		.4byte	.LASF44
  2101 039b 21       		.uleb128 0x21
- 2102 039c 82020000 		.4byte	.LASF36
- 2103 03a0 82020000 		.4byte	.LASF36
+ 2102 039c 91020000 		.4byte	.LASF36
+ 2103 03a0 91020000 		.4byte	.LASF36
  2104 03a4 04       		.byte	0x4
  2105 03a5 6C       		.byte	0x6c
  2106 03a6 21       		.uleb128 0x21
- 2107 03a7 88000000 		.4byte	.LASF37
- 2108 03ab 88000000 		.4byte	.LASF37
+ 2107 03a7 2C000000 		.4byte	.LASF37
+ 2108 03ab 2C000000 		.4byte	.LASF37
  2109 03af 04       		.byte	0x4
  2110 03b0 BD       		.byte	0xbd
  2111 03b1 21       		.uleb128 0x21
- 2112 03b2 B2020000 		.4byte	.LASF38
- 2113 03b6 B2020000 		.4byte	.LASF38
+ 2112 03b2 C1020000 		.4byte	.LASF38
+ 2113 03b6 C1020000 		.4byte	.LASF38
  2114 03ba 04       		.byte	0x4
  2115 03bb C3       		.byte	0xc3
  2116 03bc 00       		.byte	0
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2130 000b 55       		.uleb128 0x55
  2131 000c 17       		.uleb128 0x17
  2132 000d 11       		.uleb128 0x11
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 56
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 56
 
 
  2133 000e 01       		.uleb128 0x1
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2187 0044 3B       		.uleb128 0x3b
  2188 0045 05       		.uleb128 0x5
  2189 0046 49       		.uleb128 0x49
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 57
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 57
 
 
  2190 0047 13       		.uleb128 0x13
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2244 007d 18       		.uleb128 0x18
  2245 007e 9742     		.uleb128 0x2117
  2246 0080 19       		.uleb128 0x19
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 58
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 58
 
 
  2247 0081 01       		.uleb128 0x1
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2301 00b7 02       		.uleb128 0x2
  2302 00b8 17       		.uleb128 0x17
  2303 00b9 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 59
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 59
 
 
  2304 00ba 00       		.byte	0
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2358 00f1 898201   		.uleb128 0x4109
  2359 00f4 01       		.byte	0x1
  2360 00f5 11       		.uleb128 0x11
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 60
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 60
 
 
  2361 00f6 01       		.uleb128 0x1
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2415 0132 01       		.uleb128 0x1
  2416 0133 12       		.uleb128 0x12
  2417 0134 06       		.uleb128 0x6
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 61
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 61
 
 
  2418 0135 01       		.uleb128 0x1
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2472 016b 00       		.byte	0
  2473 016c 00       		.byte	0
  2474 016d 1C       		.uleb128 0x1c
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 62
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 62
 
 
  2475 016e 21       		.uleb128 0x21
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2529 01a6 21       		.uleb128 0x21
  2530 01a7 2E       		.uleb128 0x2e
  2531 01a8 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 63
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 63
 
 
  2532 01a9 3F       		.uleb128 0x3f
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2586 0060 2C000000 		.4byte	.LVL9
  2587 0064 0100     		.2byte	0x1
  2588 0066 53       		.byte	0x53
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 64
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 64
 
 
  2589 0067 00000000 		.4byte	0
@@ -3838,12 +3838,12 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2643 00f0 74       		.byte	0x74
  2644 00f1 00       		.sleb128 0
  2645 00f2 36       		.byte	0x36
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 65
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 65
 
 
  2646 00f3 1E       		.byte	0x1e
  2647 00f4 03       		.byte	0x3
- 2648 00f5 00000000 		.4byte	cfg_memset_list.6661
+ 2648 00f5 00000000 		.4byte	cfg_memset_list.6687
  2649 00f9 22       		.byte	0x22
  2650 00fa 9F       		.byte	0x9f
  2651 00fb 44010000 		.4byte	.LVL21
@@ -3854,7 +3854,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2656 0107 36       		.byte	0x36
  2657 0108 1E       		.byte	0x1e
  2658 0109 03       		.byte	0x3
- 2659 010a 00000000 		.4byte	cfg_memset_list.6661
+ 2659 010a 00000000 		.4byte	cfg_memset_list.6687
  2660 010e 22       		.byte	0x22
  2661 010f 9F       		.byte	0x9f
  2662 0110 00000000 		.4byte	0
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2700 0000 94010000 		.section	.debug_str,"MS",%progbits,1
  2700      0200D600 
  2700      00000201 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 66
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 66
 
 
  2700      FB0E0D00 
@@ -3920,207 +3920,211 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 1
  2708      74446566 
  2708      61756C74 
  2708      00
- 2709              	.LASF41:
- 2710 002c 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\GitHub\\Elec"
- 2710      73657273 
- 2710      5C617573 
- 2710      74635C4F 
- 2710      6E654472 
- 2711 0059 74726F6E 		.ascii	"tronics2018-19\\Psoc Arm\\Motor Board Rev1.cydsn\000"
- 2711      69637332 
- 2711      3031382D 
- 2711      31395C50 
- 2711      736F6320 
- 2712              	.LASF37:
- 2713 0088 4379496E 		.ascii	"CyIntSetVector\000"
- 2713      74536574 
- 2713      56656374 
- 2713      6F7200
- 2714              	.LASF26:
- 2715 0097 636F756E 		.ascii	"count\000"
- 2715      7400
- 2716              	.LASF29:
- 2717 009d 436C6F63 		.ascii	"ClockSetup\000"
- 2717      6B536574 
- 2717      757000
- 2718              	.LASF30:
- 2719 00a8 63795F63 		.ascii	"cy_cfg_addr_table\000"
- 2719      66675F61 
- 2719      6464725F 
- 2719      7461626C 
- 2719      6500
- 2720              	.LASF31:
- 2721 00ba 63795F63 		.ascii	"cy_cfg_data_table\000"
- 2721      66675F64 
- 2721      6174615F 
- 2721      7461626C 
- 2721      6500
- 2722              	.LASF16:
- 2723 00cc 666C6F61 		.ascii	"float\000"
- 2723      7400
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 67
+ 2709              	.LASF37:
+ 2710 002c 4379496E 		.ascii	"CyIntSetVector\000"
+ 2710      74536574 
+ 2710      56656374 
+ 2710      6F7200
+ 2711              	.LASF26:
+ 2712 003b 636F756E 		.ascii	"count\000"
+ 2712      7400
+ 2713              	.LASF29:
+ 2714 0041 436C6F63 		.ascii	"ClockSetup\000"
+ 2714      6B536574 
+ 2714      757000
+ 2715              	.LASF30:
+ 2716 004c 63795F63 		.ascii	"cy_cfg_addr_table\000"
+ 2716      66675F61 
+ 2716      6464725F 
+ 2716      7461626C 
+ 2716      6500
+ 2717              	.LASF31:
+ 2718 005e 63795F63 		.ascii	"cy_cfg_data_table\000"
+ 2718      66675F64 
+ 2718      6174615F 
+ 2718      7461626C 
+ 2718      6500
+ 2719              	.LASF16:
+ 2720 0070 666C6F61 		.ascii	"float\000"
+ 2720      7400
+ 2721              	.LASF35:
+ 2722 0076 6366675F 		.ascii	"cfg_memset_list\000"
+ 2722      6D656D73 
+ 2722      65745F6C 
+ 2722      69737400 
+ 2723              	.LASF33:
+ 2724 0086 73697A65 		.ascii	"size\000"
+ 2724      00
+ 2725              	.LASF18:
+ 2726 008b 72656738 		.ascii	"reg8\000"
+ 2726      00
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 67
 
 
- 2724              	.LASF35:
- 2725 00d2 6366675F 		.ascii	"cfg_memset_list\000"
- 2725      6D656D73 
- 2725      65745F6C 
- 2725      69737400 
- 2726              	.LASF33:
- 2727 00e2 73697A65 		.ascii	"size\000"
- 2727      00
- 2728              	.LASF18:
- 2729 00e7 72656738 		.ascii	"reg8\000"
- 2729      00
- 2730              	.LASF8:
- 2731 00ec 6C6F6E67 		.ascii	"long unsigned int\000"
- 2731      20756E73 
- 2731      69676E65 
- 2731      6420696E 
- 2731      7400
- 2732              	.LASF6:
- 2733 00fe 73686F72 		.ascii	"short unsigned int\000"
- 2733      7420756E 
- 2733      7369676E 
- 2733      65642069 
- 2733      6E7400
- 2734              	.LASF28:
- 2735 0111 43594D45 		.ascii	"CYMEMZERO\000"
- 2735      4D5A4552 
- 2735      4F00
- 2736              	.LASF4:
- 2737 011b 756E7369 		.ascii	"unsigned char\000"
- 2737      676E6564 
- 2737      20636861 
- 2737      7200
- 2738              	.LASF44:
- 2739 0129 6D656D73 		.ascii	"memset\000"
- 2739      657400
- 2740              	.LASF17:
- 2741 0130 646F7562 		.ascii	"double\000"
- 2741      6C6500
- 2742              	.LASF43:
- 2743 0137 63796669 		.ascii	"cyfitter_cfg\000"
- 2743      74746572 
- 2743      5F636667 
- 2743      00
- 2744              	.LASF23:
- 2745 0144 61646472 		.ascii	"addr_table\000"
- 2745      5F746162 
- 2745      6C6500
- 2746              	.LASF14:
- 2747 014f 75696E74 		.ascii	"uint16\000"
- 2747      313600
- 2748              	.LASF24:
- 2749 0156 64617461 		.ascii	"data_table\000"
- 2749      5F746162 
- 2749      6C6500
- 2750              	.LASF15:
- 2751 0161 75696E74 		.ascii	"uint32\000"
- 2751      333200
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 68
+ 2727              	.LASF8:
+ 2728 0090 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2728      20756E73 
+ 2728      69676E65 
+ 2728      6420696E 
+ 2728      7400
+ 2729              	.LASF6:
+ 2730 00a2 73686F72 		.ascii	"short unsigned int\000"
+ 2730      7420756E 
+ 2730      7369676E 
+ 2730      65642069 
+ 2730      6E7400
+ 2731              	.LASF28:
+ 2732 00b5 43594D45 		.ascii	"CYMEMZERO\000"
+ 2732      4D5A4552 
+ 2732      4F00
+ 2733              	.LASF4:
+ 2734 00bf 756E7369 		.ascii	"unsigned char\000"
+ 2734      676E6564 
+ 2734      20636861 
+ 2734      7200
+ 2735              	.LASF44:
+ 2736 00cd 6D656D73 		.ascii	"memset\000"
+ 2736      657400
+ 2737              	.LASF17:
+ 2738 00d4 646F7562 		.ascii	"double\000"
+ 2738      6C6500
+ 2739              	.LASF43:
+ 2740 00db 63796669 		.ascii	"cyfitter_cfg\000"
+ 2740      74746572 
+ 2740      5F636667 
+ 2740      00
+ 2741              	.LASF41:
+ 2742 00e8 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
+ 2742      73657273 
+ 2742      5C617573 
+ 2742      74635C4F 
+ 2742      6E654472 
+ 2743 0115 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Motor Boar"
+ 2743      69742D46 
+ 2743      69726D77 
+ 2743      6172652D 
+ 2743      412D3230 
+ 2744 0146 64205265 		.ascii	"d Rev1.cydsn\000"
+ 2744      76312E63 
+ 2744      7964736E 
+ 2744      00
+ 2745              	.LASF14:
+ 2746 0153 75696E74 		.ascii	"uint16\000"
+ 2746      313600
+ 2747              	.LASF24:
+ 2748 015a 64617461 		.ascii	"data_table\000"
+ 2748      5F746162 
+ 2748      6C6500
+ 2749              	.LASF15:
+ 2750 0165 75696E74 		.ascii	"uint32\000"
+ 2750      333200
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 68
 
 
- 2752              	.LASF0:
- 2753 0168 756E7369 		.ascii	"unsigned int\000"
- 2753      676E6564 
- 2753      20696E74 
- 2753      00
- 2754              	.LASF32:
- 2755 0175 61646472 		.ascii	"address\000"
- 2755      65737300 
- 2756              	.LASF9:
- 2757 017d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2757      206C6F6E 
- 2757      6720756E 
- 2757      7369676E 
- 2757      65642069 
- 2758              	.LASF39:
- 2759 0194 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 2759      43313120 
- 2759      352E342E 
- 2759      31203230 
- 2759      31363036 
- 2760 01c7 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 2760      20726576 
- 2760      6973696F 
- 2760      6E203233 
- 2760      37373135 
- 2761 01fa 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2761      66756E63 
- 2761      74696F6E 
- 2761      2D736563 
- 2761      74696F6E 
- 2762              	.LASF34:
- 2763 0222 6366675F 		.ascii	"cfg_memset_t\000"
- 2763      6D656D73 
- 2763      65745F74 
- 2763      00
- 2764              	.LASF25:
- 2765 022f 62617365 		.ascii	"baseAddr\000"
- 2765      41646472 
- 2765      00
- 2766              	.LASF10:
- 2767 0238 73697A65 		.ascii	"sizetype\000"
- 2767      74797065 
- 2767      00
- 2768              	.LASF27:
- 2769 0241 6366675F 		.ascii	"cfg_write_bytes32\000"
- 2769      77726974 
- 2769      655F6279 
- 2769      74657333 
- 2769      3200
- 2770              	.LASF11:
- 2771 0253 63686172 		.ascii	"char\000"
- 2771      00
- 2772              	.LASF21:
- 2773 0258 76616C75 		.ascii	"value\000"
- 2773      6500
- 2774              	.LASF22:
- 2775 025e 63795F63 		.ascii	"cy_cfg_addrvalue_t\000"
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccU2ZEBw.s 			page 69
+ 2751              	.LASF0:
+ 2752 016c 756E7369 		.ascii	"unsigned int\000"
+ 2752      676E6564 
+ 2752      20696E74 
+ 2752      00
+ 2753              	.LASF32:
+ 2754 0179 61646472 		.ascii	"address\000"
+ 2754      65737300 
+ 2755              	.LASF9:
+ 2756 0181 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2756      206C6F6E 
+ 2756      6720756E 
+ 2756      7369676E 
+ 2756      65642069 
+ 2757              	.LASF23:
+ 2758 0198 61646472 		.ascii	"addr_table\000"
+ 2758      5F746162 
+ 2758      6C6500
+ 2759              	.LASF39:
+ 2760 01a3 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2760      43313120 
+ 2760      352E342E 
+ 2760      31203230 
+ 2760      31363036 
+ 2761 01d6 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 2761      20726576 
+ 2761      6973696F 
+ 2761      6E203233 
+ 2761      37373135 
+ 2762 0209 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2762      66756E63 
+ 2762      74696F6E 
+ 2762      2D736563 
+ 2762      74696F6E 
+ 2763              	.LASF34:
+ 2764 0231 6366675F 		.ascii	"cfg_memset_t\000"
+ 2764      6D656D73 
+ 2764      65745F74 
+ 2764      00
+ 2765              	.LASF25:
+ 2766 023e 62617365 		.ascii	"baseAddr\000"
+ 2766      41646472 
+ 2766      00
+ 2767              	.LASF10:
+ 2768 0247 73697A65 		.ascii	"sizetype\000"
+ 2768      74797065 
+ 2768      00
+ 2769              	.LASF27:
+ 2770 0250 6366675F 		.ascii	"cfg_write_bytes32\000"
+ 2770      77726974 
+ 2770      655F6279 
+ 2770      74657333 
+ 2770      3200
+ 2771              	.LASF11:
+ 2772 0262 63686172 		.ascii	"char\000"
+ 2772      00
+ 2773              	.LASF21:
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKSAcZi.s 			page 69
 
 
- 2775      66675F61 
- 2775      64647276 
- 2775      616C7565 
- 2775      5F7400
- 2776              	.LASF20:
- 2777 0271 6F666673 		.ascii	"offset\000"
- 2777      657400
- 2778              	.LASF5:
- 2779 0278 73686F72 		.ascii	"short int\000"
- 2779      7420696E 
- 2779      7400
- 2780              	.LASF36:
- 2781 0282 43795379 		.ascii	"CySysClkWriteImoFreq\000"
- 2781      73436C6B 
- 2781      57726974 
- 2781      65496D6F 
- 2781      46726571 
- 2782              	.LASF13:
- 2783 0297 75696E74 		.ascii	"uint8\000"
- 2783      3800
- 2784              	.LASF7:
- 2785 029d 6C6F6E67 		.ascii	"long int\000"
- 2785      20696E74 
- 2785      00
- 2786              	.LASF2:
- 2787 02a6 6C6F6E67 		.ascii	"long double\000"
- 2787      20646F75 
- 2787      626C6500 
- 2788              	.LASF38:
- 2789 02b2 4379496E 		.ascii	"CyIntEnable\000"
- 2789      74456E61 
- 2789      626C6500 
- 2790              	.LASF3:
- 2791 02be 7369676E 		.ascii	"signed char\000"
- 2791      65642063 
- 2791      68617200 
- 2792              	.LASF40:
- 2793 02ca 47656E65 		.ascii	"Generated_Source\\PSoC4\\cyfitter_cfg.c\000"
- 2793      72617465 
- 2793      645F536F 
- 2793      75726365 
- 2793      5C50536F 
- 2794              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 2774 0267 76616C75 		.ascii	"value\000"
+ 2774      6500
+ 2775              	.LASF22:
+ 2776 026d 63795F63 		.ascii	"cy_cfg_addrvalue_t\000"
+ 2776      66675F61 
+ 2776      64647276 
+ 2776      616C7565 
+ 2776      5F7400
+ 2777              	.LASF20:
+ 2778 0280 6F666673 		.ascii	"offset\000"
+ 2778      657400
+ 2779              	.LASF5:
+ 2780 0287 73686F72 		.ascii	"short int\000"
+ 2780      7420696E 
+ 2780      7400
+ 2781              	.LASF36:
+ 2782 0291 43795379 		.ascii	"CySysClkWriteImoFreq\000"
+ 2782      73436C6B 
+ 2782      57726974 
+ 2782      65496D6F 
+ 2782      46726571 
+ 2783              	.LASF13:
+ 2784 02a6 75696E74 		.ascii	"uint8\000"
+ 2784      3800
+ 2785              	.LASF7:
+ 2786 02ac 6C6F6E67 		.ascii	"long int\000"
+ 2786      20696E74 
+ 2786      00
+ 2787              	.LASF2:
+ 2788 02b5 6C6F6E67 		.ascii	"long double\000"
+ 2788      20646F75 
+ 2788      626C6500 
+ 2789              	.LASF38:
+ 2790 02c1 4379496E 		.ascii	"CyIntEnable\000"
+ 2790      74456E61 
+ 2790      626C6500 
+ 2791              	.LASF3:
+ 2792 02cd 7369676E 		.ascii	"signed char\000"
+ 2792      65642063 
+ 2792      68617200 
+ 2793              	.LASF40:
+ 2794 02d9 47656E65 		.ascii	"Generated_Source\\PSoC4\\cyfitter_cfg.c\000"
+ 2794      72617465 
+ 2794      645F536F 
+ 2794      75726365 
+ 2794      5C50536F 
+ 2795              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

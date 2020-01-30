@@ -46,7 +46,7 @@ uint8 invalidate = 0;
 
 //PID varaibles
 int8 flipEncoder = 1;
-int16 final_angle;
+int16 final_angle = 0;
 int i = 0;
 int lastp = 0;
 int kp;
@@ -96,8 +96,10 @@ CY_ISR(Period_Reset_Handler) {
     }
     
     #ifdef REV2
-        if(time_LED >= 10){
+        if(time_LED >= 5){
             Test_LED_Write(LED_OFF);
+            
+            
         }
     #endif
 }
@@ -216,10 +218,10 @@ int main(void)
             //}
             
             //Tests if there are any errors
-            error = !stall.done | !invalid_arg.done | !command_failed.done; 
+          //  error = !stall.done | !invalid_arg.done | !command_failed.done; 
             
             //sends errors over CAN
-            if(error){
+            /*if(error){
                 if(!stall.done) {
                     CAN_Send_Error(stall.code, stall.param);
                     stall.done = 1;
@@ -232,7 +234,7 @@ int main(void)
                     CAN_Send_Error(command_failed.code, command_failed.param);
                     command_failed.done = 1;
                 }
-            }
+            }*/
             
             //Sends periodic data
             if(send_data) {
@@ -299,6 +301,7 @@ void initialize(void) {
 }
 
 //Recieve:
+//1 00010 11010 0x45A General
 //1 00010 10000 0x450 BBB to base rotation
 //1 00010 10001 0x451 
 //1 00010 10010 0x452
@@ -328,10 +331,10 @@ void initialize_can_addr(void) {
             shift = 1;
             ratio = 14.45;
             #ifdef REV2
-                flipEncoder = -1;
+                flipEncoder = 1;
             #endif
             kp = 50;
-            ki = 3;
+            ki = 12;
             kd = 10;
             break;
         case 0b010: // elbow
@@ -350,7 +353,7 @@ void initialize_can_addr(void) {
             message_id = 0b10100;
             disable_limit = 1;
             shift = 4;
-            ratio = 1;
+            ratio = 1.3888;
             kp = 20;
             ki = 30;
             kd = 10;
@@ -359,10 +362,11 @@ void initialize_can_addr(void) {
         case 0b101: // diff wrist 2
             message_id = 0b10101;
             disable_limit = 1;
+            flipEncoder = -1;
             shift = 5;
-            ratio = 1;
-            kp = 20;
-            ki = 30;
+            ratio = 1.3888;
+            kp = 50;
+            ki = 40;
             kd = 10;
             break;
         case 0b110: // hand
@@ -370,12 +374,22 @@ void initialize_can_addr(void) {
             shift = 6;
             ratio = 1;
             break;
+        default:
+            message_id = 0b11010;
+            shift = 7;
+            CAN_RX_MAILBOX_1_SHIFT = 0b10000000 << shift;
+            CAN_RX_MAILBOX_0_SHIFT = 0b10000000 << (shift+1);
+            CAN_RX_MAILBOX_0 = 15u;
+            CAN_RX_MAILBOX_1 = 14u;
+            break;
     }
     
+    if(shift != 7) {
     CAN_RX_MAILBOX_0_SHIFT = CAN_RX_MAILBOX_0_SHIFT << shift;
     CAN_RX_MAILBOX_1_SHIFT = CAN_RX_MAILBOX_1_SHIFT << shift;
     CAN_RX_MAILBOX_0 += shift;
     CAN_RX_MAILBOX_1 += shift;
+    }
     set_CAN_ID(0b1);
     
     if(uart_debug) {
@@ -394,10 +408,10 @@ void set_CAN_ID(uint32 priority) {
 
     // takes between -255 and 255
 void set_PWM(int compare) {
+    pwm_compare = compare;
     #ifdef REV2
     compare = -compare;
     #endif
-    pwm_compare = compare;
      if(uart_debug) {
         sprintf(txData, "PWM:%d disable_limit: %d\r\n",compare,disable_limit);
         UART_UartPutString(txData); 
@@ -419,9 +433,10 @@ void set_PWM(int compare) {
 
 void CAN_Send_Encoder(void){
     int16 ticks = QuadDec_GetCounter();
+    int16 angle = (((double)ticks)/ratio)*10;
     data.byte[0u] = 0x14u;
-    data.byte[1u] = LO8(ticks);
-    data.byte[2u] = HI8(ticks);
+    data.byte[1u] = LO8(angle);
+    data.byte[2u] = HI8(angle);
     data.byte[3u] = 0;
     data.byte[4u] = 0;
     CAN_SendMsg(&message);
@@ -515,6 +530,10 @@ inline void set_data(uint16 addr){
         if(CAN_RX_DATA_BYTE1(addr) == 0x00) {
             if(CAN_RX_DATA_BYTE2(addr) == 1 || CAN_RX_DATA_BYTE2(addr) == 0) {
                 mode = CAN_RX_DATA_BYTE2(addr);
+                if(mode == 1){
+                    final_angle = QuadDec_GetCounter() * flipEncoder;
+                    i = 0;
+                }
             }
             else {
                 invalid_arg.param = 0x00;
@@ -537,6 +556,9 @@ inline void set_data(uint16 addr){
             Can_rx_angle.b3 = CAN_RX_DATA_BYTE4(addr);
             Can_rx_angle.b4 = CAN_RX_DATA_BYTE5(addr);
             Can_rx_angle.done = 0;
+            if((((uint16_t)Can_rx_angle.b2) << 8 | Can_rx_angle.b1) != final_angle){
+                 i=0;
+            }
             complete = 1;
         } 
         //model requst
@@ -578,7 +600,11 @@ int degrees_to_tick(int16 degrees){
 int position_PID(int target){
     int16 current =  QuadDec_GetCounter() * flipEncoder;
     int p = target - current;
-    if(!p) {
+    if(p <= 5 && p >= -5) {
+        if(uart_debug) {
+            sprintf(txData, "p: %d\r\n",p);
+            UART_UartPutString(txData);
+        }
       //complete =  1;
       return(0);
     }

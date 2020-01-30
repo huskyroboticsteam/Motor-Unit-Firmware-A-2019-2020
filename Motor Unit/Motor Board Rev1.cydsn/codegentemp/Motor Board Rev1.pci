@@ -1,5 +1,5 @@
 # Motor Board Rev1
-# 2019-05-23 02:09:27Z
+# 2020-01-30 04:04:51Z
 
 # IO_6@[IOP=(0)][IoId=(6)] is reserved: ExtClkEnabled
 dont_use_io iocell 0 6
@@ -21,6 +21,7 @@ set_io "RX_1(0)" iocell 0 0
 set_io "TX_1(0)" iocell 0 1
 set_io "\UART:tx(0)\" iocell 2 1
 set_io "\UART:rx(0)\" iocell 2 0
+set_io "Dip_1(0)" iocell 4 0
 set_io "Dip_3(0)" iocell 4 2
 set_io "Dip_2(0)" iocell 4 1
 set_io "Dip_4(0)" iocell 4 3

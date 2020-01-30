@@ -64,7 +64,7 @@ uint8 Can_addr_ReadMask(void) ;
 ***************************************/
 
 /* Status Register Inputs */
-#define Can_addr_INPUTS              3
+#define Can_addr_INPUTS              4
 
 
 /***************************************

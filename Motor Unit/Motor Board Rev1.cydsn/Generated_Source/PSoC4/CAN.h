@@ -97,9 +97,9 @@ extern uint8 CAN_initVar;
 #define CAN_RX11_FUNC_ENABLE           (1u)
 #define CAN_RX12_FUNC_ENABLE           (1u)
 #define CAN_RX13_FUNC_ENABLE           (1u)
-#define CAN_RX14_FUNC_ENABLE           (0u)
-#define CAN_RX15_FUNC_ENABLE           (0u)
-#define CAN_RX_MAILBOX_TYPE            (0x3FFFu)
+#define CAN_RX14_FUNC_ENABLE           (1u)
+#define CAN_RX15_FUNC_ENABLE           (1u)
+#define CAN_RX_MAILBOX_TYPE            (0xFFFFu)
 #define CAN_TX_MAILBOX_TYPE            (0x0u)
 
 

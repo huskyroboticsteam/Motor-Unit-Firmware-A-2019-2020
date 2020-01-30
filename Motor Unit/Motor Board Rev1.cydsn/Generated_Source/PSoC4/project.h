@@ -54,6 +54,8 @@
 #include "UART_SPI_UART_PVT.h"
 #include "UART_PVT.h"
 #include "UART_BOOT.h"
+#include "Dip_1.h"
+#include "Dip_1_aliases.h"
 #include "Dip_3.h"
 #include "Dip_3_aliases.h"
 #include "Dip_2.h"

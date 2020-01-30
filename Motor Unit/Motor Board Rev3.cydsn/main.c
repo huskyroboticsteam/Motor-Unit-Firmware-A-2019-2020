@@ -103,6 +103,9 @@ CY_ISR(Period_Reset_Handler) {
             
         }
     #endif
+    #ifdef REV1
+        if(time_LED){
+            Test_LED_W
 }
   
 CY_ISR(Pin_Limit_Handler){

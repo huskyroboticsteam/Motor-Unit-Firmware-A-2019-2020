@@ -301,6 +301,7 @@ void initialize(void) {
 }
 
 //Recieve:
+//1 00010 11010 0x45A General
 //1 00010 10000 0x450 BBB to base rotation
 //1 00010 10001 0x451 
 //1 00010 10010 0x452
@@ -373,12 +374,22 @@ void initialize_can_addr(void) {
             shift = 6;
             ratio = 1;
             break;
+        default:
+            message_id = 0b11010;
+            shift = 7;
+            CAN_RX_MAILBOX_1_SHIFT = 0b10000000 << shift;
+            CAN_RX_MAILBOX_0_SHIFT = 0b10000000 << (shift+1);
+            CAN_RX_MAILBOX_0 = 15u;
+            CAN_RX_MAILBOX_1 = 14u;
+            break;
     }
     
+    if(shift != 7) {
     CAN_RX_MAILBOX_0_SHIFT = CAN_RX_MAILBOX_0_SHIFT << shift;
     CAN_RX_MAILBOX_1_SHIFT = CAN_RX_MAILBOX_1_SHIFT << shift;
     CAN_RX_MAILBOX_0 += shift;
     CAN_RX_MAILBOX_1 += shift;
+    }
     set_CAN_ID(0b1);
     
     if(uart_debug) {

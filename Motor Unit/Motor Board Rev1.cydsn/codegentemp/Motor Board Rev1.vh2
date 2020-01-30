@@ -2,7 +2,7 @@
 --	Conversion of Motor Board Rev1.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed May 22 19:09:26 2019
+--	Wed Jan 29 20:04:50 2020
 --
 
 USE cypress.cypress.all;
@@ -376,6 +376,11 @@ SIGNAL Net_498 : bit;
 SIGNAL Net_499 : bit;
 SIGNAL Net_501 : bit;
 SIGNAL Net_504 : bit;
+SIGNAL tmpOE__Dip_1_net_0 : bit;
+SIGNAL Net_528 : bit;
+SIGNAL tmpIO_0__Dip_1_net_0 : bit;
+TERMINAL tmpSIOVREF__Dip_1_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__Dip_1_net_0 : bit;
 SIGNAL tmpOE__Dip_3_net_0 : bit;
 SIGNAL Net_526 : bit;
 SIGNAL tmpIO_0__Dip_3_net_0 : bit;
@@ -1580,7 +1585,7 @@ Clock_1:cy_clock_v1_0
 		divisor=>2,
 		period=>"0",
 		is_direct=>'0',
-		is_digital=>'0')
+		is_digital=>'1')
 	PORT MAP(clock_out=>Net_142,
 		dig_domain_out=>open);
 Spare1:cy_psoc3_pins_v1_10
@@ -1744,7 +1749,7 @@ Clock_2:cy_clock_v1_0
 		divisor=>0,
 		period=>"10000000000000",
 		is_direct=>'0',
-		is_digital=>'0')
+		is_digital=>'1')
 	PORT MAP(clock_out=>Net_1156,
 		dig_domain_out=>open);
 RX_1:cy_psoc3_pins_v1_10
@@ -2078,6 +2083,76 @@ TX_1:cy_psoc3_pins_v1_10
 		sda=>Net_503,
 		tx_req=>Net_488,
 		rx_req=>Net_487);
+Dip_1:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"2191e2b0-f8f5-4999-991d-75baf300fdf4",
+		drive_mode=>"010",
+		ibuf_enabled=>"1",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"I",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__Pin_Limit_1_net_0),
+		y=>(zero),
+		fb=>Net_528,
+		analog=>(open),
+		io=>(tmpIO_0__Dip_1_net_0),
+		siovref=>(tmpSIOVREF__Dip_1_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__Pin_Limit_1_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__Pin_Limit_1_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__Dip_1_net_0);
 Dip_3:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"99a54865-2e0c-4e8b-8979-f2d08319ddba",
 		drive_mode=>"010",
@@ -2294,7 +2369,7 @@ Dip_4:cy_psoc3_pins_v1_10
 	PORT MAP(reset=>zero,
 		clock=>Net_1156,
 		status=>(zero, zero, zero, zero,
-			zero, Net_527, Net_526, Net_525));
+			Net_528, Net_527, Net_526, Net_525));
 fault:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"5b07726f-35a2-4125-a8f1-1e99e4166073",
 		drive_mode=>"010",
@@ -2372,7 +2447,7 @@ timer_clock:cy_clock_v1_0
 		divisor=>2,
 		period=>"0",
 		is_direct=>'0',
-		is_digital=>'0')
+		is_digital=>'1')
 	PORT MAP(clock_out=>Net_1314,
 		dig_domain_out=>open);
 \Timer_1:TimerUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0

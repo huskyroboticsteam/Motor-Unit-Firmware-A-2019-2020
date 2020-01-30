@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
   29:Generated_Source\PSoC4/CyLFClk.c ****     static volatile uint16 defaultIloTrimRegValue = CY_SYS_CLK_ILO_TRIM_DEFAULT_VALUE;
   30:Generated_Source\PSoC4/CyLFClk.c **** #endif /* (CY_IP_SRSSV2 && (!CY_IP_CPUSS)) */
   31:Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 2
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 2
 
 
   32:Generated_Source\PSoC4/CyLFClk.c **** #if(CY_IP_SRSSV2)
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
   86:Generated_Source\PSoC4/CyLFClk.c **** }
   87:Generated_Source\PSoC4/CyLFClk.c **** 
   88:Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 3
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 3
 
 
   89:Generated_Source\PSoC4/CyLFClk.c **** /*******************************************************************************
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  143:Generated_Source\PSoC4/CyLFClk.c **** }
  144:Generated_Source\PSoC4/CyLFClk.c **** 
  145:Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 4
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 4
 
 
  146:Generated_Source\PSoC4/CyLFClk.c **** /******************************************************************************
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  200:Generated_Source\PSoC4/CyLFClk.c **** ******************************************************************************/
  201:Generated_Source\PSoC4/CyLFClk.c **** void CySysClkIloStopMeasurement(void)
  202:Generated_Source\PSoC4/CyLFClk.c **** {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 5
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 5
 
 
  203:Generated_Source\PSoC4/CyLFClk.c ****     /* Set default configurations in 11...8 DFT register bits to zero */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  257:Generated_Source\PSoC4/CyLFClk.c **** *
  258:Generated_Source\PSoC4/CyLFClk.c **** * \return CYRET_INVALID_STATE - Indicates that measurement not started. 
  259:Generated_Source\PSoC4/CyLFClk.c **** * The user should call CySysClkIloStartMeasurement() API before calling 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 6
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 6
 
 
  260:Generated_Source\PSoC4/CyLFClk.c **** * this API.
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  314:Generated_Source\PSoC4/CyLFClk.c ****                             iloCompensatedCycles = (((CY_SYS_CNT_REG2_REG * cydelayFreqHz) / (cydel
  315:Generated_Source\PSoC4/CyLFClk.c ****                                                    CY_SYS_CLK_SYS_CLK_DEVIDER)) / CY_SYS_CLK_ILO_FR
  316:Generated_Source\PSoC4/CyLFClk.c ****                                                    (desiredDelayInCounts / CY_SYS_CLK_ILO_FREQ_3LSB
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 7
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 7
 
 
  317:Generated_Source\PSoC4/CyLFClk.c ****                         }
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  371:Generated_Source\PSoC4/CyLFClk.c ****     {
   27              		.loc 1 371 0
   28              		.cfi_startproc
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 8
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 8
 
 
   29              		@ args = 0, pretend = 0, frame = 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  395:Generated_Source\PSoC4/CyLFClk.c **** *
  396:Generated_Source\PSoC4/CyLFClk.c **** * The CySysClkIloStartMeasurement() API should be called prior to calling this 
  397:Generated_Source\PSoC4/CyLFClk.c **** * API. Otherwise it will return CYRET_INVALID_STATE as the measurement was not 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 9
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 9
 
 
  398:Generated_Source\PSoC4/CyLFClk.c **** * started.
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  452:Generated_Source\PSoC4/CyLFClk.c ****     uint32 waitUntilCntr1Stops;
  453:Generated_Source\PSoC4/CyLFClk.c ****     static uint32 trimRunningStatus = CY_SYS_CLK_TRIM_OR_COMP_FINISHED;
  454:Generated_Source\PSoC4/CyLFClk.c ****     uint32 checkStatus;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 10
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 10
 
 
  455:Generated_Source\PSoC4/CyLFClk.c ****     cystatus returnStatus;
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  509:Generated_Source\PSoC4/CyLFClk.c ****             if (CY_SYS_CLK_TRIM_OR_COMP_FINISHED != trimRunningStatus)
  510:Generated_Source\PSoC4/CyLFClk.c ****             {
  511:Generated_Source\PSoC4/CyLFClk.c ****                 /* Checking if the counter CNTR 1 finished down-counting */
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 11
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 11
 
 
  512:Generated_Source\PSoC4/CyLFClk.c ****                 if(0u != (CY_SYS_CNT_REG1_REG & CY_SYS_CLK_ILO_CALIBR_COMPLETE_MASK))
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  566:Generated_Source\PSoC4/CyLFClk.c **** * frequency measuring.
  567:Generated_Source\PSoC4/CyLFClk.c **** *
  568:Generated_Source\PSoC4/CyLFClk.c **** * \endinternal
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 12
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 12
 
 
  569:Generated_Source\PSoC4/CyLFClk.c **** *
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  623:Generated_Source\PSoC4/CyLFClk.c ****     else
  624:Generated_Source\PSoC4/CyLFClk.c ****     {
  625:Generated_Source\PSoC4/CyLFClk.c ****         errorRangeStatus = CYRET_INVALID_STATE;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 13
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 13
 
 
  626:Generated_Source\PSoC4/CyLFClk.c ****     }
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  680:Generated_Source\PSoC4/CyLFClk.c ****     * CY_SYS_CLK_LFCLK_SRC_WCO Low Frequency Watch Crystal Oscillator (WCO)
  681:Generated_Source\PSoC4/CyLFClk.c ****     *
  682:Generated_Source\PSoC4/CyLFClk.c ****     * \endinternal
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 14
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 14
 
 
  683:Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  709:Generated_Source\PSoC4/CyLFClk.c ****     *  The function is applicable only for devices with more than one source for 
  710:Generated_Source\PSoC4/CyLFClk.c ****     * LFCLK - PSoC 4100 BLE / PSoC 4200 BLE / PRoC BLE / PSoC 4100M / PSoC 4200M / 
  711:Generated_Source\PSoC4/CyLFClk.c ****     * PSoC 4200L.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 15
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 15
 
 
  712:Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  766:Generated_Source\PSoC4/CyLFClk.c ****     *  during a switch and hence its output should not be used at that moment.
  767:Generated_Source\PSoC4/CyLFClk.c ****     *
  768:Generated_Source\PSoC4/CyLFClk.c ****     *  The CySysClkWcoSetPowerMode() function configures the WCO power mode.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 16
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 16
 
 
  769:Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  823:Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
  824:Generated_Source\PSoC4/CyLFClk.c ****     uint32 CySysClkWcoEnabled(void)
  825:Generated_Source\PSoC4/CyLFClk.c ****     {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 17
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 17
 
 
  826:Generated_Source\PSoC4/CyLFClk.c ****         return ((0u != (CY_SYS_CLK_WCO_CONFIG_REG & (uint32)(CY_SYS_CLK_WCO_CONFIG_LPM_ENABLE))) ?
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  880:Generated_Source\PSoC4/CyLFClk.c ****     ****************************************************************************//**
  881:Generated_Source\PSoC4/CyLFClk.c ****     * \brief
  882:Generated_Source\PSoC4/CyLFClk.c ****     * Selects the WCO block output source.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 18
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 18
 
 
  883:Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  937:Generated_Source\PSoC4/CyLFClk.c ****     /*******************************************************************************
  938:Generated_Source\PSoC4/CyLFClk.c ****     * Function Name: CySysWdtLock
  939:Generated_Source\PSoC4/CyLFClk.c ****     ****************************************************************************//**
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 19
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 19
 
 
  940:Generated_Source\PSoC4/CyLFClk.c ****     * \brief
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  108 0010 00010B40 		.word	1074462976
  109              		.cfi_endproc
  110              	.LFE18:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 20
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 20
 
 
  111              		.size	CySysWdtLocked, .-CySysWdtLocked
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  176:Generated_Source\PSoC4/CyLFClk.c ****         iloTrimTrig = 1u;
  160              		.loc 1 176 0
  161 0008 0D4B     		ldr	r3, .L18+4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 21
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 21
 
 
  162 000a 1A68     		ldr	r2, [r3]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  212              	CySysClkIloStopMeasurement:
  213              	.LFB4:
  202:Generated_Source\PSoC4/CyLFClk.c ****     /* Set default configurations in 11...8 DFT register bits to zero */
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 22
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 22
 
 
  214              		.loc 1 202 0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  278:Generated_Source\PSoC4/CyLFClk.c ****        (CY_SYS_TST_DDFT_CTRL_REG == CY_SYS_TST_DDFT_CTRL_REG_SEL2_CLK1) &&
  264              		.loc 1 278 0
  265 000e 8022     		movs	r2, #128
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 23
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 23
 
 
  266 0010 5200     		lsls	r2, r2, #1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  310              	.LVL5:
  311 0050 284B     		ldr	r3, .L35+36
  312 0052 1968     		ldr	r1, [r3]
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 24
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 24
 
 
  313              	.LVL6:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  359 0090 C901     		lsls	r1, r1, #7
  360 0092 FFF7FEFF 		bl	__aeabi_uidiv
  361              	.LVL17:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 25
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 25
 
 
  362              	.L27:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  410              	.LVL31:
  411              	.L32:
  412 00c4 1120     		movs	r0, #17
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 26
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 26
 
 
  413              	.LVL32:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  463              	.LVL38:
  464 0000 10B5     		push	{r4, lr}
  465              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 27
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 27
 
 
  466              		.cfi_offset 4, -8
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  514 004a 1549     		ldr	r1, .L47+12
  515 004c FFF7FEFF 		bl	__aeabi_idiv
  516              	.LVL45:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 28
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 28
 
 
  517 0050 08E0     		b	.L41
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  563 0084 1060     		str	r0, [r2]
  564              	.LVL55:
  614:Generated_Source\PSoC4/CyLFClk.c ****         } /* Else return success because error is in +/- 10% range*/
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 29
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 29
 
 
  565              		.loc 1 614 0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  614              		.cfi_offset 5, -12
  615              		.cfi_offset 6, -8
  616              		.cfi_offset 14, -4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 30
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 30
 
 
  617 0002 0C00     		movs	r4, r1
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  661              	.L54:
  475:Generated_Source\PSoC4/CyLFClk.c ****                     if (0u == waitUntilCntr1Stops)
  662              		.loc 1 475 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 31
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 31
 
 
  663 003a 013D     		subs	r5, r5, #1
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  706 006e 1020     		movs	r0, #16
  707 0070 23E0     		b	.L50
  708              	.LVL72:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 32
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 32
 
 
  709              	.L51:
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  755 00a8 1120     		movs	r0, #17
  756              	.LVL81:
  757 00aa 06E0     		b	.L50
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 33
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 33
 
 
  758              	.LVL82:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  807              		@ link register save eliminated.
  808              	.LVL88:
  653:Generated_Source\PSoC4/CyLFClk.c ****         {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 34
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 34
 
 
  809              		.loc 1 653 0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  856              		.loc 1 772 0
  857              		.cfi_startproc
  858              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 35
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 35
 
 
  859              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
   47:Generated_Source\PSoC4/CyLFClk.h **** */
   48:Generated_Source\PSoC4/CyLFClk.h **** cystatus CySysClkIloCompensate(uint32 desiredDelay, uint32 *compensatedCycles);
   49:Generated_Source\PSoC4/CyLFClk.h **** void CySysClkIloStartMeasurement(void);
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 36
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 36
 
 
   50:Generated_Source\PSoC4/CyLFClk.h **** void CySysClkIloStopMeasurement(void);
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  104:Generated_Source\PSoC4/CyLFClk.h ****     uint32 CySysWdtGetMode(uint32 counterNum);
  105:Generated_Source\PSoC4/CyLFClk.h ****     uint32 CySysWdtGetEnabledStatus(uint32 counterNum);
  106:Generated_Source\PSoC4/CyLFClk.h ****     void   CySysWdtSetClearOnMatch(uint32 counterNum, uint32 enable);
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 37
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 37
 
 
  107:Generated_Source\PSoC4/CyLFClk.h ****     uint32 CySysWdtGetClearOnMatch(uint32 counterNum);
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  161:Generated_Source\PSoC4/CyLFClk.h ****     uint32 CySysTimerGetMode(uint32 counterNum);
  162:Generated_Source\PSoC4/CyLFClk.h ****     uint32 CySysTimerGetEnabledStatus(uint32 counterNum);
  163:Generated_Source\PSoC4/CyLFClk.h ****     void   CySysTimerSetClearOnMatch(uint32 counterNum, uint32 enable);
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 38
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 38
 
 
  164:Generated_Source\PSoC4/CyLFClk.h ****     uint32 CySysTimerGetClearOnMatch(uint32 counterNum);
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  218:Generated_Source\PSoC4/CyLFClk.h **** #if (CY_IP_SRSSV2)
  219:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_CLK_MAX_DELAY_US                     ((uint32) (0xEE6B2800u))
  220:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_CLK_ILO_PERIOD                       ((uint32) (0x1Fu))
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 39
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 39
 
 
  221:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_CLK_ILO_FREQ_2MSB                    ((uint32) 5u)
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  275:Generated_Source\PSoC4/CyLFClk.h **** 
  276:Generated_Source\PSoC4/CyLFClk.h ****     /** Selects External clock input on wco_in pin as WCO’s clock source */
  277:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_CLK_WCO_SEL_PIN                      (0u)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 40
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 40
 
 
  278:Generated_Source\PSoC4/CyLFClk.h **** #endif /* (CY_IP_WCO) */
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  332:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_CLK_WCO_TRIM_GM_HPM                  (( uint32 ) 0x01u)
  333:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_CLK_WCO_TRIM_GM_LPM                  (( uint32 ) 0x02u)
  334:Generated_Source\PSoC4/CyLFClk.h **** #endif  /* (CY_IP_WCO) */
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 41
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 41
 
 
  335:Generated_Source\PSoC4/CyLFClk.h **** 
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  389:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_WDT_CLK_LOCK_BIT1            ((uint32)0x01u << 15u)
  390:Generated_Source\PSoC4/CyLFClk.h **** 
  391:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_WDT_NUM_OF_WDT                   (3u)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 42
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 42
 
 
  392:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_WDT_NUM_OF_CALLBACKS             (3u)
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  446:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_TIMER_CASCADE_12             ((uint32)0x01u << 11u)      /**< Cascade 12 */
  447:Generated_Source\PSoC4/CyLFClk.h **** 
  448:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_TIMER0_INT                   ((uint32)0x01u << 2u)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 43
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 43
 
 
  449:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_TIMER1_INT                   ((uint32)0x01u << 10u)
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  503:Generated_Source\PSoC4/CyLFClk.h **** 
  504:Generated_Source\PSoC4/CyLFClk.h **** /* CySysClkWcoSetPowerMode() */
  505:Generated_Source\PSoC4/CyLFClk.h **** #define CY_SYS_CLK_WCO_HPM                              (0x0u)     /**< WCO High power mode */
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 44
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 44
 
 
  506:Generated_Source\PSoC4/CyLFClk.h **** 
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  560:Generated_Source\PSoC4/CyLFClk.h **** #endif  /* (CY_IP_SRSSV2) && CY_IP_WCO*/
  561:Generated_Source\PSoC4/CyLFClk.h **** 
  562:Generated_Source\PSoC4/CyLFClk.h **** #if (CY_IP_WCO)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 45
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 45
 
 
  563:Generated_Source\PSoC4/CyLFClk.h ****     #if (CY_IP_BLESS)
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  617:Generated_Source\PSoC4/CyLFClk.h **** 
  618:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_WDT_COUNTER_REG              (*(reg32 *) CYREG_WDT_COUNTER)
  619:Generated_Source\PSoC4/CyLFClk.h ****     #define CY_SYS_WDT_COUNTER_PTR              ( (reg32 *) CYREG_WDT_COUNTER)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 46
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 46
 
 
  620:Generated_Source\PSoC4/CyLFClk.h **** 
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  876 0010 8243     		bics	r2, r0
  877 0012 1A60     		str	r2, [r3]
  665:Generated_Source\PSoC4/CyLFClk.h **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 47
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 47
 
 
  666:Generated_Source\PSoC4/CyLFClk.h ****         /* Restore WCO trim register HPM settings */
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  825:Generated_Source\PSoC4/CyLFClk.c ****         return ((0u != (CY_SYS_CLK_WCO_CONFIG_REG & (uint32)(CY_SYS_CLK_WCO_CONFIG_LPM_ENABLE))) ?
  923              		.loc 1 825 0
  924              		.cfi_startproc
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 48
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 48
 
 
  925              		@ args = 0, pretend = 0, frame = 0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  973 000a 0028     		cmp	r0, #0
  974 000c 15D1     		bne	.L83
  975              	.LBB8:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 49
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 49
 
 
  976              	.LBB9:
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1021              		.loc 1 875 0
  1022 0040 2000     		movs	r0, r4
  1023              		@ sp needed
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 50
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 50
 
 
  1024              	.LVL99:
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1072              	.LVL103:
  1073              	.L88:
  929:Generated_Source\PSoC4/CyLFClk.c ****             }
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 51
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 51
 
 
  1074              		.loc 1 929 0 discriminator 1
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1122              		.align	2
  1123              	.L92:
  1124 0018 00010B40 		.word	1074462976
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 52
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 52
 
 
  1125              		.cfi_endproc
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1160 001c 1202     		lsls	r2, r2, #8
  1161 001e 1343     		orrs	r3, r2
  1162 0020 0B60     		str	r3, [r1]
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 53
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 53
 
 
  993:Generated_Source\PSoC4/CyLFClk.c ****                 CY_SYS_WDT_CLK_LOCK_BIT1);
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1191              		.cfi_def_cfa_offset 8
  1192              		.cfi_offset 4, -8
  1193              		.cfi_offset 14, -4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 54
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 54
 
 
  1194 0002 0400     		movs	r4, r0
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1036:Generated_Source\PSoC4/CyLFClk.c ****     * CY_SYS_WDT_MODE_RESET - Reset on match (valid for counter 0 and 1 only).<br>
 1037:Generated_Source\PSoC4/CyLFClk.c ****     * CY_SYS_WDT_MODE_INT_RESET - Generate an interrupt.  Generate a reset on
 1038:Generated_Source\PSoC4/CyLFClk.c ****     * the 3rd non-handled interrupt (valid for counter 0 and counter 1 only).
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 55
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 55
 
 
 1039:Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1267 0024 A040     		lsls	r0, r0, r4
 1055:Generated_Source\PSoC4/CyLFClk.c ****                                 (uint32)~((uint32)(CY_SYS_WDT_MODE_MASK << (counterNum * CY_SYS_WDT
  1268              		.loc 1 1055 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 56
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 56
 
 
  1269 0026 8343     		bics	r3, r0
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1082:Generated_Source\PSoC4/CyLFClk.c ****     * Function Name: CySysWdtSetClearOnMatch
 1083:Generated_Source\PSoC4/CyLFClk.c ****     ****************************************************************************//**
 1084:Generated_Source\PSoC4/CyLFClk.c ****     * 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 57
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 57
 
 
 1085:Generated_Source\PSoC4/CyLFClk.c ****     * \brief Configures the WDT counter "clear on match" setting.
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1139:Generated_Source\PSoC4/CyLFClk.c ****         CYASSERT((counterNum == CY_SYS_WDT_COUNTER0) ||
 1140:Generated_Source\PSoC4/CyLFClk.c ****                  (counterNum == CY_SYS_WDT_COUNTER1));
 1141:Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 58
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 58
 
 
 1142:Generated_Source\PSoC4/CyLFClk.c ****         return (uint32)((CY_SYS_WDT_CONFIG_REG >>
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1196:Generated_Source\PSoC4/CyLFClk.c ****             while (0u == CySysWdtGetEnabledStatus(CY_SYS_WDT_COUNTER1))
 1197:Generated_Source\PSoC4/CyLFClk.c ****             {
 1198:Generated_Source\PSoC4/CyLFClk.c ****                 /* Wait for changes to come into effect */
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 59
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 59
 
 
 1199:Generated_Source\PSoC4/CyLFClk.c ****             }
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1253:Generated_Source\PSoC4/CyLFClk.c ****                 }
 1254:Generated_Source\PSoC4/CyLFClk.c ****             }
 1255:Generated_Source\PSoC4/CyLFClk.c ****         }
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 60
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 60
 
 
 1256:Generated_Source\PSoC4/CyLFClk.c ****     }
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1310:Generated_Source\PSoC4/CyLFClk.c ****     * \return The mask of the cascade values set.
 1311:Generated_Source\PSoC4/CyLFClk.c ****     * \return CY_SYS_WDT_CASCADE_NONE - Neither
 1312:Generated_Source\PSoC4/CyLFClk.c ****     * \return CY_SYS_WDT_CASCADE_01 - Cascade 01
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 61
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 61
 
 
 1313:Generated_Source\PSoC4/CyLFClk.c ****     * \return CY_SYS_WDT_CASCADE_12 - Cascade 12
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1367:Generated_Source\PSoC4/CyLFClk.c ****     * WDT Counter 2 should be disabled. Otherwise this function call has no
 1368:Generated_Source\PSoC4/CyLFClk.c ****     * effect.
 1369:Generated_Source\PSoC4/CyLFClk.c ****     *
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 62
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 62
 
 
 1370:Generated_Source\PSoC4/CyLFClk.c ****     * If the specified counter is enabled, call the CySysWdtDisable() function with
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1424:Generated_Source\PSoC4/CyLFClk.c **** 
 1425:Generated_Source\PSoC4/CyLFClk.c **** 
 1426:Generated_Source\PSoC4/CyLFClk.c ****     /*******************************************************************************
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 63
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 63
 
 
 1427:Generated_Source\PSoC4/CyLFClk.c ****     * Function Name: CySysWdtGetCount
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1481:Generated_Source\PSoC4/CyLFClk.c ****     uint32 CySysWdtGetInterruptSource(void)
 1482:Generated_Source\PSoC4/CyLFClk.c ****     {
 1483:Generated_Source\PSoC4/CyLFClk.c ****         return (CY_SYS_WDT_CONTROL_REG & (CY_SYS_WDT_COUNTER0_INT | CY_SYS_WDT_COUNTER1_INT | CY_SY
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 64
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 64
 
 
 1484:Generated_Source\PSoC4/CyLFClk.c ****     }
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1538:Generated_Source\PSoC4/CyLFClk.c ****         */
 1539:Generated_Source\PSoC4/CyLFClk.c ****         (void)CY_SYS_WDT_CONTROL_REG;
 1540:Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 65
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 65
 
 
 1541:Generated_Source\PSoC4/CyLFClk.c ****         if (1u == wdtLockState)
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1595:Generated_Source\PSoC4/CyLFClk.c ****     {
 1596:Generated_Source\PSoC4/CyLFClk.c ****         cyWdtCallback prevCallback = (void *)0;
 1597:Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 66
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 66
 
 
 1598:Generated_Source\PSoC4/CyLFClk.c ****         if(counterNum < CY_WDT_NUM_OF_WDT)
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1652:Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
 1653:Generated_Source\PSoC4/CyLFClk.c ****     void CySysWdtEnableCounterIsr(uint32 counterNum)
 1654:Generated_Source\PSoC4/CyLFClk.c ****     {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 67
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 67
 
 
 1655:Generated_Source\PSoC4/CyLFClk.c ****         if(counterNum <= CY_SYS_WDT_COUNTER2)
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1709:Generated_Source\PSoC4/CyLFClk.c ****     void CySysWdtIsr(void)
 1710:Generated_Source\PSoC4/CyLFClk.c ****     {
 1711:Generated_Source\PSoC4/CyLFClk.c ****         if(0u != (CY_SYS_WDT_COUNTER0_INT & CY_SYS_WDT_CONTROL_REG))
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 68
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 68
 
 
 1712:Generated_Source\PSoC4/CyLFClk.c ****         {
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1766:Generated_Source\PSoC4/CyLFClk.c ****     * Value of counterNum corresponds to appropriate counter. For example value 1 
 1767:Generated_Source\PSoC4/CyLFClk.c ****     * corresponds to second WDT1 Counter.
 1768:Generated_Source\PSoC4/CyLFClk.c ****     *
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 69
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 69
 
 
 1769:Generated_Source\PSoC4/CyLFClk.c ****     * \details
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1823:Generated_Source\PSoC4/CyLFClk.c ****     *
 1824:Generated_Source\PSoC4/CyLFClk.c ****     * A pair of the CySysClkLfclkPosedgeCatch() and CySysClkLfclkPosedgeRestore()
 1825:Generated_Source\PSoC4/CyLFClk.c ****     * functions is expected to be called inside a critical section.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 70
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 70
 
 
 1826:Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1880:Generated_Source\PSoC4/CyLFClk.c ****     *  Restores the WDT configuration after a CySysClkLfclkPosedgeCatch() call.
 1881:Generated_Source\PSoC4/CyLFClk.c ****     *
 1882:Generated_Source\PSoC4/CyLFClk.c ****     *  A pair of the CySysClkLfclkPosedgeCatch() and CySysClkLfclkPosedgeRestore()
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 71
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 71
 
 
 1883:Generated_Source\PSoC4/CyLFClk.c ****     *  functions is expected to be called inside a critical section.
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1331              		.align	2
  1332              	.L108:
  1333 0024 00000000 		.word	.LANCHOR0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 72
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 72
 
 
  1334 0028 10020B40 		.word	1074463248
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1384              	.LVL126:
  1385 0000 70B5     		push	{r4, r5, r6, lr}
  1386              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 73
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 73
 
 
  1387              		.cfi_offset 4, -16
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1432              	.L117:
  1433              		.align	2
  1434              	.L116:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 74
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 74
 
 
  1435 0030 0C020B40 		.word	1074463244
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1482              	.L120:
  1483 0020 0C020B40 		.word	1074463244
  1484              		.cfi_endproc
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 75
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 75
 
 
  1485              	.LFE24:
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1202:Generated_Source\PSoC4/CyLFClk.c ****         {
  1533              		.loc 1 1202 0
  1534 0028 E303     		lsls	r3, r4, #15
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 76
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 76
 
 
  1535 002a 04D5     		bpl	.L122
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1583              		.loc 1 1232 0
  1584 0014 E307     		lsls	r3, r4, #31
  1585 0016 04D5     		bpl	.L133
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 77
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 77
 
 
  1586              	.L134:
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1634              	.LFB27:
 1286:Generated_Source\PSoC4/CyLFClk.c ****         uint32 configRegValue;
  1635              		.loc 1 1286 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 78
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 78
 
 
  1636              		.cfi_startproc
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1680 0028 1560     		str	r5, [r2]
  1681              	.LVL160:
  1682              	.L140:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 79
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 79
 
 
 1301:Generated_Source\PSoC4/CyLFClk.c **** 
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1732              		.cfi_startproc
  1733              		@ args = 0, pretend = 0, frame = 0
  1734              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 80
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 80
 
 
  1735              	.LVL161:
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1351:Generated_Source\PSoC4/CyLFClk.c ****     }
  1782              		.loc 1 1351 0 discriminator 4
  1783 0034 044B     		ldr	r3, .L153
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 81
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 81
 
 
  1784              	.LVL169:
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1833 000c 0AD1     		bne	.L155
 1381:Generated_Source\PSoC4/CyLFClk.c ****             configRegValue &= (uint32)(~((uint32)(CY_SYS_WDT_CONFIG_BITS2_MASK << CY_SYS_WDT_CONFIG
  1834              		.loc 1 1381 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 82
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 82
 
 
  1835 000e 0649     		ldr	r1, .L157
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1883 0006 1F23     		movs	r3, #31
  1884 0008 1840     		ands	r0, r3
 1401:Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 83
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 83
 
 
  1885              		.loc 1 1401 0
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1932              		.loc 1 1423 0
  1933              		@ sp needed
  1934 001a 10BD     		pop	{r4, pc}
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 84
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 84
 
 
  1935              	.L165:
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  1984 001e 000C     		lsrs	r0, r0, #16
  1985              	.LVL189:
 1452:Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 85
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 85
 
 
  1986              		.loc 1 1452 0
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2033              		.loc 1 1845 0
  2034 0002 0020     		movs	r0, #0
  2035 0004 FFF7FEFF 		bl	CySysWdtGetEnabledStatus
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 86
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 86
 
 
  2036              	.LVL196:
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2081              		.loc 1 1864 0
  2082 004a 0021     		movs	r1, #0
  2083 004c 0020     		movs	r0, #0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 87
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 87
 
 
  2084 004e FFF7FEFF 		bl	CySysWdtSetMode
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  114:Generated_Source\PSoC4/CyLFClk.c ****         {
  2133              		.loc 1 114 0
  2134 0002 FFF7FEFF 		bl	CySysWdtLocked
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 88
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 88
 
 
  2135              	.LVL206:
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2180              		@ sp needed
  2181 0044 10BD     		pop	{r4, pc}
  2182              	.L187:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 89
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 89
 
 
  2183 0046 C046     		.align	2
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  742:Generated_Source\PSoC4/CyLFClk.c ****                                     (source & CY_SYS_CLK_LFCLK_SEL_MASK);
  2231              		.loc 1 742 0
  2232 0022 1C43     		orrs	r4, r3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 90
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 90
 
 
  2233 0024 1460     		str	r4, [r2]
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2280              		.loc 1 800 0
  2281 0016 FFF7FEFF 		bl	CyEnterCriticalSection
  2282              	.LVL225:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 91
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 91
 
 
  2283 001a 0400     		movs	r4, r0
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2330              		.cfi_startproc
  2331              		@ args = 0, pretend = 0, frame = 0
  2332              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 92
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 92
 
 
  2333              		@ link register save eliminated.
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2381              		.loc 1 1520 0
  2382 0012 FFF7FEFF 		bl	CySysWdtUnlock
  2383              	.LVL236:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 93
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 93
 
 
 1519:Generated_Source\PSoC4/CyLFClk.c ****             CySysWdtUnlock();
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2429              	.LFE35:
  2430              		.size	CySysWdtClearInterrupt, .-CySysWdtClearInterrupt
  2431              		.section	.text.CySysWdtResetCounters,"ax",%progbits
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 94
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 94
 
 
  2432              		.align	2
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2481              		@ args = 0, pretend = 0, frame = 0
  2482              		@ frame_needed = 0, uses_anonymous_args = 0
  2483              	.LVL246:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 95
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 95
 
 
  2484 0000 10B5     		push	{r4, lr}
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2531              		.loc 1 1625 0
  2532              		.cfi_startproc
  2533              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 96
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 96
 
 
  2534              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2582              		.cfi_startproc
  2583              		@ args = 0, pretend = 0, frame = 0
  2584              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 97
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 97
 
 
  2585              	.LVL262:
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2634              	CySysWdtDisableCounterIsr:
  2635              	.LFB40:
 1677:Generated_Source\PSoC4/CyLFClk.c ****         if(counterNum <= CY_SYS_WDT_COUNTER2)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 98
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 98
 
 
  2636              		.loc 1 1677 0
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2685              		.loc 1 1710 0
  2686              		.cfi_startproc
  2687              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 99
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 99
 
 
  2688              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1727:Generated_Source\PSoC4/CyLFClk.c ****             {
  2734              		.loc 1 1727 0
  2735 003e 164B     		ldr	r3, .L237+4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 100
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 100
 
 
  2736 0040 5B68     		ldr	r3, [r3, #4]
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2782 0086 00D0     		beq	.L236
 1745:Generated_Source\PSoC4/CyLFClk.c ****                 }
  2783              		.loc 1 1745 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 101
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 101
 
 
  2784 0088 9847     		blx	r3
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2832 000e 0130     		adds	r0, r0, #1
  2833 0010 FFF7FEFF 		bl	CySysWdtClearInterrupt
  2834              	.LVL280:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 102
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 102
 
 
  2835 0014 23E0     		b	.L239
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2880              		.loc 1 1801 0
  2881 0056 8020     		movs	r0, #128
  2882 0058 C000     		lsls	r0, r0, #3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 103
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 103
 
 
  2883 005a FFF7FEFF 		bl	CySysWdtClearInterrupt
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1939:Generated_Source\PSoC4/CyLFClk.c ****         CY_SYS_WDT_DISABLE_KEY_REG = 0u;
 1940:Generated_Source\PSoC4/CyLFClk.c ****     }
 1941:Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 104
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 104
 
 
 1942:Generated_Source\PSoC4/CyLFClk.c **** 
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 1996:Generated_Source\PSoC4/CyLFClk.c ****     *
 1997:Generated_Source\PSoC4/CyLFClk.c ****     * \return A live counter value.
 1998:Generated_Source\PSoC4/CyLFClk.c ****     *
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 105
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 105
 
 
 1999:Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2053:Generated_Source\PSoC4/CyLFClk.c ****     *
 2054:Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
 2055:Generated_Source\PSoC4/CyLFClk.c ****     void CySysWdtClearInterrupt(void)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 106
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 106
 
 
 2056:Generated_Source\PSoC4/CyLFClk.c ****     {
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2110:Generated_Source\PSoC4/CyLFClk.c ****         return(prevCallback);
 2111:Generated_Source\PSoC4/CyLFClk.c ****     }
 2112:Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 107
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 107
 
 
 2113:Generated_Source\PSoC4/CyLFClk.c **** 
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2167:Generated_Source\PSoC4/CyLFClk.c **** * \brief Gets the clock source for the DeepSleep Timers.
 2168:Generated_Source\PSoC4/CyLFClk.c **** *
 2169:Generated_Source\PSoC4/CyLFClk.c **** * The function is applicable only for PSoC 4100S / PSoC Analog Coprocessor.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 108
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 108
 
 
 2170:Generated_Source\PSoC4/CyLFClk.c **** *
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2224:Generated_Source\PSoC4/CyLFClk.c ****                                     (source & CY_SYS_CLK_TIMER_SEL_MASK);
 2225:Generated_Source\PSoC4/CyLFClk.c ****             CyExitCriticalSection(interruptState);
 2226:Generated_Source\PSoC4/CyLFClk.c ****         }
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 109
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 109
 
 
 2227:Generated_Source\PSoC4/CyLFClk.c **** 
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2281:Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
 2282:Generated_Source\PSoC4/CyLFClk.c ****     void CySysTimerSetMode(uint32 counterNum, uint32 mode)
 2283:Generated_Source\PSoC4/CyLFClk.c ****     {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 110
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 110
 
 
 2284:Generated_Source\PSoC4/CyLFClk.c ****         uint32 configRegValue;
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2338:Generated_Source\PSoC4/CyLFClk.c ****     *
 2339:Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
 2340:Generated_Source\PSoC4/CyLFClk.c ****     void CySysTimerSetClearOnMatch(uint32 counterNum, uint32 enable)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 111
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 111
 
 
 2341:Generated_Source\PSoC4/CyLFClk.c ****     {
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2395:Generated_Source\PSoC4/CyLFClk.c ****     * Enabling or disabling Timer requires 3 Timer source-cycles to come into effect.
 2396:Generated_Source\PSoC4/CyLFClk.c ****     * Therefore, the Timer enable state must not be changed more than once in
 2397:Generated_Source\PSoC4/CyLFClk.c ****     * that period.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 112
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 112
 
 
 2398:Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2452:Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
 2453:Generated_Source\PSoC4/CyLFClk.c ****     void CySysTimerDisable(uint32 counterMask)
 2454:Generated_Source\PSoC4/CyLFClk.c ****     {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 113
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 113
 
 
 2455:Generated_Source\PSoC4/CyLFClk.c **** 
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2509:Generated_Source\PSoC4/CyLFClk.c ****     * take up to 3 Timers source-cycles.
 2510:Generated_Source\PSoC4/CyLFClk.c ****     *
 2511:Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 114
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 114
 
 
 2512:Generated_Source\PSoC4/CyLFClk.c ****     void CySysTimerSetCascade(uint32 cascadeMask)
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2566:Generated_Source\PSoC4/CyLFClk.c **** 
 2567:Generated_Source\PSoC4/CyLFClk.c ****         CYASSERT((counterNum == CY_SYS_TIMER0) ||
 2568:Generated_Source\PSoC4/CyLFClk.c ****                  (counterNum == CY_SYS_TIMER1));
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 115
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 115
 
 
 2569:Generated_Source\PSoC4/CyLFClk.c **** 
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2623:Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
 2624:Generated_Source\PSoC4/CyLFClk.c ****     uint32 CySysTimerGetToggleBit(void)
 2625:Generated_Source\PSoC4/CyLFClk.c ****     {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 116
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 116
 
 
 2626:Generated_Source\PSoC4/CyLFClk.c ****         return ((CY_SYS_WCO_WDT_CONFIG_REG >> CY_SYS_TIMER_CONFIG_BITS2_POS) & CY_SYS_TIMER_CONFIG_
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2680:Generated_Source\PSoC4/CyLFClk.c ****             /* Timer Counter 2 */
 2681:Generated_Source\PSoC4/CyLFClk.c ****             case 2u:
 2682:Generated_Source\PSoC4/CyLFClk.c ****                 regValue = CY_SYS_WCO_WDT_CTRHIGH_REG;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 117
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 117
 
 
 2683:Generated_Source\PSoC4/CyLFClk.c ****             break;
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2737:Generated_Source\PSoC4/CyLFClk.c ****                         CY_SYS_TIMER2_INT);
 2738:Generated_Source\PSoC4/CyLFClk.c **** 
 2739:Generated_Source\PSoC4/CyLFClk.c ****         CY_SYS_WCO_WDT_CONTROL_REG = counterMask | (CY_SYS_WCO_WDT_CONTROL_REG & ~(CY_SYS_TIMER0_IN
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 118
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 118
 
 
 2740:Generated_Source\PSoC4/CyLFClk.c ****                                                                            CY_SYS_TIMER1_INT |
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2794:Generated_Source\PSoC4/CyLFClk.c ****     *
 2795:Generated_Source\PSoC4/CyLFClk.c ****     * \return
 2796:Generated_Source\PSoC4/CyLFClk.c ****     * The pointer to the callback function registered for a particular Timer by
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 119
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 119
 
 
 2797:Generated_Source\PSoC4/CyLFClk.c ****     * a particular address that are passed through arguments.
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2851:Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
 2852:Generated_Source\PSoC4/CyLFClk.c ****     void CySysTimerDisableIsr(uint32 counterNum)
 2853:Generated_Source\PSoC4/CyLFClk.c ****     {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 120
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 120
 
 
 2854:Generated_Source\PSoC4/CyLFClk.c ****         if(counterNum <= CY_SYS_TIMER2)
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2908:Generated_Source\PSoC4/CyLFClk.c ****             }
 2909:Generated_Source\PSoC4/CyLFClk.c ****             CySysTimerClearInterrupt(CY_SYS_TIMER1_INT);
 2910:Generated_Source\PSoC4/CyLFClk.c ****         }
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 121
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 121
 
 
 2911:Generated_Source\PSoC4/CyLFClk.c **** 
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 2965:Generated_Source\PSoC4/CyLFClk.c ****     * PSoC 4200 BLE / PRoC BLE / PSoC 4200L / PSoC 4100M / PSoC 4200M devices to 
 2966:Generated_Source\PSoC4/CyLFClk.c ****     * use WDT. Also this API is available to use for PSoC4100S and / PSoC Analog 
 2967:Generated_Source\PSoC4/CyLFClk.c ****     * Coprocessor devices to use DeepSleep Timers.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 122
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 122
 
 
 2968:Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 3022:Generated_Source\PSoC4/CyLFClk.c ****     * \param delay The delay value in the LFCLK ticks 
 3023:Generated_Source\PSoC4/CyLFClk.c ****     * (allowable range - 16-bit value).
 3024:Generated_Source\PSoC4/CyLFClk.c ****     *
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 123
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 123
 
 
 3025:Generated_Source\PSoC4/CyLFClk.c ****     * \details
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 3079:Generated_Source\PSoC4/CyLFClk.c ****     * Also this API is available to use for PSoC4100S / Analog Coprocessor devices
 3080:Generated_Source\PSoC4/CyLFClk.c ****     * to use DeepSleep Timers.
 3081:Generated_Source\PSoC4/CyLFClk.c ****     * 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 124
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 124
 
 
 3082:Generated_Source\PSoC4/CyLFClk.c ****     * For PSoC 4100 / PSoC 4200 / PSoC 4100 BLE / PSoC 4200 BLE / PRoC BLE / PSoC 
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 3136:Generated_Source\PSoC4/CyLFClk.c ****     * - Call the CySysWdtDisableCounterIsr() for WDT or 
 3137:Generated_Source\PSoC4/CyLFClk.c ****     * CySysTimerDisableIsr() for DeepSleep Timer function to disable servicing
 3138:Generated_Source\PSoC4/CyLFClk.c ****     * interrupts of the specified WDT or DeepSleep Timer counter.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 125
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 125
 
 
 3139:Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 3167:Generated_Source\PSoC4/CyLFClk.c ****             {
 3168:Generated_Source\PSoC4/CyLFClk.c ****                 if(delayType == CY_SYS_TIMER_WAIT)
  2927              		.loc 1 3168 0 is_stmt 1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 126
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 126
 
 
  2928 001a 002E     		cmp	r6, #0
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
 3186:Generated_Source\PSoC4/CyLFClk.c ****                     wdtIsrMask |= tmpValue;
  2965              		.loc 1 3186 0
  2966 004a 074A     		ldr	r2, .L250+12
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 127
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 127
 
 
  2967 004c 5368     		ldr	r3, [r2, #4]
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  2981              	.LVL302:
  2982 005a 70BD     		pop	{r4, r5, r6, pc}
  2983              	.L251:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 128
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 128
 
 
  2984              		.align	2
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3032 0020 2A18     		adds	r2, r5, r0
  3033 0022 1204     		lsls	r2, r2, #16
  3034 0024 120C     		lsrs	r2, r2, #16
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 129
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 129
 
 
  3035              	.LVL306:
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3086              		.size	iloTrimTrig.4931, 1
  3087              	iloTrimTrig.4931:
  3088 0000 00       		.space	1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 130
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 130
 
 
  3089 0001 000000   		.space	3
@@ -7785,42 +7785,42 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3128 000b 01       		.uleb128 0x1
  3129 000c CA000000 		.4byte	.LASF123
  3130 0010 0C       		.byte	0xc
- 3131 0011 6C070000 		.4byte	.LASF124
- 3132 0015 7F040000 		.4byte	.LASF125
+ 3131 0011 88070000 		.4byte	.LASF124
+ 3132 0015 DF060000 		.4byte	.LASF125
  3133 0019 00000000 		.4byte	.Ldebug_ranges0+0
  3134 001d 00000000 		.4byte	0
  3135 0021 00000000 		.4byte	.Ldebug_line0
  3136 0025 02       		.uleb128 0x2
  3137 0026 04       		.byte	0x4
  3138 0027 07       		.byte	0x7
- 3139 0028 84030000 		.4byte	.LASF0
+ 3139 0028 85030000 		.4byte	.LASF0
  3140 002c 02       		.uleb128 0x2
  3141 002d 01       		.byte	0x1
  3142 002e 06       		.byte	0x6
  3143 002f F0010000 		.4byte	.LASF1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 131
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 131
 
 
  3144 0033 02       		.uleb128 0x2
  3145 0034 01       		.byte	0x1
  3146 0035 08       		.byte	0x8
- 3147 0036 A4060000 		.4byte	.LASF2
+ 3147 0036 55060000 		.4byte	.LASF2
  3148 003a 02       		.uleb128 0x2
  3149 003b 02       		.byte	0x2
  3150 003c 05       		.byte	0x5
- 3151 003d EE060000 		.4byte	.LASF3
+ 3151 003d 9F060000 		.4byte	.LASF3
  3152 0041 02       		.uleb128 0x2
  3153 0042 02       		.byte	0x2
  3154 0043 07       		.byte	0x7
- 3155 0044 36040000 		.4byte	.LASF4
+ 3155 0044 37040000 		.4byte	.LASF4
  3156 0048 02       		.uleb128 0x2
  3157 0049 04       		.byte	0x4
  3158 004a 05       		.byte	0x5
- 3159 004b 61020000 		.4byte	.LASF5
+ 3159 004b 62020000 		.4byte	.LASF5
  3160 004f 02       		.uleb128 0x2
  3161 0050 04       		.byte	0x4
  3162 0051 07       		.byte	0x7
- 3163 0052 CC030000 		.4byte	.LASF6
+ 3163 0052 CD030000 		.4byte	.LASF6
  3164 0056 02       		.uleb128 0x2
  3165 0057 08       		.byte	0x8
  3166 0058 05       		.byte	0x5
@@ -7834,7 +7834,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3174 0066 05       		.byte	0x5
  3175 0067 696E7400 		.ascii	"int\000"
  3176 006b 04       		.uleb128 0x4
- 3177 006c 7C020000 		.4byte	.LASF9
+ 3177 006c 7D020000 		.4byte	.LASF9
  3178 0070 03       		.byte	0x3
  3179 0071 E401     		.2byte	0x1e4
  3180 0073 33000000 		.4byte	0x33
@@ -7844,39 +7844,39 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3184 007d E501     		.2byte	0x1e5
  3185 007f 41000000 		.4byte	0x41
  3186 0083 04       		.uleb128 0x4
- 3187 0084 D4020000 		.4byte	.LASF11
+ 3187 0084 D5020000 		.4byte	.LASF11
  3188 0088 03       		.byte	0x3
  3189 0089 E601     		.2byte	0x1e6
  3190 008b 4F000000 		.4byte	0x4f
  3191 008f 04       		.uleb128 0x4
- 3192 0090 1F020000 		.4byte	.LASF12
+ 3192 0090 20020000 		.4byte	.LASF12
  3193 0094 03       		.byte	0x3
  3194 0095 E901     		.2byte	0x1e9
  3195 0097 48000000 		.4byte	0x48
  3196 009b 02       		.uleb128 0x2
  3197 009c 04       		.byte	0x4
  3198 009d 04       		.byte	0x4
- 3199 009e 5E060000 		.4byte	.LASF13
+ 3199 009e 0F060000 		.4byte	.LASF13
  3200 00a2 02       		.uleb128 0x2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 132
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 132
 
 
  3201 00a3 08       		.byte	0x8
  3202 00a4 04       		.byte	0x4
- 3203 00a5 89020000 		.4byte	.LASF14
+ 3203 00a5 8A020000 		.4byte	.LASF14
  3204 00a9 02       		.uleb128 0x2
  3205 00aa 01       		.byte	0x1
  3206 00ab 08       		.byte	0x8
- 3207 00ac E0070000 		.4byte	.LASF15
+ 3207 00ac FC070000 		.4byte	.LASF15
  3208 00b0 04       		.uleb128 0x4
- 3209 00b1 E0080000 		.4byte	.LASF16
+ 3209 00b1 EF080000 		.4byte	.LASF16
  3210 00b5 03       		.byte	0x3
  3211 00b6 8602     		.2byte	0x286
  3212 00b8 4F000000 		.4byte	0x4f
  3213 00bc 05       		.uleb128 0x5
  3214 00bd 77000000 		.4byte	0x77
  3215 00c1 04       		.uleb128 0x4
- 3216 00c2 3C050000 		.4byte	.LASF17
+ 3216 00c2 ED040000 		.4byte	.LASF17
  3217 00c6 03       		.byte	0x3
  3218 00c7 9002     		.2byte	0x290
  3219 00c9 CD000000 		.4byte	0xcd
@@ -7893,32 +7893,32 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3230 00e0 1A       		.byte	0x1a
  3231 00e1 F2000000 		.4byte	0xf2
  3232 00e5 09       		.uleb128 0x9
- 3233 00e6 F1050000 		.4byte	.LASF18
+ 3233 00e6 A2050000 		.4byte	.LASF18
  3234 00ea 00       		.byte	0
  3235 00eb 09       		.uleb128 0x9
- 3236 00ec 20090000 		.4byte	.LASF19
+ 3236 00ec 2F090000 		.4byte	.LASF19
  3237 00f0 01       		.byte	0x1
  3238 00f1 00       		.byte	0
  3239 00f2 0A       		.uleb128 0xa
- 3240 00f3 40020000 		.4byte	.LASF20
+ 3240 00f3 41020000 		.4byte	.LASF20
  3241 00f7 02       		.byte	0x2
  3242 00f8 1D       		.byte	0x1d
  3243 00f9 D9000000 		.4byte	0xd9
  3244 00fd 0A       		.uleb128 0xa
- 3245 00fe 11020000 		.4byte	.LASF21
+ 3245 00fe 12020000 		.4byte	.LASF21
  3246 0102 02       		.byte	0x2
  3247 0103 58       		.byte	0x58
  3248 0104 D2000000 		.4byte	0xd2
  3249 0108 02       		.uleb128 0x2
  3250 0109 08       		.byte	0x8
  3251 010a 04       		.byte	0x4
- 3252 010b B0050000 		.4byte	.LASF22
+ 3252 010b 61050000 		.4byte	.LASF22
  3253 010f 02       		.uleb128 0x2
  3254 0110 04       		.byte	0x4
  3255 0111 07       		.byte	0x7
- 3256 0112 A7050000 		.4byte	.LASF23
+ 3256 0112 58050000 		.4byte	.LASF23
  3257 0116 0B       		.uleb128 0xb
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 133
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 133
 
 
  3258 0117 C6010000 		.4byte	.LASF126
@@ -7926,7 +7926,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3260 011c 9202     		.2byte	0x292
  3261 011e 03       		.byte	0x3
  3262 011f 0C       		.uleb128 0xc
- 3263 0120 3E070000 		.4byte	.LASF24
+ 3263 0120 5A070000 		.4byte	.LASF24
  3264 0124 01       		.byte	0x1
  3265 0125 7201     		.2byte	0x172
  3266 0127 83000000 		.4byte	0x83
@@ -7953,7 +7953,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3287 015c 50       		.byte	0x50
  3288 015d 00       		.byte	0
  3289 015e 0C       		.uleb128 0xc
- 3290 015f 8E060000 		.4byte	.LASF25
+ 3290 015f 3F060000 		.4byte	.LASF25
  3291 0163 01       		.byte	0x1
  3292 0164 C903     		.2byte	0x3c9
  3293 0166 83000000 		.4byte	0x83
@@ -7962,7 +7962,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3296 0172 01       		.uleb128 0x1
  3297 0173 9C       		.byte	0x9c
  3298 0174 0F       		.uleb128 0xf
- 3299 0175 F4040000 		.4byte	.LASF28
+ 3299 0175 A5040000 		.4byte	.LASF28
  3300 0179 01       		.byte	0x1
  3301 017a 53       		.byte	0x53
  3302 017b 00000000 		.4byte	.LFB1
@@ -7970,7 +7970,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3304 0183 01       		.uleb128 0x1
  3305 0184 9C       		.byte	0x9c
  3306 0185 10       		.uleb128 0x10
- 3307 0186 12070000 		.4byte	.LASF51
+ 3307 0186 C3060000 		.4byte	.LASF51
  3308 018a 01       		.byte	0x1
  3309 018b A8       		.byte	0xa8
  3310 018c 00000000 		.4byte	.LFB3
@@ -7978,11 +7978,11 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3312 0194 01       		.uleb128 0x1
  3313 0195 9C       		.byte	0x9c
  3314 0196 AC010000 		.4byte	0x1ac
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 134
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 134
 
 
  3315 019a 11       		.uleb128 0x11
- 3316 019b 05020000 		.4byte	.LASF27
+ 3316 019b 80040000 		.4byte	.LASF27
  3317 019f 01       		.byte	0x1
  3318 01a0 AB       		.byte	0xab
  3319 01a1 6B000000 		.4byte	0x6b
@@ -7991,7 +7991,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3322 01a7 00000000 		.4byte	iloTrimTrig.4931
  3323 01ab 00       		.byte	0
  3324 01ac 0F       		.uleb128 0xf
- 3325 01ad DB020000 		.4byte	.LASF29
+ 3325 01ad DC020000 		.4byte	.LASF29
  3326 01b1 01       		.byte	0x1
  3327 01b2 C9       		.byte	0xc9
  3328 01b3 00000000 		.4byte	.LFB4
@@ -7999,7 +7999,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3330 01bb 01       		.uleb128 0x1
  3331 01bc 9C       		.byte	0x9c
  3332 01bd 12       		.uleb128 0x12
- 3333 01be 0A090000 		.4byte	.LASF37
+ 3333 01be 19090000 		.4byte	.LASF37
  3334 01c2 01       		.byte	0x1
  3335 01c3 0B01     		.2byte	0x10b
  3336 01c5 B0000000 		.4byte	0xb0
@@ -8009,48 +8009,48 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3340 01d2 9C       		.byte	0x9c
  3341 01d3 4A020000 		.4byte	0x24a
  3342 01d7 13       		.uleb128 0x13
- 3343 01d8 BF030000 		.4byte	.LASF30
+ 3343 01d8 C0030000 		.4byte	.LASF30
  3344 01dc 01       		.byte	0x1
  3345 01dd 0B01     		.2byte	0x10b
  3346 01df 83000000 		.4byte	0x83
  3347 01e3 00000000 		.4byte	.LLST0
  3348 01e7 13       		.uleb128 0x13
- 3349 01e8 90020000 		.4byte	.LASF31
+ 3349 01e8 91020000 		.4byte	.LASF31
  3350 01ec 01       		.byte	0x1
  3351 01ed 0B01     		.2byte	0x10b
  3352 01ef 4A020000 		.4byte	0x24a
  3353 01f3 F5000000 		.4byte	.LLST1
  3354 01f7 14       		.uleb128 0x14
- 3355 01f8 B2020000 		.4byte	.LASF32
+ 3355 01f8 B3020000 		.4byte	.LASF32
  3356 01fc 01       		.byte	0x1
  3357 01fd 0D01     		.2byte	0x10d
  3358 01ff 83000000 		.4byte	0x83
  3359 0203 4D010000 		.4byte	.LLST2
  3360 0207 14       		.uleb128 0x14
- 3361 0208 76080000 		.4byte	.LASF33
+ 3361 0208 85080000 		.4byte	.LASF33
  3362 020c 01       		.byte	0x1
  3363 020d 0E01     		.2byte	0x10e
  3364 020f 83000000 		.4byte	0x83
  3365 0213 77010000 		.4byte	.LLST3
  3366 0217 0E       		.uleb128 0xe
- 3367 0218 B2060000 		.4byte	.LASF34
+ 3367 0218 63060000 		.4byte	.LASF34
  3368 021c 01       		.byte	0x1
  3369 021d 0F01     		.2byte	0x10f
  3370 021f 83000000 		.4byte	0x83
  3371 0223 05       		.uleb128 0x5
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 135
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 135
 
 
  3372 0224 03       		.byte	0x3
  3373 0225 04000000 		.4byte	compensateRunningStatus.4941
  3374 0229 14       		.uleb128 0x14
- 3375 022a 03060000 		.4byte	.LASF35
+ 3375 022a B4050000 		.4byte	.LASF35
  3376 022e 01       		.byte	0x1
  3377 022f 1001     		.2byte	0x110
  3378 0231 83000000 		.4byte	0x83
  3379 0235 BF010000 		.4byte	.LLST4
  3380 0239 14       		.uleb128 0x14
- 3381 023a 79050000 		.4byte	.LASF36
+ 3381 023a 2A050000 		.4byte	.LASF36
  3382 023e 01       		.byte	0x1
  3383 023f 1101     		.2byte	0x111
  3384 0241 B0000000 		.4byte	0xb0
@@ -8060,7 +8060,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3388 024b 04       		.byte	0x4
  3389 024c 83000000 		.4byte	0x83
  3390 0250 12       		.uleb128 0x12
- 3391 0251 DB040000 		.4byte	.LASF38
+ 3391 0251 8C040000 		.4byte	.LASF38
  3392 0255 01       		.byte	0x1
  3393 0256 3B02     		.2byte	0x23b
  3394 0258 B0000000 		.4byte	0xb0
@@ -8070,7 +8070,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3398 0265 9C       		.byte	0x9c
  3399 0266 CB020000 		.4byte	0x2cb
  3400 026a 13       		.uleb128 0x13
- 3401 026b 8D070000 		.4byte	.LASF39
+ 3401 026b A9070000 		.4byte	.LASF39
  3402 026f 01       		.byte	0x1
  3403 0270 3B02     		.2byte	0x23b
  3404 0272 CB020000 		.4byte	0x2cb
@@ -8088,17 +8088,17 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3416 0292 83000000 		.4byte	0x83
  3417 0296 6C020000 		.4byte	.LLST8
  3418 029a 14       		.uleb128 0x14
- 3419 029b 2F020000 		.4byte	.LASF42
+ 3419 029b 30020000 		.4byte	.LASF42
  3420 029f 01       		.byte	0x1
  3421 02a0 3F02     		.2byte	0x23f
  3422 02a2 8F000000 		.4byte	0x8f
  3423 02a6 7F020000 		.4byte	.LLST9
  3424 02aa 14       		.uleb128 0x14
- 3425 02ab 2D040000 		.4byte	.LASF43
+ 3425 02ab 2E040000 		.4byte	.LASF43
  3426 02af 01       		.byte	0x1
  3427 02b0 4002     		.2byte	0x240
  3428 02b2 8F000000 		.4byte	0x8f
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 136
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 136
 
 
  3429 02b6 B4020000 		.4byte	.LLST10
@@ -8113,7 +8113,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3438 02cc 04       		.byte	0x4
  3439 02cd 8F000000 		.4byte	0x8f
  3440 02d1 15       		.uleb128 0x15
- 3441 02d2 2E070000 		.4byte	.LASF45
+ 3441 02d2 4A070000 		.4byte	.LASF45
  3442 02d6 01       		.byte	0x1
  3443 02d7 C101     		.2byte	0x1c1
  3444 02d9 B0000000 		.4byte	0xb0
@@ -8123,31 +8123,31 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3448 02e6 9C       		.byte	0x9c
  3449 02e7 82030000 		.4byte	0x382
  3450 02eb 13       		.uleb128 0x13
- 3451 02ec E5070000 		.4byte	.LASF46
+ 3451 02ec 01080000 		.4byte	.LASF46
  3452 02f0 01       		.byte	0x1
  3453 02f1 C101     		.2byte	0x1c1
  3454 02f3 83000000 		.4byte	0x83
  3455 02f7 FD020000 		.4byte	.LLST12
  3456 02fb 13       		.uleb128 0x13
- 3457 02fc 8D070000 		.4byte	.LASF39
+ 3457 02fc A9070000 		.4byte	.LASF39
  3458 0300 01       		.byte	0x1
  3459 0301 C101     		.2byte	0x1c1
  3460 0303 CB020000 		.4byte	0x2cb
  3461 0307 B4030000 		.4byte	.LLST13
  3462 030b 14       		.uleb128 0x14
- 3463 030c 46080000 		.4byte	.LASF47
+ 3463 030c 55080000 		.4byte	.LASF47
  3464 0310 01       		.byte	0x1
  3465 0311 C301     		.2byte	0x1c3
  3466 0313 83000000 		.4byte	0x83
  3467 0317 22040000 		.4byte	.LLST14
  3468 031b 14       		.uleb128 0x14
- 3469 031c 33060000 		.4byte	.LASF48
+ 3469 031c E4050000 		.4byte	.LASF48
  3470 0320 01       		.byte	0x1
  3471 0321 C401     		.2byte	0x1c4
  3472 0323 83000000 		.4byte	0x83
  3473 0327 64040000 		.4byte	.LLST15
  3474 032b 0E       		.uleb128 0xe
- 3475 032c 54080000 		.4byte	.LASF49
+ 3475 032c 63080000 		.4byte	.LASF49
  3476 0330 01       		.byte	0x1
  3477 0331 C501     		.2byte	0x1c5
  3478 0333 83000000 		.4byte	0x83
@@ -8155,16 +8155,16 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3480 0338 03       		.byte	0x3
  3481 0339 08000000 		.4byte	trimRunningStatus.4953
  3482 033d 14       		.uleb128 0x14
- 3483 033e 03060000 		.4byte	.LASF35
+ 3483 033e B4050000 		.4byte	.LASF35
  3484 0342 01       		.byte	0x1
  3485 0343 C601     		.2byte	0x1c6
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 137
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 137
 
 
  3486 0345 83000000 		.4byte	0x83
  3487 0349 82040000 		.4byte	.LLST16
  3488 034d 14       		.uleb128 0x14
- 3489 034e 79050000 		.4byte	.LASF36
+ 3489 034e 2A050000 		.4byte	.LASF36
  3490 0352 01       		.byte	0x1
  3491 0353 C701     		.2byte	0x1c7
  3492 0355 B0000000 		.4byte	0xb0
@@ -8192,7 +8192,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3514 0380 00       		.byte	0
  3515 0381 00       		.byte	0
  3516 0382 15       		.uleb128 0x15
- 3517 0383 D3050000 		.4byte	.LASF50
+ 3517 0383 84050000 		.4byte	.LASF50
  3518 0387 01       		.byte	0x1
  3519 0388 8802     		.2byte	0x288
  3520 038a B0000000 		.4byte	0xb0
@@ -8202,14 +8202,14 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3524 0397 9C       		.byte	0x9c
  3525 0398 AD030000 		.4byte	0x3ad
  3526 039c 14       		.uleb128 0x14
- 3527 039d 79050000 		.4byte	.LASF36
+ 3527 039d 2A050000 		.4byte	.LASF36
  3528 03a1 01       		.byte	0x1
  3529 03a2 8A02     		.2byte	0x28a
  3530 03a4 B0000000 		.4byte	0xb0
  3531 03a8 D6040000 		.4byte	.LLST18
  3532 03ac 00       		.byte	0
  3533 03ad 19       		.uleb128 0x19
- 3534 03ae 8B080000 		.4byte	.LASF52
+ 3534 03ae 9A080000 		.4byte	.LASF52
  3535 03b2 01       		.byte	0x1
  3536 03b3 0303     		.2byte	0x303
  3537 03b5 00000000 		.4byte	.LFB12
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3540 03be 9C       		.byte	0x9c
  3541 03bf D4030000 		.4byte	0x3d4
  3542 03c3 1A       		.uleb128 0x1a
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 138
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 138
 
 
  3543 03c4 16010000 		.4byte	0x116
@@ -8237,7 +8237,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3556 03e8 01       		.uleb128 0x1
  3557 03e9 9C       		.byte	0x9c
  3558 03ea 15       		.uleb128 0x15
- 3559 03eb AE070000 		.4byte	.LASF53
+ 3559 03eb CA070000 		.4byte	.LASF53
  3560 03ef 01       		.byte	0x1
  3561 03f0 5303     		.2byte	0x353
  3562 03f2 83000000 		.4byte	0x83
@@ -8247,13 +8247,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3566 03ff 9C       		.byte	0x9c
  3567 0400 44040000 		.4byte	0x444
  3568 0404 13       		.uleb128 0x13
- 3569 0405 E5070000 		.4byte	.LASF46
+ 3569 0405 01080000 		.4byte	.LASF46
  3570 0409 01       		.byte	0x1
  3571 040a 5303     		.2byte	0x353
  3572 040c 83000000 		.4byte	0x83
  3573 0410 F5040000 		.4byte	.LLST19
  3574 0414 14       		.uleb128 0x14
- 3575 0415 1A050000 		.4byte	.LASF54
+ 3575 0415 CB040000 		.4byte	.LASF54
  3576 0419 01       		.byte	0x1
  3577 041a 5503     		.2byte	0x355
  3578 041c 83000000 		.4byte	0x83
@@ -8275,10 +8275,10 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3594 0442 00       		.byte	0
  3595 0443 00       		.byte	0
  3596 0444 19       		.uleb128 0x19
- 3597 0445 8D050000 		.4byte	.LASF55
+ 3597 0445 3E050000 		.4byte	.LASF55
  3598 0449 01       		.byte	0x1
  3599 044a 9603     		.2byte	0x396
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 139
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 139
 
 
  3600 044c 00000000 		.4byte	.LFB16
@@ -8287,7 +8287,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3603 0455 9C       		.byte	0x9c
  3604 0456 83040000 		.4byte	0x483
  3605 045a 13       		.uleb128 0x13
- 3606 045b 73020000 		.4byte	.LASF56
+ 3606 045b 74020000 		.4byte	.LASF56
  3607 045f 01       		.byte	0x1
  3608 0460 9603     		.2byte	0x396
  3609 0462 83000000 		.4byte	0x83
@@ -8306,7 +8306,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3622 0481 00       		.byte	0
  3623 0482 00       		.byte	0
  3624 0483 19       		.uleb128 0x19
- 3625 0484 FB070000 		.4byte	.LASF57
+ 3625 0484 05020000 		.4byte	.LASF57
  3626 0488 01       		.byte	0x1
  3627 0489 B403     		.2byte	0x3b4
  3628 048b 00000000 		.4byte	.LFB17
@@ -8315,7 +8315,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3631 0494 9C       		.byte	0x9c
  3632 0495 BC040000 		.4byte	0x4bc
  3633 0499 14       		.uleb128 0x14
- 3634 049a DE030000 		.4byte	.LASF58
+ 3634 049a DF030000 		.4byte	.LASF58
  3635 049e 01       		.byte	0x1
  3636 049f B603     		.2byte	0x3b6
  3637 04a1 6B000000 		.4byte	0x6b
@@ -8337,8 +8337,8 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3653 04cd 9C       		.byte	0x9c
  3654 04ce F5040000 		.4byte	0x4f5
  3655 04d2 14       		.uleb128 0x14
- 3656 04d3 DE030000 		.4byte	.LASF58
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 140
+ 3656 04d3 DF030000 		.4byte	.LASF58
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 140
 
 
  3657 04d7 01       		.byte	0x1
@@ -8353,7 +8353,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3666 04f0 41100000 		.4byte	0x1041
  3667 04f4 00       		.byte	0
  3668 04f5 15       		.uleb128 0x15
- 3669 04f6 49040000 		.4byte	.LASF60
+ 3669 04f6 4A040000 		.4byte	.LASF60
  3670 04fa 01       		.byte	0x1
  3671 04fb F903     		.2byte	0x3f9
  3672 04fd 83000000 		.4byte	0x83
@@ -8394,16 +8394,16 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3707 054d 83000000 		.4byte	0x83
  3708 0551 0A060000 		.4byte	.LLST25
  3709 0555 13       		.uleb128 0x13
- 3710 0556 E5070000 		.4byte	.LASF46
+ 3710 0556 01080000 		.4byte	.LASF46
  3711 055a 01       		.byte	0x1
  3712 055b 1704     		.2byte	0x417
  3713 055d 83000000 		.4byte	0x83
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 141
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 141
 
 
  3714 0561 36060000 		.4byte	.LLST26
  3715 0565 14       		.uleb128 0x14
- 3716 0566 A9080000 		.4byte	.LASF63
+ 3716 0566 B8080000 		.4byte	.LASF63
  3717 056a 01       		.byte	0x1
  3718 056b 1904     		.2byte	0x419
  3719 056d 83000000 		.4byte	0x83
@@ -8430,7 +8430,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3740 0597 00       		.byte	0
  3741 0598 00       		.byte	0
  3742 0599 1D       		.uleb128 0x1d
- 3743 059a F8030000 		.4byte	.LASF84
+ 3743 059a F9030000 		.4byte	.LASF84
  3744 059e 01       		.byte	0x1
  3745 059f 6607     		.2byte	0x766
  3746 05a1 00000000 		.4byte	.LFB44
@@ -8449,7 +8449,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3759 05bd 00       		.byte	0
  3760 05be 00       		.byte	0
  3761 05bf 15       		.uleb128 0x15
- 3762 05c0 66080000 		.4byte	.LASF64
+ 3762 05c0 75080000 		.4byte	.LASF64
  3763 05c4 01       		.byte	0x1
  3764 05c5 3304     		.2byte	0x433
  3765 05c7 83000000 		.4byte	0x83
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3768 05d3 01       		.uleb128 0x1
  3769 05d4 9C       		.byte	0x9c
  3770 05d5 EA050000 		.4byte	0x5ea
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 142
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 142
 
 
  3771 05d9 13       		.uleb128 0x13
@@ -8469,7 +8469,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3776 05e5 80060000 		.4byte	.LLST28
  3777 05e9 00       		.byte	0
  3778 05ea 19       		.uleb128 0x19
- 3779 05eb 1B080000 		.4byte	.LASF65
+ 3779 05eb 2A080000 		.4byte	.LASF65
  3780 05ef 01       		.byte	0x1
  3781 05f0 5004     		.2byte	0x450
  3782 05f2 00000000 		.4byte	.LFB23
@@ -8484,13 +8484,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3791 0608 83000000 		.4byte	0x83
  3792 060c AC060000 		.4byte	.LLST29
  3793 0610 13       		.uleb128 0x13
- 3794 0611 82020000 		.4byte	.LASF66
+ 3794 0611 83020000 		.4byte	.LASF66
  3795 0615 01       		.byte	0x1
  3796 0616 5004     		.2byte	0x450
  3797 0618 83000000 		.4byte	0x83
  3798 061c D8060000 		.4byte	.LLST30
  3799 0620 14       		.uleb128 0x14
- 3800 0621 A9080000 		.4byte	.LASF63
+ 3800 0621 B8080000 		.4byte	.LASF63
  3801 0625 01       		.byte	0x1
  3802 0626 5204     		.2byte	0x452
  3803 0628 83000000 		.4byte	0x83
@@ -8517,8 +8517,8 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3824 0652 00       		.byte	0
  3825 0653 00       		.byte	0
  3826 0654 15       		.uleb128 0x15
- 3827 0655 6C030000 		.4byte	.LASF67
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 143
+ 3827 0655 6D030000 		.4byte	.LASF67
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 143
 
 
  3828 0659 01       		.byte	0x1
@@ -8546,7 +8546,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3850 068c 00       		.byte	0
  3851 068d 00       		.byte	0
  3852 068e 19       		.uleb128 0x19
- 3853 068f 34030000 		.4byte	.LASF68
+ 3853 068f 35030000 		.4byte	.LASF68
  3854 0693 01       		.byte	0x1
  3855 0694 9A04     		.2byte	0x49a
  3856 0696 00000000 		.4byte	.LFB25
@@ -8555,7 +8555,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3859 069f 9C       		.byte	0x9c
  3860 06a0 EA060000 		.4byte	0x6ea
  3861 06a4 13       		.uleb128 0x13
- 3862 06a5 60030000 		.4byte	.LASF69
+ 3862 06a5 61030000 		.4byte	.LASF69
  3863 06a9 01       		.byte	0x1
  3864 06aa 9A04     		.2byte	0x49a
  3865 06ac 83000000 		.4byte	0x83
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3882 06d5 01       		.uleb128 0x1
  3883 06d6 50       		.byte	0x50
  3884 06d7 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 144
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 144
 
 
  3885 06d8 31       		.byte	0x31
@@ -8594,7 +8594,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3895 06e8 00       		.byte	0
  3896 06e9 00       		.byte	0
  3897 06ea 19       		.uleb128 0x19
- 3898 06eb 02070000 		.4byte	.LASF70
+ 3898 06eb B3060000 		.4byte	.LASF70
  3899 06ef 01       		.byte	0x1
  3900 06f0 CA04     		.2byte	0x4ca
  3901 06f2 00000000 		.4byte	.LFB26
@@ -8603,7 +8603,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3904 06fb 9C       		.byte	0x9c
  3905 06fc 4F070000 		.4byte	0x74f
  3906 0700 13       		.uleb128 0x13
- 3907 0701 60030000 		.4byte	.LASF69
+ 3907 0701 61030000 		.4byte	.LASF69
  3908 0705 01       		.byte	0x1
  3909 0706 CA04     		.2byte	0x4ca
  3910 0708 83000000 		.4byte	0x83
@@ -8638,14 +8638,14 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3939 0749 01       		.uleb128 0x1
  3940 074a 50       		.byte	0x50
  3941 074b 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 145
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 145
 
 
  3942 074c 32       		.byte	0x32
  3943 074d 00       		.byte	0
  3944 074e 00       		.byte	0
  3945 074f 19       		.uleb128 0x19
- 3946 0750 33080000 		.4byte	.LASF71
+ 3946 0750 42080000 		.4byte	.LASF71
  3947 0754 01       		.byte	0x1
  3948 0755 0505     		.2byte	0x505
  3949 0757 00000000 		.4byte	.LFB27
@@ -8654,19 +8654,19 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3952 0760 9C       		.byte	0x9c
  3953 0761 C9070000 		.4byte	0x7c9
  3954 0765 13       		.uleb128 0x13
- 3955 0766 D4080000 		.4byte	.LASF72
+ 3955 0766 E3080000 		.4byte	.LASF72
  3956 076a 01       		.byte	0x1
  3957 076b 0505     		.2byte	0x505
  3958 076d 83000000 		.4byte	0x83
  3959 0771 A6070000 		.4byte	.LLST35
  3960 0775 14       		.uleb128 0x14
- 3961 0776 A9080000 		.4byte	.LASF63
+ 3961 0776 B8080000 		.4byte	.LASF63
  3962 077a 01       		.byte	0x1
  3963 077b 0705     		.2byte	0x507
  3964 077d 83000000 		.4byte	0x83
  3965 0781 D2070000 		.4byte	.LLST36
  3966 0785 0E       		.uleb128 0xe
- 3967 0786 14030000 		.4byte	.LASF73
+ 3967 0786 15030000 		.4byte	.LASF73
  3968 078a 01       		.byte	0x1
  3969 078b 0805     		.2byte	0x508
  3970 078d 83000000 		.4byte	0x83
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  3996 07c2 17       		.uleb128 0x17
  3997 07c3 01       		.uleb128 0x1
  3998 07c4 50       		.byte	0x50
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 146
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 146
 
 
  3999 07c5 01       		.uleb128 0x1
@@ -8715,7 +8715,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4010 07dd 01       		.uleb128 0x1
  4011 07de 9C       		.byte	0x9c
  4012 07df 19       		.uleb128 0x19
- 4013 07e0 03030000 		.4byte	.LASF76
+ 4013 07e0 04030000 		.4byte	.LASF76
  4014 07e4 01       		.byte	0x1
  4015 07e5 3805     		.2byte	0x538
  4016 07e7 00000000 		.4byte	.LFB29
@@ -8730,13 +8730,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4025 07fd 83000000 		.4byte	0x83
  4026 0801 FB070000 		.4byte	.LLST37
  4027 0805 13       		.uleb128 0x13
- 4028 0806 CD050000 		.4byte	.LASF77
+ 4028 0806 7E050000 		.4byte	.LASF77
  4029 080a 01       		.byte	0x1
  4030 080b 3805     		.2byte	0x538
  4031 080d 83000000 		.4byte	0x83
  4032 0811 27080000 		.4byte	.LLST38
  4033 0815 14       		.uleb128 0x14
- 4034 0816 6A020000 		.4byte	.LASF78
+ 4034 0816 6B020000 		.4byte	.LASF78
  4035 081a 01       		.byte	0x1
  4036 081b 3A05     		.2byte	0x53a
  4037 081d 83000000 		.4byte	0x83
@@ -8758,11 +8758,11 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4053 0842 46000000 		.4byte	.LVL170
  4054 0846 4C100000 		.4byte	0x104c
  4055 084a 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 147
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 147
 
 
  4056 084b 19       		.uleb128 0x19
- 4057 084c 05050000 		.4byte	.LASF79
+ 4057 084c B6040000 		.4byte	.LASF79
  4058 0850 01       		.byte	0x1
  4059 0851 5F05     		.2byte	0x55f
  4060 0853 00000000 		.4byte	.LFB30
@@ -8771,13 +8771,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4063 085c 9C       		.byte	0x9c
  4064 085d 91080000 		.4byte	0x891
  4065 0861 13       		.uleb128 0x13
- 4066 0862 5C020000 		.4byte	.LASF80
+ 4066 0862 5D020000 		.4byte	.LASF80
  4067 0866 01       		.byte	0x1
  4068 0867 5F05     		.2byte	0x55f
  4069 0869 83000000 		.4byte	0x83
  4070 086d 66080000 		.4byte	.LLST40
  4071 0871 14       		.uleb128 0x14
- 4072 0872 A9080000 		.4byte	.LASF63
+ 4072 0872 B8080000 		.4byte	.LASF63
  4073 0876 01       		.byte	0x1
  4074 0877 6105     		.2byte	0x561
  4075 0879 83000000 		.4byte	0x83
@@ -8793,7 +8793,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4085 088f 00       		.byte	0
  4086 0890 00       		.byte	0
  4087 0891 1B       		.uleb128 0x1b
- 4088 0892 F5080000 		.4byte	.LASF81
+ 4088 0892 04090000 		.4byte	.LASF81
  4089 0896 01       		.byte	0x1
  4090 0897 7605     		.2byte	0x576
  4091 0899 83000000 		.4byte	0x83
@@ -8802,7 +8802,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4094 08a5 01       		.uleb128 0x1
  4095 08a6 9C       		.byte	0x9c
  4096 08a7 15       		.uleb128 0x15
- 4097 08a8 BC050000 		.4byte	.LASF82
+ 4097 08a8 6D050000 		.4byte	.LASF82
  4098 08ac 01       		.byte	0x1
  4099 08ad 8805     		.2byte	0x588
  4100 08af 83000000 		.4byte	0x83
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4110 08c9 83000000 		.4byte	0x83
  4111 08cd BB080000 		.4byte	.LLST42
  4112 08d1 18       		.uleb128 0x18
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 148
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 148
 
 
  4113 08d2 0E000000 		.4byte	.LVL181
@@ -8831,7 +8831,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4120 08df 00       		.byte	0
  4121 08e0 00       		.byte	0
  4122 08e1 15       		.uleb128 0x15
- 4123 08e2 EA070000 		.4byte	.LASF83
+ 4123 08e2 06080000 		.4byte	.LASF83
  4124 08e6 01       		.byte	0x1
  4125 08e7 9E05     		.2byte	0x59e
  4126 08e9 83000000 		.4byte	0x83
@@ -8847,7 +8847,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4136 0903 83000000 		.4byte	0x83
  4137 0907 E7080000 		.4byte	.LLST43
  4138 090b 14       		.uleb128 0x14
- 4139 090c 6A020000 		.4byte	.LASF78
+ 4139 090c 6B020000 		.4byte	.LASF78
  4140 0910 01       		.byte	0x1
  4141 0911 A005     		.2byte	0x5a0
  4142 0913 83000000 		.4byte	0x83
@@ -8872,16 +8872,16 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4161 093c 9C       		.byte	0x9c
  4162 093d ED090000 		.4byte	0x9ed
  4163 0941 14       		.uleb128 0x14
- 4164 0942 A8030000 		.4byte	.LASF86
+ 4164 0942 A9030000 		.4byte	.LASF86
  4165 0946 01       		.byte	0x1
  4166 0947 3207     		.2byte	0x732
  4167 0949 83000000 		.4byte	0x83
  4168 094d B7090000 		.4byte	.LLST45
  4169 0951 0E       		.uleb128 0xe
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 149
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 149
 
 
- 4170 0952 CA060000 		.4byte	.LASF87
+ 4170 0952 7B060000 		.4byte	.LASF87
  4171 0956 01       		.byte	0x1
  4172 0957 3307     		.2byte	0x733
  4173 0959 83000000 		.4byte	0x83
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4224 09bf 01       		.uleb128 0x1
  4225 09c0 30       		.byte	0x30
  4226 09c1 17       		.uleb128 0x17
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 150
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 150
 
 
  4227 09c2 01       		.uleb128 0x1
@@ -8964,7 +8964,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4247 09e8 E1080000 		.4byte	0x8e1
  4248 09ec 00       		.byte	0
  4249 09ed 10       		.uleb128 0x10
- 4250 09ee A2020000 		.4byte	.LASF88
+ 4250 09ee A3020000 		.4byte	.LASF88
  4251 09f2 01       		.byte	0x1
  4252 09f3 6C       		.byte	0x6c
  4253 09f4 00000000 		.4byte	.LFB2
@@ -8973,7 +8973,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4256 09fd 9C       		.byte	0x9c
  4257 09fe 580A0000 		.4byte	0xa58
  4258 0a02 1E       		.uleb128 0x1e
- 4259 0a03 DE030000 		.4byte	.LASF58
+ 4259 0a03 DF030000 		.4byte	.LASF58
  4260 0a07 01       		.byte	0x1
  4261 0a08 6F       		.byte	0x6f
  4262 0a09 6B000000 		.4byte	0x6b
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4281 0a43 99050000 		.4byte	0x599
  4282 0a47 18       		.uleb128 0x18
  4283 0a48 38000000 		.4byte	.LVL213
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 151
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 151
 
 
  4284 0a4c 41100000 		.4byte	0x1041
@@ -9011,7 +9011,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4291 0a56 00       		.byte	0
  4292 0a57 00       		.byte	0
  4293 0a58 19       		.uleb128 0x19
- 4294 0a59 91030000 		.4byte	.LASF89
+ 4294 0a59 92030000 		.4byte	.LASF89
  4295 0a5d 01       		.byte	0x1
  4296 0a5e DE02     		.2byte	0x2de
  4297 0a60 00000000 		.4byte	.LFB11
@@ -9020,13 +9020,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4300 0a69 9C       		.byte	0x9c
  4301 0a6a C30A0000 		.4byte	0xac3
  4302 0a6e 13       		.uleb128 0x13
- 4303 0a6f 86050000 		.4byte	.LASF90
+ 4303 0a6f 37050000 		.4byte	.LASF90
  4304 0a73 01       		.byte	0x1
  4305 0a74 DE02     		.2byte	0x2de
  4306 0a76 83000000 		.4byte	0x83
  4307 0a7a DD090000 		.4byte	.LLST47
  4308 0a7e 14       		.uleb128 0x14
- 4309 0a7f DE030000 		.4byte	.LASF58
+ 4309 0a7f DF030000 		.4byte	.LASF58
  4310 0a83 01       		.byte	0x1
  4311 0a84 E002     		.2byte	0x2e0
  4312 0a86 6B000000 		.4byte	0x6b
@@ -9055,10 +9055,10 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4335 0ac1 00       		.byte	0
  4336 0ac2 00       		.byte	0
  4337 0ac3 19       		.uleb128 0x19
- 4338 0ac4 9E070000 		.4byte	.LASF91
+ 4338 0ac4 BA070000 		.4byte	.LASF91
  4339 0ac8 01       		.byte	0x1
  4340 0ac9 1503     		.2byte	0x315
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 152
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 152
 
 
  4341 0acb 00000000 		.4byte	.LFB13
@@ -9067,7 +9067,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4344 0ad4 9C       		.byte	0x9c
  4345 0ad5 270B0000 		.4byte	0xb27
  4346 0ad9 14       		.uleb128 0x14
- 4347 0ada DE030000 		.4byte	.LASF58
+ 4347 0ada DF030000 		.4byte	.LASF58
  4348 0ade 01       		.byte	0x1
  4349 0adf 1803     		.2byte	0x318
  4350 0ae1 6B000000 		.4byte	0x6b
@@ -9099,7 +9099,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4376 0b25 00       		.byte	0
  4377 0b26 00       		.byte	0
  4378 0b27 1B       		.uleb128 0x1b
- 4379 0b28 51070000 		.4byte	.LASF92
+ 4379 0b28 6D070000 		.4byte	.LASF92
  4380 0b2c 01       		.byte	0x1
  4381 0b2d C905     		.2byte	0x5c9
  4382 0b2f 83000000 		.4byte	0x83
@@ -9108,7 +9108,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4385 0b3b 01       		.uleb128 0x1
  4386 0b3c 9C       		.byte	0x9c
  4387 0b3d 19       		.uleb128 0x19
- 4388 0b3e 47060000 		.4byte	.LASF93
+ 4388 0b3e F8050000 		.4byte	.LASF93
  4389 0b42 01       		.byte	0x1
  4390 0b43 E605     		.2byte	0x5e6
  4391 0b45 00000000 		.4byte	.LFB35
@@ -9117,8 +9117,8 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4394 0b4e 9C       		.byte	0x9c
  4395 0b4f B80B0000 		.4byte	0xbb8
  4396 0b53 13       		.uleb128 0x13
- 4397 0b54 60030000 		.4byte	.LASF69
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 153
+ 4397 0b54 61030000 		.4byte	.LASF69
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 153
 
 
  4398 0b58 01       		.byte	0x1
@@ -9126,13 +9126,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4400 0b5b 83000000 		.4byte	0x83
  4401 0b5f 2F0A0000 		.4byte	.LLST50
  4402 0b63 14       		.uleb128 0x14
- 4403 0b64 DE030000 		.4byte	.LASF58
+ 4403 0b64 DF030000 		.4byte	.LASF58
  4404 0b68 01       		.byte	0x1
  4405 0b69 E805     		.2byte	0x5e8
  4406 0b6b 6B000000 		.4byte	0x6b
  4407 0b6f 6C0A0000 		.4byte	.LLST51
  4408 0b73 14       		.uleb128 0x14
- 4409 0b74 9C080000 		.4byte	.LASF94
+ 4409 0b74 AB080000 		.4byte	.LASF94
  4410 0b78 01       		.byte	0x1
  4411 0b79 E905     		.2byte	0x5e9
  4412 0b7b 83000000 		.4byte	0x83
@@ -9161,7 +9161,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4435 0bb6 00       		.byte	0
  4436 0bb7 00       		.byte	0
  4437 0bb8 19       		.uleb128 0x19
- 4438 0bb9 1D060000 		.4byte	.LASF95
+ 4438 0bb9 CE050000 		.4byte	.LASF95
  4439 0bbd 01       		.byte	0x1
  4440 0bbe 2006     		.2byte	0x620
  4441 0bc0 00000000 		.4byte	.LFB36
@@ -9170,15 +9170,15 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4444 0bc9 9C       		.byte	0x9c
  4445 0bca DF0B0000 		.4byte	0xbdf
  4446 0bce 13       		.uleb128 0x13
- 4447 0bcf C7020000 		.4byte	.LASF96
+ 4447 0bcf C8020000 		.4byte	.LASF96
  4448 0bd3 01       		.byte	0x1
  4449 0bd4 2006     		.2byte	0x620
  4450 0bd6 83000000 		.4byte	0x83
  4451 0bda 9E0A0000 		.4byte	.LLST53
  4452 0bde 00       		.byte	0
  4453 0bdf 15       		.uleb128 0x15
- 4454 0be0 43030000 		.4byte	.LASF97
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 154
+ 4454 0be0 44030000 		.4byte	.LASF97
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 154
 
 
  4455 0be4 01       		.byte	0x1
@@ -9202,7 +9202,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4473 0c11 FD000000 		.4byte	0xfd
  4474 0c15 F90A0000 		.4byte	.LLST55
  4475 0c19 14       		.uleb128 0x14
- 4476 0c1a F6020000 		.4byte	.LASF99
+ 4476 0c1a F7020000 		.4byte	.LASF99
  4477 0c1e 01       		.byte	0x1
  4478 0c1f 3C06     		.2byte	0x63c
  4479 0c21 FD000000 		.4byte	0xfd
@@ -9218,7 +9218,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4489 0c37 00       		.byte	0
  4490 0c38 00       		.byte	0
  4491 0c39 15       		.uleb128 0x15
- 4492 0c3a 62040000 		.4byte	.LASF100
+ 4492 0c3a 63040000 		.4byte	.LASF100
  4493 0c3e 01       		.byte	0x1
  4494 0c3f 5806     		.2byte	0x658
  4495 0c41 FD000000 		.4byte	0xfd
@@ -9234,11 +9234,11 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4505 0c5b 83000000 		.4byte	0x83
  4506 0c5f 500B0000 		.4byte	.LLST57
  4507 0c63 14       		.uleb128 0x14
- 4508 0c64 B3030000 		.4byte	.LASF101
+ 4508 0c64 B4030000 		.4byte	.LASF101
  4509 0c68 01       		.byte	0x1
  4510 0c69 5A06     		.2byte	0x65a
  4511 0c6b FD000000 		.4byte	0xfd
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 155
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 155
 
 
  4512 0c6f 8A0B0000 		.4byte	.LLST58
@@ -9253,7 +9253,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4521 0c81 00       		.byte	0
  4522 0c82 00       		.byte	0
  4523 0c83 19       		.uleb128 0x19
- 4524 0c84 14040000 		.4byte	.LASF102
+ 4524 0c84 15040000 		.4byte	.LASF102
  4525 0c88 01       		.byte	0x1
  4526 0c89 7506     		.2byte	0x675
  4527 0c8b 00000000 		.4byte	.LFB39
@@ -9278,7 +9278,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4546 0cb7 00       		.byte	0
  4547 0cb8 00       		.byte	0
  4548 0cb9 19       		.uleb128 0x19
- 4549 0cba C6070000 		.4byte	.LASF103
+ 4549 0cba E2070000 		.4byte	.LASF103
  4550 0cbe 01       		.byte	0x1
  4551 0cbf 8C06     		.2byte	0x68c
  4552 0cc1 00000000 		.4byte	.LFB40
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4566 0ce8 17       		.uleb128 0x17
  4567 0ce9 01       		.uleb128 0x1
  4568 0cea 50       		.byte	0x50
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 156
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 156
 
 
  4569 0ceb 01       		.uleb128 0x1
@@ -9306,7 +9306,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4571 0ced 00       		.byte	0
  4572 0cee 00       		.byte	0
  4573 0cef 1F       		.uleb128 0x1f
- 4574 0cf0 E9080000 		.4byte	.LASF104
+ 4574 0cf0 F8080000 		.4byte	.LASF104
  4575 0cf4 01       		.byte	0x1
  4576 0cf5 AD06     		.2byte	0x6ad
  4577 0cf7 00000000 		.4byte	.LFB41
@@ -9348,7 +9348,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4613 0d3d 00       		.byte	0
  4614 0d3e 00       		.byte	0
  4615 0d3f 19       		.uleb128 0x19
- 4616 0d40 2A050000 		.4byte	.LASF105
+ 4616 0d40 DB040000 		.4byte	.LASF105
  4617 0d44 01       		.byte	0x1
  4618 0d45 EE06     		.2byte	0x6ee
  4619 0d47 00000000 		.4byte	.LFB42
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4623 0d51 0B0E0000 		.4byte	0xe0b
  4624 0d55 13       		.uleb128 0x13
  4625 0d56 7B000000 		.4byte	.LASF61
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 157
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 157
 
 
  4626 0d5a 01       		.byte	0x1
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4680 0dcd 0004     		.2byte	0x400
  4681 0dcf 00       		.byte	0
  4682 0dd0 16       		.uleb128 0x16
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 158
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 158
 
 
  4683 0dd1 4A000000 		.4byte	.LVL287
@@ -9454,7 +9454,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4713 0e09 00       		.byte	0
  4714 0e0a 00       		.byte	0
  4715 0e0b 19       		.uleb128 0x19
- 4716 0e0c 64060000 		.4byte	.LASF106
+ 4716 0e0c 15060000 		.4byte	.LASF106
  4717 0e10 01       		.byte	0x1
  4718 0e11 580C     		.2byte	0xc58
  4719 0e13 00000000 		.4byte	.LFB46
@@ -9469,22 +9469,22 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4728 0e29 83000000 		.4byte	0x83
  4729 0e2d 760C0000 		.4byte	.LLST62
  4730 0e31 13       		.uleb128 0x13
- 4731 0e32 F8060000 		.4byte	.LASF107
+ 4731 0e32 A9060000 		.4byte	.LASF107
  4732 0e36 01       		.byte	0x1
  4733 0e37 580C     		.2byte	0xc58
  4734 0e39 F2000000 		.4byte	0xf2
  4735 0e3d A20C0000 		.4byte	.LLST63
  4736 0e41 13       		.uleb128 0x13
- 4737 0e42 CD050000 		.4byte	.LASF77
+ 4737 0e42 7E050000 		.4byte	.LASF77
  4738 0e46 01       		.byte	0x1
  4739 0e47 580C     		.2byte	0xc58
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 159
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 159
 
 
  4740 0e49 83000000 		.4byte	0x83
  4741 0e4d C30C0000 		.4byte	.LLST64
  4742 0e51 14       		.uleb128 0x14
- 4743 0e52 70050000 		.4byte	.LASF108
+ 4743 0e52 21050000 		.4byte	.LASF108
  4744 0e56 01       		.byte	0x1
  4745 0e57 5A0C     		.2byte	0xc5a
  4746 0e59 83000000 		.4byte	0x83
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4794 0eb3 02       		.uleb128 0x2
  4795 0eb4 75       		.byte	0x75
  4796 0eb5 00       		.sleb128 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 160
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 160
 
 
  4797 0eb6 00       		.byte	0
@@ -9553,7 +9553,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4806 0ec5 00       		.byte	0
  4807 0ec6 00       		.byte	0
  4808 0ec7 19       		.uleb128 0x19
- 4809 0ec8 7E060000 		.4byte	.LASF109
+ 4809 0ec8 2F060000 		.4byte	.LASF109
  4810 0ecc 01       		.byte	0x1
  4811 0ecd D70B     		.2byte	0xbd7
  4812 0ecf 00000000 		.4byte	.LFB45
@@ -9568,25 +9568,25 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4821 0ee5 83000000 		.4byte	0x83
  4822 0ee9 180D0000 		.4byte	.LLST66
  4823 0eed 13       		.uleb128 0x13
- 4824 0eee F8060000 		.4byte	.LASF107
+ 4824 0eee A9060000 		.4byte	.LASF107
  4825 0ef2 01       		.byte	0x1
  4826 0ef3 D70B     		.2byte	0xbd7
  4827 0ef5 F2000000 		.4byte	0xf2
  4828 0ef9 440D0000 		.4byte	.LLST67
  4829 0efd 13       		.uleb128 0x13
- 4830 0efe E8060000 		.4byte	.LASF110
+ 4830 0efe 99060000 		.4byte	.LASF110
  4831 0f02 01       		.byte	0x1
  4832 0f03 D70B     		.2byte	0xbd7
  4833 0f05 83000000 		.4byte	0x83
  4834 0f09 650D0000 		.4byte	.LLST68
  4835 0f0d 14       		.uleb128 0x14
- 4836 0f0e 6A020000 		.4byte	.LASF78
+ 4836 0f0e 6B020000 		.4byte	.LASF78
  4837 0f12 01       		.byte	0x1
  4838 0f13 D90B     		.2byte	0xbd9
  4839 0f15 83000000 		.4byte	0x83
  4840 0f19 910D0000 		.4byte	.LLST69
  4841 0f1d 14       		.uleb128 0x14
- 4842 0f1e ED030000 		.4byte	.LASF111
+ 4842 0f1e EE030000 		.4byte	.LASF111
  4843 0f22 01       		.byte	0x1
  4844 0f23 DA0B     		.2byte	0xbda
  4845 0f25 83000000 		.4byte	0x83
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4851 0f3a 17       		.uleb128 0x17
  4852 0f3b 01       		.uleb128 0x1
  4853 0f3c 50       		.byte	0x50
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 161
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 161
 
 
  4854 0f3d 02       		.uleb128 0x2
@@ -9644,7 +9644,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4894 0f7d 00       		.byte	0
  4895 0f7e 00       		.byte	0
  4896 0f7f 11       		.uleb128 0x11
- 4897 0f80 42050000 		.4byte	.LASF112
+ 4897 0f80 F3040000 		.4byte	.LASF112
  4898 0f84 01       		.byte	0x1
  4899 0f85 1D       		.byte	0x1d
  4900 0f86 BC000000 		.4byte	0xbc
@@ -9658,12 +9658,12 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4908 0f97 83000000 		.4byte	0x83
  4909 0f9b 05       		.uleb128 0x5
  4910 0f9c 03       		.byte	0x3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 162
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 162
 
 
  4911 0f9d 0C000000 		.4byte	lfclkPosedgeWdtCounter0Enabled
  4912 0fa1 11       		.uleb128 0x11
- 4913 0fa2 B8080000 		.4byte	.LASF114
+ 4913 0fa2 C7080000 		.4byte	.LASF114
  4914 0fa6 01       		.byte	0x1
  4915 0fa7 23       		.byte	0x23
  4916 0fa8 83000000 		.4byte	0x83
@@ -9671,7 +9671,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4918 0fad 03       		.byte	0x3
  4919 0fae 10000000 		.4byte	lfclkPosedgeWdtCounter0Mode
  4920 0fb2 11       		.uleb128 0x11
- 4921 0fb3 08080000 		.4byte	.LASF115
+ 4921 0fb3 17080000 		.4byte	.LASF115
  4922 0fb7 01       		.byte	0x1
  4923 0fb8 25       		.byte	0x25
  4924 0fb9 CD000000 		.4byte	0xcd
@@ -9679,7 +9679,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4926 0fbe 03       		.byte	0x3
  4927 0fbf 24000000 		.4byte	disableServicedIsr
  4928 0fc3 11       		.uleb128 0x11
- 4929 0fc4 29030000 		.4byte	.LASF116
+ 4929 0fc4 2A030000 		.4byte	.LASF116
  4930 0fc8 01       		.byte	0x1
  4931 0fc9 26       		.byte	0x26
  4932 0fca CD000000 		.4byte	0xcd
@@ -9718,24 +9718,24 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4965 1015 44       		.byte	0x44
  4966 1016 FF0F0000 		.4byte	0xfff
  4967 101a 05       		.uleb128 0x5
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 163
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 163
 
 
  4968 101b 03       		.byte	0x3
  4969 101c 18000000 		.4byte	cySysWdtCallback
  4970 1020 23       		.uleb128 0x23
- 4971 1021 0F060000 		.4byte	.LASF128
+ 4971 1021 C0050000 		.4byte	.LASF128
  4972 1025 04       		.byte	0x4
  4973 1026 D4       		.byte	0xd4
  4974 1027 83000000 		.4byte	0x83
  4975 102b 24       		.uleb128 0x24
- 4976 102c 9D060000 		.4byte	.LASF119
- 4977 1030 9D060000 		.4byte	.LASF119
+ 4976 102c 4E060000 		.4byte	.LASF119
+ 4977 1030 4E060000 		.4byte	.LASF119
  4978 1034 04       		.byte	0x4
  4979 1035 E7       		.byte	0xe7
  4980 1036 24       		.uleb128 0x24
- 4981 1037 59050000 		.4byte	.LASF120
- 4982 103b 59050000 		.4byte	.LASF120
+ 4981 1037 0A050000 		.4byte	.LASF120
+ 4982 103b 0A050000 		.4byte	.LASF120
  4983 103f 04       		.byte	0x4
  4984 1040 E5       		.byte	0xe5
  4985 1041 24       		.uleb128 0x24
@@ -9744,8 +9744,8 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  4988 104a 04       		.byte	0x4
  4989 104b E6       		.byte	0xe6
  4990 104c 24       		.uleb128 0x24
- 4991 104d 25020000 		.4byte	.LASF122
- 4992 1051 25020000 		.4byte	.LASF122
+ 4991 104d 26020000 		.4byte	.LASF122
+ 4992 1051 26020000 		.4byte	.LASF122
  4993 1055 04       		.byte	0x4
  4994 1056 DA       		.byte	0xda
  4995 1057 00       		.byte	0
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5022 0018 3E       		.uleb128 0x3e
  5023 0019 0B       		.uleb128 0xb
  5024 001a 03       		.uleb128 0x3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 164
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 164
 
 
  5025 001b 0E       		.uleb128 0xe
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5079 0051 0B       		.uleb128 0xb
  5080 0052 49       		.uleb128 0x49
  5081 0053 13       		.uleb128 0x13
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 165
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 165
 
 
  5082 0054 3A       		.uleb128 0x3a
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5136 008a 27       		.uleb128 0x27
  5137 008b 19       		.uleb128 0x19
  5138 008c 49       		.uleb128 0x49
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 166
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 166
 
 
  5139 008d 13       		.uleb128 0x13
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5193 00c5 3F       		.uleb128 0x3f
  5194 00c6 19       		.uleb128 0x19
  5195 00c7 03       		.uleb128 0x3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 167
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 167
 
 
  5196 00c8 0E       		.uleb128 0xe
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5250 0100 18       		.uleb128 0x18
  5251 0101 00       		.byte	0
  5252 0102 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 168
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 168
 
 
  5253 0103 12       		.uleb128 0x12
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5307 013a 17       		.uleb128 0x17
  5308 013b 00       		.byte	0
  5309 013c 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 169
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 169
 
 
  5310 013d 15       		.uleb128 0x15
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5364 017b 00       		.byte	0
  5365 017c 00       		.byte	0
  5366 017d 19       		.uleb128 0x19
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 170
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 170
 
 
  5367 017e 2E       		.uleb128 0x2e
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5421 01b5 11       		.uleb128 0x11
  5422 01b6 01       		.uleb128 0x1
  5423 01b7 12       		.uleb128 0x12
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 171
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 171
 
 
  5424 01b8 06       		.uleb128 0x6
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5478 01f2 1F       		.uleb128 0x1f
  5479 01f3 2E       		.uleb128 0x2e
  5480 01f4 01       		.byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 172
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 172
 
 
  5481 01f5 3F       		.uleb128 0x3f
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5535 022c 3B       		.uleb128 0x3b
  5536 022d 0B       		.uleb128 0xb
  5537 022e 49       		.uleb128 0x49
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 173
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 173
 
 
  5538 022f 13       		.uleb128 0x13
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5592 0044 50       		.byte	0x50
  5593 0045 B2000000 		.4byte	.LVL22
  5594 0049 B4000000 		.4byte	.LVL23
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 174
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 174
 
 
  5595 004d 0100     		.2byte	0x1
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5649 00df CE000000 		.4byte	.LVL36
  5650 00e3 04010000 		.4byte	.LFE5
  5651 00e7 0400     		.2byte	0x4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 175
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 175
 
 
  5652 00e9 F3       		.byte	0xf3
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5706 016f 00000000 		.4byte	0
  5707 0173 00000000 		.4byte	0
  5708              	.LLST3:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 176
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 176
 
 
  5709 0177 4C000000 		.4byte	.LVL4
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5763 01e8 9F       		.byte	0x9f
  5764 01e9 B0000000 		.4byte	.LVL21
  5765 01ed B4000000 		.4byte	.LVL23
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 177
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 177
 
 
  5766 01f1 0200     		.2byte	0x2
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5820 027b 00000000 		.4byte	0
  5821              	.LLST9:
  5822 027f 30000000 		.4byte	.LVL43
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 178
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 178
 
 
  5823 0283 42000000 		.4byte	.LVL44
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5877 0312 F3       		.byte	0xf3
  5878 0313 01       		.uleb128 0x1
  5879 0314 50       		.byte	0x50
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 179
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 179
 
 
  5880 0315 9F       		.byte	0x9f
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5934 0391 50       		.byte	0x50
  5935 0392 9F       		.byte	0x9f
  5936 0393 B8000000 		.4byte	.LVL85
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 180
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 180
 
 
  5937 0397 BA000000 		.4byte	.LVL86
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  5991              	.LLST14:
  5992 0422 04000000 		.4byte	.LVL63
  5993 0426 2E000000 		.4byte	.LVL67
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 181
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 181
 
 
  5994 042a 0200     		.2byte	0x2
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6048 04b6 50       		.byte	0x50
  6049 04b7 A0000000 		.4byte	.LVL76
  6050 04bb A4000000 		.4byte	.LVL78
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 182
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 182
 
 
  6051 04bf 0200     		.2byte	0x2
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6105 053f 3C000000 		.4byte	.LVL97
  6106 0543 4C000000 		.4byte	.LFE15
  6107 0547 0400     		.2byte	0x4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 183
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 183
 
 
  6108 0549 F3       		.byte	0xf3
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6162 05cb 06000000 		.4byte	.LVL107
  6163 05cf 25000000 		.4byte	.LVL108-1
  6164 05d3 0100     		.2byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 184
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 184
 
 
  6165 05d5 50       		.byte	0x50
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6219 0659 9F       		.byte	0x9f
  6220 065a 00000000 		.4byte	0
  6221 065e 00000000 		.4byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 185
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 185
 
 
  6222              	.LLST27:
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6276 06eb 0100     		.2byte	0x1
  6277 06ed 55       		.byte	0x55
  6278 06ee 2A000000 		.4byte	.LVL132
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 186
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 186
 
 
  6279 06f2 34000000 		.4byte	.LFE23
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6333 0776 00000000 		.4byte	0
  6334              	.LLST34:
  6335 077a 00000000 		.4byte	.LVL145
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 187
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 187
 
 
  6336 077e 07000000 		.4byte	.LVL146-1
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6390 0806 0C000000 		.4byte	.LVL162
  6391 080a 28000000 		.4byte	.LVL166
  6392 080e 0100     		.2byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 188
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 188
 
 
  6393 0810 55       		.byte	0x55
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6447 0892 12000000 		.4byte	.LVL174
  6448 0896 18000000 		.4byte	.LVL175
  6449 089a 0100     		.2byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 189
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 189
 
 
  6450 089c 50       		.byte	0x50
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6504 0921 0100     		.2byte	0x1
  6505 0923 50       		.byte	0x50
  6506 0924 26000000 		.4byte	.LVL191
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 190
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 190
 
 
  6507 0928 28000000 		.4byte	.LVL192
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6561 09ac 0100     		.2byte	0x1
  6562 09ae 50       		.byte	0x50
  6563 09af 00000000 		.4byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 191
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 191
 
 
  6564 09b3 00000000 		.4byte	0
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6618 0a42 0100     		.2byte	0x1
  6619 0a44 55       		.byte	0x55
  6620 0a45 20000000 		.4byte	.LVL239
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 192
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 192
 
 
  6621 0a49 2A000000 		.4byte	.LVL240
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6675 0ace 12000000 		.4byte	.LVL250
  6676 0ad2 0400     		.2byte	0x4
  6677 0ad4 F3       		.byte	0xf3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 193
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 193
 
 
  6678 0ad5 01       		.uleb128 0x1
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6732 0b58 0100     		.2byte	0x1
  6733 0b5a 50       		.byte	0x50
  6734 0b5b 08000000 		.4byte	.LVL256
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 194
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 194
 
 
  6735 0b5f 10000000 		.4byte	.LVL258
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6789 0be1 0100     		.2byte	0x1
  6790 0be3 50       		.byte	0x50
  6791 0be4 20000000 		.4byte	.LVL265
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 195
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 195
 
 
  6792 0be8 34000000 		.4byte	.LFE39
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6846 0c6b 01       		.uleb128 0x1
  6847 0c6c 50       		.byte	0x50
  6848 0c6d 9F       		.byte	0x9f
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 196
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 196
 
 
  6849 0c6e 00000000 		.4byte	0
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6903 0cf3 2A000000 		.4byte	.LVL294
  6904 0cf7 0100     		.2byte	0x1
  6905 0cf9 50       		.byte	0x50
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 197
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 197
 
 
  6906 0cfa 2E000000 		.4byte	.LVL295
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  6960 0d85 F3       		.byte	0xf3
  6961 0d86 01       		.uleb128 0x1
  6962 0d87 52       		.byte	0x52
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 198
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 198
 
 
  6963 0d88 9F       		.byte	0x9f
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  7017 0084 1C000000 		.4byte	.LFE17-.LFB17
  7018 0088 00000000 		.4byte	.LFB19
  7019 008c 30000000 		.4byte	.LFE19-.LFB19
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 199
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 199
 
 
  7020 0090 00000000 		.4byte	.LFB20
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  7074 0168 00000000 		.4byte	.LFB42
  7075 016c 60000000 		.4byte	.LFE42-.LFB42
  7076 0170 00000000 		.4byte	.LFB46
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 200
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 200
 
 
  7077 0174 6C000000 		.4byte	.LFE46-.LFB46
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  7131 00bc 44000000 		.4byte	.LFE26
  7132 00c0 00000000 		.4byte	.LFB27
  7133 00c4 34000000 		.4byte	.LFE27
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 201
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 201
 
 
  7134 00c8 00000000 		.4byte	.LFB28
@@ -12058,7 +12058,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  7183              	.LASF121:
  7184 0007 43794578 		.ascii	"CyExitCriticalSection\000"
  7184      69744372 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 202
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 202
 
 
  7184      69746963 
@@ -12118,7 +12118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  7204      66636C6B 
  7204      536F7572 
  7205              	.LASF123:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 203
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 203
 
 
  7206 00ca 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
@@ -12178,7 +12178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  7222      6720696E 
  7222      7400
  7223              	.LASF1:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 204
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 204
 
 
  7224 01f0 7369676E 		.ascii	"signed char\000"
@@ -12188,574 +12188,578 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 1
  7226 01fc 66756E63 		.ascii	"function\000"
  7226      74696F6E 
  7226      00
- 7227              	.LASF27:
- 7228 0205 696C6F54 		.ascii	"iloTrimTrig\000"
- 7228      72696D54 
- 7228      72696700 
+ 7227              	.LASF57:
+ 7228 0205 43795379 		.ascii	"CySysWdtLock\000"
+ 7228      73576474 
+ 7228      4C6F636B 
+ 7228      00
  7229              	.LASF21:
- 7230 0211 63795764 		.ascii	"cyWdtCallback\000"
+ 7230 0212 63795764 		.ascii	"cyWdtCallback\000"
  7230      7443616C 
  7230      6C626163 
  7230      6B00
  7231              	.LASF12:
- 7232 021f 696E7433 		.ascii	"int32\000"
+ 7232 0220 696E7433 		.ascii	"int32\000"
  7232      3200
  7233              	.LASF122:
- 7234 0225 43794465 		.ascii	"CyDelayUs\000"
+ 7234 0226 43794465 		.ascii	"CyDelayUs\000"
  7234      6C617955 
  7234      7300
  7235              	.LASF42:
- 7236 022f 696C6F41 		.ascii	"iloAccuracyValue\000"
+ 7236 0230 696C6F41 		.ascii	"iloAccuracyValue\000"
  7236      63637572 
  7236      61637956 
  7236      616C7565 
  7236      00
  7237              	.LASF20:
- 7238 0240 63795F73 		.ascii	"cy_sys_timer_delaytype_enum\000"
+ 7238 0241 63795F73 		.ascii	"cy_sys_timer_delaytype_enum\000"
  7238      79735F74 
  7238      696D6572 
  7238      5F64656C 
  7238      61797479 
  7239              	.LASF80:
- 7240 025c 62697473 		.ascii	"bits\000"
+ 7240 025d 62697473 		.ascii	"bits\000"
  7240      00
  7241              	.LASF5:
- 7242 0261 6C6F6E67 		.ascii	"long int\000"
+ 7242 0262 6C6F6E67 		.ascii	"long int\000"
  7242      20696E74 
  7242      00
  7243              	.LASF78:
- 7244 026a 72656756 		.ascii	"regValue\000"
+ 7244 026b 72656756 		.ascii	"regValue\000"
  7244      616C7565 
  7244      00
  7245              	.LASF56:
- 7246 0273 636C6F63 		.ascii	"clockSel\000"
+ 7246 0274 636C6F63 		.ascii	"clockSel\000"
  7246      6B53656C 
  7246      00
  7247              	.LASF9:
- 7248 027c 75696E74 		.ascii	"uint8\000"
+ 7248 027d 75696E74 		.ascii	"uint8\000"
  7248      3800
  7249              	.LASF66:
- 7250 0282 656E6162 		.ascii	"enable\000"
+ 7250 0283 656E6162 		.ascii	"enable\000"
  7250      6C6500
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 205
+
+
  7251              	.LASF14:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 205
-
-
- 7252 0289 646F7562 		.ascii	"double\000"
+ 7252 028a 646F7562 		.ascii	"double\000"
  7252      6C6500
  7253              	.LASF31:
- 7254 0290 636F6D70 		.ascii	"compensatedCycles\000"
+ 7254 0291 636F6D70 		.ascii	"compensatedCycles\000"
  7254      656E7361 
  7254      74656443 
  7254      79636C65 
  7254      7300
  7255              	.LASF88:
- 7256 02a2 43795379 		.ascii	"CySysClkIloStop\000"
+ 7256 02a3 43795379 		.ascii	"CySysClkIloStop\000"
  7256      73436C6B 
  7256      496C6F53 
  7256      746F7000 
  7257              	.LASF32:
- 7258 02b2 696C6F43 		.ascii	"iloCompensatedCycles\000"
+ 7258 02b3 696C6F43 		.ascii	"iloCompensatedCycles\000"
  7258      6F6D7065 
  7258      6E736174 
  7258      65644379 
  7258      636C6573 
  7259              	.LASF96:
- 7260 02c7 636F756E 		.ascii	"countersMask\000"
+ 7260 02c8 636F756E 		.ascii	"countersMask\000"
  7260      74657273 
  7260      4D61736B 
  7260      00
  7261              	.LASF11:
- 7262 02d4 75696E74 		.ascii	"uint32\000"
+ 7262 02d5 75696E74 		.ascii	"uint32\000"
  7262      333200
  7263              	.LASF29:
- 7264 02db 43795379 		.ascii	"CySysClkIloStopMeasurement\000"
+ 7264 02dc 43795379 		.ascii	"CySysClkIloStopMeasurement\000"
  7264      73436C6B 
  7264      496C6F53 
  7264      746F704D 
  7264      65617375 
  7265              	.LASF99:
- 7266 02f6 70726576 		.ascii	"prevCallback\000"
+ 7266 02f7 70726576 		.ascii	"prevCallback\000"
  7266      43616C6C 
  7266      6261636B 
  7266      00
  7267              	.LASF76:
- 7268 0303 43795379 		.ascii	"CySysWdtSetMatch\000"
+ 7268 0304 43795379 		.ascii	"CySysWdtSetMatch\000"
  7268      73576474 
  7268      5365744D 
  7268      61746368 
  7268      00
  7269              	.LASF73:
- 7270 0314 636F756E 		.ascii	"countersEnableStatus\000"
+ 7270 0315 636F756E 		.ascii	"countersEnableStatus\000"
  7270      74657273 
  7270      456E6162 
  7270      6C655374 
  7270      61747573 
  7271              	.LASF116:
- 7272 0329 77647449 		.ascii	"wdtIsrMask\000"
+ 7272 032a 77647449 		.ascii	"wdtIsrMask\000"
  7272      73724D61 
  7272      736B00
  7273              	.LASF68:
- 7274 0334 43795379 		.ascii	"CySysWdtEnable\000"
+ 7274 0335 43795379 		.ascii	"CySysWdtEnable\000"
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 206
+
+
  7274      73576474 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 206
-
-
  7274      456E6162 
  7274      6C6500
  7275              	.LASF97:
- 7276 0343 43795379 		.ascii	"CySysWdtSetInterruptCallback\000"
+ 7276 0344 43795379 		.ascii	"CySysWdtSetInterruptCallback\000"
  7276      73576474 
  7276      53657449 
  7276      6E746572 
  7276      72757074 
  7277              	.LASF69:
- 7278 0360 636F756E 		.ascii	"counterMask\000"
+ 7278 0361 636F756E 		.ascii	"counterMask\000"
  7278      7465724D 
  7278      61736B00 
  7279              	.LASF67:
- 7280 036c 43795379 		.ascii	"CySysWdtGetClearOnMatch\000"
+ 7280 036d 43795379 		.ascii	"CySysWdtGetClearOnMatch\000"
  7280      73576474 
  7280      47657443 
  7280      6C656172 
  7280      4F6E4D61 
  7281              	.LASF0:
- 7282 0384 756E7369 		.ascii	"unsigned int\000"
+ 7282 0385 756E7369 		.ascii	"unsigned int\000"
  7282      676E6564 
  7282      20696E74 
  7282      00
  7283              	.LASF89:
- 7284 0391 43795379 		.ascii	"CySysClkSetLfclkSource\000"
+ 7284 0392 43795379 		.ascii	"CySysClkSetLfclkSource\000"
  7284      73436C6B 
  7284      5365744C 
  7284      66636C6B 
  7284      536F7572 
  7285              	.LASF86:
- 7286 03a8 66697273 		.ascii	"firstCount\000"
+ 7286 03a9 66697273 		.ascii	"firstCount\000"
  7286      74436F75 
  7286      6E7400
  7287              	.LASF101:
- 7288 03b3 72657443 		.ascii	"retCallback\000"
+ 7288 03b4 72657443 		.ascii	"retCallback\000"
  7288      616C6C62 
  7288      61636B00 
  7289              	.LASF30:
- 7290 03bf 64657369 		.ascii	"desiredDelay\000"
+ 7290 03c0 64657369 		.ascii	"desiredDelay\000"
  7290      72656444 
  7290      656C6179 
  7290      00
  7291              	.LASF6:
- 7292 03cc 6C6F6E67 		.ascii	"long unsigned int\000"
+ 7292 03cd 6C6F6E67 		.ascii	"long unsigned int\000"
  7292      20756E73 
  7292      69676E65 
  7292      6420696E 
  7292      7400
  7293              	.LASF58:
- 7294 03de 696E7465 		.ascii	"interruptState\000"
+ 7294 03df 696E7465 		.ascii	"interruptState\000"
  7294      72727570 
  7294      74537461 
  7294      746500
  7295              	.LASF111:
- 7296 03ed 6D617463 		.ascii	"matchValue\000"
+ 7296 03ee 6D617463 		.ascii	"matchValue\000"
  7296      6856616C 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 207
+
+
  7296      756500
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 207
-
-
  7297              	.LASF84:
- 7298 03f8 43795379 		.ascii	"CySysClkLfclkPosedgeRestore\000"
+ 7298 03f9 43795379 		.ascii	"CySysClkLfclkPosedgeRestore\000"
  7298      73436C6B 
  7298      4C66636C 
  7298      6B506F73 
  7298      65646765 
  7299              	.LASF102:
- 7300 0414 43795379 		.ascii	"CySysWdtEnableCounterIsr\000"
+ 7300 0415 43795379 		.ascii	"CySysWdtEnableCounterIsr\000"
  7300      73576474 
  7300      456E6162 
  7300      6C65436F 
  7300      756E7465 
  7301              	.LASF43:
- 7302 042d 7472696D 		.ascii	"trimStep\000"
+ 7302 042e 7472696D 		.ascii	"trimStep\000"
  7302      53746570 
  7302      00
  7303              	.LASF4:
- 7304 0436 73686F72 		.ascii	"short unsigned int\000"
+ 7304 0437 73686F72 		.ascii	"short unsigned int\000"
  7304      7420756E 
  7304      7369676E 
  7304      65642069 
  7304      6E7400
  7305              	.LASF60:
- 7306 0449 43795379 		.ascii	"CySysWdtGetEnabledStatus\000"
+ 7306 044a 43795379 		.ascii	"CySysWdtGetEnabledStatus\000"
  7306      73576474 
  7306      47657445 
  7306      6E61626C 
  7306      65645374 
  7307              	.LASF100:
- 7308 0462 43795379 		.ascii	"CySysWdtGetInterruptCallback\000"
+ 7308 0463 43795379 		.ascii	"CySysWdtGetInterruptCallback\000"
  7308      73576474 
  7308      47657449 
  7308      6E746572 
  7308      72757074 
- 7309              	.LASF125:
- 7310 047f 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\GitHub\\Elec"
- 7310      73657273 
- 7310      5C617573 
- 7310      74635C4F 
- 7310      6E654472 
- 7311 04ac 74726F6E 		.ascii	"tronics2018-19\\Psoc Arm\\Motor Board Rev1.cydsn\000"
- 7311      69637332 
- 7311      3031382D 
- 7311      31395C50 
- 7311      736F6320 
- 7312              	.LASF38:
- 7313 04db 43795379 		.ascii	"CySysClkIloUpdateTrimReg\000"
- 7313      73436C6B 
- 7313      496C6F55 
- 7313      70646174 
- 7313      65547269 
- 7314              	.LASF28:
- 7315 04f4 43795379 		.ascii	"CySysClkIloStart\000"
- 7315      73436C6B 
- 7315      496C6F53 
- 7315      74617274 
- 7315      00
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 208
+ 7309              	.LASF27:
+ 7310 0480 696C6F54 		.ascii	"iloTrimTrig\000"
+ 7310      72696D54 
+ 7310      72696700 
+ 7311              	.LASF38:
+ 7312 048c 43795379 		.ascii	"CySysClkIloUpdateTrimReg\000"
+ 7312      73436C6B 
+ 7312      496C6F55 
+ 7312      70646174 
+ 7312      65547269 
+ 7313              	.LASF28:
+ 7314 04a5 43795379 		.ascii	"CySysClkIloStart\000"
+ 7314      73436C6B 
+ 7314      496C6F53 
+ 7314      74617274 
+ 7314      00
+ 7315              	.LASF79:
+ 7316 04b6 43795379 		.ascii	"CySysWdtSetToggleBit\000"
+ 7316      73576474 
+ 7316      53657454 
+ 7316      6F67676C 
+ 7316      65426974 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 208
 
 
- 7316              	.LASF79:
- 7317 0505 43795379 		.ascii	"CySysWdtSetToggleBit\000"
- 7317      73576474 
- 7317      53657454 
- 7317      6F67676C 
- 7317      65426974 
- 7318              	.LASF54:
- 7319 051a 706F7765 		.ascii	"powerModeStatus\000"
- 7319      724D6F64 
- 7319      65537461 
- 7319      74757300 
- 7320              	.LASF105:
- 7321 052a 43795379 		.ascii	"CySysWatchdogFeed\000"
- 7321      73576174 
- 7321      6368646F 
- 7321      67466565 
- 7321      6400
- 7322              	.LASF17:
- 7323 053c 72656733 		.ascii	"reg32\000"
- 7323      3200
- 7324              	.LASF112:
- 7325 0542 64656661 		.ascii	"defaultIloTrimRegValue\000"
- 7325      756C7449 
- 7325      6C6F5472 
- 7325      696D5265 
- 7325      6756616C 
- 7326              	.LASF120:
- 7327 0559 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 7327      74657243 
- 7327      72697469 
- 7327      63616C53 
- 7327      65637469 
- 7328              	.LASF108:
- 7329 0570 746D7056 		.ascii	"tmpValue\000"
- 7329      616C7565 
- 7329      00
- 7330              	.LASF36:
- 7331 0579 72657475 		.ascii	"returnStatus\000"
- 7331      726E5374 
- 7331      61747573 
- 7331      00
- 7332              	.LASF90:
- 7333 0586 736F7572 		.ascii	"source\000"
- 7333      636500
- 7334              	.LASF55:
- 7335 058d 43795379 		.ascii	"CySysClkWcoClockOutSelect\000"
- 7335      73436C6B 
- 7335      57636F43 
- 7335      6C6F636B 
- 7335      4F757453 
- 7336              	.LASF23:
- 7337 05a7 73697A65 		.ascii	"sizetype\000"
- 7337      74797065 
- 7337      00
- 7338              	.LASF22:
- 7339 05b0 6C6F6E67 		.ascii	"long double\000"
- 7339      20646F75 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 209
+ 7317              	.LASF54:
+ 7318 04cb 706F7765 		.ascii	"powerModeStatus\000"
+ 7318      724D6F64 
+ 7318      65537461 
+ 7318      74757300 
+ 7319              	.LASF105:
+ 7320 04db 43795379 		.ascii	"CySysWatchdogFeed\000"
+ 7320      73576174 
+ 7320      6368646F 
+ 7320      67466565 
+ 7320      6400
+ 7321              	.LASF17:
+ 7322 04ed 72656733 		.ascii	"reg32\000"
+ 7322      3200
+ 7323              	.LASF112:
+ 7324 04f3 64656661 		.ascii	"defaultIloTrimRegValue\000"
+ 7324      756C7449 
+ 7324      6C6F5472 
+ 7324      696D5265 
+ 7324      6756616C 
+ 7325              	.LASF120:
+ 7326 050a 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 7326      74657243 
+ 7326      72697469 
+ 7326      63616C53 
+ 7326      65637469 
+ 7327              	.LASF108:
+ 7328 0521 746D7056 		.ascii	"tmpValue\000"
+ 7328      616C7565 
+ 7328      00
+ 7329              	.LASF36:
+ 7330 052a 72657475 		.ascii	"returnStatus\000"
+ 7330      726E5374 
+ 7330      61747573 
+ 7330      00
+ 7331              	.LASF90:
+ 7332 0537 736F7572 		.ascii	"source\000"
+ 7332      636500
+ 7333              	.LASF55:
+ 7334 053e 43795379 		.ascii	"CySysClkWcoClockOutSelect\000"
+ 7334      73436C6B 
+ 7334      57636F43 
+ 7334      6C6F636B 
+ 7334      4F757453 
+ 7335              	.LASF23:
+ 7336 0558 73697A65 		.ascii	"sizetype\000"
+ 7336      74797065 
+ 7336      00
+ 7337              	.LASF22:
+ 7338 0561 6C6F6E67 		.ascii	"long double\000"
+ 7338      20646F75 
+ 7338      626C6500 
+ 7339              	.LASF82:
+ 7340 056d 43795379 		.ascii	"CySysWdtGetMatch\000"
+ 7340      73576474 
+ 7340      4765744D 
+ 7340      61746368 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 209
 
 
- 7339      626C6500 
- 7340              	.LASF82:
- 7341 05bc 43795379 		.ascii	"CySysWdtGetMatch\000"
- 7341      73576474 
- 7341      4765744D 
- 7341      61746368 
- 7341      00
- 7342              	.LASF77:
- 7343 05cd 6D617463 		.ascii	"match\000"
- 7343      6800
- 7344              	.LASF50:
- 7345 05d3 43795379 		.ascii	"CySysClkIloRestoreFactoryTrim\000"
- 7345      73436C6B 
- 7345      496C6F52 
- 7345      6573746F 
- 7345      72654661 
- 7346              	.LASF18:
- 7347 05f1 43595F53 		.ascii	"CY_SYS_TIMER_WAIT\000"
- 7347      59535F54 
- 7347      494D4552 
- 7347      5F574149 
- 7347      5400
- 7348              	.LASF35:
- 7349 0603 63686563 		.ascii	"checkStatus\000"
- 7349      6B537461 
- 7349      74757300 
- 7350              	.LASF128:
- 7351 060f 63796465 		.ascii	"cydelayFreqHz\000"
- 7351      6C617946 
- 7351      72657148 
- 7351      7A00
- 7352              	.LASF95:
- 7353 061d 43795379 		.ascii	"CySysWdtResetCounters\000"
- 7353      73576474 
- 7353      52657365 
- 7353      74436F75 
- 7353      6E746572 
- 7354              	.LASF48:
- 7355 0633 77616974 		.ascii	"waitUntilCntr1Stops\000"
- 7355      556E7469 
- 7355      6C436E74 
- 7355      72315374 
- 7355      6F707300 
- 7356              	.LASF93:
- 7357 0647 43795379 		.ascii	"CySysWdtClearInterrupt\000"
- 7357      73576474 
- 7357      436C6561 
- 7357      72496E74 
- 7357      65727275 
- 7358              	.LASF13:
- 7359 065e 666C6F61 		.ascii	"float\000"
- 7359      7400
- 7360              	.LASF106:
- 7361 0664 43795379 		.ascii	"CySysTimerDelayUntilMatch\000"
- 7361      7354696D 
- 7361      65724465 
- 7361      6C617955 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 210
+ 7340      00
+ 7341              	.LASF77:
+ 7342 057e 6D617463 		.ascii	"match\000"
+ 7342      6800
+ 7343              	.LASF50:
+ 7344 0584 43795379 		.ascii	"CySysClkIloRestoreFactoryTrim\000"
+ 7344      73436C6B 
+ 7344      496C6F52 
+ 7344      6573746F 
+ 7344      72654661 
+ 7345              	.LASF18:
+ 7346 05a2 43595F53 		.ascii	"CY_SYS_TIMER_WAIT\000"
+ 7346      59535F54 
+ 7346      494D4552 
+ 7346      5F574149 
+ 7346      5400
+ 7347              	.LASF35:
+ 7348 05b4 63686563 		.ascii	"checkStatus\000"
+ 7348      6B537461 
+ 7348      74757300 
+ 7349              	.LASF128:
+ 7350 05c0 63796465 		.ascii	"cydelayFreqHz\000"
+ 7350      6C617946 
+ 7350      72657148 
+ 7350      7A00
+ 7351              	.LASF95:
+ 7352 05ce 43795379 		.ascii	"CySysWdtResetCounters\000"
+ 7352      73576474 
+ 7352      52657365 
+ 7352      74436F75 
+ 7352      6E746572 
+ 7353              	.LASF48:
+ 7354 05e4 77616974 		.ascii	"waitUntilCntr1Stops\000"
+ 7354      556E7469 
+ 7354      6C436E74 
+ 7354      72315374 
+ 7354      6F707300 
+ 7355              	.LASF93:
+ 7356 05f8 43795379 		.ascii	"CySysWdtClearInterrupt\000"
+ 7356      73576474 
+ 7356      436C6561 
+ 7356      72496E74 
+ 7356      65727275 
+ 7357              	.LASF13:
+ 7358 060f 666C6F61 		.ascii	"float\000"
+ 7358      7400
+ 7359              	.LASF106:
+ 7360 0615 43795379 		.ascii	"CySysTimerDelayUntilMatch\000"
+ 7360      7354696D 
+ 7360      65724465 
+ 7360      6C617955 
+ 7360      6E74696C 
+ 7361              	.LASF109:
+ 7362 062f 43795379 		.ascii	"CySysTimerDelay\000"
+ 7362      7354696D 
+ 7362      65724465 
+ 7362      6C617900 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 210
 
 
- 7361      6E74696C 
- 7362              	.LASF109:
- 7363 067e 43795379 		.ascii	"CySysTimerDelay\000"
- 7363      7354696D 
- 7363      65724465 
- 7363      6C617900 
- 7364              	.LASF25:
- 7365 068e 43795379 		.ascii	"CySysWdtLocked\000"
- 7365      73576474 
- 7365      4C6F636B 
- 7365      656400
- 7366              	.LASF119:
- 7367 069d 43794861 		.ascii	"CyHalt\000"
- 7367      6C7400
- 7368              	.LASF2:
- 7369 06a4 756E7369 		.ascii	"unsigned char\000"
- 7369      676E6564 
- 7369      20636861 
- 7369      7200
- 7370              	.LASF34:
- 7371 06b2 636F6D70 		.ascii	"compensateRunningStatus\000"
- 7371      656E7361 
- 7371      74655275 
- 7371      6E6E696E 
- 7371      67537461 
- 7372              	.LASF87:
- 7373 06ca 6C66636C 		.ascii	"lfclkPosedgeEnabledWdtCounter\000"
- 7373      6B506F73 
- 7373      65646765 
- 7373      456E6162 
- 7373      6C656457 
- 7374              	.LASF110:
- 7375 06e8 64656C61 		.ascii	"delay\000"
- 7375      7900
- 7376              	.LASF3:
- 7377 06ee 73686F72 		.ascii	"short int\000"
- 7377      7420696E 
- 7377      7400
- 7378              	.LASF107:
- 7379 06f8 64656C61 		.ascii	"delayType\000"
- 7379      79547970 
- 7379      6500
- 7380              	.LASF70:
- 7381 0702 43795379 		.ascii	"CySysWdtDisable\000"
- 7381      73576474 
- 7381      44697361 
- 7381      626C6500 
- 7382              	.LASF51:
- 7383 0712 43795379 		.ascii	"CySysClkIloStartMeasurement\000"
- 7383      73436C6B 
- 7383      496C6F53 
- 7383      74617274 
- 7383      4D656173 
- 7384              	.LASF45:
- 7385 072e 43795379 		.ascii	"CySysClkIloTrim\000"
- 7385      73436C6B 
- 7385      496C6F54 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 211
+ 7363              	.LASF25:
+ 7364 063f 43795379 		.ascii	"CySysWdtLocked\000"
+ 7364      73576474 
+ 7364      4C6F636B 
+ 7364      656400
+ 7365              	.LASF119:
+ 7366 064e 43794861 		.ascii	"CyHalt\000"
+ 7366      6C7400
+ 7367              	.LASF2:
+ 7368 0655 756E7369 		.ascii	"unsigned char\000"
+ 7368      676E6564 
+ 7368      20636861 
+ 7368      7200
+ 7369              	.LASF34:
+ 7370 0663 636F6D70 		.ascii	"compensateRunningStatus\000"
+ 7370      656E7361 
+ 7370      74655275 
+ 7370      6E6E696E 
+ 7370      67537461 
+ 7371              	.LASF87:
+ 7372 067b 6C66636C 		.ascii	"lfclkPosedgeEnabledWdtCounter\000"
+ 7372      6B506F73 
+ 7372      65646765 
+ 7372      456E6162 
+ 7372      6C656457 
+ 7373              	.LASF110:
+ 7374 0699 64656C61 		.ascii	"delay\000"
+ 7374      7900
+ 7375              	.LASF3:
+ 7376 069f 73686F72 		.ascii	"short int\000"
+ 7376      7420696E 
+ 7376      7400
+ 7377              	.LASF107:
+ 7378 06a9 64656C61 		.ascii	"delayType\000"
+ 7378      79547970 
+ 7378      6500
+ 7379              	.LASF70:
+ 7380 06b3 43795379 		.ascii	"CySysWdtDisable\000"
+ 7380      73576474 
+ 7380      44697361 
+ 7380      626C6500 
+ 7381              	.LASF51:
+ 7382 06c3 43795379 		.ascii	"CySysClkIloStartMeasurement\000"
+ 7382      73436C6B 
+ 7382      496C6F53 
+ 7382      74617274 
+ 7382      4D656173 
+ 7383              	.LASF125:
+ 7384 06df 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
+ 7384      73657273 
+ 7384      5C617573 
+ 7384      74635C4F 
+ 7384      6E654472 
+ 7385 070c 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Motor Boar"
+ 7385      69742D46 
+ 7385      69726D77 
+ 7385      6172652D 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 211
 
 
- 7385      72696D00 
- 7386              	.LASF24:
- 7387 073e 43795379 		.ascii	"CySysClkIloEnabled\000"
- 7387      73436C6B 
- 7387      496C6F45 
- 7387      6E61626C 
- 7387      656400
- 7388              	.LASF92:
- 7389 0751 43795379 		.ascii	"CySysWdtGetInterruptSource\000"
- 7389      73576474 
- 7389      47657449 
- 7389      6E746572 
- 7389      72757074 
- 7390              	.LASF124:
- 7391 076c 47656E65 		.ascii	"Generated_Source\\PSoC4\\CyLFClk.c\000"
- 7391      72617465 
- 7391      645F536F 
- 7391      75726365 
- 7391      5C50536F 
- 7392              	.LASF39:
- 7393 078d 696C6F41 		.ascii	"iloAccuracyInPPT\000"
- 7393      63637572 
- 7393      61637949 
- 7393      6E505054 
- 7393      00
- 7394              	.LASF91:
- 7395 079e 43795379 		.ascii	"CySysClkWcoStop\000"
- 7395      73436C6B 
- 7395      57636F53 
- 7395      746F7000 
- 7396              	.LASF53:
- 7397 07ae 43795379 		.ascii	"CySysClkWcoSetPowerMode\000"
- 7397      73436C6B 
- 7397      57636F53 
- 7397      6574506F 
- 7397      7765724D 
- 7398              	.LASF103:
- 7399 07c6 43795379 		.ascii	"CySysWdtDisableCounterIsr\000"
- 7399      73576474 
- 7399      44697361 
- 7399      626C6543 
- 7399      6F756E74 
- 7400              	.LASF15:
- 7401 07e0 63686172 		.ascii	"char\000"
- 7401      00
- 7402              	.LASF46:
- 7403 07e5 6D6F6465 		.ascii	"mode\000"
- 7403      00
- 7404              	.LASF83:
- 7405 07ea 43795379 		.ascii	"CySysWdtGetCount\000"
- 7405      73576474 
- 7405      47657443 
- 7405      6F756E74 
- 7405      00
- 7406              	.LASF57:
- 7407 07fb 43795379 		.ascii	"CySysWdtLock\000"
- 7407      73576474 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 212
+ 7385      412D3230 
+ 7386 073d 64205265 		.ascii	"d Rev1.cydsn\000"
+ 7386      76312E63 
+ 7386      7964736E 
+ 7386      00
+ 7387              	.LASF45:
+ 7388 074a 43795379 		.ascii	"CySysClkIloTrim\000"
+ 7388      73436C6B 
+ 7388      496C6F54 
+ 7388      72696D00 
+ 7389              	.LASF24:
+ 7390 075a 43795379 		.ascii	"CySysClkIloEnabled\000"
+ 7390      73436C6B 
+ 7390      496C6F45 
+ 7390      6E61626C 
+ 7390      656400
+ 7391              	.LASF92:
+ 7392 076d 43795379 		.ascii	"CySysWdtGetInterruptSource\000"
+ 7392      73576474 
+ 7392      47657449 
+ 7392      6E746572 
+ 7392      72757074 
+ 7393              	.LASF124:
+ 7394 0788 47656E65 		.ascii	"Generated_Source\\PSoC4\\CyLFClk.c\000"
+ 7394      72617465 
+ 7394      645F536F 
+ 7394      75726365 
+ 7394      5C50536F 
+ 7395              	.LASF39:
+ 7396 07a9 696C6F41 		.ascii	"iloAccuracyInPPT\000"
+ 7396      63637572 
+ 7396      61637949 
+ 7396      6E505054 
+ 7396      00
+ 7397              	.LASF91:
+ 7398 07ba 43795379 		.ascii	"CySysClkWcoStop\000"
+ 7398      73436C6B 
+ 7398      57636F53 
+ 7398      746F7000 
+ 7399              	.LASF53:
+ 7400 07ca 43795379 		.ascii	"CySysClkWcoSetPowerMode\000"
+ 7400      73436C6B 
+ 7400      57636F53 
+ 7400      6574506F 
+ 7400      7765724D 
+ 7401              	.LASF103:
+ 7402 07e2 43795379 		.ascii	"CySysWdtDisableCounterIsr\000"
+ 7402      73576474 
+ 7402      44697361 
+ 7402      626C6543 
+ 7402      6F756E74 
+ 7403              	.LASF15:
+ 7404 07fc 63686172 		.ascii	"char\000"
+ 7404      00
+ 7405              	.LASF46:
+ 7406 0801 6D6F6465 		.ascii	"mode\000"
+ 7406      00
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 212
 
 
- 7407      4C6F636B 
- 7407      00
- 7408              	.LASF115:
- 7409 0808 64697361 		.ascii	"disableServicedIsr\000"
- 7409      626C6553 
- 7409      65727669 
- 7409      63656449 
- 7409      737200
- 7410              	.LASF65:
- 7411 081b 43795379 		.ascii	"CySysWdtSetClearOnMatch\000"
- 7411      73576474 
- 7411      53657443 
- 7411      6C656172 
- 7411      4F6E4D61 
- 7412              	.LASF71:
- 7413 0833 43795379 		.ascii	"CySysWdtSetCascade\000"
- 7413      73576474 
- 7413      53657443 
- 7413      61736361 
- 7413      646500
- 7414              	.LASF47:
- 7415 0846 74696D65 		.ascii	"timeOutClocks\000"
- 7415      4F757443 
- 7415      6C6F636B 
- 7415      7300
- 7416              	.LASF49:
- 7417 0854 7472696D 		.ascii	"trimRunningStatus\000"
- 7417      52756E6E 
- 7417      696E6753 
- 7417      74617475 
- 7417      7300
- 7418              	.LASF64:
- 7419 0866 43795379 		.ascii	"CySysWdtGetMode\000"
- 7419      73576474 
- 7419      4765744D 
- 7419      6F646500 
- 7420              	.LASF33:
- 7421 0876 64657369 		.ascii	"desiredDelayInCounts\000"
- 7421      72656444 
- 7421      656C6179 
- 7421      496E436F 
- 7421      756E7473 
- 7422              	.LASF52:
- 7423 088b 43795379 		.ascii	"CySysClkWcoStart\000"
- 7423      73436C6B 
- 7423      57636F53 
- 7423      74617274 
- 7423      00
- 7424              	.LASF94:
- 7425 089c 7764744C 		.ascii	"wdtLockState\000"
- 7425      6F636B53 
- 7425      74617465 
- 7425      00
- 7426              	.LASF63:
- 7427 08a9 636F6E66 		.ascii	"configRegValue\000"
- 7427      69675265 
- 7427      6756616C 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccoxAdbk.s 			page 213
+ 7407              	.LASF83:
+ 7408 0806 43795379 		.ascii	"CySysWdtGetCount\000"
+ 7408      73576474 
+ 7408      47657443 
+ 7408      6F756E74 
+ 7408      00
+ 7409              	.LASF115:
+ 7410 0817 64697361 		.ascii	"disableServicedIsr\000"
+ 7410      626C6553 
+ 7410      65727669 
+ 7410      63656449 
+ 7410      737200
+ 7411              	.LASF65:
+ 7412 082a 43795379 		.ascii	"CySysWdtSetClearOnMatch\000"
+ 7412      73576474 
+ 7412      53657443 
+ 7412      6C656172 
+ 7412      4F6E4D61 
+ 7413              	.LASF71:
+ 7414 0842 43795379 		.ascii	"CySysWdtSetCascade\000"
+ 7414      73576474 
+ 7414      53657443 
+ 7414      61736361 
+ 7414      646500
+ 7415              	.LASF47:
+ 7416 0855 74696D65 		.ascii	"timeOutClocks\000"
+ 7416      4F757443 
+ 7416      6C6F636B 
+ 7416      7300
+ 7417              	.LASF49:
+ 7418 0863 7472696D 		.ascii	"trimRunningStatus\000"
+ 7418      52756E6E 
+ 7418      696E6753 
+ 7418      74617475 
+ 7418      7300
+ 7419              	.LASF64:
+ 7420 0875 43795379 		.ascii	"CySysWdtGetMode\000"
+ 7420      73576474 
+ 7420      4765744D 
+ 7420      6F646500 
+ 7421              	.LASF33:
+ 7422 0885 64657369 		.ascii	"desiredDelayInCounts\000"
+ 7422      72656444 
+ 7422      656C6179 
+ 7422      496E436F 
+ 7422      756E7473 
+ 7423              	.LASF52:
+ 7424 089a 43795379 		.ascii	"CySysClkWcoStart\000"
+ 7424      73436C6B 
+ 7424      57636F53 
+ 7424      74617274 
+ 7424      00
+ 7425              	.LASF94:
+ 7426 08ab 7764744C 		.ascii	"wdtLockState\000"
+ 7426      6F636B53 
+ 7426      74617465 
+ 7426      00
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccmwjuOd.s 			page 213
 
 
- 7427      756500
- 7428              	.LASF114:
- 7429 08b8 6C66636C 		.ascii	"lfclkPosedgeWdtCounter0Mode\000"
- 7429      6B506F73 
- 7429      65646765 
- 7429      57647443 
- 7429      6F756E74 
- 7430              	.LASF72:
- 7431 08d4 63617363 		.ascii	"cascadeMask\000"
- 7431      6164654D 
- 7431      61736B00 
- 7432              	.LASF16:
- 7433 08e0 63797374 		.ascii	"cystatus\000"
- 7433      61747573 
- 7433      00
- 7434              	.LASF104:
- 7435 08e9 43795379 		.ascii	"CySysWdtIsr\000"
- 7435      73576474 
- 7435      49737200 
- 7436              	.LASF81:
- 7437 08f5 43795379 		.ascii	"CySysWdtGetToggleBit\000"
- 7437      73576474 
- 7437      47657454 
- 7437      6F67676C 
- 7437      65426974 
- 7438              	.LASF37:
- 7439 090a 43795379 		.ascii	"CySysClkIloCompensate\000"
- 7439      73436C6B 
- 7439      496C6F43 
- 7439      6F6D7065 
- 7439      6E736174 
- 7440              	.LASF19:
- 7441 0920 43595F53 		.ascii	"CY_SYS_TIMER_INTERRUPT\000"
- 7441      59535F54 
- 7441      494D4552 
- 7441      5F494E54 
- 7441      45525255 
- 7442              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 7427              	.LASF63:
+ 7428 08b8 636F6E66 		.ascii	"configRegValue\000"
+ 7428      69675265 
+ 7428      6756616C 
+ 7428      756500
+ 7429              	.LASF114:
+ 7430 08c7 6C66636C 		.ascii	"lfclkPosedgeWdtCounter0Mode\000"
+ 7430      6B506F73 
+ 7430      65646765 
+ 7430      57647443 
+ 7430      6F756E74 
+ 7431              	.LASF72:
+ 7432 08e3 63617363 		.ascii	"cascadeMask\000"
+ 7432      6164654D 
+ 7432      61736B00 
+ 7433              	.LASF16:
+ 7434 08ef 63797374 		.ascii	"cystatus\000"
+ 7434      61747573 
+ 7434      00
+ 7435              	.LASF104:
+ 7436 08f8 43795379 		.ascii	"CySysWdtIsr\000"
+ 7436      73576474 
+ 7436      49737200 
+ 7437              	.LASF81:
+ 7438 0904 43795379 		.ascii	"CySysWdtGetToggleBit\000"
+ 7438      73576474 
+ 7438      47657454 
+ 7438      6F67676C 
+ 7438      65426974 
+ 7439              	.LASF37:
+ 7440 0919 43795379 		.ascii	"CySysClkIloCompensate\000"
+ 7440      73436C6B 
+ 7440      496C6F43 
+ 7440      6F6D7065 
+ 7440      6E736174 
+ 7441              	.LASF19:
+ 7442 092f 43595F53 		.ascii	"CY_SYS_TIMER_INTERRUPT\000"
+ 7442      59535F54 
+ 7442      494D4552 
+ 7442      5F494E54 
+ 7442      45525255 
+ 7443              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

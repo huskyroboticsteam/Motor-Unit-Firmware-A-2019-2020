@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
   28:Generated_Source\PSoC4/Timer_1_PM.c **** * Summary:
   29:Generated_Source\PSoC4/Timer_1_PM.c **** *     Save the current user configuration
   30:Generated_Source\PSoC4/Timer_1_PM.c **** *
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 2
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 2
 
 
   31:Generated_Source\PSoC4/Timer_1_PM.c **** * Parameters:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
   56 001c 86000F40 		.word	1074724998
   57              		.cfi_endproc
   58              	.LFE1:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 3
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 3
 
 
   59              		.size	Timer_1_SaveConfig, .-Timer_1_SaveConfig
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
   85:Generated_Source\PSoC4/Timer_1_PM.c ****         #endif /* Restore Capture counter register*/
   86:Generated_Source\PSoC4/Timer_1_PM.c **** 
   87:Generated_Source\PSoC4/Timer_1_PM.c ****         #if(!Timer_1_UDB_CONTROL_REG_REMOVED)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 4
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 4
 
 
   88:Generated_Source\PSoC4/Timer_1_PM.c ****             Timer_1_WriteControlRegister(Timer_1_backup.TimerControlRegister);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  113              		.cfi_def_cfa_offset 8
  114              		.cfi_offset 4, -8
  115              		.cfi_offset 14, -4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 5
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 5
 
 
  114:Generated_Source\PSoC4/Timer_1_PM.c ****     #if(!Timer_1_UDB_CONTROL_REG_REMOVED)
@@ -286,7 +286,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  142              	.L11:
  143              		.align	2
  144              	.L10:
- 145 0024 74000F40 		.word	1074724980
+ 145 0024 75000F40 		.word	1074724981
  146 0028 00000000 		.word	.LANCHOR0
  147              		.cfi_endproc
  148              	.LFE3:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  154              		.thumb_func
  155              		.type	Timer_1_Wakeup, %function
  156              	Timer_1_Wakeup:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 6
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 6
 
 
  157              	.LFB4:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  181              	.L15:
  182              		.align	2
  183              	.L14:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 7
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 7
 
 
  184 0014 00000000 		.word	.LANCHOR0
@@ -385,48 +385,48 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  203 0006 00000000 		.4byte	.Ldebug_abbrev0
  204 000a 04       		.byte	0x4
  205 000b 01       		.uleb128 0x1
- 206 000c 95010000 		.4byte	.LASF32
+ 206 000c A4010000 		.4byte	.LASF32
  207 0010 0C       		.byte	0xc
- 208 0011 53020000 		.4byte	.LASF33
- 209 0015 26000000 		.4byte	.LASF34
+ 208 0011 62020000 		.4byte	.LASF33
+ 209 0015 AA000000 		.4byte	.LASF34
  210 0019 00000000 		.4byte	.Ldebug_ranges0+0
  211 001d 00000000 		.4byte	0
  212 0021 00000000 		.4byte	.Ldebug_line0
  213 0025 02       		.uleb128 0x2
  214 0026 01       		.byte	0x1
  215 0027 06       		.byte	0x6
- 216 0028 B4020000 		.4byte	.LASF0
+ 216 0028 C3020000 		.4byte	.LASF0
  217 002c 02       		.uleb128 0x2
  218 002d 01       		.byte	0x1
  219 002e 08       		.byte	0x8
- 220 002f B7000000 		.4byte	.LASF1
+ 220 002f 5B000000 		.4byte	.LASF1
  221 0033 02       		.uleb128 0x2
  222 0034 02       		.byte	0x2
  223 0035 05       		.byte	0x5
- 224 0036 86020000 		.4byte	.LASF2
+ 224 0036 95020000 		.4byte	.LASF2
  225 003a 02       		.uleb128 0x2
  226 003b 02       		.byte	0x2
  227 003c 07       		.byte	0x7
- 228 003d 82000000 		.4byte	.LASF3
+ 228 003d 26000000 		.4byte	.LASF3
  229 0041 02       		.uleb128 0x2
  230 0042 04       		.byte	0x4
  231 0043 05       		.byte	0x5
- 232 0044 90020000 		.4byte	.LASF4
+ 232 0044 9F020000 		.4byte	.LASF4
  233 0048 02       		.uleb128 0x2
  234 0049 04       		.byte	0x4
  235 004a 07       		.byte	0x7
- 236 004b CA000000 		.4byte	.LASF5
+ 236 004b 6E000000 		.4byte	.LASF5
  237 004f 02       		.uleb128 0x2
  238 0050 08       		.byte	0x8
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 8
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 8
 
 
  239 0051 05       		.byte	0x5
- 240 0052 2C020000 		.4byte	.LASF6
+ 240 0052 3B020000 		.4byte	.LASF6
  241 0056 02       		.uleb128 0x2
  242 0057 08       		.byte	0x8
  243 0058 07       		.byte	0x7
- 244 0059 53010000 		.4byte	.LASF7
+ 244 0059 62010000 		.4byte	.LASF7
  245 005d 03       		.uleb128 0x3
  246 005e 04       		.byte	0x4
  247 005f 05       		.byte	0x5
@@ -434,31 +434,31 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  249 0064 02       		.uleb128 0x2
  250 0065 04       		.byte	0x4
  251 0066 07       		.byte	0x7
- 252 0067 46010000 		.4byte	.LASF8
+ 252 0067 55010000 		.4byte	.LASF8
  253 006b 04       		.uleb128 0x4
- 254 006c EA000000 		.4byte	.LASF9
+ 254 006c 8E000000 		.4byte	.LASF9
  255 0070 02       		.byte	0x2
  256 0071 E401     		.2byte	0x1e4
  257 0073 2C000000 		.4byte	0x2c
  258 0077 04       		.uleb128 0x4
- 259 0078 23010000 		.4byte	.LASF10
+ 259 0078 32010000 		.4byte	.LASF10
  260 007c 02       		.byte	0x2
  261 007d E601     		.2byte	0x1e6
  262 007f 48000000 		.4byte	0x48
  263 0083 02       		.uleb128 0x2
  264 0084 04       		.byte	0x4
  265 0085 04       		.byte	0x4
- 266 0086 B1000000 		.4byte	.LASF11
+ 266 0086 55000000 		.4byte	.LASF11
  267 008a 02       		.uleb128 0x2
  268 008b 08       		.byte	0x8
  269 008c 04       		.byte	0x4
- 270 008d FF000000 		.4byte	.LASF12
+ 270 008d A3000000 		.4byte	.LASF12
  271 0091 02       		.uleb128 0x2
  272 0092 01       		.byte	0x1
  273 0093 08       		.byte	0x8
- 274 0094 3A020000 		.4byte	.LASF13
+ 274 0094 49020000 		.4byte	.LASF13
  275 0098 04       		.uleb128 0x4
- 276 0099 C5000000 		.4byte	.LASF14
+ 276 0099 69000000 		.4byte	.LASF14
  277 009d 02       		.byte	0x2
  278 009e 8E02     		.2byte	0x28e
  279 00a0 A4000000 		.4byte	0xa4
@@ -467,18 +467,18 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  282 00a9 02       		.uleb128 0x2
  283 00aa 08       		.byte	0x8
  284 00ab 04       		.byte	0x4
- 285 00ac A8020000 		.4byte	.LASF15
+ 285 00ac B7020000 		.4byte	.LASF15
  286 00b0 02       		.uleb128 0x2
  287 00b1 04       		.byte	0x4
  288 00b2 07       		.byte	0x7
- 289 00b3 23020000 		.4byte	.LASF16
+ 289 00b3 32020000 		.4byte	.LASF16
  290 00b7 06       		.uleb128 0x6
  291 00b8 0C       		.byte	0xc
  292 00b9 03       		.byte	0x3
  293 00ba 43       		.byte	0x43
  294 00bb F0000000 		.4byte	0xf0
  295 00bf 07       		.uleb128 0x7
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 9
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 9
 
 
  296 00c0 00000000 		.4byte	.LASF17
@@ -487,19 +487,19 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  299 00c6 6B000000 		.4byte	0x6b
  300 00ca 00       		.byte	0
  301 00cb 07       		.uleb128 0x7
- 302 00cc A8000000 		.4byte	.LASF18
+ 302 00cc 4C000000 		.4byte	.LASF18
  303 00d0 03       		.byte	0x3
  304 00d1 48       		.byte	0x48
  305 00d2 77000000 		.4byte	0x77
  306 00d6 04       		.byte	0x4
  307 00d7 07       		.uleb128 0x7
- 308 00d8 CD020000 		.4byte	.LASF19
+ 308 00d8 DC020000 		.4byte	.LASF19
  309 00dc 03       		.byte	0x3
  310 00dd 49       		.byte	0x49
  311 00de 6B000000 		.4byte	0x6b
  312 00e2 08       		.byte	0x8
  313 00e3 07       		.uleb128 0x7
- 314 00e4 E0020000 		.4byte	.LASF20
+ 314 00e4 EF020000 		.4byte	.LASF20
  315 00e8 03       		.byte	0x3
  316 00e9 4F       		.byte	0x4f
  317 00ea 6B000000 		.4byte	0x6b
@@ -511,7 +511,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  323 00f6 53       		.byte	0x53
  324 00f7 B7000000 		.4byte	0xb7
  325 00fb 09       		.uleb128 0x9
- 326 00fc 95000000 		.4byte	.LASF22
+ 326 00fc 39000000 		.4byte	.LASF22
  327 0100 01       		.byte	0x1
  328 0101 2B       		.byte	0x2b
  329 0102 00000000 		.4byte	.LFB1
@@ -527,7 +527,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  339 011e B7010000 		.4byte	0x1b7
  340 0122 00       		.byte	0
  341 0123 09       		.uleb128 0x9
- 342 0124 7F010000 		.4byte	.LASF23
+ 342 0124 8E010000 		.4byte	.LASF23
  343 0128 01       		.byte	0x1
  344 0129 4D       		.byte	0x4d
  345 012a 00000000 		.4byte	.LFB2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  350 0138 0A       		.uleb128 0xa
  351 0139 0A000000 		.4byte	.LVL2
  352 013d C2010000 		.4byte	0x1c2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 10
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 10
 
 
  353 0141 0A       		.uleb128 0xa
@@ -546,7 +546,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  355 0146 CD010000 		.4byte	0x1cd
  356 014a 00       		.byte	0
  357 014b 09       		.uleb128 0x9
- 358 014c DC000000 		.4byte	.LASF24
+ 358 014c 80000000 		.4byte	.LASF24
  359 0150 01       		.byte	0x1
  360 0151 70       		.byte	0x70
  361 0152 00000000 		.4byte	.LFB3
@@ -562,7 +562,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  371 016e FB000000 		.4byte	0xfb
  372 0172 00       		.byte	0
  373 0173 09       		.uleb128 0x9
- 374 0174 99020000 		.4byte	.LASF25
+ 374 0174 A8020000 		.4byte	.LASF25
  375 0178 01       		.byte	0x1
  376 0179 96       		.byte	0x96
  377 017a 00000000 		.4byte	.LFB4
@@ -578,7 +578,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  387 0196 E3010000 		.4byte	0x1e3
  388 019a 00       		.byte	0
  389 019b 0B       		.uleb128 0xb
- 390 019c 77020000 		.4byte	.LASF35
+ 390 019c 86020000 		.4byte	.LASF35
  391 01a0 01       		.byte	0x1
  392 01a1 15       		.byte	0x15
  393 01a2 F0000000 		.4byte	0xf0
@@ -586,36 +586,36 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  395 01a7 03       		.byte	0x3
  396 01a8 00000000 		.4byte	Timer_1_backup
  397 01ac 0C       		.uleb128 0xc
- 398 01ad 3F020000 		.4byte	.LASF26
- 399 01b1 3F020000 		.4byte	.LASF26
+ 398 01ad 4E020000 		.4byte	.LASF26
+ 399 01b1 4E020000 		.4byte	.LASF26
  400 01b5 03       		.byte	0x3
  401 01b6 69       		.byte	0x69
  402 01b7 0C       		.uleb128 0xc
- 403 01b8 2A010000 		.4byte	.LASF27
- 404 01bc 2A010000 		.4byte	.LASF27
+ 403 01b8 39010000 		.4byte	.LASF27
+ 404 01bc 39010000 		.4byte	.LASF27
  405 01c0 03       		.byte	0x3
  406 01c1 63       		.byte	0x63
  407 01c2 0C       		.uleb128 0xc
- 408 01c3 6A010000 		.4byte	.LASF28
- 409 01c7 6A010000 		.4byte	.LASF28
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 11
+ 408 01c3 79010000 		.4byte	.LASF28
+ 409 01c7 79010000 		.4byte	.LASF28
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 11
 
 
  410 01cb 03       		.byte	0x3
  411 01cc 6A       		.byte	0x6a
  412 01cd 0C       		.uleb128 0xc
- 413 01ce 06010000 		.4byte	.LASF29
- 414 01d2 06010000 		.4byte	.LASF29
+ 413 01ce 15010000 		.4byte	.LASF29
+ 414 01d2 15010000 		.4byte	.LASF29
  415 01d6 03       		.byte	0x3
  416 01d7 64       		.byte	0x64
  417 01d8 0C       		.uleb128 0xc
- 418 01d9 C0020000 		.4byte	.LASF30
- 419 01dd C0020000 		.4byte	.LASF30
+ 418 01d9 CF020000 		.4byte	.LASF30
+ 419 01dd CF020000 		.4byte	.LASF30
  420 01e1 03       		.byte	0x3
  421 01e2 5B       		.byte	0x5b
  422 01e3 0C       		.uleb128 0xc
- 423 01e4 F0000000 		.4byte	.LASF31
- 424 01e8 F0000000 		.4byte	.LASF31
+ 423 01e4 94000000 		.4byte	.LASF31
+ 424 01e8 94000000 		.4byte	.LASF31
  425 01ec 03       		.byte	0x3
  426 01ed 8B       		.byte	0x8b
  427 01ee 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  464 0022 0B       		.uleb128 0xb
  465 0023 3E       		.uleb128 0x3e
  466 0024 0B       		.uleb128 0xb
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 12
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 12
 
 
  467 0025 03       		.uleb128 0x3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  521 005b 00       		.byte	0
  522 005c 03       		.uleb128 0x3
  523 005d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 13
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 13
 
 
  524 005e 3A       		.uleb128 0x3a
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  578 0097 18       		.uleb128 0x18
  579 0098 00       		.byte	0
  580 0099 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 14
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 14
 
 
  581 009a 0C       		.uleb128 0xc
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  631      01010101 
  632              	.LASF17:
  633 0000 54696D65 		.ascii	"TimerEnableState\000"
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 15
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 15
 
 
  633      72456E61 
@@ -851,194 +851,198 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 1
  635      6261636B 
  635      75705374 
  635      72756374 
- 636              	.LASF34:
- 637 0026 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\GitHub\\Elec"
- 637      73657273 
- 637      5C617573 
- 637      74635C4F 
- 637      6E654472 
- 638 0053 74726F6E 		.ascii	"tronics2018-19\\Psoc Arm\\Motor Board Rev1.cydsn\000"
- 638      69637332 
- 638      3031382D 
- 638      31395C50 
- 638      736F6320 
- 639              	.LASF3:
- 640 0082 73686F72 		.ascii	"short unsigned int\000"
- 640      7420756E 
- 640      7369676E 
- 640      65642069 
- 640      6E7400
- 641              	.LASF22:
- 642 0095 54696D65 		.ascii	"Timer_1_SaveConfig\000"
- 642      725F315F 
- 642      53617665 
- 642      436F6E66 
- 642      696700
- 643              	.LASF18:
- 644 00a8 54696D65 		.ascii	"TimerUdb\000"
- 644      72556462 
- 644      00
- 645              	.LASF11:
- 646 00b1 666C6F61 		.ascii	"float\000"
- 646      7400
- 647              	.LASF1:
- 648 00b7 756E7369 		.ascii	"unsigned char\000"
- 648      676E6564 
- 648      20636861 
- 648      7200
- 649              	.LASF14:
- 650 00c5 72656738 		.ascii	"reg8\000"
- 650      00
- 651              	.LASF5:
- 652 00ca 6C6F6E67 		.ascii	"long unsigned int\000"
- 652      20756E73 
- 652      69676E65 
- 652      6420696E 
- 652      7400
- 653              	.LASF24:
- 654 00dc 54696D65 		.ascii	"Timer_1_Sleep\000"
- 654      725F315F 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 16
+ 636              	.LASF3:
+ 637 0026 73686F72 		.ascii	"short unsigned int\000"
+ 637      7420756E 
+ 637      7369676E 
+ 637      65642069 
+ 637      6E7400
+ 638              	.LASF22:
+ 639 0039 54696D65 		.ascii	"Timer_1_SaveConfig\000"
+ 639      725F315F 
+ 639      53617665 
+ 639      436F6E66 
+ 639      696700
+ 640              	.LASF18:
+ 641 004c 54696D65 		.ascii	"TimerUdb\000"
+ 641      72556462 
+ 641      00
+ 642              	.LASF11:
+ 643 0055 666C6F61 		.ascii	"float\000"
+ 643      7400
+ 644              	.LASF1:
+ 645 005b 756E7369 		.ascii	"unsigned char\000"
+ 645      676E6564 
+ 645      20636861 
+ 645      7200
+ 646              	.LASF14:
+ 647 0069 72656738 		.ascii	"reg8\000"
+ 647      00
+ 648              	.LASF5:
+ 649 006e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 649      20756E73 
+ 649      69676E65 
+ 649      6420696E 
+ 649      7400
+ 650              	.LASF24:
+ 651 0080 54696D65 		.ascii	"Timer_1_Sleep\000"
+ 651      725F315F 
+ 651      536C6565 
+ 651      7000
+ 652              	.LASF9:
+ 653 008e 75696E74 		.ascii	"uint8\000"
+ 653      3800
+ 654              	.LASF31:
+ 655 0094 54696D65 		.ascii	"Timer_1_Enable\000"
+ 655      725F315F 
+ 655      456E6162 
+ 655      6C6500
+ 656              	.LASF12:
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 16
 
 
- 654      536C6565 
- 654      7000
- 655              	.LASF9:
- 656 00ea 75696E74 		.ascii	"uint8\000"
- 656      3800
- 657              	.LASF31:
- 658 00f0 54696D65 		.ascii	"Timer_1_Enable\000"
- 658      725F315F 
- 658      456E6162 
- 658      6C6500
- 659              	.LASF12:
- 660 00ff 646F7562 		.ascii	"double\000"
- 660      6C6500
- 661              	.LASF29:
- 662 0106 54696D65 		.ascii	"Timer_1_WriteControlRegister\000"
- 662      725F315F 
- 662      57726974 
- 662      65436F6E 
- 662      74726F6C 
- 663              	.LASF10:
- 664 0123 75696E74 		.ascii	"uint32\000"
- 664      333200
- 665              	.LASF27:
- 666 012a 54696D65 		.ascii	"Timer_1_ReadControlRegister\000"
- 666      725F315F 
- 666      52656164 
- 666      436F6E74 
- 666      726F6C52 
- 667              	.LASF8:
- 668 0146 756E7369 		.ascii	"unsigned int\000"
- 668      676E6564 
- 668      20696E74 
- 668      00
- 669              	.LASF7:
- 670 0153 6C6F6E67 		.ascii	"long long unsigned int\000"
- 670      206C6F6E 
- 670      6720756E 
- 670      7369676E 
- 670      65642069 
- 671              	.LASF28:
- 672 016a 54696D65 		.ascii	"Timer_1_WriteCounter\000"
- 672      725F315F 
- 672      57726974 
- 672      65436F75 
- 672      6E746572 
- 673              	.LASF23:
- 674 017f 54696D65 		.ascii	"Timer_1_RestoreConfig\000"
- 674      725F315F 
- 674      52657374 
- 674      6F726543 
- 674      6F6E6669 
- 675              	.LASF32:
- 676 0195 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 676      43313120 
- 676      352E342E 
- 676      31203230 
- 676      31363036 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 17
+ 657 00a3 646F7562 		.ascii	"double\000"
+ 657      6C6500
+ 658              	.LASF34:
+ 659 00aa 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
+ 659      73657273 
+ 659      5C617573 
+ 659      74635C4F 
+ 659      6E654472 
+ 660 00d7 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Motor Boar"
+ 660      69742D46 
+ 660      69726D77 
+ 660      6172652D 
+ 660      412D3230 
+ 661 0108 64205265 		.ascii	"d Rev1.cydsn\000"
+ 661      76312E63 
+ 661      7964736E 
+ 661      00
+ 662              	.LASF29:
+ 663 0115 54696D65 		.ascii	"Timer_1_WriteControlRegister\000"
+ 663      725F315F 
+ 663      57726974 
+ 663      65436F6E 
+ 663      74726F6C 
+ 664              	.LASF10:
+ 665 0132 75696E74 		.ascii	"uint32\000"
+ 665      333200
+ 666              	.LASF27:
+ 667 0139 54696D65 		.ascii	"Timer_1_ReadControlRegister\000"
+ 667      725F315F 
+ 667      52656164 
+ 667      436F6E74 
+ 667      726F6C52 
+ 668              	.LASF8:
+ 669 0155 756E7369 		.ascii	"unsigned int\000"
+ 669      676E6564 
+ 669      20696E74 
+ 669      00
+ 670              	.LASF7:
+ 671 0162 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 671      206C6F6E 
+ 671      6720756E 
+ 671      7369676E 
+ 671      65642069 
+ 672              	.LASF28:
+ 673 0179 54696D65 		.ascii	"Timer_1_WriteCounter\000"
+ 673      725F315F 
+ 673      57726974 
+ 673      65436F75 
+ 673      6E746572 
+ 674              	.LASF23:
+ 675 018e 54696D65 		.ascii	"Timer_1_RestoreConfig\000"
+ 675      725F315F 
+ 675      52657374 
+ 675      6F726543 
+ 675      6F6E6669 
+ 676              	.LASF32:
+ 677 01a4 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 17
 
 
- 677 01c8 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 677      20726576 
- 677      6973696F 
- 677      6E203233 
- 677      37373135 
- 678 01fb 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 678      66756E63 
- 678      74696F6E 
- 678      2D736563 
- 678      74696F6E 
- 679              	.LASF16:
- 680 0223 73697A65 		.ascii	"sizetype\000"
- 680      74797065 
- 680      00
- 681              	.LASF6:
- 682 022c 6C6F6E67 		.ascii	"long long int\000"
- 682      206C6F6E 
- 682      6720696E 
- 682      7400
- 683              	.LASF13:
- 684 023a 63686172 		.ascii	"char\000"
- 684      00
- 685              	.LASF26:
- 686 023f 54696D65 		.ascii	"Timer_1_ReadCounter\000"
- 686      725F315F 
- 686      52656164 
- 686      436F756E 
- 686      74657200 
- 687              	.LASF33:
- 688 0253 47656E65 		.ascii	"Generated_Source\\PSoC4\\Timer_1_PM.c\000"
- 688      72617465 
- 688      645F536F 
- 688      75726365 
- 688      5C50536F 
- 689              	.LASF35:
- 690 0277 54696D65 		.ascii	"Timer_1_backup\000"
- 690      725F315F 
- 690      6261636B 
- 690      757000
- 691              	.LASF2:
- 692 0286 73686F72 		.ascii	"short int\000"
- 692      7420696E 
- 692      7400
- 693              	.LASF4:
- 694 0290 6C6F6E67 		.ascii	"long int\000"
- 694      20696E74 
- 694      00
- 695              	.LASF25:
- 696 0299 54696D65 		.ascii	"Timer_1_Wakeup\000"
- 696      725F315F 
- 696      57616B65 
- 696      757000
- 697              	.LASF15:
- 698 02a8 6C6F6E67 		.ascii	"long double\000"
- 698      20646F75 
- 698      626C6500 
- 699              	.LASF0:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccRedOWs.s 			page 18
+ 677      43313120 
+ 677      352E342E 
+ 677      31203230 
+ 677      31363036 
+ 678 01d7 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 678      20726576 
+ 678      6973696F 
+ 678      6E203233 
+ 678      37373135 
+ 679 020a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 679      66756E63 
+ 679      74696F6E 
+ 679      2D736563 
+ 679      74696F6E 
+ 680              	.LASF16:
+ 681 0232 73697A65 		.ascii	"sizetype\000"
+ 681      74797065 
+ 681      00
+ 682              	.LASF6:
+ 683 023b 6C6F6E67 		.ascii	"long long int\000"
+ 683      206C6F6E 
+ 683      6720696E 
+ 683      7400
+ 684              	.LASF13:
+ 685 0249 63686172 		.ascii	"char\000"
+ 685      00
+ 686              	.LASF26:
+ 687 024e 54696D65 		.ascii	"Timer_1_ReadCounter\000"
+ 687      725F315F 
+ 687      52656164 
+ 687      436F756E 
+ 687      74657200 
+ 688              	.LASF33:
+ 689 0262 47656E65 		.ascii	"Generated_Source\\PSoC4\\Timer_1_PM.c\000"
+ 689      72617465 
+ 689      645F536F 
+ 689      75726365 
+ 689      5C50536F 
+ 690              	.LASF35:
+ 691 0286 54696D65 		.ascii	"Timer_1_backup\000"
+ 691      725F315F 
+ 691      6261636B 
+ 691      757000
+ 692              	.LASF2:
+ 693 0295 73686F72 		.ascii	"short int\000"
+ 693      7420696E 
+ 693      7400
+ 694              	.LASF4:
+ 695 029f 6C6F6E67 		.ascii	"long int\000"
+ 695      20696E74 
+ 695      00
+ 696              	.LASF25:
+ 697 02a8 54696D65 		.ascii	"Timer_1_Wakeup\000"
+ 697      725F315F 
+ 697      57616B65 
+ 697      757000
+ 698              	.LASF15:
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccOaJvww.s 			page 18
 
 
- 700 02b4 7369676E 		.ascii	"signed char\000"
- 700      65642063 
- 700      68617200 
- 701              	.LASF30:
- 702 02c0 54696D65 		.ascii	"Timer_1_Stop\000"
- 702      725F315F 
- 702      53746F70 
- 702      00
- 703              	.LASF19:
- 704 02cd 496E7465 		.ascii	"InterruptMaskValue\000"
- 704      72727570 
- 704      744D6173 
- 704      6B56616C 
- 704      756500
- 705              	.LASF20:
- 706 02e0 54696D65 		.ascii	"TimerControlRegister\000"
- 706      72436F6E 
- 706      74726F6C 
- 706      52656769 
- 706      73746572 
- 707              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 699 02b7 6C6F6E67 		.ascii	"long double\000"
+ 699      20646F75 
+ 699      626C6500 
+ 700              	.LASF0:
+ 701 02c3 7369676E 		.ascii	"signed char\000"
+ 701      65642063 
+ 701      68617200 
+ 702              	.LASF30:
+ 703 02cf 54696D65 		.ascii	"Timer_1_Stop\000"
+ 703      725F315F 
+ 703      53746F70 
+ 703      00
+ 704              	.LASF19:
+ 705 02dc 496E7465 		.ascii	"InterruptMaskValue\000"
+ 705      72727570 
+ 705      744D6173 
+ 705      6B56616C 
+ 705      756500
+ 706              	.LASF20:
+ 707 02ef 54696D65 		.ascii	"TimerControlRegister\000"
+ 707      72436F6E 
+ 707      74726F6C 
+ 707      52656769 
+ 707      73746572 
+ 708              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
