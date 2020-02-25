@@ -9,6 +9,19 @@
  *
  * ========================================
 */
+
+//PID varaibles
+int8 flipEncoder = 1;
+int16 final_angle = 0;
+int i = 0;
+int lastp = 0;
+int kp;
+int ki;
+int kd;
+double ratio;
+uint8 complete = 0;
+uint8 maxV = 0;
+
 void set_Position(int16 degrees) {
     if(uart_debug) {
         sprintf(txData, "complete: %d\r\n",complete);

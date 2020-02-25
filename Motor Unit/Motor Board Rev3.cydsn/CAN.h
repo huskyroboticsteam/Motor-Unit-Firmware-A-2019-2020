@@ -9,5 +9,11 @@
  *
  * ========================================
 */
+#ifndef CAN
+#define CAN
+    #include <stdio.h>
+    #include <project.h>
+    
+#endif
 
 /* [] END OF FILE */

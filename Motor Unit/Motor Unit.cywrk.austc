@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Motor Unit\Motor Board Rev1\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Motor Unit\Motor Board Rev2\Motor Board Rev2.cydwr">
 <ExpandedNodeIds>
 <v>Motor Unit</v>
 <v>Motor Unit\Motor Board Rev1</v>
@@ -22,7 +22,10 @@
 <v>Motor Unit\Motor Board Rev2</v>
 <v>Motor Unit\Motor Board Rev2\TopDesign</v>
 <v>Motor Unit\Motor Board Rev2\Source Files</v>
+<v>Motor Unit\Motor Board Rev3</v>
 <v>Motor Unit\Motor Board Rev3\TopDesign</v>
+<v>Motor Unit\Motor Board Rev3\Header Files</v>
+<v>Motor Unit\Motor Board Rev3\Source Files</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Motor Unit</v>
@@ -41,6 +44,20 @@
 <v>Motor Unit\Motor Board Rev2\Source Files\main.c</v>
 <v>Motor Unit\Motor Board Rev2\Generated_Source</v>
 <v>Motor Unit\Motor Board Rev3</v>
+<v>Motor Unit\Motor Board Rev3\TopDesign</v>
+<v>Motor Unit\Motor Board Rev3\Motor Board Rev3.cydwr</v>
+<v>Motor Unit\Motor Board Rev3\Header Files</v>
+<v>Motor Unit\Motor Board Rev3\Header Files\CAN.h</v>
+<v>Motor Unit\Motor Board Rev3\Header Files\cyapicallbacks.h</v>
+<v>Motor Unit\Motor Board Rev3\Header Files\Initialize_CAN_addr.h</v>
+<v>Motor Unit\Motor Board Rev3\Header Files\MotorDrive.h</v>
+<v>Motor Unit\Motor Board Rev3\Header Files\PositionPID.h</v>
+<v>Motor Unit\Motor Board Rev3\Source Files</v>
+<v>Motor Unit\Motor Board Rev3\Source Files\CAN.c</v>
+<v>Motor Unit\Motor Board Rev3\Source Files\Initialize_CAN_addr.c</v>
+<v>Motor Unit\Motor Board Rev3\Source Files\main.c</v>
+<v>Motor Unit\Motor Board Rev3\Source Files\MotorDrive.c</v>
+<v>Motor Unit\Motor Board Rev3\Source Files\PositionPID.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Motor Unit\Motor Board Rev1\TopDesign\TopDesign.cysch">
@@ -350,7 +367,6 @@
 <v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\Dip_1.lst</v>
 <v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\Dip_1_PM.lst</v>
 <v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\Dip_2.lst</v>
-<v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\Dip_2_PM.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -486,7 +502,6 @@
 <v>Motor Unit\Motor Board Rev1\TCPWM_P4_v2_10.pdf</v>
 <v>Motor Unit\Motor Board Rev1\Timer_v2_80.pdf</v>
 <v>Motor Unit\Motor Board Rev1\ZeroTerminal.pdf</v>
-<v>Motor Unit\Motor Board Rev2</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -501,22 +516,18 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Motor Board Rev3.cydsn\MotorDrive.c" />
-<name v=".\Motor Board Rev3.cydsn\MotorDrive.h" />
-<name v=".\Motor Board Rev3.cydsn\main.c" />
-<name v=".\Motor Board Rev3.cydsn\Initialize_CAN_addr.c" />
-<name v=".\Motor Board Rev3.cydsn\Initialize_CAN_addr.h" />
-<name v=".\Motor Board Rev3.cydsn\Motor Board Rev3.cydwr" />
-<name v=".\Motor Board Rev3.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Motor Board Rev3.cydsn\SendCAN.c" />
-<name v=".\Motor Board Rev3.cydsn\Generated_Source\PSoC4\CAN.h" />
-<name v=".\Motor Board Rev3.cydsn\PositionPID.c" />
-<name v=".\Motor Board Rev2.cydsn\main.c" />
-<name v=".\Motor Board Rev2.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Motor Board Rev2.cydsn\Motor Board Rev2.cydwr" />
-<name v=".\Motor Board Rev1.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Motor Board Rev1.cydsn\Motor Board Rev1.cydwr" />
 <name v=".\Motor Board Rev1.cydsn\main.c" />
+<name v=".\Motor Board Rev3.cydsn\main.c" />
+<name v=".\Motor Board Rev3.cydsn\MotorDrive.c" />
+<name v=".\Motor Board Rev3.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Motor Board Rev3.cydsn\Initialize_CAN_addr.c" />
+<name v=".\Motor Board Rev3.cydsn\CAN.c" />
+<name v=".\Motor Board Rev3.cydsn\PositionPID.c" />
+<name v=".\Motor Board Rev3.cydsn\CAN.h" />
+<name v=".\Motor Board Rev3.cydsn\Initialize_CAN_addr.h" />
+<name v=".\Motor Board Rev3.cydsn\MotorDrive.h" />
+<name v=".\Motor Board Rev3.cydsn\PositionPID.h" />
+<name v=".\Motor Board Rev3.cydsn\cyapicallbacks.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -524,7 +535,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="986, 612" SelectedTabbedMdiWindow="84feb4a7-055c-4dcf-b085-19689dd14c74"><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\MotorDrive.c" Guid="273398bc-c1aa-443d-b2e3-40596fc4e6e2" /><ToolWindow Key="Output Window Plugin:7305390e-eabe-4963-b21f-3a0f11b4b1d5:Output Window" Guid="65a2808c-7838-423a-a6c5-f3e50ff64fe6" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\MotorDrive.h" Guid="a347fa39-efb7-4785-b8d1-3a5932d1c00b" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\main.c" Guid="33bd32f5-7db1-4ff5-bef2-840c4ff94883" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="5b7b8485-d0ab-4e37-a0a7-90eeea460fea" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\Initialize_CAN_addr.c" Guid="689e6b93-2eb8-4f9b-9b29-c6b1489e454b" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\Initialize_CAN_addr.h" Guid="77d3d5c2-2897-41eb-b2f9-fd84d6cdcc1b" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\Motor Board Rev3.cydwr" Guid="398b21f2-6fdd-4ccd-8dd1-036b0cfc45f5" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\TopDesign\TopDesign.cysch" Guid="d603d320-fcf8-4770-b127-e49a9e29abf6" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\SendCAN.c" Guid="7666a3af-5993-48d0-b051-42ae3a94deca" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\Generated_Source\PSoC4\CAN.h" Guid="1947c499-38d3-445b-ac63-0ebf567566ed" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\PositionPID.c" Guid="8a6133fa-ad59-480c-9dbd-cb0e1661eb6d" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn\main.c" Guid="e8577095-3dab-4787-be54-996e5c7e5667" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn\TopDesign\TopDesign.cysch" Guid="d231d47d-0a05-4b60-a132-661713bb0e78" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn\Motor Board Rev2.cydwr" Guid="c5362d2f-e505-4bbb-93c8-0754d6289b54" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev1.cydsn\TopDesign\TopDesign.cysch" Guid="84feb4a7-055c-4dcf-b085-19689dd14c74" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev1.cydsn\Motor Board Rev1.cydwr" Guid="fb0289ff-466a-4419-91d8-78e58bfec846" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev1.cydsn\main.c" Guid="01329a7e-f098-4590-9d99-b92e1b5e8da1" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="970, 596" SelectedTabbedMdiWindow="81f74ffc-bdd3-4725-8712-91fe8594b9ec"><ToolWindow Key="Output Window Plugin:7305390e-eabe-4963-b21f-3a0f11b4b1d5:Output Window" Guid="65a2808c-7838-423a-a6c5-f3e50ff64fe6" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="5b7b8485-d0ab-4e37-a0a7-90eeea460fea" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev1.cydsn\main.c" Guid="5020dfc8-5e26-4d58-a7e6-ddf248f5c4d0" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\main.c" Guid="74ccbb97-b24e-4c2f-8044-7daf7f8b89d2" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\MotorDrive.c" Guid="d5daf9b1-7013-4e04-94da-cf7945f04796" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\TopDesign\TopDesign.cysch" Guid="a14d74e0-083b-4294-976b-395ef6603a18" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\Initialize_CAN_addr.c" Guid="81f74ffc-bdd3-4725-8712-91fe8594b9ec" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\CAN.c" Guid="73055b95-ca50-47b4-8e61-ee954ba51125" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\PositionPID.c" Guid="f5b9ade3-a598-4996-9406-7fdd4457c394" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\CAN.h" Guid="bcc41f62-f21d-4557-8afc-363d318f5344" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\Initialize_CAN_addr.h" Guid="2508bd9c-8160-4e32-a723-76b0808ee960" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\MotorDrive.h" Guid="f8859bb7-a553-43e1-8cca-86ad42501aaf" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\PositionPID.h" Guid="d7f16ded-d093-492a-9ce2-4e7f004d31a0" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev3.cydsn\cyapicallbacks.h" Guid="8596e0b9-6613-43b4-bf4d-c1d5ad2566df" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -22,10 +22,6 @@ extern char8 txData[TX_DATA_SIZE];
 
 // takes between -255 and 255
 void set_PWM(int compare, uint8_t disable_limit, uint8 limitSW) {
-    #ifdef REV2
-    compare = -compare;
-    #endif
-    int pwm_compare = compare;
     if(uart_debug) {
         sprintf(txData, "PWM:%d disable_limit: %d\r\n",compare,disable_limit);
         UART_UartPutString(txData); 
@@ -40,7 +36,6 @@ void set_PWM(int compare, uint8_t disable_limit, uint8 limitSW) {
         PWM_Motor_WriteCompare(compare);
     } else {
         PWM_Motor_WriteCompare(0);
-        
     }
 }
 /* [] END OF FILE */
