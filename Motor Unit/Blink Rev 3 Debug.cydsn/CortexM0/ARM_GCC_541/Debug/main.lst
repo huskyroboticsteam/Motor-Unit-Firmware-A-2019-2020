@@ -1,0 +1,520 @@
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccbMDmXZ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB34:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** 
+  14:main.c        **** int main(void)
+  15:main.c        **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 10B5     		push	{r4, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 4, -8
+  36              		.cfi_offset 14, -4
+  16:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  37              		.loc 1 16 0
+  38              		.syntax divided
+  39              	@ 16 "main.c" 1
+  40 0002 62B6     		CPSIE   i
+  41              	@ 0 "" 2
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccbMDmXZ.s 			page 2
+
+
+  42              		.thumb
+  43              		.syntax unified
+  44              	.L2:
+  17:main.c        **** 
+  18:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  19:main.c        **** 
+  20:main.c        ****     for(;;)
+  21:main.c        ****     {
+  22:main.c        ****         Debug_1_Write(~Debug_1_Read());
+  45              		.loc 1 22 0 discriminator 1
+  46 0004 FFF7FEFF 		bl	Debug_1_Read
+  47              	.LVL0:
+  48 0008 C043     		mvns	r0, r0
+  49 000a C0B2     		uxtb	r0, r0
+  50 000c FFF7FEFF 		bl	Debug_1_Write
+  51              	.LVL1:
+  23:main.c        ****         Debug_2_Write(~Debug_2_Read());
+  52              		.loc 1 23 0 discriminator 1
+  53 0010 FFF7FEFF 		bl	Debug_2_Read
+  54              	.LVL2:
+  55 0014 C043     		mvns	r0, r0
+  56 0016 C0B2     		uxtb	r0, r0
+  57 0018 FFF7FEFF 		bl	Debug_2_Write
+  58              	.LVL3:
+  24:main.c        ****         CyDelay(100);
+  59              		.loc 1 24 0 discriminator 1
+  60 001c 6420     		movs	r0, #100
+  61 001e FFF7FEFF 		bl	CyDelay
+  62              	.LVL4:
+  63 0022 EFE7     		b	.L2
+  64              		.cfi_endproc
+  65              	.LFE34:
+  66              		.size	main, .-main
+  67              		.text
+  68              	.Letext0:
+  69              		.file 2 "Generated_Source\\PSoC4/Debug_1.h"
+  70              		.file 3 "Generated_Source\\PSoC4/Debug_2.h"
+  71              		.file 4 "Generated_Source\\PSoC4/CyLib.h"
+  72              		.section	.debug_info,"",%progbits
+  73              	.Ldebug_info0:
+  74 0000 10010000 		.4byte	0x110
+  75 0004 0400     		.2byte	0x4
+  76 0006 00000000 		.4byte	.Ldebug_abbrev0
+  77 000a 04       		.byte	0x4
+  78 000b 01       		.uleb128 0x1
+  79 000c 23010000 		.4byte	.LASF19
+  80 0010 0C       		.byte	0xc
+  81 0011 1A000000 		.4byte	.LASF20
+  82 0015 7E000000 		.4byte	.LASF21
+  83 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  84 001d 00000000 		.4byte	0
+  85 0021 00000000 		.4byte	.Ldebug_line0
+  86 0025 02       		.uleb128 0x2
+  87 0026 01       		.byte	0x1
+  88 0027 06       		.byte	0x6
+  89 0028 C4010000 		.4byte	.LASF0
+  90 002c 02       		.uleb128 0x2
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccbMDmXZ.s 			page 3
+
+
+  91 002d 01       		.byte	0x1
+  92 002e 08       		.byte	0x8
+  93 002f 6B000000 		.4byte	.LASF1
+  94 0033 02       		.uleb128 0x2
+  95 0034 02       		.byte	0x2
+  96 0035 05       		.byte	0x5
+  97 0036 DC010000 		.4byte	.LASF2
+  98 003a 02       		.uleb128 0x2
+  99 003b 02       		.byte	0x2
+ 100 003c 07       		.byte	0x7
+ 101 003d B1010000 		.4byte	.LASF3
+ 102 0041 02       		.uleb128 0x2
+ 103 0042 04       		.byte	0x4
+ 104 0043 05       		.byte	0x5
+ 105 0044 F7000000 		.4byte	.LASF4
+ 106 0048 02       		.uleb128 0x2
+ 107 0049 04       		.byte	0x4
+ 108 004a 07       		.byte	0x7
+ 109 004b 2E000000 		.4byte	.LASF5
+ 110 004f 02       		.uleb128 0x2
+ 111 0050 08       		.byte	0x8
+ 112 0051 05       		.byte	0x5
+ 113 0052 15010000 		.4byte	.LASF6
+ 114 0056 02       		.uleb128 0x2
+ 115 0057 08       		.byte	0x8
+ 116 0058 07       		.byte	0x7
+ 117 0059 40000000 		.4byte	.LASF7
+ 118 005d 03       		.uleb128 0x3
+ 119 005e 04       		.byte	0x4
+ 120 005f 05       		.byte	0x5
+ 121 0060 696E7400 		.ascii	"int\000"
+ 122 0064 02       		.uleb128 0x2
+ 123 0065 04       		.byte	0x4
+ 124 0066 07       		.byte	0x7
+ 125 0067 0D000000 		.4byte	.LASF8
+ 126 006b 02       		.uleb128 0x2
+ 127 006c 04       		.byte	0x4
+ 128 006d 04       		.byte	0x4
+ 129 006e 57000000 		.4byte	.LASF9
+ 130 0072 02       		.uleb128 0x2
+ 131 0073 08       		.byte	0x8
+ 132 0074 04       		.byte	0x4
+ 133 0075 0E010000 		.4byte	.LASF10
+ 134 0079 02       		.uleb128 0x2
+ 135 007a 01       		.byte	0x1
+ 136 007b 08       		.byte	0x8
+ 137 007c 79000000 		.4byte	.LASF11
+ 138 0080 02       		.uleb128 0x2
+ 139 0081 04       		.byte	0x4
+ 140 0082 07       		.byte	0x7
+ 141 0083 E6010000 		.4byte	.LASF12
+ 142 0087 02       		.uleb128 0x2
+ 143 0088 08       		.byte	0x8
+ 144 0089 04       		.byte	0x4
+ 145 008a D0010000 		.4byte	.LASF13
+ 146 008e 04       		.uleb128 0x4
+ 147 008f 21000000 		.4byte	.LASF22
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccbMDmXZ.s 			page 4
+
+
+ 148 0093 01       		.byte	0x1
+ 149 0094 0E       		.byte	0xe
+ 150 0095 5D000000 		.4byte	0x5d
+ 151 0099 00000000 		.4byte	.LFB34
+ 152 009d 24000000 		.4byte	.LFE34-.LFB34
+ 153 00a1 01       		.uleb128 0x1
+ 154 00a2 9C       		.byte	0x9c
+ 155 00a3 DC000000 		.4byte	0xdc
+ 156 00a7 05       		.uleb128 0x5
+ 157 00a8 08000000 		.4byte	.LVL0
+ 158 00ac DC000000 		.4byte	0xdc
+ 159 00b0 05       		.uleb128 0x5
+ 160 00b1 10000000 		.4byte	.LVL1
+ 161 00b5 E7000000 		.4byte	0xe7
+ 162 00b9 05       		.uleb128 0x5
+ 163 00ba 14000000 		.4byte	.LVL2
+ 164 00be F2000000 		.4byte	0xf2
+ 165 00c2 05       		.uleb128 0x5
+ 166 00c3 1C000000 		.4byte	.LVL3
+ 167 00c7 FD000000 		.4byte	0xfd
+ 168 00cb 06       		.uleb128 0x6
+ 169 00cc 22000000 		.4byte	.LVL4
+ 170 00d0 08010000 		.4byte	0x108
+ 171 00d4 07       		.uleb128 0x7
+ 172 00d5 01       		.uleb128 0x1
+ 173 00d6 50       		.byte	0x50
+ 174 00d7 02       		.uleb128 0x2
+ 175 00d8 08       		.byte	0x8
+ 176 00d9 64       		.byte	0x64
+ 177 00da 00       		.byte	0
+ 178 00db 00       		.byte	0
+ 179 00dc 08       		.uleb128 0x8
+ 180 00dd EA000000 		.4byte	.LASF14
+ 181 00e1 EA000000 		.4byte	.LASF14
+ 182 00e5 02       		.byte	0x2
+ 183 00e6 32       		.byte	0x32
+ 184 00e7 08       		.uleb128 0x8
+ 185 00e8 5D000000 		.4byte	.LASF15
+ 186 00ec 5D000000 		.4byte	.LASF15
+ 187 00f0 02       		.byte	0x2
+ 188 00f1 33       		.byte	0x33
+ 189 00f2 08       		.uleb128 0x8
+ 190 00f3 00000000 		.4byte	.LASF16
+ 191 00f7 00000000 		.4byte	.LASF16
+ 192 00fb 03       		.byte	0x3
+ 193 00fc 32       		.byte	0x32
+ 194 00fd 08       		.uleb128 0x8
+ 195 00fe 00010000 		.4byte	.LASF17
+ 196 0102 00010000 		.4byte	.LASF17
+ 197 0106 03       		.byte	0x3
+ 198 0107 33       		.byte	0x33
+ 199 0108 08       		.uleb128 0x8
+ 200 0109 26000000 		.4byte	.LASF18
+ 201 010d 26000000 		.4byte	.LASF18
+ 202 0111 04       		.byte	0x4
+ 203 0112 D9       		.byte	0xd9
+ 204 0113 00       		.byte	0
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccbMDmXZ.s 			page 5
+
+
+ 205              		.section	.debug_abbrev,"",%progbits
+ 206              	.Ldebug_abbrev0:
+ 207 0000 01       		.uleb128 0x1
+ 208 0001 11       		.uleb128 0x11
+ 209 0002 01       		.byte	0x1
+ 210 0003 25       		.uleb128 0x25
+ 211 0004 0E       		.uleb128 0xe
+ 212 0005 13       		.uleb128 0x13
+ 213 0006 0B       		.uleb128 0xb
+ 214 0007 03       		.uleb128 0x3
+ 215 0008 0E       		.uleb128 0xe
+ 216 0009 1B       		.uleb128 0x1b
+ 217 000a 0E       		.uleb128 0xe
+ 218 000b 55       		.uleb128 0x55
+ 219 000c 17       		.uleb128 0x17
+ 220 000d 11       		.uleb128 0x11
+ 221 000e 01       		.uleb128 0x1
+ 222 000f 10       		.uleb128 0x10
+ 223 0010 17       		.uleb128 0x17
+ 224 0011 00       		.byte	0
+ 225 0012 00       		.byte	0
+ 226 0013 02       		.uleb128 0x2
+ 227 0014 24       		.uleb128 0x24
+ 228 0015 00       		.byte	0
+ 229 0016 0B       		.uleb128 0xb
+ 230 0017 0B       		.uleb128 0xb
+ 231 0018 3E       		.uleb128 0x3e
+ 232 0019 0B       		.uleb128 0xb
+ 233 001a 03       		.uleb128 0x3
+ 234 001b 0E       		.uleb128 0xe
+ 235 001c 00       		.byte	0
+ 236 001d 00       		.byte	0
+ 237 001e 03       		.uleb128 0x3
+ 238 001f 24       		.uleb128 0x24
+ 239 0020 00       		.byte	0
+ 240 0021 0B       		.uleb128 0xb
+ 241 0022 0B       		.uleb128 0xb
+ 242 0023 3E       		.uleb128 0x3e
+ 243 0024 0B       		.uleb128 0xb
+ 244 0025 03       		.uleb128 0x3
+ 245 0026 08       		.uleb128 0x8
+ 246 0027 00       		.byte	0
+ 247 0028 00       		.byte	0
+ 248 0029 04       		.uleb128 0x4
+ 249 002a 2E       		.uleb128 0x2e
+ 250 002b 01       		.byte	0x1
+ 251 002c 3F       		.uleb128 0x3f
+ 252 002d 19       		.uleb128 0x19
+ 253 002e 03       		.uleb128 0x3
+ 254 002f 0E       		.uleb128 0xe
+ 255 0030 3A       		.uleb128 0x3a
+ 256 0031 0B       		.uleb128 0xb
+ 257 0032 3B       		.uleb128 0x3b
+ 258 0033 0B       		.uleb128 0xb
+ 259 0034 27       		.uleb128 0x27
+ 260 0035 19       		.uleb128 0x19
+ 261 0036 49       		.uleb128 0x49
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccbMDmXZ.s 			page 6
+
+
+ 262 0037 13       		.uleb128 0x13
+ 263 0038 8701     		.uleb128 0x87
+ 264 003a 19       		.uleb128 0x19
+ 265 003b 11       		.uleb128 0x11
+ 266 003c 01       		.uleb128 0x1
+ 267 003d 12       		.uleb128 0x12
+ 268 003e 06       		.uleb128 0x6
+ 269 003f 40       		.uleb128 0x40
+ 270 0040 18       		.uleb128 0x18
+ 271 0041 9742     		.uleb128 0x2117
+ 272 0043 19       		.uleb128 0x19
+ 273 0044 01       		.uleb128 0x1
+ 274 0045 13       		.uleb128 0x13
+ 275 0046 00       		.byte	0
+ 276 0047 00       		.byte	0
+ 277 0048 05       		.uleb128 0x5
+ 278 0049 898201   		.uleb128 0x4109
+ 279 004c 00       		.byte	0
+ 280 004d 11       		.uleb128 0x11
+ 281 004e 01       		.uleb128 0x1
+ 282 004f 31       		.uleb128 0x31
+ 283 0050 13       		.uleb128 0x13
+ 284 0051 00       		.byte	0
+ 285 0052 00       		.byte	0
+ 286 0053 06       		.uleb128 0x6
+ 287 0054 898201   		.uleb128 0x4109
+ 288 0057 01       		.byte	0x1
+ 289 0058 11       		.uleb128 0x11
+ 290 0059 01       		.uleb128 0x1
+ 291 005a 31       		.uleb128 0x31
+ 292 005b 13       		.uleb128 0x13
+ 293 005c 00       		.byte	0
+ 294 005d 00       		.byte	0
+ 295 005e 07       		.uleb128 0x7
+ 296 005f 8A8201   		.uleb128 0x410a
+ 297 0062 00       		.byte	0
+ 298 0063 02       		.uleb128 0x2
+ 299 0064 18       		.uleb128 0x18
+ 300 0065 9142     		.uleb128 0x2111
+ 301 0067 18       		.uleb128 0x18
+ 302 0068 00       		.byte	0
+ 303 0069 00       		.byte	0
+ 304 006a 08       		.uleb128 0x8
+ 305 006b 2E       		.uleb128 0x2e
+ 306 006c 00       		.byte	0
+ 307 006d 3F       		.uleb128 0x3f
+ 308 006e 19       		.uleb128 0x19
+ 309 006f 3C       		.uleb128 0x3c
+ 310 0070 19       		.uleb128 0x19
+ 311 0071 6E       		.uleb128 0x6e
+ 312 0072 0E       		.uleb128 0xe
+ 313 0073 03       		.uleb128 0x3
+ 314 0074 0E       		.uleb128 0xe
+ 315 0075 3A       		.uleb128 0x3a
+ 316 0076 0B       		.uleb128 0xb
+ 317 0077 3B       		.uleb128 0x3b
+ 318 0078 0B       		.uleb128 0xb
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccbMDmXZ.s 			page 7
+
+
+ 319 0079 00       		.byte	0
+ 320 007a 00       		.byte	0
+ 321 007b 00       		.byte	0
+ 322              		.section	.debug_aranges,"",%progbits
+ 323 0000 1C000000 		.4byte	0x1c
+ 324 0004 0200     		.2byte	0x2
+ 325 0006 00000000 		.4byte	.Ldebug_info0
+ 326 000a 04       		.byte	0x4
+ 327 000b 00       		.byte	0
+ 328 000c 0000     		.2byte	0
+ 329 000e 0000     		.2byte	0
+ 330 0010 00000000 		.4byte	.LFB34
+ 331 0014 24000000 		.4byte	.LFE34-.LFB34
+ 332 0018 00000000 		.4byte	0
+ 333 001c 00000000 		.4byte	0
+ 334              		.section	.debug_ranges,"",%progbits
+ 335              	.Ldebug_ranges0:
+ 336 0000 00000000 		.4byte	.LFB34
+ 337 0004 24000000 		.4byte	.LFE34
+ 338 0008 00000000 		.4byte	0
+ 339 000c 00000000 		.4byte	0
+ 340              		.section	.debug_line,"",%progbits
+ 341              	.Ldebug_line0:
+ 342 0000 7E000000 		.section	.debug_str,"MS",%progbits,1
+ 342      02005900 
+ 342      00000201 
+ 342      FB0E0D00 
+ 342      01010101 
+ 343              	.LASF16:
+ 344 0000 44656275 		.ascii	"Debug_2_Read\000"
+ 344      675F325F 
+ 344      52656164 
+ 344      00
+ 345              	.LASF8:
+ 346 000d 756E7369 		.ascii	"unsigned int\000"
+ 346      676E6564 
+ 346      20696E74 
+ 346      00
+ 347              	.LASF20:
+ 348 001a 6D61696E 		.ascii	"main.c\000"
+ 348      2E6300
+ 349              	.LASF22:
+ 350 0021 6D61696E 		.ascii	"main\000"
+ 350      00
+ 351              	.LASF18:
+ 352 0026 43794465 		.ascii	"CyDelay\000"
+ 352      6C617900 
+ 353              	.LASF5:
+ 354 002e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 354      20756E73 
+ 354      69676E65 
+ 354      6420696E 
+ 354      7400
+ 355              	.LASF7:
+ 356 0040 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 356      206C6F6E 
+ 356      6720756E 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccbMDmXZ.s 			page 8
+
+
+ 356      7369676E 
+ 356      65642069 
+ 357              	.LASF9:
+ 358 0057 666C6F61 		.ascii	"float\000"
+ 358      7400
+ 359              	.LASF15:
+ 360 005d 44656275 		.ascii	"Debug_1_Write\000"
+ 360      675F315F 
+ 360      57726974 
+ 360      6500
+ 361              	.LASF1:
+ 362 006b 756E7369 		.ascii	"unsigned char\000"
+ 362      676E6564 
+ 362      20636861 
+ 362      7200
+ 363              	.LASF11:
+ 364 0079 63686172 		.ascii	"char\000"
+ 364      00
+ 365              	.LASF21:
+ 366 007e 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
+ 366      73657273 
+ 366      5C617573 
+ 366      74635C4F 
+ 366      6E654472 
+ 367 00ab 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Blink Rev "
+ 367      69742D46 
+ 367      69726D77 
+ 367      6172652D 
+ 367      412D3230 
+ 368 00dc 33204465 		.ascii	"3 Debug.cydsn\000"
+ 368      6275672E 
+ 368      63796473 
+ 368      6E00
+ 369              	.LASF14:
+ 370 00ea 44656275 		.ascii	"Debug_1_Read\000"
+ 370      675F315F 
+ 370      52656164 
+ 370      00
+ 371              	.LASF4:
+ 372 00f7 6C6F6E67 		.ascii	"long int\000"
+ 372      20696E74 
+ 372      00
+ 373              	.LASF17:
+ 374 0100 44656275 		.ascii	"Debug_2_Write\000"
+ 374      675F325F 
+ 374      57726974 
+ 374      6500
+ 375              	.LASF10:
+ 376 010e 646F7562 		.ascii	"double\000"
+ 376      6C6500
+ 377              	.LASF6:
+ 378 0115 6C6F6E67 		.ascii	"long long int\000"
+ 378      206C6F6E 
+ 378      6720696E 
+ 378      7400
+ 379              	.LASF19:
+ 380 0123 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccbMDmXZ.s 			page 9
+
+
+ 380      43313120 
+ 380      352E342E 
+ 380      31203230 
+ 380      31363036 
+ 381 0156 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 381      20726576 
+ 381      6973696F 
+ 381      6E203233 
+ 381      37373135 
+ 382 0189 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 382      66756E63 
+ 382      74696F6E 
+ 382      2D736563 
+ 382      74696F6E 
+ 383              	.LASF3:
+ 384 01b1 73686F72 		.ascii	"short unsigned int\000"
+ 384      7420756E 
+ 384      7369676E 
+ 384      65642069 
+ 384      6E7400
+ 385              	.LASF0:
+ 386 01c4 7369676E 		.ascii	"signed char\000"
+ 386      65642063 
+ 386      68617200 
+ 387              	.LASF13:
+ 388 01d0 6C6F6E67 		.ascii	"long double\000"
+ 388      20646F75 
+ 388      626C6500 
+ 389              	.LASF2:
+ 390 01dc 73686F72 		.ascii	"short int\000"
+ 390      7420696E 
+ 390      7400
+ 391              	.LASF12:
+ 392 01e6 73697A65 		.ascii	"sizetype\000"
+ 392      74797065 
+ 392      00
+ 393              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
