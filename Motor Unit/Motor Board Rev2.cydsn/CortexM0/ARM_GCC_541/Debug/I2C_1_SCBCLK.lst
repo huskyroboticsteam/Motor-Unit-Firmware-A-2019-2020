@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
   28:Generated_Source\PSoC4/I2C_1_SCBCLK.c **** * Summary:
   29:Generated_Source\PSoC4/I2C_1_SCBCLK.c **** *  Starts the clock, aligned to the specified running clock.
   30:Generated_Source\PSoC4/I2C_1_SCBCLK.c **** *
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 2
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 2
 
 
   31:Generated_Source\PSoC4/I2C_1_SCBCLK.c **** * Parameters:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
   60              		.align	2
   61              		.global	I2C_1_SCBCLK_Stop
   62              		.code	16
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 3
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 3
 
 
   63              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
   72              	.L6:
   97:Generated_Source\PSoC4/I2C_1_SCBCLK.c **** #if defined CYREG_PERI_DIV_CMD
   98:Generated_Source\PSoC4/I2C_1_SCBCLK.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 4
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 4
 
 
   99:Generated_Source\PSoC4/I2C_1_SCBCLK.c ****     /* Make sure any previous start command has finished. */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  125:Generated_Source\PSoC4/I2C_1_SCBCLK.c **** * Parameters:
  126:Generated_Source\PSoC4/I2C_1_SCBCLK.c **** *  clkDivider:  Divider register value (0-65535). This value is NOT the
  127:Generated_Source\PSoC4/I2C_1_SCBCLK.c **** *    divider; the clock hardware divides by clkDivider plus one. For example,
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 5
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 5
 
 
  128:Generated_Source\PSoC4/I2C_1_SCBCLK.c **** *    to divide the clock by 2, this parameter should be set to 1.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  151:Generated_Source\PSoC4/I2C_1_SCBCLK.c ****     maskVal = I2C_1_SCBCLK_DIV_REG & (uint32)(~(uint32)I2C_1_SCBCLK__DIVIDER_MASK);
  152:Generated_Source\PSoC4/I2C_1_SCBCLK.c ****     /* combine mask and new divider val into 32-bit value */
  153:Generated_Source\PSoC4/I2C_1_SCBCLK.c ****     regVal = clkDivider | maskVal;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 6
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 6
 
 
  154:Generated_Source\PSoC4/I2C_1_SCBCLK.c ****     
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  159 0006 80B2     		uxth	r0, r0
  179:Generated_Source\PSoC4/I2C_1_SCBCLK.c ****         >> I2C_1_SCBCLK_DIV_INT_SHIFT);
  180:Generated_Source\PSoC4/I2C_1_SCBCLK.c **** }
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 7
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 7
 
 
  160              		.loc 1 180 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  187              		.cfi_endproc
  188              	.LFE4:
  189              		.size	I2C_1_SCBCLK_GetFractionalDividerRegister, .-I2C_1_SCBCLK_GetFractionalDividerRegister
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 8
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 8
 
 
  190              		.text
@@ -431,45 +431,45 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  197 0006 00000000 		.4byte	.Ldebug_abbrev0
  198 000a 04       		.byte	0x4
  199 000b 01       		.uleb128 0x1
- 200 000c 92010000 		.4byte	.LASF25
+ 200 000c AE010000 		.4byte	.LASF25
  201 0010 0C       		.byte	0xc
- 202 0011 19010000 		.4byte	.LASF26
- 203 0015 0E000000 		.4byte	.LASF27
+ 202 0011 E1000000 		.4byte	.LASF26
+ 203 0015 31010000 		.4byte	.LASF27
  204 0019 00000000 		.4byte	.Ldebug_ranges0+0
  205 001d 00000000 		.4byte	0
  206 0021 00000000 		.4byte	.Ldebug_line0
  207 0025 02       		.uleb128 0x2
  208 0026 01       		.byte	0x1
  209 0027 06       		.byte	0x6
- 210 0028 83020000 		.4byte	.LASF0
+ 210 0028 92020000 		.4byte	.LASF0
  211 002c 02       		.uleb128 0x2
  212 002d 01       		.byte	0x1
  213 002e 08       		.byte	0x8
- 214 002f 90000000 		.4byte	.LASF1
+ 214 002f 58000000 		.4byte	.LASF1
  215 0033 02       		.uleb128 0x2
  216 0034 02       		.byte	0x2
  217 0035 05       		.byte	0x5
- 218 0036 6A020000 		.4byte	.LASF2
+ 218 0036 79020000 		.4byte	.LASF2
  219 003a 02       		.uleb128 0x2
  220 003b 02       		.byte	0x2
  221 003c 07       		.byte	0x7
- 222 003d C5000000 		.4byte	.LASF3
+ 222 003d 8D000000 		.4byte	.LASF3
  223 0041 02       		.uleb128 0x2
  224 0042 04       		.byte	0x4
  225 0043 05       		.byte	0x5
- 226 0044 7A020000 		.4byte	.LASF4
+ 226 0044 89020000 		.4byte	.LASF4
  227 0048 02       		.uleb128 0x2
  228 0049 04       		.byte	0x4
  229 004a 07       		.byte	0x7
- 230 004b B3000000 		.4byte	.LASF5
+ 230 004b 7B000000 		.4byte	.LASF5
  231 004f 02       		.uleb128 0x2
  232 0050 08       		.byte	0x8
  233 0051 05       		.byte	0x5
- 234 0052 20020000 		.4byte	.LASF6
+ 234 0052 3C020000 		.4byte	.LASF6
  235 0056 02       		.uleb128 0x2
  236 0057 08       		.byte	0x8
  237 0058 07       		.byte	0x7
- 238 0059 69010000 		.4byte	.LASF7
+ 238 0059 41000000 		.4byte	.LASF7
  239 005d 03       		.uleb128 0x3
  240 005e 04       		.byte	0x4
  241 005f 05       		.byte	0x5
@@ -477,37 +477,37 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  243 0064 02       		.uleb128 0x2
  244 0065 04       		.byte	0x4
  245 0066 07       		.byte	0x7
- 246 0067 5D020000 		.4byte	.LASF8
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 9
+ 246 0067 0E000000 		.4byte	.LASF8
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 9
 
 
  247 006b 04       		.uleb128 0x4
- 248 006c 74020000 		.4byte	.LASF9
+ 248 006c 83020000 		.4byte	.LASF9
  249 0070 02       		.byte	0x2
  250 0071 E401     		.2byte	0x1e4
  251 0073 2C000000 		.4byte	0x2c
  252 0077 04       		.uleb128 0x4
- 253 0078 0B010000 		.4byte	.LASF10
+ 253 0078 D3000000 		.4byte	.LASF10
  254 007c 02       		.byte	0x2
  255 007d E501     		.2byte	0x1e5
  256 007f 3A000000 		.4byte	0x3a
  257 0083 04       		.uleb128 0x4
- 258 0084 12010000 		.4byte	.LASF11
+ 258 0084 DA000000 		.4byte	.LASF11
  259 0088 02       		.byte	0x2
  260 0089 E601     		.2byte	0x1e6
  261 008b 48000000 		.4byte	0x48
  262 008f 02       		.uleb128 0x2
  263 0090 04       		.byte	0x4
  264 0091 04       		.byte	0x4
- 265 0092 8A000000 		.4byte	.LASF12
+ 265 0092 3B000000 		.4byte	.LASF12
  266 0096 02       		.uleb128 0x2
  267 0097 08       		.byte	0x8
  268 0098 04       		.byte	0x4
- 269 0099 E3000000 		.4byte	.LASF13
+ 269 0099 AB000000 		.4byte	.LASF13
  270 009d 02       		.uleb128 0x2
  271 009e 01       		.byte	0x1
  272 009f 08       		.byte	0x8
- 273 00a0 2E020000 		.4byte	.LASF14
+ 273 00a0 4A020000 		.4byte	.LASF14
  274 00a4 04       		.uleb128 0x4
  275 00a5 00000000 		.4byte	.LASF15
  276 00a9 02       		.byte	0x2
@@ -516,7 +516,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  279 00b0 05       		.uleb128 0x5
  280 00b1 83000000 		.4byte	0x83
  281 00b5 06       		.uleb128 0x6
- 282 00b6 9E000000 		.4byte	.LASF16
+ 282 00b6 66000000 		.4byte	.LASF16
  283 00ba 01       		.byte	0x1
  284 00bb 27       		.byte	0x27
  285 00bc 00000000 		.4byte	.LFB0
@@ -525,25 +525,25 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  288 00c5 9C       		.byte	0x9c
  289 00c6 DA000000 		.4byte	0xda
  290 00ca 07       		.uleb128 0x7
- 291 00cb F1000000 		.4byte	.LASF18
+ 291 00cb B9000000 		.4byte	.LASF18
  292 00cf 01       		.byte	0x1
  293 00d0 27       		.byte	0x27
  294 00d1 83000000 		.4byte	0x83
  295 00d5 00000000 		.4byte	.LLST0
  296 00d9 00       		.byte	0
  297 00da 08       		.uleb128 0x8
- 298 00db 80010000 		.4byte	.LASF28
+ 298 00db 9C010000 		.4byte	.LASF28
  299 00df 01       		.byte	0x1
  300 00e0 5F       		.byte	0x5f
  301 00e1 00000000 		.4byte	.LFB1
  302 00e5 18000000 		.4byte	.LFE1-.LFB1
  303 00e9 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 10
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 10
 
 
  304 00ea 9C       		.byte	0x9c
  305 00eb 06       		.uleb128 0x6
- 306 00ec 33020000 		.4byte	.LASF17
+ 306 00ec 4F020000 		.4byte	.LASF17
  307 00f0 01       		.byte	0x1
  308 00f1 86       		.byte	0x86
  309 00f2 00000000 		.4byte	.LFB2
@@ -552,13 +552,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  312 00fb 9C       		.byte	0x9c
  313 00fc 3B010000 		.4byte	0x13b
  314 0100 07       		.uleb128 0x7
- 315 0101 D8000000 		.4byte	.LASF19
+ 315 0101 A0000000 		.4byte	.LASF19
  316 0105 01       		.byte	0x1
  317 0106 86       		.byte	0x86
  318 0107 77000000 		.4byte	0x77
  319 010b 21000000 		.4byte	.LLST1
  320 010f 07       		.uleb128 0x7
- 321 0110 FD000000 		.4byte	.LASF20
+ 321 0110 C5000000 		.4byte	.LASF20
  322 0114 01       		.byte	0x1
  323 0115 86       		.byte	0x86
  324 0116 6B000000 		.4byte	0x6b
@@ -570,7 +570,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  330 0125 83000000 		.4byte	0x83
  331 0129 63000000 		.4byte	.LLST3
  332 012d 0A       		.uleb128 0xa
- 333 012e EA000000 		.4byte	.LASF22
+ 333 012e B2000000 		.4byte	.LASF22
  334 0132 01       		.byte	0x1
  335 0133 89       		.byte	0x89
  336 0134 83000000 		.4byte	0x83
@@ -578,7 +578,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  338 0139 51       		.byte	0x51
  339 013a 00       		.byte	0
  340 013b 0B       		.uleb128 0xb
- 341 013c 6A000000 		.4byte	.LASF23
+ 341 013c 1B000000 		.4byte	.LASF23
  342 0140 01       		.byte	0x1
  343 0141 B0       		.byte	0xb0
  344 0142 77000000 		.4byte	0x77
@@ -587,7 +587,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  347 014e 01       		.uleb128 0x1
  348 014f 9C       		.byte	0x9c
  349 0150 0B       		.uleb128 0xb
- 350 0151 3F010000 		.4byte	.LASF24
+ 350 0151 07010000 		.4byte	.LASF24
  351 0155 01       		.byte	0x1
  352 0156 C6       		.byte	0xc6
  353 0157 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  358 0165 00       		.byte	0
  359              		.section	.debug_abbrev,"",%progbits
  360              	.Ldebug_abbrev0:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 11
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 11
 
 
  361 0000 01       		.uleb128 0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  415 0036 05       		.uleb128 0x5
  416 0037 35       		.uleb128 0x35
  417 0038 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 12
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 12
 
 
  418 0039 49       		.uleb128 0x49
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  472 0070 0B       		.uleb128 0xb
  473 0071 27       		.uleb128 0x27
  474 0072 19       		.uleb128 0x19
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 13
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 13
 
 
  475 0073 11       		.uleb128 0x11
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  529 00aa 13       		.uleb128 0x13
  530 00ab 11       		.uleb128 0x11
  531 00ac 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 14
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 14
 
 
  532 00ad 12       		.uleb128 0x12
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  586 0063 0A000000 		.4byte	.LVL3
  587 0067 10000000 		.4byte	.LVL5
  588 006b 0100     		.2byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 15
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 15
 
 
  589 006d 53       		.byte	0x53
@@ -891,155 +891,159 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 1
  631              	.LASF21:
  632 0006 6D61736B 		.ascii	"maskVal\000"
  632      56616C00 
- 633              	.LASF27:
- 634 000e 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\GitHub\\Elec"
- 634      73657273 
- 634      5C617573 
- 634      74635C4F 
- 634      6E654472 
- 635 003b 74726F6E 		.ascii	"tronics2018-19\\Psoc Arm\\Motor Board Rev2.cydsn\000"
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 16
+ 633              	.LASF8:
+ 634 000e 756E7369 		.ascii	"unsigned int\000"
+ 634      676E6564 
+ 634      20696E74 
+ 634      00
+ 635              	.LASF23:
+ 636 001b 4932435F 		.ascii	"I2C_1_SCBCLK_GetDividerRegister\000"
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 16
 
 
- 635      69637332 
- 635      3031382D 
- 635      31395C50 
- 635      736F6320 
- 636              	.LASF23:
- 637 006a 4932435F 		.ascii	"I2C_1_SCBCLK_GetDividerRegister\000"
- 637      315F5343 
- 637      42434C4B 
- 637      5F476574 
- 637      44697669 
- 638              	.LASF12:
- 639 008a 666C6F61 		.ascii	"float\000"
- 639      7400
- 640              	.LASF1:
- 641 0090 756E7369 		.ascii	"unsigned char\000"
- 641      676E6564 
- 641      20636861 
- 641      7200
- 642              	.LASF16:
- 643 009e 4932435F 		.ascii	"I2C_1_SCBCLK_StartEx\000"
- 643      315F5343 
- 643      42434C4B 
- 643      5F537461 
- 643      72744578 
- 644              	.LASF5:
- 645 00b3 6C6F6E67 		.ascii	"long unsigned int\000"
- 645      20756E73 
- 645      69676E65 
- 645      6420696E 
- 645      7400
- 646              	.LASF3:
- 647 00c5 73686F72 		.ascii	"short unsigned int\000"
- 647      7420756E 
- 647      7369676E 
- 647      65642069 
- 647      6E7400
- 648              	.LASF19:
- 649 00d8 636C6B44 		.ascii	"clkDivider\000"
- 649      69766964 
- 649      657200
- 650              	.LASF13:
- 651 00e3 646F7562 		.ascii	"double\000"
- 651      6C6500
- 652              	.LASF22:
- 653 00ea 72656756 		.ascii	"regVal\000"
- 653      616C00
- 654              	.LASF18:
- 655 00f1 616C6967 		.ascii	"alignClkDiv\000"
- 655      6E436C6B 
- 655      44697600 
- 656              	.LASF20:
- 657 00fd 636C6B46 		.ascii	"clkFractional\000"
- 657      72616374 
- 657      696F6E61 
- 657      6C00
- 658              	.LASF10:
- 659 010b 75696E74 		.ascii	"uint16\000"
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 17
+ 636      315F5343 
+ 636      42434C4B 
+ 636      5F476574 
+ 636      44697669 
+ 637              	.LASF12:
+ 638 003b 666C6F61 		.ascii	"float\000"
+ 638      7400
+ 639              	.LASF7:
+ 640 0041 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 640      206C6F6E 
+ 640      6720756E 
+ 640      7369676E 
+ 640      65642069 
+ 641              	.LASF1:
+ 642 0058 756E7369 		.ascii	"unsigned char\000"
+ 642      676E6564 
+ 642      20636861 
+ 642      7200
+ 643              	.LASF16:
+ 644 0066 4932435F 		.ascii	"I2C_1_SCBCLK_StartEx\000"
+ 644      315F5343 
+ 644      42434C4B 
+ 644      5F537461 
+ 644      72744578 
+ 645              	.LASF5:
+ 646 007b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 646      20756E73 
+ 646      69676E65 
+ 646      6420696E 
+ 646      7400
+ 647              	.LASF3:
+ 648 008d 73686F72 		.ascii	"short unsigned int\000"
+ 648      7420756E 
+ 648      7369676E 
+ 648      65642069 
+ 648      6E7400
+ 649              	.LASF19:
+ 650 00a0 636C6B44 		.ascii	"clkDivider\000"
+ 650      69766964 
+ 650      657200
+ 651              	.LASF13:
+ 652 00ab 646F7562 		.ascii	"double\000"
+ 652      6C6500
+ 653              	.LASF22:
+ 654 00b2 72656756 		.ascii	"regVal\000"
+ 654      616C00
+ 655              	.LASF18:
+ 656 00b9 616C6967 		.ascii	"alignClkDiv\000"
+ 656      6E436C6B 
+ 656      44697600 
+ 657              	.LASF20:
+ 658 00c5 636C6B46 		.ascii	"clkFractional\000"
+ 658      72616374 
+ 658      696F6E61 
+ 658      6C00
+ 659              	.LASF10:
+ 660 00d3 75696E74 		.ascii	"uint16\000"
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 17
 
 
- 659      313600
- 660              	.LASF11:
- 661 0112 75696E74 		.ascii	"uint32\000"
- 661      333200
- 662              	.LASF26:
- 663 0119 47656E65 		.ascii	"Generated_Source\\PSoC4\\I2C_1_SCBCLK.c\000"
- 663      72617465 
- 663      645F536F 
- 663      75726365 
- 663      5C50536F 
- 664              	.LASF24:
- 665 013f 4932435F 		.ascii	"I2C_1_SCBCLK_GetFractionalDividerRegister\000"
- 665      315F5343 
- 665      42434C4B 
- 665      5F476574 
- 665      46726163 
- 666              	.LASF7:
- 667 0169 6C6F6E67 		.ascii	"long long unsigned int\000"
- 667      206C6F6E 
- 667      6720756E 
- 667      7369676E 
- 667      65642069 
- 668              	.LASF28:
- 669 0180 4932435F 		.ascii	"I2C_1_SCBCLK_Stop\000"
- 669      315F5343 
- 669      42434C4B 
- 669      5F53746F 
- 669      7000
- 670              	.LASF25:
- 671 0192 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 671      43313120 
- 671      352E342E 
- 671      31203230 
- 671      31363036 
- 672 01c5 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 672      20726576 
- 672      6973696F 
- 672      6E203233 
- 672      37373135 
- 673 01f8 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 673      66756E63 
- 673      74696F6E 
- 673      2D736563 
- 673      74696F6E 
- 674              	.LASF6:
- 675 0220 6C6F6E67 		.ascii	"long long int\000"
- 675      206C6F6E 
- 675      6720696E 
- 675      7400
- 676              	.LASF14:
- 677 022e 63686172 		.ascii	"char\000"
- 677      00
- 678              	.LASF17:
- 679 0233 4932435F 		.ascii	"I2C_1_SCBCLK_SetFractionalDividerRegister\000"
- 679      315F5343 
- 679      42434C4B 
- 679      5F536574 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccnTeVsm.s 			page 18
+ 660      313600
+ 661              	.LASF11:
+ 662 00da 75696E74 		.ascii	"uint32\000"
+ 662      333200
+ 663              	.LASF26:
+ 664 00e1 47656E65 		.ascii	"Generated_Source\\PSoC4\\I2C_1_SCBCLK.c\000"
+ 664      72617465 
+ 664      645F536F 
+ 664      75726365 
+ 664      5C50536F 
+ 665              	.LASF24:
+ 666 0107 4932435F 		.ascii	"I2C_1_SCBCLK_GetFractionalDividerRegister\000"
+ 666      315F5343 
+ 666      42434C4B 
+ 666      5F476574 
+ 666      46726163 
+ 667              	.LASF27:
+ 668 0131 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
+ 668      73657273 
+ 668      5C617573 
+ 668      74635C4F 
+ 668      6E654472 
+ 669 015e 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Motor Boar"
+ 669      69742D46 
+ 669      69726D77 
+ 669      6172652D 
+ 669      412D3230 
+ 670 018f 64205265 		.ascii	"d Rev2.cydsn\000"
+ 670      76322E63 
+ 670      7964736E 
+ 670      00
+ 671              	.LASF28:
+ 672 019c 4932435F 		.ascii	"I2C_1_SCBCLK_Stop\000"
+ 672      315F5343 
+ 672      42434C4B 
+ 672      5F53746F 
+ 672      7000
+ 673              	.LASF25:
+ 674 01ae 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 674      43313120 
+ 674      352E342E 
+ 674      31203230 
+ 674      31363036 
+ 675 01e1 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 675      20726576 
+ 675      6973696F 
+ 675      6E203233 
+ 675      37373135 
+ 676 0214 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 676      66756E63 
+ 676      74696F6E 
+ 676      2D736563 
+ 676      74696F6E 
+ 677              	.LASF6:
+ 678 023c 6C6F6E67 		.ascii	"long long int\000"
+ 678      206C6F6E 
+ 678      6720696E 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccPsxh1S.s 			page 18
 
 
- 679      46726163 
- 680              	.LASF8:
- 681 025d 756E7369 		.ascii	"unsigned int\000"
- 681      676E6564 
- 681      20696E74 
- 681      00
- 682              	.LASF2:
- 683 026a 73686F72 		.ascii	"short int\000"
- 683      7420696E 
- 683      7400
- 684              	.LASF9:
- 685 0274 75696E74 		.ascii	"uint8\000"
- 685      3800
- 686              	.LASF4:
- 687 027a 6C6F6E67 		.ascii	"long int\000"
- 687      20696E74 
- 687      00
- 688              	.LASF0:
- 689 0283 7369676E 		.ascii	"signed char\000"
- 689      65642063 
- 689      68617200 
- 690              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 678      7400
+ 679              	.LASF14:
+ 680 024a 63686172 		.ascii	"char\000"
+ 680      00
+ 681              	.LASF17:
+ 682 024f 4932435F 		.ascii	"I2C_1_SCBCLK_SetFractionalDividerRegister\000"
+ 682      315F5343 
+ 682      42434C4B 
+ 682      5F536574 
+ 682      46726163 
+ 683              	.LASF2:
+ 684 0279 73686F72 		.ascii	"short int\000"
+ 684      7420696E 
+ 684      7400
+ 685              	.LASF9:
+ 686 0283 75696E74 		.ascii	"uint8\000"
+ 686      3800
+ 687              	.LASF4:
+ 688 0289 6C6F6E67 		.ascii	"long int\000"
+ 688      20696E74 
+ 688      00
+ 689              	.LASF0:
+ 690 0292 7369676E 		.ascii	"signed char\000"
+ 690      65642063 
+ 690      68617200 
+ 691              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

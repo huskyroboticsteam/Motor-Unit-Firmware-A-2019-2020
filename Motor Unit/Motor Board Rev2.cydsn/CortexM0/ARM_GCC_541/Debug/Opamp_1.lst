@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
   28:Generated_Source\PSoC4/Opamp_1.c **** *  Initializes or restores the component according to the customizer Configure 
   29:Generated_Source\PSoC4/Opamp_1.c **** *  dialog settings. It is not necessary to call Init() because the Start() API 
   30:Generated_Source\PSoC4/Opamp_1.c **** *  calls this function and is the preferred method to begin the component operation.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 2
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 2
 
 
   31:Generated_Source\PSoC4/Opamp_1.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
   67              		.thumb_func
   68              		.type	Opamp_1_Enable, %function
   69              	Opamp_1_Enable:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 3
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 3
 
 
   70              	.LFB1:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  101              		.thumb_func
  102              		.type	Opamp_1_Start, %function
  103              	Opamp_1_Start:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 4
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 4
 
 
  104              	.LFB2:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  127 0014 FFF7FEFF 		bl	Opamp_1_Enable
  128              	.LVL1:
  100:Generated_Source\PSoC4/Opamp_1.c **** }
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 5
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 5
 
 
  129              		.loc 1 100 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  162              		.align	2
  163              	.L12:
  164 000c 04003040 		.word	1076887556
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 6
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 6
 
 
  165 0010 FCF7FFFF 		.word	-2052
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  147:Generated_Source\PSoC4/Opamp_1.c ****            (uint32)~Opamp_1_OA_PWR_MODE_MASK;
  148:Generated_Source\PSoC4/Opamp_1.c ****     Opamp_1_OA_RES_CTRL_REG = tmp | Opamp_1_internalPower;
  194              		.loc 1 148 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 7
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 7
 
 
  195 000e 1843     		orrs	r0, r3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  223 0000 0028     		cmp	r0, #0
  224 0002 06D0     		beq	.L18
  175:Generated_Source\PSoC4/Opamp_1.c ****     {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 8
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 8
 
 
  176:Generated_Source\PSoC4/Opamp_1.c ****         Opamp_1_OA_RES_CTRL |= Opamp_1_OA_PUMP_EN;    
@@ -477,48 +477,48 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  271 0006 00000000 		.4byte	.Ldebug_abbrev0
  272 000a 04       		.byte	0x4
  273 000b 01       		.uleb128 0x1
- 274 000c 2B010000 		.4byte	.LASF24
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 9
+ 274 000c 3A010000 		.4byte	.LASF24
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 9
 
 
  275 0010 0C       		.byte	0xc
- 276 0011 06020000 		.4byte	.LASF25
- 277 0015 14000000 		.4byte	.LASF26
+ 276 0011 15020000 		.4byte	.LASF25
+ 277 0015 BE000000 		.4byte	.LASF26
  278 0019 00000000 		.4byte	.Ldebug_ranges0+0
  279 001d 00000000 		.4byte	0
  280 0021 00000000 		.4byte	.Ldebug_line0
  281 0025 02       		.uleb128 0x2
  282 0026 01       		.byte	0x1
  283 0027 06       		.byte	0x6
- 284 0028 27020000 		.4byte	.LASF0
+ 284 0028 36020000 		.4byte	.LASF0
  285 002c 02       		.uleb128 0x2
  286 002d 01       		.byte	0x1
  287 002e 08       		.byte	0x8
- 288 002f 89000000 		.4byte	.LASF1
+ 288 002f 44000000 		.4byte	.LASF1
  289 0033 02       		.uleb128 0x2
  290 0034 02       		.byte	0x2
  291 0035 05       		.byte	0x5
- 292 0036 ED010000 		.4byte	.LASF2
+ 292 0036 FC010000 		.4byte	.LASF2
  293 003a 02       		.uleb128 0x2
  294 003b 02       		.byte	0x2
  295 003c 07       		.byte	0x7
- 296 003d AF000000 		.4byte	.LASF3
+ 296 003d 6A000000 		.4byte	.LASF3
  297 0041 02       		.uleb128 0x2
  298 0042 04       		.byte	0x4
  299 0043 05       		.byte	0x5
- 300 0044 FD010000 		.4byte	.LASF4
+ 300 0044 0C020000 		.4byte	.LASF4
  301 0048 02       		.uleb128 0x2
  302 0049 04       		.byte	0x4
  303 004a 07       		.byte	0x7
- 304 004b 9D000000 		.4byte	.LASF5
+ 304 004b 58000000 		.4byte	.LASF5
  305 004f 02       		.uleb128 0x2
  306 0050 08       		.byte	0x8
  307 0051 05       		.byte	0x5
- 308 0052 C6010000 		.4byte	.LASF6
+ 308 0052 D5010000 		.4byte	.LASF6
  309 0056 02       		.uleb128 0x2
  310 0057 08       		.byte	0x8
  311 0058 07       		.byte	0x7
- 312 0059 03010000 		.4byte	.LASF7
+ 312 0059 2D000000 		.4byte	.LASF7
  313 005d 03       		.uleb128 0x3
  314 005e 04       		.byte	0x4
  315 005f 05       		.byte	0x5
@@ -526,32 +526,32 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  317 0064 02       		.uleb128 0x2
  318 0065 04       		.byte	0x4
  319 0066 07       		.byte	0x7
- 320 0067 F6000000 		.4byte	.LASF8
+ 320 0067 B1000000 		.4byte	.LASF8
  321 006b 04       		.uleb128 0x4
- 322 006c F7010000 		.4byte	.LASF9
+ 322 006c 06020000 		.4byte	.LASF9
  323 0070 02       		.byte	0x2
  324 0071 E401     		.2byte	0x1e4
  325 0073 2C000000 		.4byte	0x2c
  326 0077 04       		.uleb128 0x4
- 327 0078 EF000000 		.4byte	.LASF10
+ 327 0078 AA000000 		.4byte	.LASF10
  328 007c 02       		.byte	0x2
  329 007d E601     		.2byte	0x1e6
  330 007f 48000000 		.4byte	0x48
  331 0083 02       		.uleb128 0x2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 10
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 10
 
 
  332 0084 04       		.byte	0x4
  333 0085 04       		.byte	0x4
- 334 0086 83000000 		.4byte	.LASF11
+ 334 0086 27000000 		.4byte	.LASF11
  335 008a 02       		.uleb128 0x2
  336 008b 08       		.byte	0x8
  337 008c 04       		.byte	0x4
- 338 008d D8000000 		.4byte	.LASF12
+ 338 008d 93000000 		.4byte	.LASF12
  339 0091 02       		.uleb128 0x2
  340 0092 01       		.byte	0x1
  341 0093 08       		.byte	0x8
- 342 0094 D4010000 		.4byte	.LASF13
+ 342 0094 E3010000 		.4byte	.LASF13
  343 0098 04       		.uleb128 0x4
  344 0099 00000000 		.4byte	.LASF14
  345 009d 02       		.byte	0x2
@@ -560,7 +560,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  348 00a4 05       		.uleb128 0x5
  349 00a5 77000000 		.4byte	0x77
  350 00a9 06       		.uleb128 0x6
- 351 00aa 76000000 		.4byte	.LASF15
+ 351 00aa 1A000000 		.4byte	.LASF15
  352 00ae 01       		.byte	0x1
  353 00af 27       		.byte	0x27
  354 00b0 00000000 		.4byte	.LFB0
@@ -568,7 +568,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  356 00b8 01       		.uleb128 0x1
  357 00b9 9C       		.byte	0x9c
  358 00ba 06       		.uleb128 0x6
- 359 00bb 33020000 		.4byte	.LASF16
+ 359 00bb 42020000 		.4byte	.LASF16
  360 00bf 01       		.byte	0x1
  361 00c0 40       		.byte	0x40
  362 00c1 00000000 		.4byte	.LFB1
@@ -592,18 +592,18 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  380 00ee BA000000 		.4byte	0xba
  381 00f2 00       		.byte	0
  382 00f3 06       		.uleb128 0x6
- 383 00f4 B9010000 		.4byte	.LASF17
+ 383 00f4 C8010000 		.4byte	.LASF17
  384 00f8 01       		.byte	0x1
  385 00f9 75       		.byte	0x75
  386 00fa 00000000 		.4byte	.LFB3
  387 00fe 14000000 		.4byte	.LFE3-.LFB3
  388 0102 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 11
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 11
 
 
  389 0103 9C       		.byte	0x9c
  390 0104 07       		.uleb128 0x7
- 391 0105 1A010000 		.4byte	.LASF19
+ 391 0105 29010000 		.4byte	.LASF19
  392 0109 01       		.byte	0x1
  393 010a 8D       		.byte	0x8d
  394 010b 00000000 		.4byte	.LFB4
@@ -612,7 +612,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  397 0114 9C       		.byte	0x9c
  398 0115 36010000 		.4byte	0x136
  399 0119 09       		.uleb128 0x9
- 400 011a 70000000 		.4byte	.LASF21
+ 400 011a 14000000 		.4byte	.LASF21
  401 011e 01       		.byte	0x1
  402 011f 8D       		.byte	0x8d
  403 0120 77000000 		.4byte	0x77
@@ -626,7 +626,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  411 0134 53       		.byte	0x53
  412 0135 00       		.byte	0
  413 0136 07       		.uleb128 0x7
- 414 0137 D9010000 		.4byte	.LASF20
+ 414 0137 E8010000 		.4byte	.LASF20
  415 013b 01       		.byte	0x1
  416 013c AB       		.byte	0xab
  417 013d 00000000 		.4byte	.LFB5
@@ -635,7 +635,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  420 0146 9C       		.byte	0x9c
  421 0147 59010000 		.4byte	0x159
  422 014b 0B       		.uleb128 0xb
- 423 014c 97000000 		.4byte	.LASF22
+ 423 014c 52000000 		.4byte	.LASF22
  424 0150 01       		.byte	0x1
  425 0151 AB       		.byte	0xab
  426 0152 77000000 		.4byte	0x77
@@ -643,7 +643,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  428 0157 50       		.byte	0x50
  429 0158 00       		.byte	0
  430 0159 0C       		.uleb128 0xc
- 431 015a C2000000 		.4byte	.LASF23
+ 431 015a 7D000000 		.4byte	.LASF23
  432 015e 01       		.byte	0x1
  433 015f 14       		.byte	0x14
  434 0160 77000000 		.4byte	0x77
@@ -651,14 +651,14 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  436 0165 03       		.byte	0x3
  437 0166 00000000 		.4byte	Opamp_1_internalPower
  438 016a 0D       		.uleb128 0xd
- 439 016b DF000000 		.4byte	.LASF27
+ 439 016b 9A000000 		.4byte	.LASF27
  440 016f 01       		.byte	0x1
  441 0170 13       		.byte	0x13
  442 0171 6B000000 		.4byte	0x6b
  443 0175 05       		.uleb128 0x5
  444 0176 03       		.byte	0x3
  445 0177 00000000 		.4byte	Opamp_1_initVar
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 12
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 12
 
 
  446 017b 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  500 0033 13       		.uleb128 0x13
  501 0034 00       		.byte	0
  502 0035 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 13
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 13
 
 
  503 0036 05       		.uleb128 0x5
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  557 006e 00       		.byte	0
  558 006f 08       		.uleb128 0x8
  559 0070 898201   		.uleb128 0x4109
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 14
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 14
 
 
  560 0073 00       		.byte	0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  614 00a9 00       		.byte	0
  615 00aa 03       		.uleb128 0x3
  616 00ab 0E       		.uleb128 0xe
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 15
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 15
 
 
  617 00ac 3A       		.uleb128 0x3a
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  671 0018 00000000 		.4byte	.LFB1
  672 001c 1C000000 		.4byte	.LFE1-.LFB1
  673 0020 00000000 		.4byte	.LFB2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 16
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 16
 
 
  674 0024 20000000 		.4byte	.LFE2-.LFB2
@@ -941,150 +941,154 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 1
  705      705F315F 
  705      53746172 
  705      7400
- 706              	.LASF26:
- 707 0014 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\GitHub\\Elec"
- 707      73657273 
- 707      5C617573 
- 707      74635C4F 
- 707      6E654472 
- 708 0041 74726F6E 		.ascii	"tronics2018-19\\Psoc Arm\\Motor Board Rev2.cydsn\000"
- 708      69637332 
- 708      3031382D 
- 708      31395C50 
- 708      736F6320 
- 709              	.LASF21:
- 710 0070 706F7765 		.ascii	"power\000"
- 710      7200
- 711              	.LASF15:
- 712 0076 4F70616D 		.ascii	"Opamp_1_Init\000"
- 712      705F315F 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 17
+ 706              	.LASF21:
+ 707 0014 706F7765 		.ascii	"power\000"
+ 707      7200
+ 708              	.LASF15:
+ 709 001a 4F70616D 		.ascii	"Opamp_1_Init\000"
+ 709      705F315F 
+ 709      496E6974 
+ 709      00
+ 710              	.LASF11:
+ 711 0027 666C6F61 		.ascii	"float\000"
+ 711      7400
+ 712              	.LASF7:
+ 713 002d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 713      206C6F6E 
+ 713      6720756E 
+ 713      7369676E 
+ 713      65642069 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 17
 
 
- 712      496E6974 
- 712      00
- 713              	.LASF11:
- 714 0083 666C6F61 		.ascii	"float\000"
- 714      7400
- 715              	.LASF1:
- 716 0089 756E7369 		.ascii	"unsigned char\000"
- 716      676E6564 
- 716      20636861 
- 716      7200
- 717              	.LASF22:
- 718 0097 6F6E4F66 		.ascii	"onOff\000"
- 718      6600
- 719              	.LASF5:
- 720 009d 6C6F6E67 		.ascii	"long unsigned int\000"
- 720      20756E73 
- 720      69676E65 
- 720      6420696E 
- 720      7400
- 721              	.LASF3:
- 722 00af 73686F72 		.ascii	"short unsigned int\000"
- 722      7420756E 
- 722      7369676E 
- 722      65642069 
- 722      6E7400
- 723              	.LASF23:
- 724 00c2 4F70616D 		.ascii	"Opamp_1_internalPower\000"
- 724      705F315F 
- 724      696E7465 
- 724      726E616C 
- 724      506F7765 
- 725              	.LASF12:
- 726 00d8 646F7562 		.ascii	"double\000"
- 726      6C6500
- 727              	.LASF27:
- 728 00df 4F70616D 		.ascii	"Opamp_1_initVar\000"
- 728      705F315F 
- 728      696E6974 
- 728      56617200 
- 729              	.LASF10:
- 730 00ef 75696E74 		.ascii	"uint32\000"
- 730      333200
- 731              	.LASF8:
- 732 00f6 756E7369 		.ascii	"unsigned int\000"
- 732      676E6564 
- 732      20696E74 
- 732      00
- 733              	.LASF7:
- 734 0103 6C6F6E67 		.ascii	"long long unsigned int\000"
- 734      206C6F6E 
- 734      6720756E 
- 734      7369676E 
- 734      65642069 
- 735              	.LASF19:
- 736 011a 4F70616D 		.ascii	"Opamp_1_SetPower\000"
- 736      705F315F 
- 736      53657450 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 18
+ 714              	.LASF1:
+ 715 0044 756E7369 		.ascii	"unsigned char\000"
+ 715      676E6564 
+ 715      20636861 
+ 715      7200
+ 716              	.LASF22:
+ 717 0052 6F6E4F66 		.ascii	"onOff\000"
+ 717      6600
+ 718              	.LASF5:
+ 719 0058 6C6F6E67 		.ascii	"long unsigned int\000"
+ 719      20756E73 
+ 719      69676E65 
+ 719      6420696E 
+ 719      7400
+ 720              	.LASF3:
+ 721 006a 73686F72 		.ascii	"short unsigned int\000"
+ 721      7420756E 
+ 721      7369676E 
+ 721      65642069 
+ 721      6E7400
+ 722              	.LASF23:
+ 723 007d 4F70616D 		.ascii	"Opamp_1_internalPower\000"
+ 723      705F315F 
+ 723      696E7465 
+ 723      726E616C 
+ 723      506F7765 
+ 724              	.LASF12:
+ 725 0093 646F7562 		.ascii	"double\000"
+ 725      6C6500
+ 726              	.LASF27:
+ 727 009a 4F70616D 		.ascii	"Opamp_1_initVar\000"
+ 727      705F315F 
+ 727      696E6974 
+ 727      56617200 
+ 728              	.LASF10:
+ 729 00aa 75696E74 		.ascii	"uint32\000"
+ 729      333200
+ 730              	.LASF8:
+ 731 00b1 756E7369 		.ascii	"unsigned int\000"
+ 731      676E6564 
+ 731      20696E74 
+ 731      00
+ 732              	.LASF26:
+ 733 00be 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
+ 733      73657273 
+ 733      5C617573 
+ 733      74635C4F 
+ 733      6E654472 
+ 734 00eb 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Motor Boar"
+ 734      69742D46 
+ 734      69726D77 
+ 734      6172652D 
+ 734      412D3230 
+ 735 011c 64205265 		.ascii	"d Rev2.cydsn\000"
+ 735      76322E63 
+ 735      7964736E 
+ 735      00
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 18
 
 
- 736      6F776572 
- 736      00
- 737              	.LASF24:
- 738 012b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 738      43313120 
- 738      352E342E 
- 738      31203230 
- 738      31363036 
- 739 015e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 739      20726576 
- 739      6973696F 
- 739      6E203233 
- 739      37373135 
- 740 0191 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 740      66756E63 
- 740      74696F6E 
- 740      2D736563 
- 740      74696F6E 
- 741              	.LASF17:
- 742 01b9 4F70616D 		.ascii	"Opamp_1_Stop\000"
- 742      705F315F 
- 742      53746F70 
- 742      00
- 743              	.LASF6:
- 744 01c6 6C6F6E67 		.ascii	"long long int\000"
- 744      206C6F6E 
- 744      6720696E 
- 744      7400
- 745              	.LASF13:
- 746 01d4 63686172 		.ascii	"char\000"
- 746      00
- 747              	.LASF20:
- 748 01d9 4F70616D 		.ascii	"Opamp_1_PumpControl\000"
- 748      705F315F 
- 748      50756D70 
- 748      436F6E74 
- 748      726F6C00 
- 749              	.LASF2:
- 750 01ed 73686F72 		.ascii	"short int\000"
- 750      7420696E 
- 750      7400
- 751              	.LASF9:
- 752 01f7 75696E74 		.ascii	"uint8\000"
- 752      3800
- 753              	.LASF4:
- 754 01fd 6C6F6E67 		.ascii	"long int\000"
- 754      20696E74 
- 754      00
- 755              	.LASF25:
- 756 0206 47656E65 		.ascii	"Generated_Source\\PSoC4\\Opamp_1.c\000"
- 756      72617465 
- 756      645F536F 
- 756      75726365 
- 756      5C50536F 
- 757              	.LASF0:
- 758 0227 7369676E 		.ascii	"signed char\000"
- 758      65642063 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccxijGjv.s 			page 19
+ 736              	.LASF19:
+ 737 0129 4F70616D 		.ascii	"Opamp_1_SetPower\000"
+ 737      705F315F 
+ 737      53657450 
+ 737      6F776572 
+ 737      00
+ 738              	.LASF24:
+ 739 013a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 739      43313120 
+ 739      352E342E 
+ 739      31203230 
+ 739      31363036 
+ 740 016d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 740      20726576 
+ 740      6973696F 
+ 740      6E203233 
+ 740      37373135 
+ 741 01a0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 741      66756E63 
+ 741      74696F6E 
+ 741      2D736563 
+ 741      74696F6E 
+ 742              	.LASF17:
+ 743 01c8 4F70616D 		.ascii	"Opamp_1_Stop\000"
+ 743      705F315F 
+ 743      53746F70 
+ 743      00
+ 744              	.LASF6:
+ 745 01d5 6C6F6E67 		.ascii	"long long int\000"
+ 745      206C6F6E 
+ 745      6720696E 
+ 745      7400
+ 746              	.LASF13:
+ 747 01e3 63686172 		.ascii	"char\000"
+ 747      00
+ 748              	.LASF20:
+ 749 01e8 4F70616D 		.ascii	"Opamp_1_PumpControl\000"
+ 749      705F315F 
+ 749      50756D70 
+ 749      436F6E74 
+ 749      726F6C00 
+ 750              	.LASF2:
+ 751 01fc 73686F72 		.ascii	"short int\000"
+ 751      7420696E 
+ 751      7400
+ 752              	.LASF9:
+ 753 0206 75696E74 		.ascii	"uint8\000"
+ 753      3800
+ 754              	.LASF4:
+ 755 020c 6C6F6E67 		.ascii	"long int\000"
+ 755      20696E74 
+ 755      00
+ 756              	.LASF25:
+ 757 0215 47656E65 		.ascii	"Generated_Source\\PSoC4\\Opamp_1.c\000"
+ 757      72617465 
+ 757      645F536F 
+ 757      75726365 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdr1zzG.s 			page 19
 
 
- 758      68617200 
- 759              	.LASF16:
- 760 0233 4F70616D 		.ascii	"Opamp_1_Enable\000"
- 760      705F315F 
- 760      456E6162 
- 760      6C6500
- 761              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 757      5C50536F 
+ 758              	.LASF0:
+ 759 0236 7369676E 		.ascii	"signed char\000"
+ 759      65642063 
+ 759      68617200 
+ 760              	.LASF16:
+ 761 0242 4F70616D 		.ascii	"Opamp_1_Enable\000"
+ 761      705F315F 
+ 761      456E6162 
+ 761      6C6500
+ 762              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
   29:Generated_Source\PSoC4/cy_em_eeprom.c **** 
   30:Generated_Source\PSoC4/cy_em_eeprom.c **** #if defined(__cplusplus)
   31:Generated_Source\PSoC4/cy_em_eeprom.c **** extern "C" {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 2
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 2
 
 
   32:Generated_Source\PSoC4/cy_em_eeprom.c **** #endif
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
   86:Generated_Source\PSoC4/cy_em_eeprom.c **** *
   87:Generated_Source\PSoC4/cy_em_eeprom.c **** * \sideeffect 
   88:Generated_Source\PSoC4/cy_em_eeprom.c **** * If the "Redundant Copy" option is used, the function performs a number of 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 3
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 3
 
 
   89:Generated_Source\PSoC4/cy_em_eeprom.c **** * write operations to the EEPROM to initialize flash rows checksums. Therefore,
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  143:Generated_Source\PSoC4/cy_em_eeprom.c **** * \param addr
  144:Generated_Source\PSoC4/cy_em_eeprom.c **** * The logical start address in EEPROM to start reading data from.
  145:Generated_Source\PSoC4/cy_em_eeprom.c **** *
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 4
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 4
 
 
  146:Generated_Source\PSoC4/cy_em_eeprom.c **** * \param eepromData
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  200:Generated_Source\PSoC4/cy_em_eeprom.c ****         /* Get the address of the first row of the currently active EEPROM sector. If
  201:Generated_Source\PSoC4/cy_em_eeprom.c ****         * no wear leveling is used - the EEPROM has only one sector, so use the base
  202:Generated_Source\PSoC4/cy_em_eeprom.c ****         * addr stored in "context->userFlashStartAddr".
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 5
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 5
 
 
  203:Generated_Source\PSoC4/cy_em_eeprom.c ****         */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  257:Generated_Source\PSoC4/cy_em_eeprom.c **** 
  258:Generated_Source\PSoC4/cy_em_eeprom.c ****                 if(startRowAddr < context->userFlashStartAddr)
  259:Generated_Source\PSoC4/cy_em_eeprom.c ****                 {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 6
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 6
 
 
  260:Generated_Source\PSoC4/cy_em_eeprom.c ****                     startRowAddr = context->wlEndAddr -
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  314:Generated_Source\PSoC4/cy_em_eeprom.c ****                     /* The following variables are introduced to increase code readability. */
  315:Generated_Source\PSoC4/cy_em_eeprom.c ****                     uint32 startAddr  = *(uint32 *)(startRowAddr + CY_EM_EEPROM_HEADER_ADDR_OFFSET)
  316:Generated_Source\PSoC4/cy_em_eeprom.c ****                     uint32 endAddr    = startAddr + (*(uint32 *)(startRowAddr + CY_EM_EEPROM_HEADER
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 7
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 7
 
 
  317:Generated_Source\PSoC4/cy_em_eeprom.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  371:Generated_Source\PSoC4/cy_em_eeprom.c **** * operation, the device should not be reset, including the XRES pin, a software
  372:Generated_Source\PSoC4/cy_em_eeprom.c **** * reset, and watchdog reset sources. Also, low-voltage detect circuits should
  373:Generated_Source\PSoC4/cy_em_eeprom.c **** * be configured to generate an interrupt instead of a reset. Otherwise, portions
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 8
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 8
 
 
  374:Generated_Source\PSoC4/cy_em_eeprom.c **** * of flash may undergo unexpected changes.
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  428:Generated_Source\PSoC4/cy_em_eeprom.c **** 
  429:Generated_Source\PSoC4/cy_em_eeprom.c ****     /* Check if the EEPROM data does not exceed the EEPROM capacity */
  430:Generated_Source\PSoC4/cy_em_eeprom.c ****     if((0u != size) && ((addr + size) <= (context->eepromSize)) && (NULL != eepromData))
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 9
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 9
 
 
  431:Generated_Source\PSoC4/cy_em_eeprom.c ****     {
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  485:Generated_Source\PSoC4/cy_em_eeprom.c ****                              CY_EM_EEPROM_EEPROM_DATA_LEN);
  486:Generated_Source\PSoC4/cy_em_eeprom.c ****             }
  487:Generated_Source\PSoC4/cy_em_eeprom.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 10
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 10
 
 
  488:Generated_Source\PSoC4/cy_em_eeprom.c ****             /* Check if there is data for this location in other EEPROM headers:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  542:Generated_Source\PSoC4/cy_em_eeprom.c ****                 }
  543:Generated_Source\PSoC4/cy_em_eeprom.c **** 
  544:Generated_Source\PSoC4/cy_em_eeprom.c ****                 /* Calculate the checksum if redundant copy is enabled */
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 11
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 11
 
 
  545:Generated_Source\PSoC4/cy_em_eeprom.c ****                 if(0u != context->redundantCopy)
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  599:Generated_Source\PSoC4/cy_em_eeprom.c **** *
  600:Generated_Source\PSoC4/cy_em_eeprom.c **** * \return
  601:Generated_Source\PSoC4/cy_em_eeprom.c **** * This function returns \ref cy_en_em_eeprom_status_t.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 12
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 12
 
 
  602:Generated_Source\PSoC4/cy_em_eeprom.c **** *
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  656:Generated_Source\PSoC4/cy_em_eeprom.c ****         if(0u != context->redundantCopy)
  657:Generated_Source\PSoC4/cy_em_eeprom.c ****         {
  658:Generated_Source\PSoC4/cy_em_eeprom.c ****             writeRamBuffer[CY_EM_EEPROM_HEADER_CHECKSUM_OFFSET_U32] = (uint32)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 13
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 13
 
 
  659:Generated_Source\PSoC4/cy_em_eeprom.c ****                         CalcChecksum((uint8 *) &writeRamBuffer[CY_EM_EEPROM_EEPROM_DATA_OFFSET_U32]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  713:Generated_Source\PSoC4/cy_em_eeprom.c **** 
  714:Generated_Source\PSoC4/cy_em_eeprom.c ****     }
  715:Generated_Source\PSoC4/cy_em_eeprom.c ****     return(ret);
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 14
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 14
 
 
  716:Generated_Source\PSoC4/cy_em_eeprom.c **** }
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
   37              		.cfi_offset 14, -4
   38              	.LVL1:
  760:Generated_Source\PSoC4/cy_em_eeprom.c ****     uint32 seqNum = 0u;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 15
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 15
 
 
  761:Generated_Source\PSoC4/cy_em_eeprom.c ****     uint32 prevSeqNum = 0u;
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
   71              	.LVL8:
   72 001c FF32     		adds	r2, r2, #255
   73              	.LVL9:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 16
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 16
 
 
  767:Generated_Source\PSoC4/cy_em_eeprom.c ****     {
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  103              		@ link register save eliminated.
  104              	.LVL13:
  804:Generated_Source\PSoC4/cy_em_eeprom.c ****     uint32 emEepromAddr = context->userFlashStartAddr;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 17
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 17
 
 
  105              		.loc 1 804 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  141              		.code	16
  142              		.thumb_func
  143              		.type	GetNextRowToWrite, %function
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 18
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 18
 
 
  144              	GetNextRowToWrite:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  162 000a FF34     		adds	r4, r4, #255
  163 000c 0C60     		str	r4, [r1]
  164              	.L11:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 19
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 19
 
 
  858:Generated_Source\PSoC4/cy_em_eeprom.c ****     }
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  192 0030 9B69     		ldr	r3, [r3, #24]
  193              	.LVL22:
  883:Generated_Source\PSoC4/cy_em_eeprom.c ****                 context->userFlashStartAddr)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 20
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 20
 
 
  194              		.loc 1 883 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  227              		.align	2
  228              	.L16:
  229 0054 FFFFFF00 		.word	16777215
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 21
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 21
 
 
  230              		.cfi_endproc
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  257              		.loc 1 929 0
  258 0008 14E0     		b	.L19
  259              	.LVL29:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 22
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 22
 
 
  260              	.L24:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  305              	.L19:
  929:Generated_Source\PSoC4/cy_em_eeprom.c ****     {
  306              		.loc 1 929 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 23
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 23
 
 
  307 0034 8C42     		cmp	r4, r1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  337              		.loc 1 960 0
  338 0004 0268     		ldr	r2, [r0]
  339 0006 D109     		lsrs	r1, r2, #7
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 24
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 24
 
 
  340 0008 7F23     		movs	r3, #127
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  384              		.size	CheckRanges, .-CheckRanges
  385              		.section	.text.GetAddresses,"ax",%progbits
  386              		.align	2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 25
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 25
 
 
  387              		.code	16
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
 1019:Generated_Source\PSoC4/cy_em_eeprom.c ****             (void)CySetTemp();
 1020:Generated_Source\PSoC4/cy_em_eeprom.c ****         #endif /* (CY_EM_EEPROM_SKIP_TEMP_MEASUREMENT) */
 1021:Generated_Source\PSoC4/cy_em_eeprom.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 26
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 26
 
 
 1022:Generated_Source\PSoC4/cy_em_eeprom.c ****         arrayId = rowAddr / CY_FLASH_SIZEOF_ARRAY;
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
 1076:Generated_Source\PSoC4/cy_em_eeprom.c **** * copy option is enabled the corresponding row in the redundant copy will also
 1077:Generated_Source\PSoC4/cy_em_eeprom.c **** * be erased.
 1078:Generated_Source\PSoC4/cy_em_eeprom.c **** *
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 27
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 27
 
 
 1079:Generated_Source\PSoC4/cy_em_eeprom.c **** * \param rowAdd
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
 1133:Generated_Source\PSoC4/cy_em_eeprom.c ****                 while ((rc == CY_FLASH_DRV_OPCODE_BUSY) && (0u != countMs));
 1134:Generated_Source\PSoC4/cy_em_eeprom.c **** 
 1135:Generated_Source\PSoC4/cy_em_eeprom.c ****                 if(CY_FLASH_DRV_SUCCESS == rc)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 28
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 28
 
 
 1136:Generated_Source\PSoC4/cy_em_eeprom.c ****                 {
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
 1190:Generated_Source\PSoC4/cy_em_eeprom.c **** *
 1191:Generated_Source\PSoC4/cy_em_eeprom.c **** * \param rowOffset
 1192:Generated_Source\PSoC4/cy_em_eeprom.c **** * The offset in the row from which the data should be copied.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 29
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 29
 
 
 1193:Generated_Source\PSoC4/cy_em_eeprom.c **** *
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
 1247:Generated_Source\PSoC4/cy_em_eeprom.c ****         }
 1248:Generated_Source\PSoC4/cy_em_eeprom.c ****     }
 1249:Generated_Source\PSoC4/cy_em_eeprom.c ****     else
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 30
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 30
 
 
 1250:Generated_Source\PSoC4/cy_em_eeprom.c ****     {
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  396              	.LVL53:
  397 0000 F0B5     		push	{r4, r5, r6, r7, lr}
  398              		.cfi_def_cfa_offset 20
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 31
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 31
 
 
  399              		.cfi_offset 4, -20
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  444              		.loc 1 1308 0 is_stmt 0 discriminator 1
  445 0038 0133     		adds	r3, r3, #1
  446              	.LVL57:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 32
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 32
 
 
  447 003a DB01     		lsls	r3, r3, #7
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  487 006a BD42     		cmp	r5, r7
  488 006c 05D8     		bhi	.L36
  489              		.loc 1 1320 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 33
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 33
 
 
  490 006e 0133     		adds	r3, r3, #1
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
 1333:Generated_Source\PSoC4/cy_em_eeprom.c **** }
  531              		.loc 1 1333 0
  532              		@ sp needed
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 34
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 34
 
 
  533 00a2 F0BD     		pop	{r4, r5, r6, r7, pc}
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  580              	.LFE11:
  581              		.size	WriteRow, .-WriteRow
  582              		.section	.text.FillChecksum,"ax",%progbits
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 35
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 35
 
 
  583              		.align	2
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
 1367:Generated_Source\PSoC4/cy_em_eeprom.c ****     uint32 rdAddr;
 1368:Generated_Source\PSoC4/cy_em_eeprom.c ****     uint32 writeRamBuffer[CY_EM_EEPROM_FLASH_SIZEOF_ROW / CY_EM_EEPROM_U32_DIV];
 1369:Generated_Source\PSoC4/cy_em_eeprom.c ****     uint32 wrAddr = context->lastWrRowAddr;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 36
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 36
 
 
  604              		.loc 1 1369 0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
 1389:Generated_Source\PSoC4/cy_em_eeprom.c ****         /* Write the data to the specified flash row */
 1390:Generated_Source\PSoC4/cy_em_eeprom.c ****         ret = WriteRow(wrAddr, writeRamBuffer, context);
  638              		.loc 1 1390 0 discriminator 3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 37
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 37
 
 
  639 002e 2200     		movs	r2, r4
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
 1405:Generated_Source\PSoC4/cy_em_eeprom.c ****     }
 1406:Generated_Source\PSoC4/cy_em_eeprom.c ****     
 1407:Generated_Source\PSoC4/cy_em_eeprom.c ****     return(ret);
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 38
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 38
 
 
 1408:Generated_Source\PSoC4/cy_em_eeprom.c **** }
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  726 001a 8030     		adds	r0, r0, #128
  727              	.LVL96:
  728 001c 8021     		movs	r1, #128
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 39
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 39
 
 
  729              	.LVL97:
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  774              		.loc 1 1244 0
  775 005e 0AD1     		bne	.L51
 1246:Generated_Source\PSoC4/cy_em_eeprom.c ****         }
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 40
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 40
 
 
  776              		.loc 1 1246 0
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  826              		.loc 1 1155 0
  827 0008 FFF7FEFF 		bl	WriteRow
  828              	.LVL114:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 41
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 41
 
 
 1157:Generated_Source\PSoC4/cy_em_eeprom.c ****     {
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  875              		@ args = 0, pretend = 0, frame = 0
  876              		@ frame_needed = 0, uses_anonymous_args = 0
  877              	.LVL121:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 42
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 42
 
 
  878 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  921              		.loc 1 110 0
  922 0030 637A     		ldrb	r3, [r4, #9]
  923 0032 6B75     		strb	r3, [r5, #21]
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 43
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 43
 
 
  111:Generated_Source\PSoC4/cy_em_eeprom.c ****             /* Store frequently used data for internal use */
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  968              	.LVL128:
  969 0074 0600     		movs	r6, r0
  970              	.LVL129:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 44
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 44
 
 
  127:Generated_Source\PSoC4/cy_em_eeprom.c ****             }
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1021              		.cfi_offset 4, -20
  1022              		.cfi_offset 5, -16
  1023              		.cfi_offset 6, -12
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 45
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 45
 
 
  1024              		.cfi_offset 7, -8
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1073 0036 0993     		str	r3, [sp, #36]
  1074              	.LVL143:
  197:Generated_Source\PSoC4/cy_em_eeprom.c ****                               (rdAddr / CY_EM_EEPROM_EEPROM_DATA_LEN)) + 1u;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 46
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 46
 
 
  1075              		.loc 1 197 0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1119 006e 03D9     		bls	.L93
  212:Generated_Source\PSoC4/cy_em_eeprom.c ****             {
  1120              		.loc 1 212 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 47
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 47
 
 
  1121 0070 0023     		movs	r3, #0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1168              	.LVL156:
  229:Generated_Source\PSoC4/cy_em_eeprom.c ****                               ((dataEndEepromRowNum > actEepromRowNum) ? 1u : 0u);
  1169              		.loc 1 229 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 48
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 48
 
 
  1170 00a2 8D42     		cmp	r5, r1
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1216 00ca 4A46     		mov	r2, r9
  1217 00cc 0792     		str	r2, [sp, #28]
  1218              	.LVL165:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 49
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 49
 
 
  1219 00ce B946     		mov	r9, r7
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1265 00fe 0CD9     		bls	.L73
  256:Generated_Source\PSoC4/cy_em_eeprom.c **** 
  1266              		.loc 1 256 0 is_stmt 1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 50
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 50
 
 
  1267 0100 4B46     		mov	r3, r9
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1314 013c 8118     		adds	r1, r0, r2
  280:Generated_Source\PSoC4/cy_em_eeprom.c ****                              (void *)(startRowAddr + curRowOffset),
  1315              		.loc 1 280 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 51
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 51
 
 
  1316 013e 2200     		movs	r2, r4
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1361 016c 7B68     		ldr	r3, [r7, #4]
  1362 016e 1400     		movs	r4, r2
  1363 0170 9A42     		cmp	r2, r3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 52
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 52
 
 
  1364 0172 00D9     		bls	.L78
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1410              	.L81:
  319:Generated_Source\PSoC4/cy_em_eeprom.c ****                     {
  1411              		.loc 1 319 0 discriminator 2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 53
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 53
 
 
  1412 01a6 9F42     		cmp	r7, r3
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1456              	.LVL210:
  1457 01d4 9845     		cmp	r8, r3
  1458 01d6 00D9     		bls	.L86
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 54
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 54
 
 
  1459 01d8 1E00     		movs	r6, r3
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1507              	.LVL222:
  1508              	.L79:
  308:Generated_Source\PSoC4/cy_em_eeprom.c ****             {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 55
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 55
 
 
  1509              		.loc 1 308 0 is_stmt 0 discriminator 1
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1560 0000 F0B5     		push	{r4, r5, r6, r7, lr}
  1561              		.cfi_def_cfa_offset 20
  1562              		.cfi_offset 4, -20
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 56
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 56
 
 
  1563              		.cfi_offset 5, -16
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1610 0032 00D1     		bne	.LCB1787
  1611 0034 A4E0     		b	.L121	@long jump
  1612              	.LCB1787:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 57
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 57
 
 
  1613              	.LBB12:
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1659 0068 0CA8     		add	r0, sp, #48
  1660 006a FFF7FEFF 		bl	memset
  1661              	.LVL244:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 58
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 58
 
 
  452:Generated_Source\PSoC4/cy_em_eeprom.c ****             writeRamBuffer[CY_EM_EEPROM_HEADER_SEQ_NUM_OFFSET_U32] = seqNum;
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1705 009e 0FA8     		add	r0, sp, #60
  1706 00a0 FFF7FEFF 		bl	memcpy
  1707              	.LVL251:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 59
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 59
 
 
  480:Generated_Source\PSoC4/cy_em_eeprom.c ****             {
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1752 00d8 0600     		movs	r6, r0
  1753              	.LVL257:
  1754              	.L110:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 60
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 60
 
 
  512:Generated_Source\PSoC4/cy_em_eeprom.c ****                                                                            context->numberOfRows,
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1802 0118 0C31     		adds	r1, r1, #12
  1803              	.LVL266:
  541:Generated_Source\PSoC4/cy_em_eeprom.c ****                 }
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 61
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 61
 
 
  1804              		.loc 1 541 0
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1849 0154 9C46     		mov	ip, r3
  1850 0156 6044     		add	r0, r0, ip
  1851              	.LVL272:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 62
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 62
 
 
  564:Generated_Source\PSoC4/cy_em_eeprom.c ****             }
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1899              	.LVL282:
  1900              	.LVL283:
  1901 0184 3CBC     		pop	{r2, r3, r4, r5}
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 63
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 63
 
 
  1902 0186 9046     		mov	r8, r2
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1951              	.LBB16:
  649:Generated_Source\PSoC4/cy_em_eeprom.c **** 
  1952              		.loc 1 649 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 64
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 64
 
 
  1953 001c 3769     		ldr	r7, [r6, #16]
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  1998 0050 4198     		ldr	r0, [sp, #260]
  1999 0052 FFF7FEFF 		bl	EraseRow
  2000              	.LVL297:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 65
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 65
 
 
  663:Generated_Source\PSoC4/cy_em_eeprom.c ****         {
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2048 0006 C046     		.text
  2049              	.Letext0:
  2050              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 66
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 66
 
 
  2051              		.file 3 "Generated_Source\\PSoC4\\cy_em_eeprom.h"
@@ -3910,45 +3910,45 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2057 0006 00000000 		.4byte	.Ldebug_abbrev0
  2058 000a 04       		.byte	0x4
  2059 000b 01       		.uleb128 0x1
- 2060 000c 5D000000 		.4byte	.LASF103
+ 2060 000c 54000000 		.4byte	.LASF103
  2061 0010 0C       		.byte	0xc
- 2062 0011 52010000 		.4byte	.LASF104
- 2063 0015 AE050000 		.4byte	.LASF105
+ 2062 0011 49010000 		.4byte	.LASF104
+ 2063 0015 BA010000 		.4byte	.LASF105
  2064 0019 A0000000 		.4byte	.Ldebug_ranges0+0xa0
  2065 001d 00000000 		.4byte	0
  2066 0021 00000000 		.4byte	.Ldebug_line0
  2067 0025 02       		.uleb128 0x2
  2068 0026 01       		.byte	0x1
  2069 0027 06       		.byte	0x6
- 2070 0028 2A010000 		.4byte	.LASF0
+ 2070 0028 21010000 		.4byte	.LASF0
  2071 002c 02       		.uleb128 0x2
  2072 002d 01       		.byte	0x1
  2073 002e 08       		.byte	0x8
- 2074 002f 2D040000 		.4byte	.LASF1
+ 2074 002f 8F040000 		.4byte	.LASF1
  2075 0033 02       		.uleb128 0x2
  2076 0034 02       		.byte	0x2
  2077 0035 05       		.byte	0x5
- 2078 0036 43040000 		.4byte	.LASF2
+ 2078 0036 A5040000 		.4byte	.LASF2
  2079 003a 02       		.uleb128 0x2
  2080 003b 02       		.byte	0x2
  2081 003c 07       		.byte	0x7
- 2082 003d A7020000 		.4byte	.LASF3
+ 2082 003d 09030000 		.4byte	.LASF3
  2083 0041 02       		.uleb128 0x2
  2084 0042 04       		.byte	0x4
  2085 0043 05       		.byte	0x5
- 2086 0044 A7010000 		.4byte	.LASF4
+ 2086 0044 9E010000 		.4byte	.LASF4
  2087 0048 02       		.uleb128 0x2
  2088 0049 04       		.byte	0x4
  2089 004a 07       		.byte	0x7
- 2090 004b 5C020000 		.4byte	.LASF5
+ 2090 004b BE020000 		.4byte	.LASF5
  2091 004f 02       		.uleb128 0x2
  2092 0050 08       		.byte	0x8
  2093 0051 05       		.byte	0x5
- 2094 0052 1C010000 		.4byte	.LASF6
+ 2094 0052 13010000 		.4byte	.LASF6
  2095 0056 02       		.uleb128 0x2
  2096 0057 08       		.byte	0x8
  2097 0058 07       		.byte	0x7
- 2098 0059 F5000000 		.4byte	.LASF7
+ 2098 0059 EC000000 		.4byte	.LASF7
  2099 005d 03       		.uleb128 0x3
  2100 005e 04       		.byte	0x4
  2101 005f 05       		.byte	0x5
@@ -3956,12 +3956,12 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2103 0064 02       		.uleb128 0x2
  2104 0065 04       		.byte	0x4
  2105 0066 07       		.byte	0x7
- 2106 0067 46020000 		.4byte	.LASF8
+ 2106 0067 A8020000 		.4byte	.LASF8
  2107 006b 04       		.uleb128 0x4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 67
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 67
 
 
- 2108 006c CA010000 		.4byte	.LASF9
+ 2108 006c 2C020000 		.4byte	.LASF9
  2109 0070 02       		.byte	0x2
  2110 0071 E401     		.2byte	0x1e4
  2111 0073 2C000000 		.4byte	0x2c
@@ -3971,35 +3971,35 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2115 007d E501     		.2byte	0x1e5
  2116 007f 3A000000 		.4byte	0x3a
  2117 0083 04       		.uleb128 0x4
- 2118 0084 D7010000 		.4byte	.LASF11
+ 2118 0084 39020000 		.4byte	.LASF11
  2119 0088 02       		.byte	0x2
  2120 0089 E601     		.2byte	0x1e6
  2121 008b 48000000 		.4byte	0x48
  2122 008f 02       		.uleb128 0x2
  2123 0090 04       		.byte	0x4
  2124 0091 04       		.byte	0x4
- 2125 0092 FF030000 		.4byte	.LASF12
+ 2125 0092 61040000 		.4byte	.LASF12
  2126 0096 02       		.uleb128 0x2
  2127 0097 08       		.byte	0x8
  2128 0098 04       		.byte	0x4
- 2129 0099 D0010000 		.4byte	.LASF13
+ 2129 0099 32020000 		.4byte	.LASF13
  2130 009d 02       		.uleb128 0x2
  2131 009e 01       		.byte	0x1
  2132 009f 08       		.byte	0x8
- 2133 00a0 B6040000 		.4byte	.LASF14
+ 2133 00a0 18050000 		.4byte	.LASF14
  2134 00a4 04       		.uleb128 0x4
- 2135 00a5 1A000000 		.4byte	.LASF15
+ 2135 00a5 10060000 		.4byte	.LASF15
  2136 00a9 02       		.byte	0x2
  2137 00aa 8602     		.2byte	0x286
  2138 00ac 48000000 		.4byte	0x48
  2139 00b0 02       		.uleb128 0x2
  2140 00b1 08       		.byte	0x8
  2141 00b2 04       		.byte	0x4
- 2142 00b3 76030000 		.4byte	.LASF16
+ 2142 00b3 D8030000 		.4byte	.LASF16
  2143 00b7 02       		.uleb128 0x2
  2144 00b8 04       		.byte	0x4
  2145 00b9 07       		.byte	0x7
- 2146 00ba 6D030000 		.4byte	.LASF17
+ 2146 00ba CF030000 		.4byte	.LASF17
  2147 00be 05       		.uleb128 0x5
  2148 00bf 04       		.byte	0x4
  2149 00c0 06       		.uleb128 0x6
@@ -4008,41 +4008,41 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2152 00c3 FB       		.byte	0xfb
  2153 00c4 09010000 		.4byte	0x109
  2154 00c8 07       		.uleb128 0x7
- 2155 00c9 11010000 		.4byte	.LASF18
+ 2155 00c9 08010000 		.4byte	.LASF18
  2156 00cd 03       		.byte	0x3
  2157 00ce FE       		.byte	0xfe
  2158 00cf 83000000 		.4byte	0x83
  2159 00d3 00       		.byte	0
  2160 00d4 08       		.uleb128 0x8
- 2161 00d5 28050000 		.4byte	.LASF19
+ 2161 00d5 8A050000 		.4byte	.LASF19
  2162 00d9 03       		.byte	0x3
  2163 00da 0301     		.2byte	0x103
  2164 00dc 83000000 		.4byte	0x83
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 68
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 68
 
 
  2165 00e0 04       		.byte	0x4
  2166 00e1 08       		.uleb128 0x8
- 2167 00e2 2F020000 		.4byte	.LASF20
+ 2167 00e2 91020000 		.4byte	.LASF20
  2168 00e6 03       		.byte	0x3
  2169 00e7 0601     		.2byte	0x106
  2170 00e9 6B000000 		.4byte	0x6b
  2171 00ed 08       		.byte	0x8
  2172 00ee 08       		.uleb128 0x8
- 2173 00ef 8E050000 		.4byte	.LASF21
+ 2173 00ef F0050000 		.4byte	.LASF21
  2174 00f3 03       		.byte	0x3
  2175 00f4 0B01     		.2byte	0x10b
  2176 00f6 6B000000 		.4byte	0x6b
  2177 00fa 09       		.byte	0x9
  2178 00fb 08       		.uleb128 0x8
- 2179 00fc B0010000 		.4byte	.LASF22
+ 2179 00fc A7010000 		.4byte	.LASF22
  2180 0100 03       		.byte	0x3
  2181 0101 0E01     		.2byte	0x10e
  2182 0103 83000000 		.4byte	0x83
  2183 0107 0C       		.byte	0xc
  2184 0108 00       		.byte	0
  2185 0109 04       		.uleb128 0x4
- 2186 010a 0A050000 		.4byte	.LASF23
+ 2186 010a 6C050000 		.4byte	.LASF23
  2187 010e 03       		.byte	0x3
  2188 010f 0F01     		.2byte	0x10f
  2189 0111 C0000000 		.4byte	0xc0
@@ -4052,59 +4052,59 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2193 0118 1601     		.2byte	0x116
  2194 011a 87010000 		.4byte	0x187
  2195 011e 08       		.uleb128 0x8
- 2196 011f 23040000 		.4byte	.LASF24
+ 2196 011f 85040000 		.4byte	.LASF24
  2197 0123 03       		.byte	0x3
  2198 0124 1B01     		.2byte	0x11b
  2199 0126 83000000 		.4byte	0x83
  2200 012a 00       		.byte	0
  2201 012b 08       		.uleb128 0x8
- 2202 012c 50000000 		.4byte	.LASF25
+ 2202 012c 47000000 		.4byte	.LASF25
  2203 0130 03       		.byte	0x3
  2204 0131 2001     		.2byte	0x120
  2205 0133 83000000 		.4byte	0x83
  2206 0137 04       		.byte	0x4
  2207 0138 08       		.uleb128 0x8
- 2208 0139 EF040000 		.4byte	.LASF26
+ 2208 0139 51050000 		.4byte	.LASF26
  2209 013d 03       		.byte	0x3
  2210 013e 2301     		.2byte	0x123
  2211 0140 83000000 		.4byte	0x83
  2212 0144 08       		.byte	0x8
  2213 0145 08       		.uleb128 0x8
- 2214 0146 11010000 		.4byte	.LASF18
+ 2214 0146 08010000 		.4byte	.LASF18
  2215 014a 03       		.byte	0x3
  2216 014b 2601     		.2byte	0x126
  2217 014d 83000000 		.4byte	0x83
  2218 0151 0C       		.byte	0xc
  2219 0152 08       		.uleb128 0x8
- 2220 0153 28050000 		.4byte	.LASF19
+ 2220 0153 8A050000 		.4byte	.LASF19
  2221 0157 03       		.byte	0x3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 69
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 69
 
 
  2222 0158 2B01     		.2byte	0x12b
  2223 015a 83000000 		.4byte	0x83
  2224 015e 10       		.byte	0x10
  2225 015f 08       		.uleb128 0x8
- 2226 0160 2F020000 		.4byte	.LASF20
+ 2226 0160 91020000 		.4byte	.LASF20
  2227 0164 03       		.byte	0x3
  2228 0165 2E01     		.2byte	0x12e
  2229 0167 6B000000 		.4byte	0x6b
  2230 016b 14       		.byte	0x14
  2231 016c 08       		.uleb128 0x8
- 2232 016d 8E050000 		.4byte	.LASF21
+ 2232 016d F0050000 		.4byte	.LASF21
  2233 0171 03       		.byte	0x3
  2234 0172 3301     		.2byte	0x133
  2235 0174 6B000000 		.4byte	0x6b
  2236 0178 15       		.byte	0x15
  2237 0179 08       		.uleb128 0x8
- 2238 017a B0010000 		.4byte	.LASF22
+ 2238 017a A7010000 		.4byte	.LASF22
  2239 017e 03       		.byte	0x3
  2240 017f 3601     		.2byte	0x136
  2241 0181 83000000 		.4byte	0x83
  2242 0185 18       		.byte	0x18
  2243 0186 00       		.byte	0
  2244 0187 04       		.uleb128 0x4
- 2245 0188 AF030000 		.4byte	.LASF27
+ 2245 0188 11040000 		.4byte	.LASF27
  2246 018c 03       		.byte	0x3
  2247 018d 3701     		.2byte	0x137
  2248 018f 15010000 		.4byte	0x115
@@ -4115,30 +4115,30 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2253 019a 5401     		.2byte	0x154
  2254 019c BF010000 		.4byte	0x1bf
  2255 01a0 0B       		.uleb128 0xb
- 2256 01a1 79050000 		.4byte	.LASF28
+ 2256 01a1 DB050000 		.4byte	.LASF28
  2257 01a5 00       		.byte	0
  2258 01a6 0B       		.uleb128 0xb
- 2259 01a7 3C030000 		.4byte	.LASF29
+ 2259 01a7 9E030000 		.4byte	.LASF29
  2260 01ab 01       		.byte	0x1
  2261 01ac 0B       		.uleb128 0xb
- 2262 01ad 53030000 		.4byte	.LASF30
+ 2262 01ad B5030000 		.4byte	.LASF30
  2263 01b1 02       		.byte	0x2
  2264 01b2 0B       		.uleb128 0xb
- 2265 01b3 0D040000 		.4byte	.LASF31
+ 2265 01b3 6F040000 		.4byte	.LASF31
  2266 01b7 03       		.byte	0x3
  2267 01b8 0B       		.uleb128 0xb
- 2268 01b9 78010000 		.4byte	.LASF32
+ 2268 01b9 6F010000 		.4byte	.LASF32
  2269 01bd 04       		.byte	0x4
  2270 01be 00       		.byte	0
  2271 01bf 04       		.uleb128 0x4
- 2272 01c0 23000000 		.4byte	.LASF33
+ 2272 01c0 1A000000 		.4byte	.LASF33
  2273 01c4 03       		.byte	0x3
  2274 01c5 5A01     		.2byte	0x15a
  2275 01c7 93010000 		.4byte	0x193
  2276 01cb 0C       		.uleb128 0xc
- 2277 01cc 3F010000 		.4byte	.LASF40
+ 2277 01cc 36010000 		.4byte	.LASF40
  2278 01d0 01       		.byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 70
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 70
 
 
  2279 01d1 F602     		.2byte	0x2f6
@@ -4148,39 +4148,39 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2283 01dc 9C       		.byte	0x9c
  2284 01dd 3E020000 		.4byte	0x23e
  2285 01e1 0D       		.uleb128 0xd
- 2286 01e2 7B020000 		.4byte	.LASF34
+ 2286 01e2 DD020000 		.4byte	.LASF34
  2287 01e6 01       		.byte	0x1
  2288 01e7 F602     		.2byte	0x2f6
  2289 01e9 3E020000 		.4byte	0x23e
  2290 01ed 01       		.uleb128 0x1
  2291 01ee 50       		.byte	0x50
  2292 01ef 0D       		.uleb128 0xd
- 2293 01f0 E7040000 		.4byte	.LASF35
+ 2293 01f0 49050000 		.4byte	.LASF35
  2294 01f4 01       		.byte	0x1
  2295 01f5 F602     		.2byte	0x2f6
  2296 01f7 44020000 		.4byte	0x244
  2297 01fb 01       		.uleb128 0x1
  2298 01fc 51       		.byte	0x51
  2299 01fd 0E       		.uleb128 0xe
- 2300 01fe A8030000 		.4byte	.LASF36
+ 2300 01fe 0A040000 		.4byte	.LASF36
  2301 0202 01       		.byte	0x1
  2302 0203 F802     		.2byte	0x2f8
  2303 0205 83000000 		.4byte	0x83
  2304 0209 00000000 		.4byte	.LLST0
  2305 020d 0E       		.uleb128 0xe
- 2306 020e 4D040000 		.4byte	.LASF37
+ 2306 020e AF040000 		.4byte	.LASF37
  2307 0212 01       		.byte	0x1
  2308 0213 F902     		.2byte	0x2f9
  2309 0215 83000000 		.4byte	0x83
  2310 0219 1F000000 		.4byte	.LLST1
  2311 021d 0E       		.uleb128 0xe
- 2312 021e 10020000 		.4byte	.LASF38
+ 2312 021e 72020000 		.4byte	.LASF38
  2313 0222 01       		.byte	0x1
  2314 0223 FA02     		.2byte	0x2fa
  2315 0225 83000000 		.4byte	0x83
  2316 0229 54000000 		.4byte	.LLST2
  2317 022d 0E       		.uleb128 0xe
- 2318 022e 3C000000 		.4byte	.LASF39
+ 2318 022e 33000000 		.4byte	.LASF39
  2319 0232 01       		.byte	0x1
  2320 0233 FB02     		.2byte	0x2fb
  2321 0235 83000000 		.4byte	0x83
@@ -4193,12 +4193,12 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2328 0245 04       		.byte	0x4
  2329 0246 87010000 		.4byte	0x187
  2330 024a 10       		.uleb128 0x10
- 2331 024b 66050000 		.4byte	.LASF44
+ 2331 024b C8050000 		.4byte	.LASF44
  2332 024f 01       		.byte	0x1
  2333 0250 2203     		.2byte	0x322
  2334 0252 83000000 		.4byte	0x83
  2335 0256 00000000 		.4byte	.LFB7
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 71
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 71
 
 
  2336 025a 1C000000 		.4byte	.LFE7-.LFB7
@@ -4206,27 +4206,27 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2338 025f 9C       		.byte	0x9c
  2339 0260 93020000 		.4byte	0x293
  2340 0264 11       		.uleb128 0x11
- 2341 0265 A8030000 		.4byte	.LASF36
+ 2341 0265 0A040000 		.4byte	.LASF36
  2342 0269 01       		.byte	0x1
  2343 026a 2203     		.2byte	0x322
  2344 026c 83000000 		.4byte	0x83
  2345 0270 9E000000 		.4byte	.LLST4
  2346 0274 0D       		.uleb128 0xd
- 2347 0275 E7040000 		.4byte	.LASF35
+ 2347 0275 49050000 		.4byte	.LASF35
  2348 0279 01       		.byte	0x1
  2349 027a 2203     		.2byte	0x322
  2350 027c 44020000 		.4byte	0x244
  2351 0280 01       		.uleb128 0x1
  2352 0281 51       		.byte	0x51
  2353 0282 0E       		.uleb128 0xe
- 2354 0283 3C000000 		.4byte	.LASF39
+ 2354 0283 33000000 		.4byte	.LASF39
  2355 0287 01       		.byte	0x1
  2356 0288 2403     		.2byte	0x324
  2357 028a 83000000 		.4byte	0x83
  2358 028e BF000000 		.4byte	.LLST5
  2359 0292 00       		.byte	0
  2360 0293 0C       		.uleb128 0xc
- 2361 0294 C7030000 		.4byte	.LASF41
+ 2361 0294 29040000 		.4byte	.LASF41
  2362 0298 01       		.byte	0x1
  2363 0299 4F03     		.2byte	0x34f
  2364 029b 00000000 		.4byte	.LFB8
@@ -4235,7 +4235,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2367 02a4 9C       		.byte	0x9c
  2368 02a5 E8020000 		.4byte	0x2e8
  2369 02a9 11       		.uleb128 0x11
- 2370 02aa A8030000 		.4byte	.LASF36
+ 2370 02aa 0A040000 		.4byte	.LASF36
  2371 02ae 01       		.byte	0x1
  2372 02af 4F03     		.2byte	0x34f
  2373 02b1 83000000 		.4byte	0x83
@@ -4247,24 +4247,24 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2379 02c1 3E020000 		.4byte	0x23e
  2380 02c5 24010000 		.4byte	.LLST7
  2381 02c9 0D       		.uleb128 0xd
- 2382 02ca CC020000 		.4byte	.LASF43
+ 2382 02ca 2E030000 		.4byte	.LASF43
  2383 02ce 01       		.byte	0x1
  2384 02cf 5103     		.2byte	0x351
  2385 02d1 3E020000 		.4byte	0x23e
  2386 02d5 01       		.uleb128 0x1
  2387 02d6 52       		.byte	0x52
  2388 02d7 11       		.uleb128 0x11
- 2389 02d8 E7040000 		.4byte	.LASF35
+ 2389 02d8 49050000 		.4byte	.LASF35
  2390 02dc 01       		.byte	0x1
  2391 02dd 5203     		.2byte	0x352
  2392 02df 44020000 		.4byte	0x244
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 72
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 72
 
 
  2393 02e3 5E010000 		.4byte	.LLST8
  2394 02e7 00       		.byte	0
  2395 02e8 10       		.uleb128 0x10
- 2396 02e9 0A060000 		.4byte	.LASF45
+ 2396 02e9 19060000 		.4byte	.LASF45
  2397 02ed 01       		.byte	0x1
  2398 02ee 9B03     		.2byte	0x39b
  2399 02f0 6B000000 		.4byte	0x6b
@@ -4274,7 +4274,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2403 02fd 9C       		.byte	0x9c
  2404 02fe 4F030000 		.4byte	0x34f
  2405 0302 11       		.uleb128 0x11
- 2406 0303 17060000 		.4byte	.LASF46
+ 2406 0303 26060000 		.4byte	.LASF46
  2407 0307 01       		.byte	0x1
  2408 0308 9B03     		.2byte	0x39b
  2409 030a 4F030000 		.4byte	0x34f
@@ -4309,7 +4309,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2438 0350 04       		.byte	0x4
  2439 0351 6B000000 		.4byte	0x6b
  2440 0355 10       		.uleb128 0x10
- 2441 0356 E6030000 		.4byte	.LASF47
+ 2441 0356 48040000 		.4byte	.LASF47
  2442 035a 01       		.byte	0x1
  2443 035b BC03     		.2byte	0x3bc
  2444 035d BF010000 		.4byte	0x1bf
@@ -4318,11 +4318,11 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2447 0369 01       		.uleb128 0x1
  2448 036a 9C       		.byte	0x9c
  2449 036b AE030000 		.4byte	0x3ae
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 73
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 73
 
 
  2450 036f 11       		.uleb128 0x11
- 2451 0370 BB040000 		.4byte	.LASF48
+ 2451 0370 1D050000 		.4byte	.LASF48
  2452 0374 01       		.byte	0x1
  2453 0375 BC03     		.2byte	0x3bc
  2454 0377 AE030000 		.4byte	0x3ae
@@ -4334,13 +4334,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2460 0387 BF010000 		.4byte	0x1bf
  2461 038b B7020000 		.4byte	.LLST14
  2462 038f 0E       		.uleb128 0xe
- 2463 0390 D1040000 		.4byte	.LASF49
+ 2463 0390 33050000 		.4byte	.LASF49
  2464 0394 01       		.byte	0x1
  2465 0395 BF03     		.2byte	0x3bf
  2466 0397 83000000 		.4byte	0x83
  2467 039b D6020000 		.4byte	.LLST15
  2468 039f 14       		.uleb128 0x14
- 2469 03a0 05040000 		.4byte	.LASF50
+ 2469 03a0 67040000 		.4byte	.LASF50
  2470 03a4 01       		.byte	0x1
  2471 03a5 C003     		.2byte	0x3c0
  2472 03a7 83000000 		.4byte	0x83
@@ -4351,7 +4351,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2477 03af 04       		.byte	0x4
  2478 03b0 09010000 		.4byte	0x109
  2479 03b4 10       		.uleb128 0x10
- 2480 03b5 6E020000 		.4byte	.LASF51
+ 2480 03b5 D0020000 		.4byte	.LASF51
  2481 03b9 01       		.byte	0x1
  2482 03ba 0D05     		.2byte	0x50d
  2483 03bc 83000000 		.4byte	0x83
@@ -4361,35 +4361,35 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2487 03c9 9C       		.byte	0x9c
  2488 03ca 3B040000 		.4byte	0x43b
  2489 03ce 11       		.uleb128 0x11
- 2490 03cf D1040000 		.4byte	.LASF49
+ 2490 03cf 33050000 		.4byte	.LASF49
  2491 03d3 01       		.byte	0x1
  2492 03d4 0D05     		.2byte	0x50d
  2493 03d6 3E020000 		.4byte	0x23e
  2494 03da F8020000 		.4byte	.LLST16
  2495 03de 0D       		.uleb128 0xd
- 2496 03df 05040000 		.4byte	.LASF50
+ 2496 03df 67040000 		.4byte	.LASF50
  2497 03e3 01       		.byte	0x1
  2498 03e4 0E05     		.2byte	0x50e
  2499 03e6 3E020000 		.4byte	0x23e
  2500 03ea 01       		.uleb128 0x1
  2501 03eb 51       		.byte	0x51
  2502 03ec 11       		.uleb128 0x11
- 2503 03ed E0040000 		.4byte	.LASF52
+ 2503 03ed 42050000 		.4byte	.LASF52
  2504 03f1 01       		.byte	0x1
  2505 03f2 0F05     		.2byte	0x50f
  2506 03f4 3E020000 		.4byte	0x23e
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 74
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 74
 
 
  2507 03f8 4B030000 		.4byte	.LLST17
  2508 03fc 11       		.uleb128 0x11
- 2509 03fd 49000000 		.4byte	.LASF53
+ 2509 03fd 40000000 		.4byte	.LASF53
  2510 0401 01       		.byte	0x1
  2511 0402 1005     		.2byte	0x510
  2512 0404 83000000 		.4byte	0x83
  2513 0408 85030000 		.4byte	.LLST18
  2514 040c 0D       		.uleb128 0xd
- 2515 040d 0C010000 		.4byte	.LASF54
+ 2515 040d 03010000 		.4byte	.LASF54
  2516 0411 01       		.byte	0x1
  2517 0412 1105     		.2byte	0x511
  2518 0414 83000000 		.4byte	0x83
@@ -4405,14 +4405,14 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2528 0428 91       		.byte	0x91
  2529 0429 04       		.sleb128 4
  2530 042a 0E       		.uleb128 0xe
- 2531 042b DB040000 		.4byte	.LASF55
+ 2531 042b 3D050000 		.4byte	.LASF55
  2532 042f 01       		.byte	0x1
  2533 0430 1405     		.2byte	0x514
  2534 0432 83000000 		.4byte	0x83
  2535 0436 F2030000 		.4byte	.LLST19
  2536 043a 00       		.byte	0
  2537 043b 10       		.uleb128 0x10
- 2538 043c 36010000 		.4byte	.LASF56
+ 2538 043c 2D010000 		.4byte	.LASF56
  2539 0440 01       		.byte	0x1
  2540 0441 DF03     		.2byte	0x3df
  2541 0443 BF010000 		.4byte	0x1bf
@@ -4422,23 +4422,23 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2545 0450 9C       		.byte	0x9c
  2546 0451 D3040000 		.4byte	0x4d3
  2547 0455 11       		.uleb128 0x11
- 2548 0456 3B040000 		.4byte	.LASF57
+ 2548 0456 9D040000 		.4byte	.LASF57
  2549 045a 01       		.byte	0x1
  2550 045b DF03     		.2byte	0x3df
  2551 045d 83000000 		.4byte	0x83
  2552 0461 11040000 		.4byte	.LLST20
  2553 0465 11       		.uleb128 0x11
- 2554 0466 17060000 		.4byte	.LASF46
+ 2554 0466 26060000 		.4byte	.LASF46
  2555 046a 01       		.byte	0x1
  2556 046b E003     		.2byte	0x3e0
  2557 046d 3E020000 		.4byte	0x23e
  2558 0471 32040000 		.4byte	.LLST21
  2559 0475 11       		.uleb128 0x11
- 2560 0476 E7040000 		.4byte	.LASF35
+ 2560 0476 49050000 		.4byte	.LASF35
  2561 047a 01       		.byte	0x1
  2562 047b E103     		.2byte	0x3e1
  2563 047d 44020000 		.4byte	0x244
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 75
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 75
 
 
  2564 0481 53040000 		.4byte	.LLST22
@@ -4455,7 +4455,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2575 049c A4000000 		.4byte	0xa4
  2576 04a0 93040000 		.4byte	.LLST24
  2577 04a4 0E       		.uleb128 0xe
- 2578 04a5 2D030000 		.4byte	.LASF58
+ 2578 04a5 8F030000 		.4byte	.LASF58
  2579 04a9 01       		.byte	0x1
  2580 04aa E603     		.2byte	0x3e6
  2581 04ac 83000000 		.4byte	0x83
@@ -4486,7 +4486,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2606 04d1 00       		.byte	0
  2607 04d2 00       		.byte	0
  2608 04d3 10       		.uleb128 0x10
- 2609 04d4 D9030000 		.4byte	.LASF59
+ 2609 04d4 3B040000 		.4byte	.LASF59
  2610 04d8 01       		.byte	0x1
  2611 04d9 5405     		.2byte	0x554
  2612 04db BF010000 		.4byte	0x1bf
@@ -4496,9 +4496,9 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2616 04e8 9C       		.byte	0x9c
  2617 04e9 06060000 		.4byte	0x606
  2618 04ed 11       		.uleb128 0x11
- 2619 04ee E7040000 		.4byte	.LASF35
+ 2619 04ee 49050000 		.4byte	.LASF35
  2620 04f2 01       		.byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 76
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 76
 
 
  2621 04f3 5405     		.2byte	0x554
@@ -4511,7 +4511,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2628 0503 83000000 		.4byte	0x83
  2629 0507 04050000 		.4byte	.LLST27
  2630 050b 14       		.uleb128 0x14
- 2631 050c 42050000 		.4byte	.LASF60
+ 2631 050c A4050000 		.4byte	.LASF60
  2632 0510 01       		.byte	0x1
  2633 0511 5705     		.2byte	0x557
  2634 0513 83000000 		.4byte	0x83
@@ -4519,7 +4519,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2636 0518 91       		.byte	0x91
  2637 0519 64       		.sleb128 -28
  2638 051a 14       		.uleb128 0x14
- 2639 051b 8E040000 		.4byte	.LASF61
+ 2639 051b F0040000 		.4byte	.LASF61
  2640 051f 01       		.byte	0x1
  2641 0520 5805     		.2byte	0x558
  2642 0522 06060000 		.4byte	0x606
@@ -4527,7 +4527,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2644 0527 91       		.byte	0x91
  2645 0528 E47D     		.sleb128 -284
  2646 052a 14       		.uleb128 0x14
- 2647 052b F2030000 		.4byte	.LASF62
+ 2647 052b 54040000 		.4byte	.LASF62
  2648 052f 01       		.byte	0x1
  2649 0530 5905     		.2byte	0x559
  2650 0532 83000000 		.4byte	0x83
@@ -4535,13 +4535,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2652 0537 91       		.byte	0x91
  2653 0538 E07D     		.sleb128 -288
  2654 053a 0E       		.uleb128 0xe
- 2655 053b 18020000 		.4byte	.LASF63
+ 2655 053b 7A020000 		.4byte	.LASF63
  2656 053f 01       		.byte	0x1
  2657 0540 5A05     		.2byte	0x55a
  2658 0542 83000000 		.4byte	0x83
  2659 0546 23050000 		.4byte	.LLST28
  2660 054a 0E       		.uleb128 0xe
- 2661 054b A8030000 		.4byte	.LASF36
+ 2661 054b 0A040000 		.4byte	.LASF36
  2662 054f 01       		.byte	0x1
  2663 0550 5C05     		.2byte	0x55c
  2664 0552 83000000 		.4byte	0x83
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2675 0573 8C050000 		.4byte	0x58c
  2676 0577 16       		.uleb128 0x16
  2677 0578 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 77
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 77
 
 
  2678 0579 50       		.byte	0x50
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2732 05c5 74       		.byte	0x74
  2733 05c6 00       		.sleb128 0
  2734 05c7 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 78
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 78
 
 
  2735 05c8 17       		.uleb128 0x17
@@ -4675,10 +4675,10 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2786 0614 3F       		.byte	0x3f
  2787 0615 00       		.byte	0
  2788 0616 10       		.uleb128 0x10
- 2789 0617 88020000 		.4byte	.LASF64
+ 2789 0617 EA020000 		.4byte	.LASF64
  2790 061b 01       		.byte	0x1
  2791 061c B904     		.2byte	0x4b9
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 79
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 79
 
 
  2792 061e BF010000 		.4byte	0x1bf
@@ -4688,31 +4688,31 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2796 062b 9C       		.byte	0x9c
  2797 062c 7D070000 		.4byte	0x77d
  2798 0630 11       		.uleb128 0x11
- 2799 0631 D1040000 		.4byte	.LASF49
+ 2799 0631 33050000 		.4byte	.LASF49
  2800 0635 01       		.byte	0x1
  2801 0636 B904     		.2byte	0x4b9
  2802 0638 83000000 		.4byte	0x83
  2803 063c 7E050000 		.4byte	.LLST31
  2804 0640 11       		.uleb128 0x11
- 2805 0641 F4020000 		.4byte	.LASF65
+ 2805 0641 56030000 		.4byte	.LASF65
  2806 0645 01       		.byte	0x1
  2807 0646 BA04     		.2byte	0x4ba
  2808 0648 83000000 		.4byte	0x83
  2809 064c AA050000 		.4byte	.LLST32
  2810 0650 11       		.uleb128 0x11
- 2811 0651 9D040000 		.4byte	.LASF66
+ 2811 0651 FF040000 		.4byte	.LASF66
  2812 0655 01       		.byte	0x1
  2813 0656 BB04     		.2byte	0x4bb
  2814 0658 83000000 		.4byte	0x83
  2815 065c CA050000 		.4byte	.LLST33
  2816 0660 11       		.uleb128 0x11
- 2817 0661 53020000 		.4byte	.LASF67
+ 2817 0661 B5020000 		.4byte	.LASF67
  2818 0665 01       		.byte	0x1
  2819 0666 BC04     		.2byte	0x4bc
  2820 0668 83000000 		.4byte	0x83
  2821 066c EA050000 		.4byte	.LLST34
  2822 0670 0D       		.uleb128 0xd
- 2823 0671 E7040000 		.4byte	.LASF35
+ 2823 0671 49050000 		.4byte	.LASF35
  2824 0675 01       		.byte	0x1
  2825 0676 BD04     		.2byte	0x4bd
  2826 0678 44020000 		.4byte	0x244
@@ -4726,7 +4726,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2834 0687 BF010000 		.4byte	0x1bf
  2835 068b 0A060000 		.4byte	.LLST35
  2836 068f 14       		.uleb128 0x14
- 2837 0690 8E040000 		.4byte	.LASF61
+ 2837 0690 F0040000 		.4byte	.LASF61
  2838 0694 01       		.byte	0x1
  2839 0695 C004     		.2byte	0x4c0
  2840 0697 06060000 		.4byte	0x606
@@ -4734,11 +4734,11 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2842 069c 91       		.byte	0x91
  2843 069d E87D     		.sleb128 -280
  2844 069f 0E       		.uleb128 0xe
- 2845 06a0 A7040000 		.4byte	.LASF68
+ 2845 06a0 09050000 		.4byte	.LASF68
  2846 06a4 01       		.byte	0x1
  2847 06a5 C304     		.2byte	0x4c3
  2848 06a7 83000000 		.4byte	0x83
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 80
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 80
 
 
  2849 06ab 3F060000 		.4byte	.LLST36
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2903 0703 03       		.uleb128 0x3
  2904 0704 74       		.byte	0x74
  2905 0705 8001     		.sleb128 128
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 81
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 81
 
 
  2906 0707 16       		.uleb128 0x16
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2960 0752 72000000 		.4byte	.LVL107
  2961 0756 C50E0000 		.4byte	0xec5
  2962 075a 16       		.uleb128 0x16
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 82
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 82
 
 
  2963 075b 01       		.uleb128 0x1
@@ -4892,7 +4892,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  2991 077b 00       		.byte	0
  2992 077c 00       		.byte	0
  2993 077d 10       		.uleb128 0x10
- 2994 077e 33030000 		.4byte	.LASF69
+ 2994 077e 95030000 		.4byte	.LASF69
  2995 0782 01       		.byte	0x1
  2996 0783 4504     		.2byte	0x445
  2997 0785 BF010000 		.4byte	0x1bf
@@ -4902,28 +4902,28 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3001 0792 9C       		.byte	0x9c
  3002 0793 1E080000 		.4byte	0x81e
  3003 0797 11       		.uleb128 0x11
- 3004 0798 3B040000 		.4byte	.LASF57
+ 3004 0798 9D040000 		.4byte	.LASF57
  3005 079c 01       		.byte	0x1
  3006 079d 4504     		.2byte	0x445
  3007 079f 83000000 		.4byte	0x83
  3008 07a3 68060000 		.4byte	.LLST37
  3009 07a7 11       		.uleb128 0x11
- 3010 07a8 23020000 		.4byte	.LASF70
+ 3010 07a8 85020000 		.4byte	.LASF70
  3011 07ac 01       		.byte	0x1
  3012 07ad 4604     		.2byte	0x446
  3013 07af 83000000 		.4byte	0x83
  3014 07b3 94060000 		.4byte	.LLST38
  3015 07b7 11       		.uleb128 0x11
- 3016 07b8 E7040000 		.4byte	.LASF35
+ 3016 07b8 49050000 		.4byte	.LASF35
  3017 07bc 01       		.byte	0x1
  3018 07bd 4704     		.2byte	0x447
  3019 07bf 44020000 		.4byte	0x244
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 83
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 83
 
 
  3020 07c3 C0060000 		.4byte	.LLST39
  3021 07c7 0E       		.uleb128 0xe
- 3022 07c8 3F060000 		.4byte	.LASF71
+ 3022 07c8 4E060000 		.4byte	.LASF71
  3023 07cc 01       		.byte	0x1
  3024 07cd 4904     		.2byte	0x449
  3025 07cf 83000000 		.4byte	0x83
@@ -4975,10 +4975,10 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3071 081c 00       		.byte	0
  3072 081d 00       		.byte	0
  3073 081e 1A       		.uleb128 0x1a
- 3074 081f 7C040000 		.4byte	.LASF72
+ 3074 081f DE040000 		.4byte	.LASF72
  3075 0823 01       		.byte	0x1
  3076 0824 5F       		.byte	0x5f
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 84
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 84
 
 
  3077 0825 BF010000 		.4byte	0x1bf
@@ -4988,13 +4988,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3081 0832 9C       		.byte	0x9c
  3082 0833 BD080000 		.4byte	0x8bd
  3083 0837 1B       		.uleb128 0x1b
- 3084 0838 BB040000 		.4byte	.LASF48
+ 3084 0838 1D050000 		.4byte	.LASF48
  3085 083c 01       		.byte	0x1
  3086 083d 5F       		.byte	0x5f
  3087 083e AE030000 		.4byte	0x3ae
  3088 0842 3F070000 		.4byte	.LLST42
  3089 0846 1B       		.uleb128 0x1b
- 3090 0847 E7040000 		.4byte	.LASF35
+ 3090 0847 49050000 		.4byte	.LASF35
  3091 084b 01       		.byte	0x1
  3092 084c 5F       		.byte	0x5f
  3093 084d 44020000 		.4byte	0x244
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3131 0897 D3040000 		.4byte	0x4d3
  3132 089b A6080000 		.4byte	0x8a6
  3133 089f 16       		.uleb128 0x16
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 85
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 85
 
 
  3134 08a0 01       		.uleb128 0x1
@@ -5065,7 +5065,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3155 08bb 00       		.byte	0
  3156 08bc 00       		.byte	0
  3157 08bd 1D       		.uleb128 0x1d
- 3158 08be 1B030000 		.4byte	.LASF73
+ 3158 08be 7D030000 		.4byte	.LASF73
  3159 08c2 01       		.byte	0x1
  3160 08c3 A9       		.byte	0xa9
  3161 08c4 BF010000 		.4byte	0x1bf
@@ -5075,30 +5075,30 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3165 08d1 9C       		.byte	0x9c
  3166 08d2 E10A0000 		.4byte	0xae1
  3167 08d6 1B       		.uleb128 0x1b
- 3168 08d7 0C010000 		.4byte	.LASF54
+ 3168 08d7 03010000 		.4byte	.LASF54
  3169 08db 01       		.byte	0x1
  3170 08dc A9       		.byte	0xa9
  3171 08dd 83000000 		.4byte	0x83
  3172 08e1 1D080000 		.4byte	.LLST45
  3173 08e5 1B       		.uleb128 0x1b
- 3174 08e6 E9020000 		.4byte	.LASF74
+ 3174 08e6 4B030000 		.4byte	.LASF74
  3175 08ea 01       		.byte	0x1
  3176 08eb AA       		.byte	0xaa
  3177 08ec BE000000 		.4byte	0xbe
  3178 08f0 8C080000 		.4byte	.LLST46
  3179 08f4 1B       		.uleb128 0x1b
- 3180 08f5 A2020000 		.4byte	.LASF75
+ 3180 08f5 04030000 		.4byte	.LASF75
  3181 08f9 01       		.byte	0x1
  3182 08fa AB       		.byte	0xab
  3183 08fb 83000000 		.4byte	0x83
  3184 08ff CE080000 		.4byte	.LLST47
  3185 0903 1B       		.uleb128 0x1b
- 3186 0904 E7040000 		.4byte	.LASF35
+ 3186 0904 49050000 		.4byte	.LASF35
  3187 0908 01       		.byte	0x1
  3188 0909 AC       		.byte	0xac
  3189 090a 44020000 		.4byte	0x244
  3190 090e 37090000 		.4byte	.LLST48
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 86
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 86
 
 
  3191 0912 1C       		.uleb128 0x1c
@@ -5114,51 +5114,51 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3201 0926 83000000 		.4byte	0x83
  3202 092a 200A0000 		.4byte	.LLST50
  3203 092e 1E       		.uleb128 0x1e
- 3204 092f C2040000 		.4byte	.LASF76
+ 3204 092f 24050000 		.4byte	.LASF76
  3205 0933 01       		.byte	0x1
  3206 0934 B0       		.byte	0xb0
  3207 0935 83000000 		.4byte	0x83
  3208 0939 840A0000 		.4byte	.LLST51
  3209 093d 1E       		.uleb128 0x1e
- 3210 093e 09030000 		.4byte	.LASF77
+ 3210 093e 6B030000 		.4byte	.LASF77
  3211 0942 01       		.byte	0x1
  3212 0943 B1       		.byte	0xb1
  3213 0944 83000000 		.4byte	0x83
  3214 0948 B80A0000 		.4byte	.LLST52
  3215 094c 1E       		.uleb128 0x1e
- 3216 094d FD040000 		.4byte	.LASF78
+ 3216 094d 5F050000 		.4byte	.LASF78
  3217 0951 01       		.byte	0x1
  3218 0952 B2       		.byte	0xb2
  3219 0953 83000000 		.4byte	0x83
  3220 0957 D80A0000 		.4byte	.LLST53
  3221 095b 1E       		.uleb128 0x1e
- 3222 095c FC020000 		.4byte	.LASF79
+ 3222 095c 5E030000 		.4byte	.LASF79
  3223 0960 01       		.byte	0x1
  3224 0961 B3       		.byte	0xb3
  3225 0962 83000000 		.4byte	0x83
  3226 0966 1C0B0000 		.4byte	.LLST54
  3227 096a 1E       		.uleb128 0x1e
- 3228 096b DE010000 		.4byte	.LASF80
+ 3228 096b 40020000 		.4byte	.LASF80
  3229 096f 01       		.byte	0x1
  3230 0970 B4       		.byte	0xb4
  3231 0971 83000000 		.4byte	0x83
  3232 0975 8A0B0000 		.4byte	.LLST55
  3233 0979 1E       		.uleb128 0x1e
- 3234 097a 9C050000 		.4byte	.LASF81
+ 3234 097a FE050000 		.4byte	.LASF81
  3235 097e 01       		.byte	0x1
  3236 097f B5       		.byte	0xb5
  3237 0980 83000000 		.4byte	0x83
  3238 0984 A90B0000 		.4byte	.LLST56
  3239 0988 1E       		.uleb128 0x1e
- 3240 0989 66040000 		.4byte	.LASF82
+ 3240 0989 C8040000 		.4byte	.LASF82
  3241 098d 01       		.byte	0x1
  3242 098e B6       		.byte	0xb6
  3243 098f 83000000 		.4byte	0x83
  3244 0993 D40B0000 		.4byte	.LLST57
  3245 0997 1E       		.uleb128 0x1e
- 3246 0998 4F060000 		.4byte	.LASF83
+ 3246 0998 5E060000 		.4byte	.LASF83
  3247 099c 01       		.byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 87
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 87
 
 
  3248 099d B7       		.byte	0xb7
@@ -5167,31 +5167,31 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3251 09a6 1F       		.uleb128 0x1f
  3252 09a7 00000000 		.4byte	.Ldebug_ranges0+0
  3253 09ab 1E       		.uleb128 0x1e
- 3254 09ac 42050000 		.4byte	.LASF60
+ 3254 09ac A4050000 		.4byte	.LASF60
  3255 09b0 01       		.byte	0x1
  3256 09b1 BC       		.byte	0xbc
  3257 09b2 83000000 		.4byte	0x83
  3258 09b6 560C0000 		.4byte	.LLST59
  3259 09ba 1E       		.uleb128 0x1e
- 3260 09bb 21050000 		.4byte	.LASF84
+ 3260 09bb 83050000 		.4byte	.LASF84
  3261 09bf 01       		.byte	0x1
  3262 09c0 BD       		.byte	0xbd
  3263 09c1 83000000 		.4byte	0x83
  3264 09c5 AB0C0000 		.4byte	.LLST60
  3265 09c9 1E       		.uleb128 0x1e
- 3266 09ca A8030000 		.4byte	.LASF36
+ 3266 09ca 0A040000 		.4byte	.LASF36
  3267 09ce 01       		.byte	0x1
  3268 09cf BF       		.byte	0xbf
  3269 09d0 83000000 		.4byte	0x83
  3270 09d4 DF0C0000 		.4byte	.LLST61
  3271 09d8 1E       		.uleb128 0x1e
- 3272 09d9 01020000 		.4byte	.LASF85
+ 3272 09d9 63020000 		.4byte	.LASF85
  3273 09dd 01       		.byte	0x1
  3274 09de C0       		.byte	0xc0
  3275 09df 83000000 		.4byte	0x83
  3276 09e3 0A0D0000 		.4byte	.LLST62
  3277 09e7 1E       		.uleb128 0x1e
- 3278 09e8 33060000 		.4byte	.LASF86
+ 3278 09e8 42060000 		.4byte	.LASF86
  3279 09ec 01       		.byte	0x1
  3280 09ed C5       		.byte	0xc5
  3281 09ee 83000000 		.4byte	0x83
@@ -5200,7 +5200,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3284 09f7 28000000 		.4byte	.Ldebug_ranges0+0x28
  3285 09fb 0F0A0000 		.4byte	0xa0f
  3286 09ff 1E       		.uleb128 0x1e
- 3287 0a00 1F060000 		.4byte	.LASF87
+ 3287 0a00 2E060000 		.4byte	.LASF87
  3288 0a04 01       		.byte	0x1
  3289 0a05 E2       		.byte	0xe2
  3290 0a06 83000000 		.4byte	0x83
@@ -5210,15 +5210,15 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3294 0a10 40000000 		.4byte	.Ldebug_ranges0+0x40
  3295 0a14 8C0A0000 		.4byte	0xa8c
  3296 0a18 0E       		.uleb128 0xe
- 3297 0a19 D1040000 		.4byte	.LASF49
+ 3297 0a19 33050000 		.4byte	.LASF49
  3298 0a1d 01       		.byte	0x1
  3299 0a1e 3B01     		.2byte	0x13b
  3300 0a20 83000000 		.4byte	0x83
  3301 0a24 B20D0000 		.4byte	.LLST65
  3302 0a28 0E       		.uleb128 0xe
- 3303 0a29 05040000 		.4byte	.LASF50
+ 3303 0a29 67040000 		.4byte	.LASF50
  3304 0a2d 01       		.byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 88
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 88
 
 
  3305 0a2e 3C01     		.2byte	0x13c
@@ -5227,13 +5227,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3308 0a38 1F       		.uleb128 0x1f
  3309 0a39 58000000 		.4byte	.Ldebug_ranges0+0x58
  3310 0a3d 0E       		.uleb128 0xe
- 3311 0a3e 98020000 		.4byte	.LASF88
+ 3311 0a3e FA020000 		.4byte	.LASF88
  3312 0a42 01       		.byte	0x1
  3313 0a43 4101     		.2byte	0x141
  3314 0a45 83000000 		.4byte	0x83
  3315 0a49 140E0000 		.4byte	.LLST67
  3316 0a4d 0E       		.uleb128 0xe
- 3317 0a4e 49050000 		.4byte	.LASF89
+ 3317 0a4e AB050000 		.4byte	.LASF89
  3318 0a52 01       		.byte	0x1
  3319 0a53 4201     		.2byte	0x142
  3320 0a55 83000000 		.4byte	0x83
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3359 0a9b 51       		.byte	0x51
  3360 0a9c 02       		.uleb128 0x2
  3361 0a9d 78       		.byte	0x78
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 89
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 89
 
 
  3362 0a9e 00       		.sleb128 0
@@ -5333,12 +5333,12 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3411 0adf 00       		.byte	0
  3412 0ae0 00       		.byte	0
  3413 0ae1 21       		.uleb128 0x21
- 3414 0ae2 95030000 		.4byte	.LASF90
+ 3414 0ae2 F7030000 		.4byte	.LASF90
  3415 0ae6 01       		.byte	0x1
  3416 0ae7 9B01     		.2byte	0x19b
  3417 0ae9 BF010000 		.4byte	0x1bf
  3418 0aed 00000000 		.4byte	.LFB3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 90
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 90
 
 
  3419 0af1 90010000 		.4byte	.LFE3-.LFB3
@@ -5346,25 +5346,25 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3421 0af6 9C       		.byte	0x9c
  3422 0af7 7B0D0000 		.4byte	0xd7b
  3423 0afb 11       		.uleb128 0x11
- 3424 0afc 0C010000 		.4byte	.LASF54
+ 3424 0afc 03010000 		.4byte	.LASF54
  3425 0b00 01       		.byte	0x1
  3426 0b01 9B01     		.2byte	0x19b
  3427 0b03 83000000 		.4byte	0x83
  3428 0b07 500E0000 		.4byte	.LLST69
  3429 0b0b 11       		.uleb128 0x11
- 3430 0b0c E9020000 		.4byte	.LASF74
+ 3430 0b0c 4B030000 		.4byte	.LASF74
  3431 0b10 01       		.byte	0x1
  3432 0b11 9C01     		.2byte	0x19c
  3433 0b13 BE000000 		.4byte	0xbe
  3434 0b17 B00E0000 		.4byte	.LLST70
  3435 0b1b 11       		.uleb128 0x11
- 3436 0b1c A2020000 		.4byte	.LASF75
+ 3436 0b1c 04030000 		.4byte	.LASF75
  3437 0b20 01       		.byte	0x1
  3438 0b21 9D01     		.2byte	0x19d
  3439 0b23 83000000 		.4byte	0x83
  3440 0b27 F70E0000 		.4byte	.LLST71
  3441 0b2b 11       		.uleb128 0x11
- 3442 0b2c E7040000 		.4byte	.LASF35
+ 3442 0b2c 49050000 		.4byte	.LASF35
  3443 0b30 01       		.byte	0x1
  3444 0b31 9E01     		.2byte	0x19e
  3445 0b33 44020000 		.4byte	0x244
@@ -5382,30 +5382,30 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3457 0b51 83000000 		.4byte	0x83
  3458 0b55 A30F0000 		.4byte	.LLST74
  3459 0b59 0E       		.uleb128 0xe
- 3460 0b5a F9030000 		.4byte	.LASF91
+ 3460 0b5a 5B040000 		.4byte	.LASF91
  3461 0b5e 01       		.byte	0x1
  3462 0b5f A201     		.2byte	0x1a2
  3463 0b61 83000000 		.4byte	0x83
  3464 0b65 B60F0000 		.4byte	.LLST75
  3465 0b69 0E       		.uleb128 0xe
- 3466 0b6a BA020000 		.4byte	.LASF92
+ 3466 0b6a 1C030000 		.4byte	.LASF92
  3467 0b6e 01       		.byte	0x1
  3468 0b6f A301     		.2byte	0x1a3
  3469 0b71 83000000 		.4byte	0x83
  3470 0b75 D50F0000 		.4byte	.LLST76
  3471 0b79 14       		.uleb128 0x14
- 3472 0b7a 8E040000 		.4byte	.LASF61
+ 3472 0b7a F0040000 		.4byte	.LASF61
  3473 0b7e 01       		.byte	0x1
  3474 0b7f A401     		.2byte	0x1a4
  3475 0b81 06060000 		.4byte	0x606
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 91
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 91
 
 
  3476 0b85 03       		.uleb128 0x3
  3477 0b86 91       		.byte	0x91
  3478 0b87 D87D     		.sleb128 -296
  3479 0b89 14       		.uleb128 0x14
- 3480 0b8a D1040000 		.4byte	.LASF49
+ 3480 0b8a 33050000 		.4byte	.LASF49
  3481 0b8e 01       		.byte	0x1
  3482 0b8f A501     		.2byte	0x1a5
  3483 0b91 83000000 		.4byte	0x83
@@ -5413,7 +5413,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3485 0b96 91       		.byte	0x91
  3486 0b97 D47D     		.sleb128 -300
  3487 0b99 14       		.uleb128 0x14
- 3488 0b9a 05040000 		.4byte	.LASF50
+ 3488 0b9a 67040000 		.4byte	.LASF50
  3489 0b9e 01       		.byte	0x1
  3490 0b9f A601     		.2byte	0x1a6
  3491 0ba1 83000000 		.4byte	0x83
@@ -5421,13 +5421,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3493 0ba6 91       		.byte	0x91
  3494 0ba7 D07D     		.sleb128 -304
  3495 0ba9 0E       		.uleb128 0xe
- 3496 0baa 18020000 		.4byte	.LASF63
+ 3496 0baa 7A020000 		.4byte	.LASF63
  3497 0bae 01       		.byte	0x1
  3498 0baf A701     		.2byte	0x1a7
  3499 0bb1 83000000 		.4byte	0x83
  3500 0bb5 FE0F0000 		.4byte	.LLST77
  3501 0bb9 14       		.uleb128 0x14
- 3502 0bba 3F060000 		.4byte	.LASF71
+ 3502 0bba 4E060000 		.4byte	.LASF71
  3503 0bbe 01       		.byte	0x1
  3504 0bbf A801     		.2byte	0x1a8
  3505 0bc1 83000000 		.4byte	0x83
@@ -5435,7 +5435,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3507 0bc6 91       		.byte	0x91
  3508 0bc7 CC7D     		.sleb128 -308
  3509 0bc9 14       		.uleb128 0x14
- 3510 0bca D7020000 		.4byte	.LASF93
+ 3510 0bca 39030000 		.4byte	.LASF93
  3511 0bce 01       		.byte	0x1
  3512 0bcf A901     		.2byte	0x1a9
  3513 0bd1 83000000 		.4byte	0x83
@@ -5449,7 +5449,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3521 0be1 BE000000 		.4byte	0xbe
  3522 0be5 4C100000 		.4byte	.LLST78
  3523 0be9 0E       		.uleb128 0xe
- 3524 0bea 4F060000 		.4byte	.LASF83
+ 3524 0bea 5E060000 		.4byte	.LASF83
  3525 0bee 01       		.byte	0x1
  3526 0bef AB01     		.2byte	0x1ab
  3527 0bf1 83000000 		.4byte	0x83
@@ -5457,8 +5457,8 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3529 0bf9 1F       		.uleb128 0x1f
  3530 0bfa 70000000 		.4byte	.Ldebug_ranges0+0x70
  3531 0bfe 0E       		.uleb128 0xe
- 3532 0bff EB000000 		.4byte	.LASF95
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 92
+ 3532 0bff E2000000 		.4byte	.LASF95
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 92
 
 
  3533 0c03 01       		.byte	0x1
@@ -5466,7 +5466,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3535 0c06 83000000 		.4byte	0x83
  3536 0c0a 97100000 		.4byte	.LLST80
  3537 0c0e 14       		.uleb128 0x14
- 3538 0c0f EE010000 		.4byte	.LASF96
+ 3538 0c0f 50020000 		.4byte	.LASF96
  3539 0c13 01       		.byte	0x1
  3540 0c14 B101     		.2byte	0x1b1
  3541 0c16 83000000 		.4byte	0x83
@@ -5477,13 +5477,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3546 0c1f 52000000 		.4byte	.LBB13
  3547 0c23 16010000 		.4byte	.LBE13-.LBB13
  3548 0c27 0E       		.uleb128 0xe
- 3549 0c28 58040000 		.4byte	.LASF97
+ 3549 0c28 BA040000 		.4byte	.LASF97
  3550 0c2c 01       		.byte	0x1
  3551 0c2d B501     		.2byte	0x1b5
  3552 0c2f 83000000 		.4byte	0x83
  3553 0c33 B7100000 		.4byte	.LLST81
  3554 0c37 0E       		.uleb128 0xe
- 3555 0c38 A8030000 		.4byte	.LASF36
+ 3555 0c38 0A040000 		.4byte	.LASF36
  3556 0c3c 01       		.byte	0x1
  3557 0c3d B701     		.2byte	0x1b7
  3558 0c3f 83000000 		.4byte	0x83
@@ -5493,7 +5493,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3562 0c4c 18000000 		.4byte	.LBE14-.LBB14
  3563 0c50 750C0000 		.4byte	0xc75
  3564 0c54 0E       		.uleb128 0xe
- 3565 0c55 3D020000 		.4byte	.LASF98
+ 3565 0c55 9F020000 		.4byte	.LASF98
  3566 0c59 01       		.byte	0x1
  3567 0c5a 1702     		.2byte	0x217
  3568 0c5c 83000000 		.4byte	0x83
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3587 0c84 50       		.byte	0x50
  3588 0c85 02       		.uleb128 0x2
  3589 0c86 74       		.byte	0x74
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 93
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 93
 
 
  3590 0c87 00       		.sleb128 0
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3644 0cd4 B4000000 		.4byte	.LVL252
  3645 0cd8 C50E0000 		.4byte	0xec5
  3646 0cdc EE0C0000 		.4byte	0xcee
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 94
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 94
 
 
  3647 0ce0 16       		.uleb128 0x16
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3701 0d2c 30010000 		.4byte	.LVL268
  3702 0d30 E8020000 		.4byte	0x2e8
  3703 0d34 460D0000 		.4byte	0xd46
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 95
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 95
 
 
  3704 0d38 16       		.uleb128 0x16
@@ -5691,20 +5691,20 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3751 0d79 00       		.byte	0
  3752 0d7a 00       		.byte	0
  3753 0d7b 24       		.uleb128 0x24
- 3754 0d7c 82030000 		.4byte	.LASF99
+ 3754 0d7c E4030000 		.4byte	.LASF99
  3755 0d80 01       		.byte	0x1
  3756 0d81 7502     		.2byte	0x275
  3757 0d83 BF010000 		.4byte	0x1bf
  3758 0d87 00000000 		.4byte	.LFB4
  3759 0d8b 64000000 		.4byte	.LFE4-.LFB4
  3760 0d8f 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 96
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 96
 
 
  3761 0d90 9C       		.byte	0x9c
  3762 0d91 8F0E0000 		.4byte	0xe8f
  3763 0d95 11       		.uleb128 0x11
- 3764 0d96 E7040000 		.4byte	.LASF35
+ 3764 0d96 49050000 		.4byte	.LASF35
  3765 0d9a 01       		.byte	0x1
  3766 0d9b 7502     		.2byte	0x275
  3767 0d9d 44020000 		.4byte	0x244
@@ -5716,13 +5716,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3773 0dab 83000000 		.4byte	0x83
  3774 0daf 54110000 		.4byte	.LLST85
  3775 0db3 0E       		.uleb128 0xe
- 3776 0db4 A8030000 		.4byte	.LASF36
+ 3776 0db4 0A040000 		.4byte	.LASF36
  3777 0db8 01       		.byte	0x1
  3778 0db9 7802     		.2byte	0x278
  3779 0dbb 83000000 		.4byte	0x83
  3780 0dbf 67110000 		.4byte	.LLST86
  3781 0dc3 14       		.uleb128 0x14
- 3782 0dc4 3F060000 		.4byte	.LASF71
+ 3782 0dc4 4E060000 		.4byte	.LASF71
  3783 0dc8 01       		.byte	0x1
  3784 0dc9 7902     		.2byte	0x279
  3785 0dcb 83000000 		.4byte	0x83
@@ -5730,7 +5730,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3787 0dd0 91       		.byte	0x91
  3788 0dd1 64       		.sleb128 -28
  3789 0dd2 14       		.uleb128 0x14
- 3790 0dd3 D7020000 		.4byte	.LASF93
+ 3790 0dd3 39030000 		.4byte	.LASF93
  3791 0dd7 01       		.byte	0x1
  3792 0dd8 7A02     		.2byte	0x27a
  3793 0dda 83000000 		.4byte	0x83
@@ -5744,7 +5744,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3801 0de9 BF010000 		.4byte	0x1bf
  3802 0ded 9C110000 		.4byte	.LLST87
  3803 0df1 14       		.uleb128 0x14
- 3804 0df2 8E040000 		.4byte	.LASF61
+ 3804 0df2 F0040000 		.4byte	.LASF61
  3805 0df6 01       		.byte	0x1
  3806 0df7 7C02     		.2byte	0x27c
  3807 0df9 06060000 		.4byte	0x606
@@ -5755,10 +5755,10 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3812 0e02 88000000 		.4byte	.Ldebug_ranges0+0x88
  3813 0e06 720E0000 		.4byte	0xe72
  3814 0e0a 0E       		.uleb128 0xe
- 3815 0e0b EB000000 		.4byte	.LASF95
+ 3815 0e0b E2000000 		.4byte	.LASF95
  3816 0e0f 01       		.byte	0x1
  3817 0e10 8902     		.2byte	0x289
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 97
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 97
 
 
  3818 0e12 83000000 		.4byte	0x83
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3872 0e67 02       		.uleb128 0x2
  3873 0e68 7D       		.byte	0x7d
  3874 0e69 00       		.sleb128 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 98
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 98
 
 
  3875 0e6a 16       		.uleb128 0x16
@@ -5852,7 +5852,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3903 0e8d 00       		.byte	0
  3904 0e8e 00       		.byte	0
  3905 0e8f 24       		.uleb128 0x24
- 3906 0e90 90010000 		.4byte	.LASF100
+ 3906 0e90 87010000 		.4byte	.LASF100
  3907 0e94 01       		.byte	0x1
  3908 0e95 DC02     		.2byte	0x2dc
  3909 0e97 83000000 		.4byte	0x83
@@ -5862,26 +5862,26 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3913 0ea4 9C       		.byte	0x9c
  3914 0ea5 BA0E0000 		.4byte	0xeba
  3915 0ea9 11       		.uleb128 0x11
- 3916 0eaa E7040000 		.4byte	.LASF35
+ 3916 0eaa 49050000 		.4byte	.LASF35
  3917 0eae 01       		.byte	0x1
  3918 0eaf DC02     		.2byte	0x2dc
  3919 0eb1 44020000 		.4byte	0x244
  3920 0eb5 F0110000 		.4byte	.LLST89
  3921 0eb9 00       		.byte	0
  3922 0eba 25       		.uleb128 0x25
- 3923 0ebb 53050000 		.4byte	.LASF106
- 3924 0ebf 53050000 		.4byte	.LASF106
+ 3923 0ebb B5050000 		.4byte	.LASF106
+ 3924 0ebf B5050000 		.4byte	.LASF106
  3925 0ec3 04       		.byte	0x4
  3926 0ec4 4E       		.byte	0x4e
  3927 0ec5 26       		.uleb128 0x26
- 3928 0ec6 C3010000 		.4byte	.LASF101
- 3929 0eca C3010000 		.4byte	.LASF101
+ 3928 0ec6 25020000 		.4byte	.LASF101
+ 3929 0eca 25020000 		.4byte	.LASF101
  3930 0ece 26       		.uleb128 0x26
- 3931 0ecf 3B050000 		.4byte	.LASF102
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 99
+ 3931 0ecf 9D050000 		.4byte	.LASF102
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 99
 
 
- 3932 0ed3 3B050000 		.4byte	.LASF102
+ 3932 0ed3 9D050000 		.4byte	.LASF102
  3933 0ed7 00       		.byte	0
  3934              		.section	.debug_abbrev,"",%progbits
  3935              	.Ldebug_abbrev0:
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  3986 0032 49       		.uleb128 0x49
  3987 0033 13       		.uleb128 0x13
  3988 0034 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 100
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 100
 
 
  3989 0035 00       		.byte	0
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4043 006b 0B       		.uleb128 0xb
  4044 006c 0B       		.uleb128 0xb
  4045 006d 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 101
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 101
 
 
  4046 006e 0B       		.uleb128 0xb
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4100 00a5 0D       		.uleb128 0xd
  4101 00a6 05       		.uleb128 0x5
  4102 00a7 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 102
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 102
 
 
  4103 00a8 03       		.uleb128 0x3
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4157 00de 18       		.uleb128 0x18
  4158 00df 9742     		.uleb128 0x2117
  4159 00e1 19       		.uleb128 0x19
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 103
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 103
 
 
  4160 00e2 01       		.uleb128 0x1
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4214 0118 3A       		.uleb128 0x3a
  4215 0119 0B       		.uleb128 0xb
  4216 011a 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 104
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 104
 
 
  4217 011b 05       		.uleb128 0x5
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4271 0158 1A       		.uleb128 0x1a
  4272 0159 2E       		.uleb128 0x2e
  4273 015a 01       		.byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 105
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 105
 
 
  4274 015b 3F       		.uleb128 0x3f
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4328 0192 1D       		.uleb128 0x1d
  4329 0193 2E       		.uleb128 0x2e
  4330 0194 01       		.byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 106
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 106
 
 
  4331 0195 3F       		.uleb128 0x3f
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4385 01cc 00       		.byte	0
  4386 01cd 21       		.uleb128 0x21
  4387 01ce 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 107
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 107
 
 
  4388 01cf 01       		.byte	0x1
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4442 0206 3B       		.uleb128 0x3b
  4443 0207 05       		.uleb128 0x5
  4444 0208 27       		.uleb128 0x27
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 108
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 108
 
 
  4445 0209 19       		.uleb128 0x19
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4499 000c 0E000000 		.4byte	.LVL5
  4500 0010 20000000 		.4byte	.LVL10
  4501 0014 0100     		.2byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 109
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 109
 
 
  4502 0016 53       		.byte	0x53
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4556 00a2 1A000000 		.4byte	.LVL18
  4557 00a6 0100     		.2byte	0x1
  4558 00a8 50       		.byte	0x50
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 110
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 110
 
 
  4559 00a9 1A000000 		.4byte	.LVL18
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4613 012c 0100     		.2byte	0x1
  4614 012e 51       		.byte	0x51
  4615 012f 2E000000 		.4byte	.LVL21
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 111
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 111
 
 
  4616 0133 4E000000 		.4byte	.LVL23
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4670 01b2 3A000000 		.4byte	.LFE9
  4671 01b6 0400     		.2byte	0x4
  4672 01b8 F3       		.byte	0xf3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 112
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 112
 
 
  4673 01b9 01       		.uleb128 0x1
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4727 0244 30       		.byte	0x30
  4728 0245 9F       		.byte	0x9f
  4729 0246 0A000000 		.4byte	.LVL29
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 113
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 113
 
 
  4730 024a 32000000 		.4byte	.LVL39
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4784 02cd 50       		.byte	0x50
  4785 02ce 00000000 		.4byte	0
  4786 02d2 00000000 		.4byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 114
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 114
 
 
  4787              	.LLST15:
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4841 0353 0100     		.2byte	0x1
  4842 0355 52       		.byte	0x52
  4843 0356 28000000 		.4byte	.LVL55
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 115
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 115
 
 
  4844 035a 66000000 		.4byte	.LVL61
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4898 03d7 0300     		.2byte	0x3
  4899 03d9 73       		.byte	0x73
  4900 03da 7F       		.sleb128 -1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 116
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 116
 
 
  4901 03db 9F       		.byte	0x9f
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  4955 045d 52       		.byte	0x52
  4956 045e 0B000000 		.4byte	.LVL71-1
  4957 0462 18000000 		.4byte	.LFE11
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 117
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 117
 
 
  4958 0466 0400     		.2byte	0x4
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5012 04e2 50       		.byte	0x50
  5013 04e3 12000000 		.4byte	.LVL77
  5014 04e7 6A000000 		.4byte	.LVL89
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 118
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 118
 
 
  5015 04eb 0100     		.2byte	0x1
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5069 0575 56       		.byte	0x56
  5070 0576 00000000 		.4byte	0
  5071 057a 00000000 		.4byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 119
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 119
 
 
  5072              	.LLST31:
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5126              	.LLST35:
  5127 060a 32000000 		.4byte	.LVL99
  5128 060e 36000000 		.4byte	.LVL101
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 120
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 120
 
 
  5129 0612 0200     		.2byte	0x2
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5183 069e 51       		.byte	0x51
  5184 069f 0B000000 		.4byte	.LVL114-1
  5185 06a3 2E000000 		.4byte	.LVL119
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 121
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 121
 
 
  5186 06a7 0100     		.2byte	0x1
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5240 072c 28000000 		.4byte	.LVL117
  5241 0730 30000000 		.4byte	.LFE12
  5242 0734 0100     		.2byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 122
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 122
 
 
  5243 0736 50       		.byte	0x50
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5297 07bc 51       		.byte	0x51
  5298 07bd 9F       		.byte	0x9f
  5299 07be 00000000 		.4byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 123
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 123
 
 
  5300 07c2 00000000 		.4byte	0
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5354 0853 52       		.byte	0x52
  5355 0854 D6000000 		.4byte	.LVL168
  5356 0858 0E020000 		.4byte	.LVL223
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 124
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 124
 
 
  5357 085c 0200     		.2byte	0x2
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5411 08e3 5A       		.byte	0x5a
  5412 08e4 D6000000 		.4byte	.LVL168
  5413 08e8 0E020000 		.4byte	.LVL223
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 125
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 125
 
 
  5414 08ec 0400     		.2byte	0x4
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5468 096e 60010000 		.4byte	.LVL195
  5469 0972 86010000 		.4byte	.LVL202
  5470 0976 0100     		.2byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 126
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 126
 
 
  5471 0978 57       		.byte	0x57
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5525 0a01 0E020000 		.4byte	.LVL223
  5526 0a05 1E020000 		.4byte	.LVL227
  5527 0a09 0200     		.2byte	0x2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 127
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 127
 
 
  5528 0a0b 31       		.byte	0x31
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5582 0a97 0100     		.2byte	0x1
  5583 0a99 54       		.byte	0x54
  5584 0a9a DC010000 		.4byte	.LVL211
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 128
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 128
 
 
  5585 0a9e F3010000 		.4byte	.LVL216-1
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5639              	.LLST54:
  5640 0b1c DE000000 		.4byte	.LVL170
  5641 0b20 12010000 		.4byte	.LVL177
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 129
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 129
 
 
  5642 0b24 0100     		.2byte	0x1
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5696 0b8a 96000000 		.4byte	.LVL155
  5697 0b8e D6000000 		.4byte	.LVL168
  5698 0b92 0100     		.2byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 130
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 130
 
 
  5699 0b94 51       		.byte	0x51
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5753 0c1e 0200     		.2byte	0x2
  5754 0c20 91       		.byte	0x91
  5755 0c21 48       		.sleb128 -56
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 131
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 131
 
 
  5756 0c22 D6000000 		.4byte	.LVL168
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5810 0cb6 3C010000 		.4byte	.LVL184
  5811 0cba 50010000 		.4byte	.LVL190
  5812 0cbe 0100     		.2byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 132
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 132
 
 
  5813 0cc0 5A       		.byte	0x5a
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5867 0d4b 00000000 		.4byte	0
  5868 0d4f 00000000 		.4byte	0
  5869              	.LLST64:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 133
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 133
 
 
  5870 0d53 A2000000 		.4byte	.LVL156
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5924 0dc5 0200     		.2byte	0x2
  5925 0dc7 70       		.byte	0x70
  5926 0dc8 04       		.sleb128 4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 134
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 134
 
 
  5927 0dc9 FC010000 		.4byte	.LVL218
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  5981 0e45 0100     		.2byte	0x1
  5982 0e47 5C       		.byte	0x5c
  5983 0e48 00000000 		.4byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 135
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 135
 
 
  5984 0e4c 00000000 		.4byte	0
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  6038 0eda 82010000 		.4byte	.LVL280
  6039 0ede 0100     		.2byte	0x1
  6040 0ee0 51       		.byte	0x51
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 136
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 136
 
 
  6041 0ee1 82010000 		.4byte	.LVL280
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  6095 0f6b 0100     		.2byte	0x1
  6096 0f6d 50       		.byte	0x50
  6097 0f6e 42010000 		.4byte	.LVL270
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 137
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 137
 
 
  6098 0f72 52010000 		.4byte	.LVL271
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  6152 1002 D0000000 		.4byte	.LVL255
  6153 1006 0100     		.2byte	0x1
  6154 1008 56       		.byte	0x56
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 138
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 138
 
 
  6155 1009 DA000000 		.4byte	.LVL257
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  6209 1097 48000000 		.4byte	.LVL237
  6210 109b 4A000000 		.4byte	.LVL238
  6211 109f 0100     		.2byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 139
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 139
 
 
  6212 10a1 53       		.byte	0x53
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  6266 1132 50       		.byte	0x50
  6267 1133 12000000 		.4byte	.LVL286
  6268 1137 62000000 		.4byte	.LVL301
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 140
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 140
 
 
  6269 113b 0100     		.2byte	0x1
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  6323 11c6 0200     		.2byte	0x2
  6324 11c8 34       		.byte	0x34
  6325 11c9 9F       		.byte	0x9f
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 141
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 141
 
 
  6326 11ca 60000000 		.4byte	.LVL300
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  6380 005c 30000000 		.4byte	.LFE12-.LFB12
  6381 0060 00000000 		.4byte	.LFB1
  6382 0064 96000000 		.4byte	.LFE1-.LFB1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 142
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 142
 
 
  6383 0068 00000000 		.4byte	.LFB2
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  6437 00a8 00000000 		.4byte	.LFB7
  6438 00ac 1C000000 		.4byte	.LFE7
  6439 00b0 00000000 		.4byte	.LFB8
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 143
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 143
 
 
  6440 00b4 58000000 		.4byte	.LFE8
@@ -8565,522 +8565,526 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 1
  6474              	.LASF94:
  6475 0012 746D7044 		.ascii	"tmpData\000"
  6475      61746100 
- 6476              	.LASF15:
- 6477 001a 63797374 		.ascii	"cystatus\000"
- 6477      61747573 
- 6477      00
- 6478              	.LASF33:
- 6479 0023 63795F65 		.ascii	"cy_en_em_eeprom_status_t\000"
- 6479      6E5F656D 
- 6479      5F656570 
- 6479      726F6D5F 
- 6479      73746174 
- 6480              	.LASF39:
- 6481 003c 656D4565 		.ascii	"emEepromAddr\000"
- 6481      70726F6D 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 144
+ 6476              	.LASF33:
+ 6477 001a 63795F65 		.ascii	"cy_en_em_eeprom_status_t\000"
+ 6477      6E5F656D 
+ 6477      5F656570 
+ 6477      726F6D5F 
+ 6477      73746174 
+ 6478              	.LASF39:
+ 6479 0033 656D4565 		.ascii	"emEepromAddr\000"
+ 6479      70726F6D 
+ 6479      41646472 
+ 6479      00
+ 6480              	.LASF53:
+ 6481 0040 726F774E 		.ascii	"rowNum\000"
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 144
 
 
- 6481      41646472 
- 6481      00
- 6482              	.LASF53:
- 6483 0049 726F774E 		.ascii	"rowNum\000"
- 6483      756D00
- 6484              	.LASF25:
- 6485 0050 6E756D62 		.ascii	"numberOfRows\000"
- 6485      65724F66 
- 6485      526F7773 
- 6485      00
- 6486              	.LASF103:
- 6487 005d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 6487      43313120 
- 6487      352E342E 
- 6487      31203230 
- 6487      31363036 
- 6488 0090 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 6488      20726576 
- 6488      6973696F 
- 6488      6E203233 
- 6488      37373135 
- 6489 00c3 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 6489      66756E63 
- 6489      74696F6E 
- 6489      2D736563 
- 6489      74696F6E 
- 6490              	.LASF95:
- 6491 00eb 6E756D57 		.ascii	"numWrites\000"
- 6491      72697465 
- 6491      7300
- 6492              	.LASF7:
- 6493 00f5 6C6F6E67 		.ascii	"long long unsigned int\000"
- 6493      206C6F6E 
- 6493      6720756E 
- 6493      7369676E 
- 6493      65642069 
- 6494              	.LASF54:
- 6495 010c 61646472 		.ascii	"addr\000"
- 6495      00
- 6496              	.LASF18:
- 6497 0111 65657072 		.ascii	"eepromSize\000"
- 6497      6F6D5369 
- 6497      7A6500
- 6498              	.LASF6:
- 6499 011c 6C6F6E67 		.ascii	"long long int\000"
- 6499      206C6F6E 
- 6499      6720696E 
- 6499      7400
- 6500              	.LASF0:
- 6501 012a 7369676E 		.ascii	"signed char\000"
- 6501      65642063 
- 6501      68617200 
- 6502              	.LASF56:
- 6503 0136 57726974 		.ascii	"WriteRow\000"
- 6503      65526F77 
- 6503      00
- 6504              	.LASF40:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 145
+ 6481      756D00
+ 6482              	.LASF25:
+ 6483 0047 6E756D62 		.ascii	"numberOfRows\000"
+ 6483      65724F66 
+ 6483      526F7773 
+ 6483      00
+ 6484              	.LASF103:
+ 6485 0054 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 6485      43313120 
+ 6485      352E342E 
+ 6485      31203230 
+ 6485      31363036 
+ 6486 0087 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 6486      20726576 
+ 6486      6973696F 
+ 6486      6E203233 
+ 6486      37373135 
+ 6487 00ba 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 6487      66756E63 
+ 6487      74696F6E 
+ 6487      2D736563 
+ 6487      74696F6E 
+ 6488              	.LASF95:
+ 6489 00e2 6E756D57 		.ascii	"numWrites\000"
+ 6489      72697465 
+ 6489      7300
+ 6490              	.LASF7:
+ 6491 00ec 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 6491      206C6F6E 
+ 6491      6720756E 
+ 6491      7369676E 
+ 6491      65642069 
+ 6492              	.LASF54:
+ 6493 0103 61646472 		.ascii	"addr\000"
+ 6493      00
+ 6494              	.LASF18:
+ 6495 0108 65657072 		.ascii	"eepromSize\000"
+ 6495      6F6D5369 
+ 6495      7A6500
+ 6496              	.LASF6:
+ 6497 0113 6C6F6E67 		.ascii	"long long int\000"
+ 6497      206C6F6E 
+ 6497      6720696E 
+ 6497      7400
+ 6498              	.LASF0:
+ 6499 0121 7369676E 		.ascii	"signed char\000"
+ 6499      65642063 
+ 6499      68617200 
+ 6500              	.LASF56:
+ 6501 012d 57726974 		.ascii	"WriteRow\000"
+ 6501      65526F77 
+ 6501      00
+ 6502              	.LASF40:
+ 6503 0136 46696E64 		.ascii	"FindLastWrittenRow\000"
+ 6503      4C617374 
+ 6503      57726974 
+ 6503      74656E52 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 145
 
 
- 6505 013f 46696E64 		.ascii	"FindLastWrittenRow\000"
- 6505      4C617374 
- 6505      57726974 
- 6505      74656E52 
- 6505      6F7700
- 6506              	.LASF104:
- 6507 0152 47656E65 		.ascii	"Generated_Source\\PSoC4\\cy_em_eeprom.c\000"
- 6507      72617465 
- 6507      645F536F 
- 6507      75726365 
- 6507      5C50536F 
- 6508              	.LASF32:
- 6509 0178 43595F45 		.ascii	"CY_EM_EEPROM_WRITE_FAIL\000"
- 6509      4D5F4545 
+ 6503      6F7700
+ 6504              	.LASF104:
+ 6505 0149 47656E65 		.ascii	"Generated_Source\\PSoC4\\cy_em_eeprom.c\000"
+ 6505      72617465 
+ 6505      645F536F 
+ 6505      75726365 
+ 6505      5C50536F 
+ 6506              	.LASF32:
+ 6507 016f 43595F45 		.ascii	"CY_EM_EEPROM_WRITE_FAIL\000"
+ 6507      4D5F4545 
+ 6507      50524F4D 
+ 6507      5F575249 
+ 6507      54455F46 
+ 6508              	.LASF100:
+ 6509 0187 43795F45 		.ascii	"Cy_Em_EEPROM_NumWrites\000"
+ 6509      6D5F4545 
  6509      50524F4D 
- 6509      5F575249 
- 6509      54455F46 
- 6510              	.LASF100:
- 6511 0190 43795F45 		.ascii	"Cy_Em_EEPROM_NumWrites\000"
- 6511      6D5F4545 
- 6511      50524F4D 
- 6511      5F4E756D 
- 6511      57726974 
- 6512              	.LASF4:
- 6513 01a7 6C6F6E67 		.ascii	"long int\000"
- 6513      20696E74 
- 6513      00
- 6514              	.LASF22:
- 6515 01b0 75736572 		.ascii	"userFlashStartAddr\000"
- 6515      466C6173 
- 6515      68537461 
- 6515      72744164 
- 6515      647200
- 6516              	.LASF101:
- 6517 01c3 6D656D63 		.ascii	"memcpy\000"
- 6517      707900
- 6518              	.LASF9:
- 6519 01ca 75696E74 		.ascii	"uint8\000"
- 6519      3800
- 6520              	.LASF13:
- 6521 01d0 646F7562 		.ascii	"double\000"
- 6521      6C6500
- 6522              	.LASF11:
- 6523 01d7 75696E74 		.ascii	"uint32\000"
- 6523      333200
- 6524              	.LASF80:
- 6525 01de 61637445 		.ascii	"actEepromRowNum\000"
- 6525      6570726F 
- 6525      6D526F77 
- 6525      4E756D00 
- 6526              	.LASF96:
- 6527 01ee 65654865 		.ascii	"eeHeaderDataOffset\000"
- 6527      61646572 
- 6527      44617461 
- 6527      4F666673 
- 6527      657400
- 6528              	.LASF85:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 146
+ 6509      5F4E756D 
+ 6509      57726974 
+ 6510              	.LASF4:
+ 6511 019e 6C6F6E67 		.ascii	"long int\000"
+ 6511      20696E74 
+ 6511      00
+ 6512              	.LASF22:
+ 6513 01a7 75736572 		.ascii	"userFlashStartAddr\000"
+ 6513      466C6173 
+ 6513      68537461 
+ 6513      72744164 
+ 6513      647200
+ 6514              	.LASF105:
+ 6515 01ba 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
+ 6515      73657273 
+ 6515      5C617573 
+ 6515      74635C4F 
+ 6515      6E654472 
+ 6516 01e7 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Motor Boar"
+ 6516      69742D46 
+ 6516      69726D77 
+ 6516      6172652D 
+ 6516      412D3230 
+ 6517 0218 64205265 		.ascii	"d Rev2.cydsn\000"
+ 6517      76322E63 
+ 6517      7964736E 
+ 6517      00
+ 6518              	.LASF101:
+ 6519 0225 6D656D63 		.ascii	"memcpy\000"
+ 6519      707900
+ 6520              	.LASF9:
+ 6521 022c 75696E74 		.ascii	"uint8\000"
+ 6521      3800
+ 6522              	.LASF13:
+ 6523 0232 646F7562 		.ascii	"double\000"
+ 6523      6C6500
+ 6524              	.LASF11:
+ 6525 0239 75696E74 		.ascii	"uint32\000"
+ 6525      333200
+ 6526              	.LASF80:
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 146
 
 
- 6529 0201 75706461 		.ascii	"updateAddrFlag\000"
- 6529      74654164 
- 6529      6472466C 
- 6529      616700
- 6530              	.LASF38:
- 6531 0210 6E756D52 		.ascii	"numRows\000"
- 6531      6F777300 
- 6532              	.LASF63:
- 6533 0218 746D7052 		.ascii	"tmpRowAddr\000"
- 6533      6F774164 
- 6533      647200
- 6534              	.LASF70:
- 6535 0223 72616D42 		.ascii	"ramBuffAddr\000"
- 6535      75666641 
- 6535      64647200 
- 6536              	.LASF20:
- 6537 022f 72656475 		.ascii	"redundantCopy\000"
- 6537      6E64616E 
- 6537      74436F70 
- 6537      7900
- 6538              	.LASF98:
- 6539 023d 64617461 		.ascii	"dataAddr\000"
- 6539      41646472 
- 6539      00
- 6540              	.LASF8:
- 6541 0246 756E7369 		.ascii	"unsigned int\000"
- 6541      676E6564 
- 6541      20696E74 
+ 6527 0240 61637445 		.ascii	"actEepromRowNum\000"
+ 6527      6570726F 
+ 6527      6D526F77 
+ 6527      4E756D00 
+ 6528              	.LASF96:
+ 6529 0250 65654865 		.ascii	"eeHeaderDataOffset\000"
+ 6529      61646572 
+ 6529      44617461 
+ 6529      4F666673 
+ 6529      657400
+ 6530              	.LASF85:
+ 6531 0263 75706461 		.ascii	"updateAddrFlag\000"
+ 6531      74654164 
+ 6531      6472466C 
+ 6531      616700
+ 6532              	.LASF38:
+ 6533 0272 6E756D52 		.ascii	"numRows\000"
+ 6533      6F777300 
+ 6534              	.LASF63:
+ 6535 027a 746D7052 		.ascii	"tmpRowAddr\000"
+ 6535      6F774164 
+ 6535      647200
+ 6536              	.LASF70:
+ 6537 0285 72616D42 		.ascii	"ramBuffAddr\000"
+ 6537      75666641 
+ 6537      64647200 
+ 6538              	.LASF20:
+ 6539 0291 72656475 		.ascii	"redundantCopy\000"
+ 6539      6E64616E 
+ 6539      74436F70 
+ 6539      7900
+ 6540              	.LASF98:
+ 6541 029f 64617461 		.ascii	"dataAddr\000"
+ 6541      41646472 
  6541      00
- 6542              	.LASF67:
- 6543 0253 6E756D42 		.ascii	"numBytes\000"
- 6543      79746573 
+ 6542              	.LASF8:
+ 6543 02a8 756E7369 		.ascii	"unsigned int\000"
+ 6543      676E6564 
+ 6543      20696E74 
  6543      00
- 6544              	.LASF5:
- 6545 025c 6C6F6E67 		.ascii	"long unsigned int\000"
- 6545      20756E73 
- 6545      69676E65 
- 6545      6420696E 
- 6545      7400
- 6546              	.LASF51:
- 6547 026e 47657441 		.ascii	"GetAddresses\000"
- 6547      64647265 
- 6547      73736573 
- 6547      00
- 6548              	.LASF34:
- 6549 027b 6C617374 		.ascii	"lastWrRowPtr\000"
- 6549      5772526F 
- 6549      77507472 
+ 6544              	.LASF67:
+ 6545 02b5 6E756D42 		.ascii	"numBytes\000"
+ 6545      79746573 
+ 6545      00
+ 6546              	.LASF5:
+ 6547 02be 6C6F6E67 		.ascii	"long unsigned int\000"
+ 6547      20756E73 
+ 6547      69676E65 
+ 6547      6420696E 
+ 6547      7400
+ 6548              	.LASF51:
+ 6549 02d0 47657441 		.ascii	"GetAddresses\000"
+ 6549      64647265 
+ 6549      73736573 
  6549      00
- 6550              	.LASF64:
- 6551 0288 43686563 		.ascii	"CheckCrcAndCopy\000"
- 6551      6B437263 
- 6551      416E6443 
- 6551      6F707900 
- 6552              	.LASF88:
- 6553 0298 7372634F 		.ascii	"srcOffset\000"
- 6553      66667365 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 147
+ 6550              	.LASF34:
+ 6551 02dd 6C617374 		.ascii	"lastWrRowPtr\000"
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 147
 
 
- 6553      7400
- 6554              	.LASF75:
- 6555 02a2 73697A65 		.ascii	"size\000"
- 6555      00
- 6556              	.LASF3:
- 6557 02a7 73686F72 		.ascii	"short unsigned int\000"
- 6557      7420756E 
- 6557      7369676E 
- 6557      65642069 
- 6557      6E7400
- 6558              	.LASF92:
- 6559 02ba 61637445 		.ascii	"actEmEepromRowNum\000"
- 6559      6D456570 
- 6559      726F6D52 
- 6559      6F774E75 
- 6559      6D00
- 6560              	.LASF43:
- 6561 02cc 726F7754 		.ascii	"rowToRdPtr\000"
- 6561      6F526450 
- 6561      747200
- 6562              	.LASF93:
- 6563 02d7 656D4565 		.ascii	"emEepromRowRdAddr\000"
- 6563      70726F6D 
- 6563      526F7752 
- 6563      64416464 
- 6563      7200
- 6564              	.LASF74:
- 6565 02e9 65657072 		.ascii	"eepromData\000"
- 6565      6F6D4461 
- 6565      746100
- 6566              	.LASF65:
- 6567 02f4 64737441 		.ascii	"dstAddr\000"
- 6567      64647200 
- 6568              	.LASF79:
- 6569 02fc 73746172 		.ascii	"startRowAddr\000"
- 6569      74526F77 
- 6569      41646472 
- 6569      00
- 6570              	.LASF77:
- 6571 0309 63757245 		.ascii	"curEepromBaseAddr\000"
- 6571      6570726F 
- 6571      6D426173 
- 6571      65416464 
- 6571      7200
- 6572              	.LASF73:
- 6573 031b 43795F45 		.ascii	"Cy_Em_EEPROM_Read\000"
- 6573      6D5F4545 
- 6573      50524F4D 
- 6573      5F526561 
- 6573      6400
- 6574              	.LASF58:
- 6575 032d 726F7749 		.ascii	"rowId\000"
+ 6551      5772526F 
+ 6551      77507472 
+ 6551      00
+ 6552              	.LASF64:
+ 6553 02ea 43686563 		.ascii	"CheckCrcAndCopy\000"
+ 6553      6B437263 
+ 6553      416E6443 
+ 6553      6F707900 
+ 6554              	.LASF88:
+ 6555 02fa 7372634F 		.ascii	"srcOffset\000"
+ 6555      66667365 
+ 6555      7400
+ 6556              	.LASF75:
+ 6557 0304 73697A65 		.ascii	"size\000"
+ 6557      00
+ 6558              	.LASF3:
+ 6559 0309 73686F72 		.ascii	"short unsigned int\000"
+ 6559      7420756E 
+ 6559      7369676E 
+ 6559      65642069 
+ 6559      6E7400
+ 6560              	.LASF92:
+ 6561 031c 61637445 		.ascii	"actEmEepromRowNum\000"
+ 6561      6D456570 
+ 6561      726F6D52 
+ 6561      6F774E75 
+ 6561      6D00
+ 6562              	.LASF43:
+ 6563 032e 726F7754 		.ascii	"rowToRdPtr\000"
+ 6563      6F526450 
+ 6563      747200
+ 6564              	.LASF93:
+ 6565 0339 656D4565 		.ascii	"emEepromRowRdAddr\000"
+ 6565      70726F6D 
+ 6565      526F7752 
+ 6565      64416464 
+ 6565      7200
+ 6566              	.LASF74:
+ 6567 034b 65657072 		.ascii	"eepromData\000"
+ 6567      6F6D4461 
+ 6567      746100
+ 6568              	.LASF65:
+ 6569 0356 64737441 		.ascii	"dstAddr\000"
+ 6569      64647200 
+ 6570              	.LASF79:
+ 6571 035e 73746172 		.ascii	"startRowAddr\000"
+ 6571      74526F77 
+ 6571      41646472 
+ 6571      00
+ 6572              	.LASF77:
+ 6573 036b 63757245 		.ascii	"curEepromBaseAddr\000"
+ 6573      6570726F 
+ 6573      6D426173 
+ 6573      65416464 
+ 6573      7200
+ 6574              	.LASF73:
+ 6575 037d 43795F45 		.ascii	"Cy_Em_EEPROM_Read\000"
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 148
+
+
+ 6575      6D5F4545 
+ 6575      50524F4D 
+ 6575      5F526561 
  6575      6400
- 6576              	.LASF69:
- 6577 0333 45726173 		.ascii	"EraseRow\000"
- 6577      65526F77 
- 6577      00
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 148
-
-
- 6578              	.LASF29:
- 6579 033c 43595F45 		.ascii	"CY_EM_EEPROM_BAD_PARAM\000"
- 6579      4D5F4545 
- 6579      50524F4D 
- 6579      5F424144 
- 6579      5F504152 
- 6580              	.LASF30:
- 6581 0353 43595F45 		.ascii	"CY_EM_EEPROM_BAD_CHECKSUM\000"
+ 6576              	.LASF58:
+ 6577 038f 726F7749 		.ascii	"rowId\000"
+ 6577      6400
+ 6578              	.LASF69:
+ 6579 0395 45726173 		.ascii	"EraseRow\000"
+ 6579      65526F77 
+ 6579      00
+ 6580              	.LASF29:
+ 6581 039e 43595F45 		.ascii	"CY_EM_EEPROM_BAD_PARAM\000"
  6581      4D5F4545 
  6581      50524F4D 
  6581      5F424144 
- 6581      5F434845 
- 6582              	.LASF17:
- 6583 036d 73697A65 		.ascii	"sizetype\000"
- 6583      74797065 
- 6583      00
- 6584              	.LASF16:
- 6585 0376 6C6F6E67 		.ascii	"long double\000"
- 6585      20646F75 
- 6585      626C6500 
- 6586              	.LASF99:
- 6587 0382 43795F45 		.ascii	"Cy_Em_EEPROM_Erase\000"
- 6587      6D5F4545 
- 6587      50524F4D 
- 6587      5F457261 
- 6587      736500
- 6588              	.LASF90:
- 6589 0395 43795F45 		.ascii	"Cy_Em_EEPROM_Write\000"
+ 6581      5F504152 
+ 6582              	.LASF30:
+ 6583 03b5 43595F45 		.ascii	"CY_EM_EEPROM_BAD_CHECKSUM\000"
+ 6583      4D5F4545 
+ 6583      50524F4D 
+ 6583      5F424144 
+ 6583      5F434845 
+ 6584              	.LASF17:
+ 6585 03cf 73697A65 		.ascii	"sizetype\000"
+ 6585      74797065 
+ 6585      00
+ 6586              	.LASF16:
+ 6587 03d8 6C6F6E67 		.ascii	"long double\000"
+ 6587      20646F75 
+ 6587      626C6500 
+ 6588              	.LASF99:
+ 6589 03e4 43795F45 		.ascii	"Cy_Em_EEPROM_Erase\000"
  6589      6D5F4545 
  6589      50524F4D 
- 6589      5F577269 
- 6589      746500
- 6590              	.LASF36:
- 6591 03a8 7365714E 		.ascii	"seqNum\000"
- 6591      756D00
- 6592              	.LASF27:
- 6593 03af 63795F73 		.ascii	"cy_stc_eeprom_context_t\000"
- 6593      74635F65 
- 6593      6570726F 
- 6593      6D5F636F 
- 6593      6E746578 
- 6594              	.LASF41:
- 6595 03c7 4765744E 		.ascii	"GetNextRowToWrite\000"
- 6595      65787452 
- 6595      6F77546F 
- 6595      57726974 
- 6595      6500
- 6596              	.LASF59:
- 6597 03d9 46696C6C 		.ascii	"FillChecksum\000"
- 6597      43686563 
- 6597      6B73756D 
- 6597      00
- 6598              	.LASF47:
- 6599 03e6 43686563 		.ascii	"CheckRanges\000"
- 6599      6B52616E 
- 6599      67657300 
- 6600              	.LASF62:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 149
+ 6589      5F457261 
+ 6589      736500
+ 6590              	.LASF90:
+ 6591 03f7 43795F45 		.ascii	"Cy_Em_EEPROM_Write\000"
+ 6591      6D5F4545 
+ 6591      50524F4D 
+ 6591      5F577269 
+ 6591      746500
+ 6592              	.LASF36:
+ 6593 040a 7365714E 		.ascii	"seqNum\000"
+ 6593      756D00
+ 6594              	.LASF27:
+ 6595 0411 63795F73 		.ascii	"cy_stc_eeprom_context_t\000"
+ 6595      74635F65 
+ 6595      6570726F 
+ 6595      6D5F636F 
+ 6595      6E746578 
+ 6596              	.LASF41:
+ 6597 0429 4765744E 		.ascii	"GetNextRowToWrite\000"
+ 6597      65787452 
+ 6597      6F77546F 
+ 6597      57726974 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 149
 
 
- 6601 03f2 77724164 		.ascii	"wrAddr\000"
- 6601      647200
- 6602              	.LASF91:
- 6603 03f9 7772436E 		.ascii	"wrCnt\000"
- 6603      7400
- 6604              	.LASF12:
- 6605 03ff 666C6F61 		.ascii	"float\000"
+ 6597      6500
+ 6598              	.LASF59:
+ 6599 043b 46696C6C 		.ascii	"FillChecksum\000"
+ 6599      43686563 
+ 6599      6B73756D 
+ 6599      00
+ 6600              	.LASF47:
+ 6601 0448 43686563 		.ascii	"CheckRanges\000"
+ 6601      6B52616E 
+ 6601      67657300 
+ 6602              	.LASF62:
+ 6603 0454 77724164 		.ascii	"wrAddr\000"
+ 6603      647200
+ 6604              	.LASF91:
+ 6605 045b 7772436E 		.ascii	"wrCnt\000"
  6605      7400
- 6606              	.LASF50:
- 6607 0405 656E6441 		.ascii	"endAddr\000"
- 6607      64647200 
- 6608              	.LASF31:
- 6609 040d 43595F45 		.ascii	"CY_EM_EEPROM_BAD_DATA\000"
- 6609      4D5F4545 
- 6609      50524F4D 
- 6609      5F424144 
- 6609      5F444154 
- 6610              	.LASF24:
- 6611 0423 776C456E 		.ascii	"wlEndAddr\000"
- 6611      64416464 
- 6611      7200
- 6612              	.LASF1:
- 6613 042d 756E7369 		.ascii	"unsigned char\000"
- 6613      676E6564 
- 6613      20636861 
+ 6606              	.LASF12:
+ 6607 0461 666C6F61 		.ascii	"float\000"
+ 6607      7400
+ 6608              	.LASF50:
+ 6609 0467 656E6441 		.ascii	"endAddr\000"
+ 6609      64647200 
+ 6610              	.LASF31:
+ 6611 046f 43595F45 		.ascii	"CY_EM_EEPROM_BAD_DATA\000"
+ 6611      4D5F4545 
+ 6611      50524F4D 
+ 6611      5F424144 
+ 6611      5F444154 
+ 6612              	.LASF24:
+ 6613 0485 776C456E 		.ascii	"wlEndAddr\000"
+ 6613      64416464 
  6613      7200
- 6614              	.LASF57:
- 6615 043b 726F7741 		.ascii	"rowAddr\000"
- 6615      64647200 
- 6616              	.LASF2:
- 6617 0443 73686F72 		.ascii	"short int\000"
- 6617      7420696E 
- 6617      7400
- 6618              	.LASF37:
- 6619 044d 70726576 		.ascii	"prevSeqNum\000"
- 6619      5365714E 
- 6619      756D00
- 6620              	.LASF97:
- 6621 0458 736B6970 		.ascii	"skipOperation\000"
- 6621      4F706572 
- 6621      6174696F 
- 6621      6E00
- 6622              	.LASF82:
- 6623 0466 64617461 		.ascii	"dataStartEepromRowNum\000"
- 6623      53746172 
- 6623      74456570 
- 6623      726F6D52 
- 6623      6F774E75 
- 6624              	.LASF72:
- 6625 047c 43795F45 		.ascii	"Cy_Em_EEPROM_Init\000"
- 6625      6D5F4545 
- 6625      50524F4D 
- 6625      5F496E69 
- 6625      7400
- 6626              	.LASF61:
- 6627 048e 77726974 		.ascii	"writeRamBuffer\000"
- 6627      6552616D 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 150
+ 6614              	.LASF1:
+ 6615 048f 756E7369 		.ascii	"unsigned char\000"
+ 6615      676E6564 
+ 6615      20636861 
+ 6615      7200
+ 6616              	.LASF57:
+ 6617 049d 726F7741 		.ascii	"rowAddr\000"
+ 6617      64647200 
+ 6618              	.LASF2:
+ 6619 04a5 73686F72 		.ascii	"short int\000"
+ 6619      7420696E 
+ 6619      7400
+ 6620              	.LASF37:
+ 6621 04af 70726576 		.ascii	"prevSeqNum\000"
+ 6621      5365714E 
+ 6621      756D00
+ 6622              	.LASF97:
+ 6623 04ba 736B6970 		.ascii	"skipOperation\000"
+ 6623      4F706572 
+ 6623      6174696F 
+ 6623      6E00
+ 6624              	.LASF82:
+ 6625 04c8 64617461 		.ascii	"dataStartEepromRowNum\000"
+ 6625      53746172 
+ 6625      74456570 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 150
 
 
- 6627      42756666 
- 6627      657200
- 6628              	.LASF66:
- 6629 049d 726F774F 		.ascii	"rowOffset\000"
- 6629      66667365 
- 6629      7400
- 6630              	.LASF68:
- 6631 04a7 72635374 		.ascii	"rcStartRowAddr\000"
- 6631      61727452 
- 6631      6F774164 
- 6631      647200
- 6632              	.LASF14:
- 6633 04b6 63686172 		.ascii	"char\000"
- 6633      00
- 6634              	.LASF48:
- 6635 04bb 636F6E66 		.ascii	"config\000"
- 6635      696700
- 6636              	.LASF76:
- 6637 04c2 6E756D42 		.ascii	"numBytesToRead\000"
- 6637      79746573 
- 6637      546F5265 
- 6637      616400
- 6638              	.LASF49:
- 6639 04d1 73746172 		.ascii	"startAddr\000"
- 6639      74416464 
- 6639      7200
- 6640              	.LASF55:
- 6641 04db 736B6970 		.ascii	"skip\000"
- 6641      00
- 6642              	.LASF52:
- 6643 04e0 6F666673 		.ascii	"offset\000"
- 6643      657400
- 6644              	.LASF35:
- 6645 04e7 636F6E74 		.ascii	"context\000"
- 6645      65787400 
- 6646              	.LASF26:
- 6647 04ef 6C617374 		.ascii	"lastWrRowAddr\000"
- 6647      5772526F 
- 6647      77416464 
- 6647      7200
- 6648              	.LASF78:
- 6649 04fd 63757252 		.ascii	"curRowOffset\000"
- 6649      6F774F66 
- 6649      66736574 
- 6649      00
- 6650              	.LASF23:
- 6651 050a 63795F73 		.ascii	"cy_stc_eeprom_config_t\000"
- 6651      74635F65 
- 6651      6570726F 
- 6651      6D5F636F 
- 6651      6E666967 
- 6652              	.LASF84:
- 6653 0521 72645369 		.ascii	"rdSize\000"
- 6653      7A6500
- 6654              	.LASF19:
- 6655 0528 77656172 		.ascii	"wearLevelingFactor\000"
- 6655      4C657665 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 151
+ 6625      726F6D52 
+ 6625      6F774E75 
+ 6626              	.LASF72:
+ 6627 04de 43795F45 		.ascii	"Cy_Em_EEPROM_Init\000"
+ 6627      6D5F4545 
+ 6627      50524F4D 
+ 6627      5F496E69 
+ 6627      7400
+ 6628              	.LASF61:
+ 6629 04f0 77726974 		.ascii	"writeRamBuffer\000"
+ 6629      6552616D 
+ 6629      42756666 
+ 6629      657200
+ 6630              	.LASF66:
+ 6631 04ff 726F774F 		.ascii	"rowOffset\000"
+ 6631      66667365 
+ 6631      7400
+ 6632              	.LASF68:
+ 6633 0509 72635374 		.ascii	"rcStartRowAddr\000"
+ 6633      61727452 
+ 6633      6F774164 
+ 6633      647200
+ 6634              	.LASF14:
+ 6635 0518 63686172 		.ascii	"char\000"
+ 6635      00
+ 6636              	.LASF48:
+ 6637 051d 636F6E66 		.ascii	"config\000"
+ 6637      696700
+ 6638              	.LASF76:
+ 6639 0524 6E756D42 		.ascii	"numBytesToRead\000"
+ 6639      79746573 
+ 6639      546F5265 
+ 6639      616400
+ 6640              	.LASF49:
+ 6641 0533 73746172 		.ascii	"startAddr\000"
+ 6641      74416464 
+ 6641      7200
+ 6642              	.LASF55:
+ 6643 053d 736B6970 		.ascii	"skip\000"
+ 6643      00
+ 6644              	.LASF52:
+ 6645 0542 6F666673 		.ascii	"offset\000"
+ 6645      657400
+ 6646              	.LASF35:
+ 6647 0549 636F6E74 		.ascii	"context\000"
+ 6647      65787400 
+ 6648              	.LASF26:
+ 6649 0551 6C617374 		.ascii	"lastWrRowAddr\000"
+ 6649      5772526F 
+ 6649      77416464 
+ 6649      7200
+ 6650              	.LASF78:
+ 6651 055f 63757252 		.ascii	"curRowOffset\000"
+ 6651      6F774F66 
+ 6651      66736574 
+ 6651      00
+ 6652              	.LASF23:
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 151
 
 
- 6655      6C696E67 
- 6655      46616374 
- 6655      6F7200
- 6656              	.LASF102:
- 6657 053b 6D656D73 		.ascii	"memset\000"
- 6657      657400
- 6658              	.LASF60:
- 6659 0542 72644164 		.ascii	"rdAddr\000"
- 6659      647200
- 6660              	.LASF89:
- 6661 0549 6473744F 		.ascii	"dstOffset\000"
- 6661      66667365 
- 6661      7400
- 6662              	.LASF106:
- 6663 0553 43795379 		.ascii	"CySysFlashWriteRow\000"
- 6663      73466C61 
- 6663      73685772 
- 6663      69746552 
- 6663      6F7700
- 6664              	.LASF44:
- 6665 0566 47657452 		.ascii	"GetRowAddrBySeqNum\000"
- 6665      6F774164 
- 6665      64724279 
- 6665      5365714E 
- 6665      756D00
- 6666              	.LASF28:
- 6667 0579 43595F45 		.ascii	"CY_EM_EEPROM_SUCCESS\000"
- 6667      4D5F4545 
- 6667      50524F4D 
- 6667      5F535543 
- 6667      43455353 
- 6668              	.LASF21:
- 6669 058e 626C6F63 		.ascii	"blockingWrite\000"
- 6669      6B696E67 
- 6669      57726974 
- 6669      6500
- 6670              	.LASF81:
- 6671 059c 63757252 		.ascii	"curRdEepromRowNum\000"
- 6671      64456570 
- 6671      726F6D52 
- 6671      6F774E75 
- 6671      6D00
- 6672              	.LASF105:
- 6673 05ae 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\GitHub\\Elec"
- 6673      73657273 
- 6673      5C617573 
- 6673      74635C4F 
- 6673      6E654472 
- 6674 05db 74726F6E 		.ascii	"tronics2018-19\\Psoc Arm\\Motor Board Rev2.cydsn\000"
- 6674      69637332 
- 6674      3031382D 
- 6674      31395C50 
- 6674      736F6320 
- 6675              	.LASF45:
- 6676 060a 43616C63 		.ascii	"CalcChecksum\000"
- 6676      43686563 
- 6676      6B73756D 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccdA9pri.s 			page 152
+ 6653 056c 63795F73 		.ascii	"cy_stc_eeprom_config_t\000"
+ 6653      74635F65 
+ 6653      6570726F 
+ 6653      6D5F636F 
+ 6653      6E666967 
+ 6654              	.LASF84:
+ 6655 0583 72645369 		.ascii	"rdSize\000"
+ 6655      7A6500
+ 6656              	.LASF19:
+ 6657 058a 77656172 		.ascii	"wearLevelingFactor\000"
+ 6657      4C657665 
+ 6657      6C696E67 
+ 6657      46616374 
+ 6657      6F7200
+ 6658              	.LASF102:
+ 6659 059d 6D656D73 		.ascii	"memset\000"
+ 6659      657400
+ 6660              	.LASF60:
+ 6661 05a4 72644164 		.ascii	"rdAddr\000"
+ 6661      647200
+ 6662              	.LASF89:
+ 6663 05ab 6473744F 		.ascii	"dstOffset\000"
+ 6663      66667365 
+ 6663      7400
+ 6664              	.LASF106:
+ 6665 05b5 43795379 		.ascii	"CySysFlashWriteRow\000"
+ 6665      73466C61 
+ 6665      73685772 
+ 6665      69746552 
+ 6665      6F7700
+ 6666              	.LASF44:
+ 6667 05c8 47657452 		.ascii	"GetRowAddrBySeqNum\000"
+ 6667      6F774164 
+ 6667      64724279 
+ 6667      5365714E 
+ 6667      756D00
+ 6668              	.LASF28:
+ 6669 05db 43595F45 		.ascii	"CY_EM_EEPROM_SUCCESS\000"
+ 6669      4D5F4545 
+ 6669      50524F4D 
+ 6669      5F535543 
+ 6669      43455353 
+ 6670              	.LASF21:
+ 6671 05f0 626C6F63 		.ascii	"blockingWrite\000"
+ 6671      6B696E67 
+ 6671      57726974 
+ 6671      6500
+ 6672              	.LASF81:
+ 6673 05fe 63757252 		.ascii	"curRdEepromRowNum\000"
+ 6673      64456570 
+ 6673      726F6D52 
+ 6673      6F774E75 
+ 6673      6D00
+ 6674              	.LASF15:
+ 6675 0610 63797374 		.ascii	"cystatus\000"
+ 6675      61747573 
+ 6675      00
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccuyUdml.s 			page 152
 
 
- 6676      00
- 6677              	.LASF46:
- 6678 0617 726F7744 		.ascii	"rowData\000"
- 6678      61746100 
- 6679              	.LASF87:
- 6680 061f 64617461 		.ascii	"dataEndEepromRowNum\000"
- 6680      456E6445 
- 6680      6570726F 
- 6680      6D526F77 
- 6680      4E756D00 
- 6681              	.LASF86:
- 6682 0633 6E756D52 		.ascii	"numRowReads\000"
- 6682      6F775265 
- 6682      61647300 
- 6683              	.LASF71:
- 6684 063f 656D4565 		.ascii	"emEepromRowAddr\000"
- 6684      70726F6D 
- 6684      526F7741 
- 6684      64647200 
- 6685              	.LASF83:
- 6686 064f 65654461 		.ascii	"eeData\000"
- 6686      746100
- 6687              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 6676              	.LASF45:
+ 6677 0619 43616C63 		.ascii	"CalcChecksum\000"
+ 6677      43686563 
+ 6677      6B73756D 
+ 6677      00
+ 6678              	.LASF46:
+ 6679 0626 726F7744 		.ascii	"rowData\000"
+ 6679      61746100 
+ 6680              	.LASF87:
+ 6681 062e 64617461 		.ascii	"dataEndEepromRowNum\000"
+ 6681      456E6445 
+ 6681      6570726F 
+ 6681      6D526F77 
+ 6681      4E756D00 
+ 6682              	.LASF86:
+ 6683 0642 6E756D52 		.ascii	"numRowReads\000"
+ 6683      6F775265 
+ 6683      61647300 
+ 6684              	.LASF71:
+ 6685 064e 656D4565 		.ascii	"emEepromRowAddr\000"
+ 6685      70726F6D 
+ 6685      526F7741 
+ 6685      64647200 
+ 6686              	.LASF83:
+ 6687 065e 65654461 		.ascii	"eeData\000"
+ 6687      746100
+ 6688              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

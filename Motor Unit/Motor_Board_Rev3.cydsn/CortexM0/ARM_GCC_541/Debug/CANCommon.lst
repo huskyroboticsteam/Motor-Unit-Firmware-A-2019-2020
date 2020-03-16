@@ -1,0 +1,4508 @@
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"CANCommon.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.AssembleEmergencyStopPacket,"ax",%progbits
+  20              		.align	2
+  21              		.global	AssembleEmergencyStopPacket
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	AssembleEmergencyStopPacket, %function
+  25              	AssembleEmergencyStopPacket:
+  26              	.LFB0:
+  27              		.file 1 "..\\CANLib\\CANCommon.c"
+   1:..\CANLib/CANCommon.c **** /* File:         CANCommon.c
+   2:..\CANLib/CANCommon.c ****  * Authors:      Jaden Bottemiller, Benton Kwong, Dylan Tomberlin.
+   3:..\CANLib/CANCommon.c ****  * Organization: Husky Robotics Team
+   4:..\CANLib/CANCommon.c ****  * 
+   5:..\CANLib/CANCommon.c ****  * This file includes fuction definitions for Common Mode CAN Communication
+   6:..\CANLib/CANCommon.c ****  * using the Hindsight CAN Communication standard.
+   7:..\CANLib/CANCommon.c ****  * Documentation: https://huskyroboticsteam.slite.com/app/channels/iU0BryG7M9/collections/aXvWTcIR6
+   8:..\CANLib/CANCommon.c ****  */
+   9:..\CANLib/CANCommon.c **** 
+  10:..\CANLib/CANCommon.c **** #include "CANPacket.h"
+  11:..\CANLib/CANCommon.c **** #include "CANCommon.h"
+  12:..\CANLib/CANCommon.c **** #include "Port.h"
+  13:..\CANLib/CANCommon.c **** // Assembles Emergency Stop Packet with given parameters
+  14:..\CANLib/CANCommon.c **** // Inputs:
+  15:..\CANLib/CANCommon.c **** //      packet:                     CAN Packet to assemble (will overwrite).
+  16:..\CANLib/CANCommon.c **** //      targetDeviceGroup:          Group to target
+  17:..\CANLib/CANCommon.c **** //      targetDeviceSerialNumber:   Serial number of target device
+  18:..\CANLib/CANCommon.c **** //      errorCode:                  Emergency stop error code. E.G. ESTOP_ERR_GENERAL
+  19:..\CANLib/CANCommon.c **** void AssembleEmergencyStopPacket(CANPacket *packet,
+  20:..\CANLib/CANCommon.c ****     uint8_t targetDeviceGroup,
+  21:..\CANLib/CANCommon.c ****     uint8_t targetDeviceSerialNumber,
+  22:..\CANLib/CANCommon.c ****     uint8_t errorCode)
+  23:..\CANLib/CANCommon.c **** {
+  28              		.loc 1 23 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 70B5     		push	{r4, r5, r6, lr}
+  34              		.cfi_def_cfa_offset 16
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 2
+
+
+  35              		.cfi_offset 4, -16
+  36              		.cfi_offset 5, -12
+  37              		.cfi_offset 6, -8
+  38              		.cfi_offset 14, -4
+  39 0002 0400     		movs	r4, r0
+  40 0004 1D00     		movs	r5, r3
+  24:..\CANLib/CANCommon.c ****     packet->dlc = DLC_ESTOP;
+  41              		.loc 1 24 0
+  42 0006 0323     		movs	r3, #3
+  43              	.LVL1:
+  44 0008 8370     		strb	r3, [r0, #2]
+  25:..\CANLib/CANCommon.c ****     packet->id = ConstructCANID(PACKET_PRIORITY_HIGH, targetDeviceGroup, targetDeviceSerialNumber);
+  45              		.loc 1 25 0
+  46 000a 0020     		movs	r0, #0
+  47              	.LVL2:
+  48 000c FFF7FEFF 		bl	ConstructCANID
+  49              	.LVL3:
+  50 0010 2080     		strh	r0, [r4]
+  26:..\CANLib/CANCommon.c ****     int nextByte = WriteSenderSerialAndPacketID(packet->data, ID_ESTOP);
+  51              		.loc 1 26 0
+  52 0012 E01C     		adds	r0, r4, #3
+  53 0014 3021     		movs	r1, #48
+  54 0016 FFF7FEFF 		bl	WriteSenderSerialAndPacketID
+  55              	.LVL4:
+  27:..\CANLib/CANCommon.c ****     packet->data[nextByte] = errorCode;
+  56              		.loc 1 27 0
+  57 001a 2418     		adds	r4, r4, r0
+  58              	.LVL5:
+  59 001c E570     		strb	r5, [r4, #3]
+  28:..\CANLib/CANCommon.c **** }
+  60              		.loc 1 28 0
+  61              		@ sp needed
+  62 001e 70BD     		pop	{r4, r5, r6, pc}
+  63              		.cfi_endproc
+  64              	.LFE0:
+  65              		.size	AssembleEmergencyStopPacket, .-AssembleEmergencyStopPacket
+  66              		.section	.text.AssembleGroupBroadcastingEmergencyStopPacket,"ax",%progbits
+  67              		.align	2
+  68              		.global	AssembleGroupBroadcastingEmergencyStopPacket
+  69              		.code	16
+  70              		.thumb_func
+  71              		.type	AssembleGroupBroadcastingEmergencyStopPacket, %function
+  72              	AssembleGroupBroadcastingEmergencyStopPacket:
+  73              	.LFB1:
+  29:..\CANLib/CANCommon.c **** 
+  30:..\CANLib/CANCommon.c **** // Assembles Emergency Stop Packet with given parameters.
+  31:..\CANLib/CANCommon.c **** // This will broadcast the emergency stop command to a desired device group.
+  32:..\CANLib/CANCommon.c **** // Inputs:
+  33:..\CANLib/CANCommon.c **** //      packet:                     CAN Packet to assemble (will overwrite).
+  34:..\CANLib/CANCommon.c **** //      deviceGroup:                Group to target
+  35:..\CANLib/CANCommon.c **** //      errorCode:                  Emergency stop error code. E.G. ESTOP_ERR_GENERAL
+  36:..\CANLib/CANCommon.c **** void AssembleGroupBroadcastingEmergencyStopPacket(CANPacket *packet, 
+  37:..\CANLib/CANCommon.c ****     uint8_t groupCode, 
+  38:..\CANLib/CANCommon.c ****     uint8_t errorCode)
+  39:..\CANLib/CANCommon.c **** {
+  74              		.loc 1 39 0
+  75              		.cfi_startproc
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 3
+
+
+  76              		@ args = 0, pretend = 0, frame = 0
+  77              		@ frame_needed = 0, uses_anonymous_args = 0
+  78              	.LVL6:
+  79 0000 10B5     		push	{r4, lr}
+  80              		.cfi_def_cfa_offset 8
+  81              		.cfi_offset 4, -8
+  82              		.cfi_offset 14, -4
+  83 0002 1300     		movs	r3, r2
+  40:..\CANLib/CANCommon.c ****     AssembleEmergencyStopPacket(packet, groupCode, DEVICE_SERIAL_BROADCAST, errorCode);
+  84              		.loc 1 40 0
+  85 0004 0022     		movs	r2, #0
+  86              	.LVL7:
+  87 0006 FFF7FEFF 		bl	AssembleEmergencyStopPacket
+  88              	.LVL8:
+  41:..\CANLib/CANCommon.c **** }
+  89              		.loc 1 41 0
+  90              		@ sp needed
+  91 000a 10BD     		pop	{r4, pc}
+  92              		.cfi_endproc
+  93              	.LFE1:
+  94              		.size	AssembleGroupBroadcastingEmergencyStopPacket, .-AssembleGroupBroadcastingEmergencyStopPacket
+  95              		.section	.text.AssembleBrodcastEmergencyStopPacket,"ax",%progbits
+  96              		.align	2
+  97              		.global	AssembleBrodcastEmergencyStopPacket
+  98              		.code	16
+  99              		.thumb_func
+ 100              		.type	AssembleBrodcastEmergencyStopPacket, %function
+ 101              	AssembleBrodcastEmergencyStopPacket:
+ 102              	.LFB2:
+  42:..\CANLib/CANCommon.c **** 
+  43:..\CANLib/CANCommon.c **** // Assembles Emergency Stop Packet with given parameters.
+  44:..\CANLib/CANCommon.c **** // This will broadcast the emergency stop command to all devices
+  45:..\CANLib/CANCommon.c **** // Inputs:
+  46:..\CANLib/CANCommon.c **** //      packet:                     CAN Packet to assemble (will overwrite).
+  47:..\CANLib/CANCommon.c **** //      errorCode:                  Emergency stop error code. E.G. ESTOP_ERR_GENERAL
+  48:..\CANLib/CANCommon.c **** void AssembleBrodcastEmergencyStopPacket(CANPacket *packet, 
+  49:..\CANLib/CANCommon.c ****     uint8_t errorCode)
+  50:..\CANLib/CANCommon.c **** {
+ 103              		.loc 1 50 0
+ 104              		.cfi_startproc
+ 105              		@ args = 0, pretend = 0, frame = 0
+ 106              		@ frame_needed = 0, uses_anonymous_args = 0
+ 107              	.LVL9:
+ 108 0000 10B5     		push	{r4, lr}
+ 109              		.cfi_def_cfa_offset 8
+ 110              		.cfi_offset 4, -8
+ 111              		.cfi_offset 14, -4
+ 112 0002 0A00     		movs	r2, r1
+  51:..\CANLib/CANCommon.c ****     AssembleGroupBroadcastingEmergencyStopPacket(packet, DEVICE_GROUP_BROADCAST, errorCode);
+ 113              		.loc 1 51 0
+ 114 0004 0021     		movs	r1, #0
+ 115              	.LVL10:
+ 116 0006 FFF7FEFF 		bl	AssembleGroupBroadcastingEmergencyStopPacket
+ 117              	.LVL11:
+  52:..\CANLib/CANCommon.c **** }
+ 118              		.loc 1 52 0
+ 119              		@ sp needed
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 4
+
+
+ 120 000a 10BD     		pop	{r4, pc}
+ 121              		.cfi_endproc
+ 122              	.LFE2:
+ 123              		.size	AssembleBrodcastEmergencyStopPacket, .-AssembleBrodcastEmergencyStopPacket
+ 124              		.section	.text.GetEmergencyStopErrorCode,"ax",%progbits
+ 125              		.align	2
+ 126              		.global	GetEmergencyStopErrorCode
+ 127              		.code	16
+ 128              		.thumb_func
+ 129              		.type	GetEmergencyStopErrorCode, %function
+ 130              	GetEmergencyStopErrorCode:
+ 131              	.LFB3:
+  53:..\CANLib/CANCommon.c **** 
+  54:..\CANLib/CANCommon.c **** // Gets the Error Code reported from an emergency stop packet.
+  55:..\CANLib/CANCommon.c **** // Inputs:
+  56:..\CANLib/CANCommon.c **** //      packet:     Packet to check.
+  57:..\CANLib/CANCommon.c **** uint8_t GetEmergencyStopErrorCode(CANPacket *packet)
+  58:..\CANLib/CANCommon.c **** {
+ 132              		.loc 1 58 0
+ 133              		.cfi_startproc
+ 134              		@ args = 0, pretend = 0, frame = 0
+ 135              		@ frame_needed = 0, uses_anonymous_args = 0
+ 136              	.LVL12:
+ 137 0000 10B5     		push	{r4, lr}
+ 138              		.cfi_def_cfa_offset 8
+ 139              		.cfi_offset 4, -8
+ 140              		.cfi_offset 14, -4
+ 141 0002 0400     		movs	r4, r0
+  59:..\CANLib/CANCommon.c ****     if (PacketIsOfID(packet, ID_ESTOP))
+ 142              		.loc 1 59 0
+ 143 0004 3021     		movs	r1, #48
+ 144 0006 FFF7FEFF 		bl	PacketIsOfID
+ 145              	.LVL13:
+ 146 000a 0028     		cmp	r0, #0
+ 147 000c 01D0     		beq	.L6
+  60:..\CANLib/CANCommon.c ****     {
+  61:..\CANLib/CANCommon.c ****         return packet->data[2];
+ 148              		.loc 1 61 0
+ 149 000e 6079     		ldrb	r0, [r4, #5]
+ 150 0010 00E0     		b	.L5
+ 151              	.L6:
+  62:..\CANLib/CANCommon.c ****     }
+  63:..\CANLib/CANCommon.c ****     else { return -1; }
+ 152              		.loc 1 63 0
+ 153 0012 FF20     		movs	r0, #255
+ 154              	.L5:
+  64:..\CANLib/CANCommon.c **** }
+ 155              		.loc 1 64 0
+ 156              		@ sp needed
+ 157              	.LVL14:
+ 158 0014 10BD     		pop	{r4, pc}
+ 159              		.cfi_endproc
+ 160              	.LFE3:
+ 161              		.size	GetEmergencyStopErrorCode, .-GetEmergencyStopErrorCode
+ 162 0016 C046     		.section	.text.GetHeartbeatTimeStamp,"ax",%progbits
+ 163              		.align	2
+ 164              		.global	GetHeartbeatTimeStamp
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 5
+
+
+ 165              		.code	16
+ 166              		.thumb_func
+ 167              		.type	GetHeartbeatTimeStamp, %function
+ 168              	GetHeartbeatTimeStamp:
+ 169              	.LFB5:
+  65:..\CANLib/CANCommon.c **** 
+  66:..\CANLib/CANCommon.c **** // Validates the Heartbeat Packet, returns time between previous Heartbeat packets
+  67:..\CANLib/CANCommon.c **** // Inputs:
+  68:..\CANLib/CANCommon.c **** //      packet:         CAN Packet to check
+  69:..\CANLib/CANCommon.c **** //      lastHeartbeat:  Timestamp (ms) of last detected heartbeat
+  70:..\CANLib/CANCommon.c **** // Outputs:
+  71:..\CANLib/CANCommon.c **** //                  Time (in ms) between this heartbeat and the previous detected heartbeat
+  72:..\CANLib/CANCommon.c **** //                  Negative value if packet is not valid heartbeat packet
+  73:..\CANLib/CANCommon.c **** uint32_t GetTimeBetweenHeartbeatPacket(CANPacket *packet, uint32_t lastHeartbeat)
+  74:..\CANLib/CANCommon.c **** {
+  75:..\CANLib/CANCommon.c ****     if (PacketIsOfID(packet, ID_HEARTBEAT)) 
+  76:..\CANLib/CANCommon.c ****     {
+  77:..\CANLib/CANCommon.c ****         return GetHeartbeatTimeStamp(packet) - lastHeartbeat;
+  78:..\CANLib/CANCommon.c ****     }
+  79:..\CANLib/CANCommon.c ****     else { return -1; }
+  80:..\CANLib/CANCommon.c **** }
+  81:..\CANLib/CANCommon.c **** 
+  82:..\CANLib/CANCommon.c **** // Validates the Heartbeat Packet, returns time between previous Heartbeat packets
+  83:..\CANLib/CANCommon.c **** // Inputs:
+  84:..\CANLib/CANCommon.c **** //      packet:         CAN Packet to check
+  85:..\CANLib/CANCommon.c **** //      lastHeartbeat:  Timestamp (ms) of last detected heartbeat
+  86:..\CANLib/CANCommon.c **** // Outputs:
+  87:..\CANLib/CANCommon.c **** //                  Time (in ms) of the timestamp within the packet
+  88:..\CANLib/CANCommon.c **** //                  Default return value is uint32 max value, which is used
+  89:..\CANLib/CANCommon.c **** //                  if the packet is corrupt or not a heartbeat packet.
+  90:..\CANLib/CANCommon.c **** uint32_t GetHeartbeatTimeStamp(CANPacket *packet)
+  91:..\CANLib/CANCommon.c **** {
+ 170              		.loc 1 91 0
+ 171              		.cfi_startproc
+ 172              		@ args = 0, pretend = 0, frame = 0
+ 173              		@ frame_needed = 0, uses_anonymous_args = 0
+ 174              	.LVL15:
+ 175 0000 10B5     		push	{r4, lr}
+ 176              		.cfi_def_cfa_offset 8
+ 177              		.cfi_offset 4, -8
+ 178              		.cfi_offset 14, -4
+ 179 0002 0400     		movs	r4, r0
+  92:..\CANLib/CANCommon.c ****     if (PacketIsOfID(packet, ID_HEARTBEAT)) 
+ 180              		.loc 1 92 0
+ 181 0004 3121     		movs	r1, #49
+ 182 0006 FFF7FEFF 		bl	PacketIsOfID
+ 183              	.LVL16:
+ 184 000a 0028     		cmp	r0, #0
+ 185 000c 0AD0     		beq	.L9
+ 186              	.LBB2:
+  93:..\CANLib/CANCommon.c ****     {
+  94:..\CANLib/CANCommon.c ****         uint32_t time = ((uint32_t)packet->data[3] << 24);
+ 187              		.loc 1 94 0
+ 188 000e A079     		ldrb	r0, [r4, #6]
+ 189 0010 0006     		lsls	r0, r0, #24
+ 190              	.LVL17:
+  95:..\CANLib/CANCommon.c ****         time |= ((uint32_t)packet->data[4] << 16);
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 6
+
+
+ 191              		.loc 1 95 0
+ 192 0012 E379     		ldrb	r3, [r4, #7]
+ 193 0014 1B04     		lsls	r3, r3, #16
+ 194 0016 1843     		orrs	r0, r3
+ 195              	.LVL18:
+  96:..\CANLib/CANCommon.c ****         time |= ((uint32_t)packet->data[5] << 8);
+ 196              		.loc 1 96 0
+ 197 0018 237A     		ldrb	r3, [r4, #8]
+ 198 001a 1B02     		lsls	r3, r3, #8
+ 199 001c 1843     		orrs	r0, r3
+ 200              	.LVL19:
+  97:..\CANLib/CANCommon.c ****         time |= packet->data[6]; 
+ 201              		.loc 1 97 0
+ 202 001e 637A     		ldrb	r3, [r4, #9]
+ 203 0020 1843     		orrs	r0, r3
+ 204              	.LVL20:
+  98:..\CANLib/CANCommon.c ****         return time;
+ 205              		.loc 1 98 0
+ 206 0022 01E0     		b	.L8
+ 207              	.L9:
+ 208              	.LBE2:
+  99:..\CANLib/CANCommon.c ****     }
+ 100:..\CANLib/CANCommon.c ****     else { return -1; }
+ 209              		.loc 1 100 0
+ 210 0024 0120     		movs	r0, #1
+ 211 0026 4042     		rsbs	r0, r0, #0
+ 212              	.L8:
+ 101:..\CANLib/CANCommon.c **** }
+ 213              		.loc 1 101 0
+ 214              		@ sp needed
+ 215              	.LVL21:
+ 216 0028 10BD     		pop	{r4, pc}
+ 217              		.cfi_endproc
+ 218              	.LFE5:
+ 219              		.size	GetHeartbeatTimeStamp, .-GetHeartbeatTimeStamp
+ 220 002a C046     		.section	.text.GetTimeBetweenHeartbeatPacket,"ax",%progbits
+ 221              		.align	2
+ 222              		.global	GetTimeBetweenHeartbeatPacket
+ 223              		.code	16
+ 224              		.thumb_func
+ 225              		.type	GetTimeBetweenHeartbeatPacket, %function
+ 226              	GetTimeBetweenHeartbeatPacket:
+ 227              	.LFB4:
+  74:..\CANLib/CANCommon.c ****     if (PacketIsOfID(packet, ID_HEARTBEAT)) 
+ 228              		.loc 1 74 0
+ 229              		.cfi_startproc
+ 230              		@ args = 0, pretend = 0, frame = 0
+ 231              		@ frame_needed = 0, uses_anonymous_args = 0
+ 232              	.LVL22:
+ 233 0000 70B5     		push	{r4, r5, r6, lr}
+ 234              		.cfi_def_cfa_offset 16
+ 235              		.cfi_offset 4, -16
+ 236              		.cfi_offset 5, -12
+ 237              		.cfi_offset 6, -8
+ 238              		.cfi_offset 14, -4
+ 239 0002 0400     		movs	r4, r0
+ 240 0004 0D00     		movs	r5, r1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 7
+
+
+  75:..\CANLib/CANCommon.c ****     {
+ 241              		.loc 1 75 0
+ 242 0006 3121     		movs	r1, #49
+ 243              	.LVL23:
+ 244 0008 FFF7FEFF 		bl	PacketIsOfID
+ 245              	.LVL24:
+ 246 000c 0028     		cmp	r0, #0
+ 247 000e 04D0     		beq	.L12
+  77:..\CANLib/CANCommon.c ****     }
+ 248              		.loc 1 77 0
+ 249 0010 2000     		movs	r0, r4
+ 250 0012 FFF7FEFF 		bl	GetHeartbeatTimeStamp
+ 251              	.LVL25:
+ 252 0016 401B     		subs	r0, r0, r5
+ 253 0018 01E0     		b	.L11
+ 254              	.L12:
+  79:..\CANLib/CANCommon.c **** }
+ 255              		.loc 1 79 0
+ 256 001a 0120     		movs	r0, #1
+ 257 001c 4042     		rsbs	r0, r0, #0
+ 258              	.L11:
+  80:..\CANLib/CANCommon.c **** 
+ 259              		.loc 1 80 0
+ 260              		@ sp needed
+ 261              	.LVL26:
+ 262              	.LVL27:
+ 263 001e 70BD     		pop	{r4, r5, r6, pc}
+ 264              		.cfi_endproc
+ 265              	.LFE4:
+ 266              		.size	GetTimeBetweenHeartbeatPacket, .-GetTimeBetweenHeartbeatPacket
+ 267              		.section	.text.GetHeartbeatLeniencyCode,"ax",%progbits
+ 268              		.align	2
+ 269              		.global	GetHeartbeatLeniencyCode
+ 270              		.code	16
+ 271              		.thumb_func
+ 272              		.type	GetHeartbeatLeniencyCode, %function
+ 273              	GetHeartbeatLeniencyCode:
+ 274              	.LFB6:
+ 102:..\CANLib/CANCommon.c **** 
+ 103:..\CANLib/CANCommon.c **** // Validates the Heartbeat Packet, returns the heartbeat leniency code of the packet
+ 104:..\CANLib/CANCommon.c **** // Inputs:
+ 105:..\CANLib/CANCommon.c **** //      packet:     CAN Packet to check
+ 106:..\CANLib/CANCommon.c **** // Outputs:
+ 107:..\CANLib/CANCommon.c **** //                  Heartbeat leniency code of given packet
+ 108:..\CANLib/CANCommon.c **** uint8_t GetHeartbeatLeniencyCode(CANPacket *packet)
+ 109:..\CANLib/CANCommon.c **** {
+ 275              		.loc 1 109 0
+ 276              		.cfi_startproc
+ 277              		@ args = 0, pretend = 0, frame = 0
+ 278              		@ frame_needed = 0, uses_anonymous_args = 0
+ 279              	.LVL28:
+ 280 0000 10B5     		push	{r4, lr}
+ 281              		.cfi_def_cfa_offset 8
+ 282              		.cfi_offset 4, -8
+ 283              		.cfi_offset 14, -4
+ 284 0002 0400     		movs	r4, r0
+ 110:..\CANLib/CANCommon.c ****     if (PacketIsOfID(packet, ID_HEARTBEAT))
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 8
+
+
+ 285              		.loc 1 110 0
+ 286 0004 3121     		movs	r1, #49
+ 287 0006 FFF7FEFF 		bl	PacketIsOfID
+ 288              	.LVL29:
+ 289 000a 0028     		cmp	r0, #0
+ 290 000c 01D0     		beq	.L15
+ 111:..\CANLib/CANCommon.c ****     {
+ 112:..\CANLib/CANCommon.c ****         return packet->data[2];
+ 291              		.loc 1 112 0
+ 292 000e 6079     		ldrb	r0, [r4, #5]
+ 293 0010 00E0     		b	.L14
+ 294              	.L15:
+ 113:..\CANLib/CANCommon.c ****     } else {
+ 114:..\CANLib/CANCommon.c ****         return 0x00;
+ 295              		.loc 1 114 0
+ 296 0012 0020     		movs	r0, #0
+ 297              	.L14:
+ 115:..\CANLib/CANCommon.c ****     }
+ 116:..\CANLib/CANCommon.c **** }
+ 298              		.loc 1 116 0
+ 299              		@ sp needed
+ 300              	.LVL30:
+ 301 0014 10BD     		pop	{r4, pc}
+ 302              		.cfi_endproc
+ 303              	.LFE6:
+ 304              		.size	GetHeartbeatLeniencyCode, .-GetHeartbeatLeniencyCode
+ 305 0016 C046     		.section	.text.AssembleHeartbeatPacket,"ax",%progbits
+ 306              		.align	2
+ 307              		.global	AssembleHeartbeatPacket
+ 308              		.code	16
+ 309              		.thumb_func
+ 310              		.type	AssembleHeartbeatPacket, %function
+ 311              	AssembleHeartbeatPacket:
+ 312              	.LFB7:
+ 117:..\CANLib/CANCommon.c **** 
+ 118:..\CANLib/CANCommon.c **** // Assembles Heartbeat Packet with given parameters
+ 119:..\CANLib/CANCommon.c **** // Inputs:
+ 120:..\CANLib/CANCommon.c **** //      packetToAssemble:       CAN Packet to assemble (will overwrite).
+ 121:..\CANLib/CANCommon.c **** //      broadcast:              1 if broadcast to all devices. 0 to return to MAIN_CPU / Jetson.
+ 122:..\CANLib/CANCommon.c **** //      heartbeatLeniencyCode:  Max time between heartbeats before system automatically enters a sa
+ 123:..\CANLib/CANCommon.c **** //      timestamp:              Current timestamp as seen by the sender device. (ms)
+ 124:..\CANLib/CANCommon.c **** //TODO, upon approval from @jaden, delete senderGroup and senderSerial params, as these are handled
+ 125:..\CANLib/CANCommon.c **** void AssembleHeartbeatPacket(CANPacket *packetToAssemble, 
+ 126:..\CANLib/CANCommon.c ****     int broadcast, 
+ 127:..\CANLib/CANCommon.c ****     uint8_t heartbeatLeniencyCode,
+ 128:..\CANLib/CANCommon.c ****     uint32_t timestamp)
+ 129:..\CANLib/CANCommon.c **** {
+ 313              		.loc 1 129 0
+ 314              		.cfi_startproc
+ 315              		@ args = 0, pretend = 0, frame = 0
+ 316              		@ frame_needed = 0, uses_anonymous_args = 0
+ 317              	.LVL31:
+ 318 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 319              		.cfi_def_cfa_offset 24
+ 320              		.cfi_offset 3, -24
+ 321              		.cfi_offset 4, -20
+ 322              		.cfi_offset 5, -16
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 9
+
+
+ 323              		.cfi_offset 6, -12
+ 324              		.cfi_offset 7, -8
+ 325              		.cfi_offset 14, -4
+ 326 0002 0400     		movs	r4, r0
+ 327 0004 0D00     		movs	r5, r1
+ 328 0006 1700     		movs	r7, r2
+ 329 0008 1E00     		movs	r6, r3
+ 130:..\CANLib/CANCommon.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_HIGH, DEVICE_GROUP_BROADCAST, DEVICE_SERI
+ 330              		.loc 1 130 0
+ 331 000a 0022     		movs	r2, #0
+ 332              	.LVL32:
+ 333 000c 0021     		movs	r1, #0
+ 334              	.LVL33:
+ 335 000e 0020     		movs	r0, #0
+ 336              	.LVL34:
+ 337 0010 FFF7FEFF 		bl	ConstructCANID
+ 338              	.LVL35:
+ 339 0014 2080     		strh	r0, [r4]
+ 131:..\CANLib/CANCommon.c ****     if (!broadcast)
+ 340              		.loc 1 131 0
+ 341 0016 002D     		cmp	r5, #0
+ 342 0018 05D1     		bne	.L17
+ 132:..\CANLib/CANCommon.c ****     { 
+ 133:..\CANLib/CANCommon.c ****         packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_HIGH, DEVICE_GROUP_JETSON, DEVICE_SER
+ 343              		.loc 1 133 0
+ 344 001a 0122     		movs	r2, #1
+ 345 001c 0221     		movs	r1, #2
+ 346 001e 0020     		movs	r0, #0
+ 347 0020 FFF7FEFF 		bl	ConstructCANID
+ 348              	.LVL36:
+ 349 0024 2080     		strh	r0, [r4]
+ 350              	.L17:
+ 134:..\CANLib/CANCommon.c ****     }
+ 135:..\CANLib/CANCommon.c ****     packetToAssemble->dlc = DLC_HEARTBEAT;
+ 351              		.loc 1 135 0
+ 352 0026 0723     		movs	r3, #7
+ 353 0028 A370     		strb	r3, [r4, #2]
+ 136:..\CANLib/CANCommon.c ****     int nextByte = WriteSenderSerialAndPacketID(packetToAssemble->data, ID_HEARTBEAT);
+ 354              		.loc 1 136 0
+ 355 002a E51C     		adds	r5, r4, #3
+ 356              	.LVL37:
+ 357 002c 3121     		movs	r1, #49
+ 358 002e 2800     		movs	r0, r5
+ 359 0030 FFF7FEFF 		bl	WriteSenderSerialAndPacketID
+ 360              	.LVL38:
+ 137:..\CANLib/CANCommon.c ****     packetToAssemble->data[nextByte] = heartbeatLeniencyCode;
+ 361              		.loc 1 137 0
+ 362 0034 2418     		adds	r4, r4, r0
+ 363              	.LVL39:
+ 364 0036 E770     		strb	r7, [r4, #3]
+ 138:..\CANLib/CANCommon.c ****     PackIntIntoDataMSBFirst(packetToAssemble->data, timestamp, 3);
+ 365              		.loc 1 138 0
+ 366 0038 0322     		movs	r2, #3
+ 367 003a 3100     		movs	r1, r6
+ 368 003c 2800     		movs	r0, r5
+ 369              	.LVL40:
+ 370 003e FFF7FEFF 		bl	PackIntIntoDataMSBFirst
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 10
+
+
+ 371              	.LVL41:
+ 139:..\CANLib/CANCommon.c **** }
+ 372              		.loc 1 139 0
+ 373              		@ sp needed
+ 374              	.LVL42:
+ 375              	.LVL43:
+ 376 0042 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 377              		.cfi_endproc
+ 378              	.LFE7:
+ 379              		.size	AssembleHeartbeatPacket, .-AssembleHeartbeatPacket
+ 380              		.section	.text.AssembleFailReportPacket,"ax",%progbits
+ 381              		.align	2
+ 382              		.global	AssembleFailReportPacket
+ 383              		.code	16
+ 384              		.thumb_func
+ 385              		.type	AssembleFailReportPacket, %function
+ 386              	AssembleFailReportPacket:
+ 387              	.LFB8:
+ 140:..\CANLib/CANCommon.c **** 
+ 141:..\CANLib/CANCommon.c **** void AssembleFailReportPacket(CANPacket *packetToAssemble, 
+ 142:..\CANLib/CANCommon.c ****     uint8_t targetGroup, 
+ 143:..\CANLib/CANCommon.c ****     uint8_t targetSerial,
+ 144:..\CANLib/CANCommon.c ****     uint8_t failedPacketID)
+ 145:..\CANLib/CANCommon.c **** {
+ 388              		.loc 1 145 0
+ 389              		.cfi_startproc
+ 390              		@ args = 0, pretend = 0, frame = 0
+ 391              		@ frame_needed = 0, uses_anonymous_args = 0
+ 392              	.LVL44:
+ 393 0000 70B5     		push	{r4, r5, r6, lr}
+ 394              		.cfi_def_cfa_offset 16
+ 395              		.cfi_offset 4, -16
+ 396              		.cfi_offset 5, -12
+ 397              		.cfi_offset 6, -8
+ 398              		.cfi_offset 14, -4
+ 399 0002 0400     		movs	r4, r0
+ 400 0004 1D00     		movs	r5, r3
+ 146:..\CANLib/CANCommon.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetGroup, targetSerial);
+ 401              		.loc 1 146 0
+ 402 0006 0120     		movs	r0, #1
+ 403              	.LVL45:
+ 404 0008 FFF7FEFF 		bl	ConstructCANID
+ 405              	.LVL46:
+ 406 000c 2080     		strh	r0, [r4]
+ 147:..\CANLib/CANCommon.c ****     packetToAssemble->dlc = DLC_FAIL_REPORT;
+ 407              		.loc 1 147 0
+ 408 000e 0323     		movs	r3, #3
+ 409 0010 A370     		strb	r3, [r4, #2]
+ 148:..\CANLib/CANCommon.c ****     int nextByte = WriteSenderSerialAndPacketID(packetToAssemble->data, ID_FAIL_REPORT);
+ 410              		.loc 1 148 0
+ 411 0012 E01C     		adds	r0, r4, #3
+ 412 0014 3221     		movs	r1, #50
+ 413 0016 FFF7FEFF 		bl	WriteSenderSerialAndPacketID
+ 414              	.LVL47:
+ 149:..\CANLib/CANCommon.c ****     packetToAssemble->data[nextByte] = failedPacketID;
+ 415              		.loc 1 149 0
+ 416 001a 2418     		adds	r4, r4, r0
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 11
+
+
+ 417              	.LVL48:
+ 418 001c E570     		strb	r5, [r4, #3]
+ 150:..\CANLib/CANCommon.c **** }
+ 419              		.loc 1 150 0
+ 420              		@ sp needed
+ 421 001e 70BD     		pop	{r4, r5, r6, pc}
+ 422              		.cfi_endproc
+ 423              	.LFE8:
+ 424              		.size	AssembleFailReportPacket, .-AssembleFailReportPacket
+ 425              		.section	.text.AssembleOverrideProtectionPacket,"ax",%progbits
+ 426              		.align	2
+ 427              		.global	AssembleOverrideProtectionPacket
+ 428              		.code	16
+ 429              		.thumb_func
+ 430              		.type	AssembleOverrideProtectionPacket, %function
+ 431              	AssembleOverrideProtectionPacket:
+ 432              	.LFB9:
+ 151:..\CANLib/CANCommon.c **** 
+ 152:..\CANLib/CANCommon.c **** // Assembles override protection packet with given parameters
+ 153:..\CANLib/CANCommon.c **** // Inputs:
+ 154:..\CANLib/CANCommon.c **** //      packetToAssemble:       CAN Packet to assemble (will overwrite).
+ 155:..\CANLib/CANCommon.c **** //      targetGroup:            Device gorup of target device.
+ 156:..\CANLib/CANCommon.c **** //      targetSerial:           Device serial of target device.
+ 157:..\CANLib/CANCommon.c **** void AssembleOverrideProtectionPacket(CANPacket *packetToAssemble, uint8_t targetGroup, uint8_t tar
+ 158:..\CANLib/CANCommon.c **** {
+ 433              		.loc 1 158 0
+ 434              		.cfi_startproc
+ 435              		@ args = 0, pretend = 0, frame = 0
+ 436              		@ frame_needed = 0, uses_anonymous_args = 0
+ 437              	.LVL49:
+ 438 0000 10B5     		push	{r4, lr}
+ 439              		.cfi_def_cfa_offset 8
+ 440              		.cfi_offset 4, -8
+ 441              		.cfi_offset 14, -4
+ 442 0002 0400     		movs	r4, r0
+ 159:..\CANLib/CANCommon.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetGroup, targetSerial);
+ 443              		.loc 1 159 0
+ 444 0004 0120     		movs	r0, #1
+ 445              	.LVL50:
+ 446 0006 FFF7FEFF 		bl	ConstructCANID
+ 447              	.LVL51:
+ 448 000a 2080     		strh	r0, [r4]
+ 160:..\CANLib/CANCommon.c ****     packetToAssemble->dlc = DLC_OVRD_PROTECTION;
+ 449              		.loc 1 160 0
+ 450 000c 0123     		movs	r3, #1
+ 451 000e A370     		strb	r3, [r4, #2]
+ 161:..\CANLib/CANCommon.c ****     WritePacketIDOnly(packetToAssemble->data, ID_OVRD_PROTECTION);
+ 452              		.loc 1 161 0
+ 453 0010 E01C     		adds	r0, r4, #3
+ 454 0012 3321     		movs	r1, #51
+ 455 0014 FFF7FEFF 		bl	WritePacketIDOnly
+ 456              	.LVL52:
+ 162:..\CANLib/CANCommon.c **** }
+ 457              		.loc 1 162 0
+ 458              		@ sp needed
+ 459              	.LVL53:
+ 460 0018 10BD     		pop	{r4, pc}
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 12
+
+
+ 461              		.cfi_endproc
+ 462              	.LFE9:
+ 463              		.size	AssembleOverrideProtectionPacket, .-AssembleOverrideProtectionPacket
+ 464 001a C046     		.section	.text.AssembleChipTypePullPacket,"ax",%progbits
+ 465              		.align	2
+ 466              		.global	AssembleChipTypePullPacket
+ 467              		.code	16
+ 468              		.thumb_func
+ 469              		.type	AssembleChipTypePullPacket, %function
+ 470              	AssembleChipTypePullPacket:
+ 471              	.LFB10:
+ 163:..\CANLib/CANCommon.c **** 
+ 164:..\CANLib/CANCommon.c **** void AssembleChipTypePullPacket(CANPacket *packetToAssemble,
+ 165:..\CANLib/CANCommon.c ****     uint8_t targetDeviceGroup,
+ 166:..\CANLib/CANCommon.c ****     uint8_t targetDeviceSerial)
+ 167:..\CANLib/CANCommon.c **** {
+ 472              		.loc 1 167 0
+ 473              		.cfi_startproc
+ 474              		@ args = 0, pretend = 0, frame = 0
+ 475              		@ frame_needed = 0, uses_anonymous_args = 0
+ 476              	.LVL54:
+ 477 0000 70B5     		push	{r4, r5, r6, lr}
+ 478              		.cfi_def_cfa_offset 16
+ 479              		.cfi_offset 4, -16
+ 480              		.cfi_offset 5, -12
+ 481              		.cfi_offset 6, -8
+ 482              		.cfi_offset 14, -4
+ 483 0002 0400     		movs	r4, r0
+ 168:..\CANLib/CANCommon.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetDeviceGroup, targetDeviceSe
+ 484              		.loc 1 168 0
+ 485 0004 0120     		movs	r0, #1
+ 486              	.LVL55:
+ 487 0006 FFF7FEFF 		bl	ConstructCANID
+ 488              	.LVL56:
+ 489 000a 2080     		strh	r0, [r4]
+ 169:..\CANLib/CANCommon.c ****     packetToAssemble->dlc = DLC_CHIP_TYPE_PULL;
+ 490              		.loc 1 169 0
+ 491 000c 0323     		movs	r3, #3
+ 492 000e A370     		strb	r3, [r4, #2]
+ 170:..\CANLib/CANCommon.c ****     int nextByte = WriteSenderSerialAndPacketID(packetToAssemble->data, ID_CHIP_TYPE_PULL);
+ 493              		.loc 1 170 0
+ 494 0010 E01C     		adds	r0, r4, #3
+ 495 0012 3821     		movs	r1, #56
+ 496 0014 FFF7FEFF 		bl	WriteSenderSerialAndPacketID
+ 497              	.LVL57:
+ 498 0018 0500     		movs	r5, r0
+ 499              	.LVL58:
+ 171:..\CANLib/CANCommon.c ****     packetToAssemble->data[nextByte] = getChipType();
+ 500              		.loc 1 171 0
+ 501 001a FFF7FEFF 		bl	getChipType
+ 502              	.LVL59:
+ 503 001e 6419     		adds	r4, r4, r5
+ 504              	.LVL60:
+ 505 0020 E070     		strb	r0, [r4, #3]
+ 172:..\CANLib/CANCommon.c **** }
+ 506              		.loc 1 172 0
+ 507              		@ sp needed
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 13
+
+
+ 508              	.LVL61:
+ 509 0022 70BD     		pop	{r4, r5, r6, pc}
+ 510              		.cfi_endproc
+ 511              	.LFE10:
+ 512              		.size	AssembleChipTypePullPacket, .-AssembleChipTypePullPacket
+ 513              		.section	.text.AssembleChipTypeReportPacket,"ax",%progbits
+ 514              		.align	2
+ 515              		.global	AssembleChipTypeReportPacket
+ 516              		.code	16
+ 517              		.thumb_func
+ 518              		.type	AssembleChipTypeReportPacket, %function
+ 519              	AssembleChipTypeReportPacket:
+ 520              	.LFB11:
+ 173:..\CANLib/CANCommon.c **** 
+ 174:..\CANLib/CANCommon.c **** void AssembleChipTypeReportPacket(CANPacket *packetToAssemble,
+ 175:..\CANLib/CANCommon.c ****     uint8_t targetDeviceGroup,
+ 176:..\CANLib/CANCommon.c ****     uint8_t targetDeviceSerial)
+ 177:..\CANLib/CANCommon.c **** {
+ 521              		.loc 1 177 0
+ 522              		.cfi_startproc
+ 523              		@ args = 0, pretend = 0, frame = 0
+ 524              		@ frame_needed = 0, uses_anonymous_args = 0
+ 525              	.LVL62:
+ 526 0000 70B5     		push	{r4, r5, r6, lr}
+ 527              		.cfi_def_cfa_offset 16
+ 528              		.cfi_offset 4, -16
+ 529              		.cfi_offset 5, -12
+ 530              		.cfi_offset 6, -8
+ 531              		.cfi_offset 14, -4
+ 532 0002 0400     		movs	r4, r0
+ 178:..\CANLib/CANCommon.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetDeviceGroup, targetDeviceSe
+ 533              		.loc 1 178 0
+ 534 0004 0120     		movs	r0, #1
+ 535              	.LVL63:
+ 536 0006 FFF7FEFF 		bl	ConstructCANID
+ 537              	.LVL64:
+ 538 000a 2080     		strh	r0, [r4]
+ 179:..\CANLib/CANCommon.c ****     packetToAssemble->dlc = DLC_CHIP_TYPE_REP;
+ 539              		.loc 1 179 0
+ 540 000c 0323     		movs	r3, #3
+ 541 000e A370     		strb	r3, [r4, #2]
+ 180:..\CANLib/CANCommon.c ****     int nextByte = WriteSenderSerialAndPacketID(packetToAssemble->data, ID_CHIP_TYPE_REP);
+ 542              		.loc 1 180 0
+ 543 0010 E01C     		adds	r0, r4, #3
+ 544 0012 3921     		movs	r1, #57
+ 545 0014 FFF7FEFF 		bl	WriteSenderSerialAndPacketID
+ 546              	.LVL65:
+ 547 0018 0500     		movs	r5, r0
+ 548              	.LVL66:
+ 181:..\CANLib/CANCommon.c ****     packetToAssemble->data[nextByte] = getChipType();
+ 549              		.loc 1 181 0
+ 550 001a FFF7FEFF 		bl	getChipType
+ 551              	.LVL67:
+ 552 001e 6419     		adds	r4, r4, r5
+ 553              	.LVL68:
+ 554 0020 E070     		strb	r0, [r4, #3]
+ 182:..\CANLib/CANCommon.c **** }
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 14
+
+
+ 555              		.loc 1 182 0
+ 556              		@ sp needed
+ 557              	.LVL69:
+ 558 0022 70BD     		pop	{r4, r5, r6, pc}
+ 559              		.cfi_endproc
+ 560              	.LFE11:
+ 561              		.size	AssembleChipTypeReportPacket, .-AssembleChipTypeReportPacket
+ 562              		.section	.text.GetChipTypeFromPacket,"ax",%progbits
+ 563              		.align	2
+ 564              		.global	GetChipTypeFromPacket
+ 565              		.code	16
+ 566              		.thumb_func
+ 567              		.type	GetChipTypeFromPacket, %function
+ 568              	GetChipTypeFromPacket:
+ 569              	.LFB12:
+ 183:..\CANLib/CANCommon.c **** 
+ 184:..\CANLib/CANCommon.c **** uint8_t GetChipTypeFromPacket(CANPacket *packet)
+ 185:..\CANLib/CANCommon.c **** {
+ 570              		.loc 1 185 0
+ 571              		.cfi_startproc
+ 572              		@ args = 0, pretend = 0, frame = 0
+ 573              		@ frame_needed = 0, uses_anonymous_args = 0
+ 574              		@ link register save eliminated.
+ 575              	.LVL70:
+ 186:..\CANLib/CANCommon.c ****     return packet->data[1];
+ 576              		.loc 1 186 0
+ 577 0000 0079     		ldrb	r0, [r0, #4]
+ 578              	.LVL71:
+ 187:..\CANLib/CANCommon.c **** }
+ 579              		.loc 1 187 0
+ 580              		@ sp needed
+ 581 0002 7047     		bx	lr
+ 582              		.cfi_endproc
+ 583              	.LFE12:
+ 584              		.size	GetChipTypeFromPacket, .-GetChipTypeFromPacket
+ 585              		.section	.text.AssembleTelemetryTimingPacket,"ax",%progbits
+ 586              		.align	2
+ 587              		.global	AssembleTelemetryTimingPacket
+ 588              		.code	16
+ 589              		.thumb_func
+ 590              		.type	AssembleTelemetryTimingPacket, %function
+ 591              	AssembleTelemetryTimingPacket:
+ 592              	.LFB13:
+ 188:..\CANLib/CANCommon.c **** 
+ 189:..\CANLib/CANCommon.c **** void AssembleTelemetryTimingPacket(CANPacket *packetToAssemble, 
+ 190:..\CANLib/CANCommon.c ****     uint8_t targetGroup, 
+ 191:..\CANLib/CANCommon.c ****     uint8_t targetSerial, 
+ 192:..\CANLib/CANCommon.c ****     uint8_t telemetryTypeCode,
+ 193:..\CANLib/CANCommon.c ****     uint32_t msBetweenReports)
+ 194:..\CANLib/CANCommon.c **** {
+ 593              		.loc 1 194 0
+ 594              		.cfi_startproc
+ 595              		@ args = 4, pretend = 0, frame = 0
+ 596              		@ frame_needed = 0, uses_anonymous_args = 0
+ 597              	.LVL72:
+ 598 0000 70B5     		push	{r4, r5, r6, lr}
+ 599              		.cfi_def_cfa_offset 16
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 15
+
+
+ 600              		.cfi_offset 4, -16
+ 601              		.cfi_offset 5, -12
+ 602              		.cfi_offset 6, -8
+ 603              		.cfi_offset 14, -4
+ 604 0002 0400     		movs	r4, r0
+ 605 0004 1E00     		movs	r6, r3
+ 195:..\CANLib/CANCommon.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetGroup, targetSerial);
+ 606              		.loc 1 195 0
+ 607 0006 0120     		movs	r0, #1
+ 608              	.LVL73:
+ 609 0008 FFF7FEFF 		bl	ConstructCANID
+ 610              	.LVL74:
+ 611 000c 2080     		strh	r0, [r4]
+ 196:..\CANLib/CANCommon.c ****     packetToAssemble->dlc = DLC_TELEMETRY_TIMING;
+ 612              		.loc 1 196 0
+ 613 000e 0623     		movs	r3, #6
+ 614 0010 A370     		strb	r3, [r4, #2]
+ 197:..\CANLib/CANCommon.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_TELEMETRY_TIMING);
+ 615              		.loc 1 197 0
+ 616 0012 E51C     		adds	r5, r4, #3
+ 617 0014 3421     		movs	r1, #52
+ 618 0016 2800     		movs	r0, r5
+ 619 0018 FFF7FEFF 		bl	WritePacketIDOnly
+ 620              	.LVL75:
+ 198:..\CANLib/CANCommon.c ****     packetToAssemble->data[nextByte] = telemetryTypeCode;
+ 621              		.loc 1 198 0
+ 622 001c 2418     		adds	r4, r4, r0
+ 623              	.LVL76:
+ 624 001e E670     		strb	r6, [r4, #3]
+ 199:..\CANLib/CANCommon.c ****     PackIntIntoDataMSBFirst(packetToAssemble->data, msBetweenReports, 3);
+ 625              		.loc 1 199 0
+ 626 0020 0322     		movs	r2, #3
+ 627 0022 0499     		ldr	r1, [sp, #16]
+ 628 0024 2800     		movs	r0, r5
+ 629              	.LVL77:
+ 630 0026 FFF7FEFF 		bl	PackIntIntoDataMSBFirst
+ 631              	.LVL78:
+ 200:..\CANLib/CANCommon.c **** }
+ 632              		.loc 1 200 0
+ 633              		@ sp needed
+ 634              	.LVL79:
+ 635 002a 70BD     		pop	{r4, r5, r6, pc}
+ 636              		.cfi_endproc
+ 637              	.LFE13:
+ 638              		.size	AssembleTelemetryTimingPacket, .-AssembleTelemetryTimingPacket
+ 639              		.section	.text.AssembleTelemetryPullPacket,"ax",%progbits
+ 640              		.align	2
+ 641              		.global	AssembleTelemetryPullPacket
+ 642              		.code	16
+ 643              		.thumb_func
+ 644              		.type	AssembleTelemetryPullPacket, %function
+ 645              	AssembleTelemetryPullPacket:
+ 646              	.LFB15:
+ 201:..\CANLib/CANCommon.c **** uint32_t GetTelemetryTimingFromPacket(CANPacket *packetToAssemble)
+ 202:..\CANLib/CANCommon.c **** {
+ 203:..\CANLib/CANCommon.c ****     return DecodeTelemetryDataUnsigned(packetToAssemble);
+ 204:..\CANLib/CANCommon.c **** }
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 16
+
+
+ 205:..\CANLib/CANCommon.c **** 
+ 206:..\CANLib/CANCommon.c **** void AssembleTelemetryPullPacket(CANPacket *packetToAssemble, 
+ 207:..\CANLib/CANCommon.c ****     uint8_t targetGroup, 
+ 208:..\CANLib/CANCommon.c ****     uint8_t targetSerial, 
+ 209:..\CANLib/CANCommon.c ****     uint8_t telemetryTypeCode)
+ 210:..\CANLib/CANCommon.c **** {
+ 647              		.loc 1 210 0
+ 648              		.cfi_startproc
+ 649              		@ args = 0, pretend = 0, frame = 0
+ 650              		@ frame_needed = 0, uses_anonymous_args = 0
+ 651              	.LVL80:
+ 652 0000 70B5     		push	{r4, r5, r6, lr}
+ 653              		.cfi_def_cfa_offset 16
+ 654              		.cfi_offset 4, -16
+ 655              		.cfi_offset 5, -12
+ 656              		.cfi_offset 6, -8
+ 657              		.cfi_offset 14, -4
+ 658 0002 0400     		movs	r4, r0
+ 659 0004 1D00     		movs	r5, r3
+ 211:..\CANLib/CANCommon.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetGroup, targetSerial);
+ 660              		.loc 1 211 0
+ 661 0006 0120     		movs	r0, #1
+ 662              	.LVL81:
+ 663 0008 FFF7FEFF 		bl	ConstructCANID
+ 664              	.LVL82:
+ 665 000c 2080     		strh	r0, [r4]
+ 212:..\CANLib/CANCommon.c ****     packetToAssemble->dlc = DLC_TELEMETRY_PULL;
+ 666              		.loc 1 212 0
+ 667 000e 0323     		movs	r3, #3
+ 668 0010 A370     		strb	r3, [r4, #2]
+ 213:..\CANLib/CANCommon.c ****     int nextByte = WriteSenderSerialAndPacketID(packetToAssemble->data, ID_TELEMETRY_PULL);
+ 669              		.loc 1 213 0
+ 670 0012 E01C     		adds	r0, r4, #3
+ 671 0014 3521     		movs	r1, #53
+ 672 0016 FFF7FEFF 		bl	WriteSenderSerialAndPacketID
+ 673              	.LVL83:
+ 214:..\CANLib/CANCommon.c ****     packetToAssemble->data[nextByte] = telemetryTypeCode;
+ 674              		.loc 1 214 0
+ 675 001a 2418     		adds	r4, r4, r0
+ 676              	.LVL84:
+ 677 001c E570     		strb	r5, [r4, #3]
+ 215:..\CANLib/CANCommon.c **** }
+ 678              		.loc 1 215 0
+ 679              		@ sp needed
+ 680 001e 70BD     		pop	{r4, r5, r6, pc}
+ 681              		.cfi_endproc
+ 682              	.LFE15:
+ 683              		.size	AssembleTelemetryPullPacket, .-AssembleTelemetryPullPacket
+ 684              		.section	.text.AssembleTelemetryReportPacket,"ax",%progbits
+ 685              		.align	2
+ 686              		.global	AssembleTelemetryReportPacket
+ 687              		.code	16
+ 688              		.thumb_func
+ 689              		.type	AssembleTelemetryReportPacket, %function
+ 690              	AssembleTelemetryReportPacket:
+ 691              	.LFB16:
+ 216:..\CANLib/CANCommon.c **** 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 17
+
+
+ 217:..\CANLib/CANCommon.c **** void AssembleTelemetryReportPacket(CANPacket *packetToAssemble, 
+ 218:..\CANLib/CANCommon.c ****     uint8_t targetGroup, 
+ 219:..\CANLib/CANCommon.c ****     uint8_t targetSerial,
+ 220:..\CANLib/CANCommon.c ****     uint8_t telemetryTypeCode,
+ 221:..\CANLib/CANCommon.c ****     int32_t data)
+ 222:..\CANLib/CANCommon.c **** {
+ 692              		.loc 1 222 0
+ 693              		.cfi_startproc
+ 694              		@ args = 4, pretend = 0, frame = 0
+ 695              		@ frame_needed = 0, uses_anonymous_args = 0
+ 696              	.LVL85:
+ 697 0000 70B5     		push	{r4, r5, r6, lr}
+ 698              		.cfi_def_cfa_offset 16
+ 699              		.cfi_offset 4, -16
+ 700              		.cfi_offset 5, -12
+ 701              		.cfi_offset 6, -8
+ 702              		.cfi_offset 14, -4
+ 703 0002 0400     		movs	r4, r0
+ 704 0004 1E00     		movs	r6, r3
+ 223:..\CANLib/CANCommon.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetGroup, targetSerial);
+ 705              		.loc 1 223 0
+ 706 0006 0120     		movs	r0, #1
+ 707              	.LVL86:
+ 708 0008 FFF7FEFF 		bl	ConstructCANID
+ 709              	.LVL87:
+ 710 000c 2080     		strh	r0, [r4]
+ 224:..\CANLib/CANCommon.c ****     packetToAssemble->dlc = DLC_TELEMETRY_REPORT;
+ 711              		.loc 1 224 0
+ 712 000e 0723     		movs	r3, #7
+ 713 0010 A370     		strb	r3, [r4, #2]
+ 225:..\CANLib/CANCommon.c ****     int nextByte = WriteSenderSerialAndPacketID(packetToAssemble->data, ID_TELEMETRY_REPORT);
+ 714              		.loc 1 225 0
+ 715 0012 E51C     		adds	r5, r4, #3
+ 716 0014 3621     		movs	r1, #54
+ 717 0016 2800     		movs	r0, r5
+ 718 0018 FFF7FEFF 		bl	WriteSenderSerialAndPacketID
+ 719              	.LVL88:
+ 226:..\CANLib/CANCommon.c ****     packetToAssemble->data[nextByte] = telemetryTypeCode;
+ 720              		.loc 1 226 0
+ 721 001c 2418     		adds	r4, r4, r0
+ 722              	.LVL89:
+ 723 001e E670     		strb	r6, [r4, #3]
+ 227:..\CANLib/CANCommon.c ****     PackIntIntoDataMSBFirst(packetToAssemble->data, data, 3);
+ 724              		.loc 1 227 0
+ 725 0020 0322     		movs	r2, #3
+ 726 0022 0499     		ldr	r1, [sp, #16]
+ 727 0024 2800     		movs	r0, r5
+ 728              	.LVL90:
+ 729 0026 FFF7FEFF 		bl	PackIntIntoDataMSBFirst
+ 730              	.LVL91:
+ 228:..\CANLib/CANCommon.c **** }
+ 731              		.loc 1 228 0
+ 732              		@ sp needed
+ 733              	.LVL92:
+ 734 002a 70BD     		pop	{r4, r5, r6, pc}
+ 735              		.cfi_endproc
+ 736              	.LFE16:
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 18
+
+
+ 737              		.size	AssembleTelemetryReportPacket, .-AssembleTelemetryReportPacket
+ 738              		.section	.text.DecodeTelemetryDataSigned,"ax",%progbits
+ 739              		.align	2
+ 740              		.global	DecodeTelemetryDataSigned
+ 741              		.code	16
+ 742              		.thumb_func
+ 743              		.type	DecodeTelemetryDataSigned, %function
+ 744              	DecodeTelemetryDataSigned:
+ 745              	.LFB17:
+ 229:..\CANLib/CANCommon.c **** 
+ 230:..\CANLib/CANCommon.c **** int32_t DecodeTelemetryDataSigned(CANPacket *packet)
+ 231:..\CANLib/CANCommon.c **** {
+ 746              		.loc 1 231 0
+ 747              		.cfi_startproc
+ 748              		@ args = 0, pretend = 0, frame = 0
+ 749              		@ frame_needed = 0, uses_anonymous_args = 0
+ 750              	.LVL93:
+ 751 0000 10B5     		push	{r4, lr}
+ 752              		.cfi_def_cfa_offset 8
+ 753              		.cfi_offset 4, -8
+ 754              		.cfi_offset 14, -4
+ 232:..\CANLib/CANCommon.c ****     return DecodeBytesToIntMSBFirst(packet->data, 3, 7);
+ 755              		.loc 1 232 0
+ 756 0002 0330     		adds	r0, r0, #3
+ 757              	.LVL94:
+ 758 0004 0722     		movs	r2, #7
+ 759 0006 0321     		movs	r1, #3
+ 760 0008 FFF7FEFF 		bl	DecodeBytesToIntMSBFirst
+ 761              	.LVL95:
+ 233:..\CANLib/CANCommon.c **** }
+ 762              		.loc 1 233 0
+ 763              		@ sp needed
+ 764 000c 10BD     		pop	{r4, pc}
+ 765              		.cfi_endproc
+ 766              	.LFE17:
+ 767              		.size	DecodeTelemetryDataSigned, .-DecodeTelemetryDataSigned
+ 768 000e C046     		.section	.text.DecodeTelemetryDataUnsigned,"ax",%progbits
+ 769              		.align	2
+ 770              		.global	DecodeTelemetryDataUnsigned
+ 771              		.code	16
+ 772              		.thumb_func
+ 773              		.type	DecodeTelemetryDataUnsigned, %function
+ 774              	DecodeTelemetryDataUnsigned:
+ 775              	.LFB18:
+ 234:..\CANLib/CANCommon.c **** 
+ 235:..\CANLib/CANCommon.c **** uint32_t DecodeTelemetryDataUnsigned(CANPacket *packet)
+ 236:..\CANLib/CANCommon.c **** {
+ 776              		.loc 1 236 0
+ 777              		.cfi_startproc
+ 778              		@ args = 0, pretend = 0, frame = 0
+ 779              		@ frame_needed = 0, uses_anonymous_args = 0
+ 780              	.LVL96:
+ 781 0000 10B5     		push	{r4, lr}
+ 782              		.cfi_def_cfa_offset 8
+ 783              		.cfi_offset 4, -8
+ 784              		.cfi_offset 14, -4
+ 237:..\CANLib/CANCommon.c ****     return (uint32_t) DecodeTelemetryDataSigned(packet);
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 19
+
+
+ 785              		.loc 1 237 0
+ 786 0002 FFF7FEFF 		bl	DecodeTelemetryDataSigned
+ 787              	.LVL97:
+ 238:..\CANLib/CANCommon.c **** }
+ 788              		.loc 1 238 0
+ 789              		@ sp needed
+ 790 0006 10BD     		pop	{r4, pc}
+ 791              		.cfi_endproc
+ 792              	.LFE18:
+ 793              		.size	DecodeTelemetryDataUnsigned, .-DecodeTelemetryDataUnsigned
+ 794              		.section	.text.GetTelemetryTimingFromPacket,"ax",%progbits
+ 795              		.align	2
+ 796              		.global	GetTelemetryTimingFromPacket
+ 797              		.code	16
+ 798              		.thumb_func
+ 799              		.type	GetTelemetryTimingFromPacket, %function
+ 800              	GetTelemetryTimingFromPacket:
+ 801              	.LFB14:
+ 202:..\CANLib/CANCommon.c ****     return DecodeTelemetryDataUnsigned(packetToAssemble);
+ 802              		.loc 1 202 0
+ 803              		.cfi_startproc
+ 804              		@ args = 0, pretend = 0, frame = 0
+ 805              		@ frame_needed = 0, uses_anonymous_args = 0
+ 806              	.LVL98:
+ 807 0000 10B5     		push	{r4, lr}
+ 808              		.cfi_def_cfa_offset 8
+ 809              		.cfi_offset 4, -8
+ 810              		.cfi_offset 14, -4
+ 203:..\CANLib/CANCommon.c **** }
+ 811              		.loc 1 203 0
+ 812 0002 FFF7FEFF 		bl	DecodeTelemetryDataUnsigned
+ 813              	.LVL99:
+ 204:..\CANLib/CANCommon.c **** 
+ 814              		.loc 1 204 0
+ 815              		@ sp needed
+ 816 0006 10BD     		pop	{r4, pc}
+ 817              		.cfi_endproc
+ 818              	.LFE14:
+ 819              		.size	GetTelemetryTimingFromPacket, .-GetTelemetryTimingFromPacket
+ 820              		.section	.text.DecodeTelemetryType,"ax",%progbits
+ 821              		.align	2
+ 822              		.global	DecodeTelemetryType
+ 823              		.code	16
+ 824              		.thumb_func
+ 825              		.type	DecodeTelemetryType, %function
+ 826              	DecodeTelemetryType:
+ 827              	.LFB19:
+ 239:..\CANLib/CANCommon.c **** 
+ 240:..\CANLib/CANCommon.c **** uint8_t DecodeTelemetryType(CANPacket *packet)
+ 241:..\CANLib/CANCommon.c **** {
+ 828              		.loc 1 241 0
+ 829              		.cfi_startproc
+ 830              		@ args = 0, pretend = 0, frame = 0
+ 831              		@ frame_needed = 0, uses_anonymous_args = 0
+ 832              		@ link register save eliminated.
+ 833              	.LVL100:
+ 242:..\CANLib/CANCommon.c ****     return packet->data[2];
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 20
+
+
+ 834              		.loc 1 242 0
+ 835 0000 4079     		ldrb	r0, [r0, #5]
+ 836              	.LVL101:
+ 243:..\CANLib/CANCommon.c **** }
+ 837              		.loc 1 243 0
+ 838              		@ sp needed
+ 839 0002 7047     		bx	lr
+ 840              		.cfi_endproc
+ 841              	.LFE19:
+ 842              		.size	DecodeTelemetryType, .-DecodeTelemetryType
+ 843              		.section	.text.AssembleRGBColorPacket,"ax",%progbits
+ 844              		.align	2
+ 845              		.global	AssembleRGBColorPacket
+ 846              		.code	16
+ 847              		.thumb_func
+ 848              		.type	AssembleRGBColorPacket, %function
+ 849              	AssembleRGBColorPacket:
+ 850              	.LFB20:
+ 244:..\CANLib/CANCommon.c **** 
+ 245:..\CANLib/CANCommon.c **** void AssembleRGBColorPacket(CANPacket *packetToAssemble,
+ 246:..\CANLib/CANCommon.c ****     uint8_t targetGroup,
+ 247:..\CANLib/CANCommon.c ****     uint8_t targetSerial,
+ 248:..\CANLib/CANCommon.c ****     uint8_t addrLED,
+ 249:..\CANLib/CANCommon.c ****     uint8_t R,
+ 250:..\CANLib/CANCommon.c ****     uint8_t G,
+ 251:..\CANLib/CANCommon.c ****     uint8_t B)
+ 252:..\CANLib/CANCommon.c **** {
+ 851              		.loc 1 252 0
+ 852              		.cfi_startproc
+ 853              		@ args = 12, pretend = 0, frame = 0
+ 854              		@ frame_needed = 0, uses_anonymous_args = 0
+ 855              	.LVL102:
+ 856 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 857              		.cfi_def_cfa_offset 20
+ 858              		.cfi_offset 4, -20
+ 859              		.cfi_offset 5, -16
+ 860              		.cfi_offset 6, -12
+ 861              		.cfi_offset 7, -8
+ 862              		.cfi_offset 14, -4
+ 863 0002 4746     		mov	r7, r8
+ 864 0004 80B4     		push	{r7}
+ 865              		.cfi_def_cfa_offset 24
+ 866              		.cfi_offset 8, -24
+ 867 0006 0400     		movs	r4, r0
+ 868 0008 1D00     		movs	r5, r3
+ 869 000a 06AB     		add	r3, sp, #24
+ 870              	.LVL103:
+ 871 000c 1B78     		ldrb	r3, [r3]
+ 872              	.LVL104:
+ 873 000e 9846     		mov	r8, r3
+ 874 0010 07AB     		add	r3, sp, #28
+ 875              	.LVL105:
+ 876 0012 1F78     		ldrb	r7, [r3]
+ 877 0014 08AB     		add	r3, sp, #32
+ 878              	.LVL106:
+ 879 0016 1E78     		ldrb	r6, [r3]
+ 253:..\CANLib/CANCommon.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetGroup, targetSerial);
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 21
+
+
+ 880              		.loc 1 253 0
+ 881 0018 0120     		movs	r0, #1
+ 882              	.LVL107:
+ 883 001a FFF7FEFF 		bl	ConstructCANID
+ 884              	.LVL108:
+ 885 001e 2080     		strh	r0, [r4]
+ 254:..\CANLib/CANCommon.c ****     packetToAssemble->dlc = DLC_LED_COLOR;
+ 886              		.loc 1 254 0
+ 887 0020 0623     		movs	r3, #6
+ 888 0022 A370     		strb	r3, [r4, #2]
+ 255:..\CANLib/CANCommon.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_LED_COLOR);
+ 889              		.loc 1 255 0
+ 890 0024 E01C     		adds	r0, r4, #3
+ 891 0026 3721     		movs	r1, #55
+ 892 0028 FFF7FEFF 		bl	WritePacketIDOnly
+ 893              	.LVL109:
+ 256:..\CANLib/CANCommon.c ****     packetToAssemble->data[nextByte] = R;
+ 894              		.loc 1 256 0
+ 895 002c 2318     		adds	r3, r4, r0
+ 896 002e 4246     		mov	r2, r8
+ 897 0030 DA70     		strb	r2, [r3, #3]
+ 257:..\CANLib/CANCommon.c ****     packetToAssemble->data[nextByte + 1] = G;
+ 898              		.loc 1 257 0
+ 899 0032 431C     		adds	r3, r0, #1
+ 900 0034 E318     		adds	r3, r4, r3
+ 901 0036 DF70     		strb	r7, [r3, #3]
+ 258:..\CANLib/CANCommon.c ****     packetToAssemble->data[nextByte + 2] = B;
+ 902              		.loc 1 258 0
+ 903 0038 831C     		adds	r3, r0, #2
+ 904 003a E318     		adds	r3, r4, r3
+ 905 003c DE70     		strb	r6, [r3, #3]
+ 259:..\CANLib/CANCommon.c ****     packetToAssemble->data[nextByte + 3] = addrLED;   
+ 906              		.loc 1 259 0
+ 907 003e 0330     		adds	r0, r0, #3
+ 908              	.LVL110:
+ 909 0040 2018     		adds	r0, r4, r0
+ 910              	.LVL111:
+ 911 0042 C570     		strb	r5, [r0, #3]
+ 260:..\CANLib/CANCommon.c **** }
+ 912              		.loc 1 260 0
+ 913              		@ sp needed
+ 914              	.LVL112:
+ 915 0044 04BC     		pop	{r2}
+ 916 0046 9046     		mov	r8, r2
+ 917 0048 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 918              		.cfi_endproc
+ 919              	.LFE20:
+ 920              		.size	AssembleRGBColorPacket, .-AssembleRGBColorPacket
+ 921 004a C046     		.text
+ 922              	.Letext0:
+ 923              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 924              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 925              		.file 4 "..\\CANLib\\CANPacket.h"
+ 926              		.file 5 "..\\CANLib\\Port.h"
+ 927              		.section	.debug_info,"",%progbits
+ 928              	.Ldebug_info0:
+ 929 0000 510A0000 		.4byte	0xa51
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 22
+
+
+ 930 0004 0400     		.2byte	0x4
+ 931 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 932 000a 04       		.byte	0x4
+ 933 000b 01       		.uleb128 0x1
+ 934 000c B0010000 		.4byte	.LASF67
+ 935 0010 0C       		.byte	0xc
+ 936 0011 9A010000 		.4byte	.LASF68
+ 937 0015 C9000000 		.4byte	.LASF69
+ 938 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 939 001d 00000000 		.4byte	0
+ 940 0021 00000000 		.4byte	.Ldebug_line0
+ 941 0025 02       		.uleb128 0x2
+ 942 0026 01       		.byte	0x1
+ 943 0027 06       		.byte	0x6
+ 944 0028 6F030000 		.4byte	.LASF0
+ 945 002c 03       		.uleb128 0x3
+ 946 002d D7020000 		.4byte	.LASF3
+ 947 0031 02       		.byte	0x2
+ 948 0032 1D       		.byte	0x1d
+ 949 0033 37000000 		.4byte	0x37
+ 950 0037 02       		.uleb128 0x2
+ 951 0038 01       		.byte	0x1
+ 952 0039 08       		.byte	0x8
+ 953 003a 3A030000 		.4byte	.LASF1
+ 954 003e 02       		.uleb128 0x2
+ 955 003f 02       		.byte	0x2
+ 956 0040 05       		.byte	0x5
+ 957 0041 8A000000 		.4byte	.LASF2
+ 958 0045 03       		.uleb128 0x3
+ 959 0046 7B010000 		.4byte	.LASF4
+ 960 004a 02       		.byte	0x2
+ 961 004b 2B       		.byte	0x2b
+ 962 004c 50000000 		.4byte	0x50
+ 963 0050 02       		.uleb128 0x2
+ 964 0051 02       		.byte	0x2
+ 965 0052 07       		.byte	0x7
+ 966 0053 0D040000 		.4byte	.LASF5
+ 967 0057 03       		.uleb128 0x3
+ 968 0058 87040000 		.4byte	.LASF6
+ 969 005c 02       		.byte	0x2
+ 970 005d 3F       		.byte	0x3f
+ 971 005e 62000000 		.4byte	0x62
+ 972 0062 02       		.uleb128 0x2
+ 973 0063 04       		.byte	0x4
+ 974 0064 05       		.byte	0x5
+ 975 0065 B8020000 		.4byte	.LASF7
+ 976 0069 03       		.uleb128 0x3
+ 977 006a 34010000 		.4byte	.LASF8
+ 978 006e 02       		.byte	0x2
+ 979 006f 41       		.byte	0x41
+ 980 0070 74000000 		.4byte	0x74
+ 981 0074 02       		.uleb128 0x2
+ 982 0075 04       		.byte	0x4
+ 983 0076 07       		.byte	0x7
+ 984 0077 6B040000 		.4byte	.LASF9
+ 985 007b 02       		.uleb128 0x2
+ 986 007c 08       		.byte	0x8
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 23
+
+
+ 987 007d 05       		.byte	0x5
+ 988 007e A0020000 		.4byte	.LASF10
+ 989 0082 02       		.uleb128 0x2
+ 990 0083 08       		.byte	0x8
+ 991 0084 07       		.byte	0x7
+ 992 0085 7B030000 		.4byte	.LASF11
+ 993 0089 04       		.uleb128 0x4
+ 994 008a 04       		.byte	0x4
+ 995 008b 05       		.byte	0x5
+ 996 008c 696E7400 		.ascii	"int\000"
+ 997 0090 02       		.uleb128 0x2
+ 998 0091 04       		.byte	0x4
+ 999 0092 07       		.byte	0x7
+ 1000 0093 9B030000 		.4byte	.LASF12
+ 1001 0097 03       		.uleb128 0x3
+ 1002 0098 4F020000 		.4byte	.LASF13
+ 1003 009c 03       		.byte	0x3
+ 1004 009d 18       		.byte	0x18
+ 1005 009e 2C000000 		.4byte	0x2c
+ 1006 00a2 03       		.uleb128 0x3
+ 1007 00a3 A8030000 		.4byte	.LASF14
+ 1008 00a7 03       		.byte	0x3
+ 1009 00a8 24       		.byte	0x24
+ 1010 00a9 45000000 		.4byte	0x45
+ 1011 00ad 03       		.uleb128 0x3
+ 1012 00ae 33040000 		.4byte	.LASF15
+ 1013 00b2 03       		.byte	0x3
+ 1014 00b3 2C       		.byte	0x2c
+ 1015 00b4 57000000 		.4byte	0x57
+ 1016 00b8 03       		.uleb128 0x3
+ 1017 00b9 92030000 		.4byte	.LASF16
+ 1018 00bd 03       		.byte	0x3
+ 1019 00be 30       		.byte	0x30
+ 1020 00bf 69000000 		.4byte	0x69
+ 1021 00c3 05       		.uleb128 0x5
+ 1022 00c4 0C       		.byte	0xc
+ 1023 00c5 04       		.byte	0x4
+ 1024 00c6 0F       		.byte	0xf
+ 1025 00c7 EF000000 		.4byte	0xef
+ 1026 00cb 06       		.uleb128 0x6
+ 1027 00cc 696400   		.ascii	"id\000"
+ 1028 00cf 04       		.byte	0x4
+ 1029 00d0 11       		.byte	0x11
+ 1030 00d1 A2000000 		.4byte	0xa2
+ 1031 00d5 00       		.byte	0
+ 1032 00d6 06       		.uleb128 0x6
+ 1033 00d7 646C6300 		.ascii	"dlc\000"
+ 1034 00db 04       		.byte	0x4
+ 1035 00dc 12       		.byte	0x12
+ 1036 00dd 97000000 		.4byte	0x97
+ 1037 00e1 02       		.byte	0x2
+ 1038 00e2 07       		.uleb128 0x7
+ 1039 00e3 3B040000 		.4byte	.LASF17
+ 1040 00e7 04       		.byte	0x4
+ 1041 00e8 13       		.byte	0x13
+ 1042 00e9 EF000000 		.4byte	0xef
+ 1043 00ed 03       		.byte	0x3
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 24
+
+
+ 1044 00ee 00       		.byte	0
+ 1045 00ef 08       		.uleb128 0x8
+ 1046 00f0 97000000 		.4byte	0x97
+ 1047 00f4 FF000000 		.4byte	0xff
+ 1048 00f8 09       		.uleb128 0x9
+ 1049 00f9 FF000000 		.4byte	0xff
+ 1050 00fd 07       		.byte	0x7
+ 1051 00fe 00       		.byte	0
+ 1052 00ff 02       		.uleb128 0x2
+ 1053 0100 04       		.byte	0x4
+ 1054 0101 07       		.byte	0x7
+ 1055 0102 AD000000 		.4byte	.LASF18
+ 1056 0106 03       		.uleb128 0x3
+ 1057 0107 AE020000 		.4byte	.LASF19
+ 1058 010b 04       		.byte	0x4
+ 1059 010c 14       		.byte	0x14
+ 1060 010d C3000000 		.4byte	0xc3
+ 1061 0111 0A       		.uleb128 0xa
+ 1062 0112 FF040000 		.4byte	.LASF24
+ 1063 0116 01       		.byte	0x1
+ 1064 0117 13       		.byte	0x13
+ 1065 0118 00000000 		.4byte	.LFB0
+ 1066 011c 20000000 		.4byte	.LFE0-.LFB0
+ 1067 0120 01       		.uleb128 0x1
+ 1068 0121 9C       		.byte	0x9c
+ 1069 0122 99010000 		.4byte	0x199
+ 1070 0126 0B       		.uleb128 0xb
+ 1071 0127 57020000 		.4byte	.LASF20
+ 1072 012b 01       		.byte	0x1
+ 1073 012c 13       		.byte	0x13
+ 1074 012d 99010000 		.4byte	0x199
+ 1075 0131 00000000 		.4byte	.LLST0
+ 1076 0135 0B       		.uleb128 0xb
+ 1077 0136 B1030000 		.4byte	.LASF21
+ 1078 013a 01       		.byte	0x1
+ 1079 013b 14       		.byte	0x14
+ 1080 013c 97000000 		.4byte	0x97
+ 1081 0140 2C000000 		.4byte	.LLST1
+ 1082 0144 0B       		.uleb128 0xb
+ 1083 0145 94000000 		.4byte	.LASF22
+ 1084 0149 01       		.byte	0x1
+ 1085 014a 15       		.byte	0x15
+ 1086 014b 97000000 		.4byte	0x97
+ 1087 014f 4D000000 		.4byte	.LLST2
+ 1088 0153 0B       		.uleb128 0xb
+ 1089 0154 B6000000 		.4byte	.LASF23
+ 1090 0158 01       		.byte	0x1
+ 1091 0159 16       		.byte	0x16
+ 1092 015a 97000000 		.4byte	0x97
+ 1093 015e 6E000000 		.4byte	.LLST3
+ 1094 0162 0C       		.uleb128 0xc
+ 1095 0163 C0000000 		.4byte	.LASF30
+ 1096 0167 01       		.byte	0x1
+ 1097 0168 1A       		.byte	0x1a
+ 1098 0169 89000000 		.4byte	0x89
+ 1099 016d 01       		.uleb128 0x1
+ 1100 016e 50       		.byte	0x50
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 25
+
+
+ 1101 016f 0D       		.uleb128 0xd
+ 1102 0170 10000000 		.4byte	.LVL3
+ 1103 0174 070A0000 		.4byte	0xa07
+ 1104 0178 82010000 		.4byte	0x182
+ 1105 017c 0E       		.uleb128 0xe
+ 1106 017d 01       		.uleb128 0x1
+ 1107 017e 50       		.byte	0x50
+ 1108 017f 01       		.uleb128 0x1
+ 1109 0180 30       		.byte	0x30
+ 1110 0181 00       		.byte	0
+ 1111 0182 0F       		.uleb128 0xf
+ 1112 0183 1A000000 		.4byte	.LVL4
+ 1113 0187 120A0000 		.4byte	0xa12
+ 1114 018b 0E       		.uleb128 0xe
+ 1115 018c 01       		.uleb128 0x1
+ 1116 018d 50       		.byte	0x50
+ 1117 018e 02       		.uleb128 0x2
+ 1118 018f 74       		.byte	0x74
+ 1119 0190 03       		.sleb128 3
+ 1120 0191 0E       		.uleb128 0xe
+ 1121 0192 01       		.uleb128 0x1
+ 1122 0193 51       		.byte	0x51
+ 1123 0194 02       		.uleb128 0x2
+ 1124 0195 08       		.byte	0x8
+ 1125 0196 30       		.byte	0x30
+ 1126 0197 00       		.byte	0
+ 1127 0198 00       		.byte	0
+ 1128 0199 10       		.uleb128 0x10
+ 1129 019a 04       		.byte	0x4
+ 1130 019b 06010000 		.4byte	0x106
+ 1131 019f 0A       		.uleb128 0xa
+ 1132 01a0 44000000 		.4byte	.LASF25
+ 1133 01a4 01       		.byte	0x1
+ 1134 01a5 24       		.byte	0x24
+ 1135 01a6 00000000 		.4byte	.LFB1
+ 1136 01aa 0C000000 		.4byte	.LFE1-.LFB1
+ 1137 01ae 01       		.uleb128 0x1
+ 1138 01af 9C       		.byte	0x9c
+ 1139 01b0 F8010000 		.4byte	0x1f8
+ 1140 01b4 0B       		.uleb128 0xb
+ 1141 01b5 57020000 		.4byte	.LASF20
+ 1142 01b9 01       		.byte	0x1
+ 1143 01ba 24       		.byte	0x24
+ 1144 01bb 99010000 		.4byte	0x199
+ 1145 01bf 8F000000 		.4byte	.LLST4
+ 1146 01c3 0B       		.uleb128 0xb
+ 1147 01c4 7D040000 		.4byte	.LASF26
+ 1148 01c8 01       		.byte	0x1
+ 1149 01c9 25       		.byte	0x25
+ 1150 01ca 97000000 		.4byte	0x97
+ 1151 01ce B0000000 		.4byte	.LLST5
+ 1152 01d2 0B       		.uleb128 0xb
+ 1153 01d3 B6000000 		.4byte	.LASF23
+ 1154 01d7 01       		.byte	0x1
+ 1155 01d8 26       		.byte	0x26
+ 1156 01d9 97000000 		.4byte	0x97
+ 1157 01dd D1000000 		.4byte	.LLST6
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 26
+
+
+ 1158 01e1 0F       		.uleb128 0xf
+ 1159 01e2 0A000000 		.4byte	.LVL8
+ 1160 01e6 11010000 		.4byte	0x111
+ 1161 01ea 0E       		.uleb128 0xe
+ 1162 01eb 01       		.uleb128 0x1
+ 1163 01ec 50       		.byte	0x50
+ 1164 01ed 03       		.uleb128 0x3
+ 1165 01ee F3       		.byte	0xf3
+ 1166 01ef 01       		.uleb128 0x1
+ 1167 01f0 50       		.byte	0x50
+ 1168 01f1 0E       		.uleb128 0xe
+ 1169 01f2 01       		.uleb128 0x1
+ 1170 01f3 52       		.byte	0x52
+ 1171 01f4 01       		.uleb128 0x1
+ 1172 01f5 30       		.byte	0x30
+ 1173 01f6 00       		.byte	0
+ 1174 01f7 00       		.byte	0
+ 1175 01f8 0A       		.uleb128 0xa
+ 1176 01f9 A8050000 		.4byte	.LASF27
+ 1177 01fd 01       		.byte	0x1
+ 1178 01fe 30       		.byte	0x30
+ 1179 01ff 00000000 		.4byte	.LFB2
+ 1180 0203 0C000000 		.4byte	.LFE2-.LFB2
+ 1181 0207 01       		.uleb128 0x1
+ 1182 0208 9C       		.byte	0x9c
+ 1183 0209 42020000 		.4byte	0x242
+ 1184 020d 0B       		.uleb128 0xb
+ 1185 020e 57020000 		.4byte	.LASF20
+ 1186 0212 01       		.byte	0x1
+ 1187 0213 30       		.byte	0x30
+ 1188 0214 99010000 		.4byte	0x199
+ 1189 0218 F2000000 		.4byte	.LLST7
+ 1190 021c 0B       		.uleb128 0xb
+ 1191 021d B6000000 		.4byte	.LASF23
+ 1192 0221 01       		.byte	0x1
+ 1193 0222 31       		.byte	0x31
+ 1194 0223 97000000 		.4byte	0x97
+ 1195 0227 13010000 		.4byte	.LLST8
+ 1196 022b 0F       		.uleb128 0xf
+ 1197 022c 0A000000 		.4byte	.LVL11
+ 1198 0230 9F010000 		.4byte	0x19f
+ 1199 0234 0E       		.uleb128 0xe
+ 1200 0235 01       		.uleb128 0x1
+ 1201 0236 50       		.byte	0x50
+ 1202 0237 03       		.uleb128 0x3
+ 1203 0238 F3       		.byte	0xf3
+ 1204 0239 01       		.uleb128 0x1
+ 1205 023a 50       		.byte	0x50
+ 1206 023b 0E       		.uleb128 0xe
+ 1207 023c 01       		.uleb128 0x1
+ 1208 023d 51       		.byte	0x51
+ 1209 023e 01       		.uleb128 0x1
+ 1210 023f 30       		.byte	0x30
+ 1211 0240 00       		.byte	0
+ 1212 0241 00       		.byte	0
+ 1213 0242 11       		.uleb128 0x11
+ 1214 0243 54050000 		.4byte	.LASF28
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 27
+
+
+ 1215 0247 01       		.byte	0x1
+ 1216 0248 39       		.byte	0x39
+ 1217 0249 97000000 		.4byte	0x97
+ 1218 024d 00000000 		.4byte	.LFB3
+ 1219 0251 16000000 		.4byte	.LFE3-.LFB3
+ 1220 0255 01       		.uleb128 0x1
+ 1221 0256 9C       		.byte	0x9c
+ 1222 0257 81020000 		.4byte	0x281
+ 1223 025b 0B       		.uleb128 0xb
+ 1224 025c 57020000 		.4byte	.LASF20
+ 1225 0260 01       		.byte	0x1
+ 1226 0261 39       		.byte	0x39
+ 1227 0262 99010000 		.4byte	0x199
+ 1228 0266 34010000 		.4byte	.LLST9
+ 1229 026a 0F       		.uleb128 0xf
+ 1230 026b 0A000000 		.4byte	.LVL13
+ 1231 026f 1D0A0000 		.4byte	0xa1d
+ 1232 0273 0E       		.uleb128 0xe
+ 1233 0274 01       		.uleb128 0x1
+ 1234 0275 50       		.byte	0x50
+ 1235 0276 02       		.uleb128 0x2
+ 1236 0277 74       		.byte	0x74
+ 1237 0278 00       		.sleb128 0
+ 1238 0279 0E       		.uleb128 0xe
+ 1239 027a 01       		.uleb128 0x1
+ 1240 027b 51       		.byte	0x51
+ 1241 027c 02       		.uleb128 0x2
+ 1242 027d 08       		.byte	0x8
+ 1243 027e 30       		.byte	0x30
+ 1244 027f 00       		.byte	0
+ 1245 0280 00       		.byte	0
+ 1246 0281 11       		.uleb128 0x11
+ 1247 0282 92050000 		.4byte	.LASF29
+ 1248 0286 01       		.byte	0x1
+ 1249 0287 5A       		.byte	0x5a
+ 1250 0288 B8000000 		.4byte	0xb8
+ 1251 028c 00000000 		.4byte	.LFB5
+ 1252 0290 2A000000 		.4byte	.LFE5-.LFB5
+ 1253 0294 01       		.uleb128 0x1
+ 1254 0295 9C       		.byte	0x9c
+ 1255 0296 DD020000 		.4byte	0x2dd
+ 1256 029a 0B       		.uleb128 0xb
+ 1257 029b 57020000 		.4byte	.LASF20
+ 1258 029f 01       		.byte	0x1
+ 1259 02a0 5A       		.byte	0x5a
+ 1260 02a1 99010000 		.4byte	0x199
+ 1261 02a5 60010000 		.4byte	.LLST10
+ 1262 02a9 12       		.uleb128 0x12
+ 1263 02aa 0E000000 		.4byte	.LBB2
+ 1264 02ae 16000000 		.4byte	.LBE2-.LBB2
+ 1265 02b2 C6020000 		.4byte	0x2c6
+ 1266 02b6 13       		.uleb128 0x13
+ 1267 02b7 D0030000 		.4byte	.LASF31
+ 1268 02bb 01       		.byte	0x1
+ 1269 02bc 5E       		.byte	0x5e
+ 1270 02bd B8000000 		.4byte	0xb8
+ 1271 02c1 8C010000 		.4byte	.LLST11
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 28
+
+
+ 1272 02c5 00       		.byte	0
+ 1273 02c6 0F       		.uleb128 0xf
+ 1274 02c7 0A000000 		.4byte	.LVL16
+ 1275 02cb 1D0A0000 		.4byte	0xa1d
+ 1276 02cf 0E       		.uleb128 0xe
+ 1277 02d0 01       		.uleb128 0x1
+ 1278 02d1 50       		.byte	0x50
+ 1279 02d2 02       		.uleb128 0x2
+ 1280 02d3 74       		.byte	0x74
+ 1281 02d4 00       		.sleb128 0
+ 1282 02d5 0E       		.uleb128 0xe
+ 1283 02d6 01       		.uleb128 0x1
+ 1284 02d7 51       		.byte	0x51
+ 1285 02d8 02       		.uleb128 0x2
+ 1286 02d9 08       		.byte	0x8
+ 1287 02da 31       		.byte	0x31
+ 1288 02db 00       		.byte	0
+ 1289 02dc 00       		.byte	0
+ 1290 02dd 11       		.uleb128 0x11
+ 1291 02de E1020000 		.4byte	.LASF32
+ 1292 02e2 01       		.byte	0x1
+ 1293 02e3 49       		.byte	0x49
+ 1294 02e4 B8000000 		.4byte	0xb8
+ 1295 02e8 00000000 		.4byte	.LFB4
+ 1296 02ec 20000000 		.4byte	.LFE4-.LFB4
+ 1297 02f0 01       		.uleb128 0x1
+ 1298 02f1 9C       		.byte	0x9c
+ 1299 02f2 3F030000 		.4byte	0x33f
+ 1300 02f6 0B       		.uleb128 0xb
+ 1301 02f7 57020000 		.4byte	.LASF20
+ 1302 02fb 01       		.byte	0x1
+ 1303 02fc 49       		.byte	0x49
+ 1304 02fd 99010000 		.4byte	0x199
+ 1305 0301 9F010000 		.4byte	.LLST12
+ 1306 0305 0B       		.uleb128 0xb
+ 1307 0306 1D030000 		.4byte	.LASF33
+ 1308 030a 01       		.byte	0x1
+ 1309 030b 49       		.byte	0x49
+ 1310 030c B8000000 		.4byte	0xb8
+ 1311 0310 CB010000 		.4byte	.LLST13
+ 1312 0314 0D       		.uleb128 0xd
+ 1313 0315 0C000000 		.4byte	.LVL24
+ 1314 0319 1D0A0000 		.4byte	0xa1d
+ 1315 031d 2E030000 		.4byte	0x32e
+ 1316 0321 0E       		.uleb128 0xe
+ 1317 0322 01       		.uleb128 0x1
+ 1318 0323 50       		.byte	0x50
+ 1319 0324 02       		.uleb128 0x2
+ 1320 0325 74       		.byte	0x74
+ 1321 0326 00       		.sleb128 0
+ 1322 0327 0E       		.uleb128 0xe
+ 1323 0328 01       		.uleb128 0x1
+ 1324 0329 51       		.byte	0x51
+ 1325 032a 02       		.uleb128 0x2
+ 1326 032b 08       		.byte	0x8
+ 1327 032c 31       		.byte	0x31
+ 1328 032d 00       		.byte	0
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 29
+
+
+ 1329 032e 0F       		.uleb128 0xf
+ 1330 032f 16000000 		.4byte	.LVL25
+ 1331 0333 81020000 		.4byte	0x281
+ 1332 0337 0E       		.uleb128 0xe
+ 1333 0338 01       		.uleb128 0x1
+ 1334 0339 50       		.byte	0x50
+ 1335 033a 02       		.uleb128 0x2
+ 1336 033b 74       		.byte	0x74
+ 1337 033c 00       		.sleb128 0
+ 1338 033d 00       		.byte	0
+ 1339 033e 00       		.byte	0
+ 1340 033f 11       		.uleb128 0x11
+ 1341 0340 3F010000 		.4byte	.LASF34
+ 1342 0344 01       		.byte	0x1
+ 1343 0345 6C       		.byte	0x6c
+ 1344 0346 97000000 		.4byte	0x97
+ 1345 034a 00000000 		.4byte	.LFB6
+ 1346 034e 16000000 		.4byte	.LFE6-.LFB6
+ 1347 0352 01       		.uleb128 0x1
+ 1348 0353 9C       		.byte	0x9c
+ 1349 0354 7E030000 		.4byte	0x37e
+ 1350 0358 0B       		.uleb128 0xb
+ 1351 0359 57020000 		.4byte	.LASF20
+ 1352 035d 01       		.byte	0x1
+ 1353 035e 6C       		.byte	0x6c
+ 1354 035f 99010000 		.4byte	0x199
+ 1355 0363 F7010000 		.4byte	.LLST14
+ 1356 0367 0F       		.uleb128 0xf
+ 1357 0368 0A000000 		.4byte	.LVL29
+ 1358 036c 1D0A0000 		.4byte	0xa1d
+ 1359 0370 0E       		.uleb128 0xe
+ 1360 0371 01       		.uleb128 0x1
+ 1361 0372 50       		.byte	0x50
+ 1362 0373 02       		.uleb128 0x2
+ 1363 0374 74       		.byte	0x74
+ 1364 0375 00       		.sleb128 0
+ 1365 0376 0E       		.uleb128 0xe
+ 1366 0377 01       		.uleb128 0x1
+ 1367 0378 51       		.byte	0x51
+ 1368 0379 02       		.uleb128 0x2
+ 1369 037a 08       		.byte	0x8
+ 1370 037b 31       		.byte	0x31
+ 1371 037c 00       		.byte	0
+ 1372 037d 00       		.byte	0
+ 1373 037e 0A       		.uleb128 0xa
+ 1374 037f 7C020000 		.4byte	.LASF35
+ 1375 0383 01       		.byte	0x1
+ 1376 0384 7D       		.byte	0x7d
+ 1377 0385 00000000 		.4byte	.LFB7
+ 1378 0389 44000000 		.4byte	.LFE7-.LFB7
+ 1379 038d 01       		.uleb128 0x1
+ 1380 038e 9C       		.byte	0x9c
+ 1381 038f 4E040000 		.4byte	0x44e
+ 1382 0393 0B       		.uleb128 0xb
+ 1383 0394 0C000000 		.4byte	.LASF36
+ 1384 0398 01       		.byte	0x1
+ 1385 0399 7D       		.byte	0x7d
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 30
+
+
+ 1386 039a 99010000 		.4byte	0x199
+ 1387 039e 23020000 		.4byte	.LLST15
+ 1388 03a2 0B       		.uleb128 0xb
+ 1389 03a3 1D000000 		.4byte	.LASF37
+ 1390 03a7 01       		.byte	0x1
+ 1391 03a8 7E       		.byte	0x7e
+ 1392 03a9 89000000 		.4byte	0x89
+ 1393 03ad 5C020000 		.4byte	.LLST16
+ 1394 03b1 0B       		.uleb128 0xb
+ 1395 03b2 58010000 		.4byte	.LASF38
+ 1396 03b6 01       		.byte	0x1
+ 1397 03b7 7F       		.byte	0x7f
+ 1398 03b8 97000000 		.4byte	0x97
+ 1399 03bc 88020000 		.4byte	.LLST17
+ 1400 03c0 0B       		.uleb128 0xb
+ 1401 03c1 48030000 		.4byte	.LASF39
+ 1402 03c5 01       		.byte	0x1
+ 1403 03c6 80       		.byte	0x80
+ 1404 03c7 B8000000 		.4byte	0xb8
+ 1405 03cb A9020000 		.4byte	.LLST18
+ 1406 03cf 13       		.uleb128 0x13
+ 1407 03d0 C0000000 		.4byte	.LASF30
+ 1408 03d4 01       		.byte	0x1
+ 1409 03d5 88       		.byte	0x88
+ 1410 03d6 89000000 		.4byte	0x89
+ 1411 03da D5020000 		.4byte	.LLST19
+ 1412 03de 0D       		.uleb128 0xd
+ 1413 03df 14000000 		.4byte	.LVL35
+ 1414 03e3 070A0000 		.4byte	0xa07
+ 1415 03e7 FB030000 		.4byte	0x3fb
+ 1416 03eb 0E       		.uleb128 0xe
+ 1417 03ec 01       		.uleb128 0x1
+ 1418 03ed 50       		.byte	0x50
+ 1419 03ee 01       		.uleb128 0x1
+ 1420 03ef 30       		.byte	0x30
+ 1421 03f0 0E       		.uleb128 0xe
+ 1422 03f1 01       		.uleb128 0x1
+ 1423 03f2 51       		.byte	0x51
+ 1424 03f3 01       		.uleb128 0x1
+ 1425 03f4 30       		.byte	0x30
+ 1426 03f5 0E       		.uleb128 0xe
+ 1427 03f6 01       		.uleb128 0x1
+ 1428 03f7 52       		.byte	0x52
+ 1429 03f8 01       		.uleb128 0x1
+ 1430 03f9 30       		.byte	0x30
+ 1431 03fa 00       		.byte	0
+ 1432 03fb 0D       		.uleb128 0xd
+ 1433 03fc 24000000 		.4byte	.LVL36
+ 1434 0400 070A0000 		.4byte	0xa07
+ 1435 0404 18040000 		.4byte	0x418
+ 1436 0408 0E       		.uleb128 0xe
+ 1437 0409 01       		.uleb128 0x1
+ 1438 040a 50       		.byte	0x50
+ 1439 040b 01       		.uleb128 0x1
+ 1440 040c 30       		.byte	0x30
+ 1441 040d 0E       		.uleb128 0xe
+ 1442 040e 01       		.uleb128 0x1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 31
+
+
+ 1443 040f 51       		.byte	0x51
+ 1444 0410 01       		.uleb128 0x1
+ 1445 0411 32       		.byte	0x32
+ 1446 0412 0E       		.uleb128 0xe
+ 1447 0413 01       		.uleb128 0x1
+ 1448 0414 52       		.byte	0x52
+ 1449 0415 01       		.uleb128 0x1
+ 1450 0416 31       		.byte	0x31
+ 1451 0417 00       		.byte	0
+ 1452 0418 0D       		.uleb128 0xd
+ 1453 0419 34000000 		.4byte	.LVL38
+ 1454 041d 120A0000 		.4byte	0xa12
+ 1455 0421 32040000 		.4byte	0x432
+ 1456 0425 0E       		.uleb128 0xe
+ 1457 0426 01       		.uleb128 0x1
+ 1458 0427 50       		.byte	0x50
+ 1459 0428 02       		.uleb128 0x2
+ 1460 0429 75       		.byte	0x75
+ 1461 042a 00       		.sleb128 0
+ 1462 042b 0E       		.uleb128 0xe
+ 1463 042c 01       		.uleb128 0x1
+ 1464 042d 51       		.byte	0x51
+ 1465 042e 02       		.uleb128 0x2
+ 1466 042f 08       		.byte	0x8
+ 1467 0430 31       		.byte	0x31
+ 1468 0431 00       		.byte	0
+ 1469 0432 0F       		.uleb128 0xf
+ 1470 0433 42000000 		.4byte	.LVL41
+ 1471 0437 280A0000 		.4byte	0xa28
+ 1472 043b 0E       		.uleb128 0xe
+ 1473 043c 01       		.uleb128 0x1
+ 1474 043d 50       		.byte	0x50
+ 1475 043e 02       		.uleb128 0x2
+ 1476 043f 75       		.byte	0x75
+ 1477 0440 00       		.sleb128 0
+ 1478 0441 0E       		.uleb128 0xe
+ 1479 0442 01       		.uleb128 0x1
+ 1480 0443 51       		.byte	0x51
+ 1481 0444 02       		.uleb128 0x2
+ 1482 0445 76       		.byte	0x76
+ 1483 0446 00       		.sleb128 0
+ 1484 0447 0E       		.uleb128 0xe
+ 1485 0448 01       		.uleb128 0x1
+ 1486 0449 52       		.byte	0x52
+ 1487 044a 01       		.uleb128 0x1
+ 1488 044b 33       		.byte	0x33
+ 1489 044c 00       		.byte	0
+ 1490 044d 00       		.byte	0
+ 1491 044e 0A       		.uleb128 0xa
+ 1492 044f 40040000 		.4byte	.LASF40
+ 1493 0453 01       		.byte	0x1
+ 1494 0454 8D       		.byte	0x8d
+ 1495 0455 00000000 		.4byte	.LFB8
+ 1496 0459 20000000 		.4byte	.LFE8-.LFB8
+ 1497 045d 01       		.uleb128 0x1
+ 1498 045e 9C       		.byte	0x9c
+ 1499 045f D6040000 		.4byte	0x4d6
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 32
+
+
+ 1500 0463 0B       		.uleb128 0xb
+ 1501 0464 0C000000 		.4byte	.LASF36
+ 1502 0468 01       		.byte	0x1
+ 1503 0469 8D       		.byte	0x8d
+ 1504 046a 99010000 		.4byte	0x199
+ 1505 046e E8020000 		.4byte	.LLST20
+ 1506 0472 0B       		.uleb128 0xb
+ 1507 0473 94020000 		.4byte	.LASF41
+ 1508 0477 01       		.byte	0x1
+ 1509 0478 8E       		.byte	0x8e
+ 1510 0479 97000000 		.4byte	0x97
+ 1511 047d 14030000 		.4byte	.LLST21
+ 1512 0481 0B       		.uleb128 0xb
+ 1513 0482 C3030000 		.4byte	.LASF42
+ 1514 0486 01       		.byte	0x1
+ 1515 0487 8F       		.byte	0x8f
+ 1516 0488 97000000 		.4byte	0x97
+ 1517 048c 35030000 		.4byte	.LLST22
+ 1518 0490 0B       		.uleb128 0xb
+ 1519 0491 2D050000 		.4byte	.LASF43
+ 1520 0495 01       		.byte	0x1
+ 1521 0496 90       		.byte	0x90
+ 1522 0497 97000000 		.4byte	0x97
+ 1523 049b 56030000 		.4byte	.LLST23
+ 1524 049f 0C       		.uleb128 0xc
+ 1525 04a0 C0000000 		.4byte	.LASF30
+ 1526 04a4 01       		.byte	0x1
+ 1527 04a5 94       		.byte	0x94
+ 1528 04a6 89000000 		.4byte	0x89
+ 1529 04aa 01       		.uleb128 0x1
+ 1530 04ab 50       		.byte	0x50
+ 1531 04ac 0D       		.uleb128 0xd
+ 1532 04ad 0C000000 		.4byte	.LVL46
+ 1533 04b1 070A0000 		.4byte	0xa07
+ 1534 04b5 BF040000 		.4byte	0x4bf
+ 1535 04b9 0E       		.uleb128 0xe
+ 1536 04ba 01       		.uleb128 0x1
+ 1537 04bb 50       		.byte	0x50
+ 1538 04bc 01       		.uleb128 0x1
+ 1539 04bd 31       		.byte	0x31
+ 1540 04be 00       		.byte	0
+ 1541 04bf 0F       		.uleb128 0xf
+ 1542 04c0 1A000000 		.4byte	.LVL47
+ 1543 04c4 120A0000 		.4byte	0xa12
+ 1544 04c8 0E       		.uleb128 0xe
+ 1545 04c9 01       		.uleb128 0x1
+ 1546 04ca 50       		.byte	0x50
+ 1547 04cb 02       		.uleb128 0x2
+ 1548 04cc 74       		.byte	0x74
+ 1549 04cd 03       		.sleb128 3
+ 1550 04ce 0E       		.uleb128 0xe
+ 1551 04cf 01       		.uleb128 0x1
+ 1552 04d0 51       		.byte	0x51
+ 1553 04d1 02       		.uleb128 0x2
+ 1554 04d2 08       		.byte	0x8
+ 1555 04d3 32       		.byte	0x32
+ 1556 04d4 00       		.byte	0
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 33
+
+
+ 1557 04d5 00       		.byte	0
+ 1558 04d6 0A       		.uleb128 0xa
+ 1559 04d7 C7040000 		.4byte	.LASF44
+ 1560 04db 01       		.byte	0x1
+ 1561 04dc 9D       		.byte	0x9d
+ 1562 04dd 00000000 		.4byte	.LFB9
+ 1563 04e1 1A000000 		.4byte	.LFE9-.LFB9
+ 1564 04e5 01       		.uleb128 0x1
+ 1565 04e6 9C       		.byte	0x9c
+ 1566 04e7 42050000 		.4byte	0x542
+ 1567 04eb 0B       		.uleb128 0xb
+ 1568 04ec 0C000000 		.4byte	.LASF36
+ 1569 04f0 01       		.byte	0x1
+ 1570 04f1 9D       		.byte	0x9d
+ 1571 04f2 99010000 		.4byte	0x199
+ 1572 04f6 77030000 		.4byte	.LLST24
+ 1573 04fa 0B       		.uleb128 0xb
+ 1574 04fb 94020000 		.4byte	.LASF41
+ 1575 04ff 01       		.byte	0x1
+ 1576 0500 9D       		.byte	0x9d
+ 1577 0501 97000000 		.4byte	0x97
+ 1578 0505 A3030000 		.4byte	.LLST25
+ 1579 0509 0B       		.uleb128 0xb
+ 1580 050a C3030000 		.4byte	.LASF42
+ 1581 050e 01       		.byte	0x1
+ 1582 050f 9D       		.byte	0x9d
+ 1583 0510 97000000 		.4byte	0x97
+ 1584 0514 C4030000 		.4byte	.LLST26
+ 1585 0518 0D       		.uleb128 0xd
+ 1586 0519 0A000000 		.4byte	.LVL51
+ 1587 051d 070A0000 		.4byte	0xa07
+ 1588 0521 2B050000 		.4byte	0x52b
+ 1589 0525 0E       		.uleb128 0xe
+ 1590 0526 01       		.uleb128 0x1
+ 1591 0527 50       		.byte	0x50
+ 1592 0528 01       		.uleb128 0x1
+ 1593 0529 31       		.byte	0x31
+ 1594 052a 00       		.byte	0
+ 1595 052b 0F       		.uleb128 0xf
+ 1596 052c 18000000 		.4byte	.LVL52
+ 1597 0530 330A0000 		.4byte	0xa33
+ 1598 0534 0E       		.uleb128 0xe
+ 1599 0535 01       		.uleb128 0x1
+ 1600 0536 50       		.byte	0x50
+ 1601 0537 02       		.uleb128 0x2
+ 1602 0538 74       		.byte	0x74
+ 1603 0539 03       		.sleb128 3
+ 1604 053a 0E       		.uleb128 0xe
+ 1605 053b 01       		.uleb128 0x1
+ 1606 053c 51       		.byte	0x51
+ 1607 053d 02       		.uleb128 0x2
+ 1608 053e 08       		.byte	0x8
+ 1609 053f 33       		.byte	0x33
+ 1610 0540 00       		.byte	0
+ 1611 0541 00       		.byte	0
+ 1612 0542 0A       		.uleb128 0xa
+ 1613 0543 F2030000 		.4byte	.LASF45
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 34
+
+
+ 1614 0547 01       		.byte	0x1
+ 1615 0548 A4       		.byte	0xa4
+ 1616 0549 00000000 		.4byte	.LFB10
+ 1617 054d 24000000 		.4byte	.LFE10-.LFB10
+ 1618 0551 01       		.uleb128 0x1
+ 1619 0552 9C       		.byte	0x9c
+ 1620 0553 CA050000 		.4byte	0x5ca
+ 1621 0557 0B       		.uleb128 0xb
+ 1622 0558 0C000000 		.4byte	.LASF36
+ 1623 055c 01       		.byte	0x1
+ 1624 055d A4       		.byte	0xa4
+ 1625 055e 99010000 		.4byte	0x199
+ 1626 0562 E5030000 		.4byte	.LLST27
+ 1627 0566 0B       		.uleb128 0xb
+ 1628 0567 B1030000 		.4byte	.LASF21
+ 1629 056b 01       		.byte	0x1
+ 1630 056c A5       		.byte	0xa5
+ 1631 056d 97000000 		.4byte	0x97
+ 1632 0571 11040000 		.4byte	.LLST28
+ 1633 0575 0B       		.uleb128 0xb
+ 1634 0576 20040000 		.4byte	.LASF46
+ 1635 057a 01       		.byte	0x1
+ 1636 057b A6       		.byte	0xa6
+ 1637 057c 97000000 		.4byte	0x97
+ 1638 0580 32040000 		.4byte	.LLST29
+ 1639 0584 13       		.uleb128 0x13
+ 1640 0585 C0000000 		.4byte	.LASF30
+ 1641 0589 01       		.byte	0x1
+ 1642 058a AA       		.byte	0xaa
+ 1643 058b 89000000 		.4byte	0x89
+ 1644 058f 53040000 		.4byte	.LLST30
+ 1645 0593 0D       		.uleb128 0xd
+ 1646 0594 0A000000 		.4byte	.LVL56
+ 1647 0598 070A0000 		.4byte	0xa07
+ 1648 059c A6050000 		.4byte	0x5a6
+ 1649 05a0 0E       		.uleb128 0xe
+ 1650 05a1 01       		.uleb128 0x1
+ 1651 05a2 50       		.byte	0x50
+ 1652 05a3 01       		.uleb128 0x1
+ 1653 05a4 31       		.byte	0x31
+ 1654 05a5 00       		.byte	0
+ 1655 05a6 0D       		.uleb128 0xd
+ 1656 05a7 18000000 		.4byte	.LVL57
+ 1657 05ab 120A0000 		.4byte	0xa12
+ 1658 05af C0050000 		.4byte	0x5c0
+ 1659 05b3 0E       		.uleb128 0xe
+ 1660 05b4 01       		.uleb128 0x1
+ 1661 05b5 50       		.byte	0x50
+ 1662 05b6 02       		.uleb128 0x2
+ 1663 05b7 74       		.byte	0x74
+ 1664 05b8 03       		.sleb128 3
+ 1665 05b9 0E       		.uleb128 0xe
+ 1666 05ba 01       		.uleb128 0x1
+ 1667 05bb 51       		.byte	0x51
+ 1668 05bc 02       		.uleb128 0x2
+ 1669 05bd 08       		.byte	0x8
+ 1670 05be 38       		.byte	0x38
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 35
+
+
+ 1671 05bf 00       		.byte	0
+ 1672 05c0 14       		.uleb128 0x14
+ 1673 05c1 1E000000 		.4byte	.LVL59
+ 1674 05c5 3E0A0000 		.4byte	0xa3e
+ 1675 05c9 00       		.byte	0
+ 1676 05ca 0A       		.uleb128 0xa
+ 1677 05cb 27000000 		.4byte	.LASF47
+ 1678 05cf 01       		.byte	0x1
+ 1679 05d0 AE       		.byte	0xae
+ 1680 05d1 00000000 		.4byte	.LFB11
+ 1681 05d5 24000000 		.4byte	.LFE11-.LFB11
+ 1682 05d9 01       		.uleb128 0x1
+ 1683 05da 9C       		.byte	0x9c
+ 1684 05db 52060000 		.4byte	0x652
+ 1685 05df 0B       		.uleb128 0xb
+ 1686 05e0 0C000000 		.4byte	.LASF36
+ 1687 05e4 01       		.byte	0x1
+ 1688 05e5 AE       		.byte	0xae
+ 1689 05e6 99010000 		.4byte	0x199
+ 1690 05ea 71040000 		.4byte	.LLST31
+ 1691 05ee 0B       		.uleb128 0xb
+ 1692 05ef B1030000 		.4byte	.LASF21
+ 1693 05f3 01       		.byte	0x1
+ 1694 05f4 AF       		.byte	0xaf
+ 1695 05f5 97000000 		.4byte	0x97
+ 1696 05f9 9D040000 		.4byte	.LLST32
+ 1697 05fd 0B       		.uleb128 0xb
+ 1698 05fe 20040000 		.4byte	.LASF46
+ 1699 0602 01       		.byte	0x1
+ 1700 0603 B0       		.byte	0xb0
+ 1701 0604 97000000 		.4byte	0x97
+ 1702 0608 BE040000 		.4byte	.LLST33
+ 1703 060c 13       		.uleb128 0x13
+ 1704 060d C0000000 		.4byte	.LASF30
+ 1705 0611 01       		.byte	0x1
+ 1706 0612 B4       		.byte	0xb4
+ 1707 0613 89000000 		.4byte	0x89
+ 1708 0617 DF040000 		.4byte	.LLST34
+ 1709 061b 0D       		.uleb128 0xd
+ 1710 061c 0A000000 		.4byte	.LVL64
+ 1711 0620 070A0000 		.4byte	0xa07
+ 1712 0624 2E060000 		.4byte	0x62e
+ 1713 0628 0E       		.uleb128 0xe
+ 1714 0629 01       		.uleb128 0x1
+ 1715 062a 50       		.byte	0x50
+ 1716 062b 01       		.uleb128 0x1
+ 1717 062c 31       		.byte	0x31
+ 1718 062d 00       		.byte	0
+ 1719 062e 0D       		.uleb128 0xd
+ 1720 062f 18000000 		.4byte	.LVL65
+ 1721 0633 120A0000 		.4byte	0xa12
+ 1722 0637 48060000 		.4byte	0x648
+ 1723 063b 0E       		.uleb128 0xe
+ 1724 063c 01       		.uleb128 0x1
+ 1725 063d 50       		.byte	0x50
+ 1726 063e 02       		.uleb128 0x2
+ 1727 063f 74       		.byte	0x74
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 36
+
+
+ 1728 0640 03       		.sleb128 3
+ 1729 0641 0E       		.uleb128 0xe
+ 1730 0642 01       		.uleb128 0x1
+ 1731 0643 51       		.byte	0x51
+ 1732 0644 02       		.uleb128 0x2
+ 1733 0645 08       		.byte	0x8
+ 1734 0646 39       		.byte	0x39
+ 1735 0647 00       		.byte	0
+ 1736 0648 14       		.uleb128 0x14
+ 1737 0649 1E000000 		.4byte	.LVL67
+ 1738 064d 3E0A0000 		.4byte	0xa3e
+ 1739 0651 00       		.byte	0
+ 1740 0652 11       		.uleb128 0x11
+ 1741 0653 C1020000 		.4byte	.LASF48
+ 1742 0657 01       		.byte	0x1
+ 1743 0658 B8       		.byte	0xb8
+ 1744 0659 97000000 		.4byte	0x97
+ 1745 065d 00000000 		.4byte	.LFB12
+ 1746 0661 04000000 		.4byte	.LFE12-.LFB12
+ 1747 0665 01       		.uleb128 0x1
+ 1748 0666 9C       		.byte	0x9c
+ 1749 0667 7B060000 		.4byte	0x67b
+ 1750 066b 0B       		.uleb128 0xb
+ 1751 066c 57020000 		.4byte	.LASF20
+ 1752 0670 01       		.byte	0x1
+ 1753 0671 B8       		.byte	0xb8
+ 1754 0672 99010000 		.4byte	0x199
+ 1755 0676 FD040000 		.4byte	.LLST35
+ 1756 067a 00       		.byte	0
+ 1757 067b 0A       		.uleb128 0xa
+ 1758 067c 5E020000 		.4byte	.LASF49
+ 1759 0680 01       		.byte	0x1
+ 1760 0681 BD       		.byte	0xbd
+ 1761 0682 00000000 		.4byte	.LFB13
+ 1762 0686 2C000000 		.4byte	.LFE13-.LFB13
+ 1763 068a 01       		.uleb128 0x1
+ 1764 068b 9C       		.byte	0x9c
+ 1765 068c 33070000 		.4byte	0x733
+ 1766 0690 0B       		.uleb128 0xb
+ 1767 0691 0C000000 		.4byte	.LASF36
+ 1768 0695 01       		.byte	0x1
+ 1769 0696 BD       		.byte	0xbd
+ 1770 0697 99010000 		.4byte	0x199
+ 1771 069b 1E050000 		.4byte	.LLST36
+ 1772 069f 0B       		.uleb128 0xb
+ 1773 06a0 94020000 		.4byte	.LASF41
+ 1774 06a4 01       		.byte	0x1
+ 1775 06a5 BE       		.byte	0xbe
+ 1776 06a6 97000000 		.4byte	0x97
+ 1777 06aa 57050000 		.4byte	.LLST37
+ 1778 06ae 0B       		.uleb128 0xb
+ 1779 06af C3030000 		.4byte	.LASF42
+ 1780 06b3 01       		.byte	0x1
+ 1781 06b4 BF       		.byte	0xbf
+ 1782 06b5 97000000 		.4byte	0x97
+ 1783 06b9 78050000 		.4byte	.LLST38
+ 1784 06bd 0B       		.uleb128 0xb
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 37
+
+
+ 1785 06be 1B050000 		.4byte	.LASF50
+ 1786 06c2 01       		.byte	0x1
+ 1787 06c3 C0       		.byte	0xc0
+ 1788 06c4 97000000 		.4byte	0x97
+ 1789 06c8 99050000 		.4byte	.LLST39
+ 1790 06cc 15       		.uleb128 0x15
+ 1791 06cd 3E020000 		.4byte	.LASF51
+ 1792 06d1 01       		.byte	0x1
+ 1793 06d2 C1       		.byte	0xc1
+ 1794 06d3 B8000000 		.4byte	0xb8
+ 1795 06d7 02       		.uleb128 0x2
+ 1796 06d8 91       		.byte	0x91
+ 1797 06d9 00       		.sleb128 0
+ 1798 06da 13       		.uleb128 0x13
+ 1799 06db C0000000 		.4byte	.LASF30
+ 1800 06df 01       		.byte	0x1
+ 1801 06e0 C5       		.byte	0xc5
+ 1802 06e1 89000000 		.4byte	0x89
+ 1803 06e5 BA050000 		.4byte	.LLST40
+ 1804 06e9 0D       		.uleb128 0xd
+ 1805 06ea 0C000000 		.4byte	.LVL74
+ 1806 06ee 070A0000 		.4byte	0xa07
+ 1807 06f2 FC060000 		.4byte	0x6fc
+ 1808 06f6 0E       		.uleb128 0xe
+ 1809 06f7 01       		.uleb128 0x1
+ 1810 06f8 50       		.byte	0x50
+ 1811 06f9 01       		.uleb128 0x1
+ 1812 06fa 31       		.byte	0x31
+ 1813 06fb 00       		.byte	0
+ 1814 06fc 0D       		.uleb128 0xd
+ 1815 06fd 1C000000 		.4byte	.LVL75
+ 1816 0701 330A0000 		.4byte	0xa33
+ 1817 0705 16070000 		.4byte	0x716
+ 1818 0709 0E       		.uleb128 0xe
+ 1819 070a 01       		.uleb128 0x1
+ 1820 070b 50       		.byte	0x50
+ 1821 070c 02       		.uleb128 0x2
+ 1822 070d 75       		.byte	0x75
+ 1823 070e 00       		.sleb128 0
+ 1824 070f 0E       		.uleb128 0xe
+ 1825 0710 01       		.uleb128 0x1
+ 1826 0711 51       		.byte	0x51
+ 1827 0712 02       		.uleb128 0x2
+ 1828 0713 08       		.byte	0x8
+ 1829 0714 34       		.byte	0x34
+ 1830 0715 00       		.byte	0
+ 1831 0716 0F       		.uleb128 0xf
+ 1832 0717 2A000000 		.4byte	.LVL78
+ 1833 071b 280A0000 		.4byte	0xa28
+ 1834 071f 0E       		.uleb128 0xe
+ 1835 0720 01       		.uleb128 0x1
+ 1836 0721 50       		.byte	0x50
+ 1837 0722 02       		.uleb128 0x2
+ 1838 0723 75       		.byte	0x75
+ 1839 0724 00       		.sleb128 0
+ 1840 0725 0E       		.uleb128 0xe
+ 1841 0726 01       		.uleb128 0x1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 38
+
+
+ 1842 0727 51       		.byte	0x51
+ 1843 0728 03       		.uleb128 0x3
+ 1844 0729 91       		.byte	0x91
+ 1845 072a 00       		.sleb128 0
+ 1846 072b 06       		.byte	0x6
+ 1847 072c 0E       		.uleb128 0xe
+ 1848 072d 01       		.uleb128 0x1
+ 1849 072e 52       		.byte	0x52
+ 1850 072f 01       		.uleb128 0x1
+ 1851 0730 33       		.byte	0x33
+ 1852 0731 00       		.byte	0
+ 1853 0732 00       		.byte	0
+ 1854 0733 0A       		.uleb128 0xa
+ 1855 0734 AB040000 		.4byte	.LASF52
+ 1856 0738 01       		.byte	0x1
+ 1857 0739 CE       		.byte	0xce
+ 1858 073a 00000000 		.4byte	.LFB15
+ 1859 073e 20000000 		.4byte	.LFE15-.LFB15
+ 1860 0742 01       		.uleb128 0x1
+ 1861 0743 9C       		.byte	0x9c
+ 1862 0744 BB070000 		.4byte	0x7bb
+ 1863 0748 0B       		.uleb128 0xb
+ 1864 0749 0C000000 		.4byte	.LASF36
+ 1865 074d 01       		.byte	0x1
+ 1866 074e CE       		.byte	0xce
+ 1867 074f 99010000 		.4byte	0x199
+ 1868 0753 CD050000 		.4byte	.LLST41
+ 1869 0757 0B       		.uleb128 0xb
+ 1870 0758 94020000 		.4byte	.LASF41
+ 1871 075c 01       		.byte	0x1
+ 1872 075d CF       		.byte	0xcf
+ 1873 075e 97000000 		.4byte	0x97
+ 1874 0762 F9050000 		.4byte	.LLST42
+ 1875 0766 0B       		.uleb128 0xb
+ 1876 0767 C3030000 		.4byte	.LASF42
+ 1877 076b 01       		.byte	0x1
+ 1878 076c D0       		.byte	0xd0
+ 1879 076d 97000000 		.4byte	0x97
+ 1880 0771 1A060000 		.4byte	.LLST43
+ 1881 0775 0B       		.uleb128 0xb
+ 1882 0776 1B050000 		.4byte	.LASF50
+ 1883 077a 01       		.byte	0x1
+ 1884 077b D1       		.byte	0xd1
+ 1885 077c 97000000 		.4byte	0x97
+ 1886 0780 3B060000 		.4byte	.LLST44
+ 1887 0784 0C       		.uleb128 0xc
+ 1888 0785 C0000000 		.4byte	.LASF30
+ 1889 0789 01       		.byte	0x1
+ 1890 078a D5       		.byte	0xd5
+ 1891 078b 89000000 		.4byte	0x89
+ 1892 078f 01       		.uleb128 0x1
+ 1893 0790 50       		.byte	0x50
+ 1894 0791 0D       		.uleb128 0xd
+ 1895 0792 0C000000 		.4byte	.LVL82
+ 1896 0796 070A0000 		.4byte	0xa07
+ 1897 079a A4070000 		.4byte	0x7a4
+ 1898 079e 0E       		.uleb128 0xe
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 39
+
+
+ 1899 079f 01       		.uleb128 0x1
+ 1900 07a0 50       		.byte	0x50
+ 1901 07a1 01       		.uleb128 0x1
+ 1902 07a2 31       		.byte	0x31
+ 1903 07a3 00       		.byte	0
+ 1904 07a4 0F       		.uleb128 0xf
+ 1905 07a5 1A000000 		.4byte	.LVL83
+ 1906 07a9 120A0000 		.4byte	0xa12
+ 1907 07ad 0E       		.uleb128 0xe
+ 1908 07ae 01       		.uleb128 0x1
+ 1909 07af 50       		.byte	0x50
+ 1910 07b0 02       		.uleb128 0x2
+ 1911 07b1 74       		.byte	0x74
+ 1912 07b2 03       		.sleb128 3
+ 1913 07b3 0E       		.uleb128 0xe
+ 1914 07b4 01       		.uleb128 0x1
+ 1915 07b5 51       		.byte	0x51
+ 1916 07b6 02       		.uleb128 0x2
+ 1917 07b7 08       		.byte	0x8
+ 1918 07b8 35       		.byte	0x35
+ 1919 07b9 00       		.byte	0
+ 1920 07ba 00       		.byte	0
+ 1921 07bb 0A       		.uleb128 0xa
+ 1922 07bc FF020000 		.4byte	.LASF53
+ 1923 07c0 01       		.byte	0x1
+ 1924 07c1 D9       		.byte	0xd9
+ 1925 07c2 00000000 		.4byte	.LFB16
+ 1926 07c6 2C000000 		.4byte	.LFE16-.LFB16
+ 1927 07ca 01       		.uleb128 0x1
+ 1928 07cb 9C       		.byte	0x9c
+ 1929 07cc 73080000 		.4byte	0x873
+ 1930 07d0 0B       		.uleb128 0xb
+ 1931 07d1 0C000000 		.4byte	.LASF36
+ 1932 07d5 01       		.byte	0x1
+ 1933 07d6 D9       		.byte	0xd9
+ 1934 07d7 99010000 		.4byte	0x199
+ 1935 07db 5C060000 		.4byte	.LLST45
+ 1936 07df 0B       		.uleb128 0xb
+ 1937 07e0 94020000 		.4byte	.LASF41
+ 1938 07e4 01       		.byte	0x1
+ 1939 07e5 DA       		.byte	0xda
+ 1940 07e6 97000000 		.4byte	0x97
+ 1941 07ea 95060000 		.4byte	.LLST46
+ 1942 07ee 0B       		.uleb128 0xb
+ 1943 07ef C3030000 		.4byte	.LASF42
+ 1944 07f3 01       		.byte	0x1
+ 1945 07f4 DB       		.byte	0xdb
+ 1946 07f5 97000000 		.4byte	0x97
+ 1947 07f9 B6060000 		.4byte	.LLST47
+ 1948 07fd 0B       		.uleb128 0xb
+ 1949 07fe 1B050000 		.4byte	.LASF50
+ 1950 0802 01       		.byte	0x1
+ 1951 0803 DC       		.byte	0xdc
+ 1952 0804 97000000 		.4byte	0x97
+ 1953 0808 D7060000 		.4byte	.LLST48
+ 1954 080c 15       		.uleb128 0x15
+ 1955 080d 3B040000 		.4byte	.LASF17
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 40
+
+
+ 1956 0811 01       		.byte	0x1
+ 1957 0812 DD       		.byte	0xdd
+ 1958 0813 AD000000 		.4byte	0xad
+ 1959 0817 02       		.uleb128 0x2
+ 1960 0818 91       		.byte	0x91
+ 1961 0819 00       		.sleb128 0
+ 1962 081a 13       		.uleb128 0x13
+ 1963 081b C0000000 		.4byte	.LASF30
+ 1964 081f 01       		.byte	0x1
+ 1965 0820 E1       		.byte	0xe1
+ 1966 0821 89000000 		.4byte	0x89
+ 1967 0825 F8060000 		.4byte	.LLST49
+ 1968 0829 0D       		.uleb128 0xd
+ 1969 082a 0C000000 		.4byte	.LVL87
+ 1970 082e 070A0000 		.4byte	0xa07
+ 1971 0832 3C080000 		.4byte	0x83c
+ 1972 0836 0E       		.uleb128 0xe
+ 1973 0837 01       		.uleb128 0x1
+ 1974 0838 50       		.byte	0x50
+ 1975 0839 01       		.uleb128 0x1
+ 1976 083a 31       		.byte	0x31
+ 1977 083b 00       		.byte	0
+ 1978 083c 0D       		.uleb128 0xd
+ 1979 083d 1C000000 		.4byte	.LVL88
+ 1980 0841 120A0000 		.4byte	0xa12
+ 1981 0845 56080000 		.4byte	0x856
+ 1982 0849 0E       		.uleb128 0xe
+ 1983 084a 01       		.uleb128 0x1
+ 1984 084b 50       		.byte	0x50
+ 1985 084c 02       		.uleb128 0x2
+ 1986 084d 75       		.byte	0x75
+ 1987 084e 00       		.sleb128 0
+ 1988 084f 0E       		.uleb128 0xe
+ 1989 0850 01       		.uleb128 0x1
+ 1990 0851 51       		.byte	0x51
+ 1991 0852 02       		.uleb128 0x2
+ 1992 0853 08       		.byte	0x8
+ 1993 0854 36       		.byte	0x36
+ 1994 0855 00       		.byte	0
+ 1995 0856 0F       		.uleb128 0xf
+ 1996 0857 2A000000 		.4byte	.LVL91
+ 1997 085b 280A0000 		.4byte	0xa28
+ 1998 085f 0E       		.uleb128 0xe
+ 1999 0860 01       		.uleb128 0x1
+ 2000 0861 50       		.byte	0x50
+ 2001 0862 02       		.uleb128 0x2
+ 2002 0863 75       		.byte	0x75
+ 2003 0864 00       		.sleb128 0
+ 2004 0865 0E       		.uleb128 0xe
+ 2005 0866 01       		.uleb128 0x1
+ 2006 0867 51       		.byte	0x51
+ 2007 0868 03       		.uleb128 0x3
+ 2008 0869 91       		.byte	0x91
+ 2009 086a 00       		.sleb128 0
+ 2010 086b 06       		.byte	0x6
+ 2011 086c 0E       		.uleb128 0xe
+ 2012 086d 01       		.uleb128 0x1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 41
+
+
+ 2013 086e 52       		.byte	0x52
+ 2014 086f 01       		.uleb128 0x1
+ 2015 0870 33       		.byte	0x33
+ 2016 0871 00       		.byte	0
+ 2017 0872 00       		.byte	0
+ 2018 0873 11       		.uleb128 0x11
+ 2019 0874 91040000 		.4byte	.LASF54
+ 2020 0878 01       		.byte	0x1
+ 2021 0879 E6       		.byte	0xe6
+ 2022 087a AD000000 		.4byte	0xad
+ 2023 087e 00000000 		.4byte	.LFB17
+ 2024 0882 0E000000 		.4byte	.LFE17-.LFB17
+ 2025 0886 01       		.uleb128 0x1
+ 2026 0887 9C       		.byte	0x9c
+ 2027 0888 B9080000 		.4byte	0x8b9
+ 2028 088c 0B       		.uleb128 0xb
+ 2029 088d 57020000 		.4byte	.LASF20
+ 2030 0891 01       		.byte	0x1
+ 2031 0892 E6       		.byte	0xe6
+ 2032 0893 99010000 		.4byte	0x199
+ 2033 0897 0B070000 		.4byte	.LLST50
+ 2034 089b 0F       		.uleb128 0xf
+ 2035 089c 0C000000 		.4byte	.LVL95
+ 2036 08a0 490A0000 		.4byte	0xa49
+ 2037 08a4 0E       		.uleb128 0xe
+ 2038 08a5 01       		.uleb128 0x1
+ 2039 08a6 50       		.byte	0x50
+ 2040 08a7 05       		.uleb128 0x5
+ 2041 08a8 F3       		.byte	0xf3
+ 2042 08a9 01       		.uleb128 0x1
+ 2043 08aa 50       		.byte	0x50
+ 2044 08ab 23       		.byte	0x23
+ 2045 08ac 03       		.uleb128 0x3
+ 2046 08ad 0E       		.uleb128 0xe
+ 2047 08ae 01       		.uleb128 0x1
+ 2048 08af 51       		.byte	0x51
+ 2049 08b0 01       		.uleb128 0x1
+ 2050 08b1 33       		.byte	0x33
+ 2051 08b2 0E       		.uleb128 0xe
+ 2052 08b3 01       		.uleb128 0x1
+ 2053 08b4 52       		.byte	0x52
+ 2054 08b5 01       		.uleb128 0x1
+ 2055 08b6 37       		.byte	0x37
+ 2056 08b7 00       		.byte	0
+ 2057 08b8 00       		.byte	0
+ 2058 08b9 11       		.uleb128 0x11
+ 2059 08ba 76050000 		.4byte	.LASF55
+ 2060 08be 01       		.byte	0x1
+ 2061 08bf EB       		.byte	0xeb
+ 2062 08c0 B8000000 		.4byte	0xb8
+ 2063 08c4 00000000 		.4byte	.LFB18
+ 2064 08c8 08000000 		.4byte	.LFE18-.LFB18
+ 2065 08cc 01       		.uleb128 0x1
+ 2066 08cd 9C       		.byte	0x9c
+ 2067 08ce F3080000 		.4byte	0x8f3
+ 2068 08d2 0B       		.uleb128 0xb
+ 2069 08d3 57020000 		.4byte	.LASF20
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 42
+
+
+ 2070 08d7 01       		.byte	0x1
+ 2071 08d8 EB       		.byte	0xeb
+ 2072 08d9 99010000 		.4byte	0x199
+ 2073 08dd 39070000 		.4byte	.LLST51
+ 2074 08e1 0F       		.uleb128 0xf
+ 2075 08e2 06000000 		.4byte	.LVL97
+ 2076 08e6 73080000 		.4byte	0x873
+ 2077 08ea 0E       		.uleb128 0xe
+ 2078 08eb 01       		.uleb128 0x1
+ 2079 08ec 50       		.byte	0x50
+ 2080 08ed 03       		.uleb128 0x3
+ 2081 08ee F3       		.byte	0xf3
+ 2082 08ef 01       		.uleb128 0x1
+ 2083 08f0 50       		.byte	0x50
+ 2084 08f1 00       		.byte	0
+ 2085 08f2 00       		.byte	0
+ 2086 08f3 11       		.uleb128 0x11
+ 2087 08f4 D5030000 		.4byte	.LASF56
+ 2088 08f8 01       		.byte	0x1
+ 2089 08f9 C9       		.byte	0xc9
+ 2090 08fa B8000000 		.4byte	0xb8
+ 2091 08fe 00000000 		.4byte	.LFB14
+ 2092 0902 08000000 		.4byte	.LFE14-.LFB14
+ 2093 0906 01       		.uleb128 0x1
+ 2094 0907 9C       		.byte	0x9c
+ 2095 0908 2D090000 		.4byte	0x92d
+ 2096 090c 0B       		.uleb128 0xb
+ 2097 090d 0C000000 		.4byte	.LASF36
+ 2098 0911 01       		.byte	0x1
+ 2099 0912 C9       		.byte	0xc9
+ 2100 0913 99010000 		.4byte	0x199
+ 2101 0917 5A070000 		.4byte	.LLST52
+ 2102 091b 0F       		.uleb128 0xf
+ 2103 091c 06000000 		.4byte	.LVL99
+ 2104 0920 B9080000 		.4byte	0x8b9
+ 2105 0924 0E       		.uleb128 0xe
+ 2106 0925 01       		.uleb128 0x1
+ 2107 0926 50       		.byte	0x50
+ 2108 0927 03       		.uleb128 0x3
+ 2109 0928 F3       		.byte	0xf3
+ 2110 0929 01       		.uleb128 0x1
+ 2111 092a 50       		.byte	0x50
+ 2112 092b 00       		.byte	0
+ 2113 092c 00       		.byte	0
+ 2114 092d 11       		.uleb128 0x11
+ 2115 092e 86010000 		.4byte	.LASF57
+ 2116 0932 01       		.byte	0x1
+ 2117 0933 F0       		.byte	0xf0
+ 2118 0934 97000000 		.4byte	0x97
+ 2119 0938 00000000 		.4byte	.LFB19
+ 2120 093c 04000000 		.4byte	.LFE19-.LFB19
+ 2121 0940 01       		.uleb128 0x1
+ 2122 0941 9C       		.byte	0x9c
+ 2123 0942 56090000 		.4byte	0x956
+ 2124 0946 0B       		.uleb128 0xb
+ 2125 0947 57020000 		.4byte	.LASF20
+ 2126 094b 01       		.byte	0x1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 43
+
+
+ 2127 094c F0       		.byte	0xf0
+ 2128 094d 99010000 		.4byte	0x199
+ 2129 0951 7B070000 		.4byte	.LLST53
+ 2130 0955 00       		.byte	0
+ 2131 0956 0A       		.uleb128 0xa
+ 2132 0957 E8040000 		.4byte	.LASF58
+ 2133 095b 01       		.byte	0x1
+ 2134 095c F5       		.byte	0xf5
+ 2135 095d 00000000 		.4byte	.LFB20
+ 2136 0961 4A000000 		.4byte	.LFE20-.LFB20
+ 2137 0965 01       		.uleb128 0x1
+ 2138 0966 9C       		.byte	0x9c
+ 2139 0967 070A0000 		.4byte	0xa07
+ 2140 096b 0B       		.uleb128 0xb
+ 2141 096c 0C000000 		.4byte	.LASF36
+ 2142 0970 01       		.byte	0x1
+ 2143 0971 F5       		.byte	0xf5
+ 2144 0972 99010000 		.4byte	0x199
+ 2145 0976 9C070000 		.4byte	.LLST54
+ 2146 097a 0B       		.uleb128 0xb
+ 2147 097b 94020000 		.4byte	.LASF41
+ 2148 097f 01       		.byte	0x1
+ 2149 0980 F6       		.byte	0xf6
+ 2150 0981 97000000 		.4byte	0x97
+ 2151 0985 C8070000 		.4byte	.LLST55
+ 2152 0989 0B       		.uleb128 0xb
+ 2153 098a C3030000 		.4byte	.LASF42
+ 2154 098e 01       		.byte	0x1
+ 2155 098f F7       		.byte	0xf7
+ 2156 0990 97000000 		.4byte	0x97
+ 2157 0994 E9070000 		.4byte	.LLST56
+ 2158 0998 0B       		.uleb128 0xb
+ 2159 0999 6E050000 		.4byte	.LASF59
+ 2160 099d 01       		.byte	0x1
+ 2161 099e F8       		.byte	0xf8
+ 2162 099f 97000000 		.4byte	0x97
+ 2163 09a3 0A080000 		.4byte	.LLST57
+ 2164 09a7 16       		.uleb128 0x16
+ 2165 09a8 5200     		.ascii	"R\000"
+ 2166 09aa 01       		.byte	0x1
+ 2167 09ab F9       		.byte	0xf9
+ 2168 09ac 97000000 		.4byte	0x97
+ 2169 09b0 2B080000 		.4byte	.LLST58
+ 2170 09b4 16       		.uleb128 0x16
+ 2171 09b5 4700     		.ascii	"G\000"
+ 2172 09b7 01       		.byte	0x1
+ 2173 09b8 FA       		.byte	0xfa
+ 2174 09b9 97000000 		.4byte	0x97
+ 2175 09bd 57080000 		.4byte	.LLST59
+ 2176 09c1 16       		.uleb128 0x16
+ 2177 09c2 4200     		.ascii	"B\000"
+ 2178 09c4 01       		.byte	0x1
+ 2179 09c5 FB       		.byte	0xfb
+ 2180 09c6 97000000 		.4byte	0x97
+ 2181 09ca 9B080000 		.4byte	.LLST60
+ 2182 09ce 13       		.uleb128 0x13
+ 2183 09cf C0000000 		.4byte	.LASF30
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 44
+
+
+ 2184 09d3 01       		.byte	0x1
+ 2185 09d4 FF       		.byte	0xff
+ 2186 09d5 89000000 		.4byte	0x89
+ 2187 09d9 DF080000 		.4byte	.LLST61
+ 2188 09dd 0D       		.uleb128 0xd
+ 2189 09de 1E000000 		.4byte	.LVL108
+ 2190 09e2 070A0000 		.4byte	0xa07
+ 2191 09e6 F0090000 		.4byte	0x9f0
+ 2192 09ea 0E       		.uleb128 0xe
+ 2193 09eb 01       		.uleb128 0x1
+ 2194 09ec 50       		.byte	0x50
+ 2195 09ed 01       		.uleb128 0x1
+ 2196 09ee 31       		.byte	0x31
+ 2197 09ef 00       		.byte	0
+ 2198 09f0 0F       		.uleb128 0xf
+ 2199 09f1 2C000000 		.4byte	.LVL109
+ 2200 09f5 330A0000 		.4byte	0xa33
+ 2201 09f9 0E       		.uleb128 0xe
+ 2202 09fa 01       		.uleb128 0x1
+ 2203 09fb 50       		.byte	0x50
+ 2204 09fc 02       		.uleb128 0x2
+ 2205 09fd 74       		.byte	0x74
+ 2206 09fe 03       		.sleb128 3
+ 2207 09ff 0E       		.uleb128 0xe
+ 2208 0a00 01       		.uleb128 0x1
+ 2209 0a01 51       		.byte	0x51
+ 2210 0a02 02       		.uleb128 0x2
+ 2211 0a03 08       		.byte	0x8
+ 2212 0a04 37       		.byte	0x37
+ 2213 0a05 00       		.byte	0
+ 2214 0a06 00       		.byte	0
+ 2215 0a07 17       		.uleb128 0x17
+ 2216 0a08 2B030000 		.4byte	.LASF60
+ 2217 0a0c 2B030000 		.4byte	.LASF60
+ 2218 0a10 04       		.byte	0x4
+ 2219 0a11 17       		.byte	0x17
+ 2220 0a12 17       		.uleb128 0x17
+ 2221 0a13 52030000 		.4byte	.LASF61
+ 2222 0a17 52030000 		.4byte	.LASF61
+ 2223 0a1b 04       		.byte	0x4
+ 2224 0a1c 1A       		.byte	0x1a
+ 2225 0a1d 17       		.uleb128 0x17
+ 2226 0a1e 6E010000 		.4byte	.LASF62
+ 2227 0a22 6E010000 		.4byte	.LASF62
+ 2228 0a26 04       		.byte	0x4
+ 2229 0a27 2A       		.byte	0x2a
+ 2230 0a28 17       		.uleb128 0x17
+ 2231 0a29 3C050000 		.4byte	.LASF63
+ 2232 0a2d 3C050000 		.4byte	.LASF63
+ 2233 0a31 04       		.byte	0x4
+ 2234 0a32 2C       		.byte	0x2c
+ 2235 0a33 17       		.uleb128 0x17
+ 2236 0a34 59040000 		.4byte	.LASF64
+ 2237 0a38 59040000 		.4byte	.LASF64
+ 2238 0a3c 04       		.byte	0x4
+ 2239 0a3d 1B       		.byte	0x1b
+ 2240 0a3e 17       		.uleb128 0x17
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 45
+
+
+ 2241 0a3f 00000000 		.4byte	.LASF65
+ 2242 0a43 00000000 		.4byte	.LASF65
+ 2243 0a47 05       		.byte	0x5
+ 2244 0a48 29       		.byte	0x29
+ 2245 0a49 17       		.uleb128 0x17
+ 2246 0a4a 71000000 		.4byte	.LASF66
+ 2247 0a4e 71000000 		.4byte	.LASF66
+ 2248 0a52 04       		.byte	0x4
+ 2249 0a53 2D       		.byte	0x2d
+ 2250 0a54 00       		.byte	0
+ 2251              		.section	.debug_abbrev,"",%progbits
+ 2252              	.Ldebug_abbrev0:
+ 2253 0000 01       		.uleb128 0x1
+ 2254 0001 11       		.uleb128 0x11
+ 2255 0002 01       		.byte	0x1
+ 2256 0003 25       		.uleb128 0x25
+ 2257 0004 0E       		.uleb128 0xe
+ 2258 0005 13       		.uleb128 0x13
+ 2259 0006 0B       		.uleb128 0xb
+ 2260 0007 03       		.uleb128 0x3
+ 2261 0008 0E       		.uleb128 0xe
+ 2262 0009 1B       		.uleb128 0x1b
+ 2263 000a 0E       		.uleb128 0xe
+ 2264 000b 55       		.uleb128 0x55
+ 2265 000c 17       		.uleb128 0x17
+ 2266 000d 11       		.uleb128 0x11
+ 2267 000e 01       		.uleb128 0x1
+ 2268 000f 10       		.uleb128 0x10
+ 2269 0010 17       		.uleb128 0x17
+ 2270 0011 00       		.byte	0
+ 2271 0012 00       		.byte	0
+ 2272 0013 02       		.uleb128 0x2
+ 2273 0014 24       		.uleb128 0x24
+ 2274 0015 00       		.byte	0
+ 2275 0016 0B       		.uleb128 0xb
+ 2276 0017 0B       		.uleb128 0xb
+ 2277 0018 3E       		.uleb128 0x3e
+ 2278 0019 0B       		.uleb128 0xb
+ 2279 001a 03       		.uleb128 0x3
+ 2280 001b 0E       		.uleb128 0xe
+ 2281 001c 00       		.byte	0
+ 2282 001d 00       		.byte	0
+ 2283 001e 03       		.uleb128 0x3
+ 2284 001f 16       		.uleb128 0x16
+ 2285 0020 00       		.byte	0
+ 2286 0021 03       		.uleb128 0x3
+ 2287 0022 0E       		.uleb128 0xe
+ 2288 0023 3A       		.uleb128 0x3a
+ 2289 0024 0B       		.uleb128 0xb
+ 2290 0025 3B       		.uleb128 0x3b
+ 2291 0026 0B       		.uleb128 0xb
+ 2292 0027 49       		.uleb128 0x49
+ 2293 0028 13       		.uleb128 0x13
+ 2294 0029 00       		.byte	0
+ 2295 002a 00       		.byte	0
+ 2296 002b 04       		.uleb128 0x4
+ 2297 002c 24       		.uleb128 0x24
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 46
+
+
+ 2298 002d 00       		.byte	0
+ 2299 002e 0B       		.uleb128 0xb
+ 2300 002f 0B       		.uleb128 0xb
+ 2301 0030 3E       		.uleb128 0x3e
+ 2302 0031 0B       		.uleb128 0xb
+ 2303 0032 03       		.uleb128 0x3
+ 2304 0033 08       		.uleb128 0x8
+ 2305 0034 00       		.byte	0
+ 2306 0035 00       		.byte	0
+ 2307 0036 05       		.uleb128 0x5
+ 2308 0037 13       		.uleb128 0x13
+ 2309 0038 01       		.byte	0x1
+ 2310 0039 0B       		.uleb128 0xb
+ 2311 003a 0B       		.uleb128 0xb
+ 2312 003b 3A       		.uleb128 0x3a
+ 2313 003c 0B       		.uleb128 0xb
+ 2314 003d 3B       		.uleb128 0x3b
+ 2315 003e 0B       		.uleb128 0xb
+ 2316 003f 01       		.uleb128 0x1
+ 2317 0040 13       		.uleb128 0x13
+ 2318 0041 00       		.byte	0
+ 2319 0042 00       		.byte	0
+ 2320 0043 06       		.uleb128 0x6
+ 2321 0044 0D       		.uleb128 0xd
+ 2322 0045 00       		.byte	0
+ 2323 0046 03       		.uleb128 0x3
+ 2324 0047 08       		.uleb128 0x8
+ 2325 0048 3A       		.uleb128 0x3a
+ 2326 0049 0B       		.uleb128 0xb
+ 2327 004a 3B       		.uleb128 0x3b
+ 2328 004b 0B       		.uleb128 0xb
+ 2329 004c 49       		.uleb128 0x49
+ 2330 004d 13       		.uleb128 0x13
+ 2331 004e 38       		.uleb128 0x38
+ 2332 004f 0B       		.uleb128 0xb
+ 2333 0050 00       		.byte	0
+ 2334 0051 00       		.byte	0
+ 2335 0052 07       		.uleb128 0x7
+ 2336 0053 0D       		.uleb128 0xd
+ 2337 0054 00       		.byte	0
+ 2338 0055 03       		.uleb128 0x3
+ 2339 0056 0E       		.uleb128 0xe
+ 2340 0057 3A       		.uleb128 0x3a
+ 2341 0058 0B       		.uleb128 0xb
+ 2342 0059 3B       		.uleb128 0x3b
+ 2343 005a 0B       		.uleb128 0xb
+ 2344 005b 49       		.uleb128 0x49
+ 2345 005c 13       		.uleb128 0x13
+ 2346 005d 38       		.uleb128 0x38
+ 2347 005e 0B       		.uleb128 0xb
+ 2348 005f 00       		.byte	0
+ 2349 0060 00       		.byte	0
+ 2350 0061 08       		.uleb128 0x8
+ 2351 0062 01       		.uleb128 0x1
+ 2352 0063 01       		.byte	0x1
+ 2353 0064 49       		.uleb128 0x49
+ 2354 0065 13       		.uleb128 0x13
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 47
+
+
+ 2355 0066 01       		.uleb128 0x1
+ 2356 0067 13       		.uleb128 0x13
+ 2357 0068 00       		.byte	0
+ 2358 0069 00       		.byte	0
+ 2359 006a 09       		.uleb128 0x9
+ 2360 006b 21       		.uleb128 0x21
+ 2361 006c 00       		.byte	0
+ 2362 006d 49       		.uleb128 0x49
+ 2363 006e 13       		.uleb128 0x13
+ 2364 006f 2F       		.uleb128 0x2f
+ 2365 0070 0B       		.uleb128 0xb
+ 2366 0071 00       		.byte	0
+ 2367 0072 00       		.byte	0
+ 2368 0073 0A       		.uleb128 0xa
+ 2369 0074 2E       		.uleb128 0x2e
+ 2370 0075 01       		.byte	0x1
+ 2371 0076 3F       		.uleb128 0x3f
+ 2372 0077 19       		.uleb128 0x19
+ 2373 0078 03       		.uleb128 0x3
+ 2374 0079 0E       		.uleb128 0xe
+ 2375 007a 3A       		.uleb128 0x3a
+ 2376 007b 0B       		.uleb128 0xb
+ 2377 007c 3B       		.uleb128 0x3b
+ 2378 007d 0B       		.uleb128 0xb
+ 2379 007e 27       		.uleb128 0x27
+ 2380 007f 19       		.uleb128 0x19
+ 2381 0080 11       		.uleb128 0x11
+ 2382 0081 01       		.uleb128 0x1
+ 2383 0082 12       		.uleb128 0x12
+ 2384 0083 06       		.uleb128 0x6
+ 2385 0084 40       		.uleb128 0x40
+ 2386 0085 18       		.uleb128 0x18
+ 2387 0086 9742     		.uleb128 0x2117
+ 2388 0088 19       		.uleb128 0x19
+ 2389 0089 01       		.uleb128 0x1
+ 2390 008a 13       		.uleb128 0x13
+ 2391 008b 00       		.byte	0
+ 2392 008c 00       		.byte	0
+ 2393 008d 0B       		.uleb128 0xb
+ 2394 008e 05       		.uleb128 0x5
+ 2395 008f 00       		.byte	0
+ 2396 0090 03       		.uleb128 0x3
+ 2397 0091 0E       		.uleb128 0xe
+ 2398 0092 3A       		.uleb128 0x3a
+ 2399 0093 0B       		.uleb128 0xb
+ 2400 0094 3B       		.uleb128 0x3b
+ 2401 0095 0B       		.uleb128 0xb
+ 2402 0096 49       		.uleb128 0x49
+ 2403 0097 13       		.uleb128 0x13
+ 2404 0098 02       		.uleb128 0x2
+ 2405 0099 17       		.uleb128 0x17
+ 2406 009a 00       		.byte	0
+ 2407 009b 00       		.byte	0
+ 2408 009c 0C       		.uleb128 0xc
+ 2409 009d 34       		.uleb128 0x34
+ 2410 009e 00       		.byte	0
+ 2411 009f 03       		.uleb128 0x3
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 48
+
+
+ 2412 00a0 0E       		.uleb128 0xe
+ 2413 00a1 3A       		.uleb128 0x3a
+ 2414 00a2 0B       		.uleb128 0xb
+ 2415 00a3 3B       		.uleb128 0x3b
+ 2416 00a4 0B       		.uleb128 0xb
+ 2417 00a5 49       		.uleb128 0x49
+ 2418 00a6 13       		.uleb128 0x13
+ 2419 00a7 02       		.uleb128 0x2
+ 2420 00a8 18       		.uleb128 0x18
+ 2421 00a9 00       		.byte	0
+ 2422 00aa 00       		.byte	0
+ 2423 00ab 0D       		.uleb128 0xd
+ 2424 00ac 898201   		.uleb128 0x4109
+ 2425 00af 01       		.byte	0x1
+ 2426 00b0 11       		.uleb128 0x11
+ 2427 00b1 01       		.uleb128 0x1
+ 2428 00b2 31       		.uleb128 0x31
+ 2429 00b3 13       		.uleb128 0x13
+ 2430 00b4 01       		.uleb128 0x1
+ 2431 00b5 13       		.uleb128 0x13
+ 2432 00b6 00       		.byte	0
+ 2433 00b7 00       		.byte	0
+ 2434 00b8 0E       		.uleb128 0xe
+ 2435 00b9 8A8201   		.uleb128 0x410a
+ 2436 00bc 00       		.byte	0
+ 2437 00bd 02       		.uleb128 0x2
+ 2438 00be 18       		.uleb128 0x18
+ 2439 00bf 9142     		.uleb128 0x2111
+ 2440 00c1 18       		.uleb128 0x18
+ 2441 00c2 00       		.byte	0
+ 2442 00c3 00       		.byte	0
+ 2443 00c4 0F       		.uleb128 0xf
+ 2444 00c5 898201   		.uleb128 0x4109
+ 2445 00c8 01       		.byte	0x1
+ 2446 00c9 11       		.uleb128 0x11
+ 2447 00ca 01       		.uleb128 0x1
+ 2448 00cb 31       		.uleb128 0x31
+ 2449 00cc 13       		.uleb128 0x13
+ 2450 00cd 00       		.byte	0
+ 2451 00ce 00       		.byte	0
+ 2452 00cf 10       		.uleb128 0x10
+ 2453 00d0 0F       		.uleb128 0xf
+ 2454 00d1 00       		.byte	0
+ 2455 00d2 0B       		.uleb128 0xb
+ 2456 00d3 0B       		.uleb128 0xb
+ 2457 00d4 49       		.uleb128 0x49
+ 2458 00d5 13       		.uleb128 0x13
+ 2459 00d6 00       		.byte	0
+ 2460 00d7 00       		.byte	0
+ 2461 00d8 11       		.uleb128 0x11
+ 2462 00d9 2E       		.uleb128 0x2e
+ 2463 00da 01       		.byte	0x1
+ 2464 00db 3F       		.uleb128 0x3f
+ 2465 00dc 19       		.uleb128 0x19
+ 2466 00dd 03       		.uleb128 0x3
+ 2467 00de 0E       		.uleb128 0xe
+ 2468 00df 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 49
+
+
+ 2469 00e0 0B       		.uleb128 0xb
+ 2470 00e1 3B       		.uleb128 0x3b
+ 2471 00e2 0B       		.uleb128 0xb
+ 2472 00e3 27       		.uleb128 0x27
+ 2473 00e4 19       		.uleb128 0x19
+ 2474 00e5 49       		.uleb128 0x49
+ 2475 00e6 13       		.uleb128 0x13
+ 2476 00e7 11       		.uleb128 0x11
+ 2477 00e8 01       		.uleb128 0x1
+ 2478 00e9 12       		.uleb128 0x12
+ 2479 00ea 06       		.uleb128 0x6
+ 2480 00eb 40       		.uleb128 0x40
+ 2481 00ec 18       		.uleb128 0x18
+ 2482 00ed 9742     		.uleb128 0x2117
+ 2483 00ef 19       		.uleb128 0x19
+ 2484 00f0 01       		.uleb128 0x1
+ 2485 00f1 13       		.uleb128 0x13
+ 2486 00f2 00       		.byte	0
+ 2487 00f3 00       		.byte	0
+ 2488 00f4 12       		.uleb128 0x12
+ 2489 00f5 0B       		.uleb128 0xb
+ 2490 00f6 01       		.byte	0x1
+ 2491 00f7 11       		.uleb128 0x11
+ 2492 00f8 01       		.uleb128 0x1
+ 2493 00f9 12       		.uleb128 0x12
+ 2494 00fa 06       		.uleb128 0x6
+ 2495 00fb 01       		.uleb128 0x1
+ 2496 00fc 13       		.uleb128 0x13
+ 2497 00fd 00       		.byte	0
+ 2498 00fe 00       		.byte	0
+ 2499 00ff 13       		.uleb128 0x13
+ 2500 0100 34       		.uleb128 0x34
+ 2501 0101 00       		.byte	0
+ 2502 0102 03       		.uleb128 0x3
+ 2503 0103 0E       		.uleb128 0xe
+ 2504 0104 3A       		.uleb128 0x3a
+ 2505 0105 0B       		.uleb128 0xb
+ 2506 0106 3B       		.uleb128 0x3b
+ 2507 0107 0B       		.uleb128 0xb
+ 2508 0108 49       		.uleb128 0x49
+ 2509 0109 13       		.uleb128 0x13
+ 2510 010a 02       		.uleb128 0x2
+ 2511 010b 17       		.uleb128 0x17
+ 2512 010c 00       		.byte	0
+ 2513 010d 00       		.byte	0
+ 2514 010e 14       		.uleb128 0x14
+ 2515 010f 898201   		.uleb128 0x4109
+ 2516 0112 00       		.byte	0
+ 2517 0113 11       		.uleb128 0x11
+ 2518 0114 01       		.uleb128 0x1
+ 2519 0115 31       		.uleb128 0x31
+ 2520 0116 13       		.uleb128 0x13
+ 2521 0117 00       		.byte	0
+ 2522 0118 00       		.byte	0
+ 2523 0119 15       		.uleb128 0x15
+ 2524 011a 05       		.uleb128 0x5
+ 2525 011b 00       		.byte	0
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 50
+
+
+ 2526 011c 03       		.uleb128 0x3
+ 2527 011d 0E       		.uleb128 0xe
+ 2528 011e 3A       		.uleb128 0x3a
+ 2529 011f 0B       		.uleb128 0xb
+ 2530 0120 3B       		.uleb128 0x3b
+ 2531 0121 0B       		.uleb128 0xb
+ 2532 0122 49       		.uleb128 0x49
+ 2533 0123 13       		.uleb128 0x13
+ 2534 0124 02       		.uleb128 0x2
+ 2535 0125 18       		.uleb128 0x18
+ 2536 0126 00       		.byte	0
+ 2537 0127 00       		.byte	0
+ 2538 0128 16       		.uleb128 0x16
+ 2539 0129 05       		.uleb128 0x5
+ 2540 012a 00       		.byte	0
+ 2541 012b 03       		.uleb128 0x3
+ 2542 012c 08       		.uleb128 0x8
+ 2543 012d 3A       		.uleb128 0x3a
+ 2544 012e 0B       		.uleb128 0xb
+ 2545 012f 3B       		.uleb128 0x3b
+ 2546 0130 0B       		.uleb128 0xb
+ 2547 0131 49       		.uleb128 0x49
+ 2548 0132 13       		.uleb128 0x13
+ 2549 0133 02       		.uleb128 0x2
+ 2550 0134 17       		.uleb128 0x17
+ 2551 0135 00       		.byte	0
+ 2552 0136 00       		.byte	0
+ 2553 0137 17       		.uleb128 0x17
+ 2554 0138 2E       		.uleb128 0x2e
+ 2555 0139 00       		.byte	0
+ 2556 013a 3F       		.uleb128 0x3f
+ 2557 013b 19       		.uleb128 0x19
+ 2558 013c 3C       		.uleb128 0x3c
+ 2559 013d 19       		.uleb128 0x19
+ 2560 013e 6E       		.uleb128 0x6e
+ 2561 013f 0E       		.uleb128 0xe
+ 2562 0140 03       		.uleb128 0x3
+ 2563 0141 0E       		.uleb128 0xe
+ 2564 0142 3A       		.uleb128 0x3a
+ 2565 0143 0B       		.uleb128 0xb
+ 2566 0144 3B       		.uleb128 0x3b
+ 2567 0145 0B       		.uleb128 0xb
+ 2568 0146 00       		.byte	0
+ 2569 0147 00       		.byte	0
+ 2570 0148 00       		.byte	0
+ 2571              		.section	.debug_loc,"",%progbits
+ 2572              	.Ldebug_loc0:
+ 2573              	.LLST0:
+ 2574 0000 00000000 		.4byte	.LVL0
+ 2575 0004 0C000000 		.4byte	.LVL2
+ 2576 0008 0100     		.2byte	0x1
+ 2577 000a 50       		.byte	0x50
+ 2578 000b 0C000000 		.4byte	.LVL2
+ 2579 000f 1C000000 		.4byte	.LVL5
+ 2580 0013 0100     		.2byte	0x1
+ 2581 0015 54       		.byte	0x54
+ 2582 0016 1C000000 		.4byte	.LVL5
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 51
+
+
+ 2583 001a 20000000 		.4byte	.LFE0
+ 2584 001e 0400     		.2byte	0x4
+ 2585 0020 F3       		.byte	0xf3
+ 2586 0021 01       		.uleb128 0x1
+ 2587 0022 50       		.byte	0x50
+ 2588 0023 9F       		.byte	0x9f
+ 2589 0024 00000000 		.4byte	0
+ 2590 0028 00000000 		.4byte	0
+ 2591              	.LLST1:
+ 2592 002c 00000000 		.4byte	.LVL0
+ 2593 0030 0F000000 		.4byte	.LVL3-1
+ 2594 0034 0100     		.2byte	0x1
+ 2595 0036 51       		.byte	0x51
+ 2596 0037 0F000000 		.4byte	.LVL3-1
+ 2597 003b 20000000 		.4byte	.LFE0
+ 2598 003f 0400     		.2byte	0x4
+ 2599 0041 F3       		.byte	0xf3
+ 2600 0042 01       		.uleb128 0x1
+ 2601 0043 51       		.byte	0x51
+ 2602 0044 9F       		.byte	0x9f
+ 2603 0045 00000000 		.4byte	0
+ 2604 0049 00000000 		.4byte	0
+ 2605              	.LLST2:
+ 2606 004d 00000000 		.4byte	.LVL0
+ 2607 0051 0F000000 		.4byte	.LVL3-1
+ 2608 0055 0100     		.2byte	0x1
+ 2609 0057 52       		.byte	0x52
+ 2610 0058 0F000000 		.4byte	.LVL3-1
+ 2611 005c 20000000 		.4byte	.LFE0
+ 2612 0060 0400     		.2byte	0x4
+ 2613 0062 F3       		.byte	0xf3
+ 2614 0063 01       		.uleb128 0x1
+ 2615 0064 52       		.byte	0x52
+ 2616 0065 9F       		.byte	0x9f
+ 2617 0066 00000000 		.4byte	0
+ 2618 006a 00000000 		.4byte	0
+ 2619              	.LLST3:
+ 2620 006e 00000000 		.4byte	.LVL0
+ 2621 0072 08000000 		.4byte	.LVL1
+ 2622 0076 0100     		.2byte	0x1
+ 2623 0078 53       		.byte	0x53
+ 2624 0079 08000000 		.4byte	.LVL1
+ 2625 007d 20000000 		.4byte	.LFE0
+ 2626 0081 0400     		.2byte	0x4
+ 2627 0083 F3       		.byte	0xf3
+ 2628 0084 01       		.uleb128 0x1
+ 2629 0085 53       		.byte	0x53
+ 2630 0086 9F       		.byte	0x9f
+ 2631 0087 00000000 		.4byte	0
+ 2632 008b 00000000 		.4byte	0
+ 2633              	.LLST4:
+ 2634 008f 00000000 		.4byte	.LVL6
+ 2635 0093 09000000 		.4byte	.LVL8-1
+ 2636 0097 0100     		.2byte	0x1
+ 2637 0099 50       		.byte	0x50
+ 2638 009a 09000000 		.4byte	.LVL8-1
+ 2639 009e 0C000000 		.4byte	.LFE1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 52
+
+
+ 2640 00a2 0400     		.2byte	0x4
+ 2641 00a4 F3       		.byte	0xf3
+ 2642 00a5 01       		.uleb128 0x1
+ 2643 00a6 50       		.byte	0x50
+ 2644 00a7 9F       		.byte	0x9f
+ 2645 00a8 00000000 		.4byte	0
+ 2646 00ac 00000000 		.4byte	0
+ 2647              	.LLST5:
+ 2648 00b0 00000000 		.4byte	.LVL6
+ 2649 00b4 09000000 		.4byte	.LVL8-1
+ 2650 00b8 0100     		.2byte	0x1
+ 2651 00ba 51       		.byte	0x51
+ 2652 00bb 09000000 		.4byte	.LVL8-1
+ 2653 00bf 0C000000 		.4byte	.LFE1
+ 2654 00c3 0400     		.2byte	0x4
+ 2655 00c5 F3       		.byte	0xf3
+ 2656 00c6 01       		.uleb128 0x1
+ 2657 00c7 51       		.byte	0x51
+ 2658 00c8 9F       		.byte	0x9f
+ 2659 00c9 00000000 		.4byte	0
+ 2660 00cd 00000000 		.4byte	0
+ 2661              	.LLST6:
+ 2662 00d1 00000000 		.4byte	.LVL6
+ 2663 00d5 06000000 		.4byte	.LVL7
+ 2664 00d9 0100     		.2byte	0x1
+ 2665 00db 52       		.byte	0x52
+ 2666 00dc 06000000 		.4byte	.LVL7
+ 2667 00e0 0C000000 		.4byte	.LFE1
+ 2668 00e4 0400     		.2byte	0x4
+ 2669 00e6 F3       		.byte	0xf3
+ 2670 00e7 01       		.uleb128 0x1
+ 2671 00e8 52       		.byte	0x52
+ 2672 00e9 9F       		.byte	0x9f
+ 2673 00ea 00000000 		.4byte	0
+ 2674 00ee 00000000 		.4byte	0
+ 2675              	.LLST7:
+ 2676 00f2 00000000 		.4byte	.LVL9
+ 2677 00f6 09000000 		.4byte	.LVL11-1
+ 2678 00fa 0100     		.2byte	0x1
+ 2679 00fc 50       		.byte	0x50
+ 2680 00fd 09000000 		.4byte	.LVL11-1
+ 2681 0101 0C000000 		.4byte	.LFE2
+ 2682 0105 0400     		.2byte	0x4
+ 2683 0107 F3       		.byte	0xf3
+ 2684 0108 01       		.uleb128 0x1
+ 2685 0109 50       		.byte	0x50
+ 2686 010a 9F       		.byte	0x9f
+ 2687 010b 00000000 		.4byte	0
+ 2688 010f 00000000 		.4byte	0
+ 2689              	.LLST8:
+ 2690 0113 00000000 		.4byte	.LVL9
+ 2691 0117 06000000 		.4byte	.LVL10
+ 2692 011b 0100     		.2byte	0x1
+ 2693 011d 51       		.byte	0x51
+ 2694 011e 06000000 		.4byte	.LVL10
+ 2695 0122 0C000000 		.4byte	.LFE2
+ 2696 0126 0400     		.2byte	0x4
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 53
+
+
+ 2697 0128 F3       		.byte	0xf3
+ 2698 0129 01       		.uleb128 0x1
+ 2699 012a 51       		.byte	0x51
+ 2700 012b 9F       		.byte	0x9f
+ 2701 012c 00000000 		.4byte	0
+ 2702 0130 00000000 		.4byte	0
+ 2703              	.LLST9:
+ 2704 0134 00000000 		.4byte	.LVL12
+ 2705 0138 09000000 		.4byte	.LVL13-1
+ 2706 013c 0100     		.2byte	0x1
+ 2707 013e 50       		.byte	0x50
+ 2708 013f 09000000 		.4byte	.LVL13-1
+ 2709 0143 14000000 		.4byte	.LVL14
+ 2710 0147 0100     		.2byte	0x1
+ 2711 0149 54       		.byte	0x54
+ 2712 014a 14000000 		.4byte	.LVL14
+ 2713 014e 16000000 		.4byte	.LFE3
+ 2714 0152 0400     		.2byte	0x4
+ 2715 0154 F3       		.byte	0xf3
+ 2716 0155 01       		.uleb128 0x1
+ 2717 0156 50       		.byte	0x50
+ 2718 0157 9F       		.byte	0x9f
+ 2719 0158 00000000 		.4byte	0
+ 2720 015c 00000000 		.4byte	0
+ 2721              	.LLST10:
+ 2722 0160 00000000 		.4byte	.LVL15
+ 2723 0164 09000000 		.4byte	.LVL16-1
+ 2724 0168 0100     		.2byte	0x1
+ 2725 016a 50       		.byte	0x50
+ 2726 016b 09000000 		.4byte	.LVL16-1
+ 2727 016f 28000000 		.4byte	.LVL21
+ 2728 0173 0100     		.2byte	0x1
+ 2729 0175 54       		.byte	0x54
+ 2730 0176 28000000 		.4byte	.LVL21
+ 2731 017a 2A000000 		.4byte	.LFE5
+ 2732 017e 0400     		.2byte	0x4
+ 2733 0180 F3       		.byte	0xf3
+ 2734 0181 01       		.uleb128 0x1
+ 2735 0182 50       		.byte	0x50
+ 2736 0183 9F       		.byte	0x9f
+ 2737 0184 00000000 		.4byte	0
+ 2738 0188 00000000 		.4byte	0
+ 2739              	.LLST11:
+ 2740 018c 12000000 		.4byte	.LVL17
+ 2741 0190 22000000 		.4byte	.LVL20
+ 2742 0194 0100     		.2byte	0x1
+ 2743 0196 50       		.byte	0x50
+ 2744 0197 00000000 		.4byte	0
+ 2745 019b 00000000 		.4byte	0
+ 2746              	.LLST12:
+ 2747 019f 00000000 		.4byte	.LVL22
+ 2748 01a3 0B000000 		.4byte	.LVL24-1
+ 2749 01a7 0100     		.2byte	0x1
+ 2750 01a9 50       		.byte	0x50
+ 2751 01aa 0B000000 		.4byte	.LVL24-1
+ 2752 01ae 1E000000 		.4byte	.LVL26
+ 2753 01b2 0100     		.2byte	0x1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 54
+
+
+ 2754 01b4 54       		.byte	0x54
+ 2755 01b5 1E000000 		.4byte	.LVL26
+ 2756 01b9 20000000 		.4byte	.LFE4
+ 2757 01bd 0400     		.2byte	0x4
+ 2758 01bf F3       		.byte	0xf3
+ 2759 01c0 01       		.uleb128 0x1
+ 2760 01c1 50       		.byte	0x50
+ 2761 01c2 9F       		.byte	0x9f
+ 2762 01c3 00000000 		.4byte	0
+ 2763 01c7 00000000 		.4byte	0
+ 2764              	.LLST13:
+ 2765 01cb 00000000 		.4byte	.LVL22
+ 2766 01cf 08000000 		.4byte	.LVL23
+ 2767 01d3 0100     		.2byte	0x1
+ 2768 01d5 51       		.byte	0x51
+ 2769 01d6 08000000 		.4byte	.LVL23
+ 2770 01da 1E000000 		.4byte	.LVL27
+ 2771 01de 0100     		.2byte	0x1
+ 2772 01e0 55       		.byte	0x55
+ 2773 01e1 1E000000 		.4byte	.LVL27
+ 2774 01e5 20000000 		.4byte	.LFE4
+ 2775 01e9 0400     		.2byte	0x4
+ 2776 01eb F3       		.byte	0xf3
+ 2777 01ec 01       		.uleb128 0x1
+ 2778 01ed 51       		.byte	0x51
+ 2779 01ee 9F       		.byte	0x9f
+ 2780 01ef 00000000 		.4byte	0
+ 2781 01f3 00000000 		.4byte	0
+ 2782              	.LLST14:
+ 2783 01f7 00000000 		.4byte	.LVL28
+ 2784 01fb 09000000 		.4byte	.LVL29-1
+ 2785 01ff 0100     		.2byte	0x1
+ 2786 0201 50       		.byte	0x50
+ 2787 0202 09000000 		.4byte	.LVL29-1
+ 2788 0206 14000000 		.4byte	.LVL30
+ 2789 020a 0100     		.2byte	0x1
+ 2790 020c 54       		.byte	0x54
+ 2791 020d 14000000 		.4byte	.LVL30
+ 2792 0211 16000000 		.4byte	.LFE6
+ 2793 0215 0400     		.2byte	0x4
+ 2794 0217 F3       		.byte	0xf3
+ 2795 0218 01       		.uleb128 0x1
+ 2796 0219 50       		.byte	0x50
+ 2797 021a 9F       		.byte	0x9f
+ 2798 021b 00000000 		.4byte	0
+ 2799 021f 00000000 		.4byte	0
+ 2800              	.LLST15:
+ 2801 0223 00000000 		.4byte	.LVL31
+ 2802 0227 10000000 		.4byte	.LVL34
+ 2803 022b 0100     		.2byte	0x1
+ 2804 022d 50       		.byte	0x50
+ 2805 022e 10000000 		.4byte	.LVL34
+ 2806 0232 36000000 		.4byte	.LVL39
+ 2807 0236 0100     		.2byte	0x1
+ 2808 0238 54       		.byte	0x54
+ 2809 0239 36000000 		.4byte	.LVL39
+ 2810 023d 42000000 		.4byte	.LVL42
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 55
+
+
+ 2811 0241 0300     		.2byte	0x3
+ 2812 0243 75       		.byte	0x75
+ 2813 0244 7D       		.sleb128 -3
+ 2814 0245 9F       		.byte	0x9f
+ 2815 0246 42000000 		.4byte	.LVL42
+ 2816 024a 44000000 		.4byte	.LFE7
+ 2817 024e 0400     		.2byte	0x4
+ 2818 0250 F3       		.byte	0xf3
+ 2819 0251 01       		.uleb128 0x1
+ 2820 0252 50       		.byte	0x50
+ 2821 0253 9F       		.byte	0x9f
+ 2822 0254 00000000 		.4byte	0
+ 2823 0258 00000000 		.4byte	0
+ 2824              	.LLST16:
+ 2825 025c 00000000 		.4byte	.LVL31
+ 2826 0260 0E000000 		.4byte	.LVL33
+ 2827 0264 0100     		.2byte	0x1
+ 2828 0266 51       		.byte	0x51
+ 2829 0267 0E000000 		.4byte	.LVL33
+ 2830 026b 2C000000 		.4byte	.LVL37
+ 2831 026f 0100     		.2byte	0x1
+ 2832 0271 55       		.byte	0x55
+ 2833 0272 2C000000 		.4byte	.LVL37
+ 2834 0276 44000000 		.4byte	.LFE7
+ 2835 027a 0400     		.2byte	0x4
+ 2836 027c F3       		.byte	0xf3
+ 2837 027d 01       		.uleb128 0x1
+ 2838 027e 51       		.byte	0x51
+ 2839 027f 9F       		.byte	0x9f
+ 2840 0280 00000000 		.4byte	0
+ 2841 0284 00000000 		.4byte	0
+ 2842              	.LLST17:
+ 2843 0288 00000000 		.4byte	.LVL31
+ 2844 028c 0C000000 		.4byte	.LVL32
+ 2845 0290 0100     		.2byte	0x1
+ 2846 0292 52       		.byte	0x52
+ 2847 0293 0C000000 		.4byte	.LVL32
+ 2848 0297 44000000 		.4byte	.LFE7
+ 2849 029b 0400     		.2byte	0x4
+ 2850 029d F3       		.byte	0xf3
+ 2851 029e 01       		.uleb128 0x1
+ 2852 029f 52       		.byte	0x52
+ 2853 02a0 9F       		.byte	0x9f
+ 2854 02a1 00000000 		.4byte	0
+ 2855 02a5 00000000 		.4byte	0
+ 2856              	.LLST18:
+ 2857 02a9 00000000 		.4byte	.LVL31
+ 2858 02ad 13000000 		.4byte	.LVL35-1
+ 2859 02b1 0100     		.2byte	0x1
+ 2860 02b3 53       		.byte	0x53
+ 2861 02b4 13000000 		.4byte	.LVL35-1
+ 2862 02b8 42000000 		.4byte	.LVL43
+ 2863 02bc 0100     		.2byte	0x1
+ 2864 02be 56       		.byte	0x56
+ 2865 02bf 42000000 		.4byte	.LVL43
+ 2866 02c3 44000000 		.4byte	.LFE7
+ 2867 02c7 0400     		.2byte	0x4
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 56
+
+
+ 2868 02c9 F3       		.byte	0xf3
+ 2869 02ca 01       		.uleb128 0x1
+ 2870 02cb 53       		.byte	0x53
+ 2871 02cc 9F       		.byte	0x9f
+ 2872 02cd 00000000 		.4byte	0
+ 2873 02d1 00000000 		.4byte	0
+ 2874              	.LLST19:
+ 2875 02d5 34000000 		.4byte	.LVL38
+ 2876 02d9 3E000000 		.4byte	.LVL40
+ 2877 02dd 0100     		.2byte	0x1
+ 2878 02df 50       		.byte	0x50
+ 2879 02e0 00000000 		.4byte	0
+ 2880 02e4 00000000 		.4byte	0
+ 2881              	.LLST20:
+ 2882 02e8 00000000 		.4byte	.LVL44
+ 2883 02ec 08000000 		.4byte	.LVL45
+ 2884 02f0 0100     		.2byte	0x1
+ 2885 02f2 50       		.byte	0x50
+ 2886 02f3 08000000 		.4byte	.LVL45
+ 2887 02f7 1C000000 		.4byte	.LVL48
+ 2888 02fb 0100     		.2byte	0x1
+ 2889 02fd 54       		.byte	0x54
+ 2890 02fe 1C000000 		.4byte	.LVL48
+ 2891 0302 20000000 		.4byte	.LFE8
+ 2892 0306 0400     		.2byte	0x4
+ 2893 0308 F3       		.byte	0xf3
+ 2894 0309 01       		.uleb128 0x1
+ 2895 030a 50       		.byte	0x50
+ 2896 030b 9F       		.byte	0x9f
+ 2897 030c 00000000 		.4byte	0
+ 2898 0310 00000000 		.4byte	0
+ 2899              	.LLST21:
+ 2900 0314 00000000 		.4byte	.LVL44
+ 2901 0318 0B000000 		.4byte	.LVL46-1
+ 2902 031c 0100     		.2byte	0x1
+ 2903 031e 51       		.byte	0x51
+ 2904 031f 0B000000 		.4byte	.LVL46-1
+ 2905 0323 20000000 		.4byte	.LFE8
+ 2906 0327 0400     		.2byte	0x4
+ 2907 0329 F3       		.byte	0xf3
+ 2908 032a 01       		.uleb128 0x1
+ 2909 032b 51       		.byte	0x51
+ 2910 032c 9F       		.byte	0x9f
+ 2911 032d 00000000 		.4byte	0
+ 2912 0331 00000000 		.4byte	0
+ 2913              	.LLST22:
+ 2914 0335 00000000 		.4byte	.LVL44
+ 2915 0339 0B000000 		.4byte	.LVL46-1
+ 2916 033d 0100     		.2byte	0x1
+ 2917 033f 52       		.byte	0x52
+ 2918 0340 0B000000 		.4byte	.LVL46-1
+ 2919 0344 20000000 		.4byte	.LFE8
+ 2920 0348 0400     		.2byte	0x4
+ 2921 034a F3       		.byte	0xf3
+ 2922 034b 01       		.uleb128 0x1
+ 2923 034c 52       		.byte	0x52
+ 2924 034d 9F       		.byte	0x9f
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 57
+
+
+ 2925 034e 00000000 		.4byte	0
+ 2926 0352 00000000 		.4byte	0
+ 2927              	.LLST23:
+ 2928 0356 00000000 		.4byte	.LVL44
+ 2929 035a 0B000000 		.4byte	.LVL46-1
+ 2930 035e 0100     		.2byte	0x1
+ 2931 0360 53       		.byte	0x53
+ 2932 0361 0B000000 		.4byte	.LVL46-1
+ 2933 0365 20000000 		.4byte	.LFE8
+ 2934 0369 0400     		.2byte	0x4
+ 2935 036b F3       		.byte	0xf3
+ 2936 036c 01       		.uleb128 0x1
+ 2937 036d 53       		.byte	0x53
+ 2938 036e 9F       		.byte	0x9f
+ 2939 036f 00000000 		.4byte	0
+ 2940 0373 00000000 		.4byte	0
+ 2941              	.LLST24:
+ 2942 0377 00000000 		.4byte	.LVL49
+ 2943 037b 06000000 		.4byte	.LVL50
+ 2944 037f 0100     		.2byte	0x1
+ 2945 0381 50       		.byte	0x50
+ 2946 0382 06000000 		.4byte	.LVL50
+ 2947 0386 18000000 		.4byte	.LVL53
+ 2948 038a 0100     		.2byte	0x1
+ 2949 038c 54       		.byte	0x54
+ 2950 038d 18000000 		.4byte	.LVL53
+ 2951 0391 1A000000 		.4byte	.LFE9
+ 2952 0395 0400     		.2byte	0x4
+ 2953 0397 F3       		.byte	0xf3
+ 2954 0398 01       		.uleb128 0x1
+ 2955 0399 50       		.byte	0x50
+ 2956 039a 9F       		.byte	0x9f
+ 2957 039b 00000000 		.4byte	0
+ 2958 039f 00000000 		.4byte	0
+ 2959              	.LLST25:
+ 2960 03a3 00000000 		.4byte	.LVL49
+ 2961 03a7 09000000 		.4byte	.LVL51-1
+ 2962 03ab 0100     		.2byte	0x1
+ 2963 03ad 51       		.byte	0x51
+ 2964 03ae 09000000 		.4byte	.LVL51-1
+ 2965 03b2 1A000000 		.4byte	.LFE9
+ 2966 03b6 0400     		.2byte	0x4
+ 2967 03b8 F3       		.byte	0xf3
+ 2968 03b9 01       		.uleb128 0x1
+ 2969 03ba 51       		.byte	0x51
+ 2970 03bb 9F       		.byte	0x9f
+ 2971 03bc 00000000 		.4byte	0
+ 2972 03c0 00000000 		.4byte	0
+ 2973              	.LLST26:
+ 2974 03c4 00000000 		.4byte	.LVL49
+ 2975 03c8 09000000 		.4byte	.LVL51-1
+ 2976 03cc 0100     		.2byte	0x1
+ 2977 03ce 52       		.byte	0x52
+ 2978 03cf 09000000 		.4byte	.LVL51-1
+ 2979 03d3 1A000000 		.4byte	.LFE9
+ 2980 03d7 0400     		.2byte	0x4
+ 2981 03d9 F3       		.byte	0xf3
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 58
+
+
+ 2982 03da 01       		.uleb128 0x1
+ 2983 03db 52       		.byte	0x52
+ 2984 03dc 9F       		.byte	0x9f
+ 2985 03dd 00000000 		.4byte	0
+ 2986 03e1 00000000 		.4byte	0
+ 2987              	.LLST27:
+ 2988 03e5 00000000 		.4byte	.LVL54
+ 2989 03e9 06000000 		.4byte	.LVL55
+ 2990 03ed 0100     		.2byte	0x1
+ 2991 03ef 50       		.byte	0x50
+ 2992 03f0 06000000 		.4byte	.LVL55
+ 2993 03f4 20000000 		.4byte	.LVL60
+ 2994 03f8 0100     		.2byte	0x1
+ 2995 03fa 54       		.byte	0x54
+ 2996 03fb 20000000 		.4byte	.LVL60
+ 2997 03ff 24000000 		.4byte	.LFE10
+ 2998 0403 0400     		.2byte	0x4
+ 2999 0405 F3       		.byte	0xf3
+ 3000 0406 01       		.uleb128 0x1
+ 3001 0407 50       		.byte	0x50
+ 3002 0408 9F       		.byte	0x9f
+ 3003 0409 00000000 		.4byte	0
+ 3004 040d 00000000 		.4byte	0
+ 3005              	.LLST28:
+ 3006 0411 00000000 		.4byte	.LVL54
+ 3007 0415 09000000 		.4byte	.LVL56-1
+ 3008 0419 0100     		.2byte	0x1
+ 3009 041b 51       		.byte	0x51
+ 3010 041c 09000000 		.4byte	.LVL56-1
+ 3011 0420 24000000 		.4byte	.LFE10
+ 3012 0424 0400     		.2byte	0x4
+ 3013 0426 F3       		.byte	0xf3
+ 3014 0427 01       		.uleb128 0x1
+ 3015 0428 51       		.byte	0x51
+ 3016 0429 9F       		.byte	0x9f
+ 3017 042a 00000000 		.4byte	0
+ 3018 042e 00000000 		.4byte	0
+ 3019              	.LLST29:
+ 3020 0432 00000000 		.4byte	.LVL54
+ 3021 0436 09000000 		.4byte	.LVL56-1
+ 3022 043a 0100     		.2byte	0x1
+ 3023 043c 52       		.byte	0x52
+ 3024 043d 09000000 		.4byte	.LVL56-1
+ 3025 0441 24000000 		.4byte	.LFE10
+ 3026 0445 0400     		.2byte	0x4
+ 3027 0447 F3       		.byte	0xf3
+ 3028 0448 01       		.uleb128 0x1
+ 3029 0449 52       		.byte	0x52
+ 3030 044a 9F       		.byte	0x9f
+ 3031 044b 00000000 		.4byte	0
+ 3032 044f 00000000 		.4byte	0
+ 3033              	.LLST30:
+ 3034 0453 1A000000 		.4byte	.LVL58
+ 3035 0457 1D000000 		.4byte	.LVL59-1
+ 3036 045b 0100     		.2byte	0x1
+ 3037 045d 50       		.byte	0x50
+ 3038 045e 1D000000 		.4byte	.LVL59-1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 59
+
+
+ 3039 0462 22000000 		.4byte	.LVL61
+ 3040 0466 0100     		.2byte	0x1
+ 3041 0468 55       		.byte	0x55
+ 3042 0469 00000000 		.4byte	0
+ 3043 046d 00000000 		.4byte	0
+ 3044              	.LLST31:
+ 3045 0471 00000000 		.4byte	.LVL62
+ 3046 0475 06000000 		.4byte	.LVL63
+ 3047 0479 0100     		.2byte	0x1
+ 3048 047b 50       		.byte	0x50
+ 3049 047c 06000000 		.4byte	.LVL63
+ 3050 0480 20000000 		.4byte	.LVL68
+ 3051 0484 0100     		.2byte	0x1
+ 3052 0486 54       		.byte	0x54
+ 3053 0487 20000000 		.4byte	.LVL68
+ 3054 048b 24000000 		.4byte	.LFE11
+ 3055 048f 0400     		.2byte	0x4
+ 3056 0491 F3       		.byte	0xf3
+ 3057 0492 01       		.uleb128 0x1
+ 3058 0493 50       		.byte	0x50
+ 3059 0494 9F       		.byte	0x9f
+ 3060 0495 00000000 		.4byte	0
+ 3061 0499 00000000 		.4byte	0
+ 3062              	.LLST32:
+ 3063 049d 00000000 		.4byte	.LVL62
+ 3064 04a1 09000000 		.4byte	.LVL64-1
+ 3065 04a5 0100     		.2byte	0x1
+ 3066 04a7 51       		.byte	0x51
+ 3067 04a8 09000000 		.4byte	.LVL64-1
+ 3068 04ac 24000000 		.4byte	.LFE11
+ 3069 04b0 0400     		.2byte	0x4
+ 3070 04b2 F3       		.byte	0xf3
+ 3071 04b3 01       		.uleb128 0x1
+ 3072 04b4 51       		.byte	0x51
+ 3073 04b5 9F       		.byte	0x9f
+ 3074 04b6 00000000 		.4byte	0
+ 3075 04ba 00000000 		.4byte	0
+ 3076              	.LLST33:
+ 3077 04be 00000000 		.4byte	.LVL62
+ 3078 04c2 09000000 		.4byte	.LVL64-1
+ 3079 04c6 0100     		.2byte	0x1
+ 3080 04c8 52       		.byte	0x52
+ 3081 04c9 09000000 		.4byte	.LVL64-1
+ 3082 04cd 24000000 		.4byte	.LFE11
+ 3083 04d1 0400     		.2byte	0x4
+ 3084 04d3 F3       		.byte	0xf3
+ 3085 04d4 01       		.uleb128 0x1
+ 3086 04d5 52       		.byte	0x52
+ 3087 04d6 9F       		.byte	0x9f
+ 3088 04d7 00000000 		.4byte	0
+ 3089 04db 00000000 		.4byte	0
+ 3090              	.LLST34:
+ 3091 04df 1A000000 		.4byte	.LVL66
+ 3092 04e3 1D000000 		.4byte	.LVL67-1
+ 3093 04e7 0100     		.2byte	0x1
+ 3094 04e9 50       		.byte	0x50
+ 3095 04ea 1D000000 		.4byte	.LVL67-1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 60
+
+
+ 3096 04ee 22000000 		.4byte	.LVL69
+ 3097 04f2 0100     		.2byte	0x1
+ 3098 04f4 55       		.byte	0x55
+ 3099 04f5 00000000 		.4byte	0
+ 3100 04f9 00000000 		.4byte	0
+ 3101              	.LLST35:
+ 3102 04fd 00000000 		.4byte	.LVL70
+ 3103 0501 02000000 		.4byte	.LVL71
+ 3104 0505 0100     		.2byte	0x1
+ 3105 0507 50       		.byte	0x50
+ 3106 0508 02000000 		.4byte	.LVL71
+ 3107 050c 04000000 		.4byte	.LFE12
+ 3108 0510 0400     		.2byte	0x4
+ 3109 0512 F3       		.byte	0xf3
+ 3110 0513 01       		.uleb128 0x1
+ 3111 0514 50       		.byte	0x50
+ 3112 0515 9F       		.byte	0x9f
+ 3113 0516 00000000 		.4byte	0
+ 3114 051a 00000000 		.4byte	0
+ 3115              	.LLST36:
+ 3116 051e 00000000 		.4byte	.LVL72
+ 3117 0522 08000000 		.4byte	.LVL73
+ 3118 0526 0100     		.2byte	0x1
+ 3119 0528 50       		.byte	0x50
+ 3120 0529 08000000 		.4byte	.LVL73
+ 3121 052d 1E000000 		.4byte	.LVL76
+ 3122 0531 0100     		.2byte	0x1
+ 3123 0533 54       		.byte	0x54
+ 3124 0534 1E000000 		.4byte	.LVL76
+ 3125 0538 2A000000 		.4byte	.LVL79
+ 3126 053c 0300     		.2byte	0x3
+ 3127 053e 75       		.byte	0x75
+ 3128 053f 7D       		.sleb128 -3
+ 3129 0540 9F       		.byte	0x9f
+ 3130 0541 2A000000 		.4byte	.LVL79
+ 3131 0545 2C000000 		.4byte	.LFE13
+ 3132 0549 0400     		.2byte	0x4
+ 3133 054b F3       		.byte	0xf3
+ 3134 054c 01       		.uleb128 0x1
+ 3135 054d 50       		.byte	0x50
+ 3136 054e 9F       		.byte	0x9f
+ 3137 054f 00000000 		.4byte	0
+ 3138 0553 00000000 		.4byte	0
+ 3139              	.LLST37:
+ 3140 0557 00000000 		.4byte	.LVL72
+ 3141 055b 0B000000 		.4byte	.LVL74-1
+ 3142 055f 0100     		.2byte	0x1
+ 3143 0561 51       		.byte	0x51
+ 3144 0562 0B000000 		.4byte	.LVL74-1
+ 3145 0566 2C000000 		.4byte	.LFE13
+ 3146 056a 0400     		.2byte	0x4
+ 3147 056c F3       		.byte	0xf3
+ 3148 056d 01       		.uleb128 0x1
+ 3149 056e 51       		.byte	0x51
+ 3150 056f 9F       		.byte	0x9f
+ 3151 0570 00000000 		.4byte	0
+ 3152 0574 00000000 		.4byte	0
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 61
+
+
+ 3153              	.LLST38:
+ 3154 0578 00000000 		.4byte	.LVL72
+ 3155 057c 0B000000 		.4byte	.LVL74-1
+ 3156 0580 0100     		.2byte	0x1
+ 3157 0582 52       		.byte	0x52
+ 3158 0583 0B000000 		.4byte	.LVL74-1
+ 3159 0587 2C000000 		.4byte	.LFE13
+ 3160 058b 0400     		.2byte	0x4
+ 3161 058d F3       		.byte	0xf3
+ 3162 058e 01       		.uleb128 0x1
+ 3163 058f 52       		.byte	0x52
+ 3164 0590 9F       		.byte	0x9f
+ 3165 0591 00000000 		.4byte	0
+ 3166 0595 00000000 		.4byte	0
+ 3167              	.LLST39:
+ 3168 0599 00000000 		.4byte	.LVL72
+ 3169 059d 0B000000 		.4byte	.LVL74-1
+ 3170 05a1 0100     		.2byte	0x1
+ 3171 05a3 53       		.byte	0x53
+ 3172 05a4 0B000000 		.4byte	.LVL74-1
+ 3173 05a8 2C000000 		.4byte	.LFE13
+ 3174 05ac 0400     		.2byte	0x4
+ 3175 05ae F3       		.byte	0xf3
+ 3176 05af 01       		.uleb128 0x1
+ 3177 05b0 53       		.byte	0x53
+ 3178 05b1 9F       		.byte	0x9f
+ 3179 05b2 00000000 		.4byte	0
+ 3180 05b6 00000000 		.4byte	0
+ 3181              	.LLST40:
+ 3182 05ba 1C000000 		.4byte	.LVL75
+ 3183 05be 26000000 		.4byte	.LVL77
+ 3184 05c2 0100     		.2byte	0x1
+ 3185 05c4 50       		.byte	0x50
+ 3186 05c5 00000000 		.4byte	0
+ 3187 05c9 00000000 		.4byte	0
+ 3188              	.LLST41:
+ 3189 05cd 00000000 		.4byte	.LVL80
+ 3190 05d1 08000000 		.4byte	.LVL81
+ 3191 05d5 0100     		.2byte	0x1
+ 3192 05d7 50       		.byte	0x50
+ 3193 05d8 08000000 		.4byte	.LVL81
+ 3194 05dc 1C000000 		.4byte	.LVL84
+ 3195 05e0 0100     		.2byte	0x1
+ 3196 05e2 54       		.byte	0x54
+ 3197 05e3 1C000000 		.4byte	.LVL84
+ 3198 05e7 20000000 		.4byte	.LFE15
+ 3199 05eb 0400     		.2byte	0x4
+ 3200 05ed F3       		.byte	0xf3
+ 3201 05ee 01       		.uleb128 0x1
+ 3202 05ef 50       		.byte	0x50
+ 3203 05f0 9F       		.byte	0x9f
+ 3204 05f1 00000000 		.4byte	0
+ 3205 05f5 00000000 		.4byte	0
+ 3206              	.LLST42:
+ 3207 05f9 00000000 		.4byte	.LVL80
+ 3208 05fd 0B000000 		.4byte	.LVL82-1
+ 3209 0601 0100     		.2byte	0x1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 62
+
+
+ 3210 0603 51       		.byte	0x51
+ 3211 0604 0B000000 		.4byte	.LVL82-1
+ 3212 0608 20000000 		.4byte	.LFE15
+ 3213 060c 0400     		.2byte	0x4
+ 3214 060e F3       		.byte	0xf3
+ 3215 060f 01       		.uleb128 0x1
+ 3216 0610 51       		.byte	0x51
+ 3217 0611 9F       		.byte	0x9f
+ 3218 0612 00000000 		.4byte	0
+ 3219 0616 00000000 		.4byte	0
+ 3220              	.LLST43:
+ 3221 061a 00000000 		.4byte	.LVL80
+ 3222 061e 0B000000 		.4byte	.LVL82-1
+ 3223 0622 0100     		.2byte	0x1
+ 3224 0624 52       		.byte	0x52
+ 3225 0625 0B000000 		.4byte	.LVL82-1
+ 3226 0629 20000000 		.4byte	.LFE15
+ 3227 062d 0400     		.2byte	0x4
+ 3228 062f F3       		.byte	0xf3
+ 3229 0630 01       		.uleb128 0x1
+ 3230 0631 52       		.byte	0x52
+ 3231 0632 9F       		.byte	0x9f
+ 3232 0633 00000000 		.4byte	0
+ 3233 0637 00000000 		.4byte	0
+ 3234              	.LLST44:
+ 3235 063b 00000000 		.4byte	.LVL80
+ 3236 063f 0B000000 		.4byte	.LVL82-1
+ 3237 0643 0100     		.2byte	0x1
+ 3238 0645 53       		.byte	0x53
+ 3239 0646 0B000000 		.4byte	.LVL82-1
+ 3240 064a 20000000 		.4byte	.LFE15
+ 3241 064e 0400     		.2byte	0x4
+ 3242 0650 F3       		.byte	0xf3
+ 3243 0651 01       		.uleb128 0x1
+ 3244 0652 53       		.byte	0x53
+ 3245 0653 9F       		.byte	0x9f
+ 3246 0654 00000000 		.4byte	0
+ 3247 0658 00000000 		.4byte	0
+ 3248              	.LLST45:
+ 3249 065c 00000000 		.4byte	.LVL85
+ 3250 0660 08000000 		.4byte	.LVL86
+ 3251 0664 0100     		.2byte	0x1
+ 3252 0666 50       		.byte	0x50
+ 3253 0667 08000000 		.4byte	.LVL86
+ 3254 066b 1E000000 		.4byte	.LVL89
+ 3255 066f 0100     		.2byte	0x1
+ 3256 0671 54       		.byte	0x54
+ 3257 0672 1E000000 		.4byte	.LVL89
+ 3258 0676 2A000000 		.4byte	.LVL92
+ 3259 067a 0300     		.2byte	0x3
+ 3260 067c 75       		.byte	0x75
+ 3261 067d 7D       		.sleb128 -3
+ 3262 067e 9F       		.byte	0x9f
+ 3263 067f 2A000000 		.4byte	.LVL92
+ 3264 0683 2C000000 		.4byte	.LFE16
+ 3265 0687 0400     		.2byte	0x4
+ 3266 0689 F3       		.byte	0xf3
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 63
+
+
+ 3267 068a 01       		.uleb128 0x1
+ 3268 068b 50       		.byte	0x50
+ 3269 068c 9F       		.byte	0x9f
+ 3270 068d 00000000 		.4byte	0
+ 3271 0691 00000000 		.4byte	0
+ 3272              	.LLST46:
+ 3273 0695 00000000 		.4byte	.LVL85
+ 3274 0699 0B000000 		.4byte	.LVL87-1
+ 3275 069d 0100     		.2byte	0x1
+ 3276 069f 51       		.byte	0x51
+ 3277 06a0 0B000000 		.4byte	.LVL87-1
+ 3278 06a4 2C000000 		.4byte	.LFE16
+ 3279 06a8 0400     		.2byte	0x4
+ 3280 06aa F3       		.byte	0xf3
+ 3281 06ab 01       		.uleb128 0x1
+ 3282 06ac 51       		.byte	0x51
+ 3283 06ad 9F       		.byte	0x9f
+ 3284 06ae 00000000 		.4byte	0
+ 3285 06b2 00000000 		.4byte	0
+ 3286              	.LLST47:
+ 3287 06b6 00000000 		.4byte	.LVL85
+ 3288 06ba 0B000000 		.4byte	.LVL87-1
+ 3289 06be 0100     		.2byte	0x1
+ 3290 06c0 52       		.byte	0x52
+ 3291 06c1 0B000000 		.4byte	.LVL87-1
+ 3292 06c5 2C000000 		.4byte	.LFE16
+ 3293 06c9 0400     		.2byte	0x4
+ 3294 06cb F3       		.byte	0xf3
+ 3295 06cc 01       		.uleb128 0x1
+ 3296 06cd 52       		.byte	0x52
+ 3297 06ce 9F       		.byte	0x9f
+ 3298 06cf 00000000 		.4byte	0
+ 3299 06d3 00000000 		.4byte	0
+ 3300              	.LLST48:
+ 3301 06d7 00000000 		.4byte	.LVL85
+ 3302 06db 0B000000 		.4byte	.LVL87-1
+ 3303 06df 0100     		.2byte	0x1
+ 3304 06e1 53       		.byte	0x53
+ 3305 06e2 0B000000 		.4byte	.LVL87-1
+ 3306 06e6 2C000000 		.4byte	.LFE16
+ 3307 06ea 0400     		.2byte	0x4
+ 3308 06ec F3       		.byte	0xf3
+ 3309 06ed 01       		.uleb128 0x1
+ 3310 06ee 53       		.byte	0x53
+ 3311 06ef 9F       		.byte	0x9f
+ 3312 06f0 00000000 		.4byte	0
+ 3313 06f4 00000000 		.4byte	0
+ 3314              	.LLST49:
+ 3315 06f8 1C000000 		.4byte	.LVL88
+ 3316 06fc 26000000 		.4byte	.LVL90
+ 3317 0700 0100     		.2byte	0x1
+ 3318 0702 50       		.byte	0x50
+ 3319 0703 00000000 		.4byte	0
+ 3320 0707 00000000 		.4byte	0
+ 3321              	.LLST50:
+ 3322 070b 00000000 		.4byte	.LVL93
+ 3323 070f 04000000 		.4byte	.LVL94
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 64
+
+
+ 3324 0713 0100     		.2byte	0x1
+ 3325 0715 50       		.byte	0x50
+ 3326 0716 04000000 		.4byte	.LVL94
+ 3327 071a 0B000000 		.4byte	.LVL95-1
+ 3328 071e 0300     		.2byte	0x3
+ 3329 0720 70       		.byte	0x70
+ 3330 0721 7D       		.sleb128 -3
+ 3331 0722 9F       		.byte	0x9f
+ 3332 0723 0B000000 		.4byte	.LVL95-1
+ 3333 0727 0E000000 		.4byte	.LFE17
+ 3334 072b 0400     		.2byte	0x4
+ 3335 072d F3       		.byte	0xf3
+ 3336 072e 01       		.uleb128 0x1
+ 3337 072f 50       		.byte	0x50
+ 3338 0730 9F       		.byte	0x9f
+ 3339 0731 00000000 		.4byte	0
+ 3340 0735 00000000 		.4byte	0
+ 3341              	.LLST51:
+ 3342 0739 00000000 		.4byte	.LVL96
+ 3343 073d 05000000 		.4byte	.LVL97-1
+ 3344 0741 0100     		.2byte	0x1
+ 3345 0743 50       		.byte	0x50
+ 3346 0744 05000000 		.4byte	.LVL97-1
+ 3347 0748 08000000 		.4byte	.LFE18
+ 3348 074c 0400     		.2byte	0x4
+ 3349 074e F3       		.byte	0xf3
+ 3350 074f 01       		.uleb128 0x1
+ 3351 0750 50       		.byte	0x50
+ 3352 0751 9F       		.byte	0x9f
+ 3353 0752 00000000 		.4byte	0
+ 3354 0756 00000000 		.4byte	0
+ 3355              	.LLST52:
+ 3356 075a 00000000 		.4byte	.LVL98
+ 3357 075e 05000000 		.4byte	.LVL99-1
+ 3358 0762 0100     		.2byte	0x1
+ 3359 0764 50       		.byte	0x50
+ 3360 0765 05000000 		.4byte	.LVL99-1
+ 3361 0769 08000000 		.4byte	.LFE14
+ 3362 076d 0400     		.2byte	0x4
+ 3363 076f F3       		.byte	0xf3
+ 3364 0770 01       		.uleb128 0x1
+ 3365 0771 50       		.byte	0x50
+ 3366 0772 9F       		.byte	0x9f
+ 3367 0773 00000000 		.4byte	0
+ 3368 0777 00000000 		.4byte	0
+ 3369              	.LLST53:
+ 3370 077b 00000000 		.4byte	.LVL100
+ 3371 077f 02000000 		.4byte	.LVL101
+ 3372 0783 0100     		.2byte	0x1
+ 3373 0785 50       		.byte	0x50
+ 3374 0786 02000000 		.4byte	.LVL101
+ 3375 078a 04000000 		.4byte	.LFE19
+ 3376 078e 0400     		.2byte	0x4
+ 3377 0790 F3       		.byte	0xf3
+ 3378 0791 01       		.uleb128 0x1
+ 3379 0792 50       		.byte	0x50
+ 3380 0793 9F       		.byte	0x9f
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 65
+
+
+ 3381 0794 00000000 		.4byte	0
+ 3382 0798 00000000 		.4byte	0
+ 3383              	.LLST54:
+ 3384 079c 00000000 		.4byte	.LVL102
+ 3385 07a0 1A000000 		.4byte	.LVL107
+ 3386 07a4 0100     		.2byte	0x1
+ 3387 07a6 50       		.byte	0x50
+ 3388 07a7 1A000000 		.4byte	.LVL107
+ 3389 07ab 44000000 		.4byte	.LVL112
+ 3390 07af 0100     		.2byte	0x1
+ 3391 07b1 54       		.byte	0x54
+ 3392 07b2 44000000 		.4byte	.LVL112
+ 3393 07b6 4A000000 		.4byte	.LFE20
+ 3394 07ba 0400     		.2byte	0x4
+ 3395 07bc F3       		.byte	0xf3
+ 3396 07bd 01       		.uleb128 0x1
+ 3397 07be 50       		.byte	0x50
+ 3398 07bf 9F       		.byte	0x9f
+ 3399 07c0 00000000 		.4byte	0
+ 3400 07c4 00000000 		.4byte	0
+ 3401              	.LLST55:
+ 3402 07c8 00000000 		.4byte	.LVL102
+ 3403 07cc 1D000000 		.4byte	.LVL108-1
+ 3404 07d0 0100     		.2byte	0x1
+ 3405 07d2 51       		.byte	0x51
+ 3406 07d3 1D000000 		.4byte	.LVL108-1
+ 3407 07d7 4A000000 		.4byte	.LFE20
+ 3408 07db 0400     		.2byte	0x4
+ 3409 07dd F3       		.byte	0xf3
+ 3410 07de 01       		.uleb128 0x1
+ 3411 07df 51       		.byte	0x51
+ 3412 07e0 9F       		.byte	0x9f
+ 3413 07e1 00000000 		.4byte	0
+ 3414 07e5 00000000 		.4byte	0
+ 3415              	.LLST56:
+ 3416 07e9 00000000 		.4byte	.LVL102
+ 3417 07ed 1D000000 		.4byte	.LVL108-1
+ 3418 07f1 0100     		.2byte	0x1
+ 3419 07f3 52       		.byte	0x52
+ 3420 07f4 1D000000 		.4byte	.LVL108-1
+ 3421 07f8 4A000000 		.4byte	.LFE20
+ 3422 07fc 0400     		.2byte	0x4
+ 3423 07fe F3       		.byte	0xf3
+ 3424 07ff 01       		.uleb128 0x1
+ 3425 0800 52       		.byte	0x52
+ 3426 0801 9F       		.byte	0x9f
+ 3427 0802 00000000 		.4byte	0
+ 3428 0806 00000000 		.4byte	0
+ 3429              	.LLST57:
+ 3430 080a 00000000 		.4byte	.LVL102
+ 3431 080e 0C000000 		.4byte	.LVL103
+ 3432 0812 0100     		.2byte	0x1
+ 3433 0814 53       		.byte	0x53
+ 3434 0815 0C000000 		.4byte	.LVL103
+ 3435 0819 4A000000 		.4byte	.LFE20
+ 3436 081d 0400     		.2byte	0x4
+ 3437 081f F3       		.byte	0xf3
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 66
+
+
+ 3438 0820 01       		.uleb128 0x1
+ 3439 0821 53       		.byte	0x53
+ 3440 0822 9F       		.byte	0x9f
+ 3441 0823 00000000 		.4byte	0
+ 3442 0827 00000000 		.4byte	0
+ 3443              	.LLST58:
+ 3444 082b 00000000 		.4byte	.LVL102
+ 3445 082f 0C000000 		.4byte	.LVL103
+ 3446 0833 0200     		.2byte	0x2
+ 3447 0835 91       		.byte	0x91
+ 3448 0836 00       		.sleb128 0
+ 3449 0837 0C000000 		.4byte	.LVL103
+ 3450 083b 0E000000 		.4byte	.LVL104
+ 3451 083f 0200     		.2byte	0x2
+ 3452 0841 73       		.byte	0x73
+ 3453 0842 00       		.sleb128 0
+ 3454 0843 0E000000 		.4byte	.LVL104
+ 3455 0847 4A000000 		.4byte	.LFE20
+ 3456 084b 0200     		.2byte	0x2
+ 3457 084d 91       		.byte	0x91
+ 3458 084e 00       		.sleb128 0
+ 3459 084f 00000000 		.4byte	0
+ 3460 0853 00000000 		.4byte	0
+ 3461              	.LLST59:
+ 3462 0857 00000000 		.4byte	.LVL102
+ 3463 085b 0C000000 		.4byte	.LVL103
+ 3464 085f 0200     		.2byte	0x2
+ 3465 0861 91       		.byte	0x91
+ 3466 0862 04       		.sleb128 4
+ 3467 0863 0C000000 		.4byte	.LVL103
+ 3468 0867 0E000000 		.4byte	.LVL104
+ 3469 086b 0200     		.2byte	0x2
+ 3470 086d 73       		.byte	0x73
+ 3471 086e 04       		.sleb128 4
+ 3472 086f 0E000000 		.4byte	.LVL104
+ 3473 0873 12000000 		.4byte	.LVL105
+ 3474 0877 0200     		.2byte	0x2
+ 3475 0879 91       		.byte	0x91
+ 3476 087a 04       		.sleb128 4
+ 3477 087b 12000000 		.4byte	.LVL105
+ 3478 087f 16000000 		.4byte	.LVL106
+ 3479 0883 0200     		.2byte	0x2
+ 3480 0885 73       		.byte	0x73
+ 3481 0886 00       		.sleb128 0
+ 3482 0887 16000000 		.4byte	.LVL106
+ 3483 088b 4A000000 		.4byte	.LFE20
+ 3484 088f 0200     		.2byte	0x2
+ 3485 0891 91       		.byte	0x91
+ 3486 0892 04       		.sleb128 4
+ 3487 0893 00000000 		.4byte	0
+ 3488 0897 00000000 		.4byte	0
+ 3489              	.LLST60:
+ 3490 089b 00000000 		.4byte	.LVL102
+ 3491 089f 0C000000 		.4byte	.LVL103
+ 3492 08a3 0200     		.2byte	0x2
+ 3493 08a5 91       		.byte	0x91
+ 3494 08a6 08       		.sleb128 8
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 67
+
+
+ 3495 08a7 0C000000 		.4byte	.LVL103
+ 3496 08ab 0E000000 		.4byte	.LVL104
+ 3497 08af 0200     		.2byte	0x2
+ 3498 08b1 73       		.byte	0x73
+ 3499 08b2 08       		.sleb128 8
+ 3500 08b3 0E000000 		.4byte	.LVL104
+ 3501 08b7 16000000 		.4byte	.LVL106
+ 3502 08bb 0200     		.2byte	0x2
+ 3503 08bd 91       		.byte	0x91
+ 3504 08be 08       		.sleb128 8
+ 3505 08bf 16000000 		.4byte	.LVL106
+ 3506 08c3 1D000000 		.4byte	.LVL108-1
+ 3507 08c7 0200     		.2byte	0x2
+ 3508 08c9 73       		.byte	0x73
+ 3509 08ca 00       		.sleb128 0
+ 3510 08cb 1D000000 		.4byte	.LVL108-1
+ 3511 08cf 4A000000 		.4byte	.LFE20
+ 3512 08d3 0200     		.2byte	0x2
+ 3513 08d5 91       		.byte	0x91
+ 3514 08d6 08       		.sleb128 8
+ 3515 08d7 00000000 		.4byte	0
+ 3516 08db 00000000 		.4byte	0
+ 3517              	.LLST61:
+ 3518 08df 2C000000 		.4byte	.LVL109
+ 3519 08e3 40000000 		.4byte	.LVL110
+ 3520 08e7 0100     		.2byte	0x1
+ 3521 08e9 50       		.byte	0x50
+ 3522 08ea 40000000 		.4byte	.LVL110
+ 3523 08ee 42000000 		.4byte	.LVL111
+ 3524 08f2 0300     		.2byte	0x3
+ 3525 08f4 70       		.byte	0x70
+ 3526 08f5 7D       		.sleb128 -3
+ 3527 08f6 9F       		.byte	0x9f
+ 3528 08f7 00000000 		.4byte	0
+ 3529 08fb 00000000 		.4byte	0
+ 3530              		.section	.debug_aranges,"",%progbits
+ 3531 0000 BC000000 		.4byte	0xbc
+ 3532 0004 0200     		.2byte	0x2
+ 3533 0006 00000000 		.4byte	.Ldebug_info0
+ 3534 000a 04       		.byte	0x4
+ 3535 000b 00       		.byte	0
+ 3536 000c 0000     		.2byte	0
+ 3537 000e 0000     		.2byte	0
+ 3538 0010 00000000 		.4byte	.LFB0
+ 3539 0014 20000000 		.4byte	.LFE0-.LFB0
+ 3540 0018 00000000 		.4byte	.LFB1
+ 3541 001c 0C000000 		.4byte	.LFE1-.LFB1
+ 3542 0020 00000000 		.4byte	.LFB2
+ 3543 0024 0C000000 		.4byte	.LFE2-.LFB2
+ 3544 0028 00000000 		.4byte	.LFB3
+ 3545 002c 16000000 		.4byte	.LFE3-.LFB3
+ 3546 0030 00000000 		.4byte	.LFB5
+ 3547 0034 2A000000 		.4byte	.LFE5-.LFB5
+ 3548 0038 00000000 		.4byte	.LFB4
+ 3549 003c 20000000 		.4byte	.LFE4-.LFB4
+ 3550 0040 00000000 		.4byte	.LFB6
+ 3551 0044 16000000 		.4byte	.LFE6-.LFB6
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 68
+
+
+ 3552 0048 00000000 		.4byte	.LFB7
+ 3553 004c 44000000 		.4byte	.LFE7-.LFB7
+ 3554 0050 00000000 		.4byte	.LFB8
+ 3555 0054 20000000 		.4byte	.LFE8-.LFB8
+ 3556 0058 00000000 		.4byte	.LFB9
+ 3557 005c 1A000000 		.4byte	.LFE9-.LFB9
+ 3558 0060 00000000 		.4byte	.LFB10
+ 3559 0064 24000000 		.4byte	.LFE10-.LFB10
+ 3560 0068 00000000 		.4byte	.LFB11
+ 3561 006c 24000000 		.4byte	.LFE11-.LFB11
+ 3562 0070 00000000 		.4byte	.LFB12
+ 3563 0074 04000000 		.4byte	.LFE12-.LFB12
+ 3564 0078 00000000 		.4byte	.LFB13
+ 3565 007c 2C000000 		.4byte	.LFE13-.LFB13
+ 3566 0080 00000000 		.4byte	.LFB15
+ 3567 0084 20000000 		.4byte	.LFE15-.LFB15
+ 3568 0088 00000000 		.4byte	.LFB16
+ 3569 008c 2C000000 		.4byte	.LFE16-.LFB16
+ 3570 0090 00000000 		.4byte	.LFB17
+ 3571 0094 0E000000 		.4byte	.LFE17-.LFB17
+ 3572 0098 00000000 		.4byte	.LFB18
+ 3573 009c 08000000 		.4byte	.LFE18-.LFB18
+ 3574 00a0 00000000 		.4byte	.LFB14
+ 3575 00a4 08000000 		.4byte	.LFE14-.LFB14
+ 3576 00a8 00000000 		.4byte	.LFB19
+ 3577 00ac 04000000 		.4byte	.LFE19-.LFB19
+ 3578 00b0 00000000 		.4byte	.LFB20
+ 3579 00b4 4A000000 		.4byte	.LFE20-.LFB20
+ 3580 00b8 00000000 		.4byte	0
+ 3581 00bc 00000000 		.4byte	0
+ 3582              		.section	.debug_ranges,"",%progbits
+ 3583              	.Ldebug_ranges0:
+ 3584 0000 00000000 		.4byte	.LFB0
+ 3585 0004 20000000 		.4byte	.LFE0
+ 3586 0008 00000000 		.4byte	.LFB1
+ 3587 000c 0C000000 		.4byte	.LFE1
+ 3588 0010 00000000 		.4byte	.LFB2
+ 3589 0014 0C000000 		.4byte	.LFE2
+ 3590 0018 00000000 		.4byte	.LFB3
+ 3591 001c 16000000 		.4byte	.LFE3
+ 3592 0020 00000000 		.4byte	.LFB5
+ 3593 0024 2A000000 		.4byte	.LFE5
+ 3594 0028 00000000 		.4byte	.LFB4
+ 3595 002c 20000000 		.4byte	.LFE4
+ 3596 0030 00000000 		.4byte	.LFB6
+ 3597 0034 16000000 		.4byte	.LFE6
+ 3598 0038 00000000 		.4byte	.LFB7
+ 3599 003c 44000000 		.4byte	.LFE7
+ 3600 0040 00000000 		.4byte	.LFB8
+ 3601 0044 20000000 		.4byte	.LFE8
+ 3602 0048 00000000 		.4byte	.LFB9
+ 3603 004c 1A000000 		.4byte	.LFE9
+ 3604 0050 00000000 		.4byte	.LFB10
+ 3605 0054 24000000 		.4byte	.LFE10
+ 3606 0058 00000000 		.4byte	.LFB11
+ 3607 005c 24000000 		.4byte	.LFE11
+ 3608 0060 00000000 		.4byte	.LFB12
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 69
+
+
+ 3609 0064 04000000 		.4byte	.LFE12
+ 3610 0068 00000000 		.4byte	.LFB13
+ 3611 006c 2C000000 		.4byte	.LFE13
+ 3612 0070 00000000 		.4byte	.LFB15
+ 3613 0074 20000000 		.4byte	.LFE15
+ 3614 0078 00000000 		.4byte	.LFB16
+ 3615 007c 2C000000 		.4byte	.LFE16
+ 3616 0080 00000000 		.4byte	.LFB17
+ 3617 0084 0E000000 		.4byte	.LFE17
+ 3618 0088 00000000 		.4byte	.LFB18
+ 3619 008c 08000000 		.4byte	.LFE18
+ 3620 0090 00000000 		.4byte	.LFB14
+ 3621 0094 08000000 		.4byte	.LFE14
+ 3622 0098 00000000 		.4byte	.LFB19
+ 3623 009c 04000000 		.4byte	.LFE19
+ 3624 00a0 00000000 		.4byte	.LFB20
+ 3625 00a4 4A000000 		.4byte	.LFE20
+ 3626 00a8 00000000 		.4byte	0
+ 3627 00ac 00000000 		.4byte	0
+ 3628              		.section	.debug_line,"",%progbits
+ 3629              	.Ldebug_line0:
+ 3630 0000 EF020000 		.section	.debug_str,"MS",%progbits,1
+ 3630      02004201 
+ 3630      00000201 
+ 3630      FB0E0D00 
+ 3630      01010101 
+ 3631              	.LASF65:
+ 3632 0000 67657443 		.ascii	"getChipType\000"
+ 3632      68697054 
+ 3632      79706500 
+ 3633              	.LASF36:
+ 3634 000c 7061636B 		.ascii	"packetToAssemble\000"
+ 3634      6574546F 
+ 3634      41737365 
+ 3634      6D626C65 
+ 3634      00
+ 3635              	.LASF37:
+ 3636 001d 62726F61 		.ascii	"broadcast\000"
+ 3636      64636173 
+ 3636      7400
+ 3637              	.LASF47:
+ 3638 0027 41737365 		.ascii	"AssembleChipTypeReportPacket\000"
+ 3638      6D626C65 
+ 3638      43686970 
+ 3638      54797065 
+ 3638      5265706F 
+ 3639              	.LASF25:
+ 3640 0044 41737365 		.ascii	"AssembleGroupBroadcastingEmergencyStopPacket\000"
+ 3640      6D626C65 
+ 3640      47726F75 
+ 3640      7042726F 
+ 3640      61646361 
+ 3641              	.LASF66:
+ 3642 0071 4465636F 		.ascii	"DecodeBytesToIntMSBFirst\000"
+ 3642      64654279 
+ 3642      74657354 
+ 3642      6F496E74 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 70
+
+
+ 3642      4D534246 
+ 3643              	.LASF2:
+ 3644 008a 73686F72 		.ascii	"short int\000"
+ 3644      7420696E 
+ 3644      7400
+ 3645              	.LASF22:
+ 3646 0094 74617267 		.ascii	"targetDeviceSerialNumber\000"
+ 3646      65744465 
+ 3646      76696365 
+ 3646      53657269 
+ 3646      616C4E75 
+ 3647              	.LASF18:
+ 3648 00ad 73697A65 		.ascii	"sizetype\000"
+ 3648      74797065 
+ 3648      00
+ 3649              	.LASF23:
+ 3650 00b6 6572726F 		.ascii	"errorCode\000"
+ 3650      72436F64 
+ 3650      6500
+ 3651              	.LASF30:
+ 3652 00c0 6E657874 		.ascii	"nextByte\000"
+ 3652      42797465 
+ 3652      00
+ 3653              	.LASF69:
+ 3654 00c9 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
+ 3654      73657273 
+ 3654      5C617573 
+ 3654      74635C4F 
+ 3654      6E654472 
+ 3655 00f6 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Motor_Boar"
+ 3655      69742D46 
+ 3655      69726D77 
+ 3655      6172652D 
+ 3655      412D3230 
+ 3656 0127 645F5265 		.ascii	"d_Rev3.cydsn\000"
+ 3656      76332E63 
+ 3656      7964736E 
+ 3656      00
+ 3657              	.LASF8:
+ 3658 0134 5F5F7569 		.ascii	"__uint32_t\000"
+ 3658      6E743332 
+ 3658      5F7400
+ 3659              	.LASF34:
+ 3660 013f 47657448 		.ascii	"GetHeartbeatLeniencyCode\000"
+ 3660      65617274 
+ 3660      62656174 
+ 3660      4C656E69 
+ 3660      656E6379 
+ 3661              	.LASF38:
+ 3662 0158 68656172 		.ascii	"heartbeatLeniencyCode\000"
+ 3662      74626561 
+ 3662      744C656E 
+ 3662      69656E63 
+ 3662      79436F64 
+ 3663              	.LASF62:
+ 3664 016e 5061636B 		.ascii	"PacketIsOfID\000"
+ 3664      65744973 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 71
+
+
+ 3664      4F664944 
+ 3664      00
+ 3665              	.LASF4:
+ 3666 017b 5F5F7569 		.ascii	"__uint16_t\000"
+ 3666      6E743136 
+ 3666      5F7400
+ 3667              	.LASF57:
+ 3668 0186 4465636F 		.ascii	"DecodeTelemetryType\000"
+ 3668      64655465 
+ 3668      6C656D65 
+ 3668      74727954 
+ 3668      79706500 
+ 3669              	.LASF68:
+ 3670 019a 2E2E5C43 		.ascii	"..\\CANLib\\CANCommon.c\000"
+ 3670      414E4C69 
+ 3670      625C4341 
+ 3670      4E436F6D 
+ 3670      6D6F6E2E 
+ 3671              	.LASF67:
+ 3672 01b0 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3672      43313120 
+ 3672      352E342E 
+ 3672      31203230 
+ 3672      31363036 
+ 3673 01e3 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 3673      20726576 
+ 3673      6973696F 
+ 3673      6E203233 
+ 3673      37373135 
+ 3674 0216 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3674      66756E63 
+ 3674      74696F6E 
+ 3674      2D736563 
+ 3674      74696F6E 
+ 3675              	.LASF51:
+ 3676 023e 6D734265 		.ascii	"msBetweenReports\000"
+ 3676      74776565 
+ 3676      6E526570 
+ 3676      6F727473 
+ 3676      00
+ 3677              	.LASF13:
+ 3678 024f 75696E74 		.ascii	"uint8_t\000"
+ 3678      385F7400 
+ 3679              	.LASF20:
+ 3680 0257 7061636B 		.ascii	"packet\000"
+ 3680      657400
+ 3681              	.LASF49:
+ 3682 025e 41737365 		.ascii	"AssembleTelemetryTimingPacket\000"
+ 3682      6D626C65 
+ 3682      54656C65 
+ 3682      6D657472 
+ 3682      7954696D 
+ 3683              	.LASF35:
+ 3684 027c 41737365 		.ascii	"AssembleHeartbeatPacket\000"
+ 3684      6D626C65 
+ 3684      48656172 
+ 3684      74626561 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 72
+
+
+ 3684      74506163 
+ 3685              	.LASF41:
+ 3686 0294 74617267 		.ascii	"targetGroup\000"
+ 3686      65744772 
+ 3686      6F757000 
+ 3687              	.LASF10:
+ 3688 02a0 6C6F6E67 		.ascii	"long long int\000"
+ 3688      206C6F6E 
+ 3688      6720696E 
+ 3688      7400
+ 3689              	.LASF19:
+ 3690 02ae 43414E50 		.ascii	"CANPacket\000"
+ 3690      61636B65 
+ 3690      7400
+ 3691              	.LASF7:
+ 3692 02b8 6C6F6E67 		.ascii	"long int\000"
+ 3692      20696E74 
+ 3692      00
+ 3693              	.LASF48:
+ 3694 02c1 47657443 		.ascii	"GetChipTypeFromPacket\000"
+ 3694      68697054 
+ 3694      79706546 
+ 3694      726F6D50 
+ 3694      61636B65 
+ 3695              	.LASF3:
+ 3696 02d7 5F5F7569 		.ascii	"__uint8_t\000"
+ 3696      6E74385F 
+ 3696      7400
+ 3697              	.LASF32:
+ 3698 02e1 47657454 		.ascii	"GetTimeBetweenHeartbeatPacket\000"
+ 3698      696D6542 
+ 3698      65747765 
+ 3698      656E4865 
+ 3698      61727462 
+ 3699              	.LASF53:
+ 3700 02ff 41737365 		.ascii	"AssembleTelemetryReportPacket\000"
+ 3700      6D626C65 
+ 3700      54656C65 
+ 3700      6D657472 
+ 3700      79526570 
+ 3701              	.LASF33:
+ 3702 031d 6C617374 		.ascii	"lastHeartbeat\000"
+ 3702      48656172 
+ 3702      74626561 
+ 3702      7400
+ 3703              	.LASF60:
+ 3704 032b 436F6E73 		.ascii	"ConstructCANID\000"
+ 3704      74727563 
+ 3704      7443414E 
+ 3704      494400
+ 3705              	.LASF1:
+ 3706 033a 756E7369 		.ascii	"unsigned char\000"
+ 3706      676E6564 
+ 3706      20636861 
+ 3706      7200
+ 3707              	.LASF39:
+ 3708 0348 74696D65 		.ascii	"timestamp\000"
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 73
+
+
+ 3708      7374616D 
+ 3708      7000
+ 3709              	.LASF61:
+ 3710 0352 57726974 		.ascii	"WriteSenderSerialAndPacketID\000"
+ 3710      6553656E 
+ 3710      64657253 
+ 3710      65726961 
+ 3710      6C416E64 
+ 3711              	.LASF0:
+ 3712 036f 7369676E 		.ascii	"signed char\000"
+ 3712      65642063 
+ 3712      68617200 
+ 3713              	.LASF11:
+ 3714 037b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3714      206C6F6E 
+ 3714      6720756E 
+ 3714      7369676E 
+ 3714      65642069 
+ 3715              	.LASF16:
+ 3716 0392 75696E74 		.ascii	"uint32_t\000"
+ 3716      33325F74 
+ 3716      00
+ 3717              	.LASF12:
+ 3718 039b 756E7369 		.ascii	"unsigned int\000"
+ 3718      676E6564 
+ 3718      20696E74 
+ 3718      00
+ 3719              	.LASF14:
+ 3720 03a8 75696E74 		.ascii	"uint16_t\000"
+ 3720      31365F74 
+ 3720      00
+ 3721              	.LASF21:
+ 3722 03b1 74617267 		.ascii	"targetDeviceGroup\000"
+ 3722      65744465 
+ 3722      76696365 
+ 3722      47726F75 
+ 3722      7000
+ 3723              	.LASF42:
+ 3724 03c3 74617267 		.ascii	"targetSerial\000"
+ 3724      65745365 
+ 3724      7269616C 
+ 3724      00
+ 3725              	.LASF31:
+ 3726 03d0 74696D65 		.ascii	"time\000"
+ 3726      00
+ 3727              	.LASF56:
+ 3728 03d5 47657454 		.ascii	"GetTelemetryTimingFromPacket\000"
+ 3728      656C656D 
+ 3728      65747279 
+ 3728      54696D69 
+ 3728      6E674672 
+ 3729              	.LASF45:
+ 3730 03f2 41737365 		.ascii	"AssembleChipTypePullPacket\000"
+ 3730      6D626C65 
+ 3730      43686970 
+ 3730      54797065 
+ 3730      50756C6C 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 74
+
+
+ 3731              	.LASF5:
+ 3732 040d 73686F72 		.ascii	"short unsigned int\000"
+ 3732      7420756E 
+ 3732      7369676E 
+ 3732      65642069 
+ 3732      6E7400
+ 3733              	.LASF46:
+ 3734 0420 74617267 		.ascii	"targetDeviceSerial\000"
+ 3734      65744465 
+ 3734      76696365 
+ 3734      53657269 
+ 3734      616C00
+ 3735              	.LASF15:
+ 3736 0433 696E7433 		.ascii	"int32_t\000"
+ 3736      325F7400 
+ 3737              	.LASF17:
+ 3738 043b 64617461 		.ascii	"data\000"
+ 3738      00
+ 3739              	.LASF40:
+ 3740 0440 41737365 		.ascii	"AssembleFailReportPacket\000"
+ 3740      6D626C65 
+ 3740      4661696C 
+ 3740      5265706F 
+ 3740      72745061 
+ 3741              	.LASF64:
+ 3742 0459 57726974 		.ascii	"WritePacketIDOnly\000"
+ 3742      65506163 
+ 3742      6B657449 
+ 3742      444F6E6C 
+ 3742      7900
+ 3743              	.LASF9:
+ 3744 046b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3744      20756E73 
+ 3744      69676E65 
+ 3744      6420696E 
+ 3744      7400
+ 3745              	.LASF26:
+ 3746 047d 67726F75 		.ascii	"groupCode\000"
+ 3746      70436F64 
+ 3746      6500
+ 3747              	.LASF6:
+ 3748 0487 5F5F696E 		.ascii	"__int32_t\000"
+ 3748      7433325F 
+ 3748      7400
+ 3749              	.LASF54:
+ 3750 0491 4465636F 		.ascii	"DecodeTelemetryDataSigned\000"
+ 3750      64655465 
+ 3750      6C656D65 
+ 3750      74727944 
+ 3750      61746153 
+ 3751              	.LASF52:
+ 3752 04ab 41737365 		.ascii	"AssembleTelemetryPullPacket\000"
+ 3752      6D626C65 
+ 3752      54656C65 
+ 3752      6D657472 
+ 3752      7950756C 
+ 3753              	.LASF44:
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 75
+
+
+ 3754 04c7 41737365 		.ascii	"AssembleOverrideProtectionPacket\000"
+ 3754      6D626C65 
+ 3754      4F766572 
+ 3754      72696465 
+ 3754      50726F74 
+ 3755              	.LASF58:
+ 3756 04e8 41737365 		.ascii	"AssembleRGBColorPacket\000"
+ 3756      6D626C65 
+ 3756      52474243 
+ 3756      6F6C6F72 
+ 3756      5061636B 
+ 3757              	.LASF24:
+ 3758 04ff 41737365 		.ascii	"AssembleEmergencyStopPacket\000"
+ 3758      6D626C65 
+ 3758      456D6572 
+ 3758      67656E63 
+ 3758      7953746F 
+ 3759              	.LASF50:
+ 3760 051b 74656C65 		.ascii	"telemetryTypeCode\000"
+ 3760      6D657472 
+ 3760      79547970 
+ 3760      65436F64 
+ 3760      6500
+ 3761              	.LASF43:
+ 3762 052d 6661696C 		.ascii	"failedPacketID\000"
+ 3762      65645061 
+ 3762      636B6574 
+ 3762      494400
+ 3763              	.LASF63:
+ 3764 053c 5061636B 		.ascii	"PackIntIntoDataMSBFirst\000"
+ 3764      496E7449 
+ 3764      6E746F44 
+ 3764      6174614D 
+ 3764      53424669 
+ 3765              	.LASF28:
+ 3766 0554 47657445 		.ascii	"GetEmergencyStopErrorCode\000"
+ 3766      6D657267 
+ 3766      656E6379 
+ 3766      53746F70 
+ 3766      4572726F 
+ 3767              	.LASF59:
+ 3768 056e 61646472 		.ascii	"addrLED\000"
+ 3768      4C454400 
+ 3769              	.LASF55:
+ 3770 0576 4465636F 		.ascii	"DecodeTelemetryDataUnsigned\000"
+ 3770      64655465 
+ 3770      6C656D65 
+ 3770      74727944 
+ 3770      61746155 
+ 3771              	.LASF29:
+ 3772 0592 47657448 		.ascii	"GetHeartbeatTimeStamp\000"
+ 3772      65617274 
+ 3772      62656174 
+ 3772      54696D65 
+ 3772      5374616D 
+ 3773              	.LASF27:
+ 3774 05a8 41737365 		.ascii	"AssembleBrodcastEmergencyStopPacket\000"
+ARM GAS  C:\Users\austc\AppData\Local\Temp\cc35U0xg.s 			page 76
+
+
+ 3774      6D626C65 
+ 3774      42726F64 
+ 3774      63617374 
+ 3774      456D6572 
+ 3775              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

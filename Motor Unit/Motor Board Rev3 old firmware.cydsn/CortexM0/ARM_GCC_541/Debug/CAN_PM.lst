@@ -1,0 +1,1208 @@
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"CAN_PM.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.CAN_SaveConfig,"ax",%progbits
+  20              		.align	2
+  21              		.global	CAN_SaveConfig
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	CAN_SaveConfig, %function
+  25              	CAN_SaveConfig:
+  26              	.LFB34:
+  27              		.file 1 "Generated_Source\\PSoC4\\CAN_PM.c"
+   1:Generated_Source\PSoC4/CAN_PM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/CAN_PM.c **** * File Name: CAN_PM.c
+   3:Generated_Source\PSoC4/CAN_PM.c **** * Version 3.0
+   4:Generated_Source\PSoC4/CAN_PM.c **** *
+   5:Generated_Source\PSoC4/CAN_PM.c **** * Description:
+   6:Generated_Source\PSoC4/CAN_PM.c **** *  This file contains the setup, control and status commands to support
+   7:Generated_Source\PSoC4/CAN_PM.c **** *  component operations in the low power mode.
+   8:Generated_Source\PSoC4/CAN_PM.c **** *
+   9:Generated_Source\PSoC4/CAN_PM.c **** * Note:
+  10:Generated_Source\PSoC4/CAN_PM.c **** *
+  11:Generated_Source\PSoC4/CAN_PM.c **** ********************************************************************************
+  12:Generated_Source\PSoC4/CAN_PM.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC4/CAN_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:Generated_Source\PSoC4/CAN_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:Generated_Source\PSoC4/CAN_PM.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC4/CAN_PM.c **** *******************************************************************************/
+  17:Generated_Source\PSoC4/CAN_PM.c **** 
+  18:Generated_Source\PSoC4/CAN_PM.c **** #include "CAN.h"
+  19:Generated_Source\PSoC4/CAN_PM.c **** 
+  20:Generated_Source\PSoC4/CAN_PM.c **** static CAN_BACKUP_STRUCT CAN_backup =
+  21:Generated_Source\PSoC4/CAN_PM.c **** {
+  22:Generated_Source\PSoC4/CAN_PM.c ****     0u,
+  23:Generated_Source\PSoC4/CAN_PM.c ****     #if (CY_PSOC3 || CY_PSOC5)
+  24:Generated_Source\PSoC4/CAN_PM.c ****         0u,
+  25:Generated_Source\PSoC4/CAN_PM.c ****         CAN_INIT_INTERRUPT_MASK,
+  26:Generated_Source\PSoC4/CAN_PM.c ****         CAN_MODE_MASK,
+  27:Generated_Source\PSoC4/CAN_PM.c ****         (((uint32) ((uint32) CAN_SYNC_EDGE    << CAN_EDGE_MODE_SHIFT))     |
+  28:Generated_Source\PSoC4/CAN_PM.c ****         ((uint32) ((uint32) CAN_SAMPLING_MODE << CAN_SAMPLE_MODE_SHIFT))   |
+  29:Generated_Source\PSoC4/CAN_PM.c ****         ((uint32) ((uint32) CAN_CFG_REG_SJW   << CAN_CFG_REG_SJW_SHIFT))   |
+  30:Generated_Source\PSoC4/CAN_PM.c ****         ((uint32) ((uint32) CAN_RESET_TYPE    << CAN_RESET_SHIFT))         |
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 2
+
+
+  31:Generated_Source\PSoC4/CAN_PM.c ****         ((uint32) ((uint32) CAN_CFG_REG_TSEG2 << CAN_CFG_REG_TSEG2_SHIFT)) |
+  32:Generated_Source\PSoC4/CAN_PM.c ****         ((uint32) ((uint32) CAN_CFG_REG_TSEG1 << CAN_CFG_REG_TSEG1_SHIFT)) |
+  33:Generated_Source\PSoC4/CAN_PM.c ****         ((uint32) ((uint32) CAN_ARBITER       << CAN_ARBITER_SHIFT))       |
+  34:Generated_Source\PSoC4/CAN_PM.c ****         ((uint32) ((uint32) CAN_BITRATE       << CAN_BITRATE_SHIFT)))
+  35:Generated_Source\PSoC4/CAN_PM.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
+  36:Generated_Source\PSoC4/CAN_PM.c **** };
+  37:Generated_Source\PSoC4/CAN_PM.c **** 
+  38:Generated_Source\PSoC4/CAN_PM.c **** 
+  39:Generated_Source\PSoC4/CAN_PM.c **** /*******************************************************************************
+  40:Generated_Source\PSoC4/CAN_PM.c **** * Function Name: CAN_SaveConfig
+  41:Generated_Source\PSoC4/CAN_PM.c **** ********************************************************************************
+  42:Generated_Source\PSoC4/CAN_PM.c **** *
+  43:Generated_Source\PSoC4/CAN_PM.c **** * Summary:
+  44:Generated_Source\PSoC4/CAN_PM.c **** *  Save the CAN configuration.
+  45:Generated_Source\PSoC4/CAN_PM.c **** *
+  46:Generated_Source\PSoC4/CAN_PM.c **** * Parameters:
+  47:Generated_Source\PSoC4/CAN_PM.c **** *  None.
+  48:Generated_Source\PSoC4/CAN_PM.c **** *
+  49:Generated_Source\PSoC4/CAN_PM.c **** * Return:
+  50:Generated_Source\PSoC4/CAN_PM.c **** *  None.
+  51:Generated_Source\PSoC4/CAN_PM.c **** *
+  52:Generated_Source\PSoC4/CAN_PM.c **** * Global Variables:
+  53:Generated_Source\PSoC4/CAN_PM.c **** *  CAN_backup - Modified when non-retention registers are saved.
+  54:Generated_Source\PSoC4/CAN_PM.c **** *
+  55:Generated_Source\PSoC4/CAN_PM.c **** * Reentrant:
+  56:Generated_Source\PSoC4/CAN_PM.c **** *  No.
+  57:Generated_Source\PSoC4/CAN_PM.c **** *
+  58:Generated_Source\PSoC4/CAN_PM.c **** *******************************************************************************/
+  59:Generated_Source\PSoC4/CAN_PM.c **** void CAN_SaveConfig(void) 
+  60:Generated_Source\PSoC4/CAN_PM.c **** {
+  28              		.loc 1 60 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  61:Generated_Source\PSoC4/CAN_PM.c ****     #if (CY_PSOC3 || CY_PSOC5)
+  62:Generated_Source\PSoC4/CAN_PM.c ****         CAN_backup.intSr = (CY_GET_REG32(CAN_INT_SR_PTR));
+  63:Generated_Source\PSoC4/CAN_PM.c ****         CAN_backup.intEn = (CY_GET_REG32(CAN_INT_EN_PTR));
+  64:Generated_Source\PSoC4/CAN_PM.c ****         CAN_backup.cmd = (CY_GET_REG32(CAN_CMD_PTR));
+  65:Generated_Source\PSoC4/CAN_PM.c ****         CAN_backup.cfg = (CY_GET_REG32(CAN_CFG_PTR));
+  66:Generated_Source\PSoC4/CAN_PM.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
+  67:Generated_Source\PSoC4/CAN_PM.c **** }
+  33              		.loc 1 67 0
+  34              		@ sp needed
+  35 0000 7047     		bx	lr
+  36              		.cfi_endproc
+  37              	.LFE34:
+  38              		.size	CAN_SaveConfig, .-CAN_SaveConfig
+  39 0002 C046     		.section	.text.CAN_RestoreConfig,"ax",%progbits
+  40              		.align	2
+  41              		.global	CAN_RestoreConfig
+  42              		.code	16
+  43              		.thumb_func
+  44              		.type	CAN_RestoreConfig, %function
+  45              	CAN_RestoreConfig:
+  46              	.LFB35:
+  68:Generated_Source\PSoC4/CAN_PM.c **** 
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 3
+
+
+  69:Generated_Source\PSoC4/CAN_PM.c **** 
+  70:Generated_Source\PSoC4/CAN_PM.c **** /*******************************************************************************
+  71:Generated_Source\PSoC4/CAN_PM.c **** * Function Name: CAN_RestoreConfig
+  72:Generated_Source\PSoC4/CAN_PM.c **** ********************************************************************************
+  73:Generated_Source\PSoC4/CAN_PM.c **** *
+  74:Generated_Source\PSoC4/CAN_PM.c **** * Summary:
+  75:Generated_Source\PSoC4/CAN_PM.c **** *  Restore the CAN configuration.
+  76:Generated_Source\PSoC4/CAN_PM.c **** *
+  77:Generated_Source\PSoC4/CAN_PM.c **** * Parameters:
+  78:Generated_Source\PSoC4/CAN_PM.c **** *  None.
+  79:Generated_Source\PSoC4/CAN_PM.c **** *
+  80:Generated_Source\PSoC4/CAN_PM.c **** * Return:
+  81:Generated_Source\PSoC4/CAN_PM.c **** *  None.
+  82:Generated_Source\PSoC4/CAN_PM.c **** *
+  83:Generated_Source\PSoC4/CAN_PM.c **** * Global Variables:
+  84:Generated_Source\PSoC4/CAN_PM.c **** *  CAN_backup - Used when non-retention registers are restored.
+  85:Generated_Source\PSoC4/CAN_PM.c **** *
+  86:Generated_Source\PSoC4/CAN_PM.c **** * Side Effects:
+  87:Generated_Source\PSoC4/CAN_PM.c **** *  If this API is called without first calling SaveConfig then default values
+  88:Generated_Source\PSoC4/CAN_PM.c **** *  from Customizer will be in the following registers: CAN_INT_SR,
+  89:Generated_Source\PSoC4/CAN_PM.c **** *  CAN_INT_EN, CAN_CMD, CAN_CFG.
+  90:Generated_Source\PSoC4/CAN_PM.c **** *
+  91:Generated_Source\PSoC4/CAN_PM.c **** *******************************************************************************/
+  92:Generated_Source\PSoC4/CAN_PM.c **** void CAN_RestoreConfig(void) 
+  93:Generated_Source\PSoC4/CAN_PM.c **** {
+  47              		.loc 1 93 0
+  48              		.cfi_startproc
+  49              		@ args = 0, pretend = 0, frame = 0
+  50              		@ frame_needed = 0, uses_anonymous_args = 0
+  51              		@ link register save eliminated.
+  94:Generated_Source\PSoC4/CAN_PM.c ****     #if (CY_PSOC3 || CY_PSOC5)
+  95:Generated_Source\PSoC4/CAN_PM.c ****         CY_SET_REG32(CAN_INT_SR_PTR, CAN_backup.intSr);
+  96:Generated_Source\PSoC4/CAN_PM.c ****         CY_SET_REG32(CAN_INT_EN_PTR, CAN_backup.intEn);
+  97:Generated_Source\PSoC4/CAN_PM.c ****         CY_SET_REG32(CAN_CMD_PTR, CAN_backup.cmd);
+  98:Generated_Source\PSoC4/CAN_PM.c ****         CY_SET_REG32(CAN_CFG_PTR, CAN_backup.cfg);
+  99:Generated_Source\PSoC4/CAN_PM.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
+ 100:Generated_Source\PSoC4/CAN_PM.c **** }
+  52              		.loc 1 100 0
+  53              		@ sp needed
+  54 0000 7047     		bx	lr
+  55              		.cfi_endproc
+  56              	.LFE35:
+  57              		.size	CAN_RestoreConfig, .-CAN_RestoreConfig
+  58 0002 C046     		.section	.text.CAN_Sleep,"ax",%progbits
+  59              		.align	2
+  60              		.global	CAN_Sleep
+  61              		.code	16
+  62              		.thumb_func
+  63              		.type	CAN_Sleep, %function
+  64              	CAN_Sleep:
+  65              	.LFB36:
+ 101:Generated_Source\PSoC4/CAN_PM.c **** 
+ 102:Generated_Source\PSoC4/CAN_PM.c **** 
+ 103:Generated_Source\PSoC4/CAN_PM.c **** /*******************************************************************************
+ 104:Generated_Source\PSoC4/CAN_PM.c **** * Function Name: CAN_Sleep
+ 105:Generated_Source\PSoC4/CAN_PM.c **** ********************************************************************************
+ 106:Generated_Source\PSoC4/CAN_PM.c **** *
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 4
+
+
+ 107:Generated_Source\PSoC4/CAN_PM.c **** * Summary:
+ 108:Generated_Source\PSoC4/CAN_PM.c **** *  Prepares CAN Component to go to sleep.
+ 109:Generated_Source\PSoC4/CAN_PM.c **** *
+ 110:Generated_Source\PSoC4/CAN_PM.c **** * Parameters:
+ 111:Generated_Source\PSoC4/CAN_PM.c **** *  None.
+ 112:Generated_Source\PSoC4/CAN_PM.c **** *
+ 113:Generated_Source\PSoC4/CAN_PM.c **** * Return:
+ 114:Generated_Source\PSoC4/CAN_PM.c **** *  None.
+ 115:Generated_Source\PSoC4/CAN_PM.c **** *
+ 116:Generated_Source\PSoC4/CAN_PM.c **** * Global Variables:
+ 117:Generated_Source\PSoC4/CAN_PM.c **** *  CAN_backup - Modified when non-retention registers are saved.
+ 118:Generated_Source\PSoC4/CAN_PM.c **** *
+ 119:Generated_Source\PSoC4/CAN_PM.c **** * Reentrant:
+ 120:Generated_Source\PSoC4/CAN_PM.c **** *  No.
+ 121:Generated_Source\PSoC4/CAN_PM.c **** *
+ 122:Generated_Source\PSoC4/CAN_PM.c **** *******************************************************************************/
+ 123:Generated_Source\PSoC4/CAN_PM.c **** void CAN_Sleep(void) 
+ 124:Generated_Source\PSoC4/CAN_PM.c **** {
+  66              		.loc 1 124 0
+  67              		.cfi_startproc
+  68              		@ args = 0, pretend = 0, frame = 0
+  69              		@ frame_needed = 0, uses_anonymous_args = 0
+  70 0000 10B5     		push	{r4, lr}
+  71              		.cfi_def_cfa_offset 8
+  72              		.cfi_offset 4, -8
+  73              		.cfi_offset 14, -4
+ 125:Generated_Source\PSoC4/CAN_PM.c ****     #if (!(CY_PSOC3 || CY_PSOC5))
+ 126:Generated_Source\PSoC4/CAN_PM.c ****         uint8 i;
+ 127:Generated_Source\PSoC4/CAN_PM.c ****     #endif /* (!(CY_PSOC3 || CY_PSOC5)) */
+ 128:Generated_Source\PSoC4/CAN_PM.c **** 
+ 129:Generated_Source\PSoC4/CAN_PM.c ****     if (0u != (CY_GET_REG32(CAN_CMD_PTR) & CAN_MODE_MASK))
+  74              		.loc 1 129 0
+  75 0002 104B     		ldr	r3, .L8
+  76 0004 1B68     		ldr	r3, [r3]
+  77 0006 DB07     		lsls	r3, r3, #31
+  78 0008 04D5     		bpl	.L4
+ 130:Generated_Source\PSoC4/CAN_PM.c ****     {
+ 131:Generated_Source\PSoC4/CAN_PM.c ****         CAN_backup.enableState = 1u;
+  79              		.loc 1 131 0
+  80 000a 0122     		movs	r2, #1
+  81 000c 0E4B     		ldr	r3, .L8+4
+  82 000e 1A70     		strb	r2, [r3]
+  83              	.L6:
+ 124:Generated_Source\PSoC4/CAN_PM.c ****     #if (!(CY_PSOC3 || CY_PSOC5))
+  84              		.loc 1 124 0 discriminator 1
+  85 0010 0023     		movs	r3, #0
+  86 0012 0FE0     		b	.L5
+  87              	.L4:
+ 132:Generated_Source\PSoC4/CAN_PM.c ****     }
+ 133:Generated_Source\PSoC4/CAN_PM.c ****     else /* CAN block is disabled */
+ 134:Generated_Source\PSoC4/CAN_PM.c ****     {
+ 135:Generated_Source\PSoC4/CAN_PM.c ****         CAN_backup.enableState = 0u;
+  88              		.loc 1 135 0
+  89 0014 0022     		movs	r2, #0
+  90 0016 0C4B     		ldr	r3, .L8+4
+  91 0018 1A70     		strb	r2, [r3]
+  92 001a F9E7     		b	.L6
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 5
+
+
+  93              	.LVL0:
+  94              	.L7:
+ 136:Generated_Source\PSoC4/CAN_PM.c ****     }
+ 137:Generated_Source\PSoC4/CAN_PM.c **** 
+ 138:Generated_Source\PSoC4/CAN_PM.c ****     #if (CY_PSOC3 || CY_PSOC5)
+ 139:Generated_Source\PSoC4/CAN_PM.c ****         CAN_SaveConfig();
+ 140:Generated_Source\PSoC4/CAN_PM.c ****         (void) CAN_Stop();
+ 141:Generated_Source\PSoC4/CAN_PM.c ****     #else /* CY_PSOC4 */
+ 142:Generated_Source\PSoC4/CAN_PM.c ****         /* Abort respective pending TX message requests */
+ 143:Generated_Source\PSoC4/CAN_PM.c ****         for (i = 0u; i < CAN_NUMBER_OF_TX_MAILBOXES; i++)
+ 144:Generated_Source\PSoC4/CAN_PM.c ****         {
+ 145:Generated_Source\PSoC4/CAN_PM.c ****             CAN_TX_ABORT_MESSAGE(i);
+  95              		.loc 1 145 0 discriminator 3
+  96 001c 1A01     		lsls	r2, r3, #4
+  97 001e 0B49     		ldr	r1, .L8+8
+  98 0020 8C46     		mov	ip, r1
+  99 0022 6244     		add	r2, r2, ip
+ 100 0024 1168     		ldr	r1, [r2]
+ 101 0026 0320     		movs	r0, #3
+ 102 0028 8143     		bics	r1, r0
+ 103 002a 0138     		subs	r0, r0, #1
+ 104 002c 0143     		orrs	r1, r0
+ 105 002e 1160     		str	r1, [r2]
+ 143:Generated_Source\PSoC4/CAN_PM.c ****         {
+ 106              		.loc 1 143 0 discriminator 3
+ 107 0030 0133     		adds	r3, r3, #1
+ 108              	.LVL1:
+ 109 0032 DBB2     		uxtb	r3, r3
+ 110              	.LVL2:
+ 111              	.L5:
+ 143:Generated_Source\PSoC4/CAN_PM.c ****         {
+ 112              		.loc 1 143 0 is_stmt 0 discriminator 1
+ 113 0034 072B     		cmp	r3, #7
+ 114 0036 F1D9     		bls	.L7
+ 146:Generated_Source\PSoC4/CAN_PM.c ****         }
+ 147:Generated_Source\PSoC4/CAN_PM.c **** 
+ 148:Generated_Source\PSoC4/CAN_PM.c ****         /* Sets CAN controller to Stop mode */
+ 149:Generated_Source\PSoC4/CAN_PM.c ****         (void) CAN_Stop();
+ 115              		.loc 1 149 0 is_stmt 1
+ 116 0038 FFF7FEFF 		bl	CAN_Stop
+ 117              	.LVL3:
+ 150:Generated_Source\PSoC4/CAN_PM.c **** 
+ 151:Generated_Source\PSoC4/CAN_PM.c ****         /* Clear Global Interrupt enable Flag */
+ 152:Generated_Source\PSoC4/CAN_PM.c ****         (void) CAN_GlobalIntDisable();
+ 118              		.loc 1 152 0
+ 119 003c FFF7FEFF 		bl	CAN_GlobalIntDisable
+ 120              	.LVL4:
+ 153:Generated_Source\PSoC4/CAN_PM.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
+ 154:Generated_Source\PSoC4/CAN_PM.c **** }
+ 121              		.loc 1 154 0
+ 122              		@ sp needed
+ 123 0040 10BD     		pop	{r4, pc}
+ 124              	.L9:
+ 125 0042 C046     		.align	2
+ 126              	.L8:
+ 127 0044 10002F40 		.word	1076822032
+ 128 0048 00000000 		.word	.LANCHOR0
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 6
+
+
+ 129 004c 20002F40 		.word	1076822048
+ 130              		.cfi_endproc
+ 131              	.LFE36:
+ 132              		.size	CAN_Sleep, .-CAN_Sleep
+ 133              		.section	.text.CAN_Wakeup,"ax",%progbits
+ 134              		.align	2
+ 135              		.global	CAN_Wakeup
+ 136              		.code	16
+ 137              		.thumb_func
+ 138              		.type	CAN_Wakeup, %function
+ 139              	CAN_Wakeup:
+ 140              	.LFB37:
+ 155:Generated_Source\PSoC4/CAN_PM.c **** 
+ 156:Generated_Source\PSoC4/CAN_PM.c **** 
+ 157:Generated_Source\PSoC4/CAN_PM.c **** /*******************************************************************************
+ 158:Generated_Source\PSoC4/CAN_PM.c **** * Function Name: CAN_Wakeup
+ 159:Generated_Source\PSoC4/CAN_PM.c **** ********************************************************************************
+ 160:Generated_Source\PSoC4/CAN_PM.c **** *
+ 161:Generated_Source\PSoC4/CAN_PM.c **** * Summary:
+ 162:Generated_Source\PSoC4/CAN_PM.c **** *  Prepares CAN Component to wake up.
+ 163:Generated_Source\PSoC4/CAN_PM.c **** *
+ 164:Generated_Source\PSoC4/CAN_PM.c **** * Parameters:
+ 165:Generated_Source\PSoC4/CAN_PM.c **** *  None.
+ 166:Generated_Source\PSoC4/CAN_PM.c **** *
+ 167:Generated_Source\PSoC4/CAN_PM.c **** * Return:
+ 168:Generated_Source\PSoC4/CAN_PM.c **** *  None.
+ 169:Generated_Source\PSoC4/CAN_PM.c **** *
+ 170:Generated_Source\PSoC4/CAN_PM.c **** * Global Variables:
+ 171:Generated_Source\PSoC4/CAN_PM.c **** *  CAN_backup - Used when non-retention registers are restored.
+ 172:Generated_Source\PSoC4/CAN_PM.c **** *
+ 173:Generated_Source\PSoC4/CAN_PM.c **** * Reentrant:
+ 174:Generated_Source\PSoC4/CAN_PM.c **** *  No.
+ 175:Generated_Source\PSoC4/CAN_PM.c **** *
+ 176:Generated_Source\PSoC4/CAN_PM.c **** *******************************************************************************/
+ 177:Generated_Source\PSoC4/CAN_PM.c **** void CAN_Wakeup(void) 
+ 178:Generated_Source\PSoC4/CAN_PM.c **** {
+ 141              		.loc 1 178 0
+ 142              		.cfi_startproc
+ 143              		@ args = 0, pretend = 0, frame = 0
+ 144              		@ frame_needed = 0, uses_anonymous_args = 0
+ 145 0000 10B5     		push	{r4, lr}
+ 146              		.cfi_def_cfa_offset 8
+ 147              		.cfi_offset 4, -8
+ 148              		.cfi_offset 14, -4
+ 179:Generated_Source\PSoC4/CAN_PM.c ****     #if (CY_PSOC3 || CY_PSOC5)
+ 180:Generated_Source\PSoC4/CAN_PM.c ****         /* Enable CAN block in Active mode */
+ 181:Generated_Source\PSoC4/CAN_PM.c ****         CAN_PM_ACT_CFG_REG |= CAN_ACT_PWR_EN;
+ 182:Generated_Source\PSoC4/CAN_PM.c ****         /* Enable CAN block in Alternate Active (Standby) mode */
+ 183:Generated_Source\PSoC4/CAN_PM.c ****         CAN_PM_STBY_CFG_REG |= CAN_STBY_PWR_EN;
+ 184:Generated_Source\PSoC4/CAN_PM.c **** 
+ 185:Generated_Source\PSoC4/CAN_PM.c ****         CAN_RestoreConfig();
+ 186:Generated_Source\PSoC4/CAN_PM.c **** 
+ 187:Generated_Source\PSoC4/CAN_PM.c ****         /* Reconfigure Rx and Tx Buffers control registers */
+ 188:Generated_Source\PSoC4/CAN_PM.c ****         (void) CAN_RxTxBuffersConfig();
+ 189:Generated_Source\PSoC4/CAN_PM.c **** 
+ 190:Generated_Source\PSoC4/CAN_PM.c ****         if (CAN_backup.enableState != 0u)
+ 191:Generated_Source\PSoC4/CAN_PM.c ****         {
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 7
+
+
+ 192:Generated_Source\PSoC4/CAN_PM.c ****             /* Enable component's operation */
+ 193:Generated_Source\PSoC4/CAN_PM.c ****             (void) CAN_Enable();
+ 194:Generated_Source\PSoC4/CAN_PM.c ****         } /* Do nothing if component's block was disabled before */
+ 195:Generated_Source\PSoC4/CAN_PM.c ****     #else /* CY_PSOC4 */
+ 196:Generated_Source\PSoC4/CAN_PM.c ****         /* Clear all INT_STATUS bits */
+ 197:Generated_Source\PSoC4/CAN_PM.c ****         CAN_INT_SR_REG = CAN_INT_STATUS_MASK;
+ 149              		.loc 1 197 0
+ 150 0002 064A     		ldr	r2, .L12
+ 151 0004 064B     		ldr	r3, .L12+4
+ 152 0006 1A60     		str	r2, [r3]
+ 198:Generated_Source\PSoC4/CAN_PM.c **** 
+ 199:Generated_Source\PSoC4/CAN_PM.c ****         /* Set Global Interrupt enable Flag */
+ 200:Generated_Source\PSoC4/CAN_PM.c ****         (void) CAN_GlobalIntEnable();
+ 153              		.loc 1 200 0
+ 154 0008 FFF7FEFF 		bl	CAN_GlobalIntEnable
+ 155              	.LVL5:
+ 201:Generated_Source\PSoC4/CAN_PM.c **** 
+ 202:Generated_Source\PSoC4/CAN_PM.c ****         if (CAN_backup.enableState != 0u)
+ 156              		.loc 1 202 0
+ 157 000c 054B     		ldr	r3, .L12+8
+ 158 000e 1B78     		ldrb	r3, [r3]
+ 159 0010 002B     		cmp	r3, #0
+ 160 0012 01D0     		beq	.L10
+ 203:Generated_Source\PSoC4/CAN_PM.c ****         {
+ 204:Generated_Source\PSoC4/CAN_PM.c ****             (void) CAN_Enable();
+ 161              		.loc 1 204 0
+ 162 0014 FFF7FEFF 		bl	CAN_Enable
+ 163              	.LVL6:
+ 164              	.L10:
+ 205:Generated_Source\PSoC4/CAN_PM.c ****         } /* Do nothing if component's block was disabled before */
+ 206:Generated_Source\PSoC4/CAN_PM.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
+ 207:Generated_Source\PSoC4/CAN_PM.c **** }
+ 165              		.loc 1 207 0
+ 166              		@ sp needed
+ 167 0018 10BD     		pop	{r4, pc}
+ 168              	.L13:
+ 169 001a C046     		.align	2
+ 170              	.L12:
+ 171 001c FC1F0000 		.word	8188
+ 172 0020 00002F40 		.word	1076822016
+ 173 0024 00000000 		.word	.LANCHOR0
+ 174              		.cfi_endproc
+ 175              	.LFE37:
+ 176              		.size	CAN_Wakeup, .-CAN_Wakeup
+ 177              		.bss
+ 178              		.align	2
+ 179              		.set	.LANCHOR0,. + 0
+ 180              		.type	CAN_backup, %object
+ 181              		.size	CAN_backup, 1
+ 182              	CAN_backup:
+ 183 0000 00       		.space	1
+ 184              		.text
+ 185              	.Letext0:
+ 186              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 187              		.file 3 "Generated_Source\\PSoC4\\CAN.h"
+ 188              		.section	.debug_info,"",%progbits
+ 189              	.Ldebug_info0:
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 8
+
+
+ 190 0000 43020000 		.4byte	0x243
+ 191 0004 0400     		.2byte	0x4
+ 192 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 193 000a 04       		.byte	0x4
+ 194 000b 01       		.uleb128 0x1
+ 195 000c 0C010000 		.4byte	.LASF36
+ 196 0010 0C       		.byte	0xc
+ 197 0011 A4020000 		.4byte	.LASF37
+ 198 0015 2C020000 		.4byte	.LASF38
+ 199 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 200 001d 00000000 		.4byte	0
+ 201 0021 00000000 		.4byte	.Ldebug_line0
+ 202 0025 02       		.uleb128 0x2
+ 203 0026 01       		.byte	0x1
+ 204 0027 06       		.byte	0x6
+ 205 0028 19020000 		.4byte	.LASF0
+ 206 002c 02       		.uleb128 0x2
+ 207 002d 01       		.byte	0x1
+ 208 002e 08       		.byte	0x8
+ 209 002f DA000000 		.4byte	.LASF1
+ 210 0033 02       		.uleb128 0x2
+ 211 0034 02       		.byte	0x2
+ 212 0035 05       		.byte	0x5
+ 213 0036 BE000000 		.4byte	.LASF2
+ 214 003a 02       		.uleb128 0x2
+ 215 003b 02       		.byte	0x2
+ 216 003c 07       		.byte	0x7
+ 217 003d 79000000 		.4byte	.LASF3
+ 218 0041 02       		.uleb128 0x2
+ 219 0042 04       		.byte	0x4
+ 220 0043 05       		.byte	0x5
+ 221 0044 F8010000 		.4byte	.LASF4
+ 222 0048 02       		.uleb128 0x2
+ 223 0049 04       		.byte	0x4
+ 224 004a 07       		.byte	0x7
+ 225 004b 67000000 		.4byte	.LASF5
+ 226 004f 02       		.uleb128 0x2
+ 227 0050 08       		.byte	0x8
+ 228 0051 05       		.byte	0x5
+ 229 0052 B7010000 		.4byte	.LASF6
+ 230 0056 02       		.uleb128 0x2
+ 231 0057 08       		.byte	0x8
+ 232 0058 07       		.byte	0x7
+ 233 0059 F5000000 		.4byte	.LASF7
+ 234 005d 03       		.uleb128 0x3
+ 235 005e 04       		.byte	0x4
+ 236 005f 05       		.byte	0x5
+ 237 0060 696E7400 		.ascii	"int\000"
+ 238 0064 02       		.uleb128 0x2
+ 239 0065 04       		.byte	0x4
+ 240 0066 07       		.byte	0x7
+ 241 0067 E8000000 		.4byte	.LASF8
+ 242 006b 04       		.uleb128 0x4
+ 243 006c F2010000 		.4byte	.LASF9
+ 244 0070 02       		.byte	0x2
+ 245 0071 E401     		.2byte	0x1e4
+ 246 0073 2C000000 		.4byte	0x2c
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 9
+
+
+ 247 0077 04       		.uleb128 0x4
+ 248 0078 D3000000 		.4byte	.LASF10
+ 249 007c 02       		.byte	0x2
+ 250 007d E601     		.2byte	0x1e6
+ 251 007f 48000000 		.4byte	0x48
+ 252 0083 02       		.uleb128 0x2
+ 253 0084 04       		.byte	0x4
+ 254 0085 04       		.byte	0x4
+ 255 0086 4A000000 		.4byte	.LASF11
+ 256 008a 02       		.uleb128 0x2
+ 257 008b 08       		.byte	0x8
+ 258 008c 04       		.byte	0x4
+ 259 008d A5000000 		.4byte	.LASF12
+ 260 0091 02       		.uleb128 0x2
+ 261 0092 01       		.byte	0x1
+ 262 0093 08       		.byte	0x8
+ 263 0094 C5010000 		.4byte	.LASF13
+ 264 0098 04       		.uleb128 0x4
+ 265 0099 62000000 		.4byte	.LASF14
+ 266 009d 02       		.byte	0x2
+ 267 009e 8E02     		.2byte	0x28e
+ 268 00a0 A4000000 		.4byte	0xa4
+ 269 00a4 05       		.uleb128 0x5
+ 270 00a5 6B000000 		.4byte	0x6b
+ 271 00a9 04       		.uleb128 0x4
+ 272 00aa 00000000 		.4byte	.LASF15
+ 273 00ae 02       		.byte	0x2
+ 274 00af 9002     		.2byte	0x290
+ 275 00b1 B5000000 		.4byte	0xb5
+ 276 00b5 05       		.uleb128 0x5
+ 277 00b6 77000000 		.4byte	0x77
+ 278 00ba 02       		.uleb128 0x2
+ 279 00bb 08       		.byte	0x8
+ 280 00bc 04       		.byte	0x4
+ 281 00bd 0D020000 		.4byte	.LASF16
+ 282 00c1 02       		.uleb128 0x2
+ 283 00c2 04       		.byte	0x4
+ 284 00c3 07       		.byte	0x7
+ 285 00c4 9A010000 		.4byte	.LASF17
+ 286 00c8 06       		.uleb128 0x6
+ 287 00c9 08       		.byte	0x8
+ 288 00ca 03       		.byte	0x3
+ 289 00cb 75       		.byte	0x75
+ 290 00cc DD000000 		.4byte	0xdd
+ 291 00d0 07       		.uleb128 0x7
+ 292 00d1 45000000 		.4byte	.LASF19
+ 293 00d5 03       		.byte	0x3
+ 294 00d6 77       		.byte	0x77
+ 295 00d7 ED000000 		.4byte	0xed
+ 296 00db 00       		.byte	0
+ 297 00dc 00       		.byte	0
+ 298 00dd 08       		.uleb128 0x8
+ 299 00de 98000000 		.4byte	0x98
+ 300 00e2 ED000000 		.4byte	0xed
+ 301 00e6 09       		.uleb128 0x9
+ 302 00e7 C1000000 		.4byte	0xc1
+ 303 00eb 07       		.byte	0x7
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 10
+
+
+ 304 00ec 00       		.byte	0
+ 305 00ed 05       		.uleb128 0x5
+ 306 00ee DD000000 		.4byte	0xdd
+ 307 00f2 0A       		.uleb128 0xa
+ 308 00f3 06000000 		.4byte	.LASF18
+ 309 00f7 03       		.byte	0x3
+ 310 00f8 78       		.byte	0x78
+ 311 00f9 C8000000 		.4byte	0xc8
+ 312 00fd 06       		.uleb128 0x6
+ 313 00fe 04       		.byte	0x4
+ 314 00ff 03       		.byte	0x3
+ 315 0100 7B       		.byte	0x7b
+ 316 0101 12010000 		.4byte	0x112
+ 317 0105 07       		.uleb128 0x7
+ 318 0106 45000000 		.4byte	.LASF19
+ 319 010a 03       		.byte	0x3
+ 320 010b 7D       		.byte	0x7d
+ 321 010c 22010000 		.4byte	0x122
+ 322 0110 00       		.byte	0
+ 323 0111 00       		.byte	0
+ 324 0112 08       		.uleb128 0x8
+ 325 0113 98000000 		.4byte	0x98
+ 326 0117 22010000 		.4byte	0x122
+ 327 011b 09       		.uleb128 0x9
+ 328 011c C1000000 		.4byte	0xc1
+ 329 0120 03       		.byte	0x3
+ 330 0121 00       		.byte	0
+ 331 0122 05       		.uleb128 0x5
+ 332 0123 12010000 		.4byte	0x112
+ 333 0127 0A       		.uleb128 0xa
+ 334 0128 34000000 		.4byte	.LASF20
+ 335 012c 03       		.byte	0x3
+ 336 012d 7E       		.byte	0x7e
+ 337 012e FD000000 		.4byte	0xfd
+ 338 0132 06       		.uleb128 0x6
+ 339 0133 10       		.byte	0x10
+ 340 0134 03       		.byte	0x3
+ 341 0135 AC       		.byte	0xac
+ 342 0136 5F010000 		.4byte	0x15f
+ 343 013a 07       		.uleb128 0x7
+ 344 013b 3F000000 		.4byte	.LASF21
+ 345 013f 03       		.byte	0x3
+ 346 0140 AE       		.byte	0xae
+ 347 0141 27010000 		.4byte	0x127
+ 348 0145 00       		.byte	0
+ 349 0146 07       		.uleb128 0x7
+ 350 0147 15000000 		.4byte	.LASF22
+ 351 014b 03       		.byte	0x3
+ 352 014c AF       		.byte	0xaf
+ 353 014d 27010000 		.4byte	0x127
+ 354 0151 04       		.byte	0x4
+ 355 0152 07       		.uleb128 0x7
+ 356 0153 25020000 		.4byte	.LASF23
+ 357 0157 03       		.byte	0x3
+ 358 0158 B0       		.byte	0xb0
+ 359 0159 F2000000 		.4byte	0xf2
+ 360 015d 08       		.byte	0x8
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 11
+
+
+ 361 015e 00       		.byte	0
+ 362 015f 0A       		.uleb128 0xa
+ 363 0160 8C000000 		.4byte	.LASF24
+ 364 0164 03       		.byte	0x3
+ 365 0165 B1       		.byte	0xb1
+ 366 0166 32010000 		.4byte	0x132
+ 367 016a 06       		.uleb128 0x6
+ 368 016b 01       		.byte	0x1
+ 369 016c 03       		.byte	0x3
+ 370 016d B4       		.byte	0xb4
+ 371 016e 7F010000 		.4byte	0x17f
+ 372 0172 07       		.uleb128 0x7
+ 373 0173 01020000 		.4byte	.LASF25
+ 374 0177 03       		.byte	0x3
+ 375 0178 B6       		.byte	0xb6
+ 376 0179 6B000000 		.4byte	0x6b
+ 377 017d 00       		.byte	0
+ 378 017e 00       		.byte	0
+ 379 017f 0A       		.uleb128 0xa
+ 380 0180 50000000 		.4byte	.LASF26
+ 381 0184 03       		.byte	0x3
+ 382 0185 BD       		.byte	0xbd
+ 383 0186 6A010000 		.4byte	0x16a
+ 384 018a 0B       		.uleb128 0xb
+ 385 018b 1A000000 		.4byte	.LASF27
+ 386 018f 01       		.byte	0x1
+ 387 0190 3B       		.byte	0x3b
+ 388 0191 00000000 		.4byte	.LFB34
+ 389 0195 02000000 		.4byte	.LFE34-.LFB34
+ 390 0199 01       		.uleb128 0x1
+ 391 019a 9C       		.byte	0x9c
+ 392 019b 0B       		.uleb128 0xb
+ 393 019c AC000000 		.4byte	.LASF28
+ 394 01a0 01       		.byte	0x1
+ 395 01a1 5C       		.byte	0x5c
+ 396 01a2 00000000 		.4byte	.LFB35
+ 397 01a6 02000000 		.4byte	.LFE35-.LFB35
+ 398 01aa 01       		.uleb128 0x1
+ 399 01ab 9C       		.byte	0x9c
+ 400 01ac 0C       		.uleb128 0xc
+ 401 01ad D3010000 		.4byte	.LASF29
+ 402 01b1 01       		.byte	0x1
+ 403 01b2 7B       		.byte	0x7b
+ 404 01b3 00000000 		.4byte	.LFB36
+ 405 01b7 50000000 		.4byte	.LFE36-.LFB36
+ 406 01bb 01       		.uleb128 0x1
+ 407 01bc 9C       		.byte	0x9c
+ 408 01bd E1010000 		.4byte	0x1e1
+ 409 01c1 0D       		.uleb128 0xd
+ 410 01c2 6900     		.ascii	"i\000"
+ 411 01c4 01       		.byte	0x1
+ 412 01c5 7E       		.byte	0x7e
+ 413 01c6 6B000000 		.4byte	0x6b
+ 414 01ca 00000000 		.4byte	.LLST0
+ 415 01ce 0E       		.uleb128 0xe
+ 416 01cf 3C000000 		.4byte	.LVL3
+ 417 01d3 1A020000 		.4byte	0x21a
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 12
+
+
+ 418 01d7 0E       		.uleb128 0xe
+ 419 01d8 40000000 		.4byte	.LVL4
+ 420 01dc 25020000 		.4byte	0x225
+ 421 01e0 00       		.byte	0
+ 422 01e1 0C       		.uleb128 0xc
+ 423 01e2 C8000000 		.4byte	.LASF30
+ 424 01e6 01       		.byte	0x1
+ 425 01e7 B1       		.byte	0xb1
+ 426 01e8 00000000 		.4byte	.LFB37
+ 427 01ec 28000000 		.4byte	.LFE37-.LFB37
+ 428 01f0 01       		.uleb128 0x1
+ 429 01f1 9C       		.byte	0x9c
+ 430 01f2 09020000 		.4byte	0x209
+ 431 01f6 0E       		.uleb128 0xe
+ 432 01f7 0C000000 		.4byte	.LVL5
+ 433 01fb 30020000 		.4byte	0x230
+ 434 01ff 0E       		.uleb128 0xe
+ 435 0200 18000000 		.4byte	.LVL6
+ 436 0204 3B020000 		.4byte	0x23b
+ 437 0208 00       		.byte	0
+ 438 0209 0F       		.uleb128 0xf
+ 439 020a 9A000000 		.4byte	.LASF31
+ 440 020e 01       		.byte	0x1
+ 441 020f 14       		.byte	0x14
+ 442 0210 7F010000 		.4byte	0x17f
+ 443 0214 05       		.uleb128 0x5
+ 444 0215 03       		.byte	0x3
+ 445 0216 00000000 		.4byte	CAN_backup
+ 446 021a 10       		.uleb128 0x10
+ 447 021b CA010000 		.4byte	.LASF32
+ 448 021f CA010000 		.4byte	.LASF32
+ 449 0223 03       		.byte	0x3
+ 450 0224 C6       		.byte	0xc6
+ 451 0225 10       		.uleb128 0x10
+ 452 0226 DD010000 		.4byte	.LASF33
+ 453 022a DD010000 		.4byte	.LASF33
+ 454 022e 03       		.byte	0x3
+ 455 022f C9       		.byte	0xc9
+ 456 0230 10       		.uleb128 0x10
+ 457 0231 A3010000 		.4byte	.LASF34
+ 458 0235 A3010000 		.4byte	.LASF34
+ 459 0239 03       		.byte	0x3
+ 460 023a C8       		.byte	0xc8
+ 461 023b 10       		.uleb128 0x10
+ 462 023c 29000000 		.4byte	.LASF35
+ 463 0240 29000000 		.4byte	.LASF35
+ 464 0244 03       		.byte	0x3
+ 465 0245 C7       		.byte	0xc7
+ 466 0246 00       		.byte	0
+ 467              		.section	.debug_abbrev,"",%progbits
+ 468              	.Ldebug_abbrev0:
+ 469 0000 01       		.uleb128 0x1
+ 470 0001 11       		.uleb128 0x11
+ 471 0002 01       		.byte	0x1
+ 472 0003 25       		.uleb128 0x25
+ 473 0004 0E       		.uleb128 0xe
+ 474 0005 13       		.uleb128 0x13
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 13
+
+
+ 475 0006 0B       		.uleb128 0xb
+ 476 0007 03       		.uleb128 0x3
+ 477 0008 0E       		.uleb128 0xe
+ 478 0009 1B       		.uleb128 0x1b
+ 479 000a 0E       		.uleb128 0xe
+ 480 000b 55       		.uleb128 0x55
+ 481 000c 17       		.uleb128 0x17
+ 482 000d 11       		.uleb128 0x11
+ 483 000e 01       		.uleb128 0x1
+ 484 000f 10       		.uleb128 0x10
+ 485 0010 17       		.uleb128 0x17
+ 486 0011 00       		.byte	0
+ 487 0012 00       		.byte	0
+ 488 0013 02       		.uleb128 0x2
+ 489 0014 24       		.uleb128 0x24
+ 490 0015 00       		.byte	0
+ 491 0016 0B       		.uleb128 0xb
+ 492 0017 0B       		.uleb128 0xb
+ 493 0018 3E       		.uleb128 0x3e
+ 494 0019 0B       		.uleb128 0xb
+ 495 001a 03       		.uleb128 0x3
+ 496 001b 0E       		.uleb128 0xe
+ 497 001c 00       		.byte	0
+ 498 001d 00       		.byte	0
+ 499 001e 03       		.uleb128 0x3
+ 500 001f 24       		.uleb128 0x24
+ 501 0020 00       		.byte	0
+ 502 0021 0B       		.uleb128 0xb
+ 503 0022 0B       		.uleb128 0xb
+ 504 0023 3E       		.uleb128 0x3e
+ 505 0024 0B       		.uleb128 0xb
+ 506 0025 03       		.uleb128 0x3
+ 507 0026 08       		.uleb128 0x8
+ 508 0027 00       		.byte	0
+ 509 0028 00       		.byte	0
+ 510 0029 04       		.uleb128 0x4
+ 511 002a 16       		.uleb128 0x16
+ 512 002b 00       		.byte	0
+ 513 002c 03       		.uleb128 0x3
+ 514 002d 0E       		.uleb128 0xe
+ 515 002e 3A       		.uleb128 0x3a
+ 516 002f 0B       		.uleb128 0xb
+ 517 0030 3B       		.uleb128 0x3b
+ 518 0031 05       		.uleb128 0x5
+ 519 0032 49       		.uleb128 0x49
+ 520 0033 13       		.uleb128 0x13
+ 521 0034 00       		.byte	0
+ 522 0035 00       		.byte	0
+ 523 0036 05       		.uleb128 0x5
+ 524 0037 35       		.uleb128 0x35
+ 525 0038 00       		.byte	0
+ 526 0039 49       		.uleb128 0x49
+ 527 003a 13       		.uleb128 0x13
+ 528 003b 00       		.byte	0
+ 529 003c 00       		.byte	0
+ 530 003d 06       		.uleb128 0x6
+ 531 003e 13       		.uleb128 0x13
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 14
+
+
+ 532 003f 01       		.byte	0x1
+ 533 0040 0B       		.uleb128 0xb
+ 534 0041 0B       		.uleb128 0xb
+ 535 0042 3A       		.uleb128 0x3a
+ 536 0043 0B       		.uleb128 0xb
+ 537 0044 3B       		.uleb128 0x3b
+ 538 0045 0B       		.uleb128 0xb
+ 539 0046 01       		.uleb128 0x1
+ 540 0047 13       		.uleb128 0x13
+ 541 0048 00       		.byte	0
+ 542 0049 00       		.byte	0
+ 543 004a 07       		.uleb128 0x7
+ 544 004b 0D       		.uleb128 0xd
+ 545 004c 00       		.byte	0
+ 546 004d 03       		.uleb128 0x3
+ 547 004e 0E       		.uleb128 0xe
+ 548 004f 3A       		.uleb128 0x3a
+ 549 0050 0B       		.uleb128 0xb
+ 550 0051 3B       		.uleb128 0x3b
+ 551 0052 0B       		.uleb128 0xb
+ 552 0053 49       		.uleb128 0x49
+ 553 0054 13       		.uleb128 0x13
+ 554 0055 38       		.uleb128 0x38
+ 555 0056 0B       		.uleb128 0xb
+ 556 0057 00       		.byte	0
+ 557 0058 00       		.byte	0
+ 558 0059 08       		.uleb128 0x8
+ 559 005a 01       		.uleb128 0x1
+ 560 005b 01       		.byte	0x1
+ 561 005c 49       		.uleb128 0x49
+ 562 005d 13       		.uleb128 0x13
+ 563 005e 01       		.uleb128 0x1
+ 564 005f 13       		.uleb128 0x13
+ 565 0060 00       		.byte	0
+ 566 0061 00       		.byte	0
+ 567 0062 09       		.uleb128 0x9
+ 568 0063 21       		.uleb128 0x21
+ 569 0064 00       		.byte	0
+ 570 0065 49       		.uleb128 0x49
+ 571 0066 13       		.uleb128 0x13
+ 572 0067 2F       		.uleb128 0x2f
+ 573 0068 0B       		.uleb128 0xb
+ 574 0069 00       		.byte	0
+ 575 006a 00       		.byte	0
+ 576 006b 0A       		.uleb128 0xa
+ 577 006c 16       		.uleb128 0x16
+ 578 006d 00       		.byte	0
+ 579 006e 03       		.uleb128 0x3
+ 580 006f 0E       		.uleb128 0xe
+ 581 0070 3A       		.uleb128 0x3a
+ 582 0071 0B       		.uleb128 0xb
+ 583 0072 3B       		.uleb128 0x3b
+ 584 0073 0B       		.uleb128 0xb
+ 585 0074 49       		.uleb128 0x49
+ 586 0075 13       		.uleb128 0x13
+ 587 0076 00       		.byte	0
+ 588 0077 00       		.byte	0
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 15
+
+
+ 589 0078 0B       		.uleb128 0xb
+ 590 0079 2E       		.uleb128 0x2e
+ 591 007a 00       		.byte	0
+ 592 007b 3F       		.uleb128 0x3f
+ 593 007c 19       		.uleb128 0x19
+ 594 007d 03       		.uleb128 0x3
+ 595 007e 0E       		.uleb128 0xe
+ 596 007f 3A       		.uleb128 0x3a
+ 597 0080 0B       		.uleb128 0xb
+ 598 0081 3B       		.uleb128 0x3b
+ 599 0082 0B       		.uleb128 0xb
+ 600 0083 27       		.uleb128 0x27
+ 601 0084 19       		.uleb128 0x19
+ 602 0085 11       		.uleb128 0x11
+ 603 0086 01       		.uleb128 0x1
+ 604 0087 12       		.uleb128 0x12
+ 605 0088 06       		.uleb128 0x6
+ 606 0089 40       		.uleb128 0x40
+ 607 008a 18       		.uleb128 0x18
+ 608 008b 9742     		.uleb128 0x2117
+ 609 008d 19       		.uleb128 0x19
+ 610 008e 00       		.byte	0
+ 611 008f 00       		.byte	0
+ 612 0090 0C       		.uleb128 0xc
+ 613 0091 2E       		.uleb128 0x2e
+ 614 0092 01       		.byte	0x1
+ 615 0093 3F       		.uleb128 0x3f
+ 616 0094 19       		.uleb128 0x19
+ 617 0095 03       		.uleb128 0x3
+ 618 0096 0E       		.uleb128 0xe
+ 619 0097 3A       		.uleb128 0x3a
+ 620 0098 0B       		.uleb128 0xb
+ 621 0099 3B       		.uleb128 0x3b
+ 622 009a 0B       		.uleb128 0xb
+ 623 009b 27       		.uleb128 0x27
+ 624 009c 19       		.uleb128 0x19
+ 625 009d 11       		.uleb128 0x11
+ 626 009e 01       		.uleb128 0x1
+ 627 009f 12       		.uleb128 0x12
+ 628 00a0 06       		.uleb128 0x6
+ 629 00a1 40       		.uleb128 0x40
+ 630 00a2 18       		.uleb128 0x18
+ 631 00a3 9742     		.uleb128 0x2117
+ 632 00a5 19       		.uleb128 0x19
+ 633 00a6 01       		.uleb128 0x1
+ 634 00a7 13       		.uleb128 0x13
+ 635 00a8 00       		.byte	0
+ 636 00a9 00       		.byte	0
+ 637 00aa 0D       		.uleb128 0xd
+ 638 00ab 34       		.uleb128 0x34
+ 639 00ac 00       		.byte	0
+ 640 00ad 03       		.uleb128 0x3
+ 641 00ae 08       		.uleb128 0x8
+ 642 00af 3A       		.uleb128 0x3a
+ 643 00b0 0B       		.uleb128 0xb
+ 644 00b1 3B       		.uleb128 0x3b
+ 645 00b2 0B       		.uleb128 0xb
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 16
+
+
+ 646 00b3 49       		.uleb128 0x49
+ 647 00b4 13       		.uleb128 0x13
+ 648 00b5 02       		.uleb128 0x2
+ 649 00b6 17       		.uleb128 0x17
+ 650 00b7 00       		.byte	0
+ 651 00b8 00       		.byte	0
+ 652 00b9 0E       		.uleb128 0xe
+ 653 00ba 898201   		.uleb128 0x4109
+ 654 00bd 00       		.byte	0
+ 655 00be 11       		.uleb128 0x11
+ 656 00bf 01       		.uleb128 0x1
+ 657 00c0 31       		.uleb128 0x31
+ 658 00c1 13       		.uleb128 0x13
+ 659 00c2 00       		.byte	0
+ 660 00c3 00       		.byte	0
+ 661 00c4 0F       		.uleb128 0xf
+ 662 00c5 34       		.uleb128 0x34
+ 663 00c6 00       		.byte	0
+ 664 00c7 03       		.uleb128 0x3
+ 665 00c8 0E       		.uleb128 0xe
+ 666 00c9 3A       		.uleb128 0x3a
+ 667 00ca 0B       		.uleb128 0xb
+ 668 00cb 3B       		.uleb128 0x3b
+ 669 00cc 0B       		.uleb128 0xb
+ 670 00cd 49       		.uleb128 0x49
+ 671 00ce 13       		.uleb128 0x13
+ 672 00cf 02       		.uleb128 0x2
+ 673 00d0 18       		.uleb128 0x18
+ 674 00d1 00       		.byte	0
+ 675 00d2 00       		.byte	0
+ 676 00d3 10       		.uleb128 0x10
+ 677 00d4 2E       		.uleb128 0x2e
+ 678 00d5 00       		.byte	0
+ 679 00d6 3F       		.uleb128 0x3f
+ 680 00d7 19       		.uleb128 0x19
+ 681 00d8 3C       		.uleb128 0x3c
+ 682 00d9 19       		.uleb128 0x19
+ 683 00da 6E       		.uleb128 0x6e
+ 684 00db 0E       		.uleb128 0xe
+ 685 00dc 03       		.uleb128 0x3
+ 686 00dd 0E       		.uleb128 0xe
+ 687 00de 3A       		.uleb128 0x3a
+ 688 00df 0B       		.uleb128 0xb
+ 689 00e0 3B       		.uleb128 0x3b
+ 690 00e1 0B       		.uleb128 0xb
+ 691 00e2 00       		.byte	0
+ 692 00e3 00       		.byte	0
+ 693 00e4 00       		.byte	0
+ 694              		.section	.debug_loc,"",%progbits
+ 695              	.Ldebug_loc0:
+ 696              	.LLST0:
+ 697 0000 1C000000 		.4byte	.LVL0
+ 698 0004 32000000 		.4byte	.LVL1
+ 699 0008 0100     		.2byte	0x1
+ 700 000a 53       		.byte	0x53
+ 701 000b 34000000 		.4byte	.LVL2
+ 702 000f 3B000000 		.4byte	.LVL3-1
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 17
+
+
+ 703 0013 0100     		.2byte	0x1
+ 704 0015 53       		.byte	0x53
+ 705 0016 00000000 		.4byte	0
+ 706 001a 00000000 		.4byte	0
+ 707              		.section	.debug_aranges,"",%progbits
+ 708 0000 34000000 		.4byte	0x34
+ 709 0004 0200     		.2byte	0x2
+ 710 0006 00000000 		.4byte	.Ldebug_info0
+ 711 000a 04       		.byte	0x4
+ 712 000b 00       		.byte	0
+ 713 000c 0000     		.2byte	0
+ 714 000e 0000     		.2byte	0
+ 715 0010 00000000 		.4byte	.LFB34
+ 716 0014 02000000 		.4byte	.LFE34-.LFB34
+ 717 0018 00000000 		.4byte	.LFB35
+ 718 001c 02000000 		.4byte	.LFE35-.LFB35
+ 719 0020 00000000 		.4byte	.LFB36
+ 720 0024 50000000 		.4byte	.LFE36-.LFB36
+ 721 0028 00000000 		.4byte	.LFB37
+ 722 002c 28000000 		.4byte	.LFE37-.LFB37
+ 723 0030 00000000 		.4byte	0
+ 724 0034 00000000 		.4byte	0
+ 725              		.section	.debug_ranges,"",%progbits
+ 726              	.Ldebug_ranges0:
+ 727 0000 00000000 		.4byte	.LFB34
+ 728 0004 02000000 		.4byte	.LFE34
+ 729 0008 00000000 		.4byte	.LFB35
+ 730 000c 02000000 		.4byte	.LFE35
+ 731 0010 00000000 		.4byte	.LFB36
+ 732 0014 50000000 		.4byte	.LFE36
+ 733 0018 00000000 		.4byte	.LFB37
+ 734 001c 28000000 		.4byte	.LFE37
+ 735 0020 00000000 		.4byte	0
+ 736 0024 00000000 		.4byte	0
+ 737              		.section	.debug_line,"",%progbits
+ 738              	.Ldebug_line0:
+ 739 0000 BC000000 		.section	.debug_str,"MS",%progbits,1
+ 739      02004C00 
+ 739      00000201 
+ 739      FB0E0D00 
+ 739      01010101 
+ 740              	.LASF15:
+ 741 0000 72656733 		.ascii	"reg32\000"
+ 741      3200
+ 742              	.LASF18:
+ 743 0006 43414E5F 		.ascii	"CAN_DATA_BYTES\000"
+ 743      44415441 
+ 743      5F425954 
+ 743      455300
+ 744              	.LASF22:
+ 745 0015 74786964 		.ascii	"txid\000"
+ 745      00
+ 746              	.LASF27:
+ 747 001a 43414E5F 		.ascii	"CAN_SaveConfig\000"
+ 747      53617665 
+ 747      436F6E66 
+ 747      696700
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 18
+
+
+ 748              	.LASF35:
+ 749 0029 43414E5F 		.ascii	"CAN_Enable\000"
+ 749      456E6162 
+ 749      6C6500
+ 750              	.LASF20:
+ 751 0034 43414E5F 		.ascii	"CAN_REG_32\000"
+ 751      5245475F 
+ 751      333200
+ 752              	.LASF21:
+ 753 003f 7478636D 		.ascii	"txcmd\000"
+ 753      6400
+ 754              	.LASF19:
+ 755 0045 62797465 		.ascii	"byte\000"
+ 755      00
+ 756              	.LASF11:
+ 757 004a 666C6F61 		.ascii	"float\000"
+ 757      7400
+ 758              	.LASF26:
+ 759 0050 43414E5F 		.ascii	"CAN_BACKUP_STRUCT\000"
+ 759      4241434B 
+ 759      55505F53 
+ 759      54525543 
+ 759      5400
+ 760              	.LASF14:
+ 761 0062 72656738 		.ascii	"reg8\000"
+ 761      00
+ 762              	.LASF5:
+ 763 0067 6C6F6E67 		.ascii	"long unsigned int\000"
+ 763      20756E73 
+ 763      69676E65 
+ 763      6420696E 
+ 763      7400
+ 764              	.LASF3:
+ 765 0079 73686F72 		.ascii	"short unsigned int\000"
+ 765      7420756E 
+ 765      7369676E 
+ 765      65642069 
+ 765      6E7400
+ 766              	.LASF24:
+ 767 008c 43414E5F 		.ascii	"CAN_TX_STRUCT\000"
+ 767      54585F53 
+ 767      54525543 
+ 767      5400
+ 768              	.LASF31:
+ 769 009a 43414E5F 		.ascii	"CAN_backup\000"
+ 769      6261636B 
+ 769      757000
+ 770              	.LASF12:
+ 771 00a5 646F7562 		.ascii	"double\000"
+ 771      6C6500
+ 772              	.LASF28:
+ 773 00ac 43414E5F 		.ascii	"CAN_RestoreConfig\000"
+ 773      52657374 
+ 773      6F726543 
+ 773      6F6E6669 
+ 773      6700
+ 774              	.LASF2:
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 19
+
+
+ 775 00be 73686F72 		.ascii	"short int\000"
+ 775      7420696E 
+ 775      7400
+ 776              	.LASF30:
+ 777 00c8 43414E5F 		.ascii	"CAN_Wakeup\000"
+ 777      57616B65 
+ 777      757000
+ 778              	.LASF10:
+ 779 00d3 75696E74 		.ascii	"uint32\000"
+ 779      333200
+ 780              	.LASF1:
+ 781 00da 756E7369 		.ascii	"unsigned char\000"
+ 781      676E6564 
+ 781      20636861 
+ 781      7200
+ 782              	.LASF8:
+ 783 00e8 756E7369 		.ascii	"unsigned int\000"
+ 783      676E6564 
+ 783      20696E74 
+ 783      00
+ 784              	.LASF7:
+ 785 00f5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 785      206C6F6E 
+ 785      6720756E 
+ 785      7369676E 
+ 785      65642069 
+ 786              	.LASF36:
+ 787 010c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 787      43313120 
+ 787      352E342E 
+ 787      31203230 
+ 787      31363036 
+ 788 013f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 788      20726576 
+ 788      6973696F 
+ 788      6E203233 
+ 788      37373135 
+ 789 0172 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 789      66756E63 
+ 789      74696F6E 
+ 789      2D736563 
+ 789      74696F6E 
+ 790              	.LASF17:
+ 791 019a 73697A65 		.ascii	"sizetype\000"
+ 791      74797065 
+ 791      00
+ 792              	.LASF34:
+ 793 01a3 43414E5F 		.ascii	"CAN_GlobalIntEnable\000"
+ 793      476C6F62 
+ 793      616C496E 
+ 793      74456E61 
+ 793      626C6500 
+ 794              	.LASF6:
+ 795 01b7 6C6F6E67 		.ascii	"long long int\000"
+ 795      206C6F6E 
+ 795      6720696E 
+ 795      7400
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 20
+
+
+ 796              	.LASF13:
+ 797 01c5 63686172 		.ascii	"char\000"
+ 797      00
+ 798              	.LASF32:
+ 799 01ca 43414E5F 		.ascii	"CAN_Stop\000"
+ 799      53746F70 
+ 799      00
+ 800              	.LASF29:
+ 801 01d3 43414E5F 		.ascii	"CAN_Sleep\000"
+ 801      536C6565 
+ 801      7000
+ 802              	.LASF33:
+ 803 01dd 43414E5F 		.ascii	"CAN_GlobalIntDisable\000"
+ 803      476C6F62 
+ 803      616C496E 
+ 803      74446973 
+ 803      61626C65 
+ 804              	.LASF9:
+ 805 01f2 75696E74 		.ascii	"uint8\000"
+ 805      3800
+ 806              	.LASF4:
+ 807 01f8 6C6F6E67 		.ascii	"long int\000"
+ 807      20696E74 
+ 807      00
+ 808              	.LASF25:
+ 809 0201 656E6162 		.ascii	"enableState\000"
+ 809      6C655374 
+ 809      61746500 
+ 810              	.LASF16:
+ 811 020d 6C6F6E67 		.ascii	"long double\000"
+ 811      20646F75 
+ 811      626C6500 
+ 812              	.LASF0:
+ 813 0219 7369676E 		.ascii	"signed char\000"
+ 813      65642063 
+ 813      68617200 
+ 814              	.LASF23:
+ 815 0225 74786461 		.ascii	"txdata\000"
+ 815      746100
+ 816              	.LASF38:
+ 817 022c 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
+ 817      73657273 
+ 817      5C617573 
+ 817      74635C4F 
+ 817      6E654472 
+ 818 0259 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Motor Boar"
+ 818      69742D46 
+ 818      69726D77 
+ 818      6172652D 
+ 818      412D3230 
+ 819 028a 64205265 		.ascii	"d Rev3 old firmware.cydsn\000"
+ 819      7633206F 
+ 819      6C642066 
+ 819      69726D77 
+ 819      6172652E 
+ 820              	.LASF37:
+ 821 02a4 47656E65 		.ascii	"Generated_Source\\PSoC4\\CAN_PM.c\000"
+ARM GAS  C:\Users\austc\AppData\Local\Temp\ccTi5p0I.s 			page 21
+
+
+ 821      72617465 
+ 821      645F536F 
+ 821      75726365 
+ 821      5C50536F 
+ 822              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
