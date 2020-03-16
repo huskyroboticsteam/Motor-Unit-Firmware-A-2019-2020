@@ -23,7 +23,7 @@
         uint8 code, param, done;  
     };
     
-void initialize(void);
+void Initialize(void);
 
     
 #endif /* CYAPICALLBACKS_H */   

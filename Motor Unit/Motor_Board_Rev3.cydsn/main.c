@@ -59,23 +59,32 @@ CY_ISR(Pin_Limit_Handler){
 
 int main(void)
 { 
-    initialize();
-    
+    UART_Start();
+    Initialize();
+    CANPacket my6Pack;
     for(;;)
     {
-        sprintf(txData,"lololololol %d", test++);
-        UART_UartPutString(txData);
+        if(!PollAndReceiveCANPacket(&my6Pack)) {
+            for(int i = 0; i < 8; i++ ) {
+                sprintf(txData,"Byte%d %x   ", i+1, my6Pack.data[i]);
+                UART_UartPutString(txData);
+            }
+                sprintf(txData,"\r\n");
+                UART_UartPutString(txData);
+            //CyDelay(100);
+        }
     }
 }
  
 
 
-\
 void Initialize(void) {
-    InitCAN(0x4,0x1);
+    sprintf(txData, "Dip Addr: %x \r\n", Can_addr_Read());
+    UART_UartPutString(txData);
+    
+    InitCAN(0x4, Can_addr_Read());
     Timer_1_Start();
     QuadDec_Start();
-     
     CAN_GlobalIntEnable();
     CyGlobalIntEnable; /* Enable global interrupts. */
     isr_Limit_1_StartEx(Pin_Limit_Handler);
