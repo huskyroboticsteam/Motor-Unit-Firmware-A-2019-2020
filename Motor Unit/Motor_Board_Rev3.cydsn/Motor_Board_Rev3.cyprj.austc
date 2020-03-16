@@ -3131,6 +3131,10 @@
 <name_val_pair name="Generated_Source\PSoC4\StripLights_cisr.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="Generated_Source\PSoC4\StripLights_fisr.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\CortexM0\ARM_GCC_541\Debug\Motor_Board_Rev3.hex" v="-mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name="Generated_Source\PSoC4\FAULT.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC4\FAULT_PM.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC4\FAULT_MOTOR.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC4\FAULT_MOTOR_PM.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\austc\AppData\Local\Cypress Semiconductor\PSoC Creator\4.2&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p &quot;C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Motor_Board_Rev3.cyprj&quot; -d CY8C4248AZI-L485 -s &quot;C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Generated_Source\PSoC4&quot; -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
@@ -3825,10 +3829,10 @@
 <v>Generated_Source\PSoC4\Current_sense.h</v>
 <v>Generated_Source\PSoC4\Current_sense_aliases.h</v>
 <v>Generated_Source\PSoC4\Current_sense_PM.c</v>
-<v>Generated_Source\PSoC4\fault.c</v>
-<v>Generated_Source\PSoC4\fault.h</v>
-<v>Generated_Source\PSoC4\fault_aliases.h</v>
-<v>Generated_Source\PSoC4\fault_PM.c</v>
+<v>Generated_Source\PSoC4\FAULT.c</v>
+<v>Generated_Source\PSoC4\FAULT.h</v>
+<v>Generated_Source\PSoC4\FAULT_aliases.h</v>
+<v>Generated_Source\PSoC4\FAULT_PM.c</v>
 <v>Generated_Source\PSoC4\RTC_1.c</v>
 <v>Generated_Source\PSoC4\RTC_1.h</v>
 <v>Generated_Source\PSoC4\Timer_1.c</v>
@@ -3951,6 +3955,10 @@
 <v>Generated_Source\PSoC4\StripLights_cisr.h</v>
 <v>Generated_Source\PSoC4\StripLights_fisr.c</v>
 <v>Generated_Source\PSoC4\StripLights_fisr.h</v>
+<v>Generated_Source\PSoC4\FAULT_MOTOR.c</v>
+<v>Generated_Source\PSoC4\FAULT_MOTOR.h</v>
+<v>Generated_Source\PSoC4\FAULT_MOTOR_aliases.h</v>
+<v>Generated_Source\PSoC4\FAULT_MOTOR_PM.c</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -3960,7 +3968,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="132287939642096906" />
+<deps_time v="132288103614927839" />
 <top_block v="TopDesign" />
 <last_generation v="6" />
 <pdl_path v="" />

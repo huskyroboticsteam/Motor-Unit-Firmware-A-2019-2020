@@ -1292,24 +1292,6 @@ net Net_1393
 	switch ":interrupt_idmux_0.interrupt_idmux_0__out==>:interrupt_0.interrupt"
 	term   ":interrupt_0.interrupt"
 end Net_1393
-net Net_1394
-	term   ":udb@[UDB=(0,3)]:pld1:mc0.q"
-	switch ":udb@[UDB=(0,3)]:pld1:mc0.q==>:udb@[UDB=(0,3)]:pld1:output_permute0.q_0"
-	switch ":udb@[UDB=(0,3)]:pld1:output_permute0.output_0==>Stub-:udbswitch@[UDB=(0,3)][side=top]:v38"
-	switch "OStub-:udbswitch@[UDB=(0,3)][side=top]:v38"
-	switch ":udbswitch@[UDB=(0,3)][side=top]:38,27"
-	switch ":hvswitch@[UDB=(1,2)][side=left]:21,27_f"
-	switch ":hvswitch@[UDB=(2,2)][side=left]:vseg_21_top_f"
-	switch ":hvswitch@[UDB=(2,2)][side=left]:21,90_b"
-	switch ":hvswitch@[UDB=(2,2)][side=left]:hseg_90_b"
-	switch ":dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:102,90_f"
-	switch "IStub-:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v100+:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v102+:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v98"
-	switch "Stub-:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v100+:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v102+:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v98==>:ioport1:inputs2_mux.in_2"
-	switch ":ioport1:inputs2_mux.pin6__pin_input==>:ioport1:hsiom_out6.dsi"
-	switch ":ioport1:hsiom_out6.hsiom6_out==>:ioport1:smartio_mux_in6.direct_out"
-	switch ":ioport1:smartio_mux_in6.smartio_mux_in==>:ioport1:pin6.pin_input"
-	term   ":ioport1:pin6.pin_input"
-end Net_1394
 net Net_140
 	term   ":ioport5:pin3.fb"
 	switch ":ioport5:pin3.fb==>:ioport5:smartio_mux_out3.direct_in"
@@ -1326,6 +1308,24 @@ net Net_140
 	switch ":udb@[UDB=(0,3)]:pld0:input_permute.mc0_main_0==>:udb@[UDB=(0,3)]:pld0:mc0.main_0"
 	term   ":udb@[UDB=(0,3)]:pld0:mc0.main_0"
 end Net_140
+net Net_1416
+	term   ":udb@[UDB=(0,3)]:pld1:mc0.q"
+	switch ":udb@[UDB=(0,3)]:pld1:mc0.q==>:udb@[UDB=(0,3)]:pld1:output_permute0.q_0"
+	switch ":udb@[UDB=(0,3)]:pld1:output_permute0.output_0==>Stub-:udbswitch@[UDB=(0,3)][side=top]:v38"
+	switch "OStub-:udbswitch@[UDB=(0,3)][side=top]:v38"
+	switch ":udbswitch@[UDB=(0,3)][side=top]:38,27"
+	switch ":hvswitch@[UDB=(1,2)][side=left]:21,27_f"
+	switch ":hvswitch@[UDB=(2,2)][side=left]:vseg_21_top_f"
+	switch ":hvswitch@[UDB=(2,2)][side=left]:21,90_b"
+	switch ":hvswitch@[UDB=(2,2)][side=left]:hseg_90_b"
+	switch ":dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:102,90_f"
+	switch "IStub-:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v100+:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v102+:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v98"
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v100+:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v102+:dsiswitch_bottom@[DSI=(1,2)][side=bottom]:dsihc_bottom:v98==>:ioport1:inputs2_mux.in_2"
+	switch ":ioport1:inputs2_mux.pin6__pin_input==>:ioport1:hsiom_out6.dsi"
+	switch ":ioport1:hsiom_out6.hsiom6_out==>:ioport1:smartio_mux_in6.direct_out"
+	switch ":ioport1:smartio_mux_in6.smartio_mux_in==>:ioport1:pin6.pin_input"
+	term   ":ioport1:pin6.pin_input"
+end Net_1416
 net Net_200
 	term   ":ioport2:pin6.fb"
 	switch ":ioport2:pin6.fb==>:ioport2:smartio_mux_out6.direct_in"

@@ -20,19 +20,18 @@
 uint8 time_LED = 0;
 
 //Uart variables
-volatile uint8 uart_debug = 2;
-#define PWM_PERIOD = 255;
+char8 txData[TX_DATA_SIZE];
 
 //drive varaible
-int pwm_compare;
 uint8 invalidate = 0;
 
 //drive mode
-uint8 mode = 2;
+volatile uint8 mode = 2;
 
 //Status and Data Structs
-struct Can_data Can_rx_pwm, Can_rx_angle;
 volatile uint8 drive = 0;
+
+int test;
 
 
 CY_ISR(Period_Reset_Handler) {
@@ -45,7 +44,7 @@ CY_ISR(Period_Reset_Handler) {
     time_LED++;
     if(invalidate >= 20){
         set_PWM(0, 0, 0);   
-        Can_rx_pwm.done = 1;
+        //Can_rx_pwm.done = 1;
     }
 }
   
@@ -54,38 +53,33 @@ CY_ISR(Pin_Limit_Handler){
         sprintf(txData,"Limit interupt triggerd\r\n");
         UART_UartPutString(txData);
     }*/
-    set_PWM(pwm_compare, 0, 0);
+    set_PWM(0, 0, 0);
     QuadDec_SetCounter(0);
 }
 
 int main(void)
 { 
     initialize();
-    //initialize_can_addr();
-    int up = 0;
-    int test = 0;
-    pwm_compare = 0;
-    set_PWM(0, 0, 0);
     
     for(;;)
     {
-       
+        sprintf(txData,"lololololol %d", test++);
+        UART_UartPutString(txData);
     }
 }
  
 
 
-void initialize(void) {
+\
+void Initialize(void) {
     InitCAN(0x4,0x1);
-    Status_Reg_Switches_InterruptEnable();
     Timer_1_Start();
     QuadDec_Start();
-    PWM_Motor_Start();  
+     
     CAN_GlobalIntEnable();
     CyGlobalIntEnable; /* Enable global interrupts. */
     isr_Limit_1_StartEx(Pin_Limit_Handler);
     isr_period_StartEx(Period_Reset_Handler);
-    
 }
 
 

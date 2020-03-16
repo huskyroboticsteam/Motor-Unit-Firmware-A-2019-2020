@@ -1,5 +1,5 @@
 -- Project:   Motor_Board_Rev3
--- Generated: 03/15/2020 17:59:11
+-- Generated: 03/15/2020 22:32:29
 -- PSoC Creator  4.2
 
 ENTITY Motor_Board_Rev3 IS
@@ -22,7 +22,8 @@ ENTITY Motor_Board_Rev3 IS
         Dip_2(0)_PAD : IN std_ulogic;
         Dip_4(0)_PAD : IN std_ulogic;
         CAN_LED(0)_PAD : OUT std_ulogic;
-        ERROR_LED(0)_PAD : OUT std_ulogic);
+        ERROR_LED(0)_PAD : OUT std_ulogic;
+        FAULT_MOTOR(0)_PAD : IN std_ulogic);
     ATTRIBUTE voltage_VDDIO_A_1 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA_0 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA_CTB OF __DEFAULT__ : ENTITY IS 3.3e0;
@@ -58,6 +59,7 @@ ARCHITECTURE __DEFAULT__ OF Motor_Board_Rev3 IS
     SIGNAL Dip_3(0)__PA : bit;
     SIGNAL Dip_4(0)__PA : bit;
     SIGNAL ERROR_LED(0)__PA : bit;
+    SIGNAL FAULT_MOTOR(0)__PA : bit;
     SIGNAL Net_1074 : bit;
     SIGNAL Net_1075 : bit;
     SIGNAL Net_11 : bit;
@@ -71,8 +73,8 @@ ARCHITECTURE __DEFAULT__ OF Motor_Board_Rev3 IS
     ATTRIBUTE global_signal OF Net_1314_digital : SIGNAL IS true;
     SIGNAL Net_139 : bit;
     SIGNAL Net_1393 : bit;
-    SIGNAL Net_1394 : bit;
     SIGNAL Net_140 : bit;
+    SIGNAL Net_1416 : bit;
     SIGNAL Net_142_digital : bit;
     ATTRIBUTE udbclken_assigned OF Net_142_digital : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_142_digital : SIGNAL IS true;
@@ -317,6 +319,8 @@ ARCHITECTURE __DEFAULT__ OF Motor_Board_Rev3 IS
     ATTRIBUTE Location OF CAN_LED(0) : LABEL IS "P2[4]";
     ATTRIBUTE lib_model OF ERROR_LED(0) : LABEL IS "iocell21";
     ATTRIBUTE Location OF ERROR_LED(0) : LABEL IS "P2[1]";
+    ATTRIBUTE lib_model OF FAULT_MOTOR(0) : LABEL IS "iocell22";
+    ATTRIBUTE Location OF FAULT_MOTOR(0) : LABEL IS "P4[6]";
     ATTRIBUTE lib_model OF \QuadDec:Cnt16:CounterUDB:reload\ : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF \QuadDec:Cnt16:CounterUDB:status_0\ : LABEL IS "macrocell3";
     ATTRIBUTE lib_model OF \QuadDec:Cnt16:CounterUDB:status_2\ : LABEL IS "macrocell4";
@@ -324,7 +328,7 @@ ARCHITECTURE __DEFAULT__ OF Motor_Board_Rev3 IS
     ATTRIBUTE lib_model OF \QuadDec:Cnt16:CounterUDB:count_enable\ : LABEL IS "macrocell6";
     ATTRIBUTE lib_model OF \QuadDec:Net_530\ : LABEL IS "macrocell7";
     ATTRIBUTE lib_model OF \QuadDec:Net_611\ : LABEL IS "macrocell8";
-    ATTRIBUTE lib_model OF Net_1394 : LABEL IS "macrocell9";
+    ATTRIBUTE lib_model OF Net_1416 : LABEL IS "macrocell9";
     ATTRIBUTE lib_model OF \StripLights:Net_159\ : LABEL IS "macrocell10";
     ATTRIBUTE lib_model OF Net_1393 : LABEL IS "macrocell11";
     ATTRIBUTE lib_model OF \Timer_1:TimerUDB:status_tc\ : LABEL IS "macrocell12";
@@ -1775,7 +1779,7 @@ BEGIN
         PORT MAP(
             pa_out => Array_LED(0)__PA,
             oe => open,
-            pin_input => Net_1394,
+            pin_input => Net_1416,
             pad_out => Array_LED(0)_PAD,
             pad_in => Array_LED(0)_PAD,
             in_clock => open,
@@ -2784,6 +2788,96 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
+    FAULT_MOTOR:logicalport
+        GENERIC MAP(
+            drive_mode => "010",
+            ibuf_enabled => "1",
+            id => "45990d41-61b1-415b-ab24-078e1c74afaa",
+            init_dr_st => "1",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    FAULT_MOTOR(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "FAULT_MOTOR",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
+        PORT MAP(
+            pa_out => FAULT_MOTOR(0)__PA,
+            oe => open,
+            pad_in => FAULT_MOTOR(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
     \QuadDec:Cnt16:CounterUDB:reload\:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2)",
@@ -2858,13 +2952,13 @@ BEGIN
             main_1 => \QuadDec:Net_1275\,
             main_2 => \QuadDec:Cnt16:CounterUDB:prevCompare\);
 
-    Net_1394:macrocell
+    Net_1416:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * main_4)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
-            q => Net_1394,
+            q => Net_1416,
             main_0 => \StripLights:saddr_0\,
             main_1 => \StripLights:saddr_1\,
             main_2 => \StripLights:saddr_2\,

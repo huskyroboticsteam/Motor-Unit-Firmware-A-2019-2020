@@ -2,7 +2,7 @@
 --	Conversion of Motor_Board_Rev3.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Mar 15 17:59:09 2020
+--	Sun Mar 15 22:32:27 2020
 --
 
 USE cypress.cypress.all;
@@ -360,7 +360,7 @@ SIGNAL \StripLights:demux_1:tmp__demux_1_12_reg\ : bit;
 SIGNAL \StripLights:demux_1:tmp__demux_1_13_reg\ : bit;
 SIGNAL \StripLights:demux_1:tmp__demux_1_14_reg\ : bit;
 SIGNAL \StripLights:demux_1:tmp__demux_1_15_reg\ : bit;
-SIGNAL Net_1394 : bit;
+SIGNAL Net_1416 : bit;
 SIGNAL Net_1395 : bit;
 SIGNAL Net_1396 : bit;
 SIGNAL Net_1397 : bit;
@@ -1067,6 +1067,11 @@ SIGNAL tmpFB_0__ERROR_LED_net_0 : bit;
 SIGNAL tmpIO_0__ERROR_LED_net_0 : bit;
 TERMINAL tmpSIOVREF__ERROR_LED_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__ERROR_LED_net_0 : bit;
+SIGNAL tmpOE__FAULT_MOTOR_net_0 : bit;
+SIGNAL tmpFB_0__FAULT_MOTOR_net_0 : bit;
+SIGNAL tmpIO_0__FAULT_MOTOR_net_0 : bit;
+TERMINAL tmpSIOVREF__FAULT_MOTOR_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__FAULT_MOTOR_net_0 : bit;
 SIGNAL \QuadDec:Net_1251\\D\ : bit;
 SIGNAL \QuadDec:Cnt16:CounterUDB:prevCapture\\D\ : bit;
 SIGNAL \QuadDec:Cnt16:CounterUDB:overflow_reg_i\\D\ : bit;
@@ -1176,7 +1181,7 @@ Net_1096_0 <= (not Net_200);
 
 Net_1096_1 <= (not Net_223);
 
-Net_1394 <= ((not \StripLights:saddr_0\ and not \StripLights:saddr_1\ and not \StripLights:saddr_2\ and not \StripLights:saddr_3\ and \StripLights:Net_64\));
+Net_1416 <= ((not \StripLights:saddr_0\ and not \StripLights:saddr_1\ and not \StripLights:saddr_2\ and not \StripLights:saddr_3\ and \StripLights:Net_64\));
 
 \StripLights:Net_159\ <= ((\StripLights:B_WS2811:control_3\ and \StripLights:B_WS2811:control_0\ and \StripLights:B_WS2811:status_0\));
 
@@ -1999,7 +2004,7 @@ Clock_1:cy_clock_v1_0
 		divisor=>2,
 		period=>"0",
 		is_direct=>'0',
-		is_digital=>'0')
+		is_digital=>'1')
 	PORT MAP(clock_out=>Net_142,
 		dig_domain_out=>open);
 Debug_1:cy_psoc3_pins_v1_10
@@ -2163,7 +2168,7 @@ Clock_2:cy_clock_v1_0
 		divisor=>0,
 		period=>"10000000000000",
 		is_direct=>'0',
-		is_digital=>'0')
+		is_digital=>'1')
 	PORT MAP(clock_out=>Net_1156,
 		dig_domain_out=>open);
 \StripLights:StringSel:Sync:ctrl_reg\:cy_psoc3_control
@@ -2440,7 +2445,7 @@ Array_LED:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__Pin_Limit_1_net_0),
-		y=>Net_1394,
+		y=>Net_1416,
 		fb=>(tmpFB_0__Array_LED_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__Array_LED_net_0),
@@ -3494,7 +3499,7 @@ timer_clock:cy_clock_v1_0
 		divisor=>2,
 		period=>"0",
 		is_direct=>'0',
-		is_digital=>'0')
+		is_digital=>'1')
 	PORT MAP(clock_out=>Net_1314,
 		dig_domain_out=>open);
 \Timer_1:TimerUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0
@@ -3928,6 +3933,76 @@ ERROR_LED:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__Pin_Limit_1_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__ERROR_LED_net_0);
+FAULT_MOTOR:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"45990d41-61b1-415b-ab24-078e1c74afaa",
+		drive_mode=>"010",
+		ibuf_enabled=>"1",
+		init_dr_st=>"1",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"I",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__Pin_Limit_1_net_0),
+		y=>(zero),
+		fb=>(tmpFB_0__FAULT_MOTOR_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__FAULT_MOTOR_net_0),
+		siovref=>(tmpSIOVREF__FAULT_MOTOR_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__Pin_Limit_1_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__Pin_Limit_1_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__FAULT_MOTOR_net_0);
 \QuadDec:Net_1251\:cy_dff
 	PORT MAP(d=>\QuadDec:Net_1251\\D\,
 		clk=>\QuadDec:bQuadDec:sync_clock\,

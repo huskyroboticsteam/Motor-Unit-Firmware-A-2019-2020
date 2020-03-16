@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: FAULT.h  
+* File Name: FAULT_MOTOR.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_FAULT_ALIASES_H) /* Pins FAULT_ALIASES_H */
-#define CY_PINS_FAULT_ALIASES_H
+#if !defined(CY_PINS_FAULT_MOTOR_ALIASES_H) /* Pins FAULT_MOTOR_ALIASES_H */
+#define CY_PINS_FAULT_MOTOR_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -26,17 +26,17 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define FAULT_0			(FAULT__0__PC)
-#define FAULT_0_PS		(FAULT__0__PS)
-#define FAULT_0_PC		(FAULT__0__PC)
-#define FAULT_0_DR		(FAULT__0__DR)
-#define FAULT_0_SHIFT	(FAULT__0__SHIFT)
-#define FAULT_0_INTR	((uint16)((uint16)0x0003u << (FAULT__0__SHIFT*2u)))
+#define FAULT_MOTOR_0			(FAULT_MOTOR__0__PC)
+#define FAULT_MOTOR_0_PS		(FAULT_MOTOR__0__PS)
+#define FAULT_MOTOR_0_PC		(FAULT_MOTOR__0__PC)
+#define FAULT_MOTOR_0_DR		(FAULT_MOTOR__0__DR)
+#define FAULT_MOTOR_0_SHIFT	(FAULT_MOTOR__0__SHIFT)
+#define FAULT_MOTOR_0_INTR	((uint16)((uint16)0x0003u << (FAULT_MOTOR__0__SHIFT*2u)))
 
-#define FAULT_INTR_ALL	 ((uint16)(FAULT_0_INTR))
+#define FAULT_MOTOR_INTR_ALL	 ((uint16)(FAULT_MOTOR_0_INTR))
 
 
-#endif /* End Pins FAULT_ALIASES_H */
+#endif /* End Pins FAULT_MOTOR_ALIASES_H */
 
 
 /* [] END OF FILE */

@@ -75,6 +75,8 @@
 #include "CAN_LED_aliases.h"
 #include "ERROR_LED.h"
 #include "ERROR_LED_aliases.h"
+#include "FAULT_MOTOR.h"
+#include "FAULT_MOTOR_aliases.h"
 #include "QuadDec_Cnt16.h"
 #include "StripLights_StringSel.h"
 #include "StripLights_cisr.h"

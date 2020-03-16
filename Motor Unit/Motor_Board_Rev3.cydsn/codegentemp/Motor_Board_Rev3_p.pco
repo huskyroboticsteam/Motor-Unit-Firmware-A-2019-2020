@@ -40,7 +40,7 @@ set_location "\Timer_1:TimerUDB:sT24:timerdp:u1\" datapathcell 0 2 2
 set_location "\StripLights:Net_159\" macrocell 1 2 1 2
 set_location "\QuadDec:Net_1203_split\" macrocell 1 0 0 0
 set_location "\QuadDec:Cnt16:CounterUDB:sC16:counterdp:u0\" datapathcell 1 0 2 
-set_location "Net_1394" macrocell 0 3 1 0
+set_location "Net_1416" macrocell 0 3 1 0
 set_location "\QuadDec:Cnt16:CounterUDB:prevCompare\" macrocell 0 2 1 0
 set_location "\QuadDec:Net_1203\" macrocell 0 0 0 2
 set_location "\QuadDec:Cnt16:CounterUDB:status_0\" macrocell 0 2 0 1
@@ -67,6 +67,7 @@ set_io "Pin_Limit_1(0)" iocell 2 6
 set_io "Pin_Motor(0)" iocell 7 0
 set_location "\CAN:CanIP\" cancell -1 -1 1
 set_io "\UART:tx(0)\" iocell 6 1
+set_io "FAULT_MOTOR(0)" iocell 4 6
 set_location "\QuadDec:Cnt16:CounterUDB:sCTRLReg:ctrlreg\" controlcell 1 0 6 
 set_location "isr_Limit_1" interrupt -1 -1 2
 set_location "\CAN:isr\" interrupt -1 -1 29
