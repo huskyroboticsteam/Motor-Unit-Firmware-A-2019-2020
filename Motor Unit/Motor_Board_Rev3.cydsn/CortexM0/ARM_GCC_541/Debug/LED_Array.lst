@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
   28:LED_Array.c   ****         
   29:LED_Array.c   ****         double r_inc = r2 - r1;
   30:LED_Array.c   ****         double g_inc = g2 - g1;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 2
 
 
   31:LED_Array.c   ****         double b_inc = b2 - b1;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
   57 001c 0120     		movs	r0, #1
   58 001e FFF7FEFF 		bl	StripLights_Trigger
   59              	.LVL5:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 3
 
 
   56:LED_Array.c   **** }
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  106              		.loc 1 60 0 discriminator 3
  107 0018 0134     		adds	r4, r4, #1
  108              	.LVL11:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 4
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 4
 
 
  109 001a E4B2     		uxtb	r4, r4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  153 0004 1A43     		orrs	r2, r3
  154 0006 1000     		movs	r0, r2
  155              	.LVL19:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 5
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 5
 
 
  156 0008 0843     		orrs	r0, r1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  207              	.LVL22:
  208 0018 8846     		mov	r8, r1
  209              	.LVL23:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 6
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 6
 
 
   21:LED_Array.c   ****         int16_t b1 = (uint8)((color1 >> 16) & 0x000000FF);  // Write Blue
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  257 0054 3540     		ands	r5, r6
  258 0056 581B     		subs	r0, r3, r5
  259              	.LVL37:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 7
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 7
 
 
  260 0058 FFF7FEFF 		bl	__aeabi_i2d
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  310 00a6 0B00     		movs	r3, r1
  311 00a8 2000     		movs	r0, r4
  312 00aa 2900     		movs	r1, r5
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 8
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 8
 
 
  313 00ac FFF7FEFF 		bl	__aeabi_dmul
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  365              	.LVL65:
  366 010a FFF7FEFF 		bl	__aeabi_d2uiz
  367              	.LVL66:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 9
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 9
 
 
  368 010e C2B2     		uxtb	r2, r0
@@ -510,8 +510,8 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  392              		.size	colorShift, .-colorShift
  393              		.text
  394              	.Letext0:
- 395              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 396              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 395              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 396              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
  397              		.file 4 "Generated_Source\\PSoC4/cytypes.h"
  398              		.file 5 "Generated_Source\\PSoC4/StripLights.h"
  399              		.section	.debug_info,"",%progbits
@@ -521,29 +521,29 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  403 0006 00000000 		.4byte	.Ldebug_abbrev0
  404 000a 04       		.byte	0x4
  405 000b 01       		.uleb128 0x1
- 406 000c D2010000 		.4byte	.LASF41
+ 406 000c E5010000 		.4byte	.LASF41
  407 0010 0C       		.byte	0xc
- 408 0011 79010000 		.4byte	.LASF42
- 409 0015 4F000000 		.4byte	.LASF43
+ 408 0011 8C010000 		.4byte	.LASF42
+ 409 0015 6C000000 		.4byte	.LASF43
  410 0019 18000000 		.4byte	.Ldebug_ranges0+0x18
  411 001d 00000000 		.4byte	0
  412 0021 00000000 		.4byte	.Ldebug_line0
  413 0025 02       		.uleb128 0x2
  414 0026 01       		.byte	0x1
  415 0027 06       		.byte	0x6
- 416 0028 C7020000 		.4byte	.LASF0
+ 416 0028 DA020000 		.4byte	.LASF0
  417 002c 03       		.uleb128 0x3
  418 002d 0E000000 		.4byte	.LASF2
  419 0031 02       		.byte	0x2
  420 0032 1D       		.byte	0x1d
  421 0033 37000000 		.4byte	0x37
  422 0037 02       		.uleb128 0x2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 10
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 10
 
 
  423 0038 01       		.byte	0x1
  424 0039 08       		.byte	0x8
- 425 003a D7000000 		.4byte	.LASF1
+ 425 003a EA000000 		.4byte	.LASF1
  426 003e 03       		.uleb128 0x3
  427 003f 18000000 		.4byte	.LASF3
  428 0043 02       		.byte	0x2
@@ -552,24 +552,24 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  431 0049 02       		.uleb128 0x2
  432 004a 02       		.byte	0x2
  433 004b 05       		.byte	0x5
- 434 004c 7A020000 		.4byte	.LASF4
+ 434 004c 8D020000 		.4byte	.LASF4
  435 0050 02       		.uleb128 0x2
  436 0051 02       		.byte	0x2
  437 0052 07       		.byte	0x7
- 438 0053 F7000000 		.4byte	.LASF5
+ 438 0053 0A010000 		.4byte	.LASF5
  439 0057 02       		.uleb128 0x2
  440 0058 04       		.byte	0x4
  441 0059 05       		.byte	0x5
- 442 005a A2020000 		.4byte	.LASF6
+ 442 005a B5020000 		.4byte	.LASF6
  443 005e 03       		.uleb128 0x3
- 444 005f 55010000 		.4byte	.LASF7
+ 444 005f 68010000 		.4byte	.LASF7
  445 0063 02       		.byte	0x2
  446 0064 41       		.byte	0x41
  447 0065 69000000 		.4byte	0x69
  448 0069 02       		.uleb128 0x2
  449 006a 04       		.byte	0x4
  450 006b 07       		.byte	0x7
- 451 006c 8C010000 		.4byte	.LASF8
+ 451 006c 9F010000 		.4byte	.LASF8
  452 0070 02       		.uleb128 0x2
  453 0071 08       		.byte	0x8
  454 0072 05       		.byte	0x5
@@ -577,7 +577,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  456 0077 02       		.uleb128 0x2
  457 0078 08       		.byte	0x8
  458 0079 07       		.byte	0x7
- 459 007a AB010000 		.4byte	.LASF10
+ 459 007a BE010000 		.4byte	.LASF10
  460 007e 04       		.uleb128 0x4
  461 007f 04       		.byte	0x4
  462 0080 05       		.byte	0x5
@@ -585,57 +585,57 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  464 0085 02       		.uleb128 0x2
  465 0086 04       		.byte	0x4
  466 0087 07       		.byte	0x7
- 467 0088 9E010000 		.4byte	.LASF11
+ 467 0088 B1010000 		.4byte	.LASF11
  468 008c 03       		.uleb128 0x3
- 469 008d C2010000 		.4byte	.LASF12
+ 469 008d D5010000 		.4byte	.LASF12
  470 0091 03       		.byte	0x3
  471 0092 18       		.byte	0x18
  472 0093 2C000000 		.4byte	0x2c
  473 0097 03       		.uleb128 0x3
- 474 0098 CA010000 		.4byte	.LASF13
+ 474 0098 DD010000 		.4byte	.LASF13
  475 009c 03       		.byte	0x3
  476 009d 20       		.byte	0x20
  477 009e 3E000000 		.4byte	0x3e
  478 00a2 03       		.uleb128 0x3
- 479 00a3 99020000 		.4byte	.LASF14
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 11
+ 479 00a3 AC020000 		.4byte	.LASF14
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 11
 
 
  480 00a7 03       		.byte	0x3
  481 00a8 30       		.byte	0x30
  482 00a9 5E000000 		.4byte	0x5e
  483 00ad 05       		.uleb128 0x5
- 484 00ae 93020000 		.4byte	.LASF15
+ 484 00ae A6020000 		.4byte	.LASF15
  485 00b2 04       		.byte	0x4
  486 00b3 E401     		.2byte	0x1e4
  487 00b5 37000000 		.4byte	0x37
  488 00b9 05       		.uleb128 0x5
- 489 00ba 85010000 		.4byte	.LASF16
+ 489 00ba 98010000 		.4byte	.LASF16
  490 00be 04       		.byte	0x4
  491 00bf E601     		.2byte	0x1e6
  492 00c1 69000000 		.4byte	0x69
  493 00c5 02       		.uleb128 0x2
  494 00c6 04       		.byte	0x4
  495 00c7 04       		.byte	0x4
- 496 00c8 D1000000 		.4byte	.LASF17
+ 496 00c8 66000000 		.4byte	.LASF17
  497 00cc 02       		.uleb128 0x2
  498 00cd 08       		.byte	0x8
  499 00ce 04       		.byte	0x4
- 500 00cf D3020000 		.4byte	.LASF18
+ 500 00cf E6020000 		.4byte	.LASF18
  501 00d3 02       		.uleb128 0x2
  502 00d4 01       		.byte	0x1
  503 00d5 08       		.byte	0x8
- 504 00d6 75020000 		.4byte	.LASF19
+ 504 00d6 88020000 		.4byte	.LASF19
  505 00da 02       		.uleb128 0x2
  506 00db 08       		.byte	0x8
  507 00dc 04       		.byte	0x4
- 508 00dd BB020000 		.4byte	.LASF20
+ 508 00dd CE020000 		.4byte	.LASF20
  509 00e1 02       		.uleb128 0x2
  510 00e2 04       		.byte	0x4
  511 00e3 07       		.byte	0x7
- 512 00e4 6C020000 		.4byte	.LASF21
+ 512 00e4 7F020000 		.4byte	.LASF21
  513 00e8 06       		.uleb128 0x6
- 514 00e9 84020000 		.4byte	.LASF22
+ 514 00e9 97020000 		.4byte	.LASF22
  515 00ed 01       		.byte	0x1
  516 00ee 2D       		.byte	0x2d
  517 00ef 00000000 		.4byte	.LFB35
@@ -644,7 +644,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  520 00f8 9C       		.byte	0x9c
  521 00f9 42010000 		.4byte	0x142
  522 00fd 07       		.uleb128 0x7
- 523 00fe 0A010000 		.4byte	.LASF24
+ 523 00fe 1D010000 		.4byte	.LASF24
  524 0102 01       		.byte	0x1
  525 0103 2D       		.byte	0x2d
  526 0104 8C000000 		.4byte	0x8c
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  534 011e 29010000 		.4byte	0x129
  535 0122 0A       		.uleb128 0xa
  536 0123 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 12
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 12
 
 
  537 0124 50       		.byte	0x50
@@ -680,7 +680,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  553 0140 00       		.byte	0
  554 0141 00       		.byte	0
  555 0142 06       		.uleb128 0x6
- 556 0143 66010000 		.4byte	.LASF23
+ 556 0143 79010000 		.4byte	.LASF23
  557 0147 01       		.byte	0x1
  558 0148 3A       		.byte	0x3a
  559 0149 00000000 		.4byte	.LFB36
@@ -689,7 +689,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  562 0152 9C       		.byte	0x9c
  563 0153 B3010000 		.4byte	0x1b3
  564 0157 07       		.uleb128 0x7
- 565 0158 60010000 		.4byte	.LASF25
+ 565 0158 73010000 		.4byte	.LASF25
  566 015c 01       		.byte	0x1
  567 015d 3A       		.byte	0x3a
  568 015e A2000000 		.4byte	0xa2
@@ -698,7 +698,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  571 0167 00000000 		.4byte	.Ldebug_ranges0+0
  572 016b 9A010000 		.4byte	0x19a
  573 016f 0D       		.uleb128 0xd
- 574 0170 60020000 		.4byte	.LASF31
+ 574 0170 73020000 		.4byte	.LASF31
  575 0174 01       		.byte	0x1
  576 0175 3C       		.byte	0x3c
  577 0176 8C000000 		.4byte	0x8c
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  591 0190 01       		.uleb128 0x1
  592 0191 30       		.byte	0x30
  593 0192 0A       		.uleb128 0xa
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 13
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 13
 
 
  594 0193 01       		.uleb128 0x1
@@ -772,31 +772,31 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  642 01ed A2000000 		.4byte	.LLST4
  643 01f1 00       		.byte	0
  644 01f2 11       		.uleb128 0x11
- 645 01f3 27010000 		.4byte	.LASF26
+ 645 01f3 3A010000 		.4byte	.LASF26
  646 01f7 01       		.byte	0x1
  647 01f8 11       		.byte	0x11
  648 01f9 00000000 		.4byte	.LFB34
  649 01fd 28010000 		.4byte	.LFE34-.LFB34
  650 0201 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 14
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 14
 
 
  651 0202 9C       		.byte	0x9c
  652 0203 0F030000 		.4byte	0x30f
  653 0207 07       		.uleb128 0x7
- 654 0208 47010000 		.4byte	.LASF27
+ 654 0208 5A010000 		.4byte	.LASF27
  655 020c 01       		.byte	0x1
  656 020d 11       		.byte	0x11
  657 020e A2000000 		.4byte	0xa2
  658 0212 C3000000 		.4byte	.LLST5
  659 0216 07       		.uleb128 0x7
- 660 0217 4E010000 		.4byte	.LASF28
+ 660 0217 61010000 		.4byte	.LASF28
  661 021b 01       		.byte	0x1
  662 021c 11       		.byte	0x11
  663 021d A2000000 		.4byte	0xa2
  664 0221 EF000000 		.4byte	.LLST6
  665 0225 07       		.uleb128 0x7
- 666 0226 C6000000 		.4byte	.LASF29
+ 666 0226 5B000000 		.4byte	.LASF29
  667 022a 01       		.byte	0x1
  668 022b 12       		.byte	0x12
  669 022c A2000000 		.4byte	0xa2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  705 027f 01       		.byte	0x1
  706 0280 19       		.byte	0x19
  707 0281 97000000 		.4byte	0x97
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 15
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 15
 
 
  708 0285 E9010000 		.4byte	.LLST12
@@ -849,19 +849,19 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  713 028f 97000000 		.4byte	0x97
  714 0293 26020000 		.4byte	.LLST13
  715 0297 0D       		.uleb128 0xd
- 716 0298 EB020000 		.4byte	.LASF32
+ 716 0298 FE020000 		.4byte	.LASF32
  717 029c 01       		.byte	0x1
  718 029d 1D       		.byte	0x1d
  719 029e CC000000 		.4byte	0xcc
  720 02a2 51020000 		.4byte	.LLST14
  721 02a6 0D       		.uleb128 0xd
- 722 02a7 C0000000 		.4byte	.LASF33
+ 722 02a7 55000000 		.4byte	.LASF33
  723 02ab 01       		.byte	0x1
  724 02ac 1E       		.byte	0x1e
  725 02ad CC000000 		.4byte	0xcc
  726 02b1 85020000 		.4byte	.LLST15
  727 02b5 0D       		.uleb128 0xd
- 728 02b6 BA000000 		.4byte	.LASF34
+ 728 02b6 4F000000 		.4byte	.LASF34
  729 02ba 01       		.byte	0x1
  730 02bb 1F       		.byte	0x1f
  731 02bc CC000000 		.4byte	0xcc
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  762 02ff 01       		.uleb128 0x1
  763 0300 51       		.byte	0x51
  764 0301 02       		.uleb128 0x2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 16
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 16
 
 
  765 0302 75       		.byte	0x75
@@ -916,7 +916,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  777 031a 16       		.uleb128 0x16
  778 031b B9000000 		.4byte	0xb9
  779 031f 17       		.uleb128 0x17
- 780 0320 DA020000 		.4byte	.LASF45
+ 780 0320 ED020000 		.4byte	.LASF45
  781 0324 01       		.byte	0x1
  782 0325 0F       		.byte	0xf
  783 0326 2A030000 		.4byte	0x32a
@@ -928,28 +928,28 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  789 0338 05       		.byte	0x5
  790 0339 12       		.byte	0x12
  791 033a 18       		.uleb128 0x18
- 792 033b AB020000 		.4byte	.LASF36
- 793 033f AB020000 		.4byte	.LASF36
+ 792 033b BE020000 		.4byte	.LASF36
+ 793 033f BE020000 		.4byte	.LASF36
  794 0343 05       		.byte	0x5
  795 0344 20       		.byte	0x20
  796 0345 18       		.uleb128 0x18
- 797 0346 32010000 		.4byte	.LASF37
- 798 034a 32010000 		.4byte	.LASF37
+ 797 0346 45010000 		.4byte	.LASF37
+ 798 034a 45010000 		.4byte	.LASF37
  799 034e 05       		.byte	0x5
  800 034f 16       		.byte	0x16
  801 0350 18       		.uleb128 0x18
- 802 0351 F1020000 		.4byte	.LASF38
- 803 0355 F1020000 		.4byte	.LASF38
+ 802 0351 04030000 		.4byte	.LASF38
+ 803 0355 04030000 		.4byte	.LASF38
  804 0359 05       		.byte	0x5
  805 035a 17       		.byte	0x17
  806 035b 18       		.uleb128 0x18
- 807 035c 15010000 		.4byte	.LASF39
- 808 0360 15010000 		.4byte	.LASF39
+ 807 035c 28010000 		.4byte	.LASF39
+ 808 0360 28010000 		.4byte	.LASF39
  809 0364 05       		.byte	0x5
  810 0365 1D       		.byte	0x1d
  811 0366 18       		.uleb128 0x18
- 812 0367 E5000000 		.4byte	.LASF40
- 813 036b E5000000 		.4byte	.LASF40
+ 812 0367 F8000000 		.4byte	.LASF40
+ 813 036b F8000000 		.4byte	.LASF40
  814 036f 05       		.byte	0x5
  815 0370 18       		.byte	0x18
  816 0371 00       		.byte	0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  819 0000 01       		.uleb128 0x1
  820 0001 11       		.uleb128 0x11
  821 0002 01       		.byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 17
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 17
 
 
  822 0003 25       		.uleb128 0x25
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  876 0039 03       		.uleb128 0x3
  877 003a 0E       		.uleb128 0xe
  878 003b 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 18
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 18
 
 
  879 003c 0B       		.uleb128 0xb
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  933 0075 00       		.byte	0
  934 0076 00       		.byte	0
  935 0077 09       		.uleb128 0x9
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 19
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 19
 
 
  936 0078 898201   		.uleb128 0x4109
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  990 00b5 01       		.byte	0x1
  991 00b6 3F       		.uleb128 0x3f
  992 00b7 19       		.uleb128 0x19
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 20
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 20
 
 
  993 00b8 03       		.uleb128 0x3
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  1047 00ef 01       		.byte	0x1
  1048 00f0 3F       		.uleb128 0x3f
  1049 00f1 19       		.uleb128 0x19
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 21
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 21
 
 
  1050 00f2 03       		.uleb128 0x3
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  1104 0129 13       		.uleb128 0x13
  1105 012a 01       		.uleb128 0x1
  1106 012b 13       		.uleb128 0x13
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 22
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 22
 
 
  1107 012c 00       		.byte	0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  1161 0008 0100     		.2byte	0x1
  1162 000a 50       		.byte	0x50
  1163 000b 07000000 		.4byte	.LVL1-1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 23
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 23
 
 
  1164 000f 0E000000 		.4byte	.LVL2
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  1218 0097 01       		.uleb128 0x1
  1219 0098 50       		.byte	0x50
  1220 0099 9F       		.byte	0x9f
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 24
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 24
 
 
  1221 009a 00000000 		.4byte	0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  1275 011f 1C000000 		.4byte	.LVL24
  1276 0123 0100     		.2byte	0x1
  1277 0125 52       		.byte	0x52
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 25
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 25
 
 
  1278 0126 1C000000 		.4byte	.LVL24
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  1332 01a4 59       		.byte	0x59
  1333 01a5 1E010000 		.4byte	.LVL73
  1334 01a9 28010000 		.4byte	.LFE34
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 26
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 26
 
 
  1335 01ad 0900     		.2byte	0x9
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  1389 020a 9F       		.byte	0x9f
  1390 020b 44000000 		.4byte	.LVL32
  1391 020f 28010000 		.4byte	.LFE34
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 27
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 27
 
 
  1392 0213 0900     		.2byte	0x9
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  1446 0277 54       		.byte	0x54
  1447 0278 93       		.byte	0x93
  1448 0279 04       		.uleb128 0x4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 28
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 28
 
 
  1449 027a 55       		.byte	0x55
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  1503 02eb 50       		.byte	0x50
  1504 02ec 93       		.byte	0x93
  1505 02ed 04       		.uleb128 0x4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 29
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 29
 
 
  1506 02ee 51       		.byte	0x51
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  1560 000c 24000000 		.4byte	.LBE3
  1561 0010 00000000 		.4byte	0
  1562 0014 00000000 		.4byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 30
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 30
 
 
  1563 0018 00000000 		.4byte	.LFB35
@@ -1787,206 +1787,207 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 1
  1587      6874735F 
  1587      53746172 
  1587      7400
- 1588              	.LASF43:
- 1589 004f 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
- 1589      73657273 
- 1589      5C617573 
- 1589      74635C4F 
- 1589      6E654472 
- 1590 007c 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Motor_Boar"
- 1590      69742D46 
- 1590      69726D77 
- 1590      6172652D 
- 1590      412D3230 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 31
+ 1588              	.LASF34:
+ 1589 004f 625F696E 		.ascii	"b_inc\000"
+ 1589      6300
+ 1590              	.LASF33:
+ 1591 0055 675F696E 		.ascii	"g_inc\000"
+ 1591      6300
+ 1592              	.LASF29:
+ 1593 005b 7472616E 		.ascii	"transition\000"
+ 1593      73697469 
+ 1593      6F6E00
+ 1594              	.LASF17:
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 31
 
 
- 1591 00ad 645F5265 		.ascii	"d_Rev3.cydsn\000"
- 1591      76332E63 
- 1591      7964736E 
- 1591      00
- 1592              	.LASF34:
- 1593 00ba 625F696E 		.ascii	"b_inc\000"
- 1593      6300
- 1594              	.LASF33:
- 1595 00c0 675F696E 		.ascii	"g_inc\000"
- 1595      6300
- 1596              	.LASF29:
- 1597 00c6 7472616E 		.ascii	"transition\000"
- 1597      73697469 
- 1597      6F6E00
- 1598              	.LASF17:
- 1599 00d1 666C6F61 		.ascii	"float\000"
- 1599      7400
+ 1595 0066 666C6F61 		.ascii	"float\000"
+ 1595      7400
+ 1596              	.LASF43:
+ 1597 006c 433A5C55 		.ascii	"C:\\Users\\Austcha\\Documents\\Husky Robotics\\Moto"
+ 1597      73657273 
+ 1597      5C417573 
+ 1597      74636861 
+ 1597      5C446F63 
+ 1598 009a 7220426F 		.ascii	"r Boards\\Rev3\\Motor-Unit-Firmware-A-2019-2020\\Mo"
+ 1598      61726473 
+ 1598      5C526576 
+ 1598      335C4D6F 
+ 1598      746F722D 
+ 1599 00ca 746F7220 		.ascii	"tor Unit\\Motor_Board_Rev3.cydsn\000"
+ 1599      556E6974 
+ 1599      5C4D6F74 
+ 1599      6F725F42 
+ 1599      6F617264 
  1600              	.LASF1:
- 1601 00d7 756E7369 		.ascii	"unsigned char\000"
+ 1601 00ea 756E7369 		.ascii	"unsigned char\000"
  1601      676E6564 
  1601      20636861 
  1601      7200
  1602              	.LASF40:
- 1603 00e5 53747269 		.ascii	"StripLights_Ready\000"
+ 1603 00f8 53747269 		.ascii	"StripLights_Ready\000"
  1603      704C6967 
  1603      6874735F 
  1603      52656164 
  1603      7900
  1604              	.LASF5:
- 1605 00f7 73686F72 		.ascii	"short unsigned int\000"
+ 1605 010a 73686F72 		.ascii	"short unsigned int\000"
  1605      7420756E 
  1605      7369676E 
  1605      65642069 
  1605      6E7400
  1606              	.LASF24:
- 1607 010a 62726967 		.ascii	"brightness\000"
+ 1607 011d 62726967 		.ascii	"brightness\000"
  1607      68746E65 
  1607      737300
  1608              	.LASF39:
- 1609 0115 53747269 		.ascii	"StripLights_Pixel\000"
+ 1609 0128 53747269 		.ascii	"StripLights_Pixel\000"
  1609      704C6967 
  1609      6874735F 
  1609      50697865 
  1609      6C00
  1610              	.LASF26:
- 1611 0127 636F6C6F 		.ascii	"colorShift\000"
+ 1611 013a 636F6C6F 		.ascii	"colorShift\000"
  1611      72536869 
  1611      667400
  1612              	.LASF37:
- 1613 0132 53747269 		.ascii	"StripLights_MemClear\000"
+ 1613 0145 53747269 		.ascii	"StripLights_MemClear\000"
  1613      704C6967 
  1613      6874735F 
  1613      4D656D43 
  1613      6C656172 
  1614              	.LASF27:
- 1615 0147 636F6C6F 		.ascii	"color1\000"
+ 1615 015a 636F6C6F 		.ascii	"color1\000"
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 32
+
+
  1615      723100
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 32
-
-
  1616              	.LASF28:
- 1617 014e 636F6C6F 		.ascii	"color2\000"
+ 1617 0161 636F6C6F 		.ascii	"color2\000"
  1617      723200
  1618              	.LASF7:
- 1619 0155 5F5F7569 		.ascii	"__uint32_t\000"
+ 1619 0168 5F5F7569 		.ascii	"__uint32_t\000"
  1619      6E743332 
  1619      5F7400
  1620              	.LASF25:
- 1621 0160 636F6C6F 		.ascii	"color\000"
+ 1621 0173 636F6C6F 		.ascii	"color\000"
  1621      7200
  1622              	.LASF23:
- 1623 0166 7365745F 		.ascii	"set_all_LED_Colors\000"
+ 1623 0179 7365745F 		.ascii	"set_all_LED_Colors\000"
  1623      616C6C5F 
  1623      4C45445F 
  1623      436F6C6F 
  1623      727300
  1624              	.LASF42:
- 1625 0179 4C45445F 		.ascii	"LED_Array.c\000"
+ 1625 018c 4C45445F 		.ascii	"LED_Array.c\000"
  1625      41727261 
  1625      792E6300 
  1626              	.LASF16:
- 1627 0185 75696E74 		.ascii	"uint32\000"
+ 1627 0198 75696E74 		.ascii	"uint32\000"
  1627      333200
  1628              	.LASF8:
- 1629 018c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1629 019f 6C6F6E67 		.ascii	"long unsigned int\000"
  1629      20756E73 
  1629      69676E65 
  1629      6420696E 
  1629      7400
  1630              	.LASF11:
- 1631 019e 756E7369 		.ascii	"unsigned int\000"
+ 1631 01b1 756E7369 		.ascii	"unsigned int\000"
  1631      676E6564 
  1631      20696E74 
  1631      00
  1632              	.LASF10:
- 1633 01ab 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1633 01be 6C6F6E67 		.ascii	"long long unsigned int\000"
  1633      206C6F6E 
  1633      6720756E 
  1633      7369676E 
  1633      65642069 
  1634              	.LASF12:
- 1635 01c2 75696E74 		.ascii	"uint8_t\000"
+ 1635 01d5 75696E74 		.ascii	"uint8_t\000"
  1635      385F7400 
  1636              	.LASF13:
- 1637 01ca 696E7431 		.ascii	"int16_t\000"
+ 1637 01dd 696E7431 		.ascii	"int16_t\000"
  1637      365F7400 
  1638              	.LASF41:
- 1639 01d2 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1639 01e5 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  1639      43313120 
  1639      352E342E 
  1639      31203230 
  1639      31363036 
- 1640 0205 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1640 0218 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
  1640      20726576 
  1640      6973696F 
  1640      6E203233 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 33
+
+
  1640      37373135 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 33
-
-
- 1641 0238 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1641 024b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  1641      66756E63 
  1641      74696F6E 
  1641      2D736563 
  1641      74696F6E 
  1642              	.LASF31:
- 1643 0260 6C656450 		.ascii	"ledPosition\000"
+ 1643 0273 6C656450 		.ascii	"ledPosition\000"
  1643      6F736974 
  1643      696F6E00 
  1644              	.LASF21:
- 1645 026c 73697A65 		.ascii	"sizetype\000"
+ 1645 027f 73697A65 		.ascii	"sizetype\000"
  1645      74797065 
  1645      00
  1646              	.LASF19:
- 1647 0275 63686172 		.ascii	"char\000"
+ 1647 0288 63686172 		.ascii	"char\000"
  1647      00
  1648              	.LASF4:
- 1649 027a 73686F72 		.ascii	"short int\000"
+ 1649 028d 73686F72 		.ascii	"short int\000"
  1649      7420696E 
  1649      7400
  1650              	.LASF22:
- 1651 0284 696E6974 		.ascii	"initalize_LEDs\000"
+ 1651 0297 696E6974 		.ascii	"initalize_LEDs\000"
  1651      616C697A 
  1651      655F4C45 
  1651      447300
  1652              	.LASF15:
- 1653 0293 75696E74 		.ascii	"uint8\000"
+ 1653 02a6 75696E74 		.ascii	"uint8\000"
  1653      3800
  1654              	.LASF14:
- 1655 0299 75696E74 		.ascii	"uint32_t\000"
+ 1655 02ac 75696E74 		.ascii	"uint32_t\000"
  1655      33325F74 
  1655      00
  1656              	.LASF6:
- 1657 02a2 6C6F6E67 		.ascii	"long int\000"
+ 1657 02b5 6C6F6E67 		.ascii	"long int\000"
  1657      20696E74 
  1657      00
  1658              	.LASF36:
- 1659 02ab 53747269 		.ascii	"StripLights_Dim\000"
+ 1659 02be 53747269 		.ascii	"StripLights_Dim\000"
  1659      704C6967 
  1659      6874735F 
  1659      44696D00 
  1660              	.LASF20:
- 1661 02bb 6C6F6E67 		.ascii	"long double\000"
+ 1661 02ce 6C6F6E67 		.ascii	"long double\000"
  1661      20646F75 
  1661      626C6500 
  1662              	.LASF0:
- 1663 02c7 7369676E 		.ascii	"signed char\000"
+ 1663 02da 7369676E 		.ascii	"signed char\000"
  1663      65642063 
  1663      68617200 
  1664              	.LASF18:
- 1665 02d3 646F7562 		.ascii	"double\000"
+ 1665 02e6 646F7562 		.ascii	"double\000"
  1665      6C6500
  1666              	.LASF45:
- 1667 02da 53747269 		.ascii	"StripLights_CLUT\000"
+ 1667 02ed 53747269 		.ascii	"StripLights_CLUT\000"
  1667      704C6967 
  1667      6874735F 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccRl5DFC.s 			page 34
+
+
  1667      434C5554 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cc4ajqFZ.s 			page 34
-
-
  1667      00
  1668              	.LASF32:
- 1669 02eb 725F696E 		.ascii	"r_inc\000"
+ 1669 02fe 725F696E 		.ascii	"r_inc\000"
  1669      6300
  1670              	.LASF38:
- 1671 02f1 53747269 		.ascii	"StripLights_Trigger\000"
+ 1671 0304 53747269 		.ascii	"StripLights_Trigger\000"
  1671      704C6967 
  1671      6874735F 
  1671      54726967 

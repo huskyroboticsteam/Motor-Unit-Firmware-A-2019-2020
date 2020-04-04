@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
   28:Generated_Source\PSoC4/CAN.c **** *
   29:Generated_Source\PSoC4/CAN.c **** * Summary:
   30:Generated_Source\PSoC4/CAN.c **** *  Inits/Restores default CAN Rx and Tx Buffers control registers configuration
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 2
 
 
   31:Generated_Source\PSoC4/CAN.c **** *  provided by the customizer.
@@ -82,20 +82,20 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
   49:Generated_Source\PSoC4/CAN.c ****     /* Initial values of CAN RX and TX registers */
   50:Generated_Source\PSoC4/CAN.c ****     static const CAN_RX_CFG CYCODE CAN_RXConfigStruct[] =
   51:Generated_Source\PSoC4/CAN.c ****     {
-  52:Generated_Source\PSoC4/CAN.c ****         { 0u, 0x28u, 0x1FFFF9u, 0x8A000000u },
-  53:Generated_Source\PSoC4/CAN.c ****         { 1u, 0x28u, 0x1FFFF9u, 0x8A200000u },
-  54:Generated_Source\PSoC4/CAN.c ****         { 2u, 0x28u, 0x1FFFF9u, 0x8A400000u },
-  55:Generated_Source\PSoC4/CAN.c ****         { 3u, 0x28u, 0x1FFFF9u, 0x8A600000u },
-  56:Generated_Source\PSoC4/CAN.c ****         { 4u, 0x28u, 0x1FFFF9u, 0x8A800000u },
-  57:Generated_Source\PSoC4/CAN.c ****         { 5u, 0x28u, 0x1FFFF9u, 0x8AA00000u },
-  58:Generated_Source\PSoC4/CAN.c ****         { 6u, 0x28u, 0x1FFFF9u, 0x8AC00000u },
-  59:Generated_Source\PSoC4/CAN.c ****         { 7u, 0x28u, 0x1FFFF9u, 0xA000000u },
-  60:Generated_Source\PSoC4/CAN.c ****         { 8u, 0x28u, 0x1FFFF9u, 0xA200000u },
-  61:Generated_Source\PSoC4/CAN.c ****         { 9u, 0x28u, 0x1FFFF9u, 0xA400000u },
-  62:Generated_Source\PSoC4/CAN.c ****         { 10u, 0x28u, 0x1FFFF9u, 0xA600000u },
-  63:Generated_Source\PSoC4/CAN.c ****         { 11u, 0x28u, 0x1FFFF9u, 0xA800000u },
-  64:Generated_Source\PSoC4/CAN.c ****         { 12u, 0x28u, 0x1FFFF9u, 0xAA00000u },
-  65:Generated_Source\PSoC4/CAN.c ****         { 13u, 0x28u, 0x1FFFF9u, 0xAC00000u },
+  52:Generated_Source\PSoC4/CAN.c ****         { 0u, 0x8000A8u, 0xFFFFFFFFu, 0x0u },
+  53:Generated_Source\PSoC4/CAN.c ****         { 1u, 0x8000A8u, 0xFFFFFFFFu, 0x0u },
+  54:Generated_Source\PSoC4/CAN.c ****         { 2u, 0x0u, 0x0u, 0x0u },
+  55:Generated_Source\PSoC4/CAN.c ****         { 3u, 0x0u, 0x0u, 0x0u },
+  56:Generated_Source\PSoC4/CAN.c ****         { 4u, 0x0u, 0x0u, 0x0u },
+  57:Generated_Source\PSoC4/CAN.c ****         { 5u, 0x0u, 0x0u, 0x0u },
+  58:Generated_Source\PSoC4/CAN.c ****         { 6u, 0x0u, 0x0u, 0x0u },
+  59:Generated_Source\PSoC4/CAN.c ****         { 7u, 0x0u, 0x0u, 0x0u },
+  60:Generated_Source\PSoC4/CAN.c ****         { 8u, 0x0u, 0x0u, 0x0u },
+  61:Generated_Source\PSoC4/CAN.c ****         { 9u, 0x0u, 0x0u, 0x0u },
+  62:Generated_Source\PSoC4/CAN.c ****         { 10u, 0x0u, 0x0u, 0x0u },
+  63:Generated_Source\PSoC4/CAN.c ****         { 11u, 0x0u, 0x0u, 0x0u },
+  64:Generated_Source\PSoC4/CAN.c ****         { 12u, 0x0u, 0x0u, 0x0u },
+  65:Generated_Source\PSoC4/CAN.c ****         { 13u, 0x0u, 0x0u, 0x0u },
   66:Generated_Source\PSoC4/CAN.c ****         { 14u, 0x0u, 0x0u, 0x0u },
   67:Generated_Source\PSoC4/CAN.c ****         { 15u, 0x0u, 0x0u, 0x0u }
   68:Generated_Source\PSoC4/CAN.c ****     };
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
   85:Generated_Source\PSoC4/CAN.c ****     /* Initialize TX mailboxes */
   86:Generated_Source\PSoC4/CAN.c ****     for (i = 0u; i < CAN_NUMBER_OF_TX_MAILBOXES; i++)
   87:Generated_Source\PSoC4/CAN.c ****     {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 3
 
 
   88:Generated_Source\PSoC4/CAN.c ****         if (CAN_TxBufConfig((const CAN_TX_CFG *)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  142:Generated_Source\PSoC4/CAN.c **** 
  143:Generated_Source\PSoC4/CAN.c ****     #if (CY_PSOC3 || CY_PSOC5)
  144:Generated_Source\PSoC4/CAN.c ****         uint8 enableInterrupts;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 4
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 4
 
 
  145:Generated_Source\PSoC4/CAN.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  199:Generated_Source\PSoC4/CAN.c ****                                     if (CAN_SetEdgeMode(CAN_SYNC_EDGE) == CYRET_SUCCESS)
  200:Generated_Source\PSoC4/CAN.c ****                                     {
  201:Generated_Source\PSoC4/CAN.c ****                                         localResult = CYRET_SUCCESS;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 5
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 5
 
 
  202:Generated_Source\PSoC4/CAN.c ****                                     }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  256:Generated_Source\PSoC4/CAN.c ****     uint32 timeout = CAN_MODE_STATE_RUN_TIMEOUT;
  257:Generated_Source\PSoC4/CAN.c ****     uint8 result = CAN_FAIL;
  258:Generated_Source\PSoC4/CAN.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 6
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 6
 
 
  259:Generated_Source\PSoC4/CAN.c ****     #if (CY_PSOC3 || CY_PSOC5)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  313:Generated_Source\PSoC4/CAN.c **** *    CAN_FAIL              The function failed
  314:Generated_Source\PSoC4/CAN.c **** *
  315:Generated_Source\PSoC4/CAN.c **** * Global variables:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 7
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 7
 
 
  316:Generated_Source\PSoC4/CAN.c **** *  CAN_initVar - used to check the initial configuration, modified
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32 0000 10B5     		push	{r4, lr}
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 8
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 8
 
 
   33              		.cfi_def_cfa_offset 8
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
   65 0022 04D0     		beq	.L6
   66              	.LVL3:
  387:Generated_Source\PSoC4/CAN.c ****     {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 9
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 9
 
 
  388:Generated_Source\PSoC4/CAN.c ****         result = CYRET_SUCCESS;
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  409:Generated_Source\PSoC4/CAN.c **** 
  410:Generated_Source\PSoC4/CAN.c **** /*******************************************************************************
  411:Generated_Source\PSoC4/CAN.c **** * FUNCTION NAME:   CAN_GlobalIntEnable
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 10
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 10
 
 
  412:Generated_Source\PSoC4/CAN.c **** ********************************************************************************
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  118              		.loc 1 444 0
  119 0014 0020     		movs	r0, #0
  120              	.L10:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 11
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 11
 
 
  121              	.LVL8:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  165 001a 1360     		str	r3, [r2]
  256:Generated_Source\PSoC4/CAN.c ****     uint8 result = CAN_FAIL;
  166              		.loc 1 256 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 12
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 12
 
 
  167 001c F023     		movs	r3, #240
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  213              		.thumb_func
  214              		.type	CAN_GlobalIntDisable, %function
  215              	CAN_GlobalIntDisable:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 13
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 13
 
 
  216              	.LFB40:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  233              		.loc 1 471 0
  234 0010 0120     		movs	r0, #1
  235 0012 00E0     		b	.L23
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 14
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 14
 
 
  236              	.L24:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  517:Generated_Source\PSoC4/CAN.c **** *
  518:Generated_Source\PSoC4/CAN.c **** *******************************************************************************/
  519:Generated_Source\PSoC4/CAN.c **** uint8 CAN_SetPreScaler(uint16 bitrate) 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 15
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 15
 
 
  520:Generated_Source\PSoC4/CAN.c **** {
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  288 001e 0120     		movs	r0, #1
  289 0020 02E0     		b	.L28
  290              	.LVL20:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 16
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 16
 
 
  291              	.L29:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  565:Generated_Source\PSoC4/CAN.c **** *    CAN_ROUND_ROBIN       The Round Robin arbitration
  566:Generated_Source\PSoC4/CAN.c **** *    CAN_FIXED_PRIORITY    The Fixed Priority arbitration.
  567:Generated_Source\PSoC4/CAN.c **** *
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 17
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 17
 
 
  568:Generated_Source\PSoC4/CAN.c **** * Return:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  337              		.loc 1 606 0
  338 000e 1B68     		ldr	r3, [r3]
  339 0010 DB04     		lsls	r3, r3, #19
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 18
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 18
 
 
  340 0012 0CD5     		bpl	.L36
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  624:Generated_Source\PSoC4/CAN.c **** }
  374              		.loc 1 624 0
  375              		@ sp needed
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 19
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 19
 
 
  376 0034 7047     		bx	lr
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  400              		.cfi_offset 4, -16
  401              		.cfi_offset 5, -12
  402              		.cfi_offset 6, -8
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 20
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 20
 
 
  403              		.cfi_offset 14, -4
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  680:Generated_Source\PSoC4/CAN.c ****                         cfgTemp = 0u;
  681:Generated_Source\PSoC4/CAN.c ****                         /* Set appropriate bits */
  682:Generated_Source\PSoC4/CAN.c ****                         if (sm != CAN_ONE_SAMPLE_POINT)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 21
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 21
 
 
  683:Generated_Source\PSoC4/CAN.c ****                         {
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  456              		.loc 1 710 0
  457 0040 2C68     		ldr	r4, [r5]
  711:Generated_Source\PSoC4/CAN.c ****                        CAN_CFG_REG_TSEG1_SHIFT)) == (uint32) ((uint32) ((uint32) cfgTemp &
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 22
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 22
 
 
  458              		.loc 1 711 0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  727:Generated_Source\PSoC4/CAN.c **** 
  728:Generated_Source\PSoC4/CAN.c ****                         /* Verify 1st byte of CAN_CFG_REG register */
  729:Generated_Source\PSoC4/CAN.c ****                         if ((CAN_CFG_REG & (CAN_CFG_REG_TSEG2_MASK |
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 23
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 23
 
 
  494              		.loc 1 729 0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  542              	.LVL58:
  543              	.L41:
  733:Generated_Source\PSoC4/CAN.c ****                         }
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 24
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 24
 
 
  734:Generated_Source\PSoC4/CAN.c ****                     }
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  769:Generated_Source\PSoC4/CAN.c **** uint8 CAN_SetRestartType(uint8 reset) 
  770:Generated_Source\PSoC4/CAN.c **** {
  563              		.loc 1 770 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 25
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 25
 
 
  564              		.cfi_startproc
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  587              	.L56:
  801:Generated_Source\PSoC4/CAN.c ****             {
  802:Generated_Source\PSoC4/CAN.c ****                 result = CYRET_SUCCESS;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 26
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 26
 
 
  803:Generated_Source\PSoC4/CAN.c ****             }
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  624              		.section	.text.CAN_SetEdgeMode,"ax",%progbits
  625              		.align	2
  626              		.global	CAN_SetEdgeMode
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 27
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 27
 
 
  627              		.code	16
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  862:Generated_Source\PSoC4/CAN.c ****             CAN_CFG_REG.byte[0u] |= CAN_EDGE_MODE_MASK;
  863:Generated_Source\PSoC4/CAN.c **** 
  864:Generated_Source\PSoC4/CAN.c ****             /* Verify that bit is set */
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 28
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 28
 
 
  865:Generated_Source\PSoC4/CAN.c ****             if ((CAN_CFG_REG.byte[0u] & CAN_EDGE_MODE_MASK) != 0u)
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  845:Generated_Source\PSoC4/CAN.c **** 
  667              		.loc 1 845 0
  668 0028 0120     		movs	r0, #1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 29
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 29
 
 
  669              	.LVL70:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  910:Generated_Source\PSoC4/CAN.c **** *    CAN_ACTIVE_RUN_MODE    The CAN controller is in the Active
  911:Generated_Source\PSoC4/CAN.c **** *                                        mode
  912:Generated_Source\PSoC4/CAN.c **** *    CAN_LISTEN_ONLY_MODE   The CAN controller is in the Listen
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 30
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 30
 
 
  913:Generated_Source\PSoC4/CAN.c **** *                                        Only mode: The output is held at the
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  967:Generated_Source\PSoC4/CAN.c **** 
  968:Generated_Source\PSoC4/CAN.c ****         if ((result == CYRET_SUCCESS) && (opMode != CAN_STOP_MODE))
  969:Generated_Source\PSoC4/CAN.c ****         {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 31
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 31
 
 
  970:Generated_Source\PSoC4/CAN.c ****             if (opMode == CAN_LISTEN_ONLY_MODE)
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
 1024:Generated_Source\PSoC4/CAN.c ****         }
 1025:Generated_Source\PSoC4/CAN.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
 1026:Generated_Source\PSoC4/CAN.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 32
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 32
 
 
 1027:Generated_Source\PSoC4/CAN.c ****     return (result);
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  724 0012 1DD8     		bhi	.L72
  725              	.LVL77:
 1057:Generated_Source\PSoC4/CAN.c ****         ((((uint32) regAddr & CAN_REG_ADDR_MASK)) <=
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 33
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 33
 
 
 1058:Generated_Source\PSoC4/CAN.c ****         ((uint32) CAN_RX_LAST_REGISTER_PTR & CAN_REG_ADDR_MASK)))
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
 1081:Generated_Source\PSoC4/CAN.c ****         }
 1082:Generated_Source\PSoC4/CAN.c ****         /* All registers except RX CMD*/
 1083:Generated_Source\PSoC4/CAN.c ****         else
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 34
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 34
 
 
 1084:Generated_Source\PSoC4/CAN.c ****         {
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
 1100:Generated_Source\PSoC4/CAN.c ****     }
 1101:Generated_Source\PSoC4/CAN.c **** 
 1102:Generated_Source\PSoC4/CAN.c ****     return (result);
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 35
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 35
 
 
 1103:Generated_Source\PSoC4/CAN.c **** }
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
 1137:Generated_Source\PSoC4/CAN.c **** *   Define                             Description
 1138:Generated_Source\PSoC4/CAN.c **** *    CYRET_SUCCESS                      The function passed successfully
 1139:Generated_Source\PSoC4/CAN.c **** *    CAN_FAIL              The function failed
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 36
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 36
 
 
 1140:Generated_Source\PSoC4/CAN.c **** *
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  836              		.loc 1 1167 0
  837              		@ sp needed
  838 0014 7047     		bx	lr
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 37
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 37
 
 
  839              	.L81:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  867 000c 0020     		movs	r0, #0
  868              	.L83:
 1194:Generated_Source\PSoC4/CAN.c ****                   CAN_TX_ERROR_FLAG_MASK) ? 1u : 0u);
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 38
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 38
 
 
 1195:Generated_Source\PSoC4/CAN.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  894 0002 1B68     		ldr	r3, [r3]
  895 0004 1B03     		lsls	r3, r3, #12
  896 0006 01D5     		bpl	.L89
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 39
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 39
 
 
  897 0008 0120     		movs	r0, #1
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
 1250:Generated_Source\PSoC4/CAN.c ****         /* Get state of transmit error count */
 1251:Generated_Source\PSoC4/CAN.c ****         return ((uint8) CAN_ERR_SR_REG);    /* bits 7-0 */
  925              		.loc 1 1251 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 40
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 40
 
 
  926 0000 014B     		ldr	r3, .L93
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  954 0002 1868     		ldr	r0, [r3]
  955 0004 000A     		lsrs	r0, r0, #8
  956 0006 C0B2     		uxtb	r0, r0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 41
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 41
 
 
 1278:Generated_Source\PSoC4/CAN.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  984 0006 0323     		movs	r3, #3
  985 0008 1840     		ands	r0, r3
 1305:Generated_Source\PSoC4/CAN.c ****                 CAN_ERROR_STATE_MASK));
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 42
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 42
 
 
 1306:Generated_Source\PSoC4/CAN.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
 1332:Generated_Source\PSoC4/CAN.c **** 
 1333:Generated_Source\PSoC4/CAN.c ****     /* Write RX CMD Register */
 1334:Generated_Source\PSoC4/CAN.c ****     CY_SET_REG32((reg32 *) (&CAN_RX[rxConfig->rxmailbox].rxcmd), (rxConfig->rxcmd |
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 43
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 43
 
 
  1014              		.loc 1 1334 0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1056 0046 5A69     		ldr	r2, [r3, #20]
  1057 0048 C168     		ldr	r1, [r0, #12]
  1058 004a 8A42     		cmp	r2, r1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 44
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 44
 
 
  1059 004c 16D1     		bne	.L105
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1104 0082 00E0     		b	.L102
  1105              	.LVL108:
  1106              	.L107:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 45
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 45
 
 
 1354:Generated_Source\PSoC4/CAN.c ****                     {
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
 1383:Generated_Source\PSoC4/CAN.c **** *
 1384:Generated_Source\PSoC4/CAN.c **** *******************************************************************************/
 1385:Generated_Source\PSoC4/CAN.c **** uint8 CAN_TxBufConfig(const CAN_TX_CFG *txConfig)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 46
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 46
 
 
 1386:Generated_Source\PSoC4/CAN.c ****                                    
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1173 0034 5A68     		ldr	r2, [r3, #4]
  1174 0036 8368     		ldr	r3, [r0, #8]
  1175 0038 9A42     		cmp	r2, r3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 47
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 47
 
 
  1176 003a 03D0     		beq	.L113
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1221              		.cfi_offset 6, -8
  1222              		.cfi_offset 14, -4
  1223              	.LVL117:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 48
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 48
 
 
   86:Generated_Source\PSoC4/CAN.c ****     {
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
   99:Generated_Source\PSoC4/CAN.c ****         {
  1270              		.loc 1 99 0 discriminator 2
  1271 003c 0134     		adds	r4, r4, #1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 49
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 49
 
 
  1272              	.LVL124:
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
 1418:Generated_Source\PSoC4/CAN.c **** *
 1419:Generated_Source\PSoC4/CAN.c **** * Parameters:
 1420:Generated_Source\PSoC4/CAN.c **** *  swap: Swap Enable/Disable setting.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 50
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 50
 
 
 1421:Generated_Source\PSoC4/CAN.c **** *   Define                                   Description
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
 1449:Generated_Source\PSoC4/CAN.c ****             result = CYRET_SUCCESS;
 1450:Generated_Source\PSoC4/CAN.c ****         }
 1451:Generated_Source\PSoC4/CAN.c ****     }
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 51
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 51
 
 
 1452:Generated_Source\PSoC4/CAN.c ****     else    /* Little endian */
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1374              		.align	2
  1375              		.global	CAN_Init
  1376              		.code	16
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 52
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 52
 
 
  1377              		.thumb_func
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1422 0028 002B     		cmp	r3, #0
  1423 002a 4AD0     		beq	.L141
  177:Generated_Source\PSoC4/CAN.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 53
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 53
 
 
  1424              		.loc 1 177 0
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1470 0076 FFF7FEFF 		bl	CAN_SetEdgeMode
  1471              	.LVL149:
  1472 007a 0028     		cmp	r0, #0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 54
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 54
 
 
  1473 007c 0BD0     		beq	.L147
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1520 00bc 09D0     		beq	.L151
  140:Generated_Source\PSoC4/CAN.c ****     uint8 localResult = CAN_FAIL;
  1521              		.loc 1 140 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 55
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 55
 
 
  1522 00be 0130     		adds	r0, r0, #1
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1573              	.LVL157:
  327:Generated_Source\PSoC4/CAN.c ****     {
  1574              		.loc 1 327 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 56
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 56
 
 
  1575 0002 084B     		ldr	r3, .L158
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1622              	.LVL162:
  1623 0000 70B5     		push	{r4, r5, r6, lr}
  1624              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 57
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 57
 
 
  1625              		.cfi_offset 4, -16
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1669 0034 002C     		cmp	r4, #0
  1670 0036 0BD0     		beq	.L162
 1012:Generated_Source\PSoC4/CAN.c ****                 {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 58
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 58
 
 
  1671              		.loc 1 1012 0 is_stmt 1
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
 1471:Generated_Source\PSoC4/CAN.c **** * Summary:
 1472:Generated_Source\PSoC4/CAN.c **** *  This function sets the Error Capture register mode. The two modes are
 1473:Generated_Source\PSoC4/CAN.c **** *  possible: Free Running and Error Capture.
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 59
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 59
 
 
 1474:Generated_Source\PSoC4/CAN.c **** *
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1738              	.L170:
 1503:Generated_Source\PSoC4/CAN.c ****         {
 1504:Generated_Source\PSoC4/CAN.c ****             result = CYRET_SUCCESS;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 60
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 60
 
 
 1505:Generated_Source\PSoC4/CAN.c ****         }
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1776              		.size	CAN_SetErrorCaptureRegisterMode, .-CAN_SetErrorCaptureRegisterMode
  1777              		.section	.text.CAN_ReadErrorCaptureRegister,"ax",%progbits
  1778              		.align	2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 61
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 61
 
 
  1779              		.global	CAN_ReadErrorCaptureRegister
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
 1568:Generated_Source\PSoC4/CAN.c **** *
 1569:Generated_Source\PSoC4/CAN.c **** *******************************************************************************/
 1570:Generated_Source\PSoC4/CAN.c **** uint32 CAN_ReadErrorCaptureRegister(void)
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 62
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 62
 
 
 1571:Generated_Source\PSoC4/CAN.c **** {
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1814              		@ frame_needed = 0, uses_anonymous_args = 0
  1815              		@ link register save eliminated.
  1816              	.LVL179:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 63
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 63
 
 
 1596:Generated_Source\PSoC4/CAN.c ****     uint8 result = CAN_FAIL;
@@ -3766,9 +3766,9 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1846              		.section	.rodata
  1847              		.align	2
  1848              		.set	.LANCHOR0,. + 0
- 1849              		.type	CAN_TXConfigStruct.6691, %object
- 1850              		.size	CAN_TXConfigStruct.6691, 96
- 1851              	CAN_TXConfigStruct.6691:
+ 1849              		.type	CAN_TXConfigStruct.6663, %object
+ 1850              		.size	CAN_TXConfigStruct.6663, 96
+ 1851              	CAN_TXConfigStruct.6663:
  1852 0000 00       		.byte	0
  1853 0001 000000   		.space	3
  1854 0004 08008800 		.word	8912904
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1858 0010 08008800 		.word	8912904
  1859 0014 00000000 		.word	0
  1860 0018 02       		.byte	2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 64
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 64
 
 
  1861 0019 000000   		.space	3
@@ -3804,82 +3804,82 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1881 0055 000000   		.space	3
  1882 0058 08008800 		.word	8912904
  1883 005c 00000000 		.word	0
- 1884              		.type	CAN_RXConfigStruct.6690, %object
- 1885              		.size	CAN_RXConfigStruct.6690, 256
- 1886              	CAN_RXConfigStruct.6690:
+ 1884              		.type	CAN_RXConfigStruct.6662, %object
+ 1885              		.size	CAN_RXConfigStruct.6662, 256
+ 1886              	CAN_RXConfigStruct.6662:
  1887 0060 00       		.byte	0
  1888 0061 000000   		.space	3
- 1889 0064 28000000 		.word	40
- 1890 0068 F9FF1F00 		.word	2097145
- 1891 006c 0000008A 		.word	-1979711488
+ 1889 0064 A8008000 		.word	8388776
+ 1890 0068 FFFFFFFF 		.word	-1
+ 1891 006c 00000000 		.word	0
  1892 0070 01       		.byte	1
  1893 0071 000000   		.space	3
- 1894 0074 28000000 		.word	40
- 1895 0078 F9FF1F00 		.word	2097145
- 1896 007c 0000208A 		.word	-1977614336
+ 1894 0074 A8008000 		.word	8388776
+ 1895 0078 FFFFFFFF 		.word	-1
+ 1896 007c 00000000 		.word	0
  1897 0080 02       		.byte	2
  1898 0081 000000   		.space	3
- 1899 0084 28000000 		.word	40
- 1900 0088 F9FF1F00 		.word	2097145
- 1901 008c 0000408A 		.word	-1975517184
+ 1899 0084 00000000 		.word	0
+ 1900 0088 00000000 		.word	0
+ 1901 008c 00000000 		.word	0
  1902 0090 03       		.byte	3
  1903 0091 000000   		.space	3
- 1904 0094 28000000 		.word	40
- 1905 0098 F9FF1F00 		.word	2097145
- 1906 009c 0000608A 		.word	-1973420032
+ 1904 0094 00000000 		.word	0
+ 1905 0098 00000000 		.word	0
+ 1906 009c 00000000 		.word	0
  1907 00a0 04       		.byte	4
  1908 00a1 000000   		.space	3
- 1909 00a4 28000000 		.word	40
- 1910 00a8 F9FF1F00 		.word	2097145
- 1911 00ac 0000808A 		.word	-1971322880
+ 1909 00a4 00000000 		.word	0
+ 1910 00a8 00000000 		.word	0
+ 1911 00ac 00000000 		.word	0
  1912 00b0 05       		.byte	5
  1913 00b1 000000   		.space	3
- 1914 00b4 28000000 		.word	40
- 1915 00b8 F9FF1F00 		.word	2097145
- 1916 00bc 0000A08A 		.word	-1969225728
+ 1914 00b4 00000000 		.word	0
+ 1915 00b8 00000000 		.word	0
+ 1916 00bc 00000000 		.word	0
  1917 00c0 06       		.byte	6
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 65
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 65
 
 
  1918 00c1 000000   		.space	3
- 1919 00c4 28000000 		.word	40
- 1920 00c8 F9FF1F00 		.word	2097145
- 1921 00cc 0000C08A 		.word	-1967128576
+ 1919 00c4 00000000 		.word	0
+ 1920 00c8 00000000 		.word	0
+ 1921 00cc 00000000 		.word	0
  1922 00d0 07       		.byte	7
  1923 00d1 000000   		.space	3
- 1924 00d4 28000000 		.word	40
- 1925 00d8 F9FF1F00 		.word	2097145
- 1926 00dc 0000000A 		.word	167772160
+ 1924 00d4 00000000 		.word	0
+ 1925 00d8 00000000 		.word	0
+ 1926 00dc 00000000 		.word	0
  1927 00e0 08       		.byte	8
  1928 00e1 000000   		.space	3
- 1929 00e4 28000000 		.word	40
- 1930 00e8 F9FF1F00 		.word	2097145
- 1931 00ec 0000200A 		.word	169869312
+ 1929 00e4 00000000 		.word	0
+ 1930 00e8 00000000 		.word	0
+ 1931 00ec 00000000 		.word	0
  1932 00f0 09       		.byte	9
  1933 00f1 000000   		.space	3
- 1934 00f4 28000000 		.word	40
- 1935 00f8 F9FF1F00 		.word	2097145
- 1936 00fc 0000400A 		.word	171966464
+ 1934 00f4 00000000 		.word	0
+ 1935 00f8 00000000 		.word	0
+ 1936 00fc 00000000 		.word	0
  1937 0100 0A       		.byte	10
  1938 0101 000000   		.space	3
- 1939 0104 28000000 		.word	40
- 1940 0108 F9FF1F00 		.word	2097145
- 1941 010c 0000600A 		.word	174063616
+ 1939 0104 00000000 		.word	0
+ 1940 0108 00000000 		.word	0
+ 1941 010c 00000000 		.word	0
  1942 0110 0B       		.byte	11
  1943 0111 000000   		.space	3
- 1944 0114 28000000 		.word	40
- 1945 0118 F9FF1F00 		.word	2097145
- 1946 011c 0000800A 		.word	176160768
+ 1944 0114 00000000 		.word	0
+ 1945 0118 00000000 		.word	0
+ 1946 011c 00000000 		.word	0
  1947 0120 0C       		.byte	12
  1948 0121 000000   		.space	3
- 1949 0124 28000000 		.word	40
- 1950 0128 F9FF1F00 		.word	2097145
- 1951 012c 0000A00A 		.word	178257920
+ 1949 0124 00000000 		.word	0
+ 1950 0128 00000000 		.word	0
+ 1951 012c 00000000 		.word	0
  1952 0130 0D       		.byte	13
  1953 0131 000000   		.space	3
- 1954 0134 28000000 		.word	40
- 1955 0138 F9FF1F00 		.word	2097145
- 1956 013c 0000C00A 		.word	180355072
+ 1954 0134 00000000 		.word	0
+ 1955 0138 00000000 		.word	0
+ 1956 013c 00000000 		.word	0
  1957 0140 0E       		.byte	14
  1958 0141 000000   		.space	3
  1959 0144 00000000 		.word	0
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1972 0000 00       		.space	1
  1973              		.text
  1974              	.Letext0:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 66
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 66
 
 
  1975              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
@@ -3913,19 +3913,19 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  1984 000b 01       		.uleb128 0x1
  1985 000c 5C010000 		.4byte	.LASF89
  1986 0010 0C       		.byte	0xc
- 1987 0011 80030000 		.4byte	.LASF90
- 1988 0015 F4040000 		.4byte	.LASF91
+ 1987 0011 FE030000 		.4byte	.LASF90
+ 1988 0015 6E020000 		.4byte	.LASF91
  1989 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1990 001d 00000000 		.4byte	0
  1991 0021 00000000 		.4byte	.Ldebug_line0
  1992 0025 02       		.uleb128 0x2
  1993 0026 01       		.byte	0x1
  1994 0027 06       		.byte	0x6
- 1995 0028 D0020000 		.4byte	.LASF0
+ 1995 0028 4E030000 		.4byte	.LASF0
  1996 002c 02       		.uleb128 0x2
  1997 002d 01       		.byte	0x1
  1998 002e 08       		.byte	0x8
- 1999 002f 94020000 		.4byte	.LASF1
+ 1999 002f 0A030000 		.4byte	.LASF1
  2000 0033 02       		.uleb128 0x2
  2001 0034 02       		.byte	0x2
  2002 0035 05       		.byte	0x5
@@ -3933,7 +3933,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2004 003a 02       		.uleb128 0x2
  2005 003b 02       		.byte	0x2
  2006 003c 07       		.byte	0x7
- 2007 003d 42030000 		.4byte	.LASF3
+ 2007 003d C0030000 		.4byte	.LASF3
  2008 0041 02       		.uleb128 0x2
  2009 0042 04       		.byte	0x4
  2010 0043 05       		.byte	0x5
@@ -3941,7 +3941,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2012 0048 02       		.uleb128 0x2
  2013 0049 04       		.byte	0x4
  2014 004a 07       		.byte	0x7
- 2015 004b 11040000 		.4byte	.LASF5
+ 2015 004b 8F040000 		.4byte	.LASF5
  2016 004f 02       		.uleb128 0x2
  2017 0050 08       		.byte	0x8
  2018 0051 05       		.byte	0x5
@@ -3949,7 +3949,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2020 0056 02       		.uleb128 0x2
  2021 0057 08       		.byte	0x8
  2022 0058 07       		.byte	0x7
- 2023 0059 DC020000 		.4byte	.LASF7
+ 2023 0059 5A030000 		.4byte	.LASF7
  2024 005d 03       		.uleb128 0x3
  2025 005e 04       		.byte	0x4
  2026 005f 05       		.byte	0x5
@@ -3957,12 +3957,12 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2028 0064 02       		.uleb128 0x2
  2029 0065 04       		.byte	0x4
  2030 0066 07       		.byte	0x7
- 2031 0067 FC020000 		.4byte	.LASF8
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 67
+ 2031 0067 7A030000 		.4byte	.LASF8
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 67
 
 
  2032 006b 04       		.uleb128 0x4
- 2033 006c 9D030000 		.4byte	.LASF9
+ 2033 006c 1B040000 		.4byte	.LASF9
  2034 0070 02       		.byte	0x2
  2035 0071 E401     		.2byte	0x1e4
  2036 0073 2C000000 		.4byte	0x2c
@@ -3972,7 +3972,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2040 007d E501     		.2byte	0x1e5
  2041 007f 3A000000 		.4byte	0x3a
  2042 0083 04       		.uleb128 0x4
- 2043 0084 05040000 		.4byte	.LASF11
+ 2043 0084 83040000 		.4byte	.LASF11
  2044 0088 02       		.byte	0x2
  2045 0089 E601     		.2byte	0x1e6
  2046 008b 48000000 		.4byte	0x48
@@ -3983,20 +3983,20 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2051 0096 02       		.uleb128 0x2
  2052 0097 08       		.byte	0x8
  2053 0098 04       		.byte	0x4
- 2054 0099 2C040000 		.4byte	.LASF13
+ 2054 0099 AA040000 		.4byte	.LASF13
  2055 009d 02       		.uleb128 0x2
  2056 009e 01       		.byte	0x1
  2057 009f 08       		.byte	0x8
- 2058 00a0 67030000 		.4byte	.LASF14
+ 2058 00a0 E5030000 		.4byte	.LASF14
  2059 00a4 04       		.uleb128 0x4
- 2060 00a5 0C040000 		.4byte	.LASF15
+ 2060 00a5 8A040000 		.4byte	.LASF15
  2061 00a9 02       		.byte	0x2
  2062 00aa 8E02     		.2byte	0x28e
  2063 00ac B0000000 		.4byte	0xb0
  2064 00b0 05       		.uleb128 0x5
  2065 00b1 6B000000 		.4byte	0x6b
  2066 00b5 04       		.uleb128 0x4
- 2067 00b6 3C030000 		.4byte	.LASF16
+ 2067 00b6 BA030000 		.4byte	.LASF16
  2068 00ba 02       		.byte	0x2
  2069 00bb 9002     		.2byte	0x290
  2070 00bd C1000000 		.4byte	0xc1
@@ -4005,7 +4005,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2073 00c6 02       		.uleb128 0x2
  2074 00c7 08       		.byte	0x8
  2075 00c8 04       		.byte	0x4
- 2076 00c9 81020000 		.4byte	.LASF17
+ 2076 00c9 F7020000 		.4byte	.LASF17
  2077 00cd 02       		.uleb128 0x2
  2078 00ce 04       		.byte	0x4
  2079 00cf 07       		.byte	0x7
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2086 00dc 07       		.uleb128 0x7
  2087 00dd 1B010000 		.4byte	.LASF20
  2088 00e1 03       		.byte	0x3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 68
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 68
 
 
  2089 00e2 77       		.byte	0x77
@@ -4061,7 +4061,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2126 012e 05       		.uleb128 0x5
  2127 012f 1E010000 		.4byte	0x11e
  2128 0133 0A       		.uleb128 0xa
- 2129 0134 A3030000 		.4byte	.LASF21
+ 2129 0134 21040000 		.4byte	.LASF21
  2130 0138 03       		.byte	0x3
  2131 0139 7E       		.byte	0x7e
  2132 013a 09010000 		.4byte	0x109
@@ -4077,8 +4077,8 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2142 014d 6B000000 		.4byte	0x6b
  2143 0151 00       		.byte	0
  2144 0152 07       		.uleb128 0x7
- 2145 0153 7A030000 		.4byte	.LASF23
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 69
+ 2145 0153 F8030000 		.4byte	.LASF23
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 69
 
 
  2146 0157 03       		.byte	0x3
@@ -4086,7 +4086,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2148 0159 83000000 		.4byte	0x83
  2149 015d 04       		.byte	0x4
  2150 015e 07       		.uleb128 0x7
- 2151 015f CD040000 		.4byte	.LASF24
+ 2151 015f 4B050000 		.4byte	.LASF24
  2152 0163 03       		.byte	0x3
  2153 0164 93       		.byte	0x93
  2154 0165 83000000 		.4byte	0x83
@@ -4099,7 +4099,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2161 0175 0C       		.byte	0xc
  2162 0176 00       		.byte	0
  2163 0177 0A       		.uleb128 0xa
- 2164 0178 D3040000 		.4byte	.LASF26
+ 2164 0178 51050000 		.4byte	.LASF26
  2165 017c 03       		.byte	0x3
  2166 017d 95       		.byte	0x95
  2167 017e 3E010000 		.4byte	0x13e
@@ -4121,14 +4121,14 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2183 019d 83000000 		.4byte	0x83
  2184 01a1 04       		.byte	0x4
  2185 01a2 07       		.uleb128 0x7
- 2186 01a3 47040000 		.4byte	.LASF29
+ 2186 01a3 C5040000 		.4byte	.LASF29
  2187 01a7 03       		.byte	0x3
  2188 01a8 9C       		.byte	0x9c
  2189 01a9 83000000 		.4byte	0x83
  2190 01ad 08       		.byte	0x8
  2191 01ae 00       		.byte	0
  2192 01af 0A       		.uleb128 0xa
- 2193 01b0 76020000 		.4byte	.LASF30
+ 2193 01b0 EC020000 		.4byte	.LASF30
  2194 01b4 03       		.byte	0x3
  2195 01b5 9D       		.byte	0x9d
  2196 01b6 82010000 		.4byte	0x182
@@ -4138,10 +4138,10 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2200 01bd A0       		.byte	0xa0
  2201 01be 17020000 		.4byte	0x217
  2202 01c2 07       		.uleb128 0x7
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 70
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 70
 
 
- 2203 01c3 7A030000 		.4byte	.LASF23
+ 2203 01c3 F8030000 		.4byte	.LASF23
  2204 01c7 03       		.byte	0x3
  2205 01c8 A2       		.byte	0xa2
  2206 01c9 33010000 		.4byte	0x133
@@ -4159,7 +4159,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2218 01e1 FE000000 		.4byte	0xfe
  2219 01e5 08       		.byte	0x8
  2220 01e6 07       		.uleb128 0x7
- 2221 01e7 CD040000 		.4byte	.LASF24
+ 2221 01e7 4B050000 		.4byte	.LASF24
  2222 01eb 03       		.byte	0x3
  2223 01ec A5       		.byte	0xa5
  2224 01ed 33010000 		.4byte	0x133
@@ -4171,20 +4171,20 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2230 01f9 33010000 		.4byte	0x133
  2231 01fd 14       		.byte	0x14
  2232 01fe 07       		.uleb128 0x7
- 2233 01ff 8D020000 		.4byte	.LASF33
+ 2233 01ff 03030000 		.4byte	.LASF33
  2234 0203 03       		.byte	0x3
  2235 0204 A7       		.byte	0xa7
  2236 0205 33010000 		.4byte	0x133
  2237 0209 18       		.byte	0x18
  2238 020a 07       		.uleb128 0x7
- 2239 020b 60030000 		.4byte	.LASF34
+ 2239 020b DE030000 		.4byte	.LASF34
  2240 020f 03       		.byte	0x3
  2241 0210 A8       		.byte	0xa8
  2242 0211 33010000 		.4byte	0x133
  2243 0215 1C       		.byte	0x1c
  2244 0216 00       		.byte	0
  2245 0217 0A       		.uleb128 0xa
- 2246 0218 6C030000 		.4byte	.LASF35
+ 2246 0218 EA030000 		.4byte	.LASF35
  2247 021c 03       		.byte	0x3
  2248 021d A9       		.byte	0xa9
  2249 021e BA010000 		.4byte	0x1ba
@@ -4198,30 +4198,30 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2257 022f 03       		.byte	0x3
  2258 0230 AE       		.byte	0xae
  2259 0231 33010000 		.4byte	0x133
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 71
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 71
 
 
  2260 0235 00       		.byte	0
  2261 0236 07       		.uleb128 0x7
- 2262 0237 47040000 		.4byte	.LASF29
+ 2262 0237 C5040000 		.4byte	.LASF29
  2263 023b 03       		.byte	0x3
  2264 023c AF       		.byte	0xaf
  2265 023d 33010000 		.4byte	0x133
  2266 0241 04       		.byte	0x4
  2267 0242 07       		.uleb128 0x7
- 2268 0243 A3040000 		.4byte	.LASF36
+ 2268 0243 21050000 		.4byte	.LASF36
  2269 0247 03       		.byte	0x3
  2270 0248 B0       		.byte	0xb0
  2271 0249 FE000000 		.4byte	0xfe
  2272 024d 08       		.byte	0x8
  2273 024e 00       		.byte	0
  2274 024f 0A       		.uleb128 0xa
- 2275 0250 C3030000 		.4byte	.LASF37
+ 2275 0250 41040000 		.4byte	.LASF37
  2276 0254 03       		.byte	0x3
  2277 0255 B1       		.byte	0xb1
  2278 0256 22020000 		.4byte	0x222
  2279 025a 0B       		.uleb128 0xb
- 2280 025b C4040000 		.4byte	.LASF40
+ 2280 025b 42050000 		.4byte	.LASF40
  2281 025f 01       		.byte	0x1
  2282 0260 6E01     		.2byte	0x16e
  2283 0262 6B000000 		.4byte	0x6b
@@ -4231,7 +4231,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2287 026f 9C       		.byte	0x9c
  2288 0270 A4020000 		.4byte	0x2a4
  2289 0274 0C       		.uleb128 0xc
- 2290 0275 EC040000 		.4byte	.LASF38
+ 2290 0275 6A050000 		.4byte	.LASF38
  2291 0279 01       		.byte	0x1
  2292 027a 7001     		.2byte	0x170
  2293 027c 83000000 		.4byte	0x83
@@ -4253,12 +4253,12 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2309 02a2 00       		.byte	0
  2310 02a3 00       		.byte	0
  2311 02a4 0B       		.uleb128 0xb
- 2312 02a5 4C040000 		.4byte	.LASF41
+ 2312 02a5 CA040000 		.4byte	.LASF41
  2313 02a9 01       		.byte	0x1
  2314 02aa AB01     		.2byte	0x1ab
  2315 02ac 6B000000 		.4byte	0x6b
  2316 02b0 00000000 		.4byte	.LFB39
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 72
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 72
 
 
  2317 02b4 1C000000 		.4byte	.LFE39-.LFB39
@@ -4273,7 +4273,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2326 02ca 63000000 		.4byte	.LLST2
  2327 02ce 00       		.byte	0
  2328 02cf 0F       		.uleb128 0xf
- 2329 02d0 55030000 		.4byte	.LASF42
+ 2329 02d0 D3030000 		.4byte	.LASF42
  2330 02d4 01       		.byte	0x1
  2331 02d5 FE       		.byte	0xfe
  2332 02d6 6B000000 		.4byte	0x6b
@@ -4283,7 +4283,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2336 02e3 9C       		.byte	0x9c
  2337 02e4 21030000 		.4byte	0x321
  2338 02e8 0C       		.uleb128 0xc
- 2339 02e9 EC040000 		.4byte	.LASF38
+ 2339 02e9 6A050000 		.4byte	.LASF38
  2340 02ed 01       		.byte	0x1
  2341 02ee 0001     		.2byte	0x100
  2342 02f0 83000000 		.4byte	0x83
@@ -4308,7 +4308,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2361 031f 00       		.byte	0
  2362 0320 00       		.byte	0
  2363 0321 0B       		.uleb128 0xb
- 2364 0322 AE030000 		.4byte	.LASF43
+ 2364 0322 2C040000 		.4byte	.LASF43
  2365 0326 01       		.byte	0x1
  2366 0327 D501     		.2byte	0x1d5
  2367 0329 6B000000 		.4byte	0x6b
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2371 0336 9C       		.byte	0x9c
  2372 0337 4C030000 		.4byte	0x34c
  2373 033b 0C       		.uleb128 0xc
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 73
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 73
 
 
  2374 033c 1D000000 		.4byte	.LASF39
@@ -4338,7 +4338,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2388 0361 9C       		.byte	0x9c
  2389 0362 87030000 		.4byte	0x387
  2390 0366 11       		.uleb128 0x11
- 2391 0367 7D040000 		.4byte	.LASF46
+ 2391 0367 FB040000 		.4byte	.LASF46
  2392 036b 01       		.byte	0x1
  2393 036c 0702     		.2byte	0x207
  2394 036e 77000000 		.4byte	0x77
@@ -4351,7 +4351,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2401 0382 26010000 		.4byte	.LLST7
  2402 0386 00       		.byte	0
  2403 0387 0B       		.uleb128 0xb
- 2404 0388 2D030000 		.4byte	.LASF45
+ 2404 0388 AB030000 		.4byte	.LASF45
  2405 038c 01       		.byte	0x1
  2406 038d 3F02     		.2byte	0x23f
  2407 038f 6B000000 		.4byte	0x6b
@@ -4361,7 +4361,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2411 039c 9C       		.byte	0x9c
  2412 039d C2030000 		.4byte	0x3c2
  2413 03a1 11       		.uleb128 0x11
- 2414 03a2 6E020000 		.4byte	.LASF47
+ 2414 03a2 34030000 		.4byte	.LASF47
  2415 03a6 01       		.byte	0x1
  2416 03a7 3F02     		.2byte	0x23f
  2417 03a9 6B000000 		.4byte	0x6b
@@ -4374,11 +4374,11 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2424 03bd D5010000 		.4byte	.LLST9
  2425 03c1 00       		.byte	0
  2426 03c2 0B       		.uleb128 0xb
- 2427 03c3 60040000 		.4byte	.LASF48
+ 2427 03c3 DE040000 		.4byte	.LASF48
  2428 03c7 01       		.byte	0x1
  2429 03c8 8C02     		.2byte	0x28c
  2430 03ca 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 74
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 74
 
 
  2431 03ce 00000000 		.4byte	.LFB43
@@ -4417,7 +4417,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2464 0423 6B000000 		.4byte	0x6b
  2465 0427 59030000 		.4byte	.LLST14
  2466 042b 0C       		.uleb128 0xc
- 2467 042c 3F040000 		.4byte	.LASF51
+ 2467 042c BD040000 		.4byte	.LASF51
  2468 0430 01       		.byte	0x1
  2469 0431 9002     		.2byte	0x290
  2470 0433 6B000000 		.4byte	0x6b
@@ -4434,11 +4434,11 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2481 0451 9C       		.byte	0x9c
  2482 0452 77040000 		.4byte	0x477
  2483 0456 11       		.uleb128 0x11
- 2484 0457 77040000 		.4byte	.LASF53
+ 2484 0457 F5040000 		.4byte	.LASF53
  2485 045b 01       		.byte	0x1
  2486 045c 0103     		.2byte	0x301
  2487 045e 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 75
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 75
 
 
  2488 0462 E7030000 		.4byte	.LLST16
@@ -4450,7 +4450,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2494 0472 53040000 		.4byte	.LLST17
  2495 0476 00       		.byte	0
  2496 0477 0B       		.uleb128 0xb
- 2497 0478 09030000 		.4byte	.LASF54
+ 2497 0478 87030000 		.4byte	.LASF54
  2498 047c 01       		.byte	0x1
  2499 047d 4B03     		.2byte	0x34b
  2500 047f 6B000000 		.4byte	0x6b
@@ -4483,7 +4483,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2527 04c7 9C       		.byte	0x9c
  2528 04c8 45050000 		.4byte	0x545
  2529 04cc 11       		.uleb128 0x11
- 2530 04cd D1030000 		.4byte	.LASF57
+ 2530 04cd 4F040000 		.4byte	.LASF57
  2531 04d1 01       		.byte	0x1
  2532 04d2 1A04     		.2byte	0x41a
  2533 04d4 45050000 		.4byte	0x545
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2542 04ed 1D000000 		.4byte	.LASF39
  2543 04f1 01       		.byte	0x1
  2544 04f2 1D04     		.2byte	0x41d
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 76
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 76
 
 
  2545 04f4 6B000000 		.4byte	0x6b
@@ -4547,7 +4547,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2588 0546 04       		.byte	0x4
  2589 0547 B5000000 		.4byte	0xb5
  2590 054b 0B       		.uleb128 0xb
- 2591 054c 85040000 		.4byte	.LASF59
+ 2591 054c 03050000 		.4byte	.LASF59
  2592 0550 01       		.byte	0x1
  2593 0551 7604     		.2byte	0x476
  2594 0553 6B000000 		.4byte	0x6b
@@ -4557,8 +4557,8 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2598 0560 9C       		.byte	0x9c
  2599 0561 86050000 		.4byte	0x586
  2600 0565 11       		.uleb128 0x11
- 2601 0566 72040000 		.4byte	.LASF60
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 77
+ 2601 0566 F0040000 		.4byte	.LASF60
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 77
 
 
  2602 056a 01       		.byte	0x1
@@ -4600,7 +4600,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2638 05c6 01       		.uleb128 0x1
  2639 05c7 9C       		.byte	0x9c
  2640 05c8 15       		.uleb128 0x15
- 2641 05c9 19030000 		.4byte	.LASF64
+ 2641 05c9 97030000 		.4byte	.LASF64
  2642 05cd 01       		.byte	0x1
  2643 05ce F604     		.2byte	0x4f6
  2644 05d0 6B000000 		.4byte	0x6b
@@ -4609,7 +4609,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2647 05dc 01       		.uleb128 0x1
  2648 05dd 9C       		.byte	0x9c
  2649 05de 15       		.uleb128 0x15
- 2650 05df BE020000 		.4byte	.LASF65
+ 2650 05df 3C030000 		.4byte	.LASF65
  2651 05e3 01       		.byte	0x1
  2652 05e4 1105     		.2byte	0x511
  2653 05e6 6B000000 		.4byte	0x6b
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2656 05f2 01       		.uleb128 0x1
  2657 05f3 9C       		.byte	0x9c
  2658 05f4 0B       		.uleb128 0xb
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 78
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 78
 
 
  2659 05f5 13020000 		.4byte	.LASF66
@@ -4659,7 +4659,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2694 064f 9C       		.byte	0x9c
  2695 0650 75060000 		.4byte	0x675
  2696 0654 11       		.uleb128 0x11
- 2697 0655 23040000 		.4byte	.LASF69
+ 2697 0655 A1040000 		.4byte	.LASF69
  2698 0659 01       		.byte	0x1
  2699 065a 6905     		.2byte	0x569
  2700 065c 75060000 		.4byte	0x675
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2713 067c AF010000 		.4byte	0x1af
  2714 0680 0F       		.uleb128 0xf
  2715 0681 F4000000 		.4byte	.LASF70
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 79
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 79
 
 
  2716 0685 01       		.byte	0x1
@@ -4696,7 +4696,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2728 06a0 21070000 		.4byte	0x721
  2729 06a4 05       		.uleb128 0x5
  2730 06a5 03       		.byte	0x3
- 2731 06a6 60000000 		.4byte	CAN_RXConfigStruct.6690
+ 2731 06a6 60000000 		.4byte	CAN_RXConfigStruct.6662
  2732 06aa 17       		.uleb128 0x17
  2733 06ab 34010000 		.4byte	.LASF72
  2734 06af 01       		.byte	0x1
@@ -4704,7 +4704,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2736 06b1 36070000 		.4byte	0x736
  2737 06b5 05       		.uleb128 0x5
  2738 06b6 03       		.byte	0x3
- 2739 06b7 00000000 		.4byte	CAN_TXConfigStruct.6691
+ 2739 06b7 00000000 		.4byte	CAN_TXConfigStruct.6663
  2740 06bb 18       		.uleb128 0x18
  2741 06bc 1D000000 		.4byte	.LASF39
  2742 06c0 01       		.byte	0x1
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2770 06f2 00000000 		.4byte	.LANCHOR0
  2771 06f6 22       		.byte	0x22
  2772 06f7 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 80
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 80
 
 
  2773 06f8 0D       		.uleb128 0xd
@@ -4776,7 +4776,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2805 0736 16       		.uleb128 0x16
  2806 0737 26070000 		.4byte	0x726
  2807 073b 0B       		.uleb128 0xb
- 2808 073c AA040000 		.4byte	.LASF73
+ 2808 073c 28050000 		.4byte	.LASF73
  2809 0740 01       		.byte	0x1
  2810 0741 9E05     		.2byte	0x59e
  2811 0743 6B000000 		.4byte	0x6b
@@ -4798,11 +4798,11 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2827 076d 6B000000 		.4byte	0x6b
  2828 0771 52080000 		.4byte	.LLST32
  2829 0775 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 81
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 81
 
 
  2830 0776 0F       		.uleb128 0xf
- 2831 0777 F3020000 		.4byte	.LASF75
+ 2831 0777 71030000 		.4byte	.LASF75
  2832 077b 01       		.byte	0x1
  2833 077c 89       		.byte	0x89
  2834 077d 6B000000 		.4byte	0x6b
@@ -4812,7 +4812,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2838 078a 9C       		.byte	0x9c
  2839 078b 69080000 		.4byte	0x869
  2840 078f 18       		.uleb128 0x18
- 2841 0790 EC040000 		.4byte	.LASF38
+ 2841 0790 6A050000 		.4byte	.LASF38
  2842 0794 01       		.byte	0x1
  2843 0795 8B       		.byte	0x8b
  2844 0796 83000000 		.4byte	0x83
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2884 07f1 50       		.byte	0x50
  2885 07f2 01       		.uleb128 0x1
  2886 07f3 4D       		.byte	0x4d
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 82
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 82
 
 
  2887 07f4 0E       		.uleb128 0xe
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2941 0860 0E       		.uleb128 0xe
  2942 0861 01       		.uleb128 0x1
  2943 0862 50       		.byte	0x50
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 83
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 83
 
 
  2944 0863 03       		.uleb128 0x3
@@ -4950,7 +4950,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2970 08a1 CF020000 		.4byte	0x2cf
  2971 08a5 00       		.byte	0
  2972 08a6 0B       		.uleb128 0xb
- 2973 08a7 DE040000 		.4byte	.LASF78
+ 2973 08a7 5C050000 		.4byte	.LASF78
  2974 08ab 01       		.byte	0x1
  2975 08ac AA03     		.2byte	0x3aa
  2976 08ae 6B000000 		.4byte	0x6b
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  2998 08e8 6B000000 		.4byte	0x6b
  2999 08ec 95090000 		.4byte	.LLST39
  3000 08f0 10       		.uleb128 0x10
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 84
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 84
 
 
  3001 08f1 1E000000 		.4byte	.LVL165
@@ -4991,7 +4991,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3008 0907 CF020000 		.4byte	0x2cf
  3009 090b 00       		.byte	0
  3010 090c 0B       		.uleb128 0xb
- 3011 090d E5030000 		.4byte	.LASF81
+ 3011 090d 63040000 		.4byte	.LASF81
  3012 0911 01       		.byte	0x1
  3013 0912 D505     		.2byte	0x5d5
  3014 0914 6B000000 		.4byte	0x6b
@@ -5023,7 +5023,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3040 095b 01       		.uleb128 0x1
  3041 095c 9C       		.byte	0x9c
  3042 095d 0B       		.uleb128 0xb
- 3043 095e A2020000 		.4byte	.LASF84
+ 3043 095e 18030000 		.4byte	.LASF84
  3044 0962 01       		.byte	0x1
  3045 0963 3A06     		.2byte	0x63a
  3046 0965 6B000000 		.4byte	0x6b
@@ -5038,12 +5038,12 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3055 097d 3C06     		.2byte	0x63c
  3056 097f 6B000000 		.4byte	0x6b
  3057 0983 3F0A0000 		.4byte	.LLST42
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 85
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 85
 
 
  3058 0987 00       		.byte	0
  3059 0988 1A       		.uleb128 0x1a
- 3060 0989 D9030000 		.4byte	.LASF92
+ 3060 0989 57040000 		.4byte	.LASF92
  3061 098d 01       		.byte	0x1
  3062 098e 16       		.byte	0x16
  3063 098f 6B000000 		.4byte	0x6b
@@ -5056,13 +5056,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3070 09a2 04       		.byte	0x4
  3071 09a3 C5       		.byte	0xc5
  3072 09a4 1B       		.uleb128 0x1b
- 3073 09a5 33040000 		.4byte	.LASF86
- 3074 09a9 33040000 		.4byte	.LASF86
+ 3073 09a5 B1040000 		.4byte	.LASF86
+ 3074 09a9 B1040000 		.4byte	.LASF86
  3075 09ad 04       		.byte	0x4
  3076 09ae C3       		.byte	0xc3
  3077 09af 1B       		.uleb128 0x1b
- 3078 09b0 94040000 		.4byte	.LASF87
- 3079 09b4 94040000 		.4byte	.LASF87
+ 3078 09b0 12050000 		.4byte	.LASF87
+ 3079 09b4 12050000 		.4byte	.LASF87
  3080 09b8 04       		.byte	0x4
  3081 09b9 BD       		.byte	0xbd
  3082 09ba 1B       		.uleb128 0x1b
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3112 0016 0B       		.uleb128 0xb
  3113 0017 0B       		.uleb128 0xb
  3114 0018 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 86
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 86
 
 
  3115 0019 0B       		.uleb128 0xb
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3169 004f 3A       		.uleb128 0x3a
  3170 0050 0B       		.uleb128 0xb
  3171 0051 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 87
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 87
 
 
  3172 0052 0B       		.uleb128 0xb
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3226 0088 01       		.uleb128 0x1
  3227 0089 12       		.uleb128 0x12
  3228 008a 06       		.uleb128 0x6
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 88
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 88
 
 
  3229 008b 40       		.uleb128 0x40
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3283 00c7 49       		.uleb128 0x49
  3284 00c8 13       		.uleb128 0x13
  3285 00c9 11       		.uleb128 0x11
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 89
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 89
 
 
  3286 00ca 01       		.uleb128 0x1
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3340 0105 01       		.uleb128 0x1
  3341 0106 31       		.uleb128 0x31
  3342 0107 13       		.uleb128 0x13
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 90
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 90
 
 
  3343 0108 01       		.uleb128 0x1
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3397 013f 49       		.uleb128 0x49
  3398 0140 13       		.uleb128 0x13
  3399 0141 02       		.uleb128 0x2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 91
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 91
 
 
  3400 0142 18       		.uleb128 0x18
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3454 0178 19       		.uleb128 0x19
  3455 0179 3C       		.uleb128 0x3c
  3456 017a 19       		.uleb128 0x19
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 92
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 92
 
 
  3457 017b 6E       		.uleb128 0x6e
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3511 0067 16000000 		.4byte	.LVL8
  3512 006b 0200     		.2byte	0x2
  3513 006d 31       		.byte	0x31
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 93
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 93
 
 
  3514 006e 9F       		.byte	0x9f
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3568 00f8 50       		.byte	0x50
  3569 00f9 9F       		.byte	0x9f
  3570 00fa 22000000 		.4byte	.LVL20
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 94
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 94
 
 
  3571 00fe 24000000 		.4byte	.LVL21
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3625 0181 9F       		.byte	0x9f
  3626 0182 18000000 		.4byte	.LVL26
  3627 0186 2C000000 		.4byte	.LVL27
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 95
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 95
 
 
  3628 018a 0100     		.2byte	0x1
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3682 020a 01       		.uleb128 0x1
  3683 020b 50       		.byte	0x50
  3684 020c 9F       		.byte	0x9f
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 96
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 96
 
 
  3685 020d 76000000 		.4byte	.LVL44
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3739 0289 9F       		.byte	0x9f
  3740 028a 8A000000 		.4byte	.LVL54
  3741 028e 8C000000 		.4byte	.LVL55
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 97
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 97
 
 
  3742 0292 0100     		.2byte	0x1
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3796 0311 0400     		.2byte	0x4
  3797 0313 F3       		.byte	0xf3
  3798 0314 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 98
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 98
 
 
  3799 0315 52       		.byte	0x52
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3853 0394 00000000 		.4byte	0
  3854 0398 00000000 		.4byte	0
  3855              	.LLST15:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 99
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 99
 
 
  3856 039c 2E000000 		.4byte	.LVL35
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3910 0424 2E000000 		.4byte	.LVL64
  3911 0428 30000000 		.4byte	.LVL65
  3912 042c 0400     		.2byte	0x4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 100
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 100
 
 
  3913 042e F3       		.byte	0xf3
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  3967 04ac 0100     		.2byte	0x1
  3968 04ae 50       		.byte	0x50
  3969 04af 2E000000 		.4byte	.LVL72
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 101
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 101
 
 
  3970 04b3 30000000 		.4byte	.LVL73
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4024 053c 0100     		.2byte	0x1
  4025 053e 55       		.byte	0x55
  4026 053f 5A000000 		.4byte	.LVL92
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 102
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 102
 
 
  4027 0543 64000000 		.4byte	.LFE47
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4081 05c3 00000000 		.4byte	0
  4082              	.LLST22:
  4083 05c7 06000000 		.4byte	.LVL76
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 103
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 103
 
 
  4084 05cb 14000000 		.4byte	.LVL77
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4138 064e 31       		.byte	0x31
  4139 064f 9F       		.byte	0x9f
  4140 0650 14000000 		.4byte	.LVL96
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 104
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 104
 
 
  4141 0654 1C000000 		.4byte	.LFE48
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4195 06d2 82000000 		.4byte	.LVL107
  4196 06d6 84000000 		.4byte	.LVL108
  4197 06da 0400     		.2byte	0x4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 105
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 105
 
 
  4198 06dc F3       		.byte	0xf3
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4252 075a 0100     		.2byte	0x1
  4253 075c 50       		.byte	0x50
  4254 075d 46000000 		.4byte	.LVL116
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 106
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 106
 
 
  4255 0761 58000000 		.4byte	.LFE55
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4309 07ea 16000000 		.4byte	.LVL131
  4310 07ee 0100     		.2byte	0x1
  4311 07f0 50       		.byte	0x50
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 107
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 107
 
 
  4312 07f1 16000000 		.4byte	.LVL131
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4366              	.LLST33:
  4367 0871 02000000 		.4byte	.LVL138
  4368 0875 1A000000 		.4byte	.LVL139
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 108
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 108
 
 
  4369 0879 0400     		.2byte	0x4
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4423 0902 10000000 		.4byte	.LVL159
  4424 0906 0100     		.2byte	0x1
  4425 0908 50       		.byte	0x50
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 109
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 109
 
 
  4426 0909 10000000 		.4byte	.LVL159
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4480              	.LLST39:
  4481 0995 04000000 		.4byte	.LVL163
  4482 0999 1A000000 		.4byte	.LVL164
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 110
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 110
 
 
  4483 099d 0200     		.2byte	0x2
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4537 0a18 00000000 		.4byte	0
  4538 0a1c 00000000 		.4byte	0
  4539              	.LLST41:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 111
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 111
 
 
  4540 0a20 00000000 		.4byte	.LVL171
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4594 006c 14000000 		.4byte	.LFE49-.LFB49
  4595 0070 00000000 		.4byte	.LFB50
  4596 0074 14000000 		.4byte	.LFE50-.LFB50
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 112
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 112
 
 
  4597 0078 00000000 		.4byte	.LFB51
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4651 0060 00000000 		.4byte	.LFB50
  4652 0064 14000000 		.4byte	.LFE50
  4653 0068 00000000 		.4byte	.LFB51
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 113
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 113
 
 
  4654 006c 0C000000 		.4byte	.LFE51
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4693 0037 43414E5F 		.ascii	"CAN_GetRXErrorFlag\000"
  4693      47657452 
  4693      58457272 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 114
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 114
 
 
  4693      6F72466C 
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4717 00e0 43414E5F 		.ascii	"CAN_GetTXErrorCount\000"
  4717      47657454 
  4717      58457272 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 115
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 115
 
 
  4717      6F72436F 
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4743 01c2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  4743      66756E63 
  4743      74696F6E 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 116
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 116
 
 
  4743      2D736563 
@@ -6954,252 +6954,253 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 1
  4767      72655363 
  4767      616C6572 
  4767      00
- 4768              	.LASF47:
- 4769 026e 61726269 		.ascii	"arbiter\000"
- 4769      74657200 
- 4770              	.LASF30:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 117
+ 4768              	.LASF91:
+ 4769 026e 433A5C55 		.ascii	"C:\\Users\\Austcha\\Documents\\Husky Robotics\\Moto"
+ 4769      73657273 
+ 4769      5C417573 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 117
 
 
- 4771 0276 43414E5F 		.ascii	"CAN_TX_CFG\000"
- 4771      54585F43 
- 4771      464700
- 4772              	.LASF17:
- 4773 0281 6C6F6E67 		.ascii	"long double\000"
- 4773      20646F75 
- 4773      626C6500 
- 4774              	.LASF33:
- 4775 028d 7278616D 		.ascii	"rxamrd\000"
- 4775      726400
- 4776              	.LASF1:
- 4777 0294 756E7369 		.ascii	"unsigned char\000"
- 4777      676E6564 
- 4777      20636861 
- 4777      7200
- 4778              	.LASF84:
- 4779 02a2 43414E5F 		.ascii	"CAN_ArmErrorCaptureRegister\000"
- 4779      41726D45 
- 4779      72726F72 
- 4779      43617074 
- 4779      75726552 
- 4780              	.LASF65:
- 4781 02be 43414E5F 		.ascii	"CAN_GetErrorState\000"
- 4781      47657445 
+ 4769      74636861 
+ 4769      5C446F63 
+ 4770 029c 7220426F 		.ascii	"r Boards\\Rev3\\Motor-Unit-Firmware-A-2019-2020\\Mo"
+ 4770      61726473 
+ 4770      5C526576 
+ 4770      335C4D6F 
+ 4770      746F722D 
+ 4771 02cc 746F7220 		.ascii	"tor Unit\\Motor_Board_Rev3.cydsn\000"
+ 4771      556E6974 
+ 4771      5C4D6F74 
+ 4771      6F725F42 
+ 4771      6F617264 
+ 4772              	.LASF30:
+ 4773 02ec 43414E5F 		.ascii	"CAN_TX_CFG\000"
+ 4773      54585F43 
+ 4773      464700
+ 4774              	.LASF17:
+ 4775 02f7 6C6F6E67 		.ascii	"long double\000"
+ 4775      20646F75 
+ 4775      626C6500 
+ 4776              	.LASF33:
+ 4777 0303 7278616D 		.ascii	"rxamrd\000"
+ 4777      726400
+ 4778              	.LASF1:
+ 4779 030a 756E7369 		.ascii	"unsigned char\000"
+ 4779      676E6564 
+ 4779      20636861 
+ 4779      7200
+ 4780              	.LASF84:
+ 4781 0318 43414E5F 		.ascii	"CAN_ArmErrorCaptureRegister\000"
+ 4781      41726D45 
  4781      72726F72 
- 4781      53746174 
- 4781      6500
- 4782              	.LASF0:
- 4783 02d0 7369676E 		.ascii	"signed char\000"
- 4783      65642063 
- 4783      68617200 
- 4784              	.LASF7:
- 4785 02dc 6C6F6E67 		.ascii	"long long unsigned int\000"
- 4785      206C6F6E 
- 4785      6720756E 
- 4785      7369676E 
- 4785      65642069 
- 4786              	.LASF75:
- 4787 02f3 43414E5F 		.ascii	"CAN_Init\000"
- 4787      496E6974 
- 4787      00
- 4788              	.LASF8:
- 4789 02fc 756E7369 		.ascii	"unsigned int\000"
- 4789      676E6564 
- 4789      20696E74 
- 4789      00
- 4790              	.LASF54:
- 4791 0309 43414E5F 		.ascii	"CAN_SetEdgeMode\000"
- 4791      53657445 
- 4791      6467654D 
- 4791      6F646500 
- 4792              	.LASF64:
- 4793 0319 43414E5F 		.ascii	"CAN_GetRXErrorCount\000"
- 4793      47657452 
- 4793      58457272 
- 4793      6F72436F 
- 4793      756E7400 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 118
+ 4781      43617074 
+ 4781      75726552 
+ 4782              	.LASF47:
+ 4783 0334 61726269 		.ascii	"arbiter\000"
+ 4783      74657200 
+ 4784              	.LASF65:
+ 4785 033c 43414E5F 		.ascii	"CAN_GetErrorState\000"
+ 4785      47657445 
+ 4785      72726F72 
+ 4785      53746174 
+ 4785      6500
+ 4786              	.LASF0:
+ 4787 034e 7369676E 		.ascii	"signed char\000"
+ 4787      65642063 
+ 4787      68617200 
+ 4788              	.LASF7:
+ 4789 035a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 4789      206C6F6E 
+ 4789      6720756E 
+ 4789      7369676E 
+ 4789      65642069 
+ 4790              	.LASF75:
+ 4791 0371 43414E5F 		.ascii	"CAN_Init\000"
+ 4791      496E6974 
+ 4791      00
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 118
 
 
- 4794              	.LASF45:
- 4795 032d 43414E5F 		.ascii	"CAN_SetArbiter\000"
- 4795      53657441 
- 4795      72626974 
- 4795      657200
- 4796              	.LASF16:
- 4797 033c 72656733 		.ascii	"reg32\000"
- 4797      3200
- 4798              	.LASF3:
- 4799 0342 73686F72 		.ascii	"short unsigned int\000"
- 4799      7420756E 
- 4799      7369676E 
- 4799      65642069 
- 4799      6E7400
- 4800              	.LASF42:
- 4801 0355 43414E5F 		.ascii	"CAN_Enable\000"
- 4801      456E6162 
- 4801      6C6500
- 4802              	.LASF34:
- 4803 0360 72786163 		.ascii	"rxacrd\000"
- 4803      726400
- 4804              	.LASF14:
- 4805 0367 63686172 		.ascii	"char\000"
- 4805      00
- 4806              	.LASF35:
- 4807 036c 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
- 4807      52585F53 
- 4807      54525543 
- 4807      5400
- 4808              	.LASF23:
- 4809 037a 7278636D 		.ascii	"rxcmd\000"
- 4809      6400
- 4810              	.LASF90:
- 4811 0380 47656E65 		.ascii	"Generated_Source\\PSoC4\\CAN.c\000"
- 4811      72617465 
- 4811      645F536F 
- 4811      75726365 
- 4811      5C50536F 
- 4812              	.LASF9:
- 4813 039d 75696E74 		.ascii	"uint8\000"
- 4813      3800
- 4814              	.LASF21:
- 4815 03a3 43414E5F 		.ascii	"CAN_REG_32\000"
- 4815      5245475F 
- 4815      333200
- 4816              	.LASF43:
- 4817 03ae 43414E5F 		.ascii	"CAN_GlobalIntDisable\000"
- 4817      476C6F62 
- 4817      616C496E 
- 4817      74446973 
- 4817      61626C65 
- 4818              	.LASF37:
- 4819 03c3 43414E5F 		.ascii	"CAN_TX_STRUCT\000"
- 4819      54585F53 
- 4819      54525543 
- 4819      5400
- 4820              	.LASF57:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 119
+ 4792              	.LASF8:
+ 4793 037a 756E7369 		.ascii	"unsigned int\000"
+ 4793      676E6564 
+ 4793      20696E74 
+ 4793      00
+ 4794              	.LASF54:
+ 4795 0387 43414E5F 		.ascii	"CAN_SetEdgeMode\000"
+ 4795      53657445 
+ 4795      6467654D 
+ 4795      6F646500 
+ 4796              	.LASF64:
+ 4797 0397 43414E5F 		.ascii	"CAN_GetRXErrorCount\000"
+ 4797      47657452 
+ 4797      58457272 
+ 4797      6F72436F 
+ 4797      756E7400 
+ 4798              	.LASF45:
+ 4799 03ab 43414E5F 		.ascii	"CAN_SetArbiter\000"
+ 4799      53657441 
+ 4799      72626974 
+ 4799      657200
+ 4800              	.LASF16:
+ 4801 03ba 72656733 		.ascii	"reg32\000"
+ 4801      3200
+ 4802              	.LASF3:
+ 4803 03c0 73686F72 		.ascii	"short unsigned int\000"
+ 4803      7420756E 
+ 4803      7369676E 
+ 4803      65642069 
+ 4803      6E7400
+ 4804              	.LASF42:
+ 4805 03d3 43414E5F 		.ascii	"CAN_Enable\000"
+ 4805      456E6162 
+ 4805      6C6500
+ 4806              	.LASF34:
+ 4807 03de 72786163 		.ascii	"rxacrd\000"
+ 4807      726400
+ 4808              	.LASF14:
+ 4809 03e5 63686172 		.ascii	"char\000"
+ 4809      00
+ 4810              	.LASF35:
+ 4811 03ea 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
+ 4811      52585F53 
+ 4811      54525543 
+ 4811      5400
+ 4812              	.LASF23:
+ 4813 03f8 7278636D 		.ascii	"rxcmd\000"
+ 4813      6400
+ 4814              	.LASF90:
+ 4815 03fe 47656E65 		.ascii	"Generated_Source\\PSoC4\\CAN.c\000"
+ 4815      72617465 
+ 4815      645F536F 
+ 4815      75726365 
+ 4815      5C50536F 
+ 4816              	.LASF9:
+ 4817 041b 75696E74 		.ascii	"uint8\000"
+ 4817      3800
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 119
 
 
- 4821 03d1 72656741 		.ascii	"regAddr\000"
- 4821      64647200 
- 4822              	.LASF92:
- 4823 03d9 43414E5F 		.ascii	"CAN_initVar\000"
- 4823      696E6974 
- 4823      56617200 
- 4824              	.LASF81:
- 4825 03e5 43414E5F 		.ascii	"CAN_SetErrorCaptureRegisterMode\000"
- 4825      53657445 
- 4825      72726F72 
- 4825      43617074 
- 4825      75726552 
- 4826              	.LASF11:
- 4827 0405 75696E74 		.ascii	"uint32\000"
- 4827      333200
- 4828              	.LASF15:
- 4829 040c 72656738 		.ascii	"reg8\000"
- 4829      00
- 4830              	.LASF5:
- 4831 0411 6C6F6E67 		.ascii	"long unsigned int\000"
- 4831      20756E73 
- 4831      69676E65 
- 4831      6420696E 
- 4831      7400
- 4832              	.LASF69:
- 4833 0423 7478436F 		.ascii	"txConfig\000"
- 4833      6E666967 
+ 4818              	.LASF21:
+ 4819 0421 43414E5F 		.ascii	"CAN_REG_32\000"
+ 4819      5245475F 
+ 4819      333200
+ 4820              	.LASF43:
+ 4821 042c 43414E5F 		.ascii	"CAN_GlobalIntDisable\000"
+ 4821      476C6F62 
+ 4821      616C496E 
+ 4821      74446973 
+ 4821      61626C65 
+ 4822              	.LASF37:
+ 4823 0441 43414E5F 		.ascii	"CAN_TX_STRUCT\000"
+ 4823      54585F53 
+ 4823      54525543 
+ 4823      5400
+ 4824              	.LASF57:
+ 4825 044f 72656741 		.ascii	"regAddr\000"
+ 4825      64647200 
+ 4826              	.LASF92:
+ 4827 0457 43414E5F 		.ascii	"CAN_initVar\000"
+ 4827      696E6974 
+ 4827      56617200 
+ 4828              	.LASF81:
+ 4829 0463 43414E5F 		.ascii	"CAN_SetErrorCaptureRegisterMode\000"
+ 4829      53657445 
+ 4829      72726F72 
+ 4829      43617074 
+ 4829      75726552 
+ 4830              	.LASF11:
+ 4831 0483 75696E74 		.ascii	"uint32\000"
+ 4831      333200
+ 4832              	.LASF15:
+ 4833 048a 72656738 		.ascii	"reg8\000"
  4833      00
- 4834              	.LASF13:
- 4835 042c 646F7562 		.ascii	"double\000"
- 4835      6C6500
- 4836              	.LASF86:
- 4837 0433 4379496E 		.ascii	"CyIntEnable\000"
- 4837      74456E61 
- 4837      626C6500 
- 4838              	.LASF51:
- 4839 043f 63666754 		.ascii	"cfgTemp\000"
- 4839      656D7000 
- 4840              	.LASF29:
- 4841 0447 74786964 		.ascii	"txid\000"
- 4841      00
- 4842              	.LASF41:
- 4843 044c 43414E5F 		.ascii	"CAN_GlobalIntEnable\000"
- 4843      476C6F62 
- 4843      616C496E 
- 4843      74456E61 
- 4843      626C6500 
- 4844              	.LASF48:
- 4845 0460 43414E5F 		.ascii	"CAN_SetTsegSample\000"
- 4845      53657454 
- 4845      73656753 
- 4845      616D706C 
- 4845      6500
- 4846              	.LASF60:
- 4847 0472 6D61736B 		.ascii	"mask\000"
- 4847      00
- 4848              	.LASF53:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 120
+ 4834              	.LASF5:
+ 4835 048f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 4835      20756E73 
+ 4835      69676E65 
+ 4835      6420696E 
+ 4835      7400
+ 4836              	.LASF69:
+ 4837 04a1 7478436F 		.ascii	"txConfig\000"
+ 4837      6E666967 
+ 4837      00
+ 4838              	.LASF13:
+ 4839 04aa 646F7562 		.ascii	"double\000"
+ 4839      6C6500
+ 4840              	.LASF86:
+ 4841 04b1 4379496E 		.ascii	"CyIntEnable\000"
+ 4841      74456E61 
+ 4841      626C6500 
+ 4842              	.LASF51:
+ 4843 04bd 63666754 		.ascii	"cfgTemp\000"
+ 4843      656D7000 
+ 4844              	.LASF29:
+ 4845 04c5 74786964 		.ascii	"txid\000"
+ 4845      00
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 120
 
 
- 4849 0477 72657365 		.ascii	"reset\000"
- 4849      7400
- 4850              	.LASF46:
- 4851 047d 62697472 		.ascii	"bitrate\000"
- 4851      61746500 
- 4852              	.LASF59:
- 4853 0485 43414E5F 		.ascii	"CAN_SetIrqMask\000"
- 4853      53657449 
- 4853      72714D61 
- 4853      736B00
- 4854              	.LASF87:
- 4855 0494 4379496E 		.ascii	"CyIntSetVector\000"
- 4855      74536574 
- 4855      56656374 
- 4855      6F7200
- 4856              	.LASF36:
- 4857 04a3 74786461 		.ascii	"txdata\000"
- 4857      746100
- 4858              	.LASF73:
- 4859 04aa 43414E5F 		.ascii	"CAN_SetSwapDataEndianness\000"
- 4859      53657453 
- 4859      77617044 
- 4859      61746145 
- 4859      6E646961 
- 4860              	.LASF40:
- 4861 04c4 43414E5F 		.ascii	"CAN_Stop\000"
- 4861      53746F70 
- 4861      00
- 4862              	.LASF24:
- 4863 04cd 7278616D 		.ascii	"rxamr\000"
- 4863      7200
- 4864              	.LASF26:
- 4865 04d3 43414E5F 		.ascii	"CAN_RX_CFG\000"
- 4865      52585F43 
- 4865      464700
- 4866              	.LASF78:
- 4867 04de 43414E5F 		.ascii	"CAN_SetOpMode\000"
- 4867      5365744F 
- 4867      704D6F64 
- 4867      6500
- 4868              	.LASF38:
- 4869 04ec 74696D65 		.ascii	"timeout\000"
- 4869      6F757400 
- 4870              	.LASF91:
- 4871 04f4 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
- 4871      73657273 
- 4871      5C617573 
- 4871      74635C4F 
- 4871      6E654472 
- 4872 0521 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Motor_Boar"
- 4872      69742D46 
- 4872      69726D77 
- 4872      6172652D 
- 4872      412D3230 
- 4873 0552 645F5265 		.ascii	"d_Rev3.cydsn\000"
- 4873      76332E63 
- 4873      7964736E 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccKYuQHx.s 			page 121
+ 4846              	.LASF41:
+ 4847 04ca 43414E5F 		.ascii	"CAN_GlobalIntEnable\000"
+ 4847      476C6F62 
+ 4847      616C496E 
+ 4847      74456E61 
+ 4847      626C6500 
+ 4848              	.LASF48:
+ 4849 04de 43414E5F 		.ascii	"CAN_SetTsegSample\000"
+ 4849      53657454 
+ 4849      73656753 
+ 4849      616D706C 
+ 4849      6500
+ 4850              	.LASF60:
+ 4851 04f0 6D61736B 		.ascii	"mask\000"
+ 4851      00
+ 4852              	.LASF53:
+ 4853 04f5 72657365 		.ascii	"reset\000"
+ 4853      7400
+ 4854              	.LASF46:
+ 4855 04fb 62697472 		.ascii	"bitrate\000"
+ 4855      61746500 
+ 4856              	.LASF59:
+ 4857 0503 43414E5F 		.ascii	"CAN_SetIrqMask\000"
+ 4857      53657449 
+ 4857      72714D61 
+ 4857      736B00
+ 4858              	.LASF87:
+ 4859 0512 4379496E 		.ascii	"CyIntSetVector\000"
+ 4859      74536574 
+ 4859      56656374 
+ 4859      6F7200
+ 4860              	.LASF36:
+ 4861 0521 74786461 		.ascii	"txdata\000"
+ 4861      746100
+ 4862              	.LASF73:
+ 4863 0528 43414E5F 		.ascii	"CAN_SetSwapDataEndianness\000"
+ 4863      53657453 
+ 4863      77617044 
+ 4863      61746145 
+ 4863      6E646961 
+ 4864              	.LASF40:
+ 4865 0542 43414E5F 		.ascii	"CAN_Stop\000"
+ 4865      53746F70 
+ 4865      00
+ 4866              	.LASF24:
+ 4867 054b 7278616D 		.ascii	"rxamr\000"
+ 4867      7200
+ 4868              	.LASF26:
+ 4869 0551 43414E5F 		.ascii	"CAN_RX_CFG\000"
+ 4869      52585F43 
+ 4869      464700
+ 4870              	.LASF78:
+ 4871 055c 43414E5F 		.ascii	"CAN_SetOpMode\000"
+ 4871      5365744F 
+ 4871      704D6F64 
+ 4871      6500
+ 4872              	.LASF38:
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cccxQEuC.s 			page 121
 
 
- 4873      00
+ 4873 056a 74696D65 		.ascii	"timeout\000"
+ 4873      6F757400 
  4874              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

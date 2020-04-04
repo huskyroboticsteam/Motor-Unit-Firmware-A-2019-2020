@@ -33,6 +33,8 @@ volatile uint8 mode = 2;
 volatile uint8 drive = 0;
 
 int test;
+CAN_RX_CFG rxMailbox;
+CY_ISR_PROTO(ISR_CAN);
 
 
 CY_ISR(Period_Reset_Handler) {
@@ -99,18 +101,57 @@ void Initialize(void) {
     UART_Start();
     sprintf(txData, "Dip Addr: %x \r\n", Can_addr_Read());
     UART_UartPutString(txData);
+    CAN_Start();
+
     
-    InitCAN(0x4, Can_addr_Read());
+    rxMailbox.rxmailbox = 0;
+    rxMailbox.rxacr = 0x20F<<21;
+    rxMailbox.rxamr = 0x001FFFFF;//0x001FFFF9;
+    rxMailbox.rxcmd = CAN_RX_CMD_REG(CAN_RX_MAILBOX_0);//need to know what this is
+    CAN_RxBufConfig(&rxMailbox);
+    
+    rxMailbox.rxmailbox = 1;
+    rxMailbox.rxacr = 0x10F<<21;
+    rxMailbox.rxamr = 0x001FFFFF;//0x001FFFF9;
+    rxMailbox.rxcmd = CAN_RX_CMD_REG(CAN_RX_MAILBOX_1);//5 << 16 | 1 << 5;
+    CAN_RxBufConfig(&rxMailbox);
+    
+    CAN_GlobalIntEnable();
+    /* Set CAN interrupt handler to local routine */
+    CyIntSetVector(CAN_ISR_NUMBER, ISR_CAN);
+
+    
+    //InitCAN(0x4, Can_addr_Read());
     Timer_1_Start();
     QuadDec_Start();
-    CAN_GlobalIntEnable();
+
+    CAN_Start();
 
     isr_Limit_1_StartEx(Pin_Limit_Handler);
     isr_period_StartEx(Period_Reset_Handler);
 }
 
-
-
+CY_ISR(ISR_CAN)
+{
+    sprintf(txData, "CAN MSG ");
+    UART_UartPutString(txData);
+    /* Clear Receive Message flag */
+    CAN_INT_SR_REG = CAN_RX_MESSAGE_MASK;
+    if(CAN_BUF_SR_REG & 1) { // mailbox0 is full
+        sprintf(txData, "MAILBOX 0 Byte 4 %x", CAN_RX_DATA_BYTE4(CAN_RX_MAILBOX_0));
+        UART_UartPutString(txData);
+        sprintf(txData, " |||     Byte ID %lx \r\n", CAN_GET_RX_ID(CAN_RX_MAILBOX_0));
+        UART_UartPutString(txData);
+        CAN_RX_ACK_MESSAGE(CAN_RX_MAILBOX_0);
+    }
+    if(CAN_BUF_SR_REG & 2) { // mailbox0 is full
+        sprintf(txData, "MAILBOX 1 Byte 4 %x", CAN_RX_DATA_BYTE4(CAN_RX_MAILBOX_1));
+        UART_UartPutString(txData);
+        sprintf(txData, " |||     Byte ID %lx \r\n", CAN_GET_RX_ID(CAN_RX_MAILBOX_1));
+        UART_UartPutString(txData);
+        CAN_RX_ACK_MESSAGE(CAN_RX_MAILBOX_1);
+    }
+}
 
 
 

@@ -646,7 +646,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX0_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgToBaseRotation_1
+    * FUNCTION NAME:   CAN_ReceiveMsg0
     ********************************************************************************
     *
     * Summary:
@@ -664,15 +664,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgToBaseRotation_1(void) 
+    void CAN_ReceiveMsg0(void) 
     {
-        /* `#START MESSAGE_ToBaseRotation_1_RECEIVED` */
+        /* `#START MESSAGE_0_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ToBaseRotation_1_CALLBACK
-            CAN_ReceiveMsg_ToBaseRotation_1_Callback();
-        #endif /* CAN_RECEIVE_MSG_ToBaseRotation_1_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_0_CALLBACK
+            CAN_ReceiveMsg_0_Callback();
+        #endif /* CAN_RECEIVE_MSG_0_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(0u);
     }
@@ -681,7 +681,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX1_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:    CAN_ReceiveMsgToShoulder_1
+    * FUNCTION NAME:    CAN_ReceiveMsg1
     ********************************************************************************
     *
     * Summary:
@@ -699,15 +699,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgToShoulder_1(void) 
+    void CAN_ReceiveMsg1(void) 
     {
-        /* `#START MESSAGE_ToShoulder_1_RECEIVED` */
+        /* `#START MESSAGE_1_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ToShoulder_1_CALLBACK
-            CAN_ReceiveMsg_ToShoulder_1_Callback();
-        #endif /* CAN_RECEIVE_MSG_ToShoulder_1_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_1_CALLBACK
+            CAN_ReceiveMsg_1_Callback();
+        #endif /* CAN_RECEIVE_MSG_1_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(1u);
     }
@@ -716,7 +716,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX2_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgToElbow_1
+    * FUNCTION NAME:   CAN_ReceiveMsg2
     ********************************************************************************
     *
     * Summary:
@@ -734,15 +734,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgToElbow_1(void) 
+    void CAN_ReceiveMsg2(void) 
     {
-        /* `#START MESSAGE_ToElbow_1_RECEIVED` */
+        /* `#START MESSAGE_2_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ToElbow_1_CALLBACK
-            CAN_ReceiveMsg_ToElbow_1_Callback();
-        #endif /* CAN_RECEIVE_MSG_ToElbow_1_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_2_CALLBACK
+            CAN_ReceiveMsg_2_Callback();
+        #endif /* CAN_RECEIVE_MSG_2_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(2u);
     }
@@ -751,7 +751,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX3_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgForearmRot_1
+    * FUNCTION NAME:   CAN_ReceiveMsg3
     ********************************************************************************
     *
     * Summary:
@@ -769,15 +769,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgForearmRot_1(void) 
+    void CAN_ReceiveMsg3(void) 
     {
-        /* `#START MESSAGE_ForearmRot_1_RECEIVED` */
+        /* `#START MESSAGE_3_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ForearmRot_1_CALLBACK
-            CAN_ReceiveMsg_ForearmRot_1_Callback();
-        #endif /* CAN_RECEIVE_MSG_ForearmRot_1_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_3_CALLBACK
+            CAN_ReceiveMsg_3_Callback();
+        #endif /* CAN_RECEIVE_MSG_3_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(3u);
     }
@@ -786,7 +786,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX4_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgToDiffWrist_1
+    * FUNCTION NAME:   CAN_ReceiveMsg4
     ********************************************************************************
     *
     * Summary:
@@ -804,15 +804,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgToDiffWrist_1(void) 
+    void CAN_ReceiveMsg4(void) 
     {
-        /* `#START MESSAGE_ToDiffWrist_1_RECEIVED` */
+        /* `#START MESSAGE_4_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ToDiffWrist_1_CALLBACK
-            CAN_ReceiveMsg_ToDiffWrist_1_Callback();
-        #endif /* CAN_RECEIVE_MSG_ToDiffWrist_1_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_4_CALLBACK
+            CAN_ReceiveMsg_4_Callback();
+        #endif /* CAN_RECEIVE_MSG_4_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(4u);
     }
@@ -821,7 +821,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX5_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgToDiffWrist2_1
+    * FUNCTION NAME:   CAN_ReceiveMsg5
     ********************************************************************************
     *
     * Summary:
@@ -839,15 +839,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgToDiffWrist2_1(void) 
+    void CAN_ReceiveMsg5(void) 
     {
-        /* `#START MESSAGE_ToDiffWrist2_1_RECEIVED` */
+        /* `#START MESSAGE_5_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ToDiffWrist2_1_CALLBACK
-            CAN_ReceiveMsg_ToDiffWrist2_1_Callback();
-        #endif /* CAN_RECEIVE_MSG_ToDiffWrist2_1_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_5_CALLBACK
+            CAN_ReceiveMsg_5_Callback();
+        #endif /* CAN_RECEIVE_MSG_5_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(5u);
     }
@@ -856,7 +856,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX6_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgToHand_1
+    * FUNCTION NAME:   CAN_ReceiveMsg6
     ********************************************************************************
     *
     * Summary:
@@ -874,15 +874,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgToHand_1(void) 
+    void CAN_ReceiveMsg6(void) 
     {
-        /* `#START MESSAGE_ToHand_1_RECEIVED` */
+        /* `#START MESSAGE_6_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ToHand_1_CALLBACK
-            CAN_ReceiveMsg_ToHand_1_Callback();
-        #endif /* CAN_RECEIVE_MSG_ToHand_1_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_6_CALLBACK
+            CAN_ReceiveMsg_6_Callback();
+        #endif /* CAN_RECEIVE_MSG_6_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(6u);
     }
@@ -891,7 +891,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX7_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgToBaseRotation_0
+    * FUNCTION NAME:   CAN_ReceiveMsg7
     ********************************************************************************
     *
     * Summary:
@@ -909,15 +909,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgToBaseRotation_0(void) 
+    void CAN_ReceiveMsg7(void) 
     {
-        /* `#START MESSAGE_ToBaseRotation_0_RECEIVED` */
+        /* `#START MESSAGE_7_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ToBaseRotation_0_CALLBACK
-            CAN_ReceiveMsg_ToBaseRotation_0_Callback();
-        #endif /* CAN_RECEIVE_MSG_ToBaseRotation_0_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_7_CALLBACK
+            CAN_ReceiveMsg_7_Callback();
+        #endif /* CAN_RECEIVE_MSG_7_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(7u);
     }
@@ -926,7 +926,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX8_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgToShoulder_0
+    * FUNCTION NAME:   CAN_ReceiveMsg8
     ********************************************************************************
     *
     * Summary:
@@ -944,15 +944,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgToShoulder_0(void) 
+    void CAN_ReceiveMsg8(void) 
     {
-        /* `#START MESSAGE_ToShoulder_0_RECEIVED` */
+        /* `#START MESSAGE_8_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ToShoulder_0_CALLBACK
-            CAN_ReceiveMsg_ToShoulder_0_Callback();
-        #endif /* CAN_RECEIVE_MSG_ToShoulder_0_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_8_CALLBACK
+            CAN_ReceiveMsg_8_Callback();
+        #endif /* CAN_RECEIVE_MSG_8_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(8u);
     }
@@ -961,7 +961,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX9_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgToElbow_0
+    * FUNCTION NAME:   CAN_ReceiveMsg9
     ********************************************************************************
     *
     * Summary:
@@ -979,15 +979,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgToElbow_0(void) 
+    void CAN_ReceiveMsg9(void) 
     {
-        /* `#START MESSAGE_ToElbow_0_RECEIVED` */
+        /* `#START MESSAGE_9_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ToElbow_0_CALLBACK
-            CAN_ReceiveMsg_ToElbow_0_Callback();
-        #endif /* CAN_RECEIVE_MSG_ToElbow_0_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_9_CALLBACK
+            CAN_ReceiveMsg_9_Callback();
+        #endif /* CAN_RECEIVE_MSG_9_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(9u);
     }
@@ -996,7 +996,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX10_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgForearmRot_0
+    * FUNCTION NAME:   CAN_ReceiveMsg10
     ********************************************************************************
     *
     * Summary:
@@ -1014,15 +1014,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgForearmRot_0(void) 
+    void CAN_ReceiveMsg10(void) 
     {
-        /* `#START MESSAGE_ForearmRot_0_RECEIVED` */
+        /* `#START MESSAGE_10_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ForearmRot_0_CALLBACK
-            CAN_ReceiveMsg_ForearmRot_0_Callback();
-        #endif /* CAN_RECEIVE_MSG_ForearmRot_0_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_10_CALLBACK
+            CAN_ReceiveMsg_10_Callback();
+        #endif /* CAN_RECEIVE_MSG_10_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(10u);
     }
@@ -1031,7 +1031,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX11_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgToDiffWrist_0
+    * FUNCTION NAME:   CAN_ReceiveMsg11
     ********************************************************************************
     *
     * Summary:
@@ -1049,15 +1049,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgToDiffWrist_0(void) 
+    void CAN_ReceiveMsg11(void) 
     {
-        /* `#START MESSAGE_ToDiffWrist_0_RECEIVED` */
+        /* `#START MESSAGE_11_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ToDiffWrist_0_CALLBACK
-            CAN_ReceiveMsg_ToDiffWrist_0_Callback();
-        #endif /* CAN_RECEIVE_MSG_ToDiffWrist_0_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_11_CALLBACK
+            CAN_ReceiveMsg_11_Callback();
+        #endif /* CAN_RECEIVE_MSG_11_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(11u);
     }
@@ -1066,7 +1066,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX12_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgToDiffWrist2_0
+    * FUNCTION NAME:   CAN_ReceiveMsg12
     ********************************************************************************
     *
     * Summary:
@@ -1084,15 +1084,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgToDiffWrist2_0(void) 
+    void CAN_ReceiveMsg12(void) 
     {
-        /* `#START MESSAGE_ToDiffWrist2_0_RECEIVED` */
+        /* `#START MESSAGE_12_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ToDiffWrist2_0_CALLBACK
-            CAN_ReceiveMsg_ToDiffWrist2_0_Callback();
-        #endif /* CAN_RECEIVE_MSG_ToDiffWrist2_0_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_12_CALLBACK
+            CAN_ReceiveMsg_12_Callback();
+        #endif /* CAN_RECEIVE_MSG_12_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(12u);
     }
@@ -1101,7 +1101,7 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_RX13_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_ReceiveMsgToHand_0
+    * FUNCTION NAME:   CAN_ReceiveMsg13
     ********************************************************************************
     *
     * Summary:
@@ -1119,15 +1119,15 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_ReceiveMsgToHand_0(void) 
+    void CAN_ReceiveMsg13(void) 
     {
-        /* `#START MESSAGE_ToHand_0_RECEIVED` */
+        /* `#START MESSAGE_13_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_RECEIVE_MSG_ToHand_0_CALLBACK
-            CAN_ReceiveMsg_ToHand_0_Callback();
-        #endif /* CAN_RECEIVE_MSG_ToHand_0_CALLBACK */
+        #ifdef CAN_RECEIVE_MSG_13_CALLBACK
+            CAN_ReceiveMsg_13_Callback();
+        #endif /* CAN_RECEIVE_MSG_13_CALLBACK */
 
         CAN_RX_ACK_MESSAGE(13u);
     }

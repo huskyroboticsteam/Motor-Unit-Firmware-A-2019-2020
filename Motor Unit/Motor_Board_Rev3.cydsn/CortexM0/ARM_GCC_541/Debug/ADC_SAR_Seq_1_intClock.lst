@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
   28:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c **** * Summary:
   29:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c **** *  Starts the clock, aligned to the specified running clock.
   30:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c **** *
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 2
 
 
   31:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c **** * Parameters:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
   60              		.align	2
   61              		.global	ADC_SAR_Seq_1_intClock_Stop
   62              		.code	16
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 3
 
 
   63              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
   72              	.L6:
   97:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c **** #if defined CYREG_PERI_DIV_CMD
   98:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c **** 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 4
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 4
 
 
   99:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c ****     /* Make sure any previous start command has finished. */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  125:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c **** * Parameters:
  126:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c **** *  clkDivider:  Divider register value (0-65535). This value is NOT the
  127:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c **** *    divider; the clock hardware divides by clkDivider plus one. For example,
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 5
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 5
 
 
  128:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c **** *    to divide the clock by 2, this parameter should be set to 1.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  151:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c ****     maskVal = ADC_SAR_Seq_1_intClock_DIV_REG & (uint32)(~(uint32)ADC_SAR_Seq_1_intClock__DIVIDER_MA
  152:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c ****     /* combine mask and new divider val into 32-bit value */
  153:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c ****     regVal = clkDivider | maskVal;
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 6
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 6
 
 
  154:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c ****     
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  159 0006 80B2     		uxth	r0, r0
  179:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c ****         >> ADC_SAR_Seq_1_intClock_DIV_INT_SHIFT);
  180:Generated_Source\PSoC4/ADC_SAR_Seq_1_intClock.c **** }
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 7
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 7
 
 
  160              		.loc 1 180 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  187              		.cfi_endproc
  188              	.LFE4:
  189              		.size	ADC_SAR_Seq_1_intClock_GetFractionalDividerRegister, .-ADC_SAR_Seq_1_intClock_GetFractionalD
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 8
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 8
 
 
  190              		.text
@@ -431,45 +431,45 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  197 0006 00000000 		.4byte	.Ldebug_abbrev0
  198 000a 04       		.byte	0x4
  199 000b 01       		.uleb128 0x1
- 200 000c E0010000 		.4byte	.LASF25
+ 200 000c D7010000 		.4byte	.LASF25
  201 0010 0C       		.byte	0xc
- 202 0011 CC000000 		.4byte	.LASF26
- 203 0015 42000000 		.4byte	.LASF27
+ 202 0011 61000000 		.4byte	.LASF26
+ 203 0015 97000000 		.4byte	.LASF27
  204 0019 00000000 		.4byte	.Ldebug_ranges0+0
  205 001d 00000000 		.4byte	0
  206 0021 00000000 		.4byte	.Ldebug_line0
  207 0025 02       		.uleb128 0x2
  208 0026 01       		.byte	0x1
  209 0027 06       		.byte	0x6
- 210 0028 9A020000 		.4byte	.LASF0
+ 210 0028 AD020000 		.4byte	.LASF0
  211 002c 02       		.uleb128 0x2
  212 002d 01       		.byte	0x1
  213 002e 08       		.byte	0x8
- 214 002f 48010000 		.4byte	.LASF1
+ 214 002f 3F010000 		.4byte	.LASF1
  215 0033 02       		.uleb128 0x2
  216 0034 02       		.byte	0x2
  217 0035 05       		.byte	0x5
- 218 0036 81020000 		.4byte	.LASF2
+ 218 0036 94020000 		.4byte	.LASF2
  219 003a 02       		.uleb128 0x2
  220 003b 02       		.byte	0x2
  221 003c 07       		.byte	0x7
- 222 003d 68010000 		.4byte	.LASF3
+ 222 003d 5F010000 		.4byte	.LASF3
  223 0041 02       		.uleb128 0x2
  224 0042 04       		.byte	0x4
  225 0043 05       		.byte	0x5
- 226 0044 91020000 		.4byte	.LASF4
+ 226 0044 A4020000 		.4byte	.LASF4
  227 0048 02       		.uleb128 0x2
  228 0049 04       		.byte	0x4
  229 004a 07       		.byte	0x7
- 230 004b 56010000 		.4byte	.LASF5
+ 230 004b 4D010000 		.4byte	.LASF5
  231 004f 02       		.uleb128 0x2
  232 0050 08       		.byte	0x8
  233 0051 05       		.byte	0x5
- 234 0052 6E020000 		.4byte	.LASF6
+ 234 0052 65020000 		.4byte	.LASF6
  235 0056 02       		.uleb128 0x2
  236 0057 08       		.byte	0x8
  237 0058 07       		.byte	0x7
- 238 0059 C9010000 		.4byte	.LASF7
+ 238 0059 C0010000 		.4byte	.LASF7
  239 005d 03       		.uleb128 0x3
  240 005e 04       		.byte	0x4
  241 005f 05       		.byte	0x5
@@ -477,37 +477,37 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  243 0064 02       		.uleb128 0x2
  244 0065 04       		.byte	0x4
  245 0066 07       		.byte	0x7
- 246 0067 BC010000 		.4byte	.LASF8
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 9
+ 246 0067 B3010000 		.4byte	.LASF8
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 9
 
 
  247 006b 04       		.uleb128 0x4
- 248 006c 8B020000 		.4byte	.LASF9
+ 248 006c 9E020000 		.4byte	.LASF9
  249 0070 02       		.byte	0x2
  250 0071 E401     		.2byte	0x1e4
  251 0073 2C000000 		.4byte	0x2c
  252 0077 04       		.uleb128 0x4
- 253 0078 AE010000 		.4byte	.LASF10
+ 253 0078 A5010000 		.4byte	.LASF10
  254 007c 02       		.byte	0x2
  255 007d E501     		.2byte	0x1e5
  256 007f 3A000000 		.4byte	0x3a
  257 0083 04       		.uleb128 0x4
- 258 0084 B5010000 		.4byte	.LASF11
+ 258 0084 AC010000 		.4byte	.LASF11
  259 0088 02       		.byte	0x2
  260 0089 E601     		.2byte	0x1e6
  261 008b 48000000 		.4byte	0x48
  262 008f 02       		.uleb128 0x2
  263 0090 04       		.byte	0x4
  264 0091 04       		.byte	0x4
- 265 0092 FC000000 		.4byte	.LASF12
+ 265 0092 91000000 		.4byte	.LASF12
  266 0096 02       		.uleb128 0x2
  267 0097 08       		.byte	0x8
  268 0098 04       		.byte	0x4
- 269 0099 86010000 		.4byte	.LASF13
+ 269 0099 7D010000 		.4byte	.LASF13
  270 009d 02       		.uleb128 0x2
  271 009e 01       		.byte	0x1
  272 009f 08       		.byte	0x8
- 273 00a0 7C020000 		.4byte	.LASF14
+ 273 00a0 8F020000 		.4byte	.LASF14
  274 00a4 04       		.uleb128 0x4
  275 00a5 00000000 		.4byte	.LASF15
  276 00a9 02       		.byte	0x2
@@ -516,7 +516,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  279 00b0 05       		.uleb128 0x5
  280 00b1 83000000 		.4byte	0x83
  281 00b5 06       		.uleb128 0x6
- 282 00b6 AD000000 		.4byte	.LASF16
+ 282 00b6 42000000 		.4byte	.LASF16
  283 00ba 01       		.byte	0x1
  284 00bb 27       		.byte	0x27
  285 00bc 00000000 		.4byte	.LFB0
@@ -525,20 +525,20 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  288 00c5 9C       		.byte	0x9c
  289 00c6 DA000000 		.4byte	0xda
  290 00ca 07       		.uleb128 0x7
- 291 00cb 94010000 		.4byte	.LASF18
+ 291 00cb 8B010000 		.4byte	.LASF18
  292 00cf 01       		.byte	0x1
  293 00d0 27       		.byte	0x27
  294 00d1 83000000 		.4byte	0x83
  295 00d5 00000000 		.4byte	.LLST0
  296 00d9 00       		.byte	0
  297 00da 08       		.uleb128 0x8
- 298 00db 02010000 		.4byte	.LASF28
+ 298 00db 73020000 		.4byte	.LASF28
  299 00df 01       		.byte	0x1
  300 00e0 5F       		.byte	0x5f
  301 00e1 00000000 		.4byte	.LFB1
  302 00e5 18000000 		.4byte	.LFE1-.LFB1
  303 00e9 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 10
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 10
 
 
  304 00ea 9C       		.byte	0x9c
@@ -552,13 +552,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  312 00fb 9C       		.byte	0x9c
  313 00fc 3B010000 		.4byte	0x13b
  314 0100 07       		.uleb128 0x7
- 315 0101 7B010000 		.4byte	.LASF19
+ 315 0101 72010000 		.4byte	.LASF19
  316 0105 01       		.byte	0x1
  317 0106 86       		.byte	0x86
  318 0107 77000000 		.4byte	0x77
  319 010b 21000000 		.4byte	.LLST1
  320 010f 07       		.uleb128 0x7
- 321 0110 A0010000 		.4byte	.LASF20
+ 321 0110 97010000 		.4byte	.LASF20
  322 0114 01       		.byte	0x1
  323 0115 86       		.byte	0x86
  324 0116 6B000000 		.4byte	0x6b
@@ -570,7 +570,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  330 0125 83000000 		.4byte	0x83
  331 0129 63000000 		.4byte	.LLST3
  332 012d 0A       		.uleb128 0xa
- 333 012e 8D010000 		.4byte	.LASF22
+ 333 012e 84010000 		.4byte	.LASF22
  334 0132 01       		.byte	0x1
  335 0133 89       		.byte	0x89
  336 0134 83000000 		.4byte	0x83
@@ -578,7 +578,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  338 0139 51       		.byte	0x51
  339 013a 00       		.byte	0
  340 013b 0B       		.uleb128 0xb
- 341 013c 1E010000 		.4byte	.LASF23
+ 341 013c 15010000 		.4byte	.LASF23
  342 0140 01       		.byte	0x1
  343 0141 B0       		.byte	0xb0
  344 0142 77000000 		.4byte	0x77
@@ -587,7 +587,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  347 014e 01       		.uleb128 0x1
  348 014f 9C       		.byte	0x9c
  349 0150 0B       		.uleb128 0xb
- 350 0151 A6020000 		.4byte	.LASF24
+ 350 0151 B9020000 		.4byte	.LASF24
  351 0155 01       		.byte	0x1
  352 0156 C6       		.byte	0xc6
  353 0157 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  358 0165 00       		.byte	0
  359              		.section	.debug_abbrev,"",%progbits
  360              	.Ldebug_abbrev0:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 11
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 11
 
 
  361 0000 01       		.uleb128 0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  415 0036 05       		.uleb128 0x5
  416 0037 35       		.uleb128 0x35
  417 0038 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 12
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 12
 
 
  418 0039 49       		.uleb128 0x49
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  472 0070 0B       		.uleb128 0xb
  473 0071 27       		.uleb128 0x27
  474 0072 19       		.uleb128 0x19
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 13
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 13
 
 
  475 0073 11       		.uleb128 0x11
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  529 00aa 13       		.uleb128 0x13
  530 00ab 11       		.uleb128 0x11
  531 00ac 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 14
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 14
 
 
  532 00ad 12       		.uleb128 0x12
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  586 0063 0A000000 		.4byte	.LVL3
  587 0067 10000000 		.4byte	.LVL5
  588 006b 0100     		.2byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 15
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 15
 
 
  589 006d 53       		.byte	0x53
@@ -898,154 +898,155 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 1
  634      315F696E 
  634      74436C6F 
  635 0041 00       		.ascii	"\000"
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 16
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 16
 
 
- 636              	.LASF27:
- 637 0042 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
- 637      73657273 
- 637      5C617573 
- 637      74635C4F 
- 637      6E654472 
- 638 006f 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Motor_Boar"
- 638      69742D46 
- 638      69726D77 
- 638      6172652D 
- 638      412D3230 
- 639 00a0 645F5265 		.ascii	"d_Rev3.cydsn\000"
- 639      76332E63 
- 639      7964736E 
- 639      00
- 640              	.LASF16:
- 641 00ad 4144435F 		.ascii	"ADC_SAR_Seq_1_intClock_StartEx\000"
- 641      5341525F 
- 641      5365715F 
- 641      315F696E 
- 641      74436C6F 
- 642              	.LASF26:
- 643 00cc 47656E65 		.ascii	"Generated_Source\\PSoC4\\ADC_SAR_Seq_1_intClock.c\000"
- 643      72617465 
- 643      645F536F 
- 643      75726365 
- 643      5C50536F 
- 644              	.LASF12:
- 645 00fc 666C6F61 		.ascii	"float\000"
- 645      7400
- 646              	.LASF28:
- 647 0102 4144435F 		.ascii	"ADC_SAR_Seq_1_intClock_Stop\000"
+ 636              	.LASF16:
+ 637 0042 4144435F 		.ascii	"ADC_SAR_Seq_1_intClock_StartEx\000"
+ 637      5341525F 
+ 637      5365715F 
+ 637      315F696E 
+ 637      74436C6F 
+ 638              	.LASF26:
+ 639 0061 47656E65 		.ascii	"Generated_Source\\PSoC4\\ADC_SAR_Seq_1_intClock.c\000"
+ 639      72617465 
+ 639      645F536F 
+ 639      75726365 
+ 639      5C50536F 
+ 640              	.LASF12:
+ 641 0091 666C6F61 		.ascii	"float\000"
+ 641      7400
+ 642              	.LASF27:
+ 643 0097 433A5C55 		.ascii	"C:\\Users\\Austcha\\Documents\\Husky Robotics\\Moto"
+ 643      73657273 
+ 643      5C417573 
+ 643      74636861 
+ 643      5C446F63 
+ 644 00c5 7220426F 		.ascii	"r Boards\\Rev3\\Motor-Unit-Firmware-A-2019-2020\\Mo"
+ 644      61726473 
+ 644      5C526576 
+ 644      335C4D6F 
+ 644      746F722D 
+ 645 00f5 746F7220 		.ascii	"tor Unit\\Motor_Board_Rev3.cydsn\000"
+ 645      556E6974 
+ 645      5C4D6F74 
+ 645      6F725F42 
+ 645      6F617264 
+ 646              	.LASF23:
+ 647 0115 4144435F 		.ascii	"ADC_SAR_Seq_1_intClock_GetDividerRegister\000"
  647      5341525F 
  647      5365715F 
  647      315F696E 
  647      74436C6F 
- 648              	.LASF23:
- 649 011e 4144435F 		.ascii	"ADC_SAR_Seq_1_intClock_GetDividerRegister\000"
- 649      5341525F 
- 649      5365715F 
- 649      315F696E 
- 649      74436C6F 
- 650              	.LASF1:
- 651 0148 756E7369 		.ascii	"unsigned char\000"
- 651      676E6564 
- 651      20636861 
- 651      7200
- 652              	.LASF5:
- 653 0156 6C6F6E67 		.ascii	"long unsigned int\000"
- 653      20756E73 
- 653      69676E65 
- 653      6420696E 
- 653      7400
- 654              	.LASF3:
- 655 0168 73686F72 		.ascii	"short unsigned int\000"
- 655      7420756E 
- 655      7369676E 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 17
+ 648              	.LASF1:
+ 649 013f 756E7369 		.ascii	"unsigned char\000"
+ 649      676E6564 
+ 649      20636861 
+ 649      7200
+ 650              	.LASF5:
+ 651 014d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 651      20756E73 
+ 651      69676E65 
+ 651      6420696E 
+ 651      7400
+ 652              	.LASF3:
+ 653 015f 73686F72 		.ascii	"short unsigned int\000"
+ 653      7420756E 
+ 653      7369676E 
+ 653      65642069 
+ 653      6E7400
+ 654              	.LASF19:
+ 655 0172 636C6B44 		.ascii	"clkDivider\000"
+ 655      69766964 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 17
 
 
- 655      65642069 
- 655      6E7400
- 656              	.LASF19:
- 657 017b 636C6B44 		.ascii	"clkDivider\000"
- 657      69766964 
- 657      657200
- 658              	.LASF13:
- 659 0186 646F7562 		.ascii	"double\000"
- 659      6C6500
- 660              	.LASF22:
- 661 018d 72656756 		.ascii	"regVal\000"
- 661      616C00
- 662              	.LASF18:
- 663 0194 616C6967 		.ascii	"alignClkDiv\000"
- 663      6E436C6B 
- 663      44697600 
- 664              	.LASF20:
- 665 01a0 636C6B46 		.ascii	"clkFractional\000"
- 665      72616374 
- 665      696F6E61 
- 665      6C00
- 666              	.LASF10:
- 667 01ae 75696E74 		.ascii	"uint16\000"
- 667      313600
- 668              	.LASF11:
- 669 01b5 75696E74 		.ascii	"uint32\000"
- 669      333200
- 670              	.LASF8:
- 671 01bc 756E7369 		.ascii	"unsigned int\000"
- 671      676E6564 
- 671      20696E74 
- 671      00
- 672              	.LASF7:
- 673 01c9 6C6F6E67 		.ascii	"long long unsigned int\000"
- 673      206C6F6E 
- 673      6720756E 
- 673      7369676E 
- 673      65642069 
- 674              	.LASF25:
- 675 01e0 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 675      43313120 
- 675      352E342E 
- 675      31203230 
- 675      31363036 
- 676 0213 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 676      20726576 
- 676      6973696F 
- 676      6E203233 
- 676      37373135 
- 677 0246 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 677      66756E63 
- 677      74696F6E 
- 677      2D736563 
- 677      74696F6E 
- 678              	.LASF6:
- 679 026e 6C6F6E67 		.ascii	"long long int\000"
- 679      206C6F6E 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccHj8MLD.s 			page 18
+ 655      657200
+ 656              	.LASF13:
+ 657 017d 646F7562 		.ascii	"double\000"
+ 657      6C6500
+ 658              	.LASF22:
+ 659 0184 72656756 		.ascii	"regVal\000"
+ 659      616C00
+ 660              	.LASF18:
+ 661 018b 616C6967 		.ascii	"alignClkDiv\000"
+ 661      6E436C6B 
+ 661      44697600 
+ 662              	.LASF20:
+ 663 0197 636C6B46 		.ascii	"clkFractional\000"
+ 663      72616374 
+ 663      696F6E61 
+ 663      6C00
+ 664              	.LASF10:
+ 665 01a5 75696E74 		.ascii	"uint16\000"
+ 665      313600
+ 666              	.LASF11:
+ 667 01ac 75696E74 		.ascii	"uint32\000"
+ 667      333200
+ 668              	.LASF8:
+ 669 01b3 756E7369 		.ascii	"unsigned int\000"
+ 669      676E6564 
+ 669      20696E74 
+ 669      00
+ 670              	.LASF7:
+ 671 01c0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 671      206C6F6E 
+ 671      6720756E 
+ 671      7369676E 
+ 671      65642069 
+ 672              	.LASF25:
+ 673 01d7 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 673      43313120 
+ 673      352E342E 
+ 673      31203230 
+ 673      31363036 
+ 674 020a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 674      20726576 
+ 674      6973696F 
+ 674      6E203233 
+ 674      37373135 
+ 675 023d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 675      66756E63 
+ 675      74696F6E 
+ 675      2D736563 
+ 675      74696F6E 
+ 676              	.LASF6:
+ 677 0265 6C6F6E67 		.ascii	"long long int\000"
+ 677      206C6F6E 
+ 677      6720696E 
+ 677      7400
+ 678              	.LASF28:
+ 679 0273 4144435F 		.ascii	"ADC_SAR_Seq_1_intClock_Stop\000"
+ 679      5341525F 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccGcMbvA.s 			page 18
 
 
- 679      6720696E 
- 679      7400
+ 679      5365715F 
+ 679      315F696E 
+ 679      74436C6F 
  680              	.LASF14:
- 681 027c 63686172 		.ascii	"char\000"
+ 681 028f 63686172 		.ascii	"char\000"
  681      00
  682              	.LASF2:
- 683 0281 73686F72 		.ascii	"short int\000"
+ 683 0294 73686F72 		.ascii	"short int\000"
  683      7420696E 
  683      7400
  684              	.LASF9:
- 685 028b 75696E74 		.ascii	"uint8\000"
+ 685 029e 75696E74 		.ascii	"uint8\000"
  685      3800
  686              	.LASF4:
- 687 0291 6C6F6E67 		.ascii	"long int\000"
+ 687 02a4 6C6F6E67 		.ascii	"long int\000"
  687      20696E74 
  687      00
  688              	.LASF0:
- 689 029a 7369676E 		.ascii	"signed char\000"
+ 689 02ad 7369676E 		.ascii	"signed char\000"
  689      65642063 
  689      68617200 
  690              	.LASF24:
- 691 02a6 4144435F 		.ascii	"ADC_SAR_Seq_1_intClock_GetFractionalDividerRegister"
+ 691 02b9 4144435F 		.ascii	"ADC_SAR_Seq_1_intClock_GetFractionalDividerRegister"
  691      5341525F 
  691      5365715F 
  691      315F696E 
  691      74436C6F 
- 692 02d9 00       		.ascii	"\000"
+ 692 02ec 00       		.ascii	"\000"
  693              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

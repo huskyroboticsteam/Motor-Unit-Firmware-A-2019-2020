@@ -83,23 +83,23 @@ extern uint8 CAN_initVar;
 #define CAN_TX5_FUNC_ENABLE            (0u)
 #define CAN_TX6_FUNC_ENABLE            (0u)
 #define CAN_TX7_FUNC_ENABLE            (0u)
-#define CAN_RX0_FUNC_ENABLE            (1u)
-#define CAN_RX1_FUNC_ENABLE            (1u)
-#define CAN_RX2_FUNC_ENABLE            (1u)
-#define CAN_RX3_FUNC_ENABLE            (1u)
-#define CAN_RX4_FUNC_ENABLE            (1u)
-#define CAN_RX5_FUNC_ENABLE            (1u)
-#define CAN_RX6_FUNC_ENABLE            (1u)
-#define CAN_RX7_FUNC_ENABLE            (1u)
-#define CAN_RX8_FUNC_ENABLE            (1u)
-#define CAN_RX9_FUNC_ENABLE            (1u)
-#define CAN_RX10_FUNC_ENABLE           (1u)
-#define CAN_RX11_FUNC_ENABLE           (1u)
-#define CAN_RX12_FUNC_ENABLE           (1u)
-#define CAN_RX13_FUNC_ENABLE           (1u)
+#define CAN_RX0_FUNC_ENABLE            (0u)
+#define CAN_RX1_FUNC_ENABLE            (0u)
+#define CAN_RX2_FUNC_ENABLE            (0u)
+#define CAN_RX3_FUNC_ENABLE            (0u)
+#define CAN_RX4_FUNC_ENABLE            (0u)
+#define CAN_RX5_FUNC_ENABLE            (0u)
+#define CAN_RX6_FUNC_ENABLE            (0u)
+#define CAN_RX7_FUNC_ENABLE            (0u)
+#define CAN_RX8_FUNC_ENABLE            (0u)
+#define CAN_RX9_FUNC_ENABLE            (0u)
+#define CAN_RX10_FUNC_ENABLE           (0u)
+#define CAN_RX11_FUNC_ENABLE           (0u)
+#define CAN_RX12_FUNC_ENABLE           (0u)
+#define CAN_RX13_FUNC_ENABLE           (0u)
 #define CAN_RX14_FUNC_ENABLE           (0u)
 #define CAN_RX15_FUNC_ENABLE           (0u)
-#define CAN_RX_MAILBOX_TYPE            (0x3FFFu)
+#define CAN_RX_MAILBOX_TYPE            (0x0u)
 #define CAN_TX_MAILBOX_TYPE            (0x0u)
 
 
@@ -306,46 +306,46 @@ void  CAN_ReceiveMsg(uint8 rxMailbox) ;
     uint8 CAN_SendMsg7(void) ;
 #endif /* CAN_TX7_FUNC_ENABLE */
 #if (CAN_RX0_FUNC_ENABLE)
-    void CAN_ReceiveMsgToBaseRotation_1(void) ;
+    void CAN_ReceiveMsg0(void) ;
 #endif /* CAN_RX0_FUNC_ENABLE */
 #if (CAN_RX1_FUNC_ENABLE)
-    void CAN_ReceiveMsgToShoulder_1(void) ;
+    void CAN_ReceiveMsg1(void) ;
 #endif /* CAN_RX1_FUNC_ENABLE */
 #if (CAN_RX2_FUNC_ENABLE)
-    void CAN_ReceiveMsgToElbow_1(void) ;
+    void CAN_ReceiveMsg2(void) ;
 #endif /* CAN_RX2_FUNC_ENABLE */
 #if (CAN_RX3_FUNC_ENABLE)
-    void CAN_ReceiveMsgForearmRot_1(void) ;
+    void CAN_ReceiveMsg3(void) ;
 #endif /* CAN_RX3_FUNC_ENABLE */
 #if (CAN_RX4_FUNC_ENABLE)
-    void CAN_ReceiveMsgToDiffWrist_1(void) ;
+    void CAN_ReceiveMsg4(void) ;
 #endif /* CAN_RX4_FUNC_ENABLE */
 #if (CAN_RX5_FUNC_ENABLE)
-    void CAN_ReceiveMsgToDiffWrist2_1(void) ;
+    void CAN_ReceiveMsg5(void) ;
 #endif /* CAN_RX5_FUNC_ENABLE */
 #if (CAN_RX6_FUNC_ENABLE)
-    void CAN_ReceiveMsgToHand_1(void) ;
+    void CAN_ReceiveMsg6(void) ;
 #endif /* CAN_RX6_FUNC_ENABLE */
 #if (CAN_RX7_FUNC_ENABLE)
-    void CAN_ReceiveMsgToBaseRotation_0(void) ;
+    void CAN_ReceiveMsg7(void) ;
 #endif /* CAN_RX7_FUNC_ENABLE */
 #if (CAN_RX8_FUNC_ENABLE)
-    void CAN_ReceiveMsgToShoulder_0(void) ;
+    void CAN_ReceiveMsg8(void) ;
 #endif /* CAN_RX8_FUNC_ENABLE */
 #if (CAN_RX9_FUNC_ENABLE)
-    void CAN_ReceiveMsgToElbow_0(void) ;
+    void CAN_ReceiveMsg9(void) ;
 #endif /* CAN_RX9_FUNC_ENABLE */
 #if (CAN_RX10_FUNC_ENABLE)
-    void CAN_ReceiveMsgForearmRot_0(void) ;
+    void CAN_ReceiveMsg10(void) ;
 #endif /* CAN_RX10_FUNC_ENABLE */
 #if (CAN_RX11_FUNC_ENABLE)
-    void CAN_ReceiveMsgToDiffWrist_0(void) ;
+    void CAN_ReceiveMsg11(void) ;
 #endif /* CAN_RX11_FUNC_ENABLE */
 #if (CAN_RX12_FUNC_ENABLE)
-    void CAN_ReceiveMsgToDiffWrist2_0(void) ;
+    void CAN_ReceiveMsg12(void) ;
 #endif /* CAN_RX12_FUNC_ENABLE */
 #if (CAN_RX13_FUNC_ENABLE)
-    void CAN_ReceiveMsgToHand_0(void) ;
+    void CAN_ReceiveMsg13(void) ;
 #endif /* CAN_RX13_FUNC_ENABLE */
 #if (CAN_RX14_FUNC_ENABLE)
     void CAN_ReceiveMsg14(void) ;
@@ -421,20 +421,20 @@ void  CAN_ReceiveMsg(uint8 rxMailbox) ;
 #define CAN_TX_MAILBOX_7               (7u)
 
 /* RX Defines to link mailbox names with mailbox numbers */
-#define CAN_RX_MAILBOX_ToBaseRotation_1 (0u)
-#define CAN_RX_MAILBOX_ToShoulder_1    (1u)
-#define CAN_RX_MAILBOX_ToElbow_1       (2u)
-#define CAN_RX_MAILBOX_ForearmRot_1    (3u)
-#define CAN_RX_MAILBOX_ToDiffWrist_1   (4u)
-#define CAN_RX_MAILBOX_ToDiffWrist2_1  (5u)
-#define CAN_RX_MAILBOX_ToHand_1        (6u)
-#define CAN_RX_MAILBOX_ToBaseRotation_0 (7u)
-#define CAN_RX_MAILBOX_ToShoulder_0    (8u)
-#define CAN_RX_MAILBOX_ToElbow_0       (9u)
-#define CAN_RX_MAILBOX_ForearmRot_0    (10u)
-#define CAN_RX_MAILBOX_ToDiffWrist_0   (11u)
-#define CAN_RX_MAILBOX_ToDiffWrist2_0  (12u)
-#define CAN_RX_MAILBOX_ToHand_0        (13u)
+#define CAN_RX_MAILBOX_0               (0u)
+#define CAN_RX_MAILBOX_1               (1u)
+#define CAN_RX_MAILBOX_2               (2u)
+#define CAN_RX_MAILBOX_3               (3u)
+#define CAN_RX_MAILBOX_4               (4u)
+#define CAN_RX_MAILBOX_5               (5u)
+#define CAN_RX_MAILBOX_6               (6u)
+#define CAN_RX_MAILBOX_7               (7u)
+#define CAN_RX_MAILBOX_8               (8u)
+#define CAN_RX_MAILBOX_9               (9u)
+#define CAN_RX_MAILBOX_10              (10u)
+#define CAN_RX_MAILBOX_11              (11u)
+#define CAN_RX_MAILBOX_12              (12u)
+#define CAN_RX_MAILBOX_13              (13u)
 #define CAN_RX_MAILBOX_14              (14u)
 #define CAN_RX_MAILBOX_15              (15u)
 
