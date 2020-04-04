@@ -1,6 +1,6 @@
 // ======================================================================
 // Motor_Board_Rev3.v generated from TopDesign.cysch
-// 03/15/2020 at 22:32
+// 03/16/2020 at 16:02
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -518,7 +518,7 @@ endmodule
 `include "C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\FunWithLEDs\StripLightLib.cylib\B_WS2811_v1_3\B_WS2811_v1_3.v"
 `endif
 
-// StripLights_v2_2(Channels=1, ClockSpeedKhz=800, Display_Memory=1, LEDs_per_Strip=50, Speed=1, Transfer_Method=0, WS281x_Type=2, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=StripLights_v2_2, CY_CONFIG_TITLE=StripLights, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=StripLights, CY_INSTANCE_SHORT_NAME=StripLights, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=2, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.2, INSTANCE_NAME=StripLights, )
+// StripLights_v2_2(Channels=1, ClockSpeedKhz=800, Display_Memory=0, LEDs_per_Strip=3, Speed=1, Transfer_Method=1, WS281x_Type=2, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=StripLights_v2_2, CY_CONFIG_TITLE=StripLights, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=StripLights, CY_INSTANCE_SHORT_NAME=StripLights, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=2, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.2, INSTANCE_NAME=StripLights, )
 module StripLights_v2_2_3 (
     rdy,
     S0,

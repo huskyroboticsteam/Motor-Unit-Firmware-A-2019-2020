@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Motor Unit\Motor_Board_Rev3\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Motor Unit\Motor Board Rev3 old firmware">
 <ExpandedNodeIds>
 <v>Motor Unit</v>
 <v>Motor Unit\Blink Rev 3 Debug</v>
@@ -33,14 +33,12 @@
 <v>Motor Unit\Blink Rev 3 Debug\Source Files\main.c</v>
 <v>Motor Unit\Blink Rev 3 Debug\Generated_Source\PSoC4</v>
 <v>Motor Unit\Blink Rev 3 Debug\Generated_Source\PSoC4\StripLights</v>
-<v>Motor Unit\Motor Board Rev1</v>
 <v>Motor Unit\Motor Board Rev1\TopDesign</v>
 <v>Motor Unit\Motor Board Rev1\Source Files</v>
 <v>Motor Unit\Motor Board Rev2\TopDesign</v>
 <v>Motor Unit\Motor Board Rev2\Motor Board Rev2.cydwr</v>
 <v>Motor Unit\Motor Board Rev2\New Folder01</v>
 <v>Motor Unit\Motor Board Rev2\Source Files</v>
-<v>Motor Unit\Motor Board Rev3 old firmware</v>
 <v>Motor Unit\Motor Board Rev3 old firmware\TopDesign</v>
 <v>Motor Unit\Motor Board Rev3 old firmware\Motor Board Rev3 old firmware.cydwr</v>
 <v>Motor Unit\Motor Board Rev3 old firmware\Motor Board Rev3 old firmware.cydwr\Pins</v>
@@ -76,17 +74,32 @@
 <v>Motor Unit\Motor_Board_Rev3\CAN Library\Port.h</v>
 <v>Motor Unit\Motor_Board_Rev3\CAN Library\PortPSOC_CY8C4248AZI_L485.c</v>
 <v>Motor Unit\Motor_Board_Rev3\Header Files</v>
+<v>Motor Unit\Motor_Board_Rev3\Header Files\LED_Array.h</v>
 <v>Motor Unit\Motor_Board_Rev3\Source Files</v>
+<v>Motor Unit\Motor_Board_Rev3\Source Files\LED_Array.c</v>
 <v>Motor Unit\Motor_Board_Rev3\Generated_Source</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>Motor Unit\Motor Board Rev3 old firmware\Motor Board Rev3 old firmware.cydwr\Directives</v>
-<v>Motor Unit\Motor Board Rev3 old firmware\Motor Board Rev3 old firmware.cydwr\Flash Security</v>
-<v>Motor Unit\Motor Board Rev3 old firmware\Header Files</v>
-<v>Motor Unit\Motor Board Rev3 old firmware\Header Files\cyapicallbacks.h</v>
-<v>Motor Unit\Motor Board Rev3 old firmware\Source Files</v>
-<v>Motor Unit\Motor Board Rev3 old firmware\Source Files\main.c</v>
-<v>Motor Unit\Motor Board Rev3 old firmware\Generated_Source</v>
+<v>Motor Unit</v>
+<v>Motor Unit\Blink Rev 3 Debug</v>
+<v>Motor Unit\Blink Rev 3 Debug\TopDesign</v>
+<v>Motor Unit\Blink Rev 3 Debug\Blink Rev 3 Debug.cydwr</v>
+<v>Motor Unit\Blink Rev 3 Debug\Blink Rev 3 Debug.cydwr\Pins</v>
+<v>Motor Unit\Blink Rev 3 Debug\Blink Rev 3 Debug.cydwr\Analog</v>
+<v>Motor Unit\Blink Rev 3 Debug\Blink Rev 3 Debug.cydwr\DMA</v>
+<v>Motor Unit\Blink Rev 3 Debug\Blink Rev 3 Debug.cydwr\Clocks</v>
+<v>Motor Unit\Blink Rev 3 Debug\Blink Rev 3 Debug.cydwr\Interrupts</v>
+<v>Motor Unit\Blink Rev 3 Debug\Blink Rev 3 Debug.cydwr\System</v>
+<v>Motor Unit\Blink Rev 3 Debug\Blink Rev 3 Debug.cydwr\Directives</v>
+<v>Motor Unit\Blink Rev 3 Debug\Blink Rev 3 Debug.cydwr\Flash Security</v>
+<v>Motor Unit\Blink Rev 3 Debug\Header Files</v>
+<v>Motor Unit\Blink Rev 3 Debug\Header Files\cyapicallbacks.h</v>
+<v>Motor Unit\Blink Rev 3 Debug\Source Files</v>
+<v>Motor Unit\Blink Rev 3 Debug\Source Files\main.c</v>
+<v>Motor Unit\Blink Rev 3 Debug\Generated_Source</v>
+<v>Motor Unit\Motor Board Rev1</v>
+<v>Motor Unit\Motor Board Rev2</v>
+<v>Motor Unit\Motor Board Rev3 old firmware</v>
 <v>Motor Unit\Motor_Board_Rev3</v>
 <v>Motor Unit\Motor_Board_Rev3\TopDesign</v>
 <v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr</v>
@@ -102,10 +115,12 @@
 <v>Motor Unit\Motor_Board_Rev3\Header Files</v>
 <v>Motor Unit\Motor_Board_Rev3\Header Files\cyapicallbacks.h</v>
 <v>Motor Unit\Motor_Board_Rev3\Header Files\Initialize_CAN_addr.h</v>
+<v>Motor Unit\Motor_Board_Rev3\Header Files\LED_Array.h</v>
 <v>Motor Unit\Motor_Board_Rev3\Header Files\MotorDrive.h</v>
 <v>Motor Unit\Motor_Board_Rev3\Header Files\PositionPID.h</v>
 <v>Motor Unit\Motor_Board_Rev3\Source Files</v>
 <v>Motor Unit\Motor_Board_Rev3\Source Files\Initialize_CAN_addr.c</v>
+<v>Motor Unit\Motor_Board_Rev3\Source Files\LED_Array.c</v>
 <v>Motor Unit\Motor_Board_Rev3\Source Files\main.c</v>
 <v>Motor Unit\Motor_Board_Rev3\Source Files\MotorDrive.c</v>
 <v>Motor Unit\Motor_Board_Rev3\Source Files\PositionPID.c</v>
@@ -607,6 +622,7 @@
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Initialize_CAN_addr.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\isr_Limit_1.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\isr_period.lst</v>
+<v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_Array.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\MotorDrive.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Direction.lst</v>
@@ -696,6 +712,21 @@
 <v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\led_timer.lst</v>
 <v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_1_PM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_2_PM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_3.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_3_PM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_4.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_4_PM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Direction.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Direction_PM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_Motor.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_Motor_PM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_PM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Status_Reg_1.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -703,7 +734,7 @@
 <v>Datasheet</v>
 </TreeKeysV2>
 <TreeStatesV2>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Motor Unit">
 <ExpandedNodeIds>
 <v>Motor Unit</v>
 <v>Motor Unit\Blink Rev 3 Debug</v>
@@ -877,6 +908,21 @@
 <v>Motor Unit\Motor Board Rev1\cy_isr_v1_70</v>
 <v>Motor Unit\Motor Board Rev1\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Motor Unit\Motor Board Rev1\cy_pins_v2_20</v>
+<v>Motor Unit\Motor Board Rev1\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Motor Unit\Motor Board Rev1\CyStatusReg_v1_90</v>
+<v>Motor Unit\Motor Board Rev1\CyStatusReg_v1_90\CyStatusReg_v1_90.pdf</v>
+<v>Motor Unit\Motor Board Rev1\Debouncer_v1_0.pdf</v>
+<v>Motor Unit\Motor Board Rev1\Gnd_v1_0</v>
+<v>Motor Unit\Motor Board Rev1\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>Motor Unit\Motor Board Rev1\not_v1_0</v>
+<v>Motor Unit\Motor Board Rev1\not_v1_0\not_v1_0.pdf</v>
+<v>Motor Unit\Motor Board Rev1\QuadDec_v3_0.pdf</v>
+<v>Motor Unit\Motor Board Rev1\SCB_P4_v4_0</v>
+<v>Motor Unit\Motor Board Rev1\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
+<v>Motor Unit\Motor Board Rev1\SwitchSPST_v1_0</v>
+<v>Motor Unit\Motor Board Rev1\SwitchSPST_v1_0\SwitchSPST_v1_0.pdf</v>
+<v>Motor Unit\Motor Board Rev1\TCPWM_P4_v2_10.pdf</v>
+<v>Motor Unit\Motor Board Rev1\Timer_v2_80.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -1097,20 +1143,11 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
+<name v=".\Motor_Board_Rev3.cydsn\Generated_Source\PSoC4\StripLights.h" />
+<name v=".\Motor_Board_Rev3.cydsn\Generated_Source\PSoC4\StripLights.c" />
+<name v=".\Motor_Board_Rev3.cydsn\LED_Array.h" />
 <name v=".\Motor_Board_Rev3.cydsn\main.c" />
-<name v=".\Motor_Board_Rev3.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Motor_Board_Rev3.cydsn\Motor_Board_Rev3.cydwr" />
-<name v=".\Motor_Board_Rev3.cydsn\Initialize_CAN_addr.c" />
-<name v=".\Motor_Board_Rev3.cydsn\cyapicallbacks.h" />
-<name v=".\Motor_Board_Rev3.cydsn\Initialize_CAN_addr.h" />
-<name v=".\Motor_Board_Rev3.cydsn\PositionPID.c" />
-<name v=".\Motor_Board_Rev3.cydsn\PositionPID.h" />
-<name v=".\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c" />
-<name v=".\Motor_Board_Rev3.cydsn\Generated_Source\PSoC4\CAN.h" />
 <name v=".\Blink Rev 3 Debug.cydsn\main.c" />
-<name v=".\Motor Board Rev1.cydsn\main.c" />
-<name v=".\Blink Rev 3 Debug.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Motor_Board_Rev3.cydsn\MotorDrive.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -1118,7 +1155,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="874, 612" SelectedTabbedMdiWindow="80637a84-ed68-4ec8-b3b9-c605e06abcc1"><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\main.c" Guid="c2ffa952-f544-4828-97b0-6c7ef7d407f8" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\TopDesign\TopDesign.cysch" Guid="bf6736ce-357a-4468-9cbb-ffa0d1f62f89" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Motor_Board_Rev3.cydwr" Guid="fd350267-4a32-479d-8443-7f33e80256fd" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="5b7b8485-d0ab-4e37-a0a7-90eeea460fea" /><ToolWindow Key="Output Window Plugin:7305390e-eabe-4963-b21f-3a0f11b4b1d5:Output Window" Guid="65a2808c-7838-423a-a6c5-f3e50ff64fe6" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Initialize_CAN_addr.c" Guid="80637a84-ed68-4ec8-b3b9-c605e06abcc1" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\cyapicallbacks.h" Guid="aacec804-64ba-4e29-b71d-55e95a31f4af" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Initialize_CAN_addr.h" Guid="29418d1a-a6b8-4ac8-ad11-cf7704447353" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\PositionPID.c" Guid="ce8355be-658b-450e-9d48-f75f98b5b483" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\PositionPID.h" Guid="c83faf0b-06bf-4e96-9cc9-4dcedfc6a961" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c" Guid="32592d8d-10d5-46d4-8b4c-2cccddea3b13" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Generated_Source\PSoC4\CAN.h" Guid="39e20f26-b81e-410a-b647-dfedb131a5bb" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Blink Rev 3 Debug.cydsn\main.c" Guid="36810c4d-f80e-4716-96a3-d0a66b1613c2" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev1.cydsn\main.c" Guid="1597f880-fdb7-44a6-aa89-4e931ec46fff" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Blink Rev 3 Debug.cydsn\TopDesign\TopDesign.cysch" Guid="a4f6e8fc-83df-4f25-93d9-068367562949" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\MotorDrive.c" Guid="d8785486-12eb-4142-818b-0404c635debe" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1514, 892" SelectedTabbedMdiWindow="65a2808c-7838-423a-a6c5-f3e50ff64fe6"><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Generated_Source\PSoC4\StripLights.h" Guid="731996df-7ec9-4bce-bed6-6aac2fc69199" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Generated_Source\PSoC4\StripLights.c" Guid="b74c607c-4fc6-4197-b99f-7900a0ca64b6" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\LED_Array.h" Guid="03230634-eb83-4982-a282-ef5d4b1f5f3d" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\main.c" Guid="348d7930-3948-45fe-8166-3251481b443b" /><ToolWindow Key="Output Window Plugin:7305390e-eabe-4963-b21f-3a0f11b4b1d5:Output Window" Guid="65a2808c-7838-423a-a6c5-f3e50ff64fe6" /><DocumentWindow Key="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Blink Rev 3 Debug.cydsn\main.c" Guid="04fef49a-3742-4887-a479-dd76874858f9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

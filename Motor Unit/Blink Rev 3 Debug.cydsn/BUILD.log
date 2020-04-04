@@ -1,4 +1,4 @@
---------------- Build Started: 03/15/2020 16:04:06 Project: Blink Rev 3 Debug, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 03/16/2020 20:15:38 Project: Blink Rev 3 Debug, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 main.c: In function 'main':
@@ -18,4 +18,4 @@ Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S "C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Blink Rev 3 Debug.cydsn\CortexM0\ARM_GCC_541\Debug\Blink Rev 3 Debug.elf"
 Flash used: 6248 of 262144 bytes (2.4%).
 SRAM used: 2688 of 32768 bytes (8.2%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 03/15/2020 16:04:08 ---------------
+--------------- Build Succeeded: 03/16/2020 20:15:40 ---------------

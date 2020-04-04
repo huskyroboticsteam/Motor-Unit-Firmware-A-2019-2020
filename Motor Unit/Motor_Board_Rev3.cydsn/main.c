@@ -15,6 +15,7 @@
 #include <stdint.h>
 #include "../CANLib/CANLibrary.h"
 #include "MotorDrive.h"
+#include "LED_Array.h"
 
 //LED
 uint8 time_LED = 0;
@@ -59,11 +60,23 @@ CY_ISR(Pin_Limit_Handler){
 
 int main(void)
 { 
-    UART_Start();
     Initialize();
+    set_all_LED_Colors(get_color_packet(255,0,0));
     CANPacket my6Pack;
     for(;;)
     {
+        for(int i = 0; i < 255; i++) {
+            colorShift(get_color_packet(255, 0, 255),
+                       get_color_packet(0, 255, 0)  , i, 255);
+            CyDelay(20);
+        }
+        for(int i = 0; i < 255; i++) {
+            colorShift(get_color_packet(255, 0, 255),
+                       get_color_packet(0, 255, 0)  , 255 - i, 255);
+            CyDelay(20);
+        }
+        
+        /*
         if(!PollAndReceiveCANPacket(&my6Pack)) {
             for(int i = 0; i < 8; i++ ) {
                 sprintf(txData,"Byte%d %x   ", i+1, my6Pack.data[i]);
@@ -73,12 +86,17 @@ int main(void)
                 UART_UartPutString(txData);
             //CyDelay(100);
         }
+        */
     }
 }
  
 
 
 void Initialize(void) {
+    CyGlobalIntEnable; /* Enable global interrupts. LED arrays need this first */
+    initalize_LEDs(LOW_LED_POWER);
+ 
+    UART_Start();
     sprintf(txData, "Dip Addr: %x \r\n", Can_addr_Read());
     UART_UartPutString(txData);
     
@@ -86,7 +104,7 @@ void Initialize(void) {
     Timer_1_Start();
     QuadDec_Start();
     CAN_GlobalIntEnable();
-    CyGlobalIntEnable; /* Enable global interrupts. */
+
     isr_Limit_1_StartEx(Pin_Limit_Handler);
     isr_period_StartEx(Period_Reset_Handler);
 }
