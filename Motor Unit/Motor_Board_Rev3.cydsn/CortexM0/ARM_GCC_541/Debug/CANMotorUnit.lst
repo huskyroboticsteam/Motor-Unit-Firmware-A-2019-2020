@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
   36              		.cfi_offset 5, -12
   37              		.cfi_offset 6, -8
   38              		.cfi_offset 14, -4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 2
 
 
   39 0002 0400     		movs	r4, r0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
   83              		@ sp needed
   84 0002 7047     		bx	lr
   85              		.cfi_endproc
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 3
 
 
   86              	.LFE1:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  129 0020 2000     		movs	r0, r4
  130              	.LVL13:
  131 0022 FFF7FEFF 		bl	PackIntIntoDataMSBFirst
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 4
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 4
 
 
  132              	.LVL14:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
   48:..\CANLib/CANMotorUnit.c **** //Returns 2's compliment MSB (0 for stopped or forward, 1 for reverse)
   49:..\CANLib/CANMotorUnit.c **** int32_t GetDirectionFromPacket(CANPacket *packet)
   50:..\CANLib/CANMotorUnit.c **** {
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 5
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 5
 
 
  179              		.loc 1 50 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  223 000e 0523     		movs	r3, #5
  224 0010 A370     		strb	r3, [r4, #2]
   61:..\CANLib/CANMotorUnit.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_MOTOR_UNIT_PID_POS_TGT_SET);
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 6
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 6
 
 
  225              		.loc 1 61 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
   68:..\CANLib/CANMotorUnit.c **** }
  273              		.loc 1 68 0
  274              		@ sp needed
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 7
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 7
 
 
  275 000e 10BD     		pop	{r4, pc}
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  319 001e 2900     		movs	r1, r5
  320 0020 2000     		movs	r0, r4
  321              	.LVL41:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 8
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 8
 
 
  322 0022 FFF7FEFF 		bl	PackIntIntoDataMSBFirst
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
   85:..\CANLib/CANMotorUnit.c **** 
   86:..\CANLib/CANMotorUnit.c **** void AssembleISetPacket(CANPacket *packetToAssemble,
   87:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceGroup,
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 9
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 9
 
 
   88:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceSerial,
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  416              		.align	2
  417              		.global	GetIFromPacket
  418              		.code	16
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 10
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 10
 
 
  419              		.thumb_func
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  462              		.cfi_offset 6, -8
  463              		.cfi_offset 14, -4
  464 0002 0400     		movs	r4, r0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 11
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 11
 
 
  465 0004 1D00     		movs	r5, r3
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  511 0000 10B5     		push	{r4, lr}
  512              		.cfi_def_cfa_offset 8
  513              		.cfi_offset 4, -8
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 12
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 12
 
 
  514              		.cfi_offset 14, -4
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  125:..\CANLib/CANMotorUnit.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_MOTOR_UNIT_INIT);
  558              		.loc 1 125 0
  559 0012 E01C     		adds	r0, r4, #3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 13
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 13
 
 
  560 0014 0821     		movs	r1, #8
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  136:..\CANLib/CANMotorUnit.c ****     uint8_t switches)
  137:..\CANLib/CANMotorUnit.c **** {
  604              		.loc 1 137 0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 14
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 14
 
 
  605              		.cfi_startproc
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  652              		@ frame_needed = 0, uses_anonymous_args = 0
  653              		@ link register save eliminated.
  654              	.LVL86:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 15
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 15
 
 
  145:..\CANLib/CANMotorUnit.c ****     return packet->data[1];
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  698 0016 FFF7FEFF 		bl	WritePacketIDOnly
  699              	.LVL92:
  700 001a 0200     		movs	r2, r0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 16
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 16
 
 
  701              	.LVL93:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  748              		.global	AssembleMaxJointRevolutionPacket
  749              		.code	16
  750              		.thumb_func
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 17
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 17
 
 
  751              		.type	AssembleMaxJointRevolutionPacket, %function
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  793              	.LVL110:
  794 0024 70BD     		pop	{r4, r5, r6, pc}
  795              		.cfi_endproc
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 18
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 18
 
 
  796              	.LFE19:
@@ -1059,8 +1059,8 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  827              		.size	GetMaxJointRevolutionsFromPacket, .-GetMaxJointRevolutionsFromPacket
  828 000e C046     		.text
  829              	.Letext0:
- 830              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 831              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 830              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 831              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
  832              		.file 4 "..\\CANLib\\CANPacket.h"
  833              		.section	.debug_info,"",%progbits
  834              	.Ldebug_info0:
@@ -1069,68 +1069,68 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  837 0006 00000000 		.4byte	.Ldebug_abbrev0
  838 000a 04       		.byte	0x4
  839 000b 01       		.uleb128 0x1
- 840 000c 24010000 		.4byte	.LASF61
+ 840 000c B9000000 		.4byte	.LASF61
  841 0010 0C       		.byte	0xc
- 842 0011 3B030000 		.4byte	.LASF62
- 843 0015 72000000 		.4byte	.LASF63
+ 842 0011 4E030000 		.4byte	.LASF62
+ 843 0015 29020000 		.4byte	.LASF63
  844 0019 00000000 		.4byte	.Ldebug_ranges0+0
  845 001d 00000000 		.4byte	0
  846 0021 00000000 		.4byte	.Ldebug_line0
  847 0025 02       		.uleb128 0x2
  848 0026 01       		.byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 19
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 19
 
 
  849 0027 06       		.byte	0x6
- 850 0028 E7020000 		.4byte	.LASF0
+ 850 0028 FA020000 		.4byte	.LASF0
  851 002c 03       		.uleb128 0x3
- 852 002d 79020000 		.4byte	.LASF3
+ 852 002d 0E020000 		.4byte	.LASF3
  853 0031 02       		.byte	0x2
  854 0032 1D       		.byte	0x1d
  855 0033 37000000 		.4byte	0x37
  856 0037 02       		.uleb128 0x2
  857 0038 01       		.byte	0x1
  858 0039 08       		.byte	0x8
- 859 003a BC020000 		.4byte	.LASF1
+ 859 003a CF020000 		.4byte	.LASF1
  860 003e 02       		.uleb128 0x2
  861 003f 02       		.byte	0x2
  862 0040 05       		.byte	0x5
  863 0041 3E000000 		.4byte	.LASF2
  864 0045 03       		.uleb128 0x3
- 865 0046 ED000000 		.4byte	.LASF4
+ 865 0046 82000000 		.4byte	.LASF4
  866 004a 02       		.byte	0x2
  867 004b 2B       		.byte	0x2b
  868 004c 50000000 		.4byte	0x50
  869 0050 02       		.uleb128 0x2
  870 0051 02       		.byte	0x2
  871 0052 07       		.byte	0x7
- 872 0053 54030000 		.4byte	.LASF5
+ 872 0053 67030000 		.4byte	.LASF5
  873 0057 03       		.uleb128 0x3
- 874 0058 08040000 		.4byte	.LASF6
+ 874 0058 1B040000 		.4byte	.LASF6
  875 005c 02       		.byte	0x2
  876 005d 3F       		.byte	0x3f
  877 005e 62000000 		.4byte	0x62
  878 0062 02       		.uleb128 0x2
  879 0063 04       		.byte	0x4
  880 0064 05       		.byte	0x5
- 881 0065 3E020000 		.4byte	.LASF7
+ 881 0065 D3010000 		.4byte	.LASF7
  882 0069 03       		.uleb128 0x3
- 883 006a DD000000 		.4byte	.LASF8
+ 883 006a 72000000 		.4byte	.LASF8
  884 006e 02       		.byte	0x2
  885 006f 41       		.byte	0x41
  886 0070 74000000 		.4byte	0x74
  887 0074 02       		.uleb128 0x2
  888 0075 04       		.byte	0x4
  889 0076 07       		.byte	0x7
- 890 0077 BB030000 		.4byte	.LASF9
+ 890 0077 CE030000 		.4byte	.LASF9
  891 007b 02       		.uleb128 0x2
  892 007c 08       		.byte	0x8
  893 007d 05       		.byte	0x5
- 894 007e 05020000 		.4byte	.LASF10
+ 894 007e 9A010000 		.4byte	.LASF10
  895 0082 02       		.uleb128 0x2
  896 0083 08       		.byte	0x8
  897 0084 07       		.byte	0x7
- 898 0085 F3020000 		.4byte	.LASF11
+ 898 0085 06030000 		.4byte	.LASF11
  899 0089 04       		.uleb128 0x4
  900 008a 04       		.byte	0x4
  901 008b 05       		.byte	0x5
@@ -1138,27 +1138,27 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  903 0090 02       		.uleb128 0x2
  904 0091 04       		.byte	0x4
  905 0092 07       		.byte	0x7
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 20
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 20
 
 
- 906 0093 13030000 		.4byte	.LASF12
+ 906 0093 26030000 		.4byte	.LASF12
  907 0097 03       		.uleb128 0x3
- 908 0098 CA010000 		.4byte	.LASF13
+ 908 0098 5F010000 		.4byte	.LASF13
  909 009c 03       		.byte	0x3
  910 009d 18       		.byte	0x18
  911 009e 2C000000 		.4byte	0x2c
  912 00a2 03       		.uleb128 0x3
- 913 00a3 20030000 		.4byte	.LASF14
+ 913 00a3 33030000 		.4byte	.LASF14
  914 00a7 03       		.byte	0x3
  915 00a8 24       		.byte	0x24
  916 00a9 45000000 		.4byte	0x45
  917 00ad 03       		.uleb128 0x3
- 918 00ae 8C030000 		.4byte	.LASF15
+ 918 00ae 9F030000 		.4byte	.LASF15
  919 00b2 03       		.byte	0x3
  920 00b3 2C       		.byte	0x2c
  921 00b4 57000000 		.4byte	0x57
  922 00b8 03       		.uleb128 0x3
- 923 00b9 0A030000 		.4byte	.LASF16
+ 923 00b9 1D030000 		.4byte	.LASF16
  924 00bd 03       		.byte	0x3
  925 00be 30       		.byte	0x30
  926 00bf 69000000 		.4byte	0x69
@@ -1180,7 +1180,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  942 00dd 97000000 		.4byte	0x97
  943 00e1 02       		.byte	0x2
  944 00e2 07       		.uleb128 0x7
- 945 00e3 9B030000 		.4byte	.LASF17
+ 945 00e3 AE030000 		.4byte	.LASF17
  946 00e7 04       		.byte	0x4
  947 00e8 13       		.byte	0x13
  948 00e9 EF000000 		.4byte	0xef
@@ -1198,15 +1198,15 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  960 0101 07       		.byte	0x7
  961 0102 57000000 		.4byte	.LASF18
  962 0106 03       		.uleb128 0x3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 21
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 21
 
 
- 963 0107 34020000 		.4byte	.LASF19
+ 963 0107 C9010000 		.4byte	.LASF19
  964 010b 04       		.byte	0x4
  965 010c 14       		.byte	0x14
  966 010d C3000000 		.4byte	0xc3
  967 0111 0A       		.uleb128 0xa
- 968 0112 63020000 		.4byte	.LASF25
+ 968 0112 F8010000 		.4byte	.LASF25
  969 0116 01       		.byte	0x1
  970 0117 0F       		.byte	0xf
  971 0118 00000000 		.4byte	.LFB0
@@ -1221,19 +1221,19 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  980 012d 98010000 		.4byte	0x198
  981 0131 00000000 		.4byte	.LLST0
  982 0135 0B       		.uleb128 0xb
- 983 0136 29030000 		.4byte	.LASF21
+ 983 0136 3C030000 		.4byte	.LASF21
  984 013a 01       		.byte	0x1
  985 013b 10       		.byte	0x10
  986 013c 97000000 		.4byte	0x97
  987 0140 2C000000 		.4byte	.LLST1
  988 0144 0B       		.uleb128 0xb
- 989 0145 67030000 		.4byte	.LASF22
+ 989 0145 7A030000 		.4byte	.LASF22
  990 0149 01       		.byte	0x1
  991 014a 11       		.byte	0x11
  992 014b 97000000 		.4byte	0x97
  993 014f 4D000000 		.4byte	.LLST2
  994 0153 0B       		.uleb128 0xb
- 995 0154 E8000000 		.4byte	.LASF23
+ 995 0154 7D000000 		.4byte	.LASF23
  996 0158 01       		.byte	0x1
  997 0159 12       		.byte	0x12
  998 015a 97000000 		.4byte	0x97
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1017 0182 0F       		.uleb128 0xf
  1018 0183 1A000000 		.4byte	.LVL3
  1019 0187 BA090000 		.4byte	0x9ba
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 22
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 22
 
 
  1020 018b 0E       		.uleb128 0xe
@@ -1278,7 +1278,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1034 0199 04       		.byte	0x4
  1035 019a 06010000 		.4byte	0x106
  1036 019e 11       		.uleb128 0x11
- 1037 019f 7A030000 		.4byte	.LASF29
+ 1037 019f 8D030000 		.4byte	.LASF29
  1038 01a3 01       		.byte	0x1
  1039 01a4 1A       		.byte	0x1a
  1040 01a5 97000000 		.4byte	0x97
@@ -1288,14 +1288,14 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1044 01b2 9C       		.byte	0x9c
  1045 01b3 C7010000 		.4byte	0x1c7
  1046 01b7 0B       		.uleb128 0xb
- 1047 01b8 E1010000 		.4byte	.LASF24
+ 1047 01b8 76010000 		.4byte	.LASF24
  1048 01bc 01       		.byte	0x1
  1049 01bd 1A       		.byte	0x1a
  1050 01be 98010000 		.4byte	0x198
  1051 01c2 8F000000 		.4byte	.LLST4
  1052 01c6 00       		.byte	0
  1053 01c7 0A       		.uleb128 0xa
- 1054 01c8 B2010000 		.4byte	.LASF26
+ 1054 01c8 47010000 		.4byte	.LASF26
  1055 01cc 01       		.byte	0x1
  1056 01cd 20       		.byte	0x20
  1057 01ce 00000000 		.4byte	.LFB2
@@ -1310,15 +1310,15 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1066 01e3 98010000 		.4byte	0x198
  1067 01e7 B0000000 		.4byte	.LLST5
  1068 01eb 0B       		.uleb128 0xb
- 1069 01ec 29030000 		.4byte	.LASF21
+ 1069 01ec 3C030000 		.4byte	.LASF21
  1070 01f0 01       		.byte	0x1
  1071 01f1 21       		.byte	0x21
  1072 01f2 97000000 		.4byte	0x97
  1073 01f6 E9000000 		.4byte	.LLST6
  1074 01fa 0B       		.uleb128 0xb
- 1075 01fb 67030000 		.4byte	.LASF22
+ 1075 01fb 7A030000 		.4byte	.LASF22
  1076 01ff 01       		.byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 23
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 23
 
 
  1077 0200 22       		.byte	0x22
@@ -1378,12 +1378,12 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1131 0266 75       		.byte	0x75
  1132 0267 00       		.sleb128 0
  1133 0268 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 24
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 24
 
 
  1134 0269 00       		.byte	0
  1135 026a 11       		.uleb128 0x11
- 1136 026b 83020000 		.4byte	.LASF30
+ 1136 026b 18020000 		.4byte	.LASF30
  1137 026f 01       		.byte	0x1
  1138 0270 2B       		.byte	0x2b
  1139 0271 AD000000 		.4byte	0xad
@@ -1393,7 +1393,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1143 027e 9C       		.byte	0x9c
  1144 027f B0020000 		.4byte	0x2b0
  1145 0283 0B       		.uleb128 0xb
- 1146 0284 E1010000 		.4byte	.LASF24
+ 1146 0284 76010000 		.4byte	.LASF24
  1147 0288 01       		.byte	0x1
  1148 0289 2B       		.byte	0x2b
  1149 028a 98010000 		.4byte	0x198
@@ -1423,7 +1423,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1173 02ae 00       		.byte	0
  1174 02af 00       		.byte	0
  1175 02b0 11       		.uleb128 0x11
- 1176 02b1 07010000 		.4byte	.LASF31
+ 1176 02b1 9C000000 		.4byte	.LASF31
  1177 02b5 01       		.byte	0x1
  1178 02b6 31       		.byte	0x31
  1179 02b7 AD000000 		.4byte	0xad
@@ -1433,17 +1433,17 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1183 02c4 9C       		.byte	0x9c
  1184 02c5 D9020000 		.4byte	0x2d9
  1185 02c9 0B       		.uleb128 0xb
- 1186 02ca E1010000 		.4byte	.LASF24
+ 1186 02ca 76010000 		.4byte	.LASF24
  1187 02ce 01       		.byte	0x1
  1188 02cf 31       		.byte	0x31
  1189 02d0 98010000 		.4byte	0x198
  1190 02d4 A3010000 		.4byte	.LLST11
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 25
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 25
 
 
  1191 02d8 00       		.byte	0
  1192 02d9 0A       		.uleb128 0xa
- 1193 02da A0030000 		.4byte	.LASF32
+ 1193 02da B3030000 		.4byte	.LASF32
  1194 02de 01       		.byte	0x1
  1195 02df 36       		.byte	0x36
  1196 02e0 00000000 		.4byte	.LFB5
@@ -1458,13 +1458,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1205 02f5 98010000 		.4byte	0x198
  1206 02f9 C4010000 		.4byte	.LLST12
  1207 02fd 0B       		.uleb128 0xb
- 1208 02fe 29030000 		.4byte	.LASF21
+ 1208 02fe 3C030000 		.4byte	.LASF21
  1209 0302 01       		.byte	0x1
  1210 0303 37       		.byte	0x37
  1211 0304 97000000 		.4byte	0x97
  1212 0308 FD010000 		.4byte	.LLST13
  1213 030c 0B       		.uleb128 0xb
- 1214 030d 67030000 		.4byte	.LASF22
+ 1214 030d 7A030000 		.4byte	.LASF22
  1215 0311 01       		.byte	0x1
  1216 0312 38       		.byte	0x38
  1217 0313 97000000 		.4byte	0x97
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1245 0359 0E       		.uleb128 0xe
  1246 035a 01       		.uleb128 0x1
  1247 035b 50       		.byte	0x50
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 26
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 26
 
 
  1248 035c 02       		.uleb128 0x2
@@ -1528,7 +1528,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1272 037a 00       		.byte	0
  1273 037b 00       		.byte	0
  1274 037c 11       		.uleb128 0x11
- 1275 037d 5E040000 		.4byte	.LASF34
+ 1275 037d 71040000 		.4byte	.LASF34
  1276 0381 01       		.byte	0x1
  1277 0382 41       		.byte	0x41
  1278 0383 97000000 		.4byte	0x97
@@ -1538,7 +1538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1282 0390 9C       		.byte	0x9c
  1283 0391 C2030000 		.4byte	0x3c2
  1284 0395 0B       		.uleb128 0xb
- 1285 0396 E1010000 		.4byte	.LASF24
+ 1285 0396 76010000 		.4byte	.LASF24
  1286 039a 01       		.byte	0x1
  1287 039b 41       		.byte	0x41
  1288 039c 98010000 		.4byte	0x198
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1302 03b6 0E       		.uleb128 0xe
  1303 03b7 01       		.uleb128 0x1
  1304 03b8 51       		.byte	0x51
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 27
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 27
 
 
  1305 03b9 01       		.uleb128 0x1
@@ -1571,7 +1571,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1312 03c0 00       		.byte	0
  1313 03c1 00       		.byte	0
  1314 03c2 0A       		.uleb128 0xa
- 1315 03c3 47020000 		.4byte	.LASF35
+ 1315 03c3 DC010000 		.4byte	.LASF35
  1316 03c7 01       		.byte	0x1
  1317 03c8 46       		.byte	0x46
  1318 03c9 00000000 		.4byte	.LFB7
@@ -1586,19 +1586,19 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1327 03de 98010000 		.4byte	0x198
  1328 03e2 B7020000 		.4byte	.LLST18
  1329 03e6 0B       		.uleb128 0xb
- 1330 03e7 29030000 		.4byte	.LASF21
+ 1330 03e7 3C030000 		.4byte	.LASF21
  1331 03eb 01       		.byte	0x1
  1332 03ec 47       		.byte	0x47
  1333 03ed 97000000 		.4byte	0x97
  1334 03f1 F0020000 		.4byte	.LLST19
  1335 03f5 0B       		.uleb128 0xb
- 1336 03f6 67030000 		.4byte	.LASF22
+ 1336 03f6 7A030000 		.4byte	.LASF22
  1337 03fa 01       		.byte	0x1
  1338 03fb 48       		.byte	0x48
  1339 03fc 97000000 		.4byte	0x97
  1340 0400 11030000 		.4byte	.LLST20
  1341 0404 0B       		.uleb128 0xb
- 1342 0405 1E010000 		.4byte	.LASF36
+ 1342 0405 B3000000 		.4byte	.LASF36
  1343 0409 01       		.byte	0x1
  1344 040a 49       		.byte	0x49
  1345 040b AD000000 		.4byte	0xad
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1359 0431 50       		.byte	0x50
  1360 0432 01       		.uleb128 0x1
  1361 0433 31       		.byte	0x31
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 28
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 28
 
 
  1362 0434 00       		.byte	0
@@ -1666,7 +1666,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1404 0479 9C       		.byte	0x9c
  1405 047a AB040000 		.4byte	0x4ab
  1406 047e 0B       		.uleb128 0xb
- 1407 047f E1010000 		.4byte	.LASF24
+ 1407 047f 76010000 		.4byte	.LASF24
  1408 0483 01       		.byte	0x1
  1409 0484 51       		.byte	0x51
  1410 0485 98010000 		.4byte	0x198
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1416 0497 01       		.uleb128 0x1
  1417 0498 50       		.byte	0x50
  1418 0499 05       		.uleb128 0x5
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 29
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 29
 
 
  1419 049a F3       		.byte	0xf3
@@ -1699,7 +1699,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1434 04a9 00       		.byte	0
  1435 04aa 00       		.byte	0
  1436 04ab 0A       		.uleb128 0xa
- 1437 04ac 8D040000 		.4byte	.LASF38
+ 1437 04ac A0040000 		.4byte	.LASF38
  1438 04b0 01       		.byte	0x1
  1439 04b1 56       		.byte	0x56
  1440 04b2 00000000 		.4byte	.LFB9
@@ -1714,19 +1714,19 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1449 04c7 98010000 		.4byte	0x198
  1450 04cb AA030000 		.4byte	.LLST24
  1451 04cf 0B       		.uleb128 0xb
- 1452 04d0 29030000 		.4byte	.LASF21
+ 1452 04d0 3C030000 		.4byte	.LASF21
  1453 04d4 01       		.byte	0x1
  1454 04d5 57       		.byte	0x57
  1455 04d6 97000000 		.4byte	0x97
  1456 04da E3030000 		.4byte	.LLST25
  1457 04de 0B       		.uleb128 0xb
- 1458 04df 67030000 		.4byte	.LASF22
+ 1458 04df 7A030000 		.4byte	.LASF22
  1459 04e3 01       		.byte	0x1
  1460 04e4 58       		.byte	0x58
  1461 04e5 97000000 		.4byte	0x97
  1462 04e9 04040000 		.4byte	.LLST26
  1463 04ed 0B       		.uleb128 0xb
- 1464 04ee CD030000 		.4byte	.LASF39
+ 1464 04ee E0030000 		.4byte	.LASF39
  1465 04f2 01       		.byte	0x1
  1466 04f3 59       		.byte	0x59
  1467 04f4 AD000000 		.4byte	0xad
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1473 0503 89000000 		.4byte	0x89
  1474 0507 51040000 		.4byte	.LLST28
  1475 050b 0D       		.uleb128 0xd
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 30
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 30
 
 
  1476 050c 0C000000 		.4byte	.LVL50
@@ -1784,7 +1784,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1516 054c 00       		.byte	0
  1517 054d 00       		.byte	0
  1518 054e 11       		.uleb128 0x11
- 1519 054f F8000000 		.4byte	.LASF40
+ 1519 054f 8D000000 		.4byte	.LASF40
  1520 0553 01       		.byte	0x1
  1521 0554 61       		.byte	0x61
  1522 0555 AD000000 		.4byte	0xad
@@ -1794,11 +1794,11 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1526 0562 9C       		.byte	0x9c
  1527 0563 94050000 		.4byte	0x594
  1528 0567 0B       		.uleb128 0xb
- 1529 0568 E1010000 		.4byte	.LASF24
+ 1529 0568 76010000 		.4byte	.LASF24
  1530 056c 01       		.byte	0x1
  1531 056d 61       		.byte	0x61
  1532 056e 98010000 		.4byte	0x198
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 31
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 31
 
 
  1533 0572 6F040000 		.4byte	.LLST29
@@ -1827,7 +1827,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1556 0592 00       		.byte	0
  1557 0593 00       		.byte	0
  1558 0594 0A       		.uleb128 0xa
- 1559 0595 A0040000 		.4byte	.LASF41
+ 1559 0595 B3040000 		.4byte	.LASF41
  1560 0599 01       		.byte	0x1
  1561 059a 66       		.byte	0x66
  1562 059b 00000000 		.4byte	.LFB11
@@ -1842,13 +1842,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1571 05b0 98010000 		.4byte	0x198
  1572 05b4 9D040000 		.4byte	.LLST30
  1573 05b8 0B       		.uleb128 0xb
- 1574 05b9 29030000 		.4byte	.LASF21
+ 1574 05b9 3C030000 		.4byte	.LASF21
  1575 05bd 01       		.byte	0x1
  1576 05be 67       		.byte	0x67
  1577 05bf 97000000 		.4byte	0x97
  1578 05c3 D6040000 		.4byte	.LLST31
  1579 05c7 0B       		.uleb128 0xb
- 1580 05c8 67030000 		.4byte	.LASF22
+ 1580 05c8 7A030000 		.4byte	.LASF22
  1581 05cc 01       		.byte	0x1
  1582 05cd 68       		.byte	0x68
  1583 05ce 97000000 		.4byte	0x97
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1587 05db 01       		.byte	0x1
  1588 05dc 69       		.byte	0x69
  1589 05dd AD000000 		.4byte	0xad
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 32
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 32
 
 
  1590 05e1 18050000 		.4byte	.LLST33
@@ -1912,20 +1912,20 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1638 0635 00       		.byte	0
  1639 0636 00       		.byte	0
  1640 0637 11       		.uleb128 0x11
- 1641 0638 D2010000 		.4byte	.LASF43
+ 1641 0638 67010000 		.4byte	.LASF43
  1642 063c 01       		.byte	0x1
  1643 063d 71       		.byte	0x71
  1644 063e AD000000 		.4byte	0xad
  1645 0642 00000000 		.4byte	.LFB12
  1646 0646 0E000000 		.4byte	.LFE12-.LFB12
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 33
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 33
 
 
  1647 064a 01       		.uleb128 0x1
  1648 064b 9C       		.byte	0x9c
  1649 064c 7D060000 		.4byte	0x67d
  1650 0650 0B       		.uleb128 0xb
- 1651 0651 E1010000 		.4byte	.LASF24
+ 1651 0651 76010000 		.4byte	.LASF24
  1652 0655 01       		.byte	0x1
  1653 0656 71       		.byte	0x71
  1654 0657 98010000 		.4byte	0x198
@@ -1955,7 +1955,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1678 067b 00       		.byte	0
  1679 067c 00       		.byte	0
  1680 067d 0A       		.uleb128 0xa
- 1681 067e 12040000 		.4byte	.LASF44
+ 1681 067e 25040000 		.4byte	.LASF44
  1682 0682 01       		.byte	0x1
  1683 0683 76       		.byte	0x76
  1684 0684 00000000 		.4byte	.LFB13
@@ -1970,15 +1970,15 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1693 0699 98010000 		.4byte	0x198
  1694 069d 90050000 		.4byte	.LLST36
  1695 06a1 0B       		.uleb128 0xb
- 1696 06a2 29030000 		.4byte	.LASF21
+ 1696 06a2 3C030000 		.4byte	.LASF21
  1697 06a6 01       		.byte	0x1
  1698 06a7 77       		.byte	0x77
  1699 06a8 97000000 		.4byte	0x97
  1700 06ac BC050000 		.4byte	.LLST37
  1701 06b0 0B       		.uleb128 0xb
- 1702 06b1 67030000 		.4byte	.LASF22
+ 1702 06b1 7A030000 		.4byte	.LASF22
  1703 06b5 01       		.byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 34
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 34
 
 
  1704 06b6 78       		.byte	0x78
@@ -2024,7 +2024,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1744 0702 00       		.byte	0
  1745 0703 00       		.byte	0
  1746 0704 11       		.uleb128 0x11
- 1747 0705 F2030000 		.4byte	.LASF46
+ 1747 0705 05040000 		.4byte	.LASF46
  1748 0709 01       		.byte	0x1
  1749 070a 80       		.byte	0x80
  1750 070b 97000000 		.4byte	0x97
@@ -2034,17 +2034,17 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1754 0718 9C       		.byte	0x9c
  1755 0719 2D070000 		.4byte	0x72d
  1756 071d 0B       		.uleb128 0xb
- 1757 071e E1010000 		.4byte	.LASF24
+ 1757 071e 76010000 		.4byte	.LASF24
  1758 0722 01       		.byte	0x1
  1759 0723 80       		.byte	0x80
  1760 0724 98010000 		.4byte	0x198
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 35
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 35
 
 
  1761 0728 1F060000 		.4byte	.LLST40
  1762 072c 00       		.byte	0
  1763 072d 0A       		.uleb128 0xa
- 1764 072e D3030000 		.4byte	.LASF47
+ 1764 072e E6030000 		.4byte	.LASF47
  1765 0732 01       		.byte	0x1
  1766 0733 85       		.byte	0x85
  1767 0734 00000000 		.4byte	.LFB15
@@ -2059,19 +2059,19 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1776 0749 98010000 		.4byte	0x198
  1777 074d 40060000 		.4byte	.LLST41
  1778 0751 0B       		.uleb128 0xb
- 1779 0752 29030000 		.4byte	.LASF21
+ 1779 0752 3C030000 		.4byte	.LASF21
  1780 0756 01       		.byte	0x1
  1781 0757 86       		.byte	0x86
  1782 0758 97000000 		.4byte	0x97
  1783 075c 6C060000 		.4byte	.LLST42
  1784 0760 0B       		.uleb128 0xb
- 1785 0761 67030000 		.4byte	.LASF22
+ 1785 0761 7A030000 		.4byte	.LASF22
  1786 0765 01       		.byte	0x1
  1787 0766 87       		.byte	0x87
  1788 0767 97000000 		.4byte	0x97
  1789 076b 8D060000 		.4byte	.LLST43
  1790 076f 0B       		.uleb128 0xb
- 1791 0770 5A020000 		.4byte	.LASF48
+ 1791 0770 EF010000 		.4byte	.LASF48
  1792 0774 01       		.byte	0x1
  1793 0775 88       		.byte	0x88
  1794 0776 97000000 		.4byte	0x97
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1815 07a3 DB090000 		.4byte	0x9db
  1816 07a7 0E       		.uleb128 0xe
  1817 07a8 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 36
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 36
 
 
  1818 07a9 50       		.byte	0x50
@@ -2113,7 +2113,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1827 07b2 00       		.byte	0
  1828 07b3 00       		.byte	0
  1829 07b4 11       		.uleb128 0x11
- 1830 07b5 BF040000 		.4byte	.LASF49
+ 1830 07b5 D2040000 		.4byte	.LASF49
  1831 07b9 01       		.byte	0x1
  1832 07ba 8F       		.byte	0x8f
  1833 07bb 97000000 		.4byte	0x97
@@ -2123,14 +2123,14 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1837 07c8 9C       		.byte	0x9c
  1838 07c9 DD070000 		.4byte	0x7dd
  1839 07cd 0B       		.uleb128 0xb
- 1840 07ce E1010000 		.4byte	.LASF24
+ 1840 07ce 76010000 		.4byte	.LASF24
  1841 07d2 01       		.byte	0x1
  1842 07d3 8F       		.byte	0x8f
  1843 07d4 98010000 		.4byte	0x198
  1844 07d8 CF060000 		.4byte	.LLST45
  1845 07dc 00       		.byte	0
  1846 07dd 0A       		.uleb128 0xa
- 1847 07de E8010000 		.4byte	.LASF50
+ 1847 07de 7D010000 		.4byte	.LASF50
  1848 07e2 01       		.byte	0x1
  1849 07e3 94       		.byte	0x94
  1850 07e4 00000000 		.4byte	.LFB17
@@ -2145,20 +2145,20 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1859 07f9 98010000 		.4byte	0x198
  1860 07fd F0060000 		.4byte	.LLST46
  1861 0801 0B       		.uleb128 0xb
- 1862 0802 29030000 		.4byte	.LASF21
+ 1862 0802 3C030000 		.4byte	.LASF21
  1863 0806 01       		.byte	0x1
  1864 0807 95       		.byte	0x95
  1865 0808 97000000 		.4byte	0x97
  1866 080c 29070000 		.4byte	.LLST47
  1867 0810 0B       		.uleb128 0xb
- 1868 0811 67030000 		.4byte	.LASF22
+ 1868 0811 7A030000 		.4byte	.LASF22
  1869 0815 01       		.byte	0x1
  1870 0816 96       		.byte	0x96
  1871 0817 97000000 		.4byte	0x97
  1872 081b 4A070000 		.4byte	.LLST48
  1873 081f 0B       		.uleb128 0xb
- 1874 0820 94030000 		.4byte	.LASF51
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 37
+ 1874 0820 A7030000 		.4byte	.LASF51
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 37
 
 
  1875 0824 01       		.byte	0x1
@@ -2215,10 +2215,10 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1926 087e 00       		.byte	0
  1927 087f 00       		.byte	0
  1928 0880 11       		.uleb128 0x11
- 1929 0881 94020000 		.4byte	.LASF52
+ 1929 0881 A7020000 		.4byte	.LASF52
  1930 0885 01       		.byte	0x1
  1931 0886 9F       		.byte	0x9f
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 38
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 38
 
 
  1932 0887 B8000000 		.4byte	0xb8
@@ -2228,7 +2228,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1936 0894 9C       		.byte	0x9c
  1937 0895 C6080000 		.4byte	0x8c6
  1938 0899 0B       		.uleb128 0xb
- 1939 089a E1010000 		.4byte	.LASF24
+ 1939 089a 76010000 		.4byte	.LASF24
  1940 089e 01       		.byte	0x1
  1941 089f 9F       		.byte	0x9f
  1942 08a0 98010000 		.4byte	0x198
@@ -2258,7 +2258,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1966 08c4 00       		.byte	0
  1967 08c5 00       		.byte	0
  1968 08c6 0A       		.uleb128 0xa
- 1969 08c7 2B040000 		.4byte	.LASF53
+ 1969 08c7 3E040000 		.4byte	.LASF53
  1970 08cb 01       		.byte	0x1
  1971 08cc A4       		.byte	0xa4
  1972 08cd 00000000 		.4byte	.LFB19
@@ -2273,22 +2273,22 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  1981 08e2 98010000 		.4byte	0x198
  1982 08e6 E3070000 		.4byte	.LLST52
  1983 08ea 0B       		.uleb128 0xb
- 1984 08eb 29030000 		.4byte	.LASF21
+ 1984 08eb 3C030000 		.4byte	.LASF21
  1985 08ef 01       		.byte	0x1
  1986 08f0 A5       		.byte	0xa5
  1987 08f1 97000000 		.4byte	0x97
  1988 08f5 1C080000 		.4byte	.LLST53
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 39
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 39
 
 
  1989 08f9 0B       		.uleb128 0xb
- 1990 08fa 67030000 		.4byte	.LASF22
+ 1990 08fa 7A030000 		.4byte	.LASF22
  1991 08fe 01       		.byte	0x1
  1992 08ff A6       		.byte	0xa6
  1993 0900 97000000 		.4byte	0x97
  1994 0904 3D080000 		.4byte	.LLST54
  1995 0908 0B       		.uleb128 0xb
- 1996 0909 B3040000 		.4byte	.LASF54
+ 1996 0909 C6040000 		.4byte	.LASF54
  1997 090d 01       		.byte	0x1
  1998 090e A7       		.byte	0xa7
  1999 090f B8000000 		.4byte	0xb8
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2043 0962 01       		.uleb128 0x1
  2044 0963 51       		.byte	0x51
  2045 0964 02       		.uleb128 0x2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 40
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 40
 
 
  2046 0965 75       		.byte	0x75
@@ -2346,7 +2346,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2048 0967 00       		.byte	0
  2049 0968 00       		.byte	0
  2050 0969 11       		.uleb128 0x11
- 2051 096a 13020000 		.4byte	.LASF55
+ 2051 096a A8010000 		.4byte	.LASF55
  2052 096e 01       		.byte	0x1
  2053 096f AF       		.byte	0xaf
  2054 0970 B8000000 		.4byte	0xb8
@@ -2356,7 +2356,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2058 097d 9C       		.byte	0x9c
  2059 097e AF090000 		.4byte	0x9af
  2060 0982 0B       		.uleb128 0xb
- 2061 0983 E1010000 		.4byte	.LASF24
+ 2061 0983 76010000 		.4byte	.LASF24
  2062 0987 01       		.byte	0x1
  2063 0988 AF       		.byte	0xaf
  2064 0989 98010000 		.4byte	0x198
@@ -2386,19 +2386,19 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2088 09ad 00       		.byte	0
  2089 09ae 00       		.byte	0
  2090 09af 13       		.uleb128 0x13
- 2091 09b0 AD020000 		.4byte	.LASF56
- 2092 09b4 AD020000 		.4byte	.LASF56
+ 2091 09b0 C0020000 		.4byte	.LASF56
+ 2092 09b4 C0020000 		.4byte	.LASF56
  2093 09b8 04       		.byte	0x4
  2094 09b9 17       		.byte	0x17
  2095 09ba 13       		.uleb128 0x13
- 2096 09bb 4C040000 		.4byte	.LASF57
- 2097 09bf 4C040000 		.4byte	.LASF57
+ 2096 09bb 5F040000 		.4byte	.LASF57
+ 2097 09bf 5F040000 		.4byte	.LASF57
  2098 09c3 04       		.byte	0x4
  2099 09c4 1B       		.byte	0x1b
  2100 09c5 13       		.uleb128 0x13
- 2101 09c6 75040000 		.4byte	.LASF58
- 2102 09ca 75040000 		.4byte	.LASF58
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 41
+ 2101 09c6 88040000 		.4byte	.LASF58
+ 2102 09ca 88040000 		.4byte	.LASF58
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 41
 
 
  2103 09ce 04       		.byte	0x4
@@ -2409,8 +2409,8 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2108 09d9 04       		.byte	0x4
  2109 09da 2D       		.byte	0x2d
  2110 09db 13       		.uleb128 0x13
- 2111 09dc CA020000 		.4byte	.LASF60
- 2112 09e0 CA020000 		.4byte	.LASF60
+ 2111 09dc DD020000 		.4byte	.LASF60
+ 2112 09e0 DD020000 		.4byte	.LASF60
  2113 09e4 04       		.byte	0x4
  2114 09e5 1A       		.byte	0x1a
  2115 09e6 00       		.byte	0
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2157 0027 49       		.uleb128 0x49
  2158 0028 13       		.uleb128 0x13
  2159 0029 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 42
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 42
 
 
  2160 002a 00       		.byte	0
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2214 0060 00       		.byte	0
  2215 0061 08       		.uleb128 0x8
  2216 0062 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 43
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 43
 
 
  2217 0063 01       		.byte	0x1
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2271 009a 00       		.byte	0
  2272 009b 00       		.byte	0
  2273 009c 0C       		.uleb128 0xc
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 44
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 44
 
 
  2274 009d 34       		.uleb128 0x34
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2328 00da 01       		.byte	0x1
  2329 00db 3F       		.uleb128 0x3f
  2330 00dc 19       		.uleb128 0x19
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 45
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 45
 
 
  2331 00dd 03       		.uleb128 0x3
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2385 0114 00       		.byte	0
  2386              		.section	.debug_loc,"",%progbits
  2387              	.Ldebug_loc0:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 46
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 46
 
 
  2388              	.LLST0:
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2442 0083 F3       		.byte	0xf3
  2443 0084 01       		.uleb128 0x1
  2444 0085 53       		.byte	0x53
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 47
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 47
 
 
  2445 0086 9F       		.byte	0x9f
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2499 0106 00000000 		.4byte	0
  2500              	.LLST7:
  2501 010a 00000000 		.4byte	.LVL7
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 48
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 48
 
 
  2502 010e 0B000000 		.4byte	.LVL9-1
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2556 0195 0400     		.2byte	0x4
  2557 0197 F3       		.byte	0xf3
  2558 0198 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 49
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 49
 
 
  2559 0199 50       		.byte	0x50
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2613 0216 00000000 		.4byte	0
  2614 021a 00000000 		.4byte	0
  2615              	.LLST14:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 50
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 50
 
 
  2616 021e 00000000 		.4byte	.LVL22
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2670 02a5 10000000 		.4byte	.LFE6
  2671 02a9 0400     		.2byte	0x4
  2672 02ab F3       		.byte	0xf3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 51
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 51
 
 
  2673 02ac 01       		.uleb128 0x1
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2727 0329 9F       		.byte	0x9f
  2728 032a 00000000 		.4byte	0
  2729 032e 00000000 		.4byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 52
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 52
 
 
  2730              	.LLST21:
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2784 03b5 08000000 		.4byte	.LVL49
  2785 03b9 14000000 		.4byte	.LVL51
  2786 03bd 0100     		.2byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 53
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 53
 
 
  2787 03bf 54       		.byte	0x54
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2841 043f 28000000 		.4byte	.LFE9
  2842 0443 0400     		.2byte	0x4
  2843 0445 F3       		.byte	0xf3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 54
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 54
 
 
  2844 0446 01       		.uleb128 0x1
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2898 04ca F3       		.byte	0xf3
  2899 04cb 01       		.uleb128 0x1
  2900 04cc 50       		.byte	0x50
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 55
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 55
 
 
  2901 04cd 9F       		.byte	0x9f
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  2955 054f 22000000 		.4byte	.LVL67
  2956 0553 25000000 		.4byte	.LVL68-1
  2957 0557 0100     		.2byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 56
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 56
 
 
  2958 0559 52       		.byte	0x52
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  3012 05d9 00000000 		.4byte	0
  3013              	.LLST38:
  3014 05dd 00000000 		.4byte	.LVL74
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 57
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 57
 
 
  3015 05e1 0B000000 		.4byte	.LVL76-1
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  3069 0662 50       		.byte	0x50
  3070 0663 9F       		.byte	0x9f
  3071 0664 00000000 		.4byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 58
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 58
 
 
  3072 0668 00000000 		.4byte	0
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  3126 06e7 9F       		.byte	0x9f
  3127 06e8 00000000 		.4byte	0
  3128 06ec 00000000 		.4byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 59
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 59
 
 
  3129              	.LLST46:
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  3183 076f 0B000000 		.4byte	.LVL90-1
  3184 0773 0100     		.2byte	0x1
  3185 0775 53       		.byte	0x53
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 60
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 60
 
 
  3186 0776 0B000000 		.4byte	.LVL90-1
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  3240 07fd 24000000 		.4byte	.LVL109
  3241 0801 0300     		.2byte	0x3
  3242 0803 74       		.byte	0x74
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 61
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 61
 
 
  3243 0804 7D       		.sleb128 -3
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  3297 0881 9F       		.byte	0x9f
  3298 0882 00000000 		.4byte	0
  3299 0886 00000000 		.4byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 62
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 62
 
 
  3300              	.LLST56:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  3354 004c 28000000 		.4byte	.LFE7-.LFB7
  3355 0050 00000000 		.4byte	.LFB8
  3356 0054 0E000000 		.4byte	.LFE8-.LFB8
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 63
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 63
 
 
  3357 0058 00000000 		.4byte	.LFB9
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  3411 0068 00000000 		.4byte	.LFB13
  3412 006c 20000000 		.4byte	.LFE13
  3413 0070 00000000 		.4byte	.LFB14
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 64
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 64
 
 
  3414 0074 04000000 		.4byte	.LFE14
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  3447      74797065 
  3447      00
  3448              	.LASF45:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 65
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 65
 
 
  3449 0060 696E6974 		.ascii	"initMode\000"
@@ -3848,308 +3848,309 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 1
  3451 0069 6E657874 		.ascii	"nextByte\000"
  3451      42797465 
  3451      00
- 3452              	.LASF63:
- 3453 0072 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
- 3453      73657273 
- 3453      5C617573 
- 3453      74635C4F 
- 3453      6E654472 
- 3454 009f 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Motor_Boar"
- 3454      69742D46 
- 3454      69726D77 
- 3454      6172652D 
- 3454      412D3230 
- 3455 00d0 645F5265 		.ascii	"d_Rev3.cydsn\000"
- 3455      76332E63 
- 3455      7964736E 
+ 3452              	.LASF8:
+ 3453 0072 5F5F7569 		.ascii	"__uint32_t\000"
+ 3453      6E743332 
+ 3453      5F7400
+ 3454              	.LASF23:
+ 3455 007d 6D6F6465 		.ascii	"mode\000"
  3455      00
- 3456              	.LASF8:
- 3457 00dd 5F5F7569 		.ascii	"__uint32_t\000"
- 3457      6E743332 
+ 3456              	.LASF4:
+ 3457 0082 5F5F7569 		.ascii	"__uint16_t\000"
+ 3457      6E743136 
  3457      5F7400
- 3458              	.LASF23:
- 3459 00e8 6D6F6465 		.ascii	"mode\000"
- 3459      00
- 3460              	.LASF4:
- 3461 00ed 5F5F7569 		.ascii	"__uint16_t\000"
- 3461      6E743136 
- 3461      5F7400
- 3462              	.LASF40:
- 3463 00f8 47657449 		.ascii	"GetIFromPacket\000"
- 3463      46726F6D 
- 3463      5061636B 
- 3463      657400
- 3464              	.LASF31:
- 3465 0107 47657444 		.ascii	"GetDirectionFromPacket\000"
- 3465      69726563 
- 3465      74696F6E 
- 3465      46726F6D 
- 3465      5061636B 
- 3466              	.LASF36:
- 3467 011e 70436F65 		.ascii	"pCoef\000"
- 3467      6600
- 3468              	.LASF61:
- 3469 0124 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 3469      43313120 
- 3469      352E342E 
- 3469      31203230 
- 3469      31363036 
- 3470 0157 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 3470      20726576 
- 3470      6973696F 
- 3470      6E203233 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 66
+ 3458              	.LASF40:
+ 3459 008d 47657449 		.ascii	"GetIFromPacket\000"
+ 3459      46726F6D 
+ 3459      5061636B 
+ 3459      657400
+ 3460              	.LASF31:
+ 3461 009c 47657444 		.ascii	"GetDirectionFromPacket\000"
+ 3461      69726563 
+ 3461      74696F6E 
+ 3461      46726F6D 
+ 3461      5061636B 
+ 3462              	.LASF36:
+ 3463 00b3 70436F65 		.ascii	"pCoef\000"
+ 3463      6600
+ 3464              	.LASF61:
+ 3465 00b9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3465      43313120 
+ 3465      352E342E 
+ 3465      31203230 
+ 3465      31363036 
+ 3466 00ec 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 3466      20726576 
+ 3466      6973696F 
+ 3466      6E203233 
+ 3466      37373135 
+ 3467 011f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3467      66756E63 
+ 3467      74696F6E 
+ 3467      2D736563 
+ 3467      74696F6E 
+ 3468              	.LASF26:
+ 3469 0147 41737365 		.ascii	"AssemblePWMDirSetPacket\000"
+ 3469      6D626C65 
+ 3469      50574D44 
+ 3469      69725365 
+ 3469      74506163 
+ 3470              	.LASF13:
+ 3471 015f 75696E74 		.ascii	"uint8_t\000"
+ 3471      385F7400 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 66
 
 
- 3470      37373135 
- 3471 018a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 3471      66756E63 
- 3471      74696F6E 
- 3471      2D736563 
- 3471      74696F6E 
- 3472              	.LASF26:
- 3473 01b2 41737365 		.ascii	"AssemblePWMDirSetPacket\000"
- 3473      6D626C65 
- 3473      50574D44 
- 3473      69725365 
- 3473      74506163 
- 3474              	.LASF13:
- 3475 01ca 75696E74 		.ascii	"uint8_t\000"
- 3475      385F7400 
- 3476              	.LASF43:
- 3477 01d2 47657444 		.ascii	"GetDFromPacket\000"
- 3477      46726F6D 
- 3477      5061636B 
- 3477      657400
- 3478              	.LASF24:
- 3479 01e1 7061636B 		.ascii	"packet\000"
- 3479      657400
- 3480              	.LASF50:
- 3481 01e8 41737365 		.ascii	"AssembleEncoderPPJRSetPacket\000"
- 3481      6D626C65 
- 3481      456E636F 
- 3481      64657250 
- 3481      504A5253 
- 3482              	.LASF10:
- 3483 0205 6C6F6E67 		.ascii	"long long int\000"
- 3483      206C6F6E 
- 3483      6720696E 
+ 3472              	.LASF43:
+ 3473 0167 47657444 		.ascii	"GetDFromPacket\000"
+ 3473      46726F6D 
+ 3473      5061636B 
+ 3473      657400
+ 3474              	.LASF24:
+ 3475 0176 7061636B 		.ascii	"packet\000"
+ 3475      657400
+ 3476              	.LASF50:
+ 3477 017d 41737365 		.ascii	"AssembleEncoderPPJRSetPacket\000"
+ 3477      6D626C65 
+ 3477      456E636F 
+ 3477      64657250 
+ 3477      504A5253 
+ 3478              	.LASF10:
+ 3479 019a 6C6F6E67 		.ascii	"long long int\000"
+ 3479      206C6F6E 
+ 3479      6720696E 
+ 3479      7400
+ 3480              	.LASF55:
+ 3481 01a8 4765744D 		.ascii	"GetMaxJointRevolutionsFromPacket\000"
+ 3481      61784A6F 
+ 3481      696E7452 
+ 3481      65766F6C 
+ 3481      7574696F 
+ 3482              	.LASF19:
+ 3483 01c9 43414E50 		.ascii	"CANPacket\000"
+ 3483      61636B65 
  3483      7400
- 3484              	.LASF55:
- 3485 0213 4765744D 		.ascii	"GetMaxJointRevolutionsFromPacket\000"
- 3485      61784A6F 
- 3485      696E7452 
- 3485      65766F6C 
- 3485      7574696F 
- 3486              	.LASF19:
- 3487 0234 43414E50 		.ascii	"CANPacket\000"
- 3487      61636B65 
- 3487      7400
- 3488              	.LASF7:
- 3489 023e 6C6F6E67 		.ascii	"long int\000"
- 3489      20696E74 
+ 3484              	.LASF7:
+ 3485 01d3 6C6F6E67 		.ascii	"long int\000"
+ 3485      20696E74 
+ 3485      00
+ 3486              	.LASF35:
+ 3487 01dc 41737365 		.ascii	"AssemblePSetPacket\000"
+ 3487      6D626C65 
+ 3487      50536574 
+ 3487      5061636B 
+ 3487      657400
+ 3488              	.LASF48:
+ 3489 01ef 73776974 		.ascii	"switches\000"
+ 3489      63686573 
  3489      00
- 3490              	.LASF35:
- 3491 0247 41737365 		.ascii	"AssemblePSetPacket\000"
+ 3490              	.LASF25:
+ 3491 01f8 41737365 		.ascii	"AssembleModeSetPacket\000"
  3491      6D626C65 
- 3491      50536574 
- 3491      5061636B 
- 3491      657400
- 3492              	.LASF48:
- 3493 025a 73776974 		.ascii	"switches\000"
- 3493      63686573 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 67
+ 3491      4D6F6465 
+ 3491      53657450 
+ 3491      61636B65 
+ 3492              	.LASF3:
+ 3493 020e 5F5F7569 		.ascii	"__uint8_t\000"
+ 3493      6E74385F 
+ 3493      7400
+ 3494              	.LASF30:
+ 3495 0218 47657450 		.ascii	"GetPWMFromPacket\000"
+ 3495      574D4672 
+ 3495      6F6D5061 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 67
 
 
- 3493      00
- 3494              	.LASF25:
- 3495 0263 41737365 		.ascii	"AssembleModeSetPacket\000"
- 3495      6D626C65 
- 3495      4D6F6465 
- 3495      53657450 
- 3495      61636B65 
- 3496              	.LASF3:
- 3497 0279 5F5F7569 		.ascii	"__uint8_t\000"
- 3497      6E74385F 
- 3497      7400
- 3498              	.LASF30:
- 3499 0283 47657450 		.ascii	"GetPWMFromPacket\000"
- 3499      574D4672 
- 3499      6F6D5061 
- 3499      636B6574 
- 3499      00
+ 3495      636B6574 
+ 3495      00
+ 3496              	.LASF63:
+ 3497 0229 433A5C55 		.ascii	"C:\\Users\\Austcha\\Documents\\Husky Robotics\\Moto"
+ 3497      73657273 
+ 3497      5C417573 
+ 3497      74636861 
+ 3497      5C446F63 
+ 3498 0257 7220426F 		.ascii	"r Boards\\Rev3\\Motor-Unit-Firmware-A-2019-2020\\Mo"
+ 3498      61726473 
+ 3498      5C526576 
+ 3498      335C4D6F 
+ 3498      746F722D 
+ 3499 0287 746F7220 		.ascii	"tor Unit\\Motor_Board_Rev3.cydsn\000"
+ 3499      556E6974 
+ 3499      5C4D6F74 
+ 3499      6F725F42 
+ 3499      6F617264 
  3500              	.LASF52:
- 3501 0294 47657445 		.ascii	"GetEncoderPPJRFromPacket\000"
+ 3501 02a7 47657445 		.ascii	"GetEncoderPPJRFromPacket\000"
  3501      6E636F64 
  3501      65725050 
  3501      4A524672 
  3501      6F6D5061 
  3502              	.LASF56:
- 3503 02ad 436F6E73 		.ascii	"ConstructCANID\000"
+ 3503 02c0 436F6E73 		.ascii	"ConstructCANID\000"
  3503      74727563 
  3503      7443414E 
  3503      494400
  3504              	.LASF1:
- 3505 02bc 756E7369 		.ascii	"unsigned char\000"
+ 3505 02cf 756E7369 		.ascii	"unsigned char\000"
  3505      676E6564 
  3505      20636861 
  3505      7200
  3506              	.LASF60:
- 3507 02ca 57726974 		.ascii	"WriteSenderSerialAndPacketID\000"
+ 3507 02dd 57726974 		.ascii	"WriteSenderSerialAndPacketID\000"
  3507      6553656E 
  3507      64657253 
  3507      65726961 
  3507      6C416E64 
  3508              	.LASF0:
- 3509 02e7 7369676E 		.ascii	"signed char\000"
+ 3509 02fa 7369676E 		.ascii	"signed char\000"
  3509      65642063 
  3509      68617200 
  3510              	.LASF11:
- 3511 02f3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3511 0306 6C6F6E67 		.ascii	"long long unsigned int\000"
  3511      206C6F6E 
  3511      6720756E 
  3511      7369676E 
  3511      65642069 
  3512              	.LASF16:
- 3513 030a 75696E74 		.ascii	"uint32_t\000"
+ 3513 031d 75696E74 		.ascii	"uint32_t\000"
  3513      33325F74 
  3513      00
  3514              	.LASF12:
- 3515 0313 756E7369 		.ascii	"unsigned int\000"
+ 3515 0326 756E7369 		.ascii	"unsigned int\000"
  3515      676E6564 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 68
+
+
  3515      20696E74 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 68
-
-
  3515      00
  3516              	.LASF14:
- 3517 0320 75696E74 		.ascii	"uint16_t\000"
+ 3517 0333 75696E74 		.ascii	"uint16_t\000"
  3517      31365F74 
  3517      00
  3518              	.LASF21:
- 3519 0329 74617267 		.ascii	"targetDeviceGroup\000"
+ 3519 033c 74617267 		.ascii	"targetDeviceGroup\000"
  3519      65744465 
  3519      76696365 
  3519      47726F75 
  3519      7000
  3520              	.LASF62:
- 3521 033b 2E2E5C43 		.ascii	"..\\CANLib\\CANMotorUnit.c\000"
+ 3521 034e 2E2E5C43 		.ascii	"..\\CANLib\\CANMotorUnit.c\000"
  3521      414E4C69 
  3521      625C4341 
  3521      4E4D6F74 
  3521      6F72556E 
  3522              	.LASF5:
- 3523 0354 73686F72 		.ascii	"short unsigned int\000"
+ 3523 0367 73686F72 		.ascii	"short unsigned int\000"
  3523      7420756E 
  3523      7369676E 
  3523      65642069 
  3523      6E7400
  3524              	.LASF22:
- 3525 0367 74617267 		.ascii	"targetDeviceSerial\000"
+ 3525 037a 74617267 		.ascii	"targetDeviceSerial\000"
  3525      65744465 
  3525      76696365 
  3525      53657269 
  3525      616C00
  3526              	.LASF29:
- 3527 037a 4765744D 		.ascii	"GetModeFromPacket\000"
+ 3527 038d 4765744D 		.ascii	"GetModeFromPacket\000"
  3527      6F646546 
  3527      726F6D50 
  3527      61636B65 
  3527      7400
  3528              	.LASF15:
- 3529 038c 696E7433 		.ascii	"int32_t\000"
+ 3529 039f 696E7433 		.ascii	"int32_t\000"
  3529      325F7400 
  3530              	.LASF51:
- 3531 0394 70756C73 		.ascii	"pulses\000"
+ 3531 03a7 70756C73 		.ascii	"pulses\000"
  3531      657300
  3532              	.LASF17:
- 3533 039b 64617461 		.ascii	"data\000"
+ 3533 03ae 64617461 		.ascii	"data\000"
  3533      00
  3534              	.LASF32:
- 3535 03a0 41737365 		.ascii	"AssemblePIDTargetSetPacket\000"
+ 3535 03b3 41737365 		.ascii	"AssemblePIDTargetSetPacket\000"
  3535      6D626C65 
  3535      50494454 
  3535      61726765 
  3535      74536574 
  3536              	.LASF9:
- 3537 03bb 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3537 03ce 6C6F6E67 		.ascii	"long unsigned int\000"
  3537      20756E73 
  3537      69676E65 
  3537      6420696E 
  3537      7400
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 69
+
+
  3538              	.LASF39:
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 69
-
-
- 3539 03cd 69436F65 		.ascii	"iCoef\000"
+ 3539 03e0 69436F65 		.ascii	"iCoef\000"
  3539      6600
  3540              	.LASF47:
- 3541 03d3 41737365 		.ascii	"AssembleLimitSwitchAlertPacket\000"
+ 3541 03e6 41737365 		.ascii	"AssembleLimitSwitchAlertPacket\000"
  3541      6D626C65 
  3541      4C696D69 
  3541      74537769 
  3541      74636841 
  3542              	.LASF46:
- 3543 03f2 47657449 		.ascii	"GetInitModeFromPacket\000"
+ 3543 0405 47657449 		.ascii	"GetInitModeFromPacket\000"
  3543      6E69744D 
  3543      6F646546 
  3543      726F6D50 
  3543      61636B65 
  3544              	.LASF6:
- 3545 0408 5F5F696E 		.ascii	"__int32_t\000"
+ 3545 041b 5F5F696E 		.ascii	"__int32_t\000"
  3545      7433325F 
  3545      7400
  3546              	.LASF44:
- 3547 0412 41737365 		.ascii	"AssembleInitializePacket\000"
+ 3547 0425 41737365 		.ascii	"AssembleInitializePacket\000"
  3547      6D626C65 
  3547      496E6974 
  3547      69616C69 
  3547      7A655061 
  3548              	.LASF53:
- 3549 042b 41737365 		.ascii	"AssembleMaxJointRevolutionPacket\000"
+ 3549 043e 41737365 		.ascii	"AssembleMaxJointRevolutionPacket\000"
  3549      6D626C65 
  3549      4D61784A 
  3549      6F696E74 
  3549      5265766F 
  3550              	.LASF57:
- 3551 044c 57726974 		.ascii	"WritePacketIDOnly\000"
+ 3551 045f 57726974 		.ascii	"WritePacketIDOnly\000"
  3551      65506163 
  3551      6B657449 
  3551      444F6E6C 
  3551      7900
  3552              	.LASF34:
- 3553 045e 47657450 		.ascii	"GetPIDTargetFromPacket\000"
+ 3553 0471 47657450 		.ascii	"GetPIDTargetFromPacket\000"
  3553      49445461 
  3553      72676574 
  3553      46726F6D 
  3553      5061636B 
  3554              	.LASF58:
- 3555 0475 5061636B 		.ascii	"PackIntIntoDataMSBFirst\000"
+ 3555 0488 5061636B 		.ascii	"PackIntIntoDataMSBFirst\000"
  3555      496E7449 
  3555      6E746F44 
  3555      6174614D 
  3555      53424669 
  3556              	.LASF38:
- 3557 048d 41737365 		.ascii	"AssembleISetPacket\000"
+ 3557 04a0 41737365 		.ascii	"AssembleISetPacket\000"
  3557      6D626C65 
  3557      49536574 
  3557      5061636B 
  3557      657400
  3558              	.LASF41:
- 3559 04a0 41737365 		.ascii	"AssembleDSetPacket\000"
+ 3559 04b3 41737365 		.ascii	"AssembleDSetPacket\000"
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccgV6Nwp.s 			page 70
+
+
  3559      6D626C65 
-ARM GAS  C:\Users\austc\AppData\Local\Temp\ccMaxKZM.s 			page 70
-
-
  3559      44536574 
  3559      5061636B 
  3559      657400
  3560              	.LASF54:
- 3561 04b3 7265766F 		.ascii	"revolutions\000"
+ 3561 04c6 7265766F 		.ascii	"revolutions\000"
  3561      6C757469 
  3561      6F6E7300 
  3562              	.LASF49:
- 3563 04bf 4765744C 		.ascii	"GetLimStatusFromPacket\000"
+ 3563 04d2 4765744C 		.ascii	"GetLimStatusFromPacket\000"
  3563      696D5374 
  3563      61747573 
  3563      46726F6D 

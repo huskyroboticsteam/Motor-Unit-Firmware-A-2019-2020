@@ -2,7 +2,7 @@
 --	Conversion of Motor_Board_Rev3.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Apr 04 16:39:06 2020
+--	Sat Aug 29 12:58:58 2020
 --
 
 USE cypress.cypress.all;
@@ -715,11 +715,11 @@ SIGNAL tmpFB_0__TX_1_net_0 : bit;
 SIGNAL tmpIO_0__TX_1_net_0 : bit;
 TERMINAL tmpSIOVREF__TX_1_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__TX_1_net_0 : bit;
-SIGNAL Net_506 : bit;
+SIGNAL Net_1421 : bit;
 SIGNAL \CAN:Net_15\ : bit;
 SIGNAL \CAN:Net_13\ : bit;
 SIGNAL \CAN:Net_14\ : bit;
-SIGNAL Net_505 : bit;
+SIGNAL Net_1420 : bit;
 SIGNAL \UART:Net_847\ : bit;
 SIGNAL \UART:select_s_wire\ : bit;
 SIGNAL \UART:rx_wire\ : bit;
@@ -3017,7 +3017,7 @@ TX_1:cy_psoc3_pins_v1_10
 \CAN:isr\:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_506);
+	PORT MAP(int_signal=>Net_1421);
 \CAN:HFCLK\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"2c366327-8ea9-4813-ab0d-a7ce473af76e/7f2e0196-39e5-4161-97bb-5d609ca138cf",
@@ -3032,8 +3032,8 @@ TX_1:cy_psoc3_pins_v1_10
 	GENERIC MAP(cy_registers=>"")
 	PORT MAP(can_rx=>Net_11,
 		can_tx=>Net_12,
-		can_tx_en=>Net_505,
-		interrupt=>Net_506);
+		can_tx_en=>Net_1420,
+		interrupt=>Net_1421);
 \UART:SCBCLK\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/2dc2d7a8-ce2b-43c7-af4a-821c8cd73ccf",

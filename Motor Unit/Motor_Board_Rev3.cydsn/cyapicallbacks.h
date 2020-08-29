@@ -16,7 +16,7 @@
 
 #define TX_DATA_SIZE            (100u)
 
-
+#define CHIP_TYPE CHIP_TYPE_PSOC_CY8C4248AZI_L485
 //void check_Pin(void);
     struct Error
     {

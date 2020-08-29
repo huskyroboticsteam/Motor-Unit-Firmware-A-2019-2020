@@ -1326,6 +1326,13 @@ net Net_1416
 	switch ":ioport1:smartio_mux_in6.smartio_mux_in==>:ioport1:pin6.pin_input"
 	term   ":ioport1:pin6.pin_input"
 end Net_1416
+net Net_1421
+	term   ":cancell_1.interrupt"
+	switch ":cancell_1.interrupt==>Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v25+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v27"
+	switch "Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v25+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v27==>:interrupt_idmux_29.in_0"
+	switch ":interrupt_idmux_29.interrupt_idmux_29__out==>:interrupt_29.interrupt"
+	term   ":interrupt_29.interrupt"
+end Net_1421
 net Net_200
 	term   ":ioport2:pin6.fb"
 	switch ":ioport2:pin6.fb==>:ioport2:smartio_mux_out6.direct_in"
@@ -1385,13 +1392,6 @@ net Net_304
 	switch ":interrupt_idmux_2.interrupt_idmux_2__out==>:interrupt_2.interrupt"
 	term   ":interrupt_2.interrupt"
 end Net_304
-net Net_506
-	term   ":cancell_1.interrupt"
-	switch ":cancell_1.interrupt==>Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v25+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v27"
-	switch "Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v25+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v27==>:interrupt_idmux_29.in_0"
-	switch ":interrupt_idmux_29.interrupt_idmux_29__out==>:interrupt_29.interrupt"
-	term   ":interrupt_29.interrupt"
-end Net_506
 net Net_525
 	term   ":ioport4:pin0.fb"
 	switch ":ioport4:pin0.fb==>:ioport4:smartio_mux_out0.direct_in"

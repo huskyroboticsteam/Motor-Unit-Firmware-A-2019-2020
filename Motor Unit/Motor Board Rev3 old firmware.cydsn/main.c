@@ -384,7 +384,7 @@ void initialize_can_addr(void) {
 
 void set_CAN_ID(uint32 priority) {
     //message.id = (priority << 10) | (message_id << 5) | 0b00010;
-    message.id = (0 << 10) | (0x4 << 6) | 0b001111;
+    message.id = (0 << 10) | (0x4 << 6) | 0b001111;//0x10f
 }
 
     // takes between -255 and 255

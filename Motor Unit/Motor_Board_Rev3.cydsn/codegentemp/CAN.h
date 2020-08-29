@@ -47,7 +47,7 @@ extern uint8 CAN_initVar;
 #define CAN_FORM_ERR                       (0u)
 #define CAN_CRC_ERR                        (0u)
 #define CAN_BUS_OFF                        (0u)
-#define CAN_RX_MSG_LOST                    (0u)
+#define CAN_RX_MSG_LOST                    (1u)
 #define CAN_TX_MESSAGE                     (0u)
 #define CAN_RX_MESSAGE                     (1u)
 #define CAN_ARB_LOST_USE_HELPER            (1u)
@@ -60,7 +60,7 @@ extern uint8 CAN_initVar;
 #define CAN_BUS_OFF_USE_HELPER             (1u)
 #define CAN_RX_MSG_LOST_USE_HELPER         (1u)
 #define CAN_TX_MESSAGE_USE_HELPER          (1u)
-#define CAN_RX_MESSAGE_USE_HELPER          (0u)
+#define CAN_RX_MESSAGE_USE_HELPER          (1u)
 
 #if (!(CY_PSOC3 || CY_PSOC5))
     #define CAN_RTR_AUTO_MSG_SENT          (0u)

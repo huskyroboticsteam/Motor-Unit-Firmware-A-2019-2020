@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
   38              		.cfi_offset 14, -4
   39 0002 0400     		movs	r4, r0
   40 0004 1D00     		movs	r5, r3
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 2
 
 
   18:..\CANLib/CANPower.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetDeviceGroup, targetDeviceSe
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
   85              		.cfi_endproc
   86              	.LFE1:
   87              		.size	GetPowerRailsStateFromPacket, .-GetPowerRailsStateFromPacket
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 3
 
 
   88              		.section	.text.AssembleOverCurrentPacket,"ax",%progbits
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  128              		.loc 1 41 0
  129 0020 421C     		adds	r2, r0, #1
  130 0022 0499     		ldr	r1, [sp, #16]
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 4
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 4
 
 
  131 0024 2800     		movs	r0, r5
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  178 0000 10B5     		push	{r4, lr}
  179              		.cfi_def_cfa_offset 8
  180              		.cfi_offset 4, -8
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 5
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 5
 
 
  181              		.cfi_offset 14, -4
@@ -260,8 +260,8 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  195              		.size	GetOverCurrentLimitFromPacket, .-GetOverCurrentLimitFromPacket
  196              		.text
  197              	.Letext0:
- 198              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 199              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 198              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 199              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
  200              		.file 4 "..\\CANLib\\CANPacket.h"
  201              		.section	.debug_info,"",%progbits
  202              	.Ldebug_info0:
@@ -270,17 +270,17 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  205 0006 00000000 		.4byte	.Ldebug_abbrev0
  206 000a 04       		.byte	0x4
  207 000b 01       		.uleb128 0x1
- 208 000c 10020000 		.4byte	.LASF35
+ 208 000c 23020000 		.4byte	.LASF35
  209 0010 0C       		.byte	0xc
- 210 0011 BE020000 		.4byte	.LASF36
- 211 0015 76000000 		.4byte	.LASF37
+ 210 0011 D1020000 		.4byte	.LASF36
+ 211 0015 93000000 		.4byte	.LASF37
  212 0019 00000000 		.4byte	.Ldebug_ranges0+0
  213 001d 00000000 		.4byte	0
  214 0021 00000000 		.4byte	.Ldebug_line0
  215 0025 02       		.uleb128 0x2
  216 0026 01       		.byte	0x1
  217 0027 06       		.byte	0x6
- 218 0028 15030000 		.4byte	.LASF0
+ 218 0028 28030000 		.4byte	.LASF0
  219 002c 03       		.uleb128 0x3
  220 002d 00000000 		.4byte	.LASF3
  221 0031 02       		.byte	0x2
@@ -289,44 +289,44 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  224 0037 02       		.uleb128 0x2
  225 0038 01       		.byte	0x1
  226 0039 08       		.byte	0x8
- 227 003a FE000000 		.4byte	.LASF1
+ 227 003a 11010000 		.4byte	.LASF1
  228 003e 02       		.uleb128 0x2
  229 003f 02       		.byte	0x2
  230 0040 05       		.byte	0x5
- 231 0041 D3020000 		.4byte	.LASF2
+ 231 0041 E6020000 		.4byte	.LASF2
  232 0045 03       		.uleb128 0x3
- 233 0046 7B010000 		.4byte	.LASF4
+ 233 0046 8E010000 		.4byte	.LASF4
  234 004a 02       		.byte	0x2
  235 004b 2B       		.byte	0x2b
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 6
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 6
 
 
  236 004c 50000000 		.4byte	0x50
  237 0050 02       		.uleb128 0x2
  238 0051 02       		.byte	0x2
  239 0052 07       		.byte	0x7
- 240 0053 4B010000 		.4byte	.LASF5
+ 240 0053 5E010000 		.4byte	.LASF5
  241 0057 02       		.uleb128 0x2
  242 0058 04       		.byte	0x4
  243 0059 05       		.byte	0x5
- 244 005a 0C030000 		.4byte	.LASF6
+ 244 005a 1F030000 		.4byte	.LASF6
  245 005e 03       		.uleb128 0x3
- 246 005f 86010000 		.4byte	.LASF7
+ 246 005f 99010000 		.4byte	.LASF7
  247 0063 02       		.byte	0x2
  248 0064 41       		.byte	0x41
  249 0065 69000000 		.4byte	0x69
  250 0069 02       		.uleb128 0x2
  251 006a 04       		.byte	0x4
  252 006b 07       		.byte	0x7
- 253 006c 39010000 		.4byte	.LASF8
+ 253 006c 4C010000 		.4byte	.LASF8
  254 0070 02       		.uleb128 0x2
  255 0071 08       		.byte	0x8
  256 0072 05       		.byte	0x5
- 257 0073 B0020000 		.4byte	.LASF9
+ 257 0073 C3020000 		.4byte	.LASF9
  258 0077 02       		.uleb128 0x2
  259 0078 08       		.byte	0x8
  260 0079 07       		.byte	0x7
- 261 007a D7010000 		.4byte	.LASF10
+ 261 007a EA010000 		.4byte	.LASF10
  262 007e 04       		.uleb128 0x4
  263 007f 04       		.byte	0x4
  264 0080 05       		.byte	0x5
@@ -334,19 +334,19 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  266 0085 02       		.uleb128 0x2
  267 0086 04       		.byte	0x4
  268 0087 07       		.byte	0x7
- 269 0088 AD010000 		.4byte	.LASF11
+ 269 0088 C0010000 		.4byte	.LASF11
  270 008c 03       		.uleb128 0x3
- 271 008d EE010000 		.4byte	.LASF12
+ 271 008d 01020000 		.4byte	.LASF12
  272 0091 03       		.byte	0x3
  273 0092 18       		.byte	0x18
  274 0093 2C000000 		.4byte	0x2c
  275 0097 03       		.uleb128 0x3
- 276 0098 DD020000 		.4byte	.LASF13
+ 276 0098 F0020000 		.4byte	.LASF13
  277 009c 03       		.byte	0x3
  278 009d 24       		.byte	0x24
  279 009e 45000000 		.4byte	0x45
  280 00a2 03       		.uleb128 0x3
- 281 00a3 03030000 		.4byte	.LASF14
+ 281 00a3 16030000 		.4byte	.LASF14
  282 00a7 03       		.byte	0x3
  283 00a8 30       		.byte	0x30
  284 00a9 5E000000 		.4byte	0x5e
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  290 00b5 06       		.uleb128 0x6
  291 00b6 696400   		.ascii	"id\000"
  292 00b9 04       		.byte	0x4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 7
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 7
 
 
  293 00ba 11       		.byte	0x11
@@ -371,7 +371,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  300 00c7 8C000000 		.4byte	0x8c
  301 00cb 02       		.byte	0x2
  302 00cc 07       		.uleb128 0x7
- 303 00cd F9000000 		.4byte	.LASF15
+ 303 00cd 8E000000 		.4byte	.LASF15
  304 00d1 04       		.byte	0x4
  305 00d2 13       		.byte	0x13
  306 00d3 D9000000 		.4byte	0xd9
@@ -387,14 +387,14 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  316 00e9 02       		.uleb128 0x2
  317 00ea 04       		.byte	0x4
  318 00eb 07       		.byte	0x7
- 319 00ec A7020000 		.4byte	.LASF16
+ 319 00ec BA020000 		.4byte	.LASF16
  320 00f0 03       		.uleb128 0x3
- 321 00f1 98010000 		.4byte	.LASF17
+ 321 00f1 AB010000 		.4byte	.LASF17
  322 00f5 04       		.byte	0x4
  323 00f6 14       		.byte	0x14
  324 00f7 AD000000 		.4byte	0xad
  325 00fb 0A       		.uleb128 0xa
- 326 00fc 0C010000 		.4byte	.LASF23
+ 326 00fc 1F010000 		.4byte	.LASF23
  327 0100 01       		.byte	0x1
  328 0101 0D       		.byte	0xd
  329 0102 00000000 		.4byte	.LFB0
@@ -403,13 +403,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  332 010b 9C       		.byte	0x9c
  333 010c 82010000 		.4byte	0x182
  334 0110 0B       		.uleb128 0xb
- 335 0111 28010000 		.4byte	.LASF18
+ 335 0111 3B010000 		.4byte	.LASF18
  336 0115 01       		.byte	0x1
  337 0116 0D       		.byte	0xd
  338 0117 82010000 		.4byte	0x182
  339 011b 00000000 		.4byte	.LLST0
  340 011f 0B       		.uleb128 0xb
- 341 0120 5E010000 		.4byte	.LASF19
+ 341 0120 71010000 		.4byte	.LASF19
  342 0124 01       		.byte	0x1
  343 0125 0E       		.byte	0xe
  344 0126 8C000000 		.4byte	0x8c
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  347 012f 5D000000 		.4byte	.LASF20
  348 0133 01       		.byte	0x1
  349 0134 0F       		.byte	0xf
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 8
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 8
 
 
  350 0135 8C000000 		.4byte	0x8c
@@ -430,7 +430,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  356 0144 8C000000 		.4byte	0x8c
  357 0148 6E000000 		.4byte	.LLST3
  358 014c 0C       		.uleb128 0xc
- 359 014d 9E020000 		.4byte	.LASF27
+ 359 014d B1020000 		.4byte	.LASF27
  360 0151 01       		.byte	0x1
  361 0152 14       		.byte	0x14
  362 0153 7E000000 		.4byte	0x7e
@@ -466,7 +466,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  392 0183 04       		.byte	0x4
  393 0184 F0000000 		.4byte	0xf0
  394 0188 11       		.uleb128 0x11
- 395 0189 BA010000 		.4byte	.LASF28
+ 395 0189 CD010000 		.4byte	.LASF28
  396 018d 01       		.byte	0x1
  397 018e 18       		.byte	0x18
  398 018f 8C000000 		.4byte	0x8c
@@ -476,9 +476,9 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  402 019c 9C       		.byte	0x9c
  403 019d B1010000 		.4byte	0x1b1
  404 01a1 0B       		.uleb128 0xb
- 405 01a2 91010000 		.4byte	.LASF22
+ 405 01a2 A4010000 		.4byte	.LASF22
  406 01a6 01       		.byte	0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 9
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 9
 
 
  407 01a7 18       		.byte	0x18
@@ -486,7 +486,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  409 01ac 8F000000 		.4byte	.LLST4
  410 01b0 00       		.byte	0
  411 01b1 0A       		.uleb128 0xa
- 412 01b2 F6010000 		.4byte	.LASF24
+ 412 01b2 09020000 		.4byte	.LASF24
  413 01b6 01       		.byte	0x1
  414 01b7 1F       		.byte	0x1f
  415 01b8 00000000 		.4byte	.LFB2
@@ -495,13 +495,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  418 01c1 9C       		.byte	0x9c
  419 01c2 63020000 		.4byte	0x263
  420 01c6 0B       		.uleb128 0xb
- 421 01c7 28010000 		.4byte	.LASF18
+ 421 01c7 3B010000 		.4byte	.LASF18
  422 01cb 01       		.byte	0x1
  423 01cc 1F       		.byte	0x1f
  424 01cd 82010000 		.4byte	0x182
  425 01d1 B0000000 		.4byte	.LLST5
  426 01d5 0B       		.uleb128 0xb
- 427 01d6 5E010000 		.4byte	.LASF19
+ 427 01d6 71010000 		.4byte	.LASF19
  428 01da 01       		.byte	0x1
  429 01db 20       		.byte	0x20
  430 01dc 8C000000 		.4byte	0x8c
@@ -513,13 +513,13 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  436 01eb 8C000000 		.4byte	0x8c
  437 01ef 0A010000 		.4byte	.LLST7
  438 01f3 0B       		.uleb128 0xb
- 439 01f4 70010000 		.4byte	.LASF25
+ 439 01f4 83010000 		.4byte	.LASF25
  440 01f8 01       		.byte	0x1
  441 01f9 22       		.byte	0x22
  442 01fa 8C000000 		.4byte	0x8c
  443 01fe 2B010000 		.4byte	.LLST8
  444 0202 12       		.uleb128 0x12
- 445 0203 A2010000 		.4byte	.LASF26
+ 445 0203 B5010000 		.4byte	.LASF26
  446 0207 01       		.byte	0x1
  447 0208 23       		.byte	0x23
  448 0209 A2000000 		.4byte	0xa2
@@ -527,7 +527,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  450 020e 91       		.byte	0x91
  451 020f 00       		.sleb128 0
  452 0210 13       		.uleb128 0x13
- 453 0211 9E020000 		.4byte	.LASF27
+ 453 0211 B1020000 		.4byte	.LASF27
  454 0215 01       		.byte	0x1
  455 0216 27       		.byte	0x27
  456 0217 7E000000 		.4byte	0x7e
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  461 0228 32020000 		.4byte	0x232
  462 022c 0E       		.uleb128 0xe
  463 022d 01       		.uleb128 0x1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 10
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 10
 
 
  464 022e 50       		.byte	0x50
@@ -590,7 +590,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  510 0277 9C       		.byte	0x9c
  511 0278 8C020000 		.4byte	0x28c
  512 027c 0B       		.uleb128 0xb
- 513 027d 28010000 		.4byte	.LASF18
+ 513 027d 3B010000 		.4byte	.LASF18
  514 0281 01       		.byte	0x1
  515 0282 2B       		.byte	0x2b
  516 0283 82010000 		.4byte	0x182
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  518 028b 00       		.byte	0
  519 028c 11       		.uleb128 0x11
  520 028d 3F000000 		.4byte	.LASF30
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 11
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 11
 
 
  521 0291 01       		.byte	0x1
@@ -610,7 +610,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  527 02a0 9C       		.byte	0x9c
  528 02a1 D2020000 		.4byte	0x2d2
  529 02a5 0B       		.uleb128 0xb
- 530 02a6 28010000 		.4byte	.LASF18
+ 530 02a6 3B010000 		.4byte	.LASF18
  531 02aa 01       		.byte	0x1
  532 02ab 2F       		.byte	0x2f
  533 02ac 82010000 		.4byte	0x182
@@ -645,20 +645,20 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  562 02db 04       		.byte	0x4
  563 02dc 17       		.byte	0x17
  564 02dd 14       		.uleb128 0x14
- 565 02de E6020000 		.4byte	.LASF32
- 566 02e2 E6020000 		.4byte	.LASF32
+ 565 02de F9020000 		.4byte	.LASF32
+ 566 02e2 F9020000 		.4byte	.LASF32
  567 02e6 04       		.byte	0x4
  568 02e7 1A       		.byte	0x1a
  569 02e8 14       		.uleb128 0x14
- 570 02e9 E1000000 		.4byte	.LASF33
- 571 02ed E1000000 		.4byte	.LASF33
+ 570 02e9 76000000 		.4byte	.LASF33
+ 571 02ed 76000000 		.4byte	.LASF33
  572 02f1 04       		.byte	0x4
  573 02f2 2C       		.byte	0x2c
  574 02f3 14       		.uleb128 0x14
- 575 02f4 21030000 		.4byte	.LASF34
- 576 02f8 21030000 		.4byte	.LASF34
+ 575 02f4 34030000 		.4byte	.LASF34
+ 576 02f8 34030000 		.4byte	.LASF34
  577 02fc 04       		.byte	0x4
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 12
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 12
 
 
  578 02fd 2D       		.byte	0x2d
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  632 0032 03       		.uleb128 0x3
  633 0033 08       		.uleb128 0x8
  634 0034 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 13
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 13
 
 
  635 0035 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  689 006b 21       		.uleb128 0x21
  690 006c 00       		.byte	0
  691 006d 49       		.uleb128 0x49
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 14
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 14
 
 
  692 006e 13       		.uleb128 0x13
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  746 00a5 49       		.uleb128 0x49
  747 00a6 13       		.uleb128 0x13
  748 00a7 02       		.uleb128 0x2
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 15
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 15
 
 
  749 00a8 18       		.uleb128 0x18
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  803 00e5 49       		.uleb128 0x49
  804 00e6 13       		.uleb128 0x13
  805 00e7 11       		.uleb128 0x11
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 16
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 16
 
 
  806 00e8 01       		.uleb128 0x1
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  860 011f 3B       		.uleb128 0x3b
  861 0120 0B       		.uleb128 0xb
  862 0121 00       		.byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 17
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 17
 
 
  863 0122 00       		.byte	0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  917 0078 53       		.byte	0x53
  918 0079 0B000000 		.4byte	.LVL2-1
  919 007d 20000000 		.4byte	.LFE0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 18
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 18
 
 
  920 0081 0400     		.2byte	0x4
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  974 00ff 01       		.uleb128 0x1
  975 0100 51       		.byte	0x51
  976 0101 9F       		.byte	0x9f
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 19
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 19
 
 
  977 0102 00000000 		.4byte	0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  1031 0184 9F       		.byte	0x9f
  1032 0185 00000000 		.4byte	0
  1033 0189 00000000 		.4byte	0
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 20
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 20
 
 
  1034              	.LLST11:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  1088              		.section	.debug_line,"",%progbits
  1089              	.Ldebug_line0:
  1090 0000 99010000 		.section	.debug_str,"MS",%progbits,1
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 21
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 21
 
 
  1090      02003701 
@@ -1235,186 +1235,187 @@ ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 1
  1102      76696365 
  1102      53657269 
  1102      616C4E75 
- 1103              	.LASF37:
- 1104 0076 433A5C55 		.ascii	"C:\\Users\\austc\\OneDrive\\Documents\\Altium\\Moto"
- 1104      73657273 
- 1104      5C617573 
- 1104      74635C4F 
- 1104      6E654472 
- 1105 00a3 722D556E 		.ascii	"r-Unit-Firmware-A-2019-2020\\Motor Unit\\Motor_Boar"
- 1105      69742D46 
- 1105      69726D77 
- 1105      6172652D 
- 1105      412D3230 
- 1106 00d4 645F5265 		.ascii	"d_Rev3.cydsn\000"
- 1106      76332E63 
- 1106      7964736E 
+ 1103              	.LASF33:
+ 1104 0076 5061636B 		.ascii	"PackIntIntoDataMSBFirst\000"
+ 1104      496E7449 
+ 1104      6E746F44 
+ 1104      6174614D 
+ 1104      53424669 
+ 1105              	.LASF15:
+ 1106 008e 64617461 		.ascii	"data\000"
  1106      00
- 1107              	.LASF33:
- 1108 00e1 5061636B 		.ascii	"PackIntIntoDataMSBFirst\000"
- 1108      496E7449 
- 1108      6E746F44 
- 1108      6174614D 
- 1108      53424669 
- 1109              	.LASF15:
- 1110 00f9 64617461 		.ascii	"data\000"
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 22
+ 1107              	.LASF37:
+ 1108 0093 433A5C55 		.ascii	"C:\\Users\\Austcha\\Documents\\Husky Robotics\\Moto"
+ 1108      73657273 
+ 1108      5C417573 
+ 1108      74636861 
+ 1108      5C446F63 
+ 1109 00c1 7220426F 		.ascii	"r Boards\\Rev3\\Motor-Unit-Firmware-A-2019-2020\\Mo"
+ 1109      61726473 
+ 1109      5C526576 
+ 1109      335C4D6F 
+ 1109      746F722D 
+ 1110 00f1 746F7220 		.ascii	"tor Unit\\Motor_Board_Rev3.cydsn\000"
+ 1110      556E6974 
+ 1110      5C4D6F74 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 22
 
 
- 1110      00
+ 1110      6F725F42 
+ 1110      6F617264 
  1111              	.LASF1:
- 1112 00fe 756E7369 		.ascii	"unsigned char\000"
+ 1112 0111 756E7369 		.ascii	"unsigned char\000"
  1112      676E6564 
  1112      20636861 
  1112      7200
  1113              	.LASF23:
- 1114 010c 41737365 		.ascii	"AssemblePowerRailsSetPacket\000"
+ 1114 011f 41737365 		.ascii	"AssemblePowerRailsSetPacket\000"
  1114      6D626C65 
  1114      506F7765 
  1114      72526169 
  1114      6C735365 
  1115              	.LASF18:
- 1116 0128 7061636B 		.ascii	"packetToAssemble\000"
+ 1116 013b 7061636B 		.ascii	"packetToAssemble\000"
  1116      6574546F 
  1116      41737365 
  1116      6D626C65 
  1116      00
  1117              	.LASF8:
- 1118 0139 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1118 014c 6C6F6E67 		.ascii	"long unsigned int\000"
  1118      20756E73 
  1118      69676E65 
  1118      6420696E 
  1118      7400
  1119              	.LASF5:
- 1120 014b 73686F72 		.ascii	"short unsigned int\000"
+ 1120 015e 73686F72 		.ascii	"short unsigned int\000"
  1120      7420756E 
  1120      7369676E 
  1120      65642069 
  1120      6E7400
  1121              	.LASF19:
- 1122 015e 74617267 		.ascii	"targetDeviceGroup\000"
+ 1122 0171 74617267 		.ascii	"targetDeviceGroup\000"
  1122      65744465 
  1122      76696365 
  1122      47726F75 
  1122      7000
  1123              	.LASF25:
- 1124 0170 7261696C 		.ascii	"railNumber\000"
+ 1124 0183 7261696C 		.ascii	"railNumber\000"
  1124      4E756D62 
  1124      657200
  1125              	.LASF4:
- 1126 017b 5F5F7569 		.ascii	"__uint16_t\000"
+ 1126 018e 5F5F7569 		.ascii	"__uint16_t\000"
  1126      6E743136 
  1126      5F7400
  1127              	.LASF7:
- 1128 0186 5F5F7569 		.ascii	"__uint32_t\000"
+ 1128 0199 5F5F7569 		.ascii	"__uint32_t\000"
  1128      6E743332 
  1128      5F7400
  1129              	.LASF22:
- 1130 0191 7061636B 		.ascii	"packet\000"
+ 1130 01a4 7061636B 		.ascii	"packet\000"
  1130      657400
  1131              	.LASF17:
- 1132 0198 43414E50 		.ascii	"CANPacket\000"
+ 1132 01ab 43414E50 		.ascii	"CANPacket\000"
  1132      61636B65 
  1132      7400
  1133              	.LASF26:
- 1134 01a2 63757272 		.ascii	"currentLim\000"
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 23
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 23
 
 
+ 1134 01b5 63757272 		.ascii	"currentLim\000"
  1134      656E744C 
  1134      696D00
  1135              	.LASF11:
- 1136 01ad 756E7369 		.ascii	"unsigned int\000"
+ 1136 01c0 756E7369 		.ascii	"unsigned int\000"
  1136      676E6564 
  1136      20696E74 
  1136      00
  1137              	.LASF28:
- 1138 01ba 47657450 		.ascii	"GetPowerRailsStateFromPacket\000"
+ 1138 01cd 47657450 		.ascii	"GetPowerRailsStateFromPacket\000"
  1138      6F776572 
  1138      5261696C 
  1138      73537461 
  1138      74654672 
  1139              	.LASF10:
- 1140 01d7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1140 01ea 6C6F6E67 		.ascii	"long long unsigned int\000"
  1140      206C6F6E 
  1140      6720756E 
  1140      7369676E 
  1140      65642069 
  1141              	.LASF12:
- 1142 01ee 75696E74 		.ascii	"uint8_t\000"
+ 1142 0201 75696E74 		.ascii	"uint8_t\000"
  1142      385F7400 
  1143              	.LASF24:
- 1144 01f6 41737365 		.ascii	"AssembleOverCurrentPacket\000"
+ 1144 0209 41737365 		.ascii	"AssembleOverCurrentPacket\000"
  1144      6D626C65 
  1144      4F766572 
  1144      43757272 
  1144      656E7450 
  1145              	.LASF35:
- 1146 0210 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1146 0223 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  1146      43313120 
  1146      352E342E 
  1146      31203230 
  1146      31363036 
- 1147 0243 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1147 0256 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
  1147      20726576 
  1147      6973696F 
  1147      6E203233 
  1147      37373135 
- 1148 0276 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1148 0289 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  1148      66756E63 
  1148      74696F6E 
  1148      2D736563 
  1148      74696F6E 
  1149              	.LASF27:
- 1150 029e 6E657874 		.ascii	"nextByte\000"
+ 1150 02b1 6E657874 		.ascii	"nextByte\000"
  1150      42797465 
  1150      00
  1151              	.LASF16:
- 1152 02a7 73697A65 		.ascii	"sizetype\000"
+ 1152 02ba 73697A65 		.ascii	"sizetype\000"
  1152      74797065 
  1152      00
  1153              	.LASF9:
- 1154 02b0 6C6F6E67 		.ascii	"long long int\000"
+ 1154 02c3 6C6F6E67 		.ascii	"long long int\000"
  1154      206C6F6E 
  1154      6720696E 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccW8mtuR.s 			page 24
+
+
  1154      7400
-ARM GAS  C:\Users\austc\AppData\Local\Temp\cchAjaol.s 			page 24
-
-
  1155              	.LASF36:
- 1156 02be 2E2E5C43 		.ascii	"..\\CANLib\\CANPower.c\000"
+ 1156 02d1 2E2E5C43 		.ascii	"..\\CANLib\\CANPower.c\000"
  1156      414E4C69 
  1156      625C4341 
  1156      4E506F77 
  1156      65722E63 
  1157              	.LASF2:
- 1158 02d3 73686F72 		.ascii	"short int\000"
+ 1158 02e6 73686F72 		.ascii	"short int\000"
  1158      7420696E 
  1158      7400
  1159              	.LASF13:
- 1160 02dd 75696E74 		.ascii	"uint16_t\000"
+ 1160 02f0 75696E74 		.ascii	"uint16_t\000"
  1160      31365F74 
  1160      00
  1161              	.LASF32:
- 1162 02e6 57726974 		.ascii	"WriteSenderSerialAndPacketID\000"
+ 1162 02f9 57726974 		.ascii	"WriteSenderSerialAndPacketID\000"
  1162      6553656E 
  1162      64657253 
  1162      65726961 
  1162      6C416E64 
  1163              	.LASF14:
- 1164 0303 75696E74 		.ascii	"uint32_t\000"
+ 1164 0316 75696E74 		.ascii	"uint32_t\000"
  1164      33325F74 
  1164      00
  1165              	.LASF6:
- 1166 030c 6C6F6E67 		.ascii	"long int\000"
+ 1166 031f 6C6F6E67 		.ascii	"long int\000"
  1166      20696E74 
  1166      00
  1167              	.LASF0:
- 1168 0315 7369676E 		.ascii	"signed char\000"
+ 1168 0328 7369676E 		.ascii	"signed char\000"
  1168      65642063 
  1168      68617200 
  1169              	.LASF34:
- 1170 0321 4465636F 		.ascii	"DecodeBytesToIntMSBFirst\000"
+ 1170 0334 4465636F 		.ascii	"DecodeBytesToIntMSBFirst\000"
  1170      64654279 
  1170      74657354 
  1170      6F496E74 

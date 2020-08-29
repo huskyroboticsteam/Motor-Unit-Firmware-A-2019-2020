@@ -1,5 +1,5 @@
 -- Project:   C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Motor_Board_Rev3.cyprj
--- Generated: 04/04/2020 16:39:13
+-- Generated: 08/29/2020 12:59:02
 -- PSoC Creator  4.3
 
 ENTITY Motor_Board_Rev3 IS
@@ -77,6 +77,8 @@ ARCHITECTURE __DEFAULT__ OF Motor_Board_Rev3 IS
     SIGNAL Net_140 : bit;
     SIGNAL Net_1416 : bit;
     ATTRIBUTE placement_force OF Net_1416 : SIGNAL IS "U(0,3,B)0";
+    SIGNAL Net_1420 : bit;
+    SIGNAL Net_1421 : bit;
     SIGNAL Net_142_digital : bit;
     ATTRIBUTE udbclken_assigned OF Net_142_digital : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_142_digital : SIGNAL IS true;
@@ -94,8 +96,6 @@ ARCHITECTURE __DEFAULT__ OF Motor_Board_Rev3 IS
     SIGNAL Net_485 : bit;
     SIGNAL Net_487 : bit;
     SIGNAL Net_488 : bit;
-    SIGNAL Net_505 : bit;
-    SIGNAL Net_506 : bit;
     SIGNAL Net_525 : bit;
     SIGNAL Net_526 : bit;
     SIGNAL Net_527 : bit;
@@ -3500,7 +3500,7 @@ BEGIN
             int_type => "10",
             is_nmi => 0)
         PORT MAP(
-            interrupt => Net_506,
+            interrupt => Net_1421,
             clock => ClockBlock_HFClk);
 
     \CAN:CanIP\:cancell
@@ -3509,8 +3509,8 @@ BEGIN
         PORT MAP(
             can_rx => Net_11,
             can_tx => Net_12,
-            can_tx_en => Net_505,
-            interrupt => Net_506);
+            can_tx_en => Net_1420,
+            interrupt => Net_1421);
 
     \UART:SCB\:m0s8scbcell
         GENERIC MAP(
