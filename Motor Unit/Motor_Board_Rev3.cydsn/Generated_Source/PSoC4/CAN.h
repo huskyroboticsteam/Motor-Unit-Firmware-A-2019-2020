@@ -47,7 +47,7 @@ extern uint8 CAN_initVar;
 #define CAN_FORM_ERR                       (0u)
 #define CAN_CRC_ERR                        (0u)
 #define CAN_BUS_OFF                        (0u)
-#define CAN_RX_MSG_LOST                    (1u)
+#define CAN_RX_MSG_LOST                    (0u)
 #define CAN_TX_MESSAGE                     (0u)
 #define CAN_RX_MESSAGE                     (1u)
 #define CAN_ARB_LOST_USE_HELPER            (1u)
@@ -444,10 +444,10 @@ void  CAN_ReceiveMsg(uint8 rxMailbox) ;
 ***************************************/
 
 /* General */
-#define CAN_BITRATE                   (19u)
-#define CAN_CFG_REG_TSEG1             (13u - 1u)
-#define CAN_CFG_REG_TSEG2             (2u - 1u)
-#define CAN_CFG_REG_SJW               (2u - 1u)
+#define CAN_BITRATE                   (31u)
+#define CAN_CFG_REG_TSEG1             (5u - 1u)
+#define CAN_CFG_REG_TSEG2             (4u - 1u)
+#define CAN_CFG_REG_SJW               (3u - 1u)
 #define CAN_SAMPLING_MODE             (0u)
 #define CAN_ARBITER                   (0u)
 #define CAN_RESET_TYPE                (1u)

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
   28:Generated_Source\PSoC4/QuadDec.c **** /*******************************************************************************
   29:Generated_Source\PSoC4/QuadDec.c **** * Function Name: QuadDec_Init
   30:Generated_Source\PSoC4/QuadDec.c **** ********************************************************************************
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 2
 
 
   31:Generated_Source\PSoC4/QuadDec.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
   66:Generated_Source\PSoC4/QuadDec.c **** * Return:
   67:Generated_Source\PSoC4/QuadDec.c **** *  None.
   68:Generated_Source\PSoC4/QuadDec.c **** *
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 3
 
 
   69:Generated_Source\PSoC4/QuadDec.c **** *******************************************************************************/
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  123:Generated_Source\PSoC4/QuadDec.c ****         *  (QuadDec_COUNTER_SIZE == QuadDec_COUNTER_SIZE_32_BIT) 
  124:Generated_Source\PSoC4/QuadDec.c ****         */
  125:Generated_Source\PSoC4/QuadDec.c ****         QuadDec_Cnt16_Start();
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 4
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 4
 
 
  126:Generated_Source\PSoC4/QuadDec.c ****         QuadDec_Cnt16_WriteCounter(QuadDec_COUNTER_INIT_VALUE);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  169:Generated_Source\PSoC4/QuadDec.c ****  
  170:Generated_Source\PSoC4/QuadDec.c ****     enableInterrupts = CyEnterCriticalSection();
   58              		.loc 1 170 0
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 5
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 5
 
 
   59 0006 FFF7FEFF 		bl	CyEnterCriticalSection
@@ -268,7 +268,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
   73              	.L4:
   74 001a C046     		.align	2
   75              	.L3:
-  76 001c 90000F40 		.word	1074725008
+  76 001c 94000F40 		.word	1074725012
   77              		.cfi_endproc
   78              	.LFE4:
   79              		.size	QuadDec_Stop, .-QuadDec_Stop
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  196:Generated_Source\PSoC4/QuadDec.c **** *
  197:Generated_Source\PSoC4/QuadDec.c **** * Global variables:
  198:Generated_Source\PSoC4/QuadDec.c **** *  QuadDec_count32SoftPart - used to get hi 16 bit for current value
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 6
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 6
 
 
  199:Generated_Source\PSoC4/QuadDec.c **** *  of the 32-bit counter, when Counter size equal 32-bit.
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  107              		@ sp needed
  108 000e 10BD     		pop	{r4, pc}
  109              	.L7:
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 7
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 7
 
 
  110              		.align	2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  133              		.loc 1 264 0
  134 0002 0028     		cmp	r0, #0
  135 0004 05DB     		blt	.L9
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 8
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 8
 
 
  265:Generated_Source\PSoC4/QuadDec.c ****         {
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  167              		.size	QuadDec_SetCounter, .-QuadDec_SetCounter
  168              		.section	.text.QuadDec_GetEvents,"ax",%progbits
  169              		.align	2
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 9
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 9
 
 
  170              		.global	QuadDec_GetEvents
@@ -529,7 +529,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  189              	.L15:
  190 000a C046     		.align	2
  191              	.L14:
- 192 000c 60000F40 		.word	1074724960
+ 192 000c 64000F40 		.word	1074724964
  193              		.cfi_endproc
  194              	.LFE7:
  195              		.size	QuadDec_GetEvents, .-QuadDec_GetEvents
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  198              		.global	QuadDec_SetInterruptMask
  199              		.code	16
  200              		.thumb_func
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 10
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 10
 
 
  201              		.type	QuadDec_SetInterruptMask, %function
@@ -587,7 +587,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  216              	.L18:
  217 0006 C046     		.align	2
  218              	.L17:
- 219 0008 80000F40 		.word	1074724992
+ 219 0008 84000F40 		.word	1074724996
  220              		.cfi_endproc
  221              	.LFE8:
  222              		.size	QuadDec_SetInterruptMask, .-QuadDec_SetInterruptMask
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  227              		.thumb_func
  228              		.type	QuadDec_Enable, %function
  229              	QuadDec_Enable:
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 11
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 11
 
 
  230              	.LFB2:
@@ -643,7 +643,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  262              	.L21:
  263 0022 C046     		.align	2
  264              	.L20:
- 265 0024 90000F40 		.word	1074725008
+ 265 0024 94000F40 		.word	1074725012
  266              		.cfi_endproc
  267              	.LFE2:
  268              		.size	QuadDec_Enable, .-QuadDec_Enable
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  117:Generated_Source\PSoC4/QuadDec.c ****     #if (QuadDec_COUNTER_SIZE == QuadDec_COUNTER_SIZE_8_BIT)
  277              		.loc 1 117 0
  278              		.cfi_startproc
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 12
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 12
 
 
  279              		@ args = 0, pretend = 0, frame = 0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  345:Generated_Source\PSoC4/QuadDec.c **** * Function Name: QuadDec_GetInterruptMask
  346:Generated_Source\PSoC4/QuadDec.c **** ********************************************************************************
  347:Generated_Source\PSoC4/QuadDec.c **** *
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 13
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 13
 
 
  348:Generated_Source\PSoC4/QuadDec.c **** * Summary:
@@ -753,7 +753,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  337              	.L28:
  338 000a C046     		.align	2
  339              	.L27:
- 340 000c 80000F40 		.word	1074724992
+ 340 000c 84000F40 		.word	1074724996
  341              		.cfi_endproc
  342              	.LFE9:
  343              		.size	QuadDec_GetInterruptMask, .-QuadDec_GetInterruptMask
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  362 000b 01       		.uleb128 0x1
  363 000c 15020000 		.4byte	.LASF37
  364 0010 0C       		.byte	0xc
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 14
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 14
 
 
  365 0011 51000000 		.4byte	.LASF38
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  419 007f 3A000000 		.4byte	0x3a
  420 0083 04       		.uleb128 0x4
  421 0084 72010000 		.4byte	.LASF11
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 15
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 15
 
 
  422 0088 02       		.byte	0x2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  476 00fa 01       		.byte	0x1
  477 00fb 9F       		.byte	0x9f
  478 00fc 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 16
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 16
 
 
  479 0100 00000000 		.4byte	.LLST0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  533 0186 06000000 		.4byte	.LASF20
  534 018a 01       		.byte	0x1
  535 018b 0601     		.2byte	0x106
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 17
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 17
 
 
  536 018d 77000000 		.4byte	0x77
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  590 020e 01       		.uleb128 0x1
  591 020f 3F       		.byte	0x3f
  592 0210 00       		.byte	0
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 18
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 18
 
 
  593 0211 09       		.uleb128 0x9
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  647 0291 14       		.uleb128 0x14
  648 0292 1C010000 		.4byte	.LASF31
  649 0296 1C010000 		.4byte	.LASF31
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 19
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 19
 
 
  650 029a 03       		.byte	0x3
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  704 0018 3E       		.uleb128 0x3e
  705 0019 0B       		.uleb128 0xb
  706 001a 03       		.uleb128 0x3
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 20
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 20
 
 
  707 001b 0E       		.uleb128 0xe
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  761 0052 19       		.uleb128 0x19
  762 0053 00       		.byte	0
  763 0054 00       		.byte	0
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 21
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 21
 
 
  764 0055 07       		.uleb128 0x7
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  818 008e 03       		.uleb128 0x3
  819 008f 0E       		.uleb128 0xe
  820 0090 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 22
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 22
 
 
  821 0091 0B       		.uleb128 0xb
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  875 00c9 19       		.uleb128 0x19
  876 00ca 01       		.uleb128 0x1
  877 00cb 13       		.uleb128 0x13
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 23
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 23
 
 
  878 00cc 00       		.byte	0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  932 0103 19       		.uleb128 0x19
  933 0104 00       		.byte	0
  934 0105 00       		.byte	0
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 24
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 24
 
 
  935 0106 10       		.uleb128 0x10
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  989 0141 00       		.byte	0
  990 0142 3F       		.uleb128 0x3f
  991 0143 19       		.uleb128 0x19
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 25
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 25
 
 
  992 0144 3C       		.uleb128 0x3c
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  1046 0063 F3       		.byte	0xf3
  1047 0064 01       		.uleb128 0x1
  1048 0065 50       		.byte	0x50
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 26
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 26
 
 
  1049 0066 9F       		.byte	0x9f
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  1103 000c 20000000 		.4byte	.LFE4
  1104 0010 00000000 		.4byte	.LFB5
  1105 0014 14000000 		.4byte	.LFE5
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 27
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 27
 
 
  1106 0018 00000000 		.4byte	.LFB6
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  1136      5C50536F 
  1137              	.LASF27:
  1138 0072 51756164 		.ascii	"QuadDec_Enable\000"
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 28
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 28
 
 
  1138      4465635F 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  1157              	.LASF5:
  1158 0178 6C6F6E67 		.ascii	"long unsigned int\000"
  1158      20756E73 
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 29
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 29
 
 
  1158      69676E65 
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  1180      31203230 
  1180      31363036 
  1181 0248 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 30
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 30
 
 
  1181      20726576 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 1
  1204      00
  1205              	.LASF17:
  1206 031b 6C6F6E67 		.ascii	"long double\000"
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccSjQDnO.s 			page 31
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccyBL8e4.s 			page 31
 
 
  1206      20646F75 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cc4D6vIH.s 			page 1
 
 
    1              		.syntax unified
@@ -10,7 +10,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 1
    7              		.eabi_attribute 24, 1
    8              		.eabi_attribute 25, 1
    9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 30, 6
   11              		.eabi_attribute 34, 0
   12              		.eabi_attribute 18, 4
   13              		.thumb
@@ -19,46 +19,46 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.global	cy_meta_chipprotect
-  20              		.global	cy_metadata
-  21              		.global	cy_meta_flashprotect
-  22              		.section	.cychipprotect,"a",%progbits
-  23              		.align	2
-  24              		.type	cy_meta_chipprotect, %object
-  25              		.size	cy_meta_chipprotect, 1
-  26              	cy_meta_chipprotect:
-  27 0000 01       		.byte	1
-  28              		.section	.cymeta,"a",%progbits
-  29              		.align	2
-  30              		.type	cy_metadata, %object
-  31              		.size	cy_metadata, 12
-  32              	cy_metadata:
-  33 0000 00       		.byte	0
-  34 0001 02       		.byte	2
-  35 0002 10       		.byte	16
-  36 0003 11       		.byte	17
-  37 0004 11       		.byte	17
-  38 0005 A0       		.byte	-96
-  39 0006 00       		.byte	0
-  40 0007 01       		.byte	1
-  41 0008 00       		.byte	0
-  42 0009 00       		.byte	0
-  43 000a 00       		.byte	0
-  44 000b 00       		.byte	0
-  45              		.section	.cyflashprotect,"a",%progbits
+  19              		.global	cy_meta_flashprotect
+  20              		.section	.cyflashprotect,"a",%progbits
+  21              		.align	2
+  22              		.type	cy_meta_flashprotect, %object
+  23              		.size	cy_meta_flashprotect, 128
+  24              	cy_meta_flashprotect:
+  25 0000 00000000 		.space	128
+  25      00000000 
+  25      00000000 
+  25      00000000 
+  25      00000000 
+  26              		.global	cy_metadata
+  27              		.section	.cymeta,"a",%progbits
+  28              		.align	2
+  29              		.type	cy_metadata, %object
+  30              		.size	cy_metadata, 12
+  31              	cy_metadata:
+  32 0000 00       		.byte	0
+  33 0001 02       		.byte	2
+  34 0002 10       		.byte	16
+  35 0003 11       		.byte	17
+  36 0004 11       		.byte	17
+  37 0005 A0       		.byte	-96
+  38 0006 00       		.byte	0
+  39 0007 01       		.byte	1
+  40 0008 00       		.byte	0
+  41 0009 00       		.byte	0
+  42 000a 00       		.byte	0
+  43 000b 00       		.byte	0
+  44              		.global	cy_meta_chipprotect
+  45              		.section	.cychipprotect,"a",%progbits
   46              		.align	2
-  47              		.type	cy_meta_flashprotect, %object
-  48              		.size	cy_meta_flashprotect, 128
-  49              	cy_meta_flashprotect:
-  50 0000 00000000 		.space	128
-  50      00000000 
-  50      00000000 
-  50      00000000 
-  50      00000000 
+  47              		.type	cy_meta_chipprotect, %object
+  48              		.size	cy_meta_chipprotect, 1
+  49              	cy_meta_chipprotect:
+  50 0000 01       		.byte	1
   51              		.text
   52              	.Letext0:
   53              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cc4D6vIH.s 			page 2
 
 
   54              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
@@ -70,7 +70,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 1
   60 0006 00000000 		.4byte	.Ldebug_abbrev0
   61 000a 04       		.byte	0x4
   62 000b 01       		.uleb128 0x1
-  63 000c 40010000 		.4byte	.LASF15
+  63 000c FF000000 		.4byte	.LASF15
   64 0010 0C       		.byte	0xc
   65 0011 B6000000 		.4byte	.LASF16
   66 0015 2A000000 		.4byte	.LASF17
@@ -111,20 +111,20 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 1
  101 0059 02       		.uleb128 0x2
  102 005a 08       		.byte	0x8
  103 005b 07       		.byte	0x7
- 104 005c 0C010000 		.4byte	.LASF7
+ 104 005c 9A010000 		.4byte	.LASF7
  105 0060 04       		.uleb128 0x4
  106 0061 04       		.byte	0x4
  107 0062 05       		.byte	0x5
  108 0063 696E7400 		.ascii	"int\000"
  109 0067 02       		.uleb128 0x2
  110 0068 04       		.byte	0x4
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cc4D6vIH.s 			page 3
 
 
  111 0069 07       		.byte	0x7
- 112 006a FF000000 		.4byte	.LASF8
+ 112 006a 8D010000 		.4byte	.LASF8
  113 006e 03       		.uleb128 0x3
- 114 006f 23010000 		.4byte	.LASF10
+ 114 006f B1010000 		.4byte	.LASF10
  115 0073 02       		.byte	0x2
  116 0074 18       		.byte	0x18
  117 0075 24000000 		.4byte	0x24
@@ -142,7 +142,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 1
  129 0090 07       		.uleb128 0x7
  130 0091 6E000000 		.4byte	0x6e
  131 0095 08       		.uleb128 0x8
- 132 0096 2B010000 		.4byte	.LASF12
+ 132 0096 B9010000 		.4byte	.LASF12
  133 009a 03       		.byte	0x3
  134 009b 1F       		.byte	0x1f
  135 009c A6000000 		.4byte	0xa6
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 1
  165 00e1 08       		.uleb128 0x8
  166 00e2 0A000000 		.4byte	.LASF14
  167 00e6 03       		.byte	0x3
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 4
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cc4D6vIH.s 			page 4
 
 
  168 00e7 4B       		.byte	0x4b
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 1
  222 002c 3E       		.uleb128 0x3e
  223 002d 0B       		.uleb128 0xb
  224 002e 03       		.uleb128 0x3
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 5
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cc4D6vIH.s 			page 5
 
 
  225 002f 08       		.uleb128 0x8
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 1
  279 0010 00000000 		.4byte	0
  280 0014 00000000 		.4byte	0
  281              		.section	.debug_line,"",%progbits
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 6
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cc4D6vIH.s 			page 6
 
 
  282              	.Ldebug_line0:
@@ -358,47 +358,47 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 1
  301 00ec 73686F72 		.ascii	"short unsigned int\000"
  301      7420756E 
  301      7369676E 
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 7
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cc4D6vIH.s 			page 7
 
 
  301      65642069 
  301      6E7400
- 302              	.LASF8:
- 303 00ff 756E7369 		.ascii	"unsigned int\000"
- 303      676E6564 
- 303      20696E74 
- 303      00
- 304              	.LASF7:
- 305 010c 6C6F6E67 		.ascii	"long long unsigned int\000"
- 305      206C6F6E 
- 305      6720756E 
- 305      7369676E 
- 305      65642069 
- 306              	.LASF10:
- 307 0123 75696E74 		.ascii	"uint8_t\000"
- 307      385F7400 
- 308              	.LASF12:
- 309 012b 63795F6D 		.ascii	"cy_meta_flashprotect\000"
- 309      6574615F 
- 309      666C6173 
- 309      6870726F 
- 309      74656374 
- 310              	.LASF15:
- 311 0140 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 311      43313120 
- 311      352E342E 
- 311      31203230 
- 311      31363036 
- 312 0173 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 312      20726576 
- 312      6973696F 
- 312      6E203233 
- 312      37373135 
- 313 01a6 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 313      66756E63 
- 313      74696F6E 
- 313      2D736563 
- 313      74696F6E 
+ 302              	.LASF15:
+ 303 00ff 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 303      43313120 
+ 303      352E342E 
+ 303      31203230 
+ 303      31363036 
+ 304 0132 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 304      20726576 
+ 304      6973696F 
+ 304      6E203233 
+ 304      37373135 
+ 305 0165 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 305      66756E63 
+ 305      74696F6E 
+ 305      2D736563 
+ 305      74696F6E 
+ 306              	.LASF8:
+ 307 018d 756E7369 		.ascii	"unsigned int\000"
+ 307      676E6564 
+ 307      20696E74 
+ 307      00
+ 308              	.LASF7:
+ 309 019a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 309      206C6F6E 
+ 309      6720756E 
+ 309      7369676E 
+ 309      65642069 
+ 310              	.LASF10:
+ 311 01b1 75696E74 		.ascii	"uint8_t\000"
+ 311      385F7400 
+ 312              	.LASF12:
+ 313 01b9 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 313      6574615F 
+ 313      666C6173 
+ 313      6870726F 
+ 313      74656374 
  314              	.LASF11:
  315 01ce 73697A65 		.ascii	"sizetype\000"
  315      74797065 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 1
  321      00
  322              	.LASF0:
  323 01f8 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccAo7IUz.s 			page 8
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cc4D6vIH.s 			page 8
 
 
  323      65642063 

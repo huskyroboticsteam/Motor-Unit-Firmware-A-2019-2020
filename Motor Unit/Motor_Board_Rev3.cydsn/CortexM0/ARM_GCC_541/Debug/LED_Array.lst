@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
   28:LED_Array.c   ****         
   29:LED_Array.c   ****         double r_inc = r2 - r1;
   30:LED_Array.c   ****         double g_inc = g2 - g1;
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 2
 
 
   31:LED_Array.c   ****         double b_inc = b2 - b1;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
   57 001c 0120     		movs	r0, #1
   58 001e FFF7FEFF 		bl	StripLights_Trigger
   59              	.LVL5:
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 3
 
 
   56:LED_Array.c   **** }
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  106              		.loc 1 60 0 discriminator 3
  107 0018 0134     		adds	r4, r4, #1
  108              	.LVL11:
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 4
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 4
 
 
  109 001a E4B2     		uxtb	r4, r4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  153 0004 1A43     		orrs	r2, r3
  154 0006 1000     		movs	r0, r2
  155              	.LVL19:
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 5
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 5
 
 
  156 0008 0843     		orrs	r0, r1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  207              	.LVL22:
  208 0018 8846     		mov	r8, r1
  209              	.LVL23:
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 6
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 6
 
 
   21:LED_Array.c   ****         int16_t b1 = (uint8)((color1 >> 16) & 0x000000FF);  // Write Blue
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  257 0054 3540     		ands	r5, r6
  258 0056 581B     		subs	r0, r3, r5
  259              	.LVL37:
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 7
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 7
 
 
  260 0058 FFF7FEFF 		bl	__aeabi_i2d
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  310 00a6 0B00     		movs	r3, r1
  311 00a8 2000     		movs	r0, r4
  312 00aa 2900     		movs	r1, r5
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 8
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 8
 
 
  313 00ac FFF7FEFF 		bl	__aeabi_dmul
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  365              	.LVL65:
  366 010a FFF7FEFF 		bl	__aeabi_d2uiz
  367              	.LVL66:
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 9
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 9
 
 
  368 010e C2B2     		uxtb	r2, r0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  420 0032 1D       		.byte	0x1d
  421 0033 37000000 		.4byte	0x37
  422 0037 02       		.uleb128 0x2
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 10
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 10
 
 
  423 0038 01       		.byte	0x1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  477 009e 3E000000 		.4byte	0x3e
  478 00a2 03       		.uleb128 0x3
  479 00a3 AC020000 		.4byte	.LASF14
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 11
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 11
 
 
  480 00a7 03       		.byte	0x3
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  534 011e 29010000 		.4byte	0x129
  535 0122 0A       		.uleb128 0xa
  536 0123 01       		.uleb128 0x1
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 12
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 12
 
 
  537 0124 50       		.byte	0x50
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  591 0190 01       		.uleb128 0x1
  592 0191 30       		.byte	0x30
  593 0192 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 13
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 13
 
 
  594 0193 01       		.uleb128 0x1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  648 01f9 00000000 		.4byte	.LFB34
  649 01fd 28010000 		.4byte	.LFE34-.LFB34
  650 0201 01       		.uleb128 0x1
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 14
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 14
 
 
  651 0202 9C       		.byte	0x9c
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  705 027f 01       		.byte	0x1
  706 0280 19       		.byte	0x19
  707 0281 97000000 		.4byte	0x97
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 15
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 15
 
 
  708 0285 E9010000 		.4byte	.LLST12
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  762 02ff 01       		.uleb128 0x1
  763 0300 51       		.byte	0x51
  764 0301 02       		.uleb128 0x2
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 16
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 16
 
 
  765 0302 75       		.byte	0x75
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  819 0000 01       		.uleb128 0x1
  820 0001 11       		.uleb128 0x11
  821 0002 01       		.byte	0x1
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 17
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 17
 
 
  822 0003 25       		.uleb128 0x25
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  876 0039 03       		.uleb128 0x3
  877 003a 0E       		.uleb128 0xe
  878 003b 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 18
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 18
 
 
  879 003c 0B       		.uleb128 0xb
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  933 0075 00       		.byte	0
  934 0076 00       		.byte	0
  935 0077 09       		.uleb128 0x9
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 19
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 19
 
 
  936 0078 898201   		.uleb128 0x4109
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  990 00b5 01       		.byte	0x1
  991 00b6 3F       		.uleb128 0x3f
  992 00b7 19       		.uleb128 0x19
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 20
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 20
 
 
  993 00b8 03       		.uleb128 0x3
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1047 00ef 01       		.byte	0x1
  1048 00f0 3F       		.uleb128 0x3f
  1049 00f1 19       		.uleb128 0x19
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 21
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 21
 
 
  1050 00f2 03       		.uleb128 0x3
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1104 0129 13       		.uleb128 0x13
  1105 012a 01       		.uleb128 0x1
  1106 012b 13       		.uleb128 0x13
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 22
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 22
 
 
  1107 012c 00       		.byte	0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1161 0008 0100     		.2byte	0x1
  1162 000a 50       		.byte	0x50
  1163 000b 07000000 		.4byte	.LVL1-1
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 23
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 23
 
 
  1164 000f 0E000000 		.4byte	.LVL2
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1218 0097 01       		.uleb128 0x1
  1219 0098 50       		.byte	0x50
  1220 0099 9F       		.byte	0x9f
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 24
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 24
 
 
  1221 009a 00000000 		.4byte	0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1275 011f 1C000000 		.4byte	.LVL24
  1276 0123 0100     		.2byte	0x1
  1277 0125 52       		.byte	0x52
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 25
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 25
 
 
  1278 0126 1C000000 		.4byte	.LVL24
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1332 01a4 59       		.byte	0x59
  1333 01a5 1E010000 		.4byte	.LVL73
  1334 01a9 28010000 		.4byte	.LFE34
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 26
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 26
 
 
  1335 01ad 0900     		.2byte	0x9
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1389 020a 9F       		.byte	0x9f
  1390 020b 44000000 		.4byte	.LVL32
  1391 020f 28010000 		.4byte	.LFE34
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 27
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 27
 
 
  1392 0213 0900     		.2byte	0x9
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1446 0277 54       		.byte	0x54
  1447 0278 93       		.byte	0x93
  1448 0279 04       		.uleb128 0x4
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 28
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 28
 
 
  1449 027a 55       		.byte	0x55
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1503 02eb 50       		.byte	0x50
  1504 02ec 93       		.byte	0x93
  1505 02ed 04       		.uleb128 0x4
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 29
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 29
 
 
  1506 02ee 51       		.byte	0x51
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1560 000c 24000000 		.4byte	.LBE3
  1561 0010 00000000 		.4byte	0
  1562 0014 00000000 		.4byte	0
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 30
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 30
 
 
  1563 0018 00000000 		.4byte	.LFB35
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1593      73697469 
  1593      6F6E00
  1594              	.LASF17:
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 31
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 31
 
 
  1595 0066 666C6F61 		.ascii	"float\000"
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1613      6C656172 
  1614              	.LASF27:
  1615 015a 636F6C6F 		.ascii	"color1\000"
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 32
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 32
 
 
  1615      723100
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1640      20726576 
  1640      6973696F 
  1640      6E203233 
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 33
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 33
 
 
  1640      37373135 
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 1
  1667 02ed 53747269 		.ascii	"StripLights_CLUT\000"
  1667      704C6967 
  1667      6874735F 
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccoaXfVE.s 			page 34
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cczBqnel.s 			page 34
 
 
  1667      434C5554 

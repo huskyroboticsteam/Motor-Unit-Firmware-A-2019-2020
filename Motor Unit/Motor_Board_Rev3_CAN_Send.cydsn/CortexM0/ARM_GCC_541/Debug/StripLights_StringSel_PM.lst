@@ -1,0 +1,785 @@
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"StripLights_StringSel_PM.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.StripLights_StringSel_SaveConfig,"ax",%progbits
+  20              		.align	2
+  21              		.global	StripLights_StringSel_SaveConfig
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	StripLights_StringSel_SaveConfig, %function
+  25              	StripLights_StringSel_SaveConfig:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC4\\StripLights_StringSel_PM.c"
+   1:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * File Name: StripLights_StringSel_PM.c
+   3:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Version 1.80
+   4:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+   5:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Description:
+   6:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  This file contains the setup, control, and status commands to support 
+   7:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  the component operation in the low power mode. 
+   8:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+   9:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Note:
+  10:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  11:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** ********************************************************************************
+  12:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Copyright 2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *******************************************************************************/
+  17:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** 
+  18:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** #include "StripLights_StringSel.h"
+  19:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** 
+  20:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** /* Check for removal by optimization */
+  21:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** #if !defined(StripLights_StringSel_Sync_ctrl_reg__REMOVED)
+  22:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** 
+  23:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** static StripLights_StringSel_BACKUP_STRUCT  StripLights_StringSel_backup = {0u};
+  24:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** 
+  25:Generated_Source\PSoC4/StripLights_StringSel_PM.c ****     
+  26:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** /*******************************************************************************
+  27:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Function Name: StripLights_StringSel_SaveConfig
+  28:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** ********************************************************************************
+  29:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  30:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Summary:
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 2
+
+
+  31:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  Saves the control register value.
+  32:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  33:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Parameters:
+  34:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  None
+  35:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  36:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Return:
+  37:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  None
+  38:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  39:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *******************************************************************************/
+  40:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** void StripLights_StringSel_SaveConfig(void) 
+  41:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** {
+  28              		.loc 1 41 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  42:Generated_Source\PSoC4/StripLights_StringSel_PM.c ****     StripLights_StringSel_backup.controlState = StripLights_StringSel_Control;
+  33              		.loc 1 42 0
+  34 0000 024B     		ldr	r3, .L2
+  35 0002 1A78     		ldrb	r2, [r3]
+  36 0004 024B     		ldr	r3, .L2+4
+  37 0006 1A70     		strb	r2, [r3]
+  43:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** }
+  38              		.loc 1 43 0
+  39              		@ sp needed
+  40 0008 7047     		bx	lr
+  41              	.L3:
+  42 000a C046     		.align	2
+  43              	.L2:
+  44 000c 72000F40 		.word	1074724978
+  45 0010 00000000 		.word	.LANCHOR0
+  46              		.cfi_endproc
+  47              	.LFE0:
+  48              		.size	StripLights_StringSel_SaveConfig, .-StripLights_StringSel_SaveConfig
+  49              		.section	.text.StripLights_StringSel_RestoreConfig,"ax",%progbits
+  50              		.align	2
+  51              		.global	StripLights_StringSel_RestoreConfig
+  52              		.code	16
+  53              		.thumb_func
+  54              		.type	StripLights_StringSel_RestoreConfig, %function
+  55              	StripLights_StringSel_RestoreConfig:
+  56              	.LFB1:
+  44:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** 
+  45:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** 
+  46:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** /*******************************************************************************
+  47:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Function Name: StripLights_StringSel_RestoreConfig
+  48:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** ********************************************************************************
+  49:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  50:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Summary:
+  51:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  Restores the control register value.
+  52:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  53:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Parameters:
+  54:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  None
+  55:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  56:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Return:
+  57:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  None
+  58:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 3
+
+
+  59:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  60:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *******************************************************************************/
+  61:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** void StripLights_StringSel_RestoreConfig(void) 
+  62:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** {
+  57              		.loc 1 62 0
+  58              		.cfi_startproc
+  59              		@ args = 0, pretend = 0, frame = 0
+  60              		@ frame_needed = 0, uses_anonymous_args = 0
+  61              		@ link register save eliminated.
+  63:Generated_Source\PSoC4/StripLights_StringSel_PM.c ****      StripLights_StringSel_Control = StripLights_StringSel_backup.controlState;
+  62              		.loc 1 63 0
+  63 0000 024B     		ldr	r3, .L5
+  64 0002 1A78     		ldrb	r2, [r3]
+  65 0004 024B     		ldr	r3, .L5+4
+  66 0006 1A70     		strb	r2, [r3]
+  64:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** }
+  67              		.loc 1 64 0
+  68              		@ sp needed
+  69 0008 7047     		bx	lr
+  70              	.L6:
+  71 000a C046     		.align	2
+  72              	.L5:
+  73 000c 00000000 		.word	.LANCHOR0
+  74 0010 72000F40 		.word	1074724978
+  75              		.cfi_endproc
+  76              	.LFE1:
+  77              		.size	StripLights_StringSel_RestoreConfig, .-StripLights_StringSel_RestoreConfig
+  78              		.section	.text.StripLights_StringSel_Sleep,"ax",%progbits
+  79              		.align	2
+  80              		.global	StripLights_StringSel_Sleep
+  81              		.code	16
+  82              		.thumb_func
+  83              		.type	StripLights_StringSel_Sleep, %function
+  84              	StripLights_StringSel_Sleep:
+  85              	.LFB2:
+  65:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** 
+  66:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** 
+  67:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** /*******************************************************************************
+  68:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Function Name: StripLights_StringSel_Sleep
+  69:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** ********************************************************************************
+  70:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  71:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Summary:
+  72:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  Prepares the component for entering the low power mode.
+  73:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  74:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Parameters:
+  75:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  None
+  76:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  77:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Return:
+  78:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  None
+  79:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  80:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *******************************************************************************/
+  81:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** void StripLights_StringSel_Sleep(void) 
+  82:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** {
+  86              		.loc 1 82 0
+  87              		.cfi_startproc
+  88              		@ args = 0, pretend = 0, frame = 0
+  89              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 4
+
+
+  90 0000 10B5     		push	{r4, lr}
+  91              		.cfi_def_cfa_offset 8
+  92              		.cfi_offset 4, -8
+  93              		.cfi_offset 14, -4
+  83:Generated_Source\PSoC4/StripLights_StringSel_PM.c ****     StripLights_StringSel_SaveConfig();
+  94              		.loc 1 83 0
+  95 0002 FFF7FEFF 		bl	StripLights_StringSel_SaveConfig
+  96              	.LVL0:
+  84:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** }
+  97              		.loc 1 84 0
+  98              		@ sp needed
+  99 0006 10BD     		pop	{r4, pc}
+ 100              		.cfi_endproc
+ 101              	.LFE2:
+ 102              		.size	StripLights_StringSel_Sleep, .-StripLights_StringSel_Sleep
+ 103              		.section	.text.StripLights_StringSel_Wakeup,"ax",%progbits
+ 104              		.align	2
+ 105              		.global	StripLights_StringSel_Wakeup
+ 106              		.code	16
+ 107              		.thumb_func
+ 108              		.type	StripLights_StringSel_Wakeup, %function
+ 109              	StripLights_StringSel_Wakeup:
+ 110              	.LFB3:
+  85:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** 
+  86:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** 
+  87:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** /*******************************************************************************
+  88:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Function Name: StripLights_StringSel_Wakeup
+  89:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** ********************************************************************************
+  90:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  91:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Summary:
+  92:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  Restores the component after waking up from the low power mode.
+  93:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  94:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Parameters:
+  95:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  None
+  96:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+  97:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** * Return:
+  98:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *  None
+  99:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *
+ 100:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** *******************************************************************************/
+ 101:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** void StripLights_StringSel_Wakeup(void)  
+ 102:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** {
+ 111              		.loc 1 102 0
+ 112              		.cfi_startproc
+ 113              		@ args = 0, pretend = 0, frame = 0
+ 114              		@ frame_needed = 0, uses_anonymous_args = 0
+ 115 0000 10B5     		push	{r4, lr}
+ 116              		.cfi_def_cfa_offset 8
+ 117              		.cfi_offset 4, -8
+ 118              		.cfi_offset 14, -4
+ 103:Generated_Source\PSoC4/StripLights_StringSel_PM.c ****     StripLights_StringSel_RestoreConfig();
+ 119              		.loc 1 103 0
+ 120 0002 FFF7FEFF 		bl	StripLights_StringSel_RestoreConfig
+ 121              	.LVL1:
+ 104:Generated_Source\PSoC4/StripLights_StringSel_PM.c **** }
+ 122              		.loc 1 104 0
+ 123              		@ sp needed
+ 124 0006 10BD     		pop	{r4, pc}
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 5
+
+
+ 125              		.cfi_endproc
+ 126              	.LFE3:
+ 127              		.size	StripLights_StringSel_Wakeup, .-StripLights_StringSel_Wakeup
+ 128              		.bss
+ 129              		.align	2
+ 130              		.set	.LANCHOR0,. + 0
+ 131              		.type	StripLights_StringSel_backup, %object
+ 132              		.size	StripLights_StringSel_backup, 1
+ 133              	StripLights_StringSel_backup:
+ 134 0000 00       		.space	1
+ 135              		.text
+ 136              	.Letext0:
+ 137              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 138              		.file 3 "Generated_Source\\PSoC4\\StripLights_StringSel.h"
+ 139              		.section	.debug_info,"",%progbits
+ 140              	.Ldebug_info0:
+ 141 0000 2B010000 		.4byte	0x12b
+ 142 0004 0400     		.2byte	0x4
+ 143 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 144 000a 04       		.byte	0x4
+ 145 000b 01       		.uleb128 0x1
+ 146 000c 2D010000 		.4byte	.LASF19
+ 147 0010 0C       		.byte	0xc
+ 148 0011 FB000000 		.4byte	.LASF20
+ 149 0015 2D020000 		.4byte	.LASF21
+ 150 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 151 001d 00000000 		.4byte	0
+ 152 0021 00000000 		.4byte	.Ldebug_line0
+ 153 0025 02       		.uleb128 0x2
+ 154 0026 01       		.byte	0x1
+ 155 0027 06       		.byte	0x6
+ 156 0028 21020000 		.4byte	.LASF0
+ 157 002c 02       		.uleb128 0x2
+ 158 002d 01       		.byte	0x1
+ 159 002e 08       		.byte	0x8
+ 160 002f 6A000000 		.4byte	.LASF1
+ 161 0033 02       		.uleb128 0x2
+ 162 0034 02       		.byte	0x2
+ 163 0035 05       		.byte	0x5
+ 164 0036 EB010000 		.4byte	.LASF2
+ 165 003a 02       		.uleb128 0x2
+ 166 003b 02       		.byte	0x2
+ 167 003c 07       		.byte	0x7
+ 168 003d 8F000000 		.4byte	.LASF3
+ 169 0041 02       		.uleb128 0x2
+ 170 0042 04       		.byte	0x4
+ 171 0043 05       		.byte	0x5
+ 172 0044 FB010000 		.4byte	.LASF4
+ 173 0048 02       		.uleb128 0x2
+ 174 0049 04       		.byte	0x4
+ 175 004a 07       		.byte	0x7
+ 176 004b 7D000000 		.4byte	.LASF5
+ 177 004f 02       		.uleb128 0x2
+ 178 0050 08       		.byte	0x8
+ 179 0051 05       		.byte	0x5
+ 180 0052 D8010000 		.4byte	.LASF6
+ 181 0056 02       		.uleb128 0x2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 6
+
+
+ 182 0057 08       		.byte	0x8
+ 183 0058 07       		.byte	0x7
+ 184 0059 E4000000 		.4byte	.LASF7
+ 185 005d 03       		.uleb128 0x3
+ 186 005e 04       		.byte	0x4
+ 187 005f 05       		.byte	0x5
+ 188 0060 696E7400 		.ascii	"int\000"
+ 189 0064 02       		.uleb128 0x2
+ 190 0065 04       		.byte	0x4
+ 191 0066 07       		.byte	0x7
+ 192 0067 D7000000 		.4byte	.LASF8
+ 193 006b 04       		.uleb128 0x4
+ 194 006c F5010000 		.4byte	.LASF12
+ 195 0070 02       		.byte	0x2
+ 196 0071 E401     		.2byte	0x1e4
+ 197 0073 2C000000 		.4byte	0x2c
+ 198 0077 02       		.uleb128 0x2
+ 199 0078 04       		.byte	0x4
+ 200 0079 04       		.byte	0x4
+ 201 007a 40000000 		.4byte	.LASF9
+ 202 007e 02       		.uleb128 0x2
+ 203 007f 08       		.byte	0x8
+ 204 0080 04       		.byte	0x4
+ 205 0081 AF000000 		.4byte	.LASF10
+ 206 0085 02       		.uleb128 0x2
+ 207 0086 01       		.byte	0x1
+ 208 0087 08       		.byte	0x8
+ 209 0088 E6010000 		.4byte	.LASF11
+ 210 008c 04       		.uleb128 0x4
+ 211 008d 78000000 		.4byte	.LASF13
+ 212 0091 02       		.byte	0x2
+ 213 0092 8E02     		.2byte	0x28e
+ 214 0094 98000000 		.4byte	0x98
+ 215 0098 05       		.uleb128 0x5
+ 216 0099 6B000000 		.4byte	0x6b
+ 217 009d 06       		.uleb128 0x6
+ 218 009e 01       		.byte	0x1
+ 219 009f 03       		.byte	0x3
+ 220 00a0 24       		.byte	0x24
+ 221 00a1 B2000000 		.4byte	0xb2
+ 222 00a5 07       		.uleb128 0x7
+ 223 00a6 A2000000 		.4byte	.LASF22
+ 224 00aa 03       		.byte	0x3
+ 225 00ab 26       		.byte	0x26
+ 226 00ac 6B000000 		.4byte	0x6b
+ 227 00b0 00       		.byte	0
+ 228 00b1 00       		.byte	0
+ 229 00b2 08       		.uleb128 0x8
+ 230 00b3 1C000000 		.4byte	.LASF14
+ 231 00b7 03       		.byte	0x3
+ 232 00b8 28       		.byte	0x28
+ 233 00b9 9D000000 		.4byte	0x9d
+ 234 00bd 09       		.uleb128 0x9
+ 235 00be B6000000 		.4byte	.LASF15
+ 236 00c2 01       		.byte	0x1
+ 237 00c3 28       		.byte	0x28
+ 238 00c4 00000000 		.4byte	.LFB0
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 7
+
+
+ 239 00c8 14000000 		.4byte	.LFE0-.LFB0
+ 240 00cc 01       		.uleb128 0x1
+ 241 00cd 9C       		.byte	0x9c
+ 242 00ce 09       		.uleb128 0x9
+ 243 00cf 46000000 		.4byte	.LASF16
+ 244 00d3 01       		.byte	0x1
+ 245 00d4 3D       		.byte	0x3d
+ 246 00d5 00000000 		.4byte	.LFB1
+ 247 00d9 14000000 		.4byte	.LFE1-.LFB1
+ 248 00dd 01       		.uleb128 0x1
+ 249 00de 9C       		.byte	0x9c
+ 250 00df 0A       		.uleb128 0xa
+ 251 00e0 00000000 		.4byte	.LASF17
+ 252 00e4 01       		.byte	0x1
+ 253 00e5 51       		.byte	0x51
+ 254 00e6 00000000 		.4byte	.LFB2
+ 255 00ea 08000000 		.4byte	.LFE2-.LFB2
+ 256 00ee 01       		.uleb128 0x1
+ 257 00ef 9C       		.byte	0x9c
+ 258 00f0 FE000000 		.4byte	0xfe
+ 259 00f4 0B       		.uleb128 0xb
+ 260 00f5 06000000 		.4byte	.LVL0
+ 261 00f9 BD000000 		.4byte	0xbd
+ 262 00fd 00       		.byte	0
+ 263 00fe 0A       		.uleb128 0xa
+ 264 00ff 04020000 		.4byte	.LASF18
+ 265 0103 01       		.byte	0x1
+ 266 0104 65       		.byte	0x65
+ 267 0105 00000000 		.4byte	.LFB3
+ 268 0109 08000000 		.4byte	.LFE3-.LFB3
+ 269 010d 01       		.uleb128 0x1
+ 270 010e 9C       		.byte	0x9c
+ 271 010f 1D010000 		.4byte	0x11d
+ 272 0113 0B       		.uleb128 0xb
+ 273 0114 06000000 		.4byte	.LVL1
+ 274 0118 CE000000 		.4byte	0xce
+ 275 011c 00       		.byte	0
+ 276 011d 0C       		.uleb128 0xc
+ 277 011e BB010000 		.4byte	.LASF23
+ 278 0122 01       		.byte	0x1
+ 279 0123 17       		.byte	0x17
+ 280 0124 B2000000 		.4byte	0xb2
+ 281 0128 05       		.uleb128 0x5
+ 282 0129 03       		.byte	0x3
+ 283 012a 00000000 		.4byte	StripLights_StringSel_backup
+ 284 012e 00       		.byte	0
+ 285              		.section	.debug_abbrev,"",%progbits
+ 286              	.Ldebug_abbrev0:
+ 287 0000 01       		.uleb128 0x1
+ 288 0001 11       		.uleb128 0x11
+ 289 0002 01       		.byte	0x1
+ 290 0003 25       		.uleb128 0x25
+ 291 0004 0E       		.uleb128 0xe
+ 292 0005 13       		.uleb128 0x13
+ 293 0006 0B       		.uleb128 0xb
+ 294 0007 03       		.uleb128 0x3
+ 295 0008 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 8
+
+
+ 296 0009 1B       		.uleb128 0x1b
+ 297 000a 0E       		.uleb128 0xe
+ 298 000b 55       		.uleb128 0x55
+ 299 000c 17       		.uleb128 0x17
+ 300 000d 11       		.uleb128 0x11
+ 301 000e 01       		.uleb128 0x1
+ 302 000f 10       		.uleb128 0x10
+ 303 0010 17       		.uleb128 0x17
+ 304 0011 00       		.byte	0
+ 305 0012 00       		.byte	0
+ 306 0013 02       		.uleb128 0x2
+ 307 0014 24       		.uleb128 0x24
+ 308 0015 00       		.byte	0
+ 309 0016 0B       		.uleb128 0xb
+ 310 0017 0B       		.uleb128 0xb
+ 311 0018 3E       		.uleb128 0x3e
+ 312 0019 0B       		.uleb128 0xb
+ 313 001a 03       		.uleb128 0x3
+ 314 001b 0E       		.uleb128 0xe
+ 315 001c 00       		.byte	0
+ 316 001d 00       		.byte	0
+ 317 001e 03       		.uleb128 0x3
+ 318 001f 24       		.uleb128 0x24
+ 319 0020 00       		.byte	0
+ 320 0021 0B       		.uleb128 0xb
+ 321 0022 0B       		.uleb128 0xb
+ 322 0023 3E       		.uleb128 0x3e
+ 323 0024 0B       		.uleb128 0xb
+ 324 0025 03       		.uleb128 0x3
+ 325 0026 08       		.uleb128 0x8
+ 326 0027 00       		.byte	0
+ 327 0028 00       		.byte	0
+ 328 0029 04       		.uleb128 0x4
+ 329 002a 16       		.uleb128 0x16
+ 330 002b 00       		.byte	0
+ 331 002c 03       		.uleb128 0x3
+ 332 002d 0E       		.uleb128 0xe
+ 333 002e 3A       		.uleb128 0x3a
+ 334 002f 0B       		.uleb128 0xb
+ 335 0030 3B       		.uleb128 0x3b
+ 336 0031 05       		.uleb128 0x5
+ 337 0032 49       		.uleb128 0x49
+ 338 0033 13       		.uleb128 0x13
+ 339 0034 00       		.byte	0
+ 340 0035 00       		.byte	0
+ 341 0036 05       		.uleb128 0x5
+ 342 0037 35       		.uleb128 0x35
+ 343 0038 00       		.byte	0
+ 344 0039 49       		.uleb128 0x49
+ 345 003a 13       		.uleb128 0x13
+ 346 003b 00       		.byte	0
+ 347 003c 00       		.byte	0
+ 348 003d 06       		.uleb128 0x6
+ 349 003e 13       		.uleb128 0x13
+ 350 003f 01       		.byte	0x1
+ 351 0040 0B       		.uleb128 0xb
+ 352 0041 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 9
+
+
+ 353 0042 3A       		.uleb128 0x3a
+ 354 0043 0B       		.uleb128 0xb
+ 355 0044 3B       		.uleb128 0x3b
+ 356 0045 0B       		.uleb128 0xb
+ 357 0046 01       		.uleb128 0x1
+ 358 0047 13       		.uleb128 0x13
+ 359 0048 00       		.byte	0
+ 360 0049 00       		.byte	0
+ 361 004a 07       		.uleb128 0x7
+ 362 004b 0D       		.uleb128 0xd
+ 363 004c 00       		.byte	0
+ 364 004d 03       		.uleb128 0x3
+ 365 004e 0E       		.uleb128 0xe
+ 366 004f 3A       		.uleb128 0x3a
+ 367 0050 0B       		.uleb128 0xb
+ 368 0051 3B       		.uleb128 0x3b
+ 369 0052 0B       		.uleb128 0xb
+ 370 0053 49       		.uleb128 0x49
+ 371 0054 13       		.uleb128 0x13
+ 372 0055 38       		.uleb128 0x38
+ 373 0056 0B       		.uleb128 0xb
+ 374 0057 00       		.byte	0
+ 375 0058 00       		.byte	0
+ 376 0059 08       		.uleb128 0x8
+ 377 005a 16       		.uleb128 0x16
+ 378 005b 00       		.byte	0
+ 379 005c 03       		.uleb128 0x3
+ 380 005d 0E       		.uleb128 0xe
+ 381 005e 3A       		.uleb128 0x3a
+ 382 005f 0B       		.uleb128 0xb
+ 383 0060 3B       		.uleb128 0x3b
+ 384 0061 0B       		.uleb128 0xb
+ 385 0062 49       		.uleb128 0x49
+ 386 0063 13       		.uleb128 0x13
+ 387 0064 00       		.byte	0
+ 388 0065 00       		.byte	0
+ 389 0066 09       		.uleb128 0x9
+ 390 0067 2E       		.uleb128 0x2e
+ 391 0068 00       		.byte	0
+ 392 0069 3F       		.uleb128 0x3f
+ 393 006a 19       		.uleb128 0x19
+ 394 006b 03       		.uleb128 0x3
+ 395 006c 0E       		.uleb128 0xe
+ 396 006d 3A       		.uleb128 0x3a
+ 397 006e 0B       		.uleb128 0xb
+ 398 006f 3B       		.uleb128 0x3b
+ 399 0070 0B       		.uleb128 0xb
+ 400 0071 27       		.uleb128 0x27
+ 401 0072 19       		.uleb128 0x19
+ 402 0073 11       		.uleb128 0x11
+ 403 0074 01       		.uleb128 0x1
+ 404 0075 12       		.uleb128 0x12
+ 405 0076 06       		.uleb128 0x6
+ 406 0077 40       		.uleb128 0x40
+ 407 0078 18       		.uleb128 0x18
+ 408 0079 9742     		.uleb128 0x2117
+ 409 007b 19       		.uleb128 0x19
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 10
+
+
+ 410 007c 00       		.byte	0
+ 411 007d 00       		.byte	0
+ 412 007e 0A       		.uleb128 0xa
+ 413 007f 2E       		.uleb128 0x2e
+ 414 0080 01       		.byte	0x1
+ 415 0081 3F       		.uleb128 0x3f
+ 416 0082 19       		.uleb128 0x19
+ 417 0083 03       		.uleb128 0x3
+ 418 0084 0E       		.uleb128 0xe
+ 419 0085 3A       		.uleb128 0x3a
+ 420 0086 0B       		.uleb128 0xb
+ 421 0087 3B       		.uleb128 0x3b
+ 422 0088 0B       		.uleb128 0xb
+ 423 0089 27       		.uleb128 0x27
+ 424 008a 19       		.uleb128 0x19
+ 425 008b 11       		.uleb128 0x11
+ 426 008c 01       		.uleb128 0x1
+ 427 008d 12       		.uleb128 0x12
+ 428 008e 06       		.uleb128 0x6
+ 429 008f 40       		.uleb128 0x40
+ 430 0090 18       		.uleb128 0x18
+ 431 0091 9742     		.uleb128 0x2117
+ 432 0093 19       		.uleb128 0x19
+ 433 0094 01       		.uleb128 0x1
+ 434 0095 13       		.uleb128 0x13
+ 435 0096 00       		.byte	0
+ 436 0097 00       		.byte	0
+ 437 0098 0B       		.uleb128 0xb
+ 438 0099 898201   		.uleb128 0x4109
+ 439 009c 00       		.byte	0
+ 440 009d 11       		.uleb128 0x11
+ 441 009e 01       		.uleb128 0x1
+ 442 009f 31       		.uleb128 0x31
+ 443 00a0 13       		.uleb128 0x13
+ 444 00a1 00       		.byte	0
+ 445 00a2 00       		.byte	0
+ 446 00a3 0C       		.uleb128 0xc
+ 447 00a4 34       		.uleb128 0x34
+ 448 00a5 00       		.byte	0
+ 449 00a6 03       		.uleb128 0x3
+ 450 00a7 0E       		.uleb128 0xe
+ 451 00a8 3A       		.uleb128 0x3a
+ 452 00a9 0B       		.uleb128 0xb
+ 453 00aa 3B       		.uleb128 0x3b
+ 454 00ab 0B       		.uleb128 0xb
+ 455 00ac 49       		.uleb128 0x49
+ 456 00ad 13       		.uleb128 0x13
+ 457 00ae 02       		.uleb128 0x2
+ 458 00af 18       		.uleb128 0x18
+ 459 00b0 00       		.byte	0
+ 460 00b1 00       		.byte	0
+ 461 00b2 00       		.byte	0
+ 462              		.section	.debug_aranges,"",%progbits
+ 463 0000 34000000 		.4byte	0x34
+ 464 0004 0200     		.2byte	0x2
+ 465 0006 00000000 		.4byte	.Ldebug_info0
+ 466 000a 04       		.byte	0x4
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 11
+
+
+ 467 000b 00       		.byte	0
+ 468 000c 0000     		.2byte	0
+ 469 000e 0000     		.2byte	0
+ 470 0010 00000000 		.4byte	.LFB0
+ 471 0014 14000000 		.4byte	.LFE0-.LFB0
+ 472 0018 00000000 		.4byte	.LFB1
+ 473 001c 14000000 		.4byte	.LFE1-.LFB1
+ 474 0020 00000000 		.4byte	.LFB2
+ 475 0024 08000000 		.4byte	.LFE2-.LFB2
+ 476 0028 00000000 		.4byte	.LFB3
+ 477 002c 08000000 		.4byte	.LFE3-.LFB3
+ 478 0030 00000000 		.4byte	0
+ 479 0034 00000000 		.4byte	0
+ 480              		.section	.debug_ranges,"",%progbits
+ 481              	.Ldebug_ranges0:
+ 482 0000 00000000 		.4byte	.LFB0
+ 483 0004 14000000 		.4byte	.LFE0
+ 484 0008 00000000 		.4byte	.LFB1
+ 485 000c 14000000 		.4byte	.LFE1
+ 486 0010 00000000 		.4byte	.LFB2
+ 487 0014 08000000 		.4byte	.LFE2
+ 488 0018 00000000 		.4byte	.LFB3
+ 489 001c 08000000 		.4byte	.LFE3
+ 490 0020 00000000 		.4byte	0
+ 491 0024 00000000 		.4byte	0
+ 492              		.section	.debug_line,"",%progbits
+ 493              	.Ldebug_line0:
+ 494 0000 BC000000 		.section	.debug_str,"MS",%progbits,1
+ 494      02007000 
+ 494      00000201 
+ 494      FB0E0D00 
+ 494      01010101 
+ 495              	.LASF17:
+ 496 0000 53747269 		.ascii	"StripLights_StringSel_Sleep\000"
+ 496      704C6967 
+ 496      6874735F 
+ 496      53747269 
+ 496      6E675365 
+ 497              	.LASF14:
+ 498 001c 53747269 		.ascii	"StripLights_StringSel_BACKUP_STRUCT\000"
+ 498      704C6967 
+ 498      6874735F 
+ 498      53747269 
+ 498      6E675365 
+ 499              	.LASF9:
+ 500 0040 666C6F61 		.ascii	"float\000"
+ 500      7400
+ 501              	.LASF16:
+ 502 0046 53747269 		.ascii	"StripLights_StringSel_RestoreConfig\000"
+ 502      704C6967 
+ 502      6874735F 
+ 502      53747269 
+ 502      6E675365 
+ 503              	.LASF1:
+ 504 006a 756E7369 		.ascii	"unsigned char\000"
+ 504      676E6564 
+ 504      20636861 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 12
+
+
+ 504      7200
+ 505              	.LASF13:
+ 506 0078 72656738 		.ascii	"reg8\000"
+ 506      00
+ 507              	.LASF5:
+ 508 007d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 508      20756E73 
+ 508      69676E65 
+ 508      6420696E 
+ 508      7400
+ 509              	.LASF3:
+ 510 008f 73686F72 		.ascii	"short unsigned int\000"
+ 510      7420756E 
+ 510      7369676E 
+ 510      65642069 
+ 510      6E7400
+ 511              	.LASF22:
+ 512 00a2 636F6E74 		.ascii	"controlState\000"
+ 512      726F6C53 
+ 512      74617465 
+ 512      00
+ 513              	.LASF10:
+ 514 00af 646F7562 		.ascii	"double\000"
+ 514      6C6500
+ 515              	.LASF15:
+ 516 00b6 53747269 		.ascii	"StripLights_StringSel_SaveConfig\000"
+ 516      704C6967 
+ 516      6874735F 
+ 516      53747269 
+ 516      6E675365 
+ 517              	.LASF8:
+ 518 00d7 756E7369 		.ascii	"unsigned int\000"
+ 518      676E6564 
+ 518      20696E74 
+ 518      00
+ 519              	.LASF7:
+ 520 00e4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 520      206C6F6E 
+ 520      6720756E 
+ 520      7369676E 
+ 520      65642069 
+ 521              	.LASF20:
+ 522 00fb 47656E65 		.ascii	"Generated_Source\\PSoC4\\StripLights_StringSel_PM.c"
+ 522      72617465 
+ 522      645F536F 
+ 522      75726365 
+ 522      5C50536F 
+ 523 012c 00       		.ascii	"\000"
+ 524              	.LASF19:
+ 525 012d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 525      43313120 
+ 525      352E342E 
+ 525      31203230 
+ 525      31363036 
+ 526 0160 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 526      20726576 
+ 526      6973696F 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 13
+
+
+ 526      6E203233 
+ 526      37373135 
+ 527 0193 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 527      66756E63 
+ 527      74696F6E 
+ 527      2D736563 
+ 527      74696F6E 
+ 528              	.LASF23:
+ 529 01bb 53747269 		.ascii	"StripLights_StringSel_backup\000"
+ 529      704C6967 
+ 529      6874735F 
+ 529      53747269 
+ 529      6E675365 
+ 530              	.LASF6:
+ 531 01d8 6C6F6E67 		.ascii	"long long int\000"
+ 531      206C6F6E 
+ 531      6720696E 
+ 531      7400
+ 532              	.LASF11:
+ 533 01e6 63686172 		.ascii	"char\000"
+ 533      00
+ 534              	.LASF2:
+ 535 01eb 73686F72 		.ascii	"short int\000"
+ 535      7420696E 
+ 535      7400
+ 536              	.LASF12:
+ 537 01f5 75696E74 		.ascii	"uint8\000"
+ 537      3800
+ 538              	.LASF4:
+ 539 01fb 6C6F6E67 		.ascii	"long int\000"
+ 539      20696E74 
+ 539      00
+ 540              	.LASF18:
+ 541 0204 53747269 		.ascii	"StripLights_StringSel_Wakeup\000"
+ 541      704C6967 
+ 541      6874735F 
+ 541      53747269 
+ 541      6E675365 
+ 542              	.LASF0:
+ 543 0221 7369676E 		.ascii	"signed char\000"
+ 543      65642063 
+ 543      68617200 
+ 544              	.LASF21:
+ 545 022d 433A5C55 		.ascii	"C:\\Users\\Austcha\\Documents\\Husky Robotics\\Moto"
+ 545      73657273 
+ 545      5C417573 
+ 545      74636861 
+ 545      5C446F63 
+ 546 025b 7220426F 		.ascii	"r Boards\\Rev3\\Motor-Unit-Firmware-A-2019-2020\\Mo"
+ 546      61726473 
+ 546      5C526576 
+ 546      335C4D6F 
+ 546      746F722D 
+ 547 028b 746F7220 		.ascii	"tor Unit\\Motor_Board_Rev3_CAN_Send.cydsn\000"
+ 547      556E6974 
+ 547      5C4D6F74 
+ 547      6F725F42 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccZxQ4rT.s 			page 14
+
+
+ 547      6F617264 
+ 548              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

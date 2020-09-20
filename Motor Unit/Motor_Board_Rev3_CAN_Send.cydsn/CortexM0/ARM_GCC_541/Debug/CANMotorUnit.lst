@@ -1,0 +1,4158 @@
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"CANMotorUnit.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.AssembleModeSetPacket,"ax",%progbits
+  20              		.align	2
+  21              		.global	AssembleModeSetPacket
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	AssembleModeSetPacket, %function
+  25              	AssembleModeSetPacket:
+  26              	.LFB0:
+  27              		.file 1 "..\\CANLib\\CANMotorUnit.c"
+   1:..\CANLib/CANMotorUnit.c **** /* File:         CANMotorUnit.c
+   2:..\CANLib/CANMotorUnit.c ****  * Authors:      Jaden Bottemiller, Benton Kwong, Dylan Tomberlin.
+   3:..\CANLib/CANMotorUnit.c ****  * Organization: Husky Robotics Team
+   4:..\CANLib/CANMotorUnit.c ****  * 
+   5:..\CANLib/CANMotorUnit.c ****  * This file includes fuction definitions for CAN Packet manipulation
+   6:..\CANLib/CANMotorUnit.c ****  * using the Hindsight CAN Communication standard. Specific files
+   7:..\CANLib/CANMotorUnit.c ****  * for the motor unit boards.
+   8:..\CANLib/CANMotorUnit.c ****  * Documentation: https://huskyroboticsteam.slite.com/app/channels/iU0BryG7M9/collections/aXvWTcIR6
+   9:..\CANLib/CANMotorUnit.c ****  */
+  10:..\CANLib/CANMotorUnit.c **** 
+  11:..\CANLib/CANMotorUnit.c **** #include "CANPacket.h"
+  12:..\CANLib/CANMotorUnit.c **** #include "CANMotorUnit.h"
+  13:..\CANLib/CANMotorUnit.c **** #include "Port.h"
+  14:..\CANLib/CANMotorUnit.c **** 
+  15:..\CANLib/CANMotorUnit.c **** void AssembleModeSetPacket(CANPacket *packetToAssemble,
+  16:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceGroup,
+  17:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceSerial,
+  18:..\CANLib/CANMotorUnit.c ****     uint8_t mode)
+  19:..\CANLib/CANMotorUnit.c **** {
+  28              		.loc 1 19 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 70B5     		push	{r4, r5, r6, lr}
+  34              		.cfi_def_cfa_offset 16
+  35              		.cfi_offset 4, -16
+  36              		.cfi_offset 5, -12
+  37              		.cfi_offset 6, -8
+  38              		.cfi_offset 14, -4
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 2
+
+
+  39 0002 0400     		movs	r4, r0
+  40 0004 1D00     		movs	r5, r3
+  20:..\CANLib/CANMotorUnit.c ****     packetToAssemble->id = ConstructCANID(PRIO_MOTOR_UNIT_MODE_SEL, targetDeviceGroup, targetDevice
+  41              		.loc 1 20 0
+  42 0006 0120     		movs	r0, #1
+  43              	.LVL1:
+  44 0008 FFF7FEFF 		bl	ConstructCANID
+  45              	.LVL2:
+  46 000c 2080     		strh	r0, [r4]
+  21:..\CANLib/CANMotorUnit.c ****     packetToAssemble->dlc = DLC_MOTOR_UNIT_MODE_SEL;
+  47              		.loc 1 21 0
+  48 000e 0223     		movs	r3, #2
+  49 0010 A370     		strb	r3, [r4, #2]
+  22:..\CANLib/CANMotorUnit.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_MOTOR_UNIT_MODE_SEL);
+  50              		.loc 1 22 0
+  51 0012 E01C     		adds	r0, r4, #3
+  52 0014 0021     		movs	r1, #0
+  53 0016 FFF7FEFF 		bl	WritePacketIDOnly
+  54              	.LVL3:
+  23:..\CANLib/CANMotorUnit.c ****     packetToAssemble->data[nextByte] = mode;
+  55              		.loc 1 23 0
+  56 001a 2418     		adds	r4, r4, r0
+  57              	.LVL4:
+  58 001c E570     		strb	r5, [r4, #3]
+  24:..\CANLib/CANMotorUnit.c **** }
+  59              		.loc 1 24 0
+  60              		@ sp needed
+  61 001e 70BD     		pop	{r4, r5, r6, pc}
+  62              		.cfi_endproc
+  63              	.LFE0:
+  64              		.size	AssembleModeSetPacket, .-AssembleModeSetPacket
+  65              		.section	.text.GetModeFromPacket,"ax",%progbits
+  66              		.align	2
+  67              		.global	GetModeFromPacket
+  68              		.code	16
+  69              		.thumb_func
+  70              		.type	GetModeFromPacket, %function
+  71              	GetModeFromPacket:
+  72              	.LFB1:
+  25:..\CANLib/CANMotorUnit.c **** 
+  26:..\CANLib/CANMotorUnit.c **** uint8_t GetModeFromPacket(CANPacket *packet)
+  27:..\CANLib/CANMotorUnit.c **** {
+  73              		.loc 1 27 0
+  74              		.cfi_startproc
+  75              		@ args = 0, pretend = 0, frame = 0
+  76              		@ frame_needed = 0, uses_anonymous_args = 0
+  77              		@ link register save eliminated.
+  78              	.LVL5:
+  28:..\CANLib/CANMotorUnit.c ****     return packet->data[1];
+  79              		.loc 1 28 0
+  80 0000 0079     		ldrb	r0, [r0, #4]
+  81              	.LVL6:
+  29:..\CANLib/CANMotorUnit.c **** }
+  82              		.loc 1 29 0
+  83              		@ sp needed
+  84 0002 7047     		bx	lr
+  85              		.cfi_endproc
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 3
+
+
+  86              	.LFE1:
+  87              		.size	GetModeFromPacket, .-GetModeFromPacket
+  88              		.section	.text.AssemblePWMDirSetPacket,"ax",%progbits
+  89              		.align	2
+  90              		.global	AssemblePWMDirSetPacket
+  91              		.code	16
+  92              		.thumb_func
+  93              		.type	AssemblePWMDirSetPacket, %function
+  94              	AssemblePWMDirSetPacket:
+  95              	.LFB2:
+  30:..\CANLib/CANMotorUnit.c **** 
+  31:..\CANLib/CANMotorUnit.c **** 
+  32:..\CANLib/CANMotorUnit.c **** void AssemblePWMDirSetPacket(CANPacket *packetToAssemble, 
+  33:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceGroup,
+  34:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceSerial,
+  35:..\CANLib/CANMotorUnit.c ****     int32_t PWMSet)
+  36:..\CANLib/CANMotorUnit.c **** {
+  96              		.loc 1 36 0
+  97              		.cfi_startproc
+  98              		@ args = 0, pretend = 0, frame = 0
+  99              		@ frame_needed = 0, uses_anonymous_args = 0
+ 100              	.LVL7:
+ 101 0000 70B5     		push	{r4, r5, r6, lr}
+ 102              		.cfi_def_cfa_offset 16
+ 103              		.cfi_offset 4, -16
+ 104              		.cfi_offset 5, -12
+ 105              		.cfi_offset 6, -8
+ 106              		.cfi_offset 14, -4
+ 107 0002 0400     		movs	r4, r0
+ 108 0004 1D00     		movs	r5, r3
+  37:..\CANLib/CANMotorUnit.c ****     packetToAssemble->id = ConstructCANID(PRIO_MOTOR_UNIT_PWM_DIR_SET, targetDeviceGroup, targetDev
+ 109              		.loc 1 37 0
+ 110 0006 0120     		movs	r0, #1
+ 111              	.LVL8:
+ 112 0008 FFF7FEFF 		bl	ConstructCANID
+ 113              	.LVL9:
+ 114 000c 2080     		strh	r0, [r4]
+  38:..\CANLib/CANMotorUnit.c ****     packetToAssemble->dlc = DLC_MOTOR_UNIT_PWM_DIR_SET;
+ 115              		.loc 1 38 0
+ 116 000e 0523     		movs	r3, #5
+ 117 0010 A370     		strb	r3, [r4, #2]
+  39:..\CANLib/CANMotorUnit.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, DLC_MOTOR_UNIT_PWM_DIR_SET);
+ 118              		.loc 1 39 0
+ 119 0012 0334     		adds	r4, r4, #3
+ 120              	.LVL10:
+ 121 0014 0521     		movs	r1, #5
+ 122 0016 2000     		movs	r0, r4
+ 123 0018 FFF7FEFF 		bl	WritePacketIDOnly
+ 124              	.LVL11:
+ 125 001c 0200     		movs	r2, r0
+ 126              	.LVL12:
+  40:..\CANLib/CANMotorUnit.c ****     PackIntIntoDataMSBFirst(packetToAssemble->data, PWMSet, nextByte);
+ 127              		.loc 1 40 0
+ 128 001e 2900     		movs	r1, r5
+ 129 0020 2000     		movs	r0, r4
+ 130              	.LVL13:
+ 131 0022 FFF7FEFF 		bl	PackIntIntoDataMSBFirst
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 4
+
+
+ 132              	.LVL14:
+  41:..\CANLib/CANMotorUnit.c **** }
+ 133              		.loc 1 41 0
+ 134              		@ sp needed
+ 135              	.LVL15:
+ 136              	.LVL16:
+ 137 0026 70BD     		pop	{r4, r5, r6, pc}
+ 138              		.cfi_endproc
+ 139              	.LFE2:
+ 140              		.size	AssemblePWMDirSetPacket, .-AssemblePWMDirSetPacket
+ 141              		.section	.text.GetPWMFromPacket,"ax",%progbits
+ 142              		.align	2
+ 143              		.global	GetPWMFromPacket
+ 144              		.code	16
+ 145              		.thumb_func
+ 146              		.type	GetPWMFromPacket, %function
+ 147              	GetPWMFromPacket:
+ 148              	.LFB3:
+  42:..\CANLib/CANMotorUnit.c **** 
+  43:..\CANLib/CANMotorUnit.c **** int32_t GetPWMFromPacket(CANPacket *packet)
+  44:..\CANLib/CANMotorUnit.c **** {
+ 149              		.loc 1 44 0
+ 150              		.cfi_startproc
+ 151              		@ args = 0, pretend = 0, frame = 0
+ 152              		@ frame_needed = 0, uses_anonymous_args = 0
+ 153              	.LVL17:
+ 154 0000 10B5     		push	{r4, lr}
+ 155              		.cfi_def_cfa_offset 8
+ 156              		.cfi_offset 4, -8
+ 157              		.cfi_offset 14, -4
+  45:..\CANLib/CANMotorUnit.c ****     return DecodeBytesToIntMSBFirst(packet->data, 1, 4);
+ 158              		.loc 1 45 0
+ 159 0002 0330     		adds	r0, r0, #3
+ 160              	.LVL18:
+ 161 0004 0422     		movs	r2, #4
+ 162 0006 0121     		movs	r1, #1
+ 163 0008 FFF7FEFF 		bl	DecodeBytesToIntMSBFirst
+ 164              	.LVL19:
+  46:..\CANLib/CANMotorUnit.c **** }
+ 165              		.loc 1 46 0
+ 166              		@ sp needed
+ 167 000c 10BD     		pop	{r4, pc}
+ 168              		.cfi_endproc
+ 169              	.LFE3:
+ 170              		.size	GetPWMFromPacket, .-GetPWMFromPacket
+ 171 000e C046     		.section	.text.GetDirectionFromPacket,"ax",%progbits
+ 172              		.align	2
+ 173              		.global	GetDirectionFromPacket
+ 174              		.code	16
+ 175              		.thumb_func
+ 176              		.type	GetDirectionFromPacket, %function
+ 177              	GetDirectionFromPacket:
+ 178              	.LFB4:
+  47:..\CANLib/CANMotorUnit.c **** 
+  48:..\CANLib/CANMotorUnit.c **** //Returns 2's compliment MSB (0 for stopped or forward, 1 for reverse)
+  49:..\CANLib/CANMotorUnit.c **** int32_t GetDirectionFromPacket(CANPacket *packet)
+  50:..\CANLib/CANMotorUnit.c **** {
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 5
+
+
+ 179              		.loc 1 50 0
+ 180              		.cfi_startproc
+ 181              		@ args = 0, pretend = 0, frame = 0
+ 182              		@ frame_needed = 0, uses_anonymous_args = 0
+ 183              		@ link register save eliminated.
+ 184              	.LVL20:
+  51:..\CANLib/CANMotorUnit.c ****     return ((packet->data[1]) >> 7) & 0x1;
+ 185              		.loc 1 51 0
+ 186 0000 0079     		ldrb	r0, [r0, #4]
+ 187              	.LVL21:
+ 188 0002 C009     		lsrs	r0, r0, #7
+  52:..\CANLib/CANMotorUnit.c **** }
+ 189              		.loc 1 52 0
+ 190              		@ sp needed
+ 191 0004 7047     		bx	lr
+ 192              		.cfi_endproc
+ 193              	.LFE4:
+ 194              		.size	GetDirectionFromPacket, .-GetDirectionFromPacket
+ 195 0006 C046     		.section	.text.AssemblePIDTargetSetPacket,"ax",%progbits
+ 196              		.align	2
+ 197              		.global	AssemblePIDTargetSetPacket
+ 198              		.code	16
+ 199              		.thumb_func
+ 200              		.type	AssemblePIDTargetSetPacket, %function
+ 201              	AssemblePIDTargetSetPacket:
+ 202              	.LFB5:
+  53:..\CANLib/CANMotorUnit.c **** 
+  54:..\CANLib/CANMotorUnit.c **** void AssemblePIDTargetSetPacket(CANPacket *packetToAssemble,
+  55:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceGroup,
+  56:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceSerial,
+  57:..\CANLib/CANMotorUnit.c ****     int32_t target)
+  58:..\CANLib/CANMotorUnit.c **** {
+ 203              		.loc 1 58 0
+ 204              		.cfi_startproc
+ 205              		@ args = 0, pretend = 0, frame = 0
+ 206              		@ frame_needed = 0, uses_anonymous_args = 0
+ 207              	.LVL22:
+ 208 0000 70B5     		push	{r4, r5, r6, lr}
+ 209              		.cfi_def_cfa_offset 16
+ 210              		.cfi_offset 4, -16
+ 211              		.cfi_offset 5, -12
+ 212              		.cfi_offset 6, -8
+ 213              		.cfi_offset 14, -4
+ 214 0002 0400     		movs	r4, r0
+ 215 0004 1D00     		movs	r5, r3
+  59:..\CANLib/CANMotorUnit.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetDeviceGroup, targetDeviceSe
+ 216              		.loc 1 59 0
+ 217 0006 0120     		movs	r0, #1
+ 218              	.LVL23:
+ 219 0008 FFF7FEFF 		bl	ConstructCANID
+ 220              	.LVL24:
+ 221 000c 2080     		strh	r0, [r4]
+  60:..\CANLib/CANMotorUnit.c ****     packetToAssemble->dlc = DLC_MOTOR_UNIT_PID_POS_TGT_SET;
+ 222              		.loc 1 60 0
+ 223 000e 0523     		movs	r3, #5
+ 224 0010 A370     		strb	r3, [r4, #2]
+  61:..\CANLib/CANMotorUnit.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_MOTOR_UNIT_PID_POS_TGT_SET);
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 6
+
+
+ 225              		.loc 1 61 0
+ 226 0012 0334     		adds	r4, r4, #3
+ 227              	.LVL25:
+ 228 0014 0421     		movs	r1, #4
+ 229 0016 2000     		movs	r0, r4
+ 230 0018 FFF7FEFF 		bl	WritePacketIDOnly
+ 231              	.LVL26:
+ 232 001c 0200     		movs	r2, r0
+ 233              	.LVL27:
+  62:..\CANLib/CANMotorUnit.c ****     PackIntIntoDataMSBFirst(packetToAssemble->data, target, nextByte);
+ 234              		.loc 1 62 0
+ 235 001e 2900     		movs	r1, r5
+ 236 0020 2000     		movs	r0, r4
+ 237              	.LVL28:
+ 238 0022 FFF7FEFF 		bl	PackIntIntoDataMSBFirst
+ 239              	.LVL29:
+  63:..\CANLib/CANMotorUnit.c **** }
+ 240              		.loc 1 63 0
+ 241              		@ sp needed
+ 242              	.LVL30:
+ 243              	.LVL31:
+ 244 0026 70BD     		pop	{r4, r5, r6, pc}
+ 245              		.cfi_endproc
+ 246              	.LFE5:
+ 247              		.size	AssemblePIDTargetSetPacket, .-AssemblePIDTargetSetPacket
+ 248              		.section	.text.GetPIDTargetFromPacket,"ax",%progbits
+ 249              		.align	2
+ 250              		.global	GetPIDTargetFromPacket
+ 251              		.code	16
+ 252              		.thumb_func
+ 253              		.type	GetPIDTargetFromPacket, %function
+ 254              	GetPIDTargetFromPacket:
+ 255              	.LFB6:
+  64:..\CANLib/CANMotorUnit.c **** 
+  65:..\CANLib/CANMotorUnit.c **** uint8_t GetPIDTargetFromPacket(CANPacket *packet)
+  66:..\CANLib/CANMotorUnit.c **** {
+ 256              		.loc 1 66 0
+ 257              		.cfi_startproc
+ 258              		@ args = 0, pretend = 0, frame = 0
+ 259              		@ frame_needed = 0, uses_anonymous_args = 0
+ 260              	.LVL32:
+ 261 0000 10B5     		push	{r4, lr}
+ 262              		.cfi_def_cfa_offset 8
+ 263              		.cfi_offset 4, -8
+ 264              		.cfi_offset 14, -4
+  67:..\CANLib/CANMotorUnit.c ****     return DecodeBytesToIntMSBFirst(packet->data, DLC_MOTOR_UNIT_PID_POS_TGT_SET - 5, DLC_MOTOR_UNI
+ 265              		.loc 1 67 0
+ 266 0002 0330     		adds	r0, r0, #3
+ 267              	.LVL33:
+ 268 0004 0422     		movs	r2, #4
+ 269 0006 0021     		movs	r1, #0
+ 270 0008 FFF7FEFF 		bl	DecodeBytesToIntMSBFirst
+ 271              	.LVL34:
+ 272 000c C0B2     		uxtb	r0, r0
+  68:..\CANLib/CANMotorUnit.c **** }
+ 273              		.loc 1 68 0
+ 274              		@ sp needed
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 7
+
+
+ 275 000e 10BD     		pop	{r4, pc}
+ 276              		.cfi_endproc
+ 277              	.LFE6:
+ 278              		.size	GetPIDTargetFromPacket, .-GetPIDTargetFromPacket
+ 279              		.section	.text.AssemblePSetPacket,"ax",%progbits
+ 280              		.align	2
+ 281              		.global	AssemblePSetPacket
+ 282              		.code	16
+ 283              		.thumb_func
+ 284              		.type	AssemblePSetPacket, %function
+ 285              	AssemblePSetPacket:
+ 286              	.LFB7:
+  69:..\CANLib/CANMotorUnit.c **** 
+  70:..\CANLib/CANMotorUnit.c **** void AssemblePSetPacket(CANPacket *packetToAssemble,
+  71:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceGroup,
+  72:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceSerial,
+  73:..\CANLib/CANMotorUnit.c ****     int32_t pCoef)
+  74:..\CANLib/CANMotorUnit.c **** {
+ 287              		.loc 1 74 0
+ 288              		.cfi_startproc
+ 289              		@ args = 0, pretend = 0, frame = 0
+ 290              		@ frame_needed = 0, uses_anonymous_args = 0
+ 291              	.LVL35:
+ 292 0000 70B5     		push	{r4, r5, r6, lr}
+ 293              		.cfi_def_cfa_offset 16
+ 294              		.cfi_offset 4, -16
+ 295              		.cfi_offset 5, -12
+ 296              		.cfi_offset 6, -8
+ 297              		.cfi_offset 14, -4
+ 298 0002 0400     		movs	r4, r0
+ 299 0004 1D00     		movs	r5, r3
+  75:..\CANLib/CANMotorUnit.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetDeviceGroup, targetDeviceSe
+ 300              		.loc 1 75 0
+ 301 0006 0120     		movs	r0, #1
+ 302              	.LVL36:
+ 303 0008 FFF7FEFF 		bl	ConstructCANID
+ 304              	.LVL37:
+ 305 000c 2080     		strh	r0, [r4]
+  76:..\CANLib/CANMotorUnit.c ****     packetToAssemble->dlc = DLC_MOTOR_UNIT_PID_P_SET;
+ 306              		.loc 1 76 0
+ 307 000e 0523     		movs	r3, #5
+ 308 0010 A370     		strb	r3, [r4, #2]
+  77:..\CANLib/CANMotorUnit.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_MOTOR_UNIT_PID_P_SET);
+ 309              		.loc 1 77 0
+ 310 0012 0334     		adds	r4, r4, #3
+ 311              	.LVL38:
+ 312 0014 0521     		movs	r1, #5
+ 313 0016 2000     		movs	r0, r4
+ 314 0018 FFF7FEFF 		bl	WritePacketIDOnly
+ 315              	.LVL39:
+ 316 001c 0200     		movs	r2, r0
+ 317              	.LVL40:
+  78:..\CANLib/CANMotorUnit.c ****     PackIntIntoDataMSBFirst(packetToAssemble->data, pCoef, nextByte);
+ 318              		.loc 1 78 0
+ 319 001e 2900     		movs	r1, r5
+ 320 0020 2000     		movs	r0, r4
+ 321              	.LVL41:
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 8
+
+
+ 322 0022 FFF7FEFF 		bl	PackIntIntoDataMSBFirst
+ 323              	.LVL42:
+  79:..\CANLib/CANMotorUnit.c **** }
+ 324              		.loc 1 79 0
+ 325              		@ sp needed
+ 326              	.LVL43:
+ 327              	.LVL44:
+ 328 0026 70BD     		pop	{r4, r5, r6, pc}
+ 329              		.cfi_endproc
+ 330              	.LFE7:
+ 331              		.size	AssemblePSetPacket, .-AssemblePSetPacket
+ 332              		.section	.text.GetPFromPacket,"ax",%progbits
+ 333              		.align	2
+ 334              		.global	GetPFromPacket
+ 335              		.code	16
+ 336              		.thumb_func
+ 337              		.type	GetPFromPacket, %function
+ 338              	GetPFromPacket:
+ 339              	.LFB8:
+  80:..\CANLib/CANMotorUnit.c **** 
+  81:..\CANLib/CANMotorUnit.c **** int32_t GetPFromPacket(CANPacket *packet)
+  82:..\CANLib/CANMotorUnit.c **** {
+ 340              		.loc 1 82 0
+ 341              		.cfi_startproc
+ 342              		@ args = 0, pretend = 0, frame = 0
+ 343              		@ frame_needed = 0, uses_anonymous_args = 0
+ 344              	.LVL45:
+ 345 0000 10B5     		push	{r4, lr}
+ 346              		.cfi_def_cfa_offset 8
+ 347              		.cfi_offset 4, -8
+ 348              		.cfi_offset 14, -4
+  83:..\CANLib/CANMotorUnit.c ****     return DecodeBytesToIntMSBFirst(packet->data, DLC_MOTOR_UNIT_PID_P_SET - 5, DLC_MOTOR_UNIT_PID_
+ 349              		.loc 1 83 0
+ 350 0002 0330     		adds	r0, r0, #3
+ 351              	.LVL46:
+ 352 0004 0422     		movs	r2, #4
+ 353 0006 0021     		movs	r1, #0
+ 354 0008 FFF7FEFF 		bl	DecodeBytesToIntMSBFirst
+ 355              	.LVL47:
+  84:..\CANLib/CANMotorUnit.c **** }
+ 356              		.loc 1 84 0
+ 357              		@ sp needed
+ 358 000c 10BD     		pop	{r4, pc}
+ 359              		.cfi_endproc
+ 360              	.LFE8:
+ 361              		.size	GetPFromPacket, .-GetPFromPacket
+ 362 000e C046     		.section	.text.AssembleISetPacket,"ax",%progbits
+ 363              		.align	2
+ 364              		.global	AssembleISetPacket
+ 365              		.code	16
+ 366              		.thumb_func
+ 367              		.type	AssembleISetPacket, %function
+ 368              	AssembleISetPacket:
+ 369              	.LFB9:
+  85:..\CANLib/CANMotorUnit.c **** 
+  86:..\CANLib/CANMotorUnit.c **** void AssembleISetPacket(CANPacket *packetToAssemble,
+  87:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceGroup,
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 9
+
+
+  88:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceSerial,
+  89:..\CANLib/CANMotorUnit.c ****     int32_t iCoef)
+  90:..\CANLib/CANMotorUnit.c **** {
+ 370              		.loc 1 90 0
+ 371              		.cfi_startproc
+ 372              		@ args = 0, pretend = 0, frame = 0
+ 373              		@ frame_needed = 0, uses_anonymous_args = 0
+ 374              	.LVL48:
+ 375 0000 70B5     		push	{r4, r5, r6, lr}
+ 376              		.cfi_def_cfa_offset 16
+ 377              		.cfi_offset 4, -16
+ 378              		.cfi_offset 5, -12
+ 379              		.cfi_offset 6, -8
+ 380              		.cfi_offset 14, -4
+ 381 0002 0400     		movs	r4, r0
+ 382 0004 1D00     		movs	r5, r3
+  91:..\CANLib/CANMotorUnit.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetDeviceGroup, targetDeviceSe
+ 383              		.loc 1 91 0
+ 384 0006 0120     		movs	r0, #1
+ 385              	.LVL49:
+ 386 0008 FFF7FEFF 		bl	ConstructCANID
+ 387              	.LVL50:
+ 388 000c 2080     		strh	r0, [r4]
+  92:..\CANLib/CANMotorUnit.c ****     packetToAssemble->dlc = DLC_MOTOR_UNIT_PID_I_SET;
+ 389              		.loc 1 92 0
+ 390 000e 0523     		movs	r3, #5
+ 391 0010 A370     		strb	r3, [r4, #2]
+  93:..\CANLib/CANMotorUnit.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_MOTOR_UNIT_PID_I_SET);
+ 392              		.loc 1 93 0
+ 393 0012 0334     		adds	r4, r4, #3
+ 394              	.LVL51:
+ 395 0014 0621     		movs	r1, #6
+ 396 0016 2000     		movs	r0, r4
+ 397 0018 FFF7FEFF 		bl	WritePacketIDOnly
+ 398              	.LVL52:
+ 399 001c 0200     		movs	r2, r0
+ 400              	.LVL53:
+  94:..\CANLib/CANMotorUnit.c ****     PackIntIntoDataMSBFirst(packetToAssemble->data, iCoef, nextByte);
+ 401              		.loc 1 94 0
+ 402 001e 2900     		movs	r1, r5
+ 403 0020 2000     		movs	r0, r4
+ 404              	.LVL54:
+ 405 0022 FFF7FEFF 		bl	PackIntIntoDataMSBFirst
+ 406              	.LVL55:
+  95:..\CANLib/CANMotorUnit.c **** }
+ 407              		.loc 1 95 0
+ 408              		@ sp needed
+ 409              	.LVL56:
+ 410              	.LVL57:
+ 411 0026 70BD     		pop	{r4, r5, r6, pc}
+ 412              		.cfi_endproc
+ 413              	.LFE9:
+ 414              		.size	AssembleISetPacket, .-AssembleISetPacket
+ 415              		.section	.text.GetIFromPacket,"ax",%progbits
+ 416              		.align	2
+ 417              		.global	GetIFromPacket
+ 418              		.code	16
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 10
+
+
+ 419              		.thumb_func
+ 420              		.type	GetIFromPacket, %function
+ 421              	GetIFromPacket:
+ 422              	.LFB10:
+  96:..\CANLib/CANMotorUnit.c **** 
+  97:..\CANLib/CANMotorUnit.c **** int32_t GetIFromPacket(CANPacket *packet)
+  98:..\CANLib/CANMotorUnit.c **** {
+ 423              		.loc 1 98 0
+ 424              		.cfi_startproc
+ 425              		@ args = 0, pretend = 0, frame = 0
+ 426              		@ frame_needed = 0, uses_anonymous_args = 0
+ 427              	.LVL58:
+ 428 0000 10B5     		push	{r4, lr}
+ 429              		.cfi_def_cfa_offset 8
+ 430              		.cfi_offset 4, -8
+ 431              		.cfi_offset 14, -4
+  99:..\CANLib/CANMotorUnit.c ****     return DecodeBytesToIntMSBFirst(packet->data, DLC_MOTOR_UNIT_PID_I_SET - 5, DLC_MOTOR_UNIT_PID_
+ 432              		.loc 1 99 0
+ 433 0002 0330     		adds	r0, r0, #3
+ 434              	.LVL59:
+ 435 0004 0422     		movs	r2, #4
+ 436 0006 0021     		movs	r1, #0
+ 437 0008 FFF7FEFF 		bl	DecodeBytesToIntMSBFirst
+ 438              	.LVL60:
+ 100:..\CANLib/CANMotorUnit.c **** }
+ 439              		.loc 1 100 0
+ 440              		@ sp needed
+ 441 000c 10BD     		pop	{r4, pc}
+ 442              		.cfi_endproc
+ 443              	.LFE10:
+ 444              		.size	GetIFromPacket, .-GetIFromPacket
+ 445 000e C046     		.section	.text.AssembleDSetPacket,"ax",%progbits
+ 446              		.align	2
+ 447              		.global	AssembleDSetPacket
+ 448              		.code	16
+ 449              		.thumb_func
+ 450              		.type	AssembleDSetPacket, %function
+ 451              	AssembleDSetPacket:
+ 452              	.LFB11:
+ 101:..\CANLib/CANMotorUnit.c **** 
+ 102:..\CANLib/CANMotorUnit.c **** void AssembleDSetPacket(CANPacket *packetToAssemble,
+ 103:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceGroup,
+ 104:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceSerial,
+ 105:..\CANLib/CANMotorUnit.c ****     int32_t dCoef)
+ 106:..\CANLib/CANMotorUnit.c **** {
+ 453              		.loc 1 106 0
+ 454              		.cfi_startproc
+ 455              		@ args = 0, pretend = 0, frame = 0
+ 456              		@ frame_needed = 0, uses_anonymous_args = 0
+ 457              	.LVL61:
+ 458 0000 70B5     		push	{r4, r5, r6, lr}
+ 459              		.cfi_def_cfa_offset 16
+ 460              		.cfi_offset 4, -16
+ 461              		.cfi_offset 5, -12
+ 462              		.cfi_offset 6, -8
+ 463              		.cfi_offset 14, -4
+ 464 0002 0400     		movs	r4, r0
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 11
+
+
+ 465 0004 1D00     		movs	r5, r3
+ 107:..\CANLib/CANMotorUnit.c ****     packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetDeviceGroup, targetDeviceSe
+ 466              		.loc 1 107 0
+ 467 0006 0120     		movs	r0, #1
+ 468              	.LVL62:
+ 469 0008 FFF7FEFF 		bl	ConstructCANID
+ 470              	.LVL63:
+ 471 000c 2080     		strh	r0, [r4]
+ 108:..\CANLib/CANMotorUnit.c ****     packetToAssemble->dlc = DLC_MOTOR_UNIT_PID_D_SET;
+ 472              		.loc 1 108 0
+ 473 000e 0523     		movs	r3, #5
+ 474 0010 A370     		strb	r3, [r4, #2]
+ 109:..\CANLib/CANMotorUnit.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_MOTOR_UNIT_PID_D_SET);
+ 475              		.loc 1 109 0
+ 476 0012 0334     		adds	r4, r4, #3
+ 477              	.LVL64:
+ 478 0014 0721     		movs	r1, #7
+ 479 0016 2000     		movs	r0, r4
+ 480 0018 FFF7FEFF 		bl	WritePacketIDOnly
+ 481              	.LVL65:
+ 482 001c 0200     		movs	r2, r0
+ 483              	.LVL66:
+ 110:..\CANLib/CANMotorUnit.c ****     PackIntIntoDataMSBFirst(packetToAssemble->data, dCoef, nextByte);
+ 484              		.loc 1 110 0
+ 485 001e 2900     		movs	r1, r5
+ 486 0020 2000     		movs	r0, r4
+ 487              	.LVL67:
+ 488 0022 FFF7FEFF 		bl	PackIntIntoDataMSBFirst
+ 489              	.LVL68:
+ 111:..\CANLib/CANMotorUnit.c **** }
+ 490              		.loc 1 111 0
+ 491              		@ sp needed
+ 492              	.LVL69:
+ 493              	.LVL70:
+ 494 0026 70BD     		pop	{r4, r5, r6, pc}
+ 495              		.cfi_endproc
+ 496              	.LFE11:
+ 497              		.size	AssembleDSetPacket, .-AssembleDSetPacket
+ 498              		.section	.text.GetDFromPacket,"ax",%progbits
+ 499              		.align	2
+ 500              		.global	GetDFromPacket
+ 501              		.code	16
+ 502              		.thumb_func
+ 503              		.type	GetDFromPacket, %function
+ 504              	GetDFromPacket:
+ 505              	.LFB12:
+ 112:..\CANLib/CANMotorUnit.c **** 
+ 113:..\CANLib/CANMotorUnit.c **** int32_t GetDFromPacket(CANPacket *packet)
+ 114:..\CANLib/CANMotorUnit.c **** {
+ 506              		.loc 1 114 0
+ 507              		.cfi_startproc
+ 508              		@ args = 0, pretend = 0, frame = 0
+ 509              		@ frame_needed = 0, uses_anonymous_args = 0
+ 510              	.LVL71:
+ 511 0000 10B5     		push	{r4, lr}
+ 512              		.cfi_def_cfa_offset 8
+ 513              		.cfi_offset 4, -8
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 12
+
+
+ 514              		.cfi_offset 14, -4
+ 115:..\CANLib/CANMotorUnit.c ****     return DecodeBytesToIntMSBFirst(packet->data, DLC_MOTOR_UNIT_PID_D_SET - 5, DLC_MOTOR_UNIT_PID_
+ 515              		.loc 1 115 0
+ 516 0002 0330     		adds	r0, r0, #3
+ 517              	.LVL72:
+ 518 0004 0422     		movs	r2, #4
+ 519 0006 0021     		movs	r1, #0
+ 520 0008 FFF7FEFF 		bl	DecodeBytesToIntMSBFirst
+ 521              	.LVL73:
+ 116:..\CANLib/CANMotorUnit.c **** }
+ 522              		.loc 1 116 0
+ 523              		@ sp needed
+ 524 000c 10BD     		pop	{r4, pc}
+ 525              		.cfi_endproc
+ 526              	.LFE12:
+ 527              		.size	GetDFromPacket, .-GetDFromPacket
+ 528 000e C046     		.section	.text.AssembleInitializePacket,"ax",%progbits
+ 529              		.align	2
+ 530              		.global	AssembleInitializePacket
+ 531              		.code	16
+ 532              		.thumb_func
+ 533              		.type	AssembleInitializePacket, %function
+ 534              	AssembleInitializePacket:
+ 535              	.LFB13:
+ 117:..\CANLib/CANMotorUnit.c **** 
+ 118:..\CANLib/CANMotorUnit.c **** void AssembleInitializePacket(CANPacket *packetToAssemble,
+ 119:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceGroup,
+ 120:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceSerial,
+ 121:..\CANLib/CANMotorUnit.c ****     uint8_t initMode)
+ 122:..\CANLib/CANMotorUnit.c **** {
+ 536              		.loc 1 122 0
+ 537              		.cfi_startproc
+ 538              		@ args = 0, pretend = 0, frame = 0
+ 539              		@ frame_needed = 0, uses_anonymous_args = 0
+ 540              	.LVL74:
+ 541 0000 70B5     		push	{r4, r5, r6, lr}
+ 542              		.cfi_def_cfa_offset 16
+ 543              		.cfi_offset 4, -16
+ 544              		.cfi_offset 5, -12
+ 545              		.cfi_offset 6, -8
+ 546              		.cfi_offset 14, -4
+ 547 0002 0400     		movs	r4, r0
+ 548 0004 1D00     		movs	r5, r3
+ 123:..\CANLib/CANMotorUnit.c ****     packetToAssemble->id = ConstructCANID(PRIO_MOTOR_UNIT_INIT, targetDeviceGroup, targetDeviceSeri
+ 549              		.loc 1 123 0
+ 550 0006 0120     		movs	r0, #1
+ 551              	.LVL75:
+ 552 0008 FFF7FEFF 		bl	ConstructCANID
+ 553              	.LVL76:
+ 554 000c 2080     		strh	r0, [r4]
+ 124:..\CANLib/CANMotorUnit.c ****     packetToAssemble->dlc = DLC_MOTOR_UNIT_INIT;
+ 555              		.loc 1 124 0
+ 556 000e 0223     		movs	r3, #2
+ 557 0010 A370     		strb	r3, [r4, #2]
+ 125:..\CANLib/CANMotorUnit.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_MOTOR_UNIT_INIT);
+ 558              		.loc 1 125 0
+ 559 0012 E01C     		adds	r0, r4, #3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 13
+
+
+ 560 0014 0821     		movs	r1, #8
+ 561 0016 FFF7FEFF 		bl	WritePacketIDOnly
+ 562              	.LVL77:
+ 126:..\CANLib/CANMotorUnit.c ****     packetToAssemble->data[nextByte] = initMode;
+ 563              		.loc 1 126 0
+ 564 001a 2418     		adds	r4, r4, r0
+ 565              	.LVL78:
+ 566 001c E570     		strb	r5, [r4, #3]
+ 127:..\CANLib/CANMotorUnit.c **** }
+ 567              		.loc 1 127 0
+ 568              		@ sp needed
+ 569 001e 70BD     		pop	{r4, r5, r6, pc}
+ 570              		.cfi_endproc
+ 571              	.LFE13:
+ 572              		.size	AssembleInitializePacket, .-AssembleInitializePacket
+ 573              		.section	.text.GetInitModeFromPacket,"ax",%progbits
+ 574              		.align	2
+ 575              		.global	GetInitModeFromPacket
+ 576              		.code	16
+ 577              		.thumb_func
+ 578              		.type	GetInitModeFromPacket, %function
+ 579              	GetInitModeFromPacket:
+ 580              	.LFB14:
+ 128:..\CANLib/CANMotorUnit.c **** uint8_t GetInitModeFromPacket(CANPacket *packet)
+ 129:..\CANLib/CANMotorUnit.c **** {
+ 581              		.loc 1 129 0
+ 582              		.cfi_startproc
+ 583              		@ args = 0, pretend = 0, frame = 0
+ 584              		@ frame_needed = 0, uses_anonymous_args = 0
+ 585              		@ link register save eliminated.
+ 586              	.LVL79:
+ 130:..\CANLib/CANMotorUnit.c ****     return packet->data[1];
+ 587              		.loc 1 130 0
+ 588 0000 0079     		ldrb	r0, [r0, #4]
+ 589              	.LVL80:
+ 131:..\CANLib/CANMotorUnit.c **** }
+ 590              		.loc 1 131 0
+ 591              		@ sp needed
+ 592 0002 7047     		bx	lr
+ 593              		.cfi_endproc
+ 594              	.LFE14:
+ 595              		.size	GetInitModeFromPacket, .-GetInitModeFromPacket
+ 596              		.section	.text.AssembleLimitSwitchAlertPacket,"ax",%progbits
+ 597              		.align	2
+ 598              		.global	AssembleLimitSwitchAlertPacket
+ 599              		.code	16
+ 600              		.thumb_func
+ 601              		.type	AssembleLimitSwitchAlertPacket, %function
+ 602              	AssembleLimitSwitchAlertPacket:
+ 603              	.LFB15:
+ 132:..\CANLib/CANMotorUnit.c **** 
+ 133:..\CANLib/CANMotorUnit.c **** void AssembleLimitSwitchAlertPacket(CANPacket *packetToAssemble,
+ 134:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceGroup,
+ 135:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceSerial,
+ 136:..\CANLib/CANMotorUnit.c ****     uint8_t switches)
+ 137:..\CANLib/CANMotorUnit.c **** {
+ 604              		.loc 1 137 0
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 14
+
+
+ 605              		.cfi_startproc
+ 606              		@ args = 0, pretend = 0, frame = 0
+ 607              		@ frame_needed = 0, uses_anonymous_args = 0
+ 608              	.LVL81:
+ 609 0000 70B5     		push	{r4, r5, r6, lr}
+ 610              		.cfi_def_cfa_offset 16
+ 611              		.cfi_offset 4, -16
+ 612              		.cfi_offset 5, -12
+ 613              		.cfi_offset 6, -8
+ 614              		.cfi_offset 14, -4
+ 615 0002 0400     		movs	r4, r0
+ 616 0004 1D00     		movs	r5, r3
+ 138:..\CANLib/CANMotorUnit.c ****     packetToAssemble->id = ConstructCANID(PRIO_MOTOR_UNIT_LIM_ALERT, targetDeviceGroup, targetDevic
+ 617              		.loc 1 138 0
+ 618 0006 0020     		movs	r0, #0
+ 619              	.LVL82:
+ 620 0008 FFF7FEFF 		bl	ConstructCANID
+ 621              	.LVL83:
+ 622 000c 2080     		strh	r0, [r4]
+ 139:..\CANLib/CANMotorUnit.c ****     packetToAssemble->dlc = DLC_MOTOR_UNIT_LIM_ALERT;
+ 623              		.loc 1 139 0
+ 624 000e 0323     		movs	r3, #3
+ 625 0010 A370     		strb	r3, [r4, #2]
+ 140:..\CANLib/CANMotorUnit.c ****     int nextByte = WriteSenderSerialAndPacketID(packetToAssemble->data, ID_MOTOR_UNIT_LIM_ALERT);
+ 626              		.loc 1 140 0
+ 627 0012 E01C     		adds	r0, r4, #3
+ 628 0014 0921     		movs	r1, #9
+ 629 0016 FFF7FEFF 		bl	WriteSenderSerialAndPacketID
+ 630              	.LVL84:
+ 141:..\CANLib/CANMotorUnit.c ****     packetToAssemble->data[nextByte] = switches; 
+ 631              		.loc 1 141 0
+ 632 001a 2418     		adds	r4, r4, r0
+ 633              	.LVL85:
+ 634 001c E570     		strb	r5, [r4, #3]
+ 142:..\CANLib/CANMotorUnit.c **** }
+ 635              		.loc 1 142 0
+ 636              		@ sp needed
+ 637 001e 70BD     		pop	{r4, r5, r6, pc}
+ 638              		.cfi_endproc
+ 639              	.LFE15:
+ 640              		.size	AssembleLimitSwitchAlertPacket, .-AssembleLimitSwitchAlertPacket
+ 641              		.section	.text.GetLimStatusFromPacket,"ax",%progbits
+ 642              		.align	2
+ 643              		.global	GetLimStatusFromPacket
+ 644              		.code	16
+ 645              		.thumb_func
+ 646              		.type	GetLimStatusFromPacket, %function
+ 647              	GetLimStatusFromPacket:
+ 648              	.LFB16:
+ 143:..\CANLib/CANMotorUnit.c **** uint8_t GetLimStatusFromPacket(CANPacket *packet)
+ 144:..\CANLib/CANMotorUnit.c **** {
+ 649              		.loc 1 144 0
+ 650              		.cfi_startproc
+ 651              		@ args = 0, pretend = 0, frame = 0
+ 652              		@ frame_needed = 0, uses_anonymous_args = 0
+ 653              		@ link register save eliminated.
+ 654              	.LVL86:
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 15
+
+
+ 145:..\CANLib/CANMotorUnit.c ****     return packet->data[1];
+ 655              		.loc 1 145 0
+ 656 0000 0079     		ldrb	r0, [r0, #4]
+ 657              	.LVL87:
+ 146:..\CANLib/CANMotorUnit.c **** }
+ 658              		.loc 1 146 0
+ 659              		@ sp needed
+ 660 0002 7047     		bx	lr
+ 661              		.cfi_endproc
+ 662              	.LFE16:
+ 663              		.size	GetLimStatusFromPacket, .-GetLimStatusFromPacket
+ 664              		.section	.text.AssembleEncoderPPJRSetPacket,"ax",%progbits
+ 665              		.align	2
+ 666              		.global	AssembleEncoderPPJRSetPacket
+ 667              		.code	16
+ 668              		.thumb_func
+ 669              		.type	AssembleEncoderPPJRSetPacket, %function
+ 670              	AssembleEncoderPPJRSetPacket:
+ 671              	.LFB17:
+ 147:..\CANLib/CANMotorUnit.c **** 
+ 148:..\CANLib/CANMotorUnit.c **** void AssembleEncoderPPJRSetPacket(CANPacket *packetToAssemble,
+ 149:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceGroup,
+ 150:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceSerial,
+ 151:..\CANLib/CANMotorUnit.c ****     uint32_t pulses)
+ 152:..\CANLib/CANMotorUnit.c **** {
+ 672              		.loc 1 152 0
+ 673              		.cfi_startproc
+ 674              		@ args = 0, pretend = 0, frame = 0
+ 675              		@ frame_needed = 0, uses_anonymous_args = 0
+ 676              	.LVL88:
+ 677 0000 70B5     		push	{r4, r5, r6, lr}
+ 678              		.cfi_def_cfa_offset 16
+ 679              		.cfi_offset 4, -16
+ 680              		.cfi_offset 5, -12
+ 681              		.cfi_offset 6, -8
+ 682              		.cfi_offset 14, -4
+ 683 0002 0400     		movs	r4, r0
+ 684 0004 1D00     		movs	r5, r3
+ 153:..\CANLib/CANMotorUnit.c ****     packetToAssemble->id = ConstructCANID(PRIO_MOTOR_UNIT_ENC_PPJR_SET, targetDeviceGroup, targetDe
+ 685              		.loc 1 153 0
+ 686 0006 0120     		movs	r0, #1
+ 687              	.LVL89:
+ 688 0008 FFF7FEFF 		bl	ConstructCANID
+ 689              	.LVL90:
+ 154:..\CANLib/CANMotorUnit.c ****     packetToAssemble->id = DLC_MOTOR_UNIT_ENC_PPJR_SET;
+ 690              		.loc 1 154 0
+ 691 000c 0323     		movs	r3, #3
+ 692 000e 2380     		strh	r3, [r4]
+ 155:..\CANLib/CANMotorUnit.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_MOTOR_UNIT_ENC_PPJR_SET);
+ 693              		.loc 1 155 0
+ 694 0010 0334     		adds	r4, r4, #3
+ 695              	.LVL91:
+ 696 0012 0A21     		movs	r1, #10
+ 697 0014 2000     		movs	r0, r4
+ 698 0016 FFF7FEFF 		bl	WritePacketIDOnly
+ 699              	.LVL92:
+ 700 001a 0200     		movs	r2, r0
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 16
+
+
+ 701              	.LVL93:
+ 156:..\CANLib/CANMotorUnit.c ****     PackIntIntoDataMSBFirst(packetToAssemble->data, pulses, nextByte);
+ 702              		.loc 1 156 0
+ 703 001c 2900     		movs	r1, r5
+ 704 001e 2000     		movs	r0, r4
+ 705              	.LVL94:
+ 706 0020 FFF7FEFF 		bl	PackIntIntoDataMSBFirst
+ 707              	.LVL95:
+ 157:..\CANLib/CANMotorUnit.c **** }
+ 708              		.loc 1 157 0
+ 709              		@ sp needed
+ 710              	.LVL96:
+ 711              	.LVL97:
+ 712 0024 70BD     		pop	{r4, r5, r6, pc}
+ 713              		.cfi_endproc
+ 714              	.LFE17:
+ 715              		.size	AssembleEncoderPPJRSetPacket, .-AssembleEncoderPPJRSetPacket
+ 716 0026 C046     		.section	.text.GetEncoderPPJRFromPacket,"ax",%progbits
+ 717              		.align	2
+ 718              		.global	GetEncoderPPJRFromPacket
+ 719              		.code	16
+ 720              		.thumb_func
+ 721              		.type	GetEncoderPPJRFromPacket, %function
+ 722              	GetEncoderPPJRFromPacket:
+ 723              	.LFB18:
+ 158:..\CANLib/CANMotorUnit.c **** 
+ 159:..\CANLib/CANMotorUnit.c **** uint32_t GetEncoderPPJRFromPacket(CANPacket *packet)
+ 160:..\CANLib/CANMotorUnit.c **** {
+ 724              		.loc 1 160 0
+ 725              		.cfi_startproc
+ 726              		@ args = 0, pretend = 0, frame = 0
+ 727              		@ frame_needed = 0, uses_anonymous_args = 0
+ 728              	.LVL98:
+ 729 0000 10B5     		push	{r4, lr}
+ 730              		.cfi_def_cfa_offset 8
+ 731              		.cfi_offset 4, -8
+ 732              		.cfi_offset 14, -4
+ 161:..\CANLib/CANMotorUnit.c ****     return DecodeBytesToIntMSBFirst(packet->data, 1, 4);
+ 733              		.loc 1 161 0
+ 734 0002 0330     		adds	r0, r0, #3
+ 735              	.LVL99:
+ 736 0004 0422     		movs	r2, #4
+ 737 0006 0121     		movs	r1, #1
+ 738 0008 FFF7FEFF 		bl	DecodeBytesToIntMSBFirst
+ 739              	.LVL100:
+ 162:..\CANLib/CANMotorUnit.c **** }
+ 740              		.loc 1 162 0
+ 741              		@ sp needed
+ 742 000c 10BD     		pop	{r4, pc}
+ 743              		.cfi_endproc
+ 744              	.LFE18:
+ 745              		.size	GetEncoderPPJRFromPacket, .-GetEncoderPPJRFromPacket
+ 746 000e C046     		.section	.text.AssembleMaxJointRevolutionPacket,"ax",%progbits
+ 747              		.align	2
+ 748              		.global	AssembleMaxJointRevolutionPacket
+ 749              		.code	16
+ 750              		.thumb_func
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 17
+
+
+ 751              		.type	AssembleMaxJointRevolutionPacket, %function
+ 752              	AssembleMaxJointRevolutionPacket:
+ 753              	.LFB19:
+ 163:..\CANLib/CANMotorUnit.c **** 
+ 164:..\CANLib/CANMotorUnit.c **** void AssembleMaxJointRevolutionPacket(CANPacket *packetToAssemble,
+ 165:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceGroup,
+ 166:..\CANLib/CANMotorUnit.c ****     uint8_t targetDeviceSerial,
+ 167:..\CANLib/CANMotorUnit.c ****     uint32_t revolutions)
+ 168:..\CANLib/CANMotorUnit.c **** {
+ 754              		.loc 1 168 0
+ 755              		.cfi_startproc
+ 756              		@ args = 0, pretend = 0, frame = 0
+ 757              		@ frame_needed = 0, uses_anonymous_args = 0
+ 758              	.LVL101:
+ 759 0000 70B5     		push	{r4, r5, r6, lr}
+ 760              		.cfi_def_cfa_offset 16
+ 761              		.cfi_offset 4, -16
+ 762              		.cfi_offset 5, -12
+ 763              		.cfi_offset 6, -8
+ 764              		.cfi_offset 14, -4
+ 765 0002 0400     		movs	r4, r0
+ 766 0004 1D00     		movs	r5, r3
+ 169:..\CANLib/CANMotorUnit.c ****     packetToAssemble->id = ConstructCANID(PRIO_MOTOR_UNIT_MAX_JNT_REV_SET, targetDeviceGroup, targe
+ 767              		.loc 1 169 0
+ 768 0006 0120     		movs	r0, #1
+ 769              	.LVL102:
+ 770 0008 FFF7FEFF 		bl	ConstructCANID
+ 771              	.LVL103:
+ 170:..\CANLib/CANMotorUnit.c ****     packetToAssemble->id = DLC_MOTOR_UNIT_MAX_JNT_REV_SET;
+ 772              		.loc 1 170 0
+ 773 000c 0223     		movs	r3, #2
+ 774 000e 2380     		strh	r3, [r4]
+ 171:..\CANLib/CANMotorUnit.c ****     int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_MOTOR_UNIT_MAX_JNT_REV_SET);
+ 775              		.loc 1 171 0
+ 776 0010 0334     		adds	r4, r4, #3
+ 777              	.LVL104:
+ 778 0012 0B21     		movs	r1, #11
+ 779 0014 2000     		movs	r0, r4
+ 780 0016 FFF7FEFF 		bl	WritePacketIDOnly
+ 781              	.LVL105:
+ 782 001a 0200     		movs	r2, r0
+ 783              	.LVL106:
+ 172:..\CANLib/CANMotorUnit.c ****     PackIntIntoDataMSBFirst(packetToAssemble->data, revolutions, nextByte);
+ 784              		.loc 1 172 0
+ 785 001c 2900     		movs	r1, r5
+ 786 001e 2000     		movs	r0, r4
+ 787              	.LVL107:
+ 788 0020 FFF7FEFF 		bl	PackIntIntoDataMSBFirst
+ 789              	.LVL108:
+ 173:..\CANLib/CANMotorUnit.c ****     
+ 174:..\CANLib/CANMotorUnit.c **** }
+ 790              		.loc 1 174 0
+ 791              		@ sp needed
+ 792              	.LVL109:
+ 793              	.LVL110:
+ 794 0024 70BD     		pop	{r4, r5, r6, pc}
+ 795              		.cfi_endproc
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 18
+
+
+ 796              	.LFE19:
+ 797              		.size	AssembleMaxJointRevolutionPacket, .-AssembleMaxJointRevolutionPacket
+ 798 0026 C046     		.section	.text.GetMaxJointRevolutionsFromPacket,"ax",%progbits
+ 799              		.align	2
+ 800              		.global	GetMaxJointRevolutionsFromPacket
+ 801              		.code	16
+ 802              		.thumb_func
+ 803              		.type	GetMaxJointRevolutionsFromPacket, %function
+ 804              	GetMaxJointRevolutionsFromPacket:
+ 805              	.LFB20:
+ 175:..\CANLib/CANMotorUnit.c **** uint32_t GetMaxJointRevolutionsFromPacket(CANPacket *packet)
+ 176:..\CANLib/CANMotorUnit.c **** {
+ 806              		.loc 1 176 0
+ 807              		.cfi_startproc
+ 808              		@ args = 0, pretend = 0, frame = 0
+ 809              		@ frame_needed = 0, uses_anonymous_args = 0
+ 810              	.LVL111:
+ 811 0000 10B5     		push	{r4, lr}
+ 812              		.cfi_def_cfa_offset 8
+ 813              		.cfi_offset 4, -8
+ 814              		.cfi_offset 14, -4
+ 177:..\CANLib/CANMotorUnit.c ****     return DecodeBytesToIntMSBFirst(packet->data, 1, 4);
+ 815              		.loc 1 177 0
+ 816 0002 0330     		adds	r0, r0, #3
+ 817              	.LVL112:
+ 818 0004 0422     		movs	r2, #4
+ 819 0006 0121     		movs	r1, #1
+ 820 0008 FFF7FEFF 		bl	DecodeBytesToIntMSBFirst
+ 821              	.LVL113:
+ 178:..\CANLib/CANMotorUnit.c **** }
+ 822              		.loc 1 178 0
+ 823              		@ sp needed
+ 824 000c 10BD     		pop	{r4, pc}
+ 825              		.cfi_endproc
+ 826              	.LFE20:
+ 827              		.size	GetMaxJointRevolutionsFromPacket, .-GetMaxJointRevolutionsFromPacket
+ 828 000e C046     		.text
+ 829              	.Letext0:
+ 830              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 831              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 832              		.file 4 "..\\CANLib\\CANPacket.h"
+ 833              		.section	.debug_info,"",%progbits
+ 834              	.Ldebug_info0:
+ 835 0000 E3090000 		.4byte	0x9e3
+ 836 0004 0400     		.2byte	0x4
+ 837 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 838 000a 04       		.byte	0x4
+ 839 000b 01       		.uleb128 0x1
+ 840 000c B9000000 		.4byte	.LASF61
+ 841 0010 0C       		.byte	0xc
+ 842 0011 48030000 		.4byte	.LASF62
+ 843 0015 67010000 		.4byte	.LASF63
+ 844 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 845 001d 00000000 		.4byte	0
+ 846 0021 00000000 		.4byte	.Ldebug_line0
+ 847 0025 02       		.uleb128 0x2
+ 848 0026 01       		.byte	0x1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 19
+
+
+ 849 0027 06       		.byte	0x6
+ 850 0028 F4020000 		.4byte	.LASF0
+ 851 002c 03       		.uleb128 0x3
+ 852 002d 86020000 		.4byte	.LASF3
+ 853 0031 02       		.byte	0x2
+ 854 0032 1D       		.byte	0x1d
+ 855 0033 37000000 		.4byte	0x37
+ 856 0037 02       		.uleb128 0x2
+ 857 0038 01       		.byte	0x1
+ 858 0039 08       		.byte	0x8
+ 859 003a C9020000 		.4byte	.LASF1
+ 860 003e 02       		.uleb128 0x2
+ 861 003f 02       		.byte	0x2
+ 862 0040 05       		.byte	0x5
+ 863 0041 3E000000 		.4byte	.LASF2
+ 864 0045 03       		.uleb128 0x3
+ 865 0046 82000000 		.4byte	.LASF4
+ 866 004a 02       		.byte	0x2
+ 867 004b 2B       		.byte	0x2b
+ 868 004c 50000000 		.4byte	0x50
+ 869 0050 02       		.uleb128 0x2
+ 870 0051 02       		.byte	0x2
+ 871 0052 07       		.byte	0x7
+ 872 0053 61030000 		.4byte	.LASF5
+ 873 0057 03       		.uleb128 0x3
+ 874 0058 15040000 		.4byte	.LASF6
+ 875 005c 02       		.byte	0x2
+ 876 005d 3F       		.byte	0x3f
+ 877 005e 62000000 		.4byte	0x62
+ 878 0062 02       		.uleb128 0x2
+ 879 0063 04       		.byte	0x4
+ 880 0064 05       		.byte	0x5
+ 881 0065 4B020000 		.4byte	.LASF7
+ 882 0069 03       		.uleb128 0x3
+ 883 006a 72000000 		.4byte	.LASF8
+ 884 006e 02       		.byte	0x2
+ 885 006f 41       		.byte	0x41
+ 886 0070 74000000 		.4byte	0x74
+ 887 0074 02       		.uleb128 0x2
+ 888 0075 04       		.byte	0x4
+ 889 0076 07       		.byte	0x7
+ 890 0077 C8030000 		.4byte	.LASF9
+ 891 007b 02       		.uleb128 0x2
+ 892 007c 08       		.byte	0x8
+ 893 007d 05       		.byte	0x5
+ 894 007e 12020000 		.4byte	.LASF10
+ 895 0082 02       		.uleb128 0x2
+ 896 0083 08       		.byte	0x8
+ 897 0084 07       		.byte	0x7
+ 898 0085 00030000 		.4byte	.LASF11
+ 899 0089 04       		.uleb128 0x4
+ 900 008a 04       		.byte	0x4
+ 901 008b 05       		.byte	0x5
+ 902 008c 696E7400 		.ascii	"int\000"
+ 903 0090 02       		.uleb128 0x2
+ 904 0091 04       		.byte	0x4
+ 905 0092 07       		.byte	0x7
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 20
+
+
+ 906 0093 20030000 		.4byte	.LASF12
+ 907 0097 03       		.uleb128 0x3
+ 908 0098 5F010000 		.4byte	.LASF13
+ 909 009c 03       		.byte	0x3
+ 910 009d 18       		.byte	0x18
+ 911 009e 2C000000 		.4byte	0x2c
+ 912 00a2 03       		.uleb128 0x3
+ 913 00a3 2D030000 		.4byte	.LASF14
+ 914 00a7 03       		.byte	0x3
+ 915 00a8 24       		.byte	0x24
+ 916 00a9 45000000 		.4byte	0x45
+ 917 00ad 03       		.uleb128 0x3
+ 918 00ae 99030000 		.4byte	.LASF15
+ 919 00b2 03       		.byte	0x3
+ 920 00b3 2C       		.byte	0x2c
+ 921 00b4 57000000 		.4byte	0x57
+ 922 00b8 03       		.uleb128 0x3
+ 923 00b9 17030000 		.4byte	.LASF16
+ 924 00bd 03       		.byte	0x3
+ 925 00be 30       		.byte	0x30
+ 926 00bf 69000000 		.4byte	0x69
+ 927 00c3 05       		.uleb128 0x5
+ 928 00c4 0C       		.byte	0xc
+ 929 00c5 04       		.byte	0x4
+ 930 00c6 0F       		.byte	0xf
+ 931 00c7 EF000000 		.4byte	0xef
+ 932 00cb 06       		.uleb128 0x6
+ 933 00cc 696400   		.ascii	"id\000"
+ 934 00cf 04       		.byte	0x4
+ 935 00d0 11       		.byte	0x11
+ 936 00d1 A2000000 		.4byte	0xa2
+ 937 00d5 00       		.byte	0
+ 938 00d6 06       		.uleb128 0x6
+ 939 00d7 646C6300 		.ascii	"dlc\000"
+ 940 00db 04       		.byte	0x4
+ 941 00dc 12       		.byte	0x12
+ 942 00dd 97000000 		.4byte	0x97
+ 943 00e1 02       		.byte	0x2
+ 944 00e2 07       		.uleb128 0x7
+ 945 00e3 A8030000 		.4byte	.LASF17
+ 946 00e7 04       		.byte	0x4
+ 947 00e8 13       		.byte	0x13
+ 948 00e9 EF000000 		.4byte	0xef
+ 949 00ed 03       		.byte	0x3
+ 950 00ee 00       		.byte	0
+ 951 00ef 08       		.uleb128 0x8
+ 952 00f0 97000000 		.4byte	0x97
+ 953 00f4 FF000000 		.4byte	0xff
+ 954 00f8 09       		.uleb128 0x9
+ 955 00f9 FF000000 		.4byte	0xff
+ 956 00fd 07       		.byte	0x7
+ 957 00fe 00       		.byte	0
+ 958 00ff 02       		.uleb128 0x2
+ 959 0100 04       		.byte	0x4
+ 960 0101 07       		.byte	0x7
+ 961 0102 57000000 		.4byte	.LASF18
+ 962 0106 03       		.uleb128 0x3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 21
+
+
+ 963 0107 41020000 		.4byte	.LASF19
+ 964 010b 04       		.byte	0x4
+ 965 010c 14       		.byte	0x14
+ 966 010d C3000000 		.4byte	0xc3
+ 967 0111 0A       		.uleb128 0xa
+ 968 0112 70020000 		.4byte	.LASF25
+ 969 0116 01       		.byte	0x1
+ 970 0117 0F       		.byte	0xf
+ 971 0118 00000000 		.4byte	.LFB0
+ 972 011c 20000000 		.4byte	.LFE0-.LFB0
+ 973 0120 01       		.uleb128 0x1
+ 974 0121 9C       		.byte	0x9c
+ 975 0122 98010000 		.4byte	0x198
+ 976 0126 0B       		.uleb128 0xb
+ 977 0127 06000000 		.4byte	.LASF20
+ 978 012b 01       		.byte	0x1
+ 979 012c 0F       		.byte	0xf
+ 980 012d 98010000 		.4byte	0x198
+ 981 0131 00000000 		.4byte	.LLST0
+ 982 0135 0B       		.uleb128 0xb
+ 983 0136 36030000 		.4byte	.LASF21
+ 984 013a 01       		.byte	0x1
+ 985 013b 10       		.byte	0x10
+ 986 013c 97000000 		.4byte	0x97
+ 987 0140 2C000000 		.4byte	.LLST1
+ 988 0144 0B       		.uleb128 0xb
+ 989 0145 74030000 		.4byte	.LASF22
+ 990 0149 01       		.byte	0x1
+ 991 014a 11       		.byte	0x11
+ 992 014b 97000000 		.4byte	0x97
+ 993 014f 4D000000 		.4byte	.LLST2
+ 994 0153 0B       		.uleb128 0xb
+ 995 0154 7D000000 		.4byte	.LASF23
+ 996 0158 01       		.byte	0x1
+ 997 0159 12       		.byte	0x12
+ 998 015a 97000000 		.4byte	0x97
+ 999 015e 6E000000 		.4byte	.LLST3
+ 1000 0162 0C       		.uleb128 0xc
+ 1001 0163 69000000 		.4byte	.LASF28
+ 1002 0167 01       		.byte	0x1
+ 1003 0168 16       		.byte	0x16
+ 1004 0169 89000000 		.4byte	0x89
+ 1005 016d 01       		.uleb128 0x1
+ 1006 016e 50       		.byte	0x50
+ 1007 016f 0D       		.uleb128 0xd
+ 1008 0170 0C000000 		.4byte	.LVL2
+ 1009 0174 AF090000 		.4byte	0x9af
+ 1010 0178 82010000 		.4byte	0x182
+ 1011 017c 0E       		.uleb128 0xe
+ 1012 017d 01       		.uleb128 0x1
+ 1013 017e 50       		.byte	0x50
+ 1014 017f 01       		.uleb128 0x1
+ 1015 0180 31       		.byte	0x31
+ 1016 0181 00       		.byte	0
+ 1017 0182 0F       		.uleb128 0xf
+ 1018 0183 1A000000 		.4byte	.LVL3
+ 1019 0187 BA090000 		.4byte	0x9ba
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 22
+
+
+ 1020 018b 0E       		.uleb128 0xe
+ 1021 018c 01       		.uleb128 0x1
+ 1022 018d 50       		.byte	0x50
+ 1023 018e 02       		.uleb128 0x2
+ 1024 018f 74       		.byte	0x74
+ 1025 0190 03       		.sleb128 3
+ 1026 0191 0E       		.uleb128 0xe
+ 1027 0192 01       		.uleb128 0x1
+ 1028 0193 51       		.byte	0x51
+ 1029 0194 01       		.uleb128 0x1
+ 1030 0195 30       		.byte	0x30
+ 1031 0196 00       		.byte	0
+ 1032 0197 00       		.byte	0
+ 1033 0198 10       		.uleb128 0x10
+ 1034 0199 04       		.byte	0x4
+ 1035 019a 06010000 		.4byte	0x106
+ 1036 019e 11       		.uleb128 0x11
+ 1037 019f 87030000 		.4byte	.LASF29
+ 1038 01a3 01       		.byte	0x1
+ 1039 01a4 1A       		.byte	0x1a
+ 1040 01a5 97000000 		.4byte	0x97
+ 1041 01a9 00000000 		.4byte	.LFB1
+ 1042 01ad 04000000 		.4byte	.LFE1-.LFB1
+ 1043 01b1 01       		.uleb128 0x1
+ 1044 01b2 9C       		.byte	0x9c
+ 1045 01b3 C7010000 		.4byte	0x1c7
+ 1046 01b7 0B       		.uleb128 0xb
+ 1047 01b8 EE010000 		.4byte	.LASF24
+ 1048 01bc 01       		.byte	0x1
+ 1049 01bd 1A       		.byte	0x1a
+ 1050 01be 98010000 		.4byte	0x198
+ 1051 01c2 8F000000 		.4byte	.LLST4
+ 1052 01c6 00       		.byte	0
+ 1053 01c7 0A       		.uleb128 0xa
+ 1054 01c8 47010000 		.4byte	.LASF26
+ 1055 01cc 01       		.byte	0x1
+ 1056 01cd 20       		.byte	0x20
+ 1057 01ce 00000000 		.4byte	.LFB2
+ 1058 01d2 28000000 		.4byte	.LFE2-.LFB2
+ 1059 01d6 01       		.uleb128 0x1
+ 1060 01d7 9C       		.byte	0x9c
+ 1061 01d8 6A020000 		.4byte	0x26a
+ 1062 01dc 0B       		.uleb128 0xb
+ 1063 01dd 06000000 		.4byte	.LASF20
+ 1064 01e1 01       		.byte	0x1
+ 1065 01e2 20       		.byte	0x20
+ 1066 01e3 98010000 		.4byte	0x198
+ 1067 01e7 B0000000 		.4byte	.LLST5
+ 1068 01eb 0B       		.uleb128 0xb
+ 1069 01ec 36030000 		.4byte	.LASF21
+ 1070 01f0 01       		.byte	0x1
+ 1071 01f1 21       		.byte	0x21
+ 1072 01f2 97000000 		.4byte	0x97
+ 1073 01f6 E9000000 		.4byte	.LLST6
+ 1074 01fa 0B       		.uleb128 0xb
+ 1075 01fb 74030000 		.4byte	.LASF22
+ 1076 01ff 01       		.byte	0x1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 23
+
+
+ 1077 0200 22       		.byte	0x22
+ 1078 0201 97000000 		.4byte	0x97
+ 1079 0205 0A010000 		.4byte	.LLST7
+ 1080 0209 0B       		.uleb128 0xb
+ 1081 020a 17000000 		.4byte	.LASF27
+ 1082 020e 01       		.byte	0x1
+ 1083 020f 23       		.byte	0x23
+ 1084 0210 AD000000 		.4byte	0xad
+ 1085 0214 2B010000 		.4byte	.LLST8
+ 1086 0218 12       		.uleb128 0x12
+ 1087 0219 69000000 		.4byte	.LASF28
+ 1088 021d 01       		.byte	0x1
+ 1089 021e 27       		.byte	0x27
+ 1090 021f 89000000 		.4byte	0x89
+ 1091 0223 57010000 		.4byte	.LLST9
+ 1092 0227 0D       		.uleb128 0xd
+ 1093 0228 0C000000 		.4byte	.LVL9
+ 1094 022c AF090000 		.4byte	0x9af
+ 1095 0230 3A020000 		.4byte	0x23a
+ 1096 0234 0E       		.uleb128 0xe
+ 1097 0235 01       		.uleb128 0x1
+ 1098 0236 50       		.byte	0x50
+ 1099 0237 01       		.uleb128 0x1
+ 1100 0238 31       		.byte	0x31
+ 1101 0239 00       		.byte	0
+ 1102 023a 0D       		.uleb128 0xd
+ 1103 023b 1C000000 		.4byte	.LVL11
+ 1104 023f BA090000 		.4byte	0x9ba
+ 1105 0243 53020000 		.4byte	0x253
+ 1106 0247 0E       		.uleb128 0xe
+ 1107 0248 01       		.uleb128 0x1
+ 1108 0249 50       		.byte	0x50
+ 1109 024a 02       		.uleb128 0x2
+ 1110 024b 74       		.byte	0x74
+ 1111 024c 00       		.sleb128 0
+ 1112 024d 0E       		.uleb128 0xe
+ 1113 024e 01       		.uleb128 0x1
+ 1114 024f 51       		.byte	0x51
+ 1115 0250 01       		.uleb128 0x1
+ 1116 0251 35       		.byte	0x35
+ 1117 0252 00       		.byte	0
+ 1118 0253 0F       		.uleb128 0xf
+ 1119 0254 26000000 		.4byte	.LVL14
+ 1120 0258 C5090000 		.4byte	0x9c5
+ 1121 025c 0E       		.uleb128 0xe
+ 1122 025d 01       		.uleb128 0x1
+ 1123 025e 50       		.byte	0x50
+ 1124 025f 02       		.uleb128 0x2
+ 1125 0260 74       		.byte	0x74
+ 1126 0261 00       		.sleb128 0
+ 1127 0262 0E       		.uleb128 0xe
+ 1128 0263 01       		.uleb128 0x1
+ 1129 0264 51       		.byte	0x51
+ 1130 0265 02       		.uleb128 0x2
+ 1131 0266 75       		.byte	0x75
+ 1132 0267 00       		.sleb128 0
+ 1133 0268 00       		.byte	0
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 24
+
+
+ 1134 0269 00       		.byte	0
+ 1135 026a 11       		.uleb128 0x11
+ 1136 026b 90020000 		.4byte	.LASF30
+ 1137 026f 01       		.byte	0x1
+ 1138 0270 2B       		.byte	0x2b
+ 1139 0271 AD000000 		.4byte	0xad
+ 1140 0275 00000000 		.4byte	.LFB3
+ 1141 0279 0E000000 		.4byte	.LFE3-.LFB3
+ 1142 027d 01       		.uleb128 0x1
+ 1143 027e 9C       		.byte	0x9c
+ 1144 027f B0020000 		.4byte	0x2b0
+ 1145 0283 0B       		.uleb128 0xb
+ 1146 0284 EE010000 		.4byte	.LASF24
+ 1147 0288 01       		.byte	0x1
+ 1148 0289 2B       		.byte	0x2b
+ 1149 028a 98010000 		.4byte	0x198
+ 1150 028e 75010000 		.4byte	.LLST10
+ 1151 0292 0F       		.uleb128 0xf
+ 1152 0293 0C000000 		.4byte	.LVL19
+ 1153 0297 D0090000 		.4byte	0x9d0
+ 1154 029b 0E       		.uleb128 0xe
+ 1155 029c 01       		.uleb128 0x1
+ 1156 029d 50       		.byte	0x50
+ 1157 029e 05       		.uleb128 0x5
+ 1158 029f F3       		.byte	0xf3
+ 1159 02a0 01       		.uleb128 0x1
+ 1160 02a1 50       		.byte	0x50
+ 1161 02a2 23       		.byte	0x23
+ 1162 02a3 03       		.uleb128 0x3
+ 1163 02a4 0E       		.uleb128 0xe
+ 1164 02a5 01       		.uleb128 0x1
+ 1165 02a6 51       		.byte	0x51
+ 1166 02a7 01       		.uleb128 0x1
+ 1167 02a8 31       		.byte	0x31
+ 1168 02a9 0E       		.uleb128 0xe
+ 1169 02aa 01       		.uleb128 0x1
+ 1170 02ab 52       		.byte	0x52
+ 1171 02ac 01       		.uleb128 0x1
+ 1172 02ad 34       		.byte	0x34
+ 1173 02ae 00       		.byte	0
+ 1174 02af 00       		.byte	0
+ 1175 02b0 11       		.uleb128 0x11
+ 1176 02b1 9C000000 		.4byte	.LASF31
+ 1177 02b5 01       		.byte	0x1
+ 1178 02b6 31       		.byte	0x31
+ 1179 02b7 AD000000 		.4byte	0xad
+ 1180 02bb 00000000 		.4byte	.LFB4
+ 1181 02bf 06000000 		.4byte	.LFE4-.LFB4
+ 1182 02c3 01       		.uleb128 0x1
+ 1183 02c4 9C       		.byte	0x9c
+ 1184 02c5 D9020000 		.4byte	0x2d9
+ 1185 02c9 0B       		.uleb128 0xb
+ 1186 02ca EE010000 		.4byte	.LASF24
+ 1187 02ce 01       		.byte	0x1
+ 1188 02cf 31       		.byte	0x31
+ 1189 02d0 98010000 		.4byte	0x198
+ 1190 02d4 A3010000 		.4byte	.LLST11
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 25
+
+
+ 1191 02d8 00       		.byte	0
+ 1192 02d9 0A       		.uleb128 0xa
+ 1193 02da AD030000 		.4byte	.LASF32
+ 1194 02de 01       		.byte	0x1
+ 1195 02df 36       		.byte	0x36
+ 1196 02e0 00000000 		.4byte	.LFB5
+ 1197 02e4 28000000 		.4byte	.LFE5-.LFB5
+ 1198 02e8 01       		.uleb128 0x1
+ 1199 02e9 9C       		.byte	0x9c
+ 1200 02ea 7C030000 		.4byte	0x37c
+ 1201 02ee 0B       		.uleb128 0xb
+ 1202 02ef 06000000 		.4byte	.LASF20
+ 1203 02f3 01       		.byte	0x1
+ 1204 02f4 36       		.byte	0x36
+ 1205 02f5 98010000 		.4byte	0x198
+ 1206 02f9 C4010000 		.4byte	.LLST12
+ 1207 02fd 0B       		.uleb128 0xb
+ 1208 02fe 36030000 		.4byte	.LASF21
+ 1209 0302 01       		.byte	0x1
+ 1210 0303 37       		.byte	0x37
+ 1211 0304 97000000 		.4byte	0x97
+ 1212 0308 FD010000 		.4byte	.LLST13
+ 1213 030c 0B       		.uleb128 0xb
+ 1214 030d 74030000 		.4byte	.LASF22
+ 1215 0311 01       		.byte	0x1
+ 1216 0312 38       		.byte	0x38
+ 1217 0313 97000000 		.4byte	0x97
+ 1218 0317 1E020000 		.4byte	.LLST14
+ 1219 031b 0B       		.uleb128 0xb
+ 1220 031c 1E000000 		.4byte	.LASF33
+ 1221 0320 01       		.byte	0x1
+ 1222 0321 39       		.byte	0x39
+ 1223 0322 AD000000 		.4byte	0xad
+ 1224 0326 3F020000 		.4byte	.LLST15
+ 1225 032a 12       		.uleb128 0x12
+ 1226 032b 69000000 		.4byte	.LASF28
+ 1227 032f 01       		.byte	0x1
+ 1228 0330 3D       		.byte	0x3d
+ 1229 0331 89000000 		.4byte	0x89
+ 1230 0335 6B020000 		.4byte	.LLST16
+ 1231 0339 0D       		.uleb128 0xd
+ 1232 033a 0C000000 		.4byte	.LVL24
+ 1233 033e AF090000 		.4byte	0x9af
+ 1234 0342 4C030000 		.4byte	0x34c
+ 1235 0346 0E       		.uleb128 0xe
+ 1236 0347 01       		.uleb128 0x1
+ 1237 0348 50       		.byte	0x50
+ 1238 0349 01       		.uleb128 0x1
+ 1239 034a 31       		.byte	0x31
+ 1240 034b 00       		.byte	0
+ 1241 034c 0D       		.uleb128 0xd
+ 1242 034d 1C000000 		.4byte	.LVL26
+ 1243 0351 BA090000 		.4byte	0x9ba
+ 1244 0355 65030000 		.4byte	0x365
+ 1245 0359 0E       		.uleb128 0xe
+ 1246 035a 01       		.uleb128 0x1
+ 1247 035b 50       		.byte	0x50
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 26
+
+
+ 1248 035c 02       		.uleb128 0x2
+ 1249 035d 74       		.byte	0x74
+ 1250 035e 00       		.sleb128 0
+ 1251 035f 0E       		.uleb128 0xe
+ 1252 0360 01       		.uleb128 0x1
+ 1253 0361 51       		.byte	0x51
+ 1254 0362 01       		.uleb128 0x1
+ 1255 0363 34       		.byte	0x34
+ 1256 0364 00       		.byte	0
+ 1257 0365 0F       		.uleb128 0xf
+ 1258 0366 26000000 		.4byte	.LVL29
+ 1259 036a C5090000 		.4byte	0x9c5
+ 1260 036e 0E       		.uleb128 0xe
+ 1261 036f 01       		.uleb128 0x1
+ 1262 0370 50       		.byte	0x50
+ 1263 0371 02       		.uleb128 0x2
+ 1264 0372 74       		.byte	0x74
+ 1265 0373 00       		.sleb128 0
+ 1266 0374 0E       		.uleb128 0xe
+ 1267 0375 01       		.uleb128 0x1
+ 1268 0376 51       		.byte	0x51
+ 1269 0377 02       		.uleb128 0x2
+ 1270 0378 75       		.byte	0x75
+ 1271 0379 00       		.sleb128 0
+ 1272 037a 00       		.byte	0
+ 1273 037b 00       		.byte	0
+ 1274 037c 11       		.uleb128 0x11
+ 1275 037d 7A040000 		.4byte	.LASF34
+ 1276 0381 01       		.byte	0x1
+ 1277 0382 41       		.byte	0x41
+ 1278 0383 97000000 		.4byte	0x97
+ 1279 0387 00000000 		.4byte	.LFB6
+ 1280 038b 10000000 		.4byte	.LFE6-.LFB6
+ 1281 038f 01       		.uleb128 0x1
+ 1282 0390 9C       		.byte	0x9c
+ 1283 0391 C2030000 		.4byte	0x3c2
+ 1284 0395 0B       		.uleb128 0xb
+ 1285 0396 EE010000 		.4byte	.LASF24
+ 1286 039a 01       		.byte	0x1
+ 1287 039b 41       		.byte	0x41
+ 1288 039c 98010000 		.4byte	0x198
+ 1289 03a0 89020000 		.4byte	.LLST17
+ 1290 03a4 0F       		.uleb128 0xf
+ 1291 03a5 0C000000 		.4byte	.LVL34
+ 1292 03a9 D0090000 		.4byte	0x9d0
+ 1293 03ad 0E       		.uleb128 0xe
+ 1294 03ae 01       		.uleb128 0x1
+ 1295 03af 50       		.byte	0x50
+ 1296 03b0 05       		.uleb128 0x5
+ 1297 03b1 F3       		.byte	0xf3
+ 1298 03b2 01       		.uleb128 0x1
+ 1299 03b3 50       		.byte	0x50
+ 1300 03b4 23       		.byte	0x23
+ 1301 03b5 03       		.uleb128 0x3
+ 1302 03b6 0E       		.uleb128 0xe
+ 1303 03b7 01       		.uleb128 0x1
+ 1304 03b8 51       		.byte	0x51
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 27
+
+
+ 1305 03b9 01       		.uleb128 0x1
+ 1306 03ba 30       		.byte	0x30
+ 1307 03bb 0E       		.uleb128 0xe
+ 1308 03bc 01       		.uleb128 0x1
+ 1309 03bd 52       		.byte	0x52
+ 1310 03be 01       		.uleb128 0x1
+ 1311 03bf 34       		.byte	0x34
+ 1312 03c0 00       		.byte	0
+ 1313 03c1 00       		.byte	0
+ 1314 03c2 0A       		.uleb128 0xa
+ 1315 03c3 54020000 		.4byte	.LASF35
+ 1316 03c7 01       		.byte	0x1
+ 1317 03c8 46       		.byte	0x46
+ 1318 03c9 00000000 		.4byte	.LFB7
+ 1319 03cd 28000000 		.4byte	.LFE7-.LFB7
+ 1320 03d1 01       		.uleb128 0x1
+ 1321 03d2 9C       		.byte	0x9c
+ 1322 03d3 65040000 		.4byte	0x465
+ 1323 03d7 0B       		.uleb128 0xb
+ 1324 03d8 06000000 		.4byte	.LASF20
+ 1325 03dc 01       		.byte	0x1
+ 1326 03dd 46       		.byte	0x46
+ 1327 03de 98010000 		.4byte	0x198
+ 1328 03e2 B7020000 		.4byte	.LLST18
+ 1329 03e6 0B       		.uleb128 0xb
+ 1330 03e7 36030000 		.4byte	.LASF21
+ 1331 03eb 01       		.byte	0x1
+ 1332 03ec 47       		.byte	0x47
+ 1333 03ed 97000000 		.4byte	0x97
+ 1334 03f1 F0020000 		.4byte	.LLST19
+ 1335 03f5 0B       		.uleb128 0xb
+ 1336 03f6 74030000 		.4byte	.LASF22
+ 1337 03fa 01       		.byte	0x1
+ 1338 03fb 48       		.byte	0x48
+ 1339 03fc 97000000 		.4byte	0x97
+ 1340 0400 11030000 		.4byte	.LLST20
+ 1341 0404 0B       		.uleb128 0xb
+ 1342 0405 B3000000 		.4byte	.LASF36
+ 1343 0409 01       		.byte	0x1
+ 1344 040a 49       		.byte	0x49
+ 1345 040b AD000000 		.4byte	0xad
+ 1346 040f 32030000 		.4byte	.LLST21
+ 1347 0413 12       		.uleb128 0x12
+ 1348 0414 69000000 		.4byte	.LASF28
+ 1349 0418 01       		.byte	0x1
+ 1350 0419 4D       		.byte	0x4d
+ 1351 041a 89000000 		.4byte	0x89
+ 1352 041e 5E030000 		.4byte	.LLST22
+ 1353 0422 0D       		.uleb128 0xd
+ 1354 0423 0C000000 		.4byte	.LVL37
+ 1355 0427 AF090000 		.4byte	0x9af
+ 1356 042b 35040000 		.4byte	0x435
+ 1357 042f 0E       		.uleb128 0xe
+ 1358 0430 01       		.uleb128 0x1
+ 1359 0431 50       		.byte	0x50
+ 1360 0432 01       		.uleb128 0x1
+ 1361 0433 31       		.byte	0x31
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 28
+
+
+ 1362 0434 00       		.byte	0
+ 1363 0435 0D       		.uleb128 0xd
+ 1364 0436 1C000000 		.4byte	.LVL39
+ 1365 043a BA090000 		.4byte	0x9ba
+ 1366 043e 4E040000 		.4byte	0x44e
+ 1367 0442 0E       		.uleb128 0xe
+ 1368 0443 01       		.uleb128 0x1
+ 1369 0444 50       		.byte	0x50
+ 1370 0445 02       		.uleb128 0x2
+ 1371 0446 74       		.byte	0x74
+ 1372 0447 00       		.sleb128 0
+ 1373 0448 0E       		.uleb128 0xe
+ 1374 0449 01       		.uleb128 0x1
+ 1375 044a 51       		.byte	0x51
+ 1376 044b 01       		.uleb128 0x1
+ 1377 044c 35       		.byte	0x35
+ 1378 044d 00       		.byte	0
+ 1379 044e 0F       		.uleb128 0xf
+ 1380 044f 26000000 		.4byte	.LVL42
+ 1381 0453 C5090000 		.4byte	0x9c5
+ 1382 0457 0E       		.uleb128 0xe
+ 1383 0458 01       		.uleb128 0x1
+ 1384 0459 50       		.byte	0x50
+ 1385 045a 02       		.uleb128 0x2
+ 1386 045b 74       		.byte	0x74
+ 1387 045c 00       		.sleb128 0
+ 1388 045d 0E       		.uleb128 0xe
+ 1389 045e 01       		.uleb128 0x1
+ 1390 045f 51       		.byte	0x51
+ 1391 0460 02       		.uleb128 0x2
+ 1392 0461 75       		.byte	0x75
+ 1393 0462 00       		.sleb128 0
+ 1394 0463 00       		.byte	0
+ 1395 0464 00       		.byte	0
+ 1396 0465 11       		.uleb128 0x11
+ 1397 0466 48000000 		.4byte	.LASF37
+ 1398 046a 01       		.byte	0x1
+ 1399 046b 51       		.byte	0x51
+ 1400 046c AD000000 		.4byte	0xad
+ 1401 0470 00000000 		.4byte	.LFB8
+ 1402 0474 0E000000 		.4byte	.LFE8-.LFB8
+ 1403 0478 01       		.uleb128 0x1
+ 1404 0479 9C       		.byte	0x9c
+ 1405 047a AB040000 		.4byte	0x4ab
+ 1406 047e 0B       		.uleb128 0xb
+ 1407 047f EE010000 		.4byte	.LASF24
+ 1408 0483 01       		.byte	0x1
+ 1409 0484 51       		.byte	0x51
+ 1410 0485 98010000 		.4byte	0x198
+ 1411 0489 7C030000 		.4byte	.LLST23
+ 1412 048d 0F       		.uleb128 0xf
+ 1413 048e 0C000000 		.4byte	.LVL47
+ 1414 0492 D0090000 		.4byte	0x9d0
+ 1415 0496 0E       		.uleb128 0xe
+ 1416 0497 01       		.uleb128 0x1
+ 1417 0498 50       		.byte	0x50
+ 1418 0499 05       		.uleb128 0x5
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 29
+
+
+ 1419 049a F3       		.byte	0xf3
+ 1420 049b 01       		.uleb128 0x1
+ 1421 049c 50       		.byte	0x50
+ 1422 049d 23       		.byte	0x23
+ 1423 049e 03       		.uleb128 0x3
+ 1424 049f 0E       		.uleb128 0xe
+ 1425 04a0 01       		.uleb128 0x1
+ 1426 04a1 51       		.byte	0x51
+ 1427 04a2 01       		.uleb128 0x1
+ 1428 04a3 30       		.byte	0x30
+ 1429 04a4 0E       		.uleb128 0xe
+ 1430 04a5 01       		.uleb128 0x1
+ 1431 04a6 52       		.byte	0x52
+ 1432 04a7 01       		.uleb128 0x1
+ 1433 04a8 34       		.byte	0x34
+ 1434 04a9 00       		.byte	0
+ 1435 04aa 00       		.byte	0
+ 1436 04ab 0A       		.uleb128 0xa
+ 1437 04ac A9040000 		.4byte	.LASF38
+ 1438 04b0 01       		.byte	0x1
+ 1439 04b1 56       		.byte	0x56
+ 1440 04b2 00000000 		.4byte	.LFB9
+ 1441 04b6 28000000 		.4byte	.LFE9-.LFB9
+ 1442 04ba 01       		.uleb128 0x1
+ 1443 04bb 9C       		.byte	0x9c
+ 1444 04bc 4E050000 		.4byte	0x54e
+ 1445 04c0 0B       		.uleb128 0xb
+ 1446 04c1 06000000 		.4byte	.LASF20
+ 1447 04c5 01       		.byte	0x1
+ 1448 04c6 56       		.byte	0x56
+ 1449 04c7 98010000 		.4byte	0x198
+ 1450 04cb AA030000 		.4byte	.LLST24
+ 1451 04cf 0B       		.uleb128 0xb
+ 1452 04d0 36030000 		.4byte	.LASF21
+ 1453 04d4 01       		.byte	0x1
+ 1454 04d5 57       		.byte	0x57
+ 1455 04d6 97000000 		.4byte	0x97
+ 1456 04da E3030000 		.4byte	.LLST25
+ 1457 04de 0B       		.uleb128 0xb
+ 1458 04df 74030000 		.4byte	.LASF22
+ 1459 04e3 01       		.byte	0x1
+ 1460 04e4 58       		.byte	0x58
+ 1461 04e5 97000000 		.4byte	0x97
+ 1462 04e9 04040000 		.4byte	.LLST26
+ 1463 04ed 0B       		.uleb128 0xb
+ 1464 04ee DA030000 		.4byte	.LASF39
+ 1465 04f2 01       		.byte	0x1
+ 1466 04f3 59       		.byte	0x59
+ 1467 04f4 AD000000 		.4byte	0xad
+ 1468 04f8 25040000 		.4byte	.LLST27
+ 1469 04fc 12       		.uleb128 0x12
+ 1470 04fd 69000000 		.4byte	.LASF28
+ 1471 0501 01       		.byte	0x1
+ 1472 0502 5D       		.byte	0x5d
+ 1473 0503 89000000 		.4byte	0x89
+ 1474 0507 51040000 		.4byte	.LLST28
+ 1475 050b 0D       		.uleb128 0xd
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 30
+
+
+ 1476 050c 0C000000 		.4byte	.LVL50
+ 1477 0510 AF090000 		.4byte	0x9af
+ 1478 0514 1E050000 		.4byte	0x51e
+ 1479 0518 0E       		.uleb128 0xe
+ 1480 0519 01       		.uleb128 0x1
+ 1481 051a 50       		.byte	0x50
+ 1482 051b 01       		.uleb128 0x1
+ 1483 051c 31       		.byte	0x31
+ 1484 051d 00       		.byte	0
+ 1485 051e 0D       		.uleb128 0xd
+ 1486 051f 1C000000 		.4byte	.LVL52
+ 1487 0523 BA090000 		.4byte	0x9ba
+ 1488 0527 37050000 		.4byte	0x537
+ 1489 052b 0E       		.uleb128 0xe
+ 1490 052c 01       		.uleb128 0x1
+ 1491 052d 50       		.byte	0x50
+ 1492 052e 02       		.uleb128 0x2
+ 1493 052f 74       		.byte	0x74
+ 1494 0530 00       		.sleb128 0
+ 1495 0531 0E       		.uleb128 0xe
+ 1496 0532 01       		.uleb128 0x1
+ 1497 0533 51       		.byte	0x51
+ 1498 0534 01       		.uleb128 0x1
+ 1499 0535 36       		.byte	0x36
+ 1500 0536 00       		.byte	0
+ 1501 0537 0F       		.uleb128 0xf
+ 1502 0538 26000000 		.4byte	.LVL55
+ 1503 053c C5090000 		.4byte	0x9c5
+ 1504 0540 0E       		.uleb128 0xe
+ 1505 0541 01       		.uleb128 0x1
+ 1506 0542 50       		.byte	0x50
+ 1507 0543 02       		.uleb128 0x2
+ 1508 0544 74       		.byte	0x74
+ 1509 0545 00       		.sleb128 0
+ 1510 0546 0E       		.uleb128 0xe
+ 1511 0547 01       		.uleb128 0x1
+ 1512 0548 51       		.byte	0x51
+ 1513 0549 02       		.uleb128 0x2
+ 1514 054a 75       		.byte	0x75
+ 1515 054b 00       		.sleb128 0
+ 1516 054c 00       		.byte	0
+ 1517 054d 00       		.byte	0
+ 1518 054e 11       		.uleb128 0x11
+ 1519 054f 8D000000 		.4byte	.LASF40
+ 1520 0553 01       		.byte	0x1
+ 1521 0554 61       		.byte	0x61
+ 1522 0555 AD000000 		.4byte	0xad
+ 1523 0559 00000000 		.4byte	.LFB10
+ 1524 055d 0E000000 		.4byte	.LFE10-.LFB10
+ 1525 0561 01       		.uleb128 0x1
+ 1526 0562 9C       		.byte	0x9c
+ 1527 0563 94050000 		.4byte	0x594
+ 1528 0567 0B       		.uleb128 0xb
+ 1529 0568 EE010000 		.4byte	.LASF24
+ 1530 056c 01       		.byte	0x1
+ 1531 056d 61       		.byte	0x61
+ 1532 056e 98010000 		.4byte	0x198
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 31
+
+
+ 1533 0572 6F040000 		.4byte	.LLST29
+ 1534 0576 0F       		.uleb128 0xf
+ 1535 0577 0C000000 		.4byte	.LVL60
+ 1536 057b D0090000 		.4byte	0x9d0
+ 1537 057f 0E       		.uleb128 0xe
+ 1538 0580 01       		.uleb128 0x1
+ 1539 0581 50       		.byte	0x50
+ 1540 0582 05       		.uleb128 0x5
+ 1541 0583 F3       		.byte	0xf3
+ 1542 0584 01       		.uleb128 0x1
+ 1543 0585 50       		.byte	0x50
+ 1544 0586 23       		.byte	0x23
+ 1545 0587 03       		.uleb128 0x3
+ 1546 0588 0E       		.uleb128 0xe
+ 1547 0589 01       		.uleb128 0x1
+ 1548 058a 51       		.byte	0x51
+ 1549 058b 01       		.uleb128 0x1
+ 1550 058c 30       		.byte	0x30
+ 1551 058d 0E       		.uleb128 0xe
+ 1552 058e 01       		.uleb128 0x1
+ 1553 058f 52       		.byte	0x52
+ 1554 0590 01       		.uleb128 0x1
+ 1555 0591 34       		.byte	0x34
+ 1556 0592 00       		.byte	0
+ 1557 0593 00       		.byte	0
+ 1558 0594 0A       		.uleb128 0xa
+ 1559 0595 BC040000 		.4byte	.LASF41
+ 1560 0599 01       		.byte	0x1
+ 1561 059a 66       		.byte	0x66
+ 1562 059b 00000000 		.4byte	.LFB11
+ 1563 059f 28000000 		.4byte	.LFE11-.LFB11
+ 1564 05a3 01       		.uleb128 0x1
+ 1565 05a4 9C       		.byte	0x9c
+ 1566 05a5 37060000 		.4byte	0x637
+ 1567 05a9 0B       		.uleb128 0xb
+ 1568 05aa 06000000 		.4byte	.LASF20
+ 1569 05ae 01       		.byte	0x1
+ 1570 05af 66       		.byte	0x66
+ 1571 05b0 98010000 		.4byte	0x198
+ 1572 05b4 9D040000 		.4byte	.LLST30
+ 1573 05b8 0B       		.uleb128 0xb
+ 1574 05b9 36030000 		.4byte	.LASF21
+ 1575 05bd 01       		.byte	0x1
+ 1576 05be 67       		.byte	0x67
+ 1577 05bf 97000000 		.4byte	0x97
+ 1578 05c3 D6040000 		.4byte	.LLST31
+ 1579 05c7 0B       		.uleb128 0xb
+ 1580 05c8 74030000 		.4byte	.LASF22
+ 1581 05cc 01       		.byte	0x1
+ 1582 05cd 68       		.byte	0x68
+ 1583 05ce 97000000 		.4byte	0x97
+ 1584 05d2 F7040000 		.4byte	.LLST32
+ 1585 05d6 0B       		.uleb128 0xb
+ 1586 05d7 00000000 		.4byte	.LASF42
+ 1587 05db 01       		.byte	0x1
+ 1588 05dc 69       		.byte	0x69
+ 1589 05dd AD000000 		.4byte	0xad
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 32
+
+
+ 1590 05e1 18050000 		.4byte	.LLST33
+ 1591 05e5 12       		.uleb128 0x12
+ 1592 05e6 69000000 		.4byte	.LASF28
+ 1593 05ea 01       		.byte	0x1
+ 1594 05eb 6D       		.byte	0x6d
+ 1595 05ec 89000000 		.4byte	0x89
+ 1596 05f0 44050000 		.4byte	.LLST34
+ 1597 05f4 0D       		.uleb128 0xd
+ 1598 05f5 0C000000 		.4byte	.LVL63
+ 1599 05f9 AF090000 		.4byte	0x9af
+ 1600 05fd 07060000 		.4byte	0x607
+ 1601 0601 0E       		.uleb128 0xe
+ 1602 0602 01       		.uleb128 0x1
+ 1603 0603 50       		.byte	0x50
+ 1604 0604 01       		.uleb128 0x1
+ 1605 0605 31       		.byte	0x31
+ 1606 0606 00       		.byte	0
+ 1607 0607 0D       		.uleb128 0xd
+ 1608 0608 1C000000 		.4byte	.LVL65
+ 1609 060c BA090000 		.4byte	0x9ba
+ 1610 0610 20060000 		.4byte	0x620
+ 1611 0614 0E       		.uleb128 0xe
+ 1612 0615 01       		.uleb128 0x1
+ 1613 0616 50       		.byte	0x50
+ 1614 0617 02       		.uleb128 0x2
+ 1615 0618 74       		.byte	0x74
+ 1616 0619 00       		.sleb128 0
+ 1617 061a 0E       		.uleb128 0xe
+ 1618 061b 01       		.uleb128 0x1
+ 1619 061c 51       		.byte	0x51
+ 1620 061d 01       		.uleb128 0x1
+ 1621 061e 37       		.byte	0x37
+ 1622 061f 00       		.byte	0
+ 1623 0620 0F       		.uleb128 0xf
+ 1624 0621 26000000 		.4byte	.LVL68
+ 1625 0625 C5090000 		.4byte	0x9c5
+ 1626 0629 0E       		.uleb128 0xe
+ 1627 062a 01       		.uleb128 0x1
+ 1628 062b 50       		.byte	0x50
+ 1629 062c 02       		.uleb128 0x2
+ 1630 062d 74       		.byte	0x74
+ 1631 062e 00       		.sleb128 0
+ 1632 062f 0E       		.uleb128 0xe
+ 1633 0630 01       		.uleb128 0x1
+ 1634 0631 51       		.byte	0x51
+ 1635 0632 02       		.uleb128 0x2
+ 1636 0633 75       		.byte	0x75
+ 1637 0634 00       		.sleb128 0
+ 1638 0635 00       		.byte	0
+ 1639 0636 00       		.byte	0
+ 1640 0637 11       		.uleb128 0x11
+ 1641 0638 1F040000 		.4byte	.LASF43
+ 1642 063c 01       		.byte	0x1
+ 1643 063d 71       		.byte	0x71
+ 1644 063e AD000000 		.4byte	0xad
+ 1645 0642 00000000 		.4byte	.LFB12
+ 1646 0646 0E000000 		.4byte	.LFE12-.LFB12
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 33
+
+
+ 1647 064a 01       		.uleb128 0x1
+ 1648 064b 9C       		.byte	0x9c
+ 1649 064c 7D060000 		.4byte	0x67d
+ 1650 0650 0B       		.uleb128 0xb
+ 1651 0651 EE010000 		.4byte	.LASF24
+ 1652 0655 01       		.byte	0x1
+ 1653 0656 71       		.byte	0x71
+ 1654 0657 98010000 		.4byte	0x198
+ 1655 065b 62050000 		.4byte	.LLST35
+ 1656 065f 0F       		.uleb128 0xf
+ 1657 0660 0C000000 		.4byte	.LVL73
+ 1658 0664 D0090000 		.4byte	0x9d0
+ 1659 0668 0E       		.uleb128 0xe
+ 1660 0669 01       		.uleb128 0x1
+ 1661 066a 50       		.byte	0x50
+ 1662 066b 05       		.uleb128 0x5
+ 1663 066c F3       		.byte	0xf3
+ 1664 066d 01       		.uleb128 0x1
+ 1665 066e 50       		.byte	0x50
+ 1666 066f 23       		.byte	0x23
+ 1667 0670 03       		.uleb128 0x3
+ 1668 0671 0E       		.uleb128 0xe
+ 1669 0672 01       		.uleb128 0x1
+ 1670 0673 51       		.byte	0x51
+ 1671 0674 01       		.uleb128 0x1
+ 1672 0675 30       		.byte	0x30
+ 1673 0676 0E       		.uleb128 0xe
+ 1674 0677 01       		.uleb128 0x1
+ 1675 0678 52       		.byte	0x52
+ 1676 0679 01       		.uleb128 0x1
+ 1677 067a 34       		.byte	0x34
+ 1678 067b 00       		.byte	0
+ 1679 067c 00       		.byte	0
+ 1680 067d 0A       		.uleb128 0xa
+ 1681 067e 2E040000 		.4byte	.LASF44
+ 1682 0682 01       		.byte	0x1
+ 1683 0683 76       		.byte	0x76
+ 1684 0684 00000000 		.4byte	.LFB13
+ 1685 0688 20000000 		.4byte	.LFE13-.LFB13
+ 1686 068c 01       		.uleb128 0x1
+ 1687 068d 9C       		.byte	0x9c
+ 1688 068e 04070000 		.4byte	0x704
+ 1689 0692 0B       		.uleb128 0xb
+ 1690 0693 06000000 		.4byte	.LASF20
+ 1691 0697 01       		.byte	0x1
+ 1692 0698 76       		.byte	0x76
+ 1693 0699 98010000 		.4byte	0x198
+ 1694 069d 90050000 		.4byte	.LLST36
+ 1695 06a1 0B       		.uleb128 0xb
+ 1696 06a2 36030000 		.4byte	.LASF21
+ 1697 06a6 01       		.byte	0x1
+ 1698 06a7 77       		.byte	0x77
+ 1699 06a8 97000000 		.4byte	0x97
+ 1700 06ac BC050000 		.4byte	.LLST37
+ 1701 06b0 0B       		.uleb128 0xb
+ 1702 06b1 74030000 		.4byte	.LASF22
+ 1703 06b5 01       		.byte	0x1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 34
+
+
+ 1704 06b6 78       		.byte	0x78
+ 1705 06b7 97000000 		.4byte	0x97
+ 1706 06bb DD050000 		.4byte	.LLST38
+ 1707 06bf 0B       		.uleb128 0xb
+ 1708 06c0 60000000 		.4byte	.LASF45
+ 1709 06c4 01       		.byte	0x1
+ 1710 06c5 79       		.byte	0x79
+ 1711 06c6 97000000 		.4byte	0x97
+ 1712 06ca FE050000 		.4byte	.LLST39
+ 1713 06ce 0C       		.uleb128 0xc
+ 1714 06cf 69000000 		.4byte	.LASF28
+ 1715 06d3 01       		.byte	0x1
+ 1716 06d4 7D       		.byte	0x7d
+ 1717 06d5 89000000 		.4byte	0x89
+ 1718 06d9 01       		.uleb128 0x1
+ 1719 06da 50       		.byte	0x50
+ 1720 06db 0D       		.uleb128 0xd
+ 1721 06dc 0C000000 		.4byte	.LVL76
+ 1722 06e0 AF090000 		.4byte	0x9af
+ 1723 06e4 EE060000 		.4byte	0x6ee
+ 1724 06e8 0E       		.uleb128 0xe
+ 1725 06e9 01       		.uleb128 0x1
+ 1726 06ea 50       		.byte	0x50
+ 1727 06eb 01       		.uleb128 0x1
+ 1728 06ec 31       		.byte	0x31
+ 1729 06ed 00       		.byte	0
+ 1730 06ee 0F       		.uleb128 0xf
+ 1731 06ef 1A000000 		.4byte	.LVL77
+ 1732 06f3 BA090000 		.4byte	0x9ba
+ 1733 06f7 0E       		.uleb128 0xe
+ 1734 06f8 01       		.uleb128 0x1
+ 1735 06f9 50       		.byte	0x50
+ 1736 06fa 02       		.uleb128 0x2
+ 1737 06fb 74       		.byte	0x74
+ 1738 06fc 03       		.sleb128 3
+ 1739 06fd 0E       		.uleb128 0xe
+ 1740 06fe 01       		.uleb128 0x1
+ 1741 06ff 51       		.byte	0x51
+ 1742 0700 01       		.uleb128 0x1
+ 1743 0701 38       		.byte	0x38
+ 1744 0702 00       		.byte	0
+ 1745 0703 00       		.byte	0
+ 1746 0704 11       		.uleb128 0x11
+ 1747 0705 FF030000 		.4byte	.LASF46
+ 1748 0709 01       		.byte	0x1
+ 1749 070a 80       		.byte	0x80
+ 1750 070b 97000000 		.4byte	0x97
+ 1751 070f 00000000 		.4byte	.LFB14
+ 1752 0713 04000000 		.4byte	.LFE14-.LFB14
+ 1753 0717 01       		.uleb128 0x1
+ 1754 0718 9C       		.byte	0x9c
+ 1755 0719 2D070000 		.4byte	0x72d
+ 1756 071d 0B       		.uleb128 0xb
+ 1757 071e EE010000 		.4byte	.LASF24
+ 1758 0722 01       		.byte	0x1
+ 1759 0723 80       		.byte	0x80
+ 1760 0724 98010000 		.4byte	0x198
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 35
+
+
+ 1761 0728 1F060000 		.4byte	.LLST40
+ 1762 072c 00       		.byte	0
+ 1763 072d 0A       		.uleb128 0xa
+ 1764 072e E0030000 		.4byte	.LASF47
+ 1765 0732 01       		.byte	0x1
+ 1766 0733 85       		.byte	0x85
+ 1767 0734 00000000 		.4byte	.LFB15
+ 1768 0738 20000000 		.4byte	.LFE15-.LFB15
+ 1769 073c 01       		.uleb128 0x1
+ 1770 073d 9C       		.byte	0x9c
+ 1771 073e B4070000 		.4byte	0x7b4
+ 1772 0742 0B       		.uleb128 0xb
+ 1773 0743 06000000 		.4byte	.LASF20
+ 1774 0747 01       		.byte	0x1
+ 1775 0748 85       		.byte	0x85
+ 1776 0749 98010000 		.4byte	0x198
+ 1777 074d 40060000 		.4byte	.LLST41
+ 1778 0751 0B       		.uleb128 0xb
+ 1779 0752 36030000 		.4byte	.LASF21
+ 1780 0756 01       		.byte	0x1
+ 1781 0757 86       		.byte	0x86
+ 1782 0758 97000000 		.4byte	0x97
+ 1783 075c 6C060000 		.4byte	.LLST42
+ 1784 0760 0B       		.uleb128 0xb
+ 1785 0761 74030000 		.4byte	.LASF22
+ 1786 0765 01       		.byte	0x1
+ 1787 0766 87       		.byte	0x87
+ 1788 0767 97000000 		.4byte	0x97
+ 1789 076b 8D060000 		.4byte	.LLST43
+ 1790 076f 0B       		.uleb128 0xb
+ 1791 0770 67020000 		.4byte	.LASF48
+ 1792 0774 01       		.byte	0x1
+ 1793 0775 88       		.byte	0x88
+ 1794 0776 97000000 		.4byte	0x97
+ 1795 077a AE060000 		.4byte	.LLST44
+ 1796 077e 0C       		.uleb128 0xc
+ 1797 077f 69000000 		.4byte	.LASF28
+ 1798 0783 01       		.byte	0x1
+ 1799 0784 8C       		.byte	0x8c
+ 1800 0785 89000000 		.4byte	0x89
+ 1801 0789 01       		.uleb128 0x1
+ 1802 078a 50       		.byte	0x50
+ 1803 078b 0D       		.uleb128 0xd
+ 1804 078c 0C000000 		.4byte	.LVL83
+ 1805 0790 AF090000 		.4byte	0x9af
+ 1806 0794 9E070000 		.4byte	0x79e
+ 1807 0798 0E       		.uleb128 0xe
+ 1808 0799 01       		.uleb128 0x1
+ 1809 079a 50       		.byte	0x50
+ 1810 079b 01       		.uleb128 0x1
+ 1811 079c 30       		.byte	0x30
+ 1812 079d 00       		.byte	0
+ 1813 079e 0F       		.uleb128 0xf
+ 1814 079f 1A000000 		.4byte	.LVL84
+ 1815 07a3 DB090000 		.4byte	0x9db
+ 1816 07a7 0E       		.uleb128 0xe
+ 1817 07a8 01       		.uleb128 0x1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 36
+
+
+ 1818 07a9 50       		.byte	0x50
+ 1819 07aa 02       		.uleb128 0x2
+ 1820 07ab 74       		.byte	0x74
+ 1821 07ac 03       		.sleb128 3
+ 1822 07ad 0E       		.uleb128 0xe
+ 1823 07ae 01       		.uleb128 0x1
+ 1824 07af 51       		.byte	0x51
+ 1825 07b0 01       		.uleb128 0x1
+ 1826 07b1 39       		.byte	0x39
+ 1827 07b2 00       		.byte	0
+ 1828 07b3 00       		.byte	0
+ 1829 07b4 11       		.uleb128 0x11
+ 1830 07b5 DB040000 		.4byte	.LASF49
+ 1831 07b9 01       		.byte	0x1
+ 1832 07ba 8F       		.byte	0x8f
+ 1833 07bb 97000000 		.4byte	0x97
+ 1834 07bf 00000000 		.4byte	.LFB16
+ 1835 07c3 04000000 		.4byte	.LFE16-.LFB16
+ 1836 07c7 01       		.uleb128 0x1
+ 1837 07c8 9C       		.byte	0x9c
+ 1838 07c9 DD070000 		.4byte	0x7dd
+ 1839 07cd 0B       		.uleb128 0xb
+ 1840 07ce EE010000 		.4byte	.LASF24
+ 1841 07d2 01       		.byte	0x1
+ 1842 07d3 8F       		.byte	0x8f
+ 1843 07d4 98010000 		.4byte	0x198
+ 1844 07d8 CF060000 		.4byte	.LLST45
+ 1845 07dc 00       		.byte	0
+ 1846 07dd 0A       		.uleb128 0xa
+ 1847 07de F5010000 		.4byte	.LASF50
+ 1848 07e2 01       		.byte	0x1
+ 1849 07e3 94       		.byte	0x94
+ 1850 07e4 00000000 		.4byte	.LFB17
+ 1851 07e8 26000000 		.4byte	.LFE17-.LFB17
+ 1852 07ec 01       		.uleb128 0x1
+ 1853 07ed 9C       		.byte	0x9c
+ 1854 07ee 80080000 		.4byte	0x880
+ 1855 07f2 0B       		.uleb128 0xb
+ 1856 07f3 06000000 		.4byte	.LASF20
+ 1857 07f7 01       		.byte	0x1
+ 1858 07f8 94       		.byte	0x94
+ 1859 07f9 98010000 		.4byte	0x198
+ 1860 07fd F0060000 		.4byte	.LLST46
+ 1861 0801 0B       		.uleb128 0xb
+ 1862 0802 36030000 		.4byte	.LASF21
+ 1863 0806 01       		.byte	0x1
+ 1864 0807 95       		.byte	0x95
+ 1865 0808 97000000 		.4byte	0x97
+ 1866 080c 29070000 		.4byte	.LLST47
+ 1867 0810 0B       		.uleb128 0xb
+ 1868 0811 74030000 		.4byte	.LASF22
+ 1869 0815 01       		.byte	0x1
+ 1870 0816 96       		.byte	0x96
+ 1871 0817 97000000 		.4byte	0x97
+ 1872 081b 4A070000 		.4byte	.LLST48
+ 1873 081f 0B       		.uleb128 0xb
+ 1874 0820 A1030000 		.4byte	.LASF51
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 37
+
+
+ 1875 0824 01       		.byte	0x1
+ 1876 0825 97       		.byte	0x97
+ 1877 0826 B8000000 		.4byte	0xb8
+ 1878 082a 6B070000 		.4byte	.LLST49
+ 1879 082e 12       		.uleb128 0x12
+ 1880 082f 69000000 		.4byte	.LASF28
+ 1881 0833 01       		.byte	0x1
+ 1882 0834 9B       		.byte	0x9b
+ 1883 0835 89000000 		.4byte	0x89
+ 1884 0839 97070000 		.4byte	.LLST50
+ 1885 083d 0D       		.uleb128 0xd
+ 1886 083e 0C000000 		.4byte	.LVL90
+ 1887 0842 AF090000 		.4byte	0x9af
+ 1888 0846 50080000 		.4byte	0x850
+ 1889 084a 0E       		.uleb128 0xe
+ 1890 084b 01       		.uleb128 0x1
+ 1891 084c 50       		.byte	0x50
+ 1892 084d 01       		.uleb128 0x1
+ 1893 084e 31       		.byte	0x31
+ 1894 084f 00       		.byte	0
+ 1895 0850 0D       		.uleb128 0xd
+ 1896 0851 1A000000 		.4byte	.LVL92
+ 1897 0855 BA090000 		.4byte	0x9ba
+ 1898 0859 69080000 		.4byte	0x869
+ 1899 085d 0E       		.uleb128 0xe
+ 1900 085e 01       		.uleb128 0x1
+ 1901 085f 50       		.byte	0x50
+ 1902 0860 02       		.uleb128 0x2
+ 1903 0861 74       		.byte	0x74
+ 1904 0862 00       		.sleb128 0
+ 1905 0863 0E       		.uleb128 0xe
+ 1906 0864 01       		.uleb128 0x1
+ 1907 0865 51       		.byte	0x51
+ 1908 0866 01       		.uleb128 0x1
+ 1909 0867 3A       		.byte	0x3a
+ 1910 0868 00       		.byte	0
+ 1911 0869 0F       		.uleb128 0xf
+ 1912 086a 24000000 		.4byte	.LVL95
+ 1913 086e C5090000 		.4byte	0x9c5
+ 1914 0872 0E       		.uleb128 0xe
+ 1915 0873 01       		.uleb128 0x1
+ 1916 0874 50       		.byte	0x50
+ 1917 0875 02       		.uleb128 0x2
+ 1918 0876 74       		.byte	0x74
+ 1919 0877 00       		.sleb128 0
+ 1920 0878 0E       		.uleb128 0xe
+ 1921 0879 01       		.uleb128 0x1
+ 1922 087a 51       		.byte	0x51
+ 1923 087b 02       		.uleb128 0x2
+ 1924 087c 75       		.byte	0x75
+ 1925 087d 00       		.sleb128 0
+ 1926 087e 00       		.byte	0
+ 1927 087f 00       		.byte	0
+ 1928 0880 11       		.uleb128 0x11
+ 1929 0881 A1020000 		.4byte	.LASF52
+ 1930 0885 01       		.byte	0x1
+ 1931 0886 9F       		.byte	0x9f
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 38
+
+
+ 1932 0887 B8000000 		.4byte	0xb8
+ 1933 088b 00000000 		.4byte	.LFB18
+ 1934 088f 0E000000 		.4byte	.LFE18-.LFB18
+ 1935 0893 01       		.uleb128 0x1
+ 1936 0894 9C       		.byte	0x9c
+ 1937 0895 C6080000 		.4byte	0x8c6
+ 1938 0899 0B       		.uleb128 0xb
+ 1939 089a EE010000 		.4byte	.LASF24
+ 1940 089e 01       		.byte	0x1
+ 1941 089f 9F       		.byte	0x9f
+ 1942 08a0 98010000 		.4byte	0x198
+ 1943 08a4 B5070000 		.4byte	.LLST51
+ 1944 08a8 0F       		.uleb128 0xf
+ 1945 08a9 0C000000 		.4byte	.LVL100
+ 1946 08ad D0090000 		.4byte	0x9d0
+ 1947 08b1 0E       		.uleb128 0xe
+ 1948 08b2 01       		.uleb128 0x1
+ 1949 08b3 50       		.byte	0x50
+ 1950 08b4 05       		.uleb128 0x5
+ 1951 08b5 F3       		.byte	0xf3
+ 1952 08b6 01       		.uleb128 0x1
+ 1953 08b7 50       		.byte	0x50
+ 1954 08b8 23       		.byte	0x23
+ 1955 08b9 03       		.uleb128 0x3
+ 1956 08ba 0E       		.uleb128 0xe
+ 1957 08bb 01       		.uleb128 0x1
+ 1958 08bc 51       		.byte	0x51
+ 1959 08bd 01       		.uleb128 0x1
+ 1960 08be 31       		.byte	0x31
+ 1961 08bf 0E       		.uleb128 0xe
+ 1962 08c0 01       		.uleb128 0x1
+ 1963 08c1 52       		.byte	0x52
+ 1964 08c2 01       		.uleb128 0x1
+ 1965 08c3 34       		.byte	0x34
+ 1966 08c4 00       		.byte	0
+ 1967 08c5 00       		.byte	0
+ 1968 08c6 0A       		.uleb128 0xa
+ 1969 08c7 47040000 		.4byte	.LASF53
+ 1970 08cb 01       		.byte	0x1
+ 1971 08cc A4       		.byte	0xa4
+ 1972 08cd 00000000 		.4byte	.LFB19
+ 1973 08d1 26000000 		.4byte	.LFE19-.LFB19
+ 1974 08d5 01       		.uleb128 0x1
+ 1975 08d6 9C       		.byte	0x9c
+ 1976 08d7 69090000 		.4byte	0x969
+ 1977 08db 0B       		.uleb128 0xb
+ 1978 08dc 06000000 		.4byte	.LASF20
+ 1979 08e0 01       		.byte	0x1
+ 1980 08e1 A4       		.byte	0xa4
+ 1981 08e2 98010000 		.4byte	0x198
+ 1982 08e6 E3070000 		.4byte	.LLST52
+ 1983 08ea 0B       		.uleb128 0xb
+ 1984 08eb 36030000 		.4byte	.LASF21
+ 1985 08ef 01       		.byte	0x1
+ 1986 08f0 A5       		.byte	0xa5
+ 1987 08f1 97000000 		.4byte	0x97
+ 1988 08f5 1C080000 		.4byte	.LLST53
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 39
+
+
+ 1989 08f9 0B       		.uleb128 0xb
+ 1990 08fa 74030000 		.4byte	.LASF22
+ 1991 08fe 01       		.byte	0x1
+ 1992 08ff A6       		.byte	0xa6
+ 1993 0900 97000000 		.4byte	0x97
+ 1994 0904 3D080000 		.4byte	.LLST54
+ 1995 0908 0B       		.uleb128 0xb
+ 1996 0909 CF040000 		.4byte	.LASF54
+ 1997 090d 01       		.byte	0x1
+ 1998 090e A7       		.byte	0xa7
+ 1999 090f B8000000 		.4byte	0xb8
+ 2000 0913 5E080000 		.4byte	.LLST55
+ 2001 0917 12       		.uleb128 0x12
+ 2002 0918 69000000 		.4byte	.LASF28
+ 2003 091c 01       		.byte	0x1
+ 2004 091d AB       		.byte	0xab
+ 2005 091e 89000000 		.4byte	0x89
+ 2006 0922 8A080000 		.4byte	.LLST56
+ 2007 0926 0D       		.uleb128 0xd
+ 2008 0927 0C000000 		.4byte	.LVL103
+ 2009 092b AF090000 		.4byte	0x9af
+ 2010 092f 39090000 		.4byte	0x939
+ 2011 0933 0E       		.uleb128 0xe
+ 2012 0934 01       		.uleb128 0x1
+ 2013 0935 50       		.byte	0x50
+ 2014 0936 01       		.uleb128 0x1
+ 2015 0937 31       		.byte	0x31
+ 2016 0938 00       		.byte	0
+ 2017 0939 0D       		.uleb128 0xd
+ 2018 093a 1A000000 		.4byte	.LVL105
+ 2019 093e BA090000 		.4byte	0x9ba
+ 2020 0942 52090000 		.4byte	0x952
+ 2021 0946 0E       		.uleb128 0xe
+ 2022 0947 01       		.uleb128 0x1
+ 2023 0948 50       		.byte	0x50
+ 2024 0949 02       		.uleb128 0x2
+ 2025 094a 74       		.byte	0x74
+ 2026 094b 00       		.sleb128 0
+ 2027 094c 0E       		.uleb128 0xe
+ 2028 094d 01       		.uleb128 0x1
+ 2029 094e 51       		.byte	0x51
+ 2030 094f 01       		.uleb128 0x1
+ 2031 0950 3B       		.byte	0x3b
+ 2032 0951 00       		.byte	0
+ 2033 0952 0F       		.uleb128 0xf
+ 2034 0953 24000000 		.4byte	.LVL108
+ 2035 0957 C5090000 		.4byte	0x9c5
+ 2036 095b 0E       		.uleb128 0xe
+ 2037 095c 01       		.uleb128 0x1
+ 2038 095d 50       		.byte	0x50
+ 2039 095e 02       		.uleb128 0x2
+ 2040 095f 74       		.byte	0x74
+ 2041 0960 00       		.sleb128 0
+ 2042 0961 0E       		.uleb128 0xe
+ 2043 0962 01       		.uleb128 0x1
+ 2044 0963 51       		.byte	0x51
+ 2045 0964 02       		.uleb128 0x2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 40
+
+
+ 2046 0965 75       		.byte	0x75
+ 2047 0966 00       		.sleb128 0
+ 2048 0967 00       		.byte	0
+ 2049 0968 00       		.byte	0
+ 2050 0969 11       		.uleb128 0x11
+ 2051 096a 20020000 		.4byte	.LASF55
+ 2052 096e 01       		.byte	0x1
+ 2053 096f AF       		.byte	0xaf
+ 2054 0970 B8000000 		.4byte	0xb8
+ 2055 0974 00000000 		.4byte	.LFB20
+ 2056 0978 0E000000 		.4byte	.LFE20-.LFB20
+ 2057 097c 01       		.uleb128 0x1
+ 2058 097d 9C       		.byte	0x9c
+ 2059 097e AF090000 		.4byte	0x9af
+ 2060 0982 0B       		.uleb128 0xb
+ 2061 0983 EE010000 		.4byte	.LASF24
+ 2062 0987 01       		.byte	0x1
+ 2063 0988 AF       		.byte	0xaf
+ 2064 0989 98010000 		.4byte	0x198
+ 2065 098d A8080000 		.4byte	.LLST57
+ 2066 0991 0F       		.uleb128 0xf
+ 2067 0992 0C000000 		.4byte	.LVL113
+ 2068 0996 D0090000 		.4byte	0x9d0
+ 2069 099a 0E       		.uleb128 0xe
+ 2070 099b 01       		.uleb128 0x1
+ 2071 099c 50       		.byte	0x50
+ 2072 099d 05       		.uleb128 0x5
+ 2073 099e F3       		.byte	0xf3
+ 2074 099f 01       		.uleb128 0x1
+ 2075 09a0 50       		.byte	0x50
+ 2076 09a1 23       		.byte	0x23
+ 2077 09a2 03       		.uleb128 0x3
+ 2078 09a3 0E       		.uleb128 0xe
+ 2079 09a4 01       		.uleb128 0x1
+ 2080 09a5 51       		.byte	0x51
+ 2081 09a6 01       		.uleb128 0x1
+ 2082 09a7 31       		.byte	0x31
+ 2083 09a8 0E       		.uleb128 0xe
+ 2084 09a9 01       		.uleb128 0x1
+ 2085 09aa 52       		.byte	0x52
+ 2086 09ab 01       		.uleb128 0x1
+ 2087 09ac 34       		.byte	0x34
+ 2088 09ad 00       		.byte	0
+ 2089 09ae 00       		.byte	0
+ 2090 09af 13       		.uleb128 0x13
+ 2091 09b0 BA020000 		.4byte	.LASF56
+ 2092 09b4 BA020000 		.4byte	.LASF56
+ 2093 09b8 04       		.byte	0x4
+ 2094 09b9 17       		.byte	0x17
+ 2095 09ba 13       		.uleb128 0x13
+ 2096 09bb 68040000 		.4byte	.LASF57
+ 2097 09bf 68040000 		.4byte	.LASF57
+ 2098 09c3 04       		.byte	0x4
+ 2099 09c4 1B       		.byte	0x1b
+ 2100 09c5 13       		.uleb128 0x13
+ 2101 09c6 91040000 		.4byte	.LASF58
+ 2102 09ca 91040000 		.4byte	.LASF58
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 41
+
+
+ 2103 09ce 04       		.byte	0x4
+ 2104 09cf 2C       		.byte	0x2c
+ 2105 09d0 13       		.uleb128 0x13
+ 2106 09d1 25000000 		.4byte	.LASF59
+ 2107 09d5 25000000 		.4byte	.LASF59
+ 2108 09d9 04       		.byte	0x4
+ 2109 09da 2D       		.byte	0x2d
+ 2110 09db 13       		.uleb128 0x13
+ 2111 09dc D7020000 		.4byte	.LASF60
+ 2112 09e0 D7020000 		.4byte	.LASF60
+ 2113 09e4 04       		.byte	0x4
+ 2114 09e5 1A       		.byte	0x1a
+ 2115 09e6 00       		.byte	0
+ 2116              		.section	.debug_abbrev,"",%progbits
+ 2117              	.Ldebug_abbrev0:
+ 2118 0000 01       		.uleb128 0x1
+ 2119 0001 11       		.uleb128 0x11
+ 2120 0002 01       		.byte	0x1
+ 2121 0003 25       		.uleb128 0x25
+ 2122 0004 0E       		.uleb128 0xe
+ 2123 0005 13       		.uleb128 0x13
+ 2124 0006 0B       		.uleb128 0xb
+ 2125 0007 03       		.uleb128 0x3
+ 2126 0008 0E       		.uleb128 0xe
+ 2127 0009 1B       		.uleb128 0x1b
+ 2128 000a 0E       		.uleb128 0xe
+ 2129 000b 55       		.uleb128 0x55
+ 2130 000c 17       		.uleb128 0x17
+ 2131 000d 11       		.uleb128 0x11
+ 2132 000e 01       		.uleb128 0x1
+ 2133 000f 10       		.uleb128 0x10
+ 2134 0010 17       		.uleb128 0x17
+ 2135 0011 00       		.byte	0
+ 2136 0012 00       		.byte	0
+ 2137 0013 02       		.uleb128 0x2
+ 2138 0014 24       		.uleb128 0x24
+ 2139 0015 00       		.byte	0
+ 2140 0016 0B       		.uleb128 0xb
+ 2141 0017 0B       		.uleb128 0xb
+ 2142 0018 3E       		.uleb128 0x3e
+ 2143 0019 0B       		.uleb128 0xb
+ 2144 001a 03       		.uleb128 0x3
+ 2145 001b 0E       		.uleb128 0xe
+ 2146 001c 00       		.byte	0
+ 2147 001d 00       		.byte	0
+ 2148 001e 03       		.uleb128 0x3
+ 2149 001f 16       		.uleb128 0x16
+ 2150 0020 00       		.byte	0
+ 2151 0021 03       		.uleb128 0x3
+ 2152 0022 0E       		.uleb128 0xe
+ 2153 0023 3A       		.uleb128 0x3a
+ 2154 0024 0B       		.uleb128 0xb
+ 2155 0025 3B       		.uleb128 0x3b
+ 2156 0026 0B       		.uleb128 0xb
+ 2157 0027 49       		.uleb128 0x49
+ 2158 0028 13       		.uleb128 0x13
+ 2159 0029 00       		.byte	0
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 42
+
+
+ 2160 002a 00       		.byte	0
+ 2161 002b 04       		.uleb128 0x4
+ 2162 002c 24       		.uleb128 0x24
+ 2163 002d 00       		.byte	0
+ 2164 002e 0B       		.uleb128 0xb
+ 2165 002f 0B       		.uleb128 0xb
+ 2166 0030 3E       		.uleb128 0x3e
+ 2167 0031 0B       		.uleb128 0xb
+ 2168 0032 03       		.uleb128 0x3
+ 2169 0033 08       		.uleb128 0x8
+ 2170 0034 00       		.byte	0
+ 2171 0035 00       		.byte	0
+ 2172 0036 05       		.uleb128 0x5
+ 2173 0037 13       		.uleb128 0x13
+ 2174 0038 01       		.byte	0x1
+ 2175 0039 0B       		.uleb128 0xb
+ 2176 003a 0B       		.uleb128 0xb
+ 2177 003b 3A       		.uleb128 0x3a
+ 2178 003c 0B       		.uleb128 0xb
+ 2179 003d 3B       		.uleb128 0x3b
+ 2180 003e 0B       		.uleb128 0xb
+ 2181 003f 01       		.uleb128 0x1
+ 2182 0040 13       		.uleb128 0x13
+ 2183 0041 00       		.byte	0
+ 2184 0042 00       		.byte	0
+ 2185 0043 06       		.uleb128 0x6
+ 2186 0044 0D       		.uleb128 0xd
+ 2187 0045 00       		.byte	0
+ 2188 0046 03       		.uleb128 0x3
+ 2189 0047 08       		.uleb128 0x8
+ 2190 0048 3A       		.uleb128 0x3a
+ 2191 0049 0B       		.uleb128 0xb
+ 2192 004a 3B       		.uleb128 0x3b
+ 2193 004b 0B       		.uleb128 0xb
+ 2194 004c 49       		.uleb128 0x49
+ 2195 004d 13       		.uleb128 0x13
+ 2196 004e 38       		.uleb128 0x38
+ 2197 004f 0B       		.uleb128 0xb
+ 2198 0050 00       		.byte	0
+ 2199 0051 00       		.byte	0
+ 2200 0052 07       		.uleb128 0x7
+ 2201 0053 0D       		.uleb128 0xd
+ 2202 0054 00       		.byte	0
+ 2203 0055 03       		.uleb128 0x3
+ 2204 0056 0E       		.uleb128 0xe
+ 2205 0057 3A       		.uleb128 0x3a
+ 2206 0058 0B       		.uleb128 0xb
+ 2207 0059 3B       		.uleb128 0x3b
+ 2208 005a 0B       		.uleb128 0xb
+ 2209 005b 49       		.uleb128 0x49
+ 2210 005c 13       		.uleb128 0x13
+ 2211 005d 38       		.uleb128 0x38
+ 2212 005e 0B       		.uleb128 0xb
+ 2213 005f 00       		.byte	0
+ 2214 0060 00       		.byte	0
+ 2215 0061 08       		.uleb128 0x8
+ 2216 0062 01       		.uleb128 0x1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 43
+
+
+ 2217 0063 01       		.byte	0x1
+ 2218 0064 49       		.uleb128 0x49
+ 2219 0065 13       		.uleb128 0x13
+ 2220 0066 01       		.uleb128 0x1
+ 2221 0067 13       		.uleb128 0x13
+ 2222 0068 00       		.byte	0
+ 2223 0069 00       		.byte	0
+ 2224 006a 09       		.uleb128 0x9
+ 2225 006b 21       		.uleb128 0x21
+ 2226 006c 00       		.byte	0
+ 2227 006d 49       		.uleb128 0x49
+ 2228 006e 13       		.uleb128 0x13
+ 2229 006f 2F       		.uleb128 0x2f
+ 2230 0070 0B       		.uleb128 0xb
+ 2231 0071 00       		.byte	0
+ 2232 0072 00       		.byte	0
+ 2233 0073 0A       		.uleb128 0xa
+ 2234 0074 2E       		.uleb128 0x2e
+ 2235 0075 01       		.byte	0x1
+ 2236 0076 3F       		.uleb128 0x3f
+ 2237 0077 19       		.uleb128 0x19
+ 2238 0078 03       		.uleb128 0x3
+ 2239 0079 0E       		.uleb128 0xe
+ 2240 007a 3A       		.uleb128 0x3a
+ 2241 007b 0B       		.uleb128 0xb
+ 2242 007c 3B       		.uleb128 0x3b
+ 2243 007d 0B       		.uleb128 0xb
+ 2244 007e 27       		.uleb128 0x27
+ 2245 007f 19       		.uleb128 0x19
+ 2246 0080 11       		.uleb128 0x11
+ 2247 0081 01       		.uleb128 0x1
+ 2248 0082 12       		.uleb128 0x12
+ 2249 0083 06       		.uleb128 0x6
+ 2250 0084 40       		.uleb128 0x40
+ 2251 0085 18       		.uleb128 0x18
+ 2252 0086 9742     		.uleb128 0x2117
+ 2253 0088 19       		.uleb128 0x19
+ 2254 0089 01       		.uleb128 0x1
+ 2255 008a 13       		.uleb128 0x13
+ 2256 008b 00       		.byte	0
+ 2257 008c 00       		.byte	0
+ 2258 008d 0B       		.uleb128 0xb
+ 2259 008e 05       		.uleb128 0x5
+ 2260 008f 00       		.byte	0
+ 2261 0090 03       		.uleb128 0x3
+ 2262 0091 0E       		.uleb128 0xe
+ 2263 0092 3A       		.uleb128 0x3a
+ 2264 0093 0B       		.uleb128 0xb
+ 2265 0094 3B       		.uleb128 0x3b
+ 2266 0095 0B       		.uleb128 0xb
+ 2267 0096 49       		.uleb128 0x49
+ 2268 0097 13       		.uleb128 0x13
+ 2269 0098 02       		.uleb128 0x2
+ 2270 0099 17       		.uleb128 0x17
+ 2271 009a 00       		.byte	0
+ 2272 009b 00       		.byte	0
+ 2273 009c 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 44
+
+
+ 2274 009d 34       		.uleb128 0x34
+ 2275 009e 00       		.byte	0
+ 2276 009f 03       		.uleb128 0x3
+ 2277 00a0 0E       		.uleb128 0xe
+ 2278 00a1 3A       		.uleb128 0x3a
+ 2279 00a2 0B       		.uleb128 0xb
+ 2280 00a3 3B       		.uleb128 0x3b
+ 2281 00a4 0B       		.uleb128 0xb
+ 2282 00a5 49       		.uleb128 0x49
+ 2283 00a6 13       		.uleb128 0x13
+ 2284 00a7 02       		.uleb128 0x2
+ 2285 00a8 18       		.uleb128 0x18
+ 2286 00a9 00       		.byte	0
+ 2287 00aa 00       		.byte	0
+ 2288 00ab 0D       		.uleb128 0xd
+ 2289 00ac 898201   		.uleb128 0x4109
+ 2290 00af 01       		.byte	0x1
+ 2291 00b0 11       		.uleb128 0x11
+ 2292 00b1 01       		.uleb128 0x1
+ 2293 00b2 31       		.uleb128 0x31
+ 2294 00b3 13       		.uleb128 0x13
+ 2295 00b4 01       		.uleb128 0x1
+ 2296 00b5 13       		.uleb128 0x13
+ 2297 00b6 00       		.byte	0
+ 2298 00b7 00       		.byte	0
+ 2299 00b8 0E       		.uleb128 0xe
+ 2300 00b9 8A8201   		.uleb128 0x410a
+ 2301 00bc 00       		.byte	0
+ 2302 00bd 02       		.uleb128 0x2
+ 2303 00be 18       		.uleb128 0x18
+ 2304 00bf 9142     		.uleb128 0x2111
+ 2305 00c1 18       		.uleb128 0x18
+ 2306 00c2 00       		.byte	0
+ 2307 00c3 00       		.byte	0
+ 2308 00c4 0F       		.uleb128 0xf
+ 2309 00c5 898201   		.uleb128 0x4109
+ 2310 00c8 01       		.byte	0x1
+ 2311 00c9 11       		.uleb128 0x11
+ 2312 00ca 01       		.uleb128 0x1
+ 2313 00cb 31       		.uleb128 0x31
+ 2314 00cc 13       		.uleb128 0x13
+ 2315 00cd 00       		.byte	0
+ 2316 00ce 00       		.byte	0
+ 2317 00cf 10       		.uleb128 0x10
+ 2318 00d0 0F       		.uleb128 0xf
+ 2319 00d1 00       		.byte	0
+ 2320 00d2 0B       		.uleb128 0xb
+ 2321 00d3 0B       		.uleb128 0xb
+ 2322 00d4 49       		.uleb128 0x49
+ 2323 00d5 13       		.uleb128 0x13
+ 2324 00d6 00       		.byte	0
+ 2325 00d7 00       		.byte	0
+ 2326 00d8 11       		.uleb128 0x11
+ 2327 00d9 2E       		.uleb128 0x2e
+ 2328 00da 01       		.byte	0x1
+ 2329 00db 3F       		.uleb128 0x3f
+ 2330 00dc 19       		.uleb128 0x19
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 45
+
+
+ 2331 00dd 03       		.uleb128 0x3
+ 2332 00de 0E       		.uleb128 0xe
+ 2333 00df 3A       		.uleb128 0x3a
+ 2334 00e0 0B       		.uleb128 0xb
+ 2335 00e1 3B       		.uleb128 0x3b
+ 2336 00e2 0B       		.uleb128 0xb
+ 2337 00e3 27       		.uleb128 0x27
+ 2338 00e4 19       		.uleb128 0x19
+ 2339 00e5 49       		.uleb128 0x49
+ 2340 00e6 13       		.uleb128 0x13
+ 2341 00e7 11       		.uleb128 0x11
+ 2342 00e8 01       		.uleb128 0x1
+ 2343 00e9 12       		.uleb128 0x12
+ 2344 00ea 06       		.uleb128 0x6
+ 2345 00eb 40       		.uleb128 0x40
+ 2346 00ec 18       		.uleb128 0x18
+ 2347 00ed 9742     		.uleb128 0x2117
+ 2348 00ef 19       		.uleb128 0x19
+ 2349 00f0 01       		.uleb128 0x1
+ 2350 00f1 13       		.uleb128 0x13
+ 2351 00f2 00       		.byte	0
+ 2352 00f3 00       		.byte	0
+ 2353 00f4 12       		.uleb128 0x12
+ 2354 00f5 34       		.uleb128 0x34
+ 2355 00f6 00       		.byte	0
+ 2356 00f7 03       		.uleb128 0x3
+ 2357 00f8 0E       		.uleb128 0xe
+ 2358 00f9 3A       		.uleb128 0x3a
+ 2359 00fa 0B       		.uleb128 0xb
+ 2360 00fb 3B       		.uleb128 0x3b
+ 2361 00fc 0B       		.uleb128 0xb
+ 2362 00fd 49       		.uleb128 0x49
+ 2363 00fe 13       		.uleb128 0x13
+ 2364 00ff 02       		.uleb128 0x2
+ 2365 0100 17       		.uleb128 0x17
+ 2366 0101 00       		.byte	0
+ 2367 0102 00       		.byte	0
+ 2368 0103 13       		.uleb128 0x13
+ 2369 0104 2E       		.uleb128 0x2e
+ 2370 0105 00       		.byte	0
+ 2371 0106 3F       		.uleb128 0x3f
+ 2372 0107 19       		.uleb128 0x19
+ 2373 0108 3C       		.uleb128 0x3c
+ 2374 0109 19       		.uleb128 0x19
+ 2375 010a 6E       		.uleb128 0x6e
+ 2376 010b 0E       		.uleb128 0xe
+ 2377 010c 03       		.uleb128 0x3
+ 2378 010d 0E       		.uleb128 0xe
+ 2379 010e 3A       		.uleb128 0x3a
+ 2380 010f 0B       		.uleb128 0xb
+ 2381 0110 3B       		.uleb128 0x3b
+ 2382 0111 0B       		.uleb128 0xb
+ 2383 0112 00       		.byte	0
+ 2384 0113 00       		.byte	0
+ 2385 0114 00       		.byte	0
+ 2386              		.section	.debug_loc,"",%progbits
+ 2387              	.Ldebug_loc0:
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 46
+
+
+ 2388              	.LLST0:
+ 2389 0000 00000000 		.4byte	.LVL0
+ 2390 0004 08000000 		.4byte	.LVL1
+ 2391 0008 0100     		.2byte	0x1
+ 2392 000a 50       		.byte	0x50
+ 2393 000b 08000000 		.4byte	.LVL1
+ 2394 000f 1C000000 		.4byte	.LVL4
+ 2395 0013 0100     		.2byte	0x1
+ 2396 0015 54       		.byte	0x54
+ 2397 0016 1C000000 		.4byte	.LVL4
+ 2398 001a 20000000 		.4byte	.LFE0
+ 2399 001e 0400     		.2byte	0x4
+ 2400 0020 F3       		.byte	0xf3
+ 2401 0021 01       		.uleb128 0x1
+ 2402 0022 50       		.byte	0x50
+ 2403 0023 9F       		.byte	0x9f
+ 2404 0024 00000000 		.4byte	0
+ 2405 0028 00000000 		.4byte	0
+ 2406              	.LLST1:
+ 2407 002c 00000000 		.4byte	.LVL0
+ 2408 0030 0B000000 		.4byte	.LVL2-1
+ 2409 0034 0100     		.2byte	0x1
+ 2410 0036 51       		.byte	0x51
+ 2411 0037 0B000000 		.4byte	.LVL2-1
+ 2412 003b 20000000 		.4byte	.LFE0
+ 2413 003f 0400     		.2byte	0x4
+ 2414 0041 F3       		.byte	0xf3
+ 2415 0042 01       		.uleb128 0x1
+ 2416 0043 51       		.byte	0x51
+ 2417 0044 9F       		.byte	0x9f
+ 2418 0045 00000000 		.4byte	0
+ 2419 0049 00000000 		.4byte	0
+ 2420              	.LLST2:
+ 2421 004d 00000000 		.4byte	.LVL0
+ 2422 0051 0B000000 		.4byte	.LVL2-1
+ 2423 0055 0100     		.2byte	0x1
+ 2424 0057 52       		.byte	0x52
+ 2425 0058 0B000000 		.4byte	.LVL2-1
+ 2426 005c 20000000 		.4byte	.LFE0
+ 2427 0060 0400     		.2byte	0x4
+ 2428 0062 F3       		.byte	0xf3
+ 2429 0063 01       		.uleb128 0x1
+ 2430 0064 52       		.byte	0x52
+ 2431 0065 9F       		.byte	0x9f
+ 2432 0066 00000000 		.4byte	0
+ 2433 006a 00000000 		.4byte	0
+ 2434              	.LLST3:
+ 2435 006e 00000000 		.4byte	.LVL0
+ 2436 0072 0B000000 		.4byte	.LVL2-1
+ 2437 0076 0100     		.2byte	0x1
+ 2438 0078 53       		.byte	0x53
+ 2439 0079 0B000000 		.4byte	.LVL2-1
+ 2440 007d 20000000 		.4byte	.LFE0
+ 2441 0081 0400     		.2byte	0x4
+ 2442 0083 F3       		.byte	0xf3
+ 2443 0084 01       		.uleb128 0x1
+ 2444 0085 53       		.byte	0x53
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 47
+
+
+ 2445 0086 9F       		.byte	0x9f
+ 2446 0087 00000000 		.4byte	0
+ 2447 008b 00000000 		.4byte	0
+ 2448              	.LLST4:
+ 2449 008f 00000000 		.4byte	.LVL5
+ 2450 0093 02000000 		.4byte	.LVL6
+ 2451 0097 0100     		.2byte	0x1
+ 2452 0099 50       		.byte	0x50
+ 2453 009a 02000000 		.4byte	.LVL6
+ 2454 009e 04000000 		.4byte	.LFE1
+ 2455 00a2 0400     		.2byte	0x4
+ 2456 00a4 F3       		.byte	0xf3
+ 2457 00a5 01       		.uleb128 0x1
+ 2458 00a6 50       		.byte	0x50
+ 2459 00a7 9F       		.byte	0x9f
+ 2460 00a8 00000000 		.4byte	0
+ 2461 00ac 00000000 		.4byte	0
+ 2462              	.LLST5:
+ 2463 00b0 00000000 		.4byte	.LVL7
+ 2464 00b4 08000000 		.4byte	.LVL8
+ 2465 00b8 0100     		.2byte	0x1
+ 2466 00ba 50       		.byte	0x50
+ 2467 00bb 08000000 		.4byte	.LVL8
+ 2468 00bf 14000000 		.4byte	.LVL10
+ 2469 00c3 0100     		.2byte	0x1
+ 2470 00c5 54       		.byte	0x54
+ 2471 00c6 14000000 		.4byte	.LVL10
+ 2472 00ca 26000000 		.4byte	.LVL15
+ 2473 00ce 0300     		.2byte	0x3
+ 2474 00d0 74       		.byte	0x74
+ 2475 00d1 7D       		.sleb128 -3
+ 2476 00d2 9F       		.byte	0x9f
+ 2477 00d3 26000000 		.4byte	.LVL15
+ 2478 00d7 28000000 		.4byte	.LFE2
+ 2479 00db 0400     		.2byte	0x4
+ 2480 00dd F3       		.byte	0xf3
+ 2481 00de 01       		.uleb128 0x1
+ 2482 00df 50       		.byte	0x50
+ 2483 00e0 9F       		.byte	0x9f
+ 2484 00e1 00000000 		.4byte	0
+ 2485 00e5 00000000 		.4byte	0
+ 2486              	.LLST6:
+ 2487 00e9 00000000 		.4byte	.LVL7
+ 2488 00ed 0B000000 		.4byte	.LVL9-1
+ 2489 00f1 0100     		.2byte	0x1
+ 2490 00f3 51       		.byte	0x51
+ 2491 00f4 0B000000 		.4byte	.LVL9-1
+ 2492 00f8 28000000 		.4byte	.LFE2
+ 2493 00fc 0400     		.2byte	0x4
+ 2494 00fe F3       		.byte	0xf3
+ 2495 00ff 01       		.uleb128 0x1
+ 2496 0100 51       		.byte	0x51
+ 2497 0101 9F       		.byte	0x9f
+ 2498 0102 00000000 		.4byte	0
+ 2499 0106 00000000 		.4byte	0
+ 2500              	.LLST7:
+ 2501 010a 00000000 		.4byte	.LVL7
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 48
+
+
+ 2502 010e 0B000000 		.4byte	.LVL9-1
+ 2503 0112 0100     		.2byte	0x1
+ 2504 0114 52       		.byte	0x52
+ 2505 0115 0B000000 		.4byte	.LVL9-1
+ 2506 0119 28000000 		.4byte	.LFE2
+ 2507 011d 0400     		.2byte	0x4
+ 2508 011f F3       		.byte	0xf3
+ 2509 0120 01       		.uleb128 0x1
+ 2510 0121 52       		.byte	0x52
+ 2511 0122 9F       		.byte	0x9f
+ 2512 0123 00000000 		.4byte	0
+ 2513 0127 00000000 		.4byte	0
+ 2514              	.LLST8:
+ 2515 012b 00000000 		.4byte	.LVL7
+ 2516 012f 0B000000 		.4byte	.LVL9-1
+ 2517 0133 0100     		.2byte	0x1
+ 2518 0135 53       		.byte	0x53
+ 2519 0136 0B000000 		.4byte	.LVL9-1
+ 2520 013a 26000000 		.4byte	.LVL16
+ 2521 013e 0100     		.2byte	0x1
+ 2522 0140 55       		.byte	0x55
+ 2523 0141 26000000 		.4byte	.LVL16
+ 2524 0145 28000000 		.4byte	.LFE2
+ 2525 0149 0400     		.2byte	0x4
+ 2526 014b F3       		.byte	0xf3
+ 2527 014c 01       		.uleb128 0x1
+ 2528 014d 53       		.byte	0x53
+ 2529 014e 9F       		.byte	0x9f
+ 2530 014f 00000000 		.4byte	0
+ 2531 0153 00000000 		.4byte	0
+ 2532              	.LLST9:
+ 2533 0157 1E000000 		.4byte	.LVL12
+ 2534 015b 22000000 		.4byte	.LVL13
+ 2535 015f 0100     		.2byte	0x1
+ 2536 0161 50       		.byte	0x50
+ 2537 0162 22000000 		.4byte	.LVL13
+ 2538 0166 25000000 		.4byte	.LVL14-1
+ 2539 016a 0100     		.2byte	0x1
+ 2540 016c 52       		.byte	0x52
+ 2541 016d 00000000 		.4byte	0
+ 2542 0171 00000000 		.4byte	0
+ 2543              	.LLST10:
+ 2544 0175 00000000 		.4byte	.LVL17
+ 2545 0179 04000000 		.4byte	.LVL18
+ 2546 017d 0100     		.2byte	0x1
+ 2547 017f 50       		.byte	0x50
+ 2548 0180 04000000 		.4byte	.LVL18
+ 2549 0184 0B000000 		.4byte	.LVL19-1
+ 2550 0188 0300     		.2byte	0x3
+ 2551 018a 70       		.byte	0x70
+ 2552 018b 7D       		.sleb128 -3
+ 2553 018c 9F       		.byte	0x9f
+ 2554 018d 0B000000 		.4byte	.LVL19-1
+ 2555 0191 0E000000 		.4byte	.LFE3
+ 2556 0195 0400     		.2byte	0x4
+ 2557 0197 F3       		.byte	0xf3
+ 2558 0198 01       		.uleb128 0x1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 49
+
+
+ 2559 0199 50       		.byte	0x50
+ 2560 019a 9F       		.byte	0x9f
+ 2561 019b 00000000 		.4byte	0
+ 2562 019f 00000000 		.4byte	0
+ 2563              	.LLST11:
+ 2564 01a3 00000000 		.4byte	.LVL20
+ 2565 01a7 02000000 		.4byte	.LVL21
+ 2566 01ab 0100     		.2byte	0x1
+ 2567 01ad 50       		.byte	0x50
+ 2568 01ae 02000000 		.4byte	.LVL21
+ 2569 01b2 06000000 		.4byte	.LFE4
+ 2570 01b6 0400     		.2byte	0x4
+ 2571 01b8 F3       		.byte	0xf3
+ 2572 01b9 01       		.uleb128 0x1
+ 2573 01ba 50       		.byte	0x50
+ 2574 01bb 9F       		.byte	0x9f
+ 2575 01bc 00000000 		.4byte	0
+ 2576 01c0 00000000 		.4byte	0
+ 2577              	.LLST12:
+ 2578 01c4 00000000 		.4byte	.LVL22
+ 2579 01c8 08000000 		.4byte	.LVL23
+ 2580 01cc 0100     		.2byte	0x1
+ 2581 01ce 50       		.byte	0x50
+ 2582 01cf 08000000 		.4byte	.LVL23
+ 2583 01d3 14000000 		.4byte	.LVL25
+ 2584 01d7 0100     		.2byte	0x1
+ 2585 01d9 54       		.byte	0x54
+ 2586 01da 14000000 		.4byte	.LVL25
+ 2587 01de 26000000 		.4byte	.LVL30
+ 2588 01e2 0300     		.2byte	0x3
+ 2589 01e4 74       		.byte	0x74
+ 2590 01e5 7D       		.sleb128 -3
+ 2591 01e6 9F       		.byte	0x9f
+ 2592 01e7 26000000 		.4byte	.LVL30
+ 2593 01eb 28000000 		.4byte	.LFE5
+ 2594 01ef 0400     		.2byte	0x4
+ 2595 01f1 F3       		.byte	0xf3
+ 2596 01f2 01       		.uleb128 0x1
+ 2597 01f3 50       		.byte	0x50
+ 2598 01f4 9F       		.byte	0x9f
+ 2599 01f5 00000000 		.4byte	0
+ 2600 01f9 00000000 		.4byte	0
+ 2601              	.LLST13:
+ 2602 01fd 00000000 		.4byte	.LVL22
+ 2603 0201 0B000000 		.4byte	.LVL24-1
+ 2604 0205 0100     		.2byte	0x1
+ 2605 0207 51       		.byte	0x51
+ 2606 0208 0B000000 		.4byte	.LVL24-1
+ 2607 020c 28000000 		.4byte	.LFE5
+ 2608 0210 0400     		.2byte	0x4
+ 2609 0212 F3       		.byte	0xf3
+ 2610 0213 01       		.uleb128 0x1
+ 2611 0214 51       		.byte	0x51
+ 2612 0215 9F       		.byte	0x9f
+ 2613 0216 00000000 		.4byte	0
+ 2614 021a 00000000 		.4byte	0
+ 2615              	.LLST14:
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 50
+
+
+ 2616 021e 00000000 		.4byte	.LVL22
+ 2617 0222 0B000000 		.4byte	.LVL24-1
+ 2618 0226 0100     		.2byte	0x1
+ 2619 0228 52       		.byte	0x52
+ 2620 0229 0B000000 		.4byte	.LVL24-1
+ 2621 022d 28000000 		.4byte	.LFE5
+ 2622 0231 0400     		.2byte	0x4
+ 2623 0233 F3       		.byte	0xf3
+ 2624 0234 01       		.uleb128 0x1
+ 2625 0235 52       		.byte	0x52
+ 2626 0236 9F       		.byte	0x9f
+ 2627 0237 00000000 		.4byte	0
+ 2628 023b 00000000 		.4byte	0
+ 2629              	.LLST15:
+ 2630 023f 00000000 		.4byte	.LVL22
+ 2631 0243 0B000000 		.4byte	.LVL24-1
+ 2632 0247 0100     		.2byte	0x1
+ 2633 0249 53       		.byte	0x53
+ 2634 024a 0B000000 		.4byte	.LVL24-1
+ 2635 024e 26000000 		.4byte	.LVL31
+ 2636 0252 0100     		.2byte	0x1
+ 2637 0254 55       		.byte	0x55
+ 2638 0255 26000000 		.4byte	.LVL31
+ 2639 0259 28000000 		.4byte	.LFE5
+ 2640 025d 0400     		.2byte	0x4
+ 2641 025f F3       		.byte	0xf3
+ 2642 0260 01       		.uleb128 0x1
+ 2643 0261 53       		.byte	0x53
+ 2644 0262 9F       		.byte	0x9f
+ 2645 0263 00000000 		.4byte	0
+ 2646 0267 00000000 		.4byte	0
+ 2647              	.LLST16:
+ 2648 026b 1E000000 		.4byte	.LVL27
+ 2649 026f 22000000 		.4byte	.LVL28
+ 2650 0273 0100     		.2byte	0x1
+ 2651 0275 50       		.byte	0x50
+ 2652 0276 22000000 		.4byte	.LVL28
+ 2653 027a 25000000 		.4byte	.LVL29-1
+ 2654 027e 0100     		.2byte	0x1
+ 2655 0280 52       		.byte	0x52
+ 2656 0281 00000000 		.4byte	0
+ 2657 0285 00000000 		.4byte	0
+ 2658              	.LLST17:
+ 2659 0289 00000000 		.4byte	.LVL32
+ 2660 028d 04000000 		.4byte	.LVL33
+ 2661 0291 0100     		.2byte	0x1
+ 2662 0293 50       		.byte	0x50
+ 2663 0294 04000000 		.4byte	.LVL33
+ 2664 0298 0B000000 		.4byte	.LVL34-1
+ 2665 029c 0300     		.2byte	0x3
+ 2666 029e 70       		.byte	0x70
+ 2667 029f 7D       		.sleb128 -3
+ 2668 02a0 9F       		.byte	0x9f
+ 2669 02a1 0B000000 		.4byte	.LVL34-1
+ 2670 02a5 10000000 		.4byte	.LFE6
+ 2671 02a9 0400     		.2byte	0x4
+ 2672 02ab F3       		.byte	0xf3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 51
+
+
+ 2673 02ac 01       		.uleb128 0x1
+ 2674 02ad 50       		.byte	0x50
+ 2675 02ae 9F       		.byte	0x9f
+ 2676 02af 00000000 		.4byte	0
+ 2677 02b3 00000000 		.4byte	0
+ 2678              	.LLST18:
+ 2679 02b7 00000000 		.4byte	.LVL35
+ 2680 02bb 08000000 		.4byte	.LVL36
+ 2681 02bf 0100     		.2byte	0x1
+ 2682 02c1 50       		.byte	0x50
+ 2683 02c2 08000000 		.4byte	.LVL36
+ 2684 02c6 14000000 		.4byte	.LVL38
+ 2685 02ca 0100     		.2byte	0x1
+ 2686 02cc 54       		.byte	0x54
+ 2687 02cd 14000000 		.4byte	.LVL38
+ 2688 02d1 26000000 		.4byte	.LVL43
+ 2689 02d5 0300     		.2byte	0x3
+ 2690 02d7 74       		.byte	0x74
+ 2691 02d8 7D       		.sleb128 -3
+ 2692 02d9 9F       		.byte	0x9f
+ 2693 02da 26000000 		.4byte	.LVL43
+ 2694 02de 28000000 		.4byte	.LFE7
+ 2695 02e2 0400     		.2byte	0x4
+ 2696 02e4 F3       		.byte	0xf3
+ 2697 02e5 01       		.uleb128 0x1
+ 2698 02e6 50       		.byte	0x50
+ 2699 02e7 9F       		.byte	0x9f
+ 2700 02e8 00000000 		.4byte	0
+ 2701 02ec 00000000 		.4byte	0
+ 2702              	.LLST19:
+ 2703 02f0 00000000 		.4byte	.LVL35
+ 2704 02f4 0B000000 		.4byte	.LVL37-1
+ 2705 02f8 0100     		.2byte	0x1
+ 2706 02fa 51       		.byte	0x51
+ 2707 02fb 0B000000 		.4byte	.LVL37-1
+ 2708 02ff 28000000 		.4byte	.LFE7
+ 2709 0303 0400     		.2byte	0x4
+ 2710 0305 F3       		.byte	0xf3
+ 2711 0306 01       		.uleb128 0x1
+ 2712 0307 51       		.byte	0x51
+ 2713 0308 9F       		.byte	0x9f
+ 2714 0309 00000000 		.4byte	0
+ 2715 030d 00000000 		.4byte	0
+ 2716              	.LLST20:
+ 2717 0311 00000000 		.4byte	.LVL35
+ 2718 0315 0B000000 		.4byte	.LVL37-1
+ 2719 0319 0100     		.2byte	0x1
+ 2720 031b 52       		.byte	0x52
+ 2721 031c 0B000000 		.4byte	.LVL37-1
+ 2722 0320 28000000 		.4byte	.LFE7
+ 2723 0324 0400     		.2byte	0x4
+ 2724 0326 F3       		.byte	0xf3
+ 2725 0327 01       		.uleb128 0x1
+ 2726 0328 52       		.byte	0x52
+ 2727 0329 9F       		.byte	0x9f
+ 2728 032a 00000000 		.4byte	0
+ 2729 032e 00000000 		.4byte	0
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 52
+
+
+ 2730              	.LLST21:
+ 2731 0332 00000000 		.4byte	.LVL35
+ 2732 0336 0B000000 		.4byte	.LVL37-1
+ 2733 033a 0100     		.2byte	0x1
+ 2734 033c 53       		.byte	0x53
+ 2735 033d 0B000000 		.4byte	.LVL37-1
+ 2736 0341 26000000 		.4byte	.LVL44
+ 2737 0345 0100     		.2byte	0x1
+ 2738 0347 55       		.byte	0x55
+ 2739 0348 26000000 		.4byte	.LVL44
+ 2740 034c 28000000 		.4byte	.LFE7
+ 2741 0350 0400     		.2byte	0x4
+ 2742 0352 F3       		.byte	0xf3
+ 2743 0353 01       		.uleb128 0x1
+ 2744 0354 53       		.byte	0x53
+ 2745 0355 9F       		.byte	0x9f
+ 2746 0356 00000000 		.4byte	0
+ 2747 035a 00000000 		.4byte	0
+ 2748              	.LLST22:
+ 2749 035e 1E000000 		.4byte	.LVL40
+ 2750 0362 22000000 		.4byte	.LVL41
+ 2751 0366 0100     		.2byte	0x1
+ 2752 0368 50       		.byte	0x50
+ 2753 0369 22000000 		.4byte	.LVL41
+ 2754 036d 25000000 		.4byte	.LVL42-1
+ 2755 0371 0100     		.2byte	0x1
+ 2756 0373 52       		.byte	0x52
+ 2757 0374 00000000 		.4byte	0
+ 2758 0378 00000000 		.4byte	0
+ 2759              	.LLST23:
+ 2760 037c 00000000 		.4byte	.LVL45
+ 2761 0380 04000000 		.4byte	.LVL46
+ 2762 0384 0100     		.2byte	0x1
+ 2763 0386 50       		.byte	0x50
+ 2764 0387 04000000 		.4byte	.LVL46
+ 2765 038b 0B000000 		.4byte	.LVL47-1
+ 2766 038f 0300     		.2byte	0x3
+ 2767 0391 70       		.byte	0x70
+ 2768 0392 7D       		.sleb128 -3
+ 2769 0393 9F       		.byte	0x9f
+ 2770 0394 0B000000 		.4byte	.LVL47-1
+ 2771 0398 0E000000 		.4byte	.LFE8
+ 2772 039c 0400     		.2byte	0x4
+ 2773 039e F3       		.byte	0xf3
+ 2774 039f 01       		.uleb128 0x1
+ 2775 03a0 50       		.byte	0x50
+ 2776 03a1 9F       		.byte	0x9f
+ 2777 03a2 00000000 		.4byte	0
+ 2778 03a6 00000000 		.4byte	0
+ 2779              	.LLST24:
+ 2780 03aa 00000000 		.4byte	.LVL48
+ 2781 03ae 08000000 		.4byte	.LVL49
+ 2782 03b2 0100     		.2byte	0x1
+ 2783 03b4 50       		.byte	0x50
+ 2784 03b5 08000000 		.4byte	.LVL49
+ 2785 03b9 14000000 		.4byte	.LVL51
+ 2786 03bd 0100     		.2byte	0x1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 53
+
+
+ 2787 03bf 54       		.byte	0x54
+ 2788 03c0 14000000 		.4byte	.LVL51
+ 2789 03c4 26000000 		.4byte	.LVL56
+ 2790 03c8 0300     		.2byte	0x3
+ 2791 03ca 74       		.byte	0x74
+ 2792 03cb 7D       		.sleb128 -3
+ 2793 03cc 9F       		.byte	0x9f
+ 2794 03cd 26000000 		.4byte	.LVL56
+ 2795 03d1 28000000 		.4byte	.LFE9
+ 2796 03d5 0400     		.2byte	0x4
+ 2797 03d7 F3       		.byte	0xf3
+ 2798 03d8 01       		.uleb128 0x1
+ 2799 03d9 50       		.byte	0x50
+ 2800 03da 9F       		.byte	0x9f
+ 2801 03db 00000000 		.4byte	0
+ 2802 03df 00000000 		.4byte	0
+ 2803              	.LLST25:
+ 2804 03e3 00000000 		.4byte	.LVL48
+ 2805 03e7 0B000000 		.4byte	.LVL50-1
+ 2806 03eb 0100     		.2byte	0x1
+ 2807 03ed 51       		.byte	0x51
+ 2808 03ee 0B000000 		.4byte	.LVL50-1
+ 2809 03f2 28000000 		.4byte	.LFE9
+ 2810 03f6 0400     		.2byte	0x4
+ 2811 03f8 F3       		.byte	0xf3
+ 2812 03f9 01       		.uleb128 0x1
+ 2813 03fa 51       		.byte	0x51
+ 2814 03fb 9F       		.byte	0x9f
+ 2815 03fc 00000000 		.4byte	0
+ 2816 0400 00000000 		.4byte	0
+ 2817              	.LLST26:
+ 2818 0404 00000000 		.4byte	.LVL48
+ 2819 0408 0B000000 		.4byte	.LVL50-1
+ 2820 040c 0100     		.2byte	0x1
+ 2821 040e 52       		.byte	0x52
+ 2822 040f 0B000000 		.4byte	.LVL50-1
+ 2823 0413 28000000 		.4byte	.LFE9
+ 2824 0417 0400     		.2byte	0x4
+ 2825 0419 F3       		.byte	0xf3
+ 2826 041a 01       		.uleb128 0x1
+ 2827 041b 52       		.byte	0x52
+ 2828 041c 9F       		.byte	0x9f
+ 2829 041d 00000000 		.4byte	0
+ 2830 0421 00000000 		.4byte	0
+ 2831              	.LLST27:
+ 2832 0425 00000000 		.4byte	.LVL48
+ 2833 0429 0B000000 		.4byte	.LVL50-1
+ 2834 042d 0100     		.2byte	0x1
+ 2835 042f 53       		.byte	0x53
+ 2836 0430 0B000000 		.4byte	.LVL50-1
+ 2837 0434 26000000 		.4byte	.LVL57
+ 2838 0438 0100     		.2byte	0x1
+ 2839 043a 55       		.byte	0x55
+ 2840 043b 26000000 		.4byte	.LVL57
+ 2841 043f 28000000 		.4byte	.LFE9
+ 2842 0443 0400     		.2byte	0x4
+ 2843 0445 F3       		.byte	0xf3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 54
+
+
+ 2844 0446 01       		.uleb128 0x1
+ 2845 0447 53       		.byte	0x53
+ 2846 0448 9F       		.byte	0x9f
+ 2847 0449 00000000 		.4byte	0
+ 2848 044d 00000000 		.4byte	0
+ 2849              	.LLST28:
+ 2850 0451 1E000000 		.4byte	.LVL53
+ 2851 0455 22000000 		.4byte	.LVL54
+ 2852 0459 0100     		.2byte	0x1
+ 2853 045b 50       		.byte	0x50
+ 2854 045c 22000000 		.4byte	.LVL54
+ 2855 0460 25000000 		.4byte	.LVL55-1
+ 2856 0464 0100     		.2byte	0x1
+ 2857 0466 52       		.byte	0x52
+ 2858 0467 00000000 		.4byte	0
+ 2859 046b 00000000 		.4byte	0
+ 2860              	.LLST29:
+ 2861 046f 00000000 		.4byte	.LVL58
+ 2862 0473 04000000 		.4byte	.LVL59
+ 2863 0477 0100     		.2byte	0x1
+ 2864 0479 50       		.byte	0x50
+ 2865 047a 04000000 		.4byte	.LVL59
+ 2866 047e 0B000000 		.4byte	.LVL60-1
+ 2867 0482 0300     		.2byte	0x3
+ 2868 0484 70       		.byte	0x70
+ 2869 0485 7D       		.sleb128 -3
+ 2870 0486 9F       		.byte	0x9f
+ 2871 0487 0B000000 		.4byte	.LVL60-1
+ 2872 048b 0E000000 		.4byte	.LFE10
+ 2873 048f 0400     		.2byte	0x4
+ 2874 0491 F3       		.byte	0xf3
+ 2875 0492 01       		.uleb128 0x1
+ 2876 0493 50       		.byte	0x50
+ 2877 0494 9F       		.byte	0x9f
+ 2878 0495 00000000 		.4byte	0
+ 2879 0499 00000000 		.4byte	0
+ 2880              	.LLST30:
+ 2881 049d 00000000 		.4byte	.LVL61
+ 2882 04a1 08000000 		.4byte	.LVL62
+ 2883 04a5 0100     		.2byte	0x1
+ 2884 04a7 50       		.byte	0x50
+ 2885 04a8 08000000 		.4byte	.LVL62
+ 2886 04ac 14000000 		.4byte	.LVL64
+ 2887 04b0 0100     		.2byte	0x1
+ 2888 04b2 54       		.byte	0x54
+ 2889 04b3 14000000 		.4byte	.LVL64
+ 2890 04b7 26000000 		.4byte	.LVL69
+ 2891 04bb 0300     		.2byte	0x3
+ 2892 04bd 74       		.byte	0x74
+ 2893 04be 7D       		.sleb128 -3
+ 2894 04bf 9F       		.byte	0x9f
+ 2895 04c0 26000000 		.4byte	.LVL69
+ 2896 04c4 28000000 		.4byte	.LFE11
+ 2897 04c8 0400     		.2byte	0x4
+ 2898 04ca F3       		.byte	0xf3
+ 2899 04cb 01       		.uleb128 0x1
+ 2900 04cc 50       		.byte	0x50
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 55
+
+
+ 2901 04cd 9F       		.byte	0x9f
+ 2902 04ce 00000000 		.4byte	0
+ 2903 04d2 00000000 		.4byte	0
+ 2904              	.LLST31:
+ 2905 04d6 00000000 		.4byte	.LVL61
+ 2906 04da 0B000000 		.4byte	.LVL63-1
+ 2907 04de 0100     		.2byte	0x1
+ 2908 04e0 51       		.byte	0x51
+ 2909 04e1 0B000000 		.4byte	.LVL63-1
+ 2910 04e5 28000000 		.4byte	.LFE11
+ 2911 04e9 0400     		.2byte	0x4
+ 2912 04eb F3       		.byte	0xf3
+ 2913 04ec 01       		.uleb128 0x1
+ 2914 04ed 51       		.byte	0x51
+ 2915 04ee 9F       		.byte	0x9f
+ 2916 04ef 00000000 		.4byte	0
+ 2917 04f3 00000000 		.4byte	0
+ 2918              	.LLST32:
+ 2919 04f7 00000000 		.4byte	.LVL61
+ 2920 04fb 0B000000 		.4byte	.LVL63-1
+ 2921 04ff 0100     		.2byte	0x1
+ 2922 0501 52       		.byte	0x52
+ 2923 0502 0B000000 		.4byte	.LVL63-1
+ 2924 0506 28000000 		.4byte	.LFE11
+ 2925 050a 0400     		.2byte	0x4
+ 2926 050c F3       		.byte	0xf3
+ 2927 050d 01       		.uleb128 0x1
+ 2928 050e 52       		.byte	0x52
+ 2929 050f 9F       		.byte	0x9f
+ 2930 0510 00000000 		.4byte	0
+ 2931 0514 00000000 		.4byte	0
+ 2932              	.LLST33:
+ 2933 0518 00000000 		.4byte	.LVL61
+ 2934 051c 0B000000 		.4byte	.LVL63-1
+ 2935 0520 0100     		.2byte	0x1
+ 2936 0522 53       		.byte	0x53
+ 2937 0523 0B000000 		.4byte	.LVL63-1
+ 2938 0527 26000000 		.4byte	.LVL70
+ 2939 052b 0100     		.2byte	0x1
+ 2940 052d 55       		.byte	0x55
+ 2941 052e 26000000 		.4byte	.LVL70
+ 2942 0532 28000000 		.4byte	.LFE11
+ 2943 0536 0400     		.2byte	0x4
+ 2944 0538 F3       		.byte	0xf3
+ 2945 0539 01       		.uleb128 0x1
+ 2946 053a 53       		.byte	0x53
+ 2947 053b 9F       		.byte	0x9f
+ 2948 053c 00000000 		.4byte	0
+ 2949 0540 00000000 		.4byte	0
+ 2950              	.LLST34:
+ 2951 0544 1E000000 		.4byte	.LVL66
+ 2952 0548 22000000 		.4byte	.LVL67
+ 2953 054c 0100     		.2byte	0x1
+ 2954 054e 50       		.byte	0x50
+ 2955 054f 22000000 		.4byte	.LVL67
+ 2956 0553 25000000 		.4byte	.LVL68-1
+ 2957 0557 0100     		.2byte	0x1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 56
+
+
+ 2958 0559 52       		.byte	0x52
+ 2959 055a 00000000 		.4byte	0
+ 2960 055e 00000000 		.4byte	0
+ 2961              	.LLST35:
+ 2962 0562 00000000 		.4byte	.LVL71
+ 2963 0566 04000000 		.4byte	.LVL72
+ 2964 056a 0100     		.2byte	0x1
+ 2965 056c 50       		.byte	0x50
+ 2966 056d 04000000 		.4byte	.LVL72
+ 2967 0571 0B000000 		.4byte	.LVL73-1
+ 2968 0575 0300     		.2byte	0x3
+ 2969 0577 70       		.byte	0x70
+ 2970 0578 7D       		.sleb128 -3
+ 2971 0579 9F       		.byte	0x9f
+ 2972 057a 0B000000 		.4byte	.LVL73-1
+ 2973 057e 0E000000 		.4byte	.LFE12
+ 2974 0582 0400     		.2byte	0x4
+ 2975 0584 F3       		.byte	0xf3
+ 2976 0585 01       		.uleb128 0x1
+ 2977 0586 50       		.byte	0x50
+ 2978 0587 9F       		.byte	0x9f
+ 2979 0588 00000000 		.4byte	0
+ 2980 058c 00000000 		.4byte	0
+ 2981              	.LLST36:
+ 2982 0590 00000000 		.4byte	.LVL74
+ 2983 0594 08000000 		.4byte	.LVL75
+ 2984 0598 0100     		.2byte	0x1
+ 2985 059a 50       		.byte	0x50
+ 2986 059b 08000000 		.4byte	.LVL75
+ 2987 059f 1C000000 		.4byte	.LVL78
+ 2988 05a3 0100     		.2byte	0x1
+ 2989 05a5 54       		.byte	0x54
+ 2990 05a6 1C000000 		.4byte	.LVL78
+ 2991 05aa 20000000 		.4byte	.LFE13
+ 2992 05ae 0400     		.2byte	0x4
+ 2993 05b0 F3       		.byte	0xf3
+ 2994 05b1 01       		.uleb128 0x1
+ 2995 05b2 50       		.byte	0x50
+ 2996 05b3 9F       		.byte	0x9f
+ 2997 05b4 00000000 		.4byte	0
+ 2998 05b8 00000000 		.4byte	0
+ 2999              	.LLST37:
+ 3000 05bc 00000000 		.4byte	.LVL74
+ 3001 05c0 0B000000 		.4byte	.LVL76-1
+ 3002 05c4 0100     		.2byte	0x1
+ 3003 05c6 51       		.byte	0x51
+ 3004 05c7 0B000000 		.4byte	.LVL76-1
+ 3005 05cb 20000000 		.4byte	.LFE13
+ 3006 05cf 0400     		.2byte	0x4
+ 3007 05d1 F3       		.byte	0xf3
+ 3008 05d2 01       		.uleb128 0x1
+ 3009 05d3 51       		.byte	0x51
+ 3010 05d4 9F       		.byte	0x9f
+ 3011 05d5 00000000 		.4byte	0
+ 3012 05d9 00000000 		.4byte	0
+ 3013              	.LLST38:
+ 3014 05dd 00000000 		.4byte	.LVL74
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 57
+
+
+ 3015 05e1 0B000000 		.4byte	.LVL76-1
+ 3016 05e5 0100     		.2byte	0x1
+ 3017 05e7 52       		.byte	0x52
+ 3018 05e8 0B000000 		.4byte	.LVL76-1
+ 3019 05ec 20000000 		.4byte	.LFE13
+ 3020 05f0 0400     		.2byte	0x4
+ 3021 05f2 F3       		.byte	0xf3
+ 3022 05f3 01       		.uleb128 0x1
+ 3023 05f4 52       		.byte	0x52
+ 3024 05f5 9F       		.byte	0x9f
+ 3025 05f6 00000000 		.4byte	0
+ 3026 05fa 00000000 		.4byte	0
+ 3027              	.LLST39:
+ 3028 05fe 00000000 		.4byte	.LVL74
+ 3029 0602 0B000000 		.4byte	.LVL76-1
+ 3030 0606 0100     		.2byte	0x1
+ 3031 0608 53       		.byte	0x53
+ 3032 0609 0B000000 		.4byte	.LVL76-1
+ 3033 060d 20000000 		.4byte	.LFE13
+ 3034 0611 0400     		.2byte	0x4
+ 3035 0613 F3       		.byte	0xf3
+ 3036 0614 01       		.uleb128 0x1
+ 3037 0615 53       		.byte	0x53
+ 3038 0616 9F       		.byte	0x9f
+ 3039 0617 00000000 		.4byte	0
+ 3040 061b 00000000 		.4byte	0
+ 3041              	.LLST40:
+ 3042 061f 00000000 		.4byte	.LVL79
+ 3043 0623 02000000 		.4byte	.LVL80
+ 3044 0627 0100     		.2byte	0x1
+ 3045 0629 50       		.byte	0x50
+ 3046 062a 02000000 		.4byte	.LVL80
+ 3047 062e 04000000 		.4byte	.LFE14
+ 3048 0632 0400     		.2byte	0x4
+ 3049 0634 F3       		.byte	0xf3
+ 3050 0635 01       		.uleb128 0x1
+ 3051 0636 50       		.byte	0x50
+ 3052 0637 9F       		.byte	0x9f
+ 3053 0638 00000000 		.4byte	0
+ 3054 063c 00000000 		.4byte	0
+ 3055              	.LLST41:
+ 3056 0640 00000000 		.4byte	.LVL81
+ 3057 0644 08000000 		.4byte	.LVL82
+ 3058 0648 0100     		.2byte	0x1
+ 3059 064a 50       		.byte	0x50
+ 3060 064b 08000000 		.4byte	.LVL82
+ 3061 064f 1C000000 		.4byte	.LVL85
+ 3062 0653 0100     		.2byte	0x1
+ 3063 0655 54       		.byte	0x54
+ 3064 0656 1C000000 		.4byte	.LVL85
+ 3065 065a 20000000 		.4byte	.LFE15
+ 3066 065e 0400     		.2byte	0x4
+ 3067 0660 F3       		.byte	0xf3
+ 3068 0661 01       		.uleb128 0x1
+ 3069 0662 50       		.byte	0x50
+ 3070 0663 9F       		.byte	0x9f
+ 3071 0664 00000000 		.4byte	0
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 58
+
+
+ 3072 0668 00000000 		.4byte	0
+ 3073              	.LLST42:
+ 3074 066c 00000000 		.4byte	.LVL81
+ 3075 0670 0B000000 		.4byte	.LVL83-1
+ 3076 0674 0100     		.2byte	0x1
+ 3077 0676 51       		.byte	0x51
+ 3078 0677 0B000000 		.4byte	.LVL83-1
+ 3079 067b 20000000 		.4byte	.LFE15
+ 3080 067f 0400     		.2byte	0x4
+ 3081 0681 F3       		.byte	0xf3
+ 3082 0682 01       		.uleb128 0x1
+ 3083 0683 51       		.byte	0x51
+ 3084 0684 9F       		.byte	0x9f
+ 3085 0685 00000000 		.4byte	0
+ 3086 0689 00000000 		.4byte	0
+ 3087              	.LLST43:
+ 3088 068d 00000000 		.4byte	.LVL81
+ 3089 0691 0B000000 		.4byte	.LVL83-1
+ 3090 0695 0100     		.2byte	0x1
+ 3091 0697 52       		.byte	0x52
+ 3092 0698 0B000000 		.4byte	.LVL83-1
+ 3093 069c 20000000 		.4byte	.LFE15
+ 3094 06a0 0400     		.2byte	0x4
+ 3095 06a2 F3       		.byte	0xf3
+ 3096 06a3 01       		.uleb128 0x1
+ 3097 06a4 52       		.byte	0x52
+ 3098 06a5 9F       		.byte	0x9f
+ 3099 06a6 00000000 		.4byte	0
+ 3100 06aa 00000000 		.4byte	0
+ 3101              	.LLST44:
+ 3102 06ae 00000000 		.4byte	.LVL81
+ 3103 06b2 0B000000 		.4byte	.LVL83-1
+ 3104 06b6 0100     		.2byte	0x1
+ 3105 06b8 53       		.byte	0x53
+ 3106 06b9 0B000000 		.4byte	.LVL83-1
+ 3107 06bd 20000000 		.4byte	.LFE15
+ 3108 06c1 0400     		.2byte	0x4
+ 3109 06c3 F3       		.byte	0xf3
+ 3110 06c4 01       		.uleb128 0x1
+ 3111 06c5 53       		.byte	0x53
+ 3112 06c6 9F       		.byte	0x9f
+ 3113 06c7 00000000 		.4byte	0
+ 3114 06cb 00000000 		.4byte	0
+ 3115              	.LLST45:
+ 3116 06cf 00000000 		.4byte	.LVL86
+ 3117 06d3 02000000 		.4byte	.LVL87
+ 3118 06d7 0100     		.2byte	0x1
+ 3119 06d9 50       		.byte	0x50
+ 3120 06da 02000000 		.4byte	.LVL87
+ 3121 06de 04000000 		.4byte	.LFE16
+ 3122 06e2 0400     		.2byte	0x4
+ 3123 06e4 F3       		.byte	0xf3
+ 3124 06e5 01       		.uleb128 0x1
+ 3125 06e6 50       		.byte	0x50
+ 3126 06e7 9F       		.byte	0x9f
+ 3127 06e8 00000000 		.4byte	0
+ 3128 06ec 00000000 		.4byte	0
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 59
+
+
+ 3129              	.LLST46:
+ 3130 06f0 00000000 		.4byte	.LVL88
+ 3131 06f4 08000000 		.4byte	.LVL89
+ 3132 06f8 0100     		.2byte	0x1
+ 3133 06fa 50       		.byte	0x50
+ 3134 06fb 08000000 		.4byte	.LVL89
+ 3135 06ff 12000000 		.4byte	.LVL91
+ 3136 0703 0100     		.2byte	0x1
+ 3137 0705 54       		.byte	0x54
+ 3138 0706 12000000 		.4byte	.LVL91
+ 3139 070a 24000000 		.4byte	.LVL96
+ 3140 070e 0300     		.2byte	0x3
+ 3141 0710 74       		.byte	0x74
+ 3142 0711 7D       		.sleb128 -3
+ 3143 0712 9F       		.byte	0x9f
+ 3144 0713 24000000 		.4byte	.LVL96
+ 3145 0717 26000000 		.4byte	.LFE17
+ 3146 071b 0400     		.2byte	0x4
+ 3147 071d F3       		.byte	0xf3
+ 3148 071e 01       		.uleb128 0x1
+ 3149 071f 50       		.byte	0x50
+ 3150 0720 9F       		.byte	0x9f
+ 3151 0721 00000000 		.4byte	0
+ 3152 0725 00000000 		.4byte	0
+ 3153              	.LLST47:
+ 3154 0729 00000000 		.4byte	.LVL88
+ 3155 072d 0B000000 		.4byte	.LVL90-1
+ 3156 0731 0100     		.2byte	0x1
+ 3157 0733 51       		.byte	0x51
+ 3158 0734 0B000000 		.4byte	.LVL90-1
+ 3159 0738 26000000 		.4byte	.LFE17
+ 3160 073c 0400     		.2byte	0x4
+ 3161 073e F3       		.byte	0xf3
+ 3162 073f 01       		.uleb128 0x1
+ 3163 0740 51       		.byte	0x51
+ 3164 0741 9F       		.byte	0x9f
+ 3165 0742 00000000 		.4byte	0
+ 3166 0746 00000000 		.4byte	0
+ 3167              	.LLST48:
+ 3168 074a 00000000 		.4byte	.LVL88
+ 3169 074e 0B000000 		.4byte	.LVL90-1
+ 3170 0752 0100     		.2byte	0x1
+ 3171 0754 52       		.byte	0x52
+ 3172 0755 0B000000 		.4byte	.LVL90-1
+ 3173 0759 26000000 		.4byte	.LFE17
+ 3174 075d 0400     		.2byte	0x4
+ 3175 075f F3       		.byte	0xf3
+ 3176 0760 01       		.uleb128 0x1
+ 3177 0761 52       		.byte	0x52
+ 3178 0762 9F       		.byte	0x9f
+ 3179 0763 00000000 		.4byte	0
+ 3180 0767 00000000 		.4byte	0
+ 3181              	.LLST49:
+ 3182 076b 00000000 		.4byte	.LVL88
+ 3183 076f 0B000000 		.4byte	.LVL90-1
+ 3184 0773 0100     		.2byte	0x1
+ 3185 0775 53       		.byte	0x53
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 60
+
+
+ 3186 0776 0B000000 		.4byte	.LVL90-1
+ 3187 077a 24000000 		.4byte	.LVL97
+ 3188 077e 0100     		.2byte	0x1
+ 3189 0780 55       		.byte	0x55
+ 3190 0781 24000000 		.4byte	.LVL97
+ 3191 0785 26000000 		.4byte	.LFE17
+ 3192 0789 0400     		.2byte	0x4
+ 3193 078b F3       		.byte	0xf3
+ 3194 078c 01       		.uleb128 0x1
+ 3195 078d 53       		.byte	0x53
+ 3196 078e 9F       		.byte	0x9f
+ 3197 078f 00000000 		.4byte	0
+ 3198 0793 00000000 		.4byte	0
+ 3199              	.LLST50:
+ 3200 0797 1C000000 		.4byte	.LVL93
+ 3201 079b 20000000 		.4byte	.LVL94
+ 3202 079f 0100     		.2byte	0x1
+ 3203 07a1 50       		.byte	0x50
+ 3204 07a2 20000000 		.4byte	.LVL94
+ 3205 07a6 23000000 		.4byte	.LVL95-1
+ 3206 07aa 0100     		.2byte	0x1
+ 3207 07ac 52       		.byte	0x52
+ 3208 07ad 00000000 		.4byte	0
+ 3209 07b1 00000000 		.4byte	0
+ 3210              	.LLST51:
+ 3211 07b5 00000000 		.4byte	.LVL98
+ 3212 07b9 04000000 		.4byte	.LVL99
+ 3213 07bd 0100     		.2byte	0x1
+ 3214 07bf 50       		.byte	0x50
+ 3215 07c0 04000000 		.4byte	.LVL99
+ 3216 07c4 0B000000 		.4byte	.LVL100-1
+ 3217 07c8 0300     		.2byte	0x3
+ 3218 07ca 70       		.byte	0x70
+ 3219 07cb 7D       		.sleb128 -3
+ 3220 07cc 9F       		.byte	0x9f
+ 3221 07cd 0B000000 		.4byte	.LVL100-1
+ 3222 07d1 0E000000 		.4byte	.LFE18
+ 3223 07d5 0400     		.2byte	0x4
+ 3224 07d7 F3       		.byte	0xf3
+ 3225 07d8 01       		.uleb128 0x1
+ 3226 07d9 50       		.byte	0x50
+ 3227 07da 9F       		.byte	0x9f
+ 3228 07db 00000000 		.4byte	0
+ 3229 07df 00000000 		.4byte	0
+ 3230              	.LLST52:
+ 3231 07e3 00000000 		.4byte	.LVL101
+ 3232 07e7 08000000 		.4byte	.LVL102
+ 3233 07eb 0100     		.2byte	0x1
+ 3234 07ed 50       		.byte	0x50
+ 3235 07ee 08000000 		.4byte	.LVL102
+ 3236 07f2 12000000 		.4byte	.LVL104
+ 3237 07f6 0100     		.2byte	0x1
+ 3238 07f8 54       		.byte	0x54
+ 3239 07f9 12000000 		.4byte	.LVL104
+ 3240 07fd 24000000 		.4byte	.LVL109
+ 3241 0801 0300     		.2byte	0x3
+ 3242 0803 74       		.byte	0x74
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 61
+
+
+ 3243 0804 7D       		.sleb128 -3
+ 3244 0805 9F       		.byte	0x9f
+ 3245 0806 24000000 		.4byte	.LVL109
+ 3246 080a 26000000 		.4byte	.LFE19
+ 3247 080e 0400     		.2byte	0x4
+ 3248 0810 F3       		.byte	0xf3
+ 3249 0811 01       		.uleb128 0x1
+ 3250 0812 50       		.byte	0x50
+ 3251 0813 9F       		.byte	0x9f
+ 3252 0814 00000000 		.4byte	0
+ 3253 0818 00000000 		.4byte	0
+ 3254              	.LLST53:
+ 3255 081c 00000000 		.4byte	.LVL101
+ 3256 0820 0B000000 		.4byte	.LVL103-1
+ 3257 0824 0100     		.2byte	0x1
+ 3258 0826 51       		.byte	0x51
+ 3259 0827 0B000000 		.4byte	.LVL103-1
+ 3260 082b 26000000 		.4byte	.LFE19
+ 3261 082f 0400     		.2byte	0x4
+ 3262 0831 F3       		.byte	0xf3
+ 3263 0832 01       		.uleb128 0x1
+ 3264 0833 51       		.byte	0x51
+ 3265 0834 9F       		.byte	0x9f
+ 3266 0835 00000000 		.4byte	0
+ 3267 0839 00000000 		.4byte	0
+ 3268              	.LLST54:
+ 3269 083d 00000000 		.4byte	.LVL101
+ 3270 0841 0B000000 		.4byte	.LVL103-1
+ 3271 0845 0100     		.2byte	0x1
+ 3272 0847 52       		.byte	0x52
+ 3273 0848 0B000000 		.4byte	.LVL103-1
+ 3274 084c 26000000 		.4byte	.LFE19
+ 3275 0850 0400     		.2byte	0x4
+ 3276 0852 F3       		.byte	0xf3
+ 3277 0853 01       		.uleb128 0x1
+ 3278 0854 52       		.byte	0x52
+ 3279 0855 9F       		.byte	0x9f
+ 3280 0856 00000000 		.4byte	0
+ 3281 085a 00000000 		.4byte	0
+ 3282              	.LLST55:
+ 3283 085e 00000000 		.4byte	.LVL101
+ 3284 0862 0B000000 		.4byte	.LVL103-1
+ 3285 0866 0100     		.2byte	0x1
+ 3286 0868 53       		.byte	0x53
+ 3287 0869 0B000000 		.4byte	.LVL103-1
+ 3288 086d 24000000 		.4byte	.LVL110
+ 3289 0871 0100     		.2byte	0x1
+ 3290 0873 55       		.byte	0x55
+ 3291 0874 24000000 		.4byte	.LVL110
+ 3292 0878 26000000 		.4byte	.LFE19
+ 3293 087c 0400     		.2byte	0x4
+ 3294 087e F3       		.byte	0xf3
+ 3295 087f 01       		.uleb128 0x1
+ 3296 0880 53       		.byte	0x53
+ 3297 0881 9F       		.byte	0x9f
+ 3298 0882 00000000 		.4byte	0
+ 3299 0886 00000000 		.4byte	0
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 62
+
+
+ 3300              	.LLST56:
+ 3301 088a 1C000000 		.4byte	.LVL106
+ 3302 088e 20000000 		.4byte	.LVL107
+ 3303 0892 0100     		.2byte	0x1
+ 3304 0894 50       		.byte	0x50
+ 3305 0895 20000000 		.4byte	.LVL107
+ 3306 0899 23000000 		.4byte	.LVL108-1
+ 3307 089d 0100     		.2byte	0x1
+ 3308 089f 52       		.byte	0x52
+ 3309 08a0 00000000 		.4byte	0
+ 3310 08a4 00000000 		.4byte	0
+ 3311              	.LLST57:
+ 3312 08a8 00000000 		.4byte	.LVL111
+ 3313 08ac 04000000 		.4byte	.LVL112
+ 3314 08b0 0100     		.2byte	0x1
+ 3315 08b2 50       		.byte	0x50
+ 3316 08b3 04000000 		.4byte	.LVL112
+ 3317 08b7 0B000000 		.4byte	.LVL113-1
+ 3318 08bb 0300     		.2byte	0x3
+ 3319 08bd 70       		.byte	0x70
+ 3320 08be 7D       		.sleb128 -3
+ 3321 08bf 9F       		.byte	0x9f
+ 3322 08c0 0B000000 		.4byte	.LVL113-1
+ 3323 08c4 0E000000 		.4byte	.LFE20
+ 3324 08c8 0400     		.2byte	0x4
+ 3325 08ca F3       		.byte	0xf3
+ 3326 08cb 01       		.uleb128 0x1
+ 3327 08cc 50       		.byte	0x50
+ 3328 08cd 9F       		.byte	0x9f
+ 3329 08ce 00000000 		.4byte	0
+ 3330 08d2 00000000 		.4byte	0
+ 3331              		.section	.debug_aranges,"",%progbits
+ 3332 0000 BC000000 		.4byte	0xbc
+ 3333 0004 0200     		.2byte	0x2
+ 3334 0006 00000000 		.4byte	.Ldebug_info0
+ 3335 000a 04       		.byte	0x4
+ 3336 000b 00       		.byte	0
+ 3337 000c 0000     		.2byte	0
+ 3338 000e 0000     		.2byte	0
+ 3339 0010 00000000 		.4byte	.LFB0
+ 3340 0014 20000000 		.4byte	.LFE0-.LFB0
+ 3341 0018 00000000 		.4byte	.LFB1
+ 3342 001c 04000000 		.4byte	.LFE1-.LFB1
+ 3343 0020 00000000 		.4byte	.LFB2
+ 3344 0024 28000000 		.4byte	.LFE2-.LFB2
+ 3345 0028 00000000 		.4byte	.LFB3
+ 3346 002c 0E000000 		.4byte	.LFE3-.LFB3
+ 3347 0030 00000000 		.4byte	.LFB4
+ 3348 0034 06000000 		.4byte	.LFE4-.LFB4
+ 3349 0038 00000000 		.4byte	.LFB5
+ 3350 003c 28000000 		.4byte	.LFE5-.LFB5
+ 3351 0040 00000000 		.4byte	.LFB6
+ 3352 0044 10000000 		.4byte	.LFE6-.LFB6
+ 3353 0048 00000000 		.4byte	.LFB7
+ 3354 004c 28000000 		.4byte	.LFE7-.LFB7
+ 3355 0050 00000000 		.4byte	.LFB8
+ 3356 0054 0E000000 		.4byte	.LFE8-.LFB8
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 63
+
+
+ 3357 0058 00000000 		.4byte	.LFB9
+ 3358 005c 28000000 		.4byte	.LFE9-.LFB9
+ 3359 0060 00000000 		.4byte	.LFB10
+ 3360 0064 0E000000 		.4byte	.LFE10-.LFB10
+ 3361 0068 00000000 		.4byte	.LFB11
+ 3362 006c 28000000 		.4byte	.LFE11-.LFB11
+ 3363 0070 00000000 		.4byte	.LFB12
+ 3364 0074 0E000000 		.4byte	.LFE12-.LFB12
+ 3365 0078 00000000 		.4byte	.LFB13
+ 3366 007c 20000000 		.4byte	.LFE13-.LFB13
+ 3367 0080 00000000 		.4byte	.LFB14
+ 3368 0084 04000000 		.4byte	.LFE14-.LFB14
+ 3369 0088 00000000 		.4byte	.LFB15
+ 3370 008c 20000000 		.4byte	.LFE15-.LFB15
+ 3371 0090 00000000 		.4byte	.LFB16
+ 3372 0094 04000000 		.4byte	.LFE16-.LFB16
+ 3373 0098 00000000 		.4byte	.LFB17
+ 3374 009c 26000000 		.4byte	.LFE17-.LFB17
+ 3375 00a0 00000000 		.4byte	.LFB18
+ 3376 00a4 0E000000 		.4byte	.LFE18-.LFB18
+ 3377 00a8 00000000 		.4byte	.LFB19
+ 3378 00ac 26000000 		.4byte	.LFE19-.LFB19
+ 3379 00b0 00000000 		.4byte	.LFB20
+ 3380 00b4 0E000000 		.4byte	.LFE20-.LFB20
+ 3381 00b8 00000000 		.4byte	0
+ 3382 00bc 00000000 		.4byte	0
+ 3383              		.section	.debug_ranges,"",%progbits
+ 3384              	.Ldebug_ranges0:
+ 3385 0000 00000000 		.4byte	.LFB0
+ 3386 0004 20000000 		.4byte	.LFE0
+ 3387 0008 00000000 		.4byte	.LFB1
+ 3388 000c 04000000 		.4byte	.LFE1
+ 3389 0010 00000000 		.4byte	.LFB2
+ 3390 0014 28000000 		.4byte	.LFE2
+ 3391 0018 00000000 		.4byte	.LFB3
+ 3392 001c 0E000000 		.4byte	.LFE3
+ 3393 0020 00000000 		.4byte	.LFB4
+ 3394 0024 06000000 		.4byte	.LFE4
+ 3395 0028 00000000 		.4byte	.LFB5
+ 3396 002c 28000000 		.4byte	.LFE5
+ 3397 0030 00000000 		.4byte	.LFB6
+ 3398 0034 10000000 		.4byte	.LFE6
+ 3399 0038 00000000 		.4byte	.LFB7
+ 3400 003c 28000000 		.4byte	.LFE7
+ 3401 0040 00000000 		.4byte	.LFB8
+ 3402 0044 0E000000 		.4byte	.LFE8
+ 3403 0048 00000000 		.4byte	.LFB9
+ 3404 004c 28000000 		.4byte	.LFE9
+ 3405 0050 00000000 		.4byte	.LFB10
+ 3406 0054 0E000000 		.4byte	.LFE10
+ 3407 0058 00000000 		.4byte	.LFB11
+ 3408 005c 28000000 		.4byte	.LFE11
+ 3409 0060 00000000 		.4byte	.LFB12
+ 3410 0064 0E000000 		.4byte	.LFE12
+ 3411 0068 00000000 		.4byte	.LFB13
+ 3412 006c 20000000 		.4byte	.LFE13
+ 3413 0070 00000000 		.4byte	.LFB14
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 64
+
+
+ 3414 0074 04000000 		.4byte	.LFE14
+ 3415 0078 00000000 		.4byte	.LFB15
+ 3416 007c 20000000 		.4byte	.LFE15
+ 3417 0080 00000000 		.4byte	.LFB16
+ 3418 0084 04000000 		.4byte	.LFE16
+ 3419 0088 00000000 		.4byte	.LFB17
+ 3420 008c 26000000 		.4byte	.LFE17
+ 3421 0090 00000000 		.4byte	.LFB18
+ 3422 0094 0E000000 		.4byte	.LFE18
+ 3423 0098 00000000 		.4byte	.LFB19
+ 3424 009c 26000000 		.4byte	.LFE19
+ 3425 00a0 00000000 		.4byte	.LFB20
+ 3426 00a4 0E000000 		.4byte	.LFE20
+ 3427 00a8 00000000 		.4byte	0
+ 3428 00ac 00000000 		.4byte	0
+ 3429              		.section	.debug_line,"",%progbits
+ 3430              	.Ldebug_line0:
+ 3431 0000 D3020000 		.section	.debug_str,"MS",%progbits,1
+ 3431      02003B01 
+ 3431      00000201 
+ 3431      FB0E0D00 
+ 3431      01010101 
+ 3432              	.LASF42:
+ 3433 0000 64436F65 		.ascii	"dCoef\000"
+ 3433      6600
+ 3434              	.LASF20:
+ 3435 0006 7061636B 		.ascii	"packetToAssemble\000"
+ 3435      6574546F 
+ 3435      41737365 
+ 3435      6D626C65 
+ 3435      00
+ 3436              	.LASF27:
+ 3437 0017 50574D53 		.ascii	"PWMSet\000"
+ 3437      657400
+ 3438              	.LASF33:
+ 3439 001e 74617267 		.ascii	"target\000"
+ 3439      657400
+ 3440              	.LASF59:
+ 3441 0025 4465636F 		.ascii	"DecodeBytesToIntMSBFirst\000"
+ 3441      64654279 
+ 3441      74657354 
+ 3441      6F496E74 
+ 3441      4D534246 
+ 3442              	.LASF2:
+ 3443 003e 73686F72 		.ascii	"short int\000"
+ 3443      7420696E 
+ 3443      7400
+ 3444              	.LASF37:
+ 3445 0048 47657450 		.ascii	"GetPFromPacket\000"
+ 3445      46726F6D 
+ 3445      5061636B 
+ 3445      657400
+ 3446              	.LASF18:
+ 3447 0057 73697A65 		.ascii	"sizetype\000"
+ 3447      74797065 
+ 3447      00
+ 3448              	.LASF45:
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 65
+
+
+ 3449 0060 696E6974 		.ascii	"initMode\000"
+ 3449      4D6F6465 
+ 3449      00
+ 3450              	.LASF28:
+ 3451 0069 6E657874 		.ascii	"nextByte\000"
+ 3451      42797465 
+ 3451      00
+ 3452              	.LASF8:
+ 3453 0072 5F5F7569 		.ascii	"__uint32_t\000"
+ 3453      6E743332 
+ 3453      5F7400
+ 3454              	.LASF23:
+ 3455 007d 6D6F6465 		.ascii	"mode\000"
+ 3455      00
+ 3456              	.LASF4:
+ 3457 0082 5F5F7569 		.ascii	"__uint16_t\000"
+ 3457      6E743136 
+ 3457      5F7400
+ 3458              	.LASF40:
+ 3459 008d 47657449 		.ascii	"GetIFromPacket\000"
+ 3459      46726F6D 
+ 3459      5061636B 
+ 3459      657400
+ 3460              	.LASF31:
+ 3461 009c 47657444 		.ascii	"GetDirectionFromPacket\000"
+ 3461      69726563 
+ 3461      74696F6E 
+ 3461      46726F6D 
+ 3461      5061636B 
+ 3462              	.LASF36:
+ 3463 00b3 70436F65 		.ascii	"pCoef\000"
+ 3463      6600
+ 3464              	.LASF61:
+ 3465 00b9 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 3465      43313120 
+ 3465      352E342E 
+ 3465      31203230 
+ 3465      31363036 
+ 3466 00ec 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 3466      20726576 
+ 3466      6973696F 
+ 3466      6E203233 
+ 3466      37373135 
+ 3467 011f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 3467      66756E63 
+ 3467      74696F6E 
+ 3467      2D736563 
+ 3467      74696F6E 
+ 3468              	.LASF26:
+ 3469 0147 41737365 		.ascii	"AssemblePWMDirSetPacket\000"
+ 3469      6D626C65 
+ 3469      50574D44 
+ 3469      69725365 
+ 3469      74506163 
+ 3470              	.LASF13:
+ 3471 015f 75696E74 		.ascii	"uint8_t\000"
+ 3471      385F7400 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 66
+
+
+ 3472              	.LASF63:
+ 3473 0167 433A5C55 		.ascii	"C:\\Users\\Austcha\\Documents\\Husky Robotics\\Moto"
+ 3473      73657273 
+ 3473      5C417573 
+ 3473      74636861 
+ 3473      5C446F63 
+ 3474 0195 7220426F 		.ascii	"r Boards\\Rev3\\Motor-Unit-Firmware-A-2019-2020\\Mo"
+ 3474      61726473 
+ 3474      5C526576 
+ 3474      335C4D6F 
+ 3474      746F722D 
+ 3475 01c5 746F7220 		.ascii	"tor Unit\\Motor_Board_Rev3_CAN_Send.cydsn\000"
+ 3475      556E6974 
+ 3475      5C4D6F74 
+ 3475      6F725F42 
+ 3475      6F617264 
+ 3476              	.LASF24:
+ 3477 01ee 7061636B 		.ascii	"packet\000"
+ 3477      657400
+ 3478              	.LASF50:
+ 3479 01f5 41737365 		.ascii	"AssembleEncoderPPJRSetPacket\000"
+ 3479      6D626C65 
+ 3479      456E636F 
+ 3479      64657250 
+ 3479      504A5253 
+ 3480              	.LASF10:
+ 3481 0212 6C6F6E67 		.ascii	"long long int\000"
+ 3481      206C6F6E 
+ 3481      6720696E 
+ 3481      7400
+ 3482              	.LASF55:
+ 3483 0220 4765744D 		.ascii	"GetMaxJointRevolutionsFromPacket\000"
+ 3483      61784A6F 
+ 3483      696E7452 
+ 3483      65766F6C 
+ 3483      7574696F 
+ 3484              	.LASF19:
+ 3485 0241 43414E50 		.ascii	"CANPacket\000"
+ 3485      61636B65 
+ 3485      7400
+ 3486              	.LASF7:
+ 3487 024b 6C6F6E67 		.ascii	"long int\000"
+ 3487      20696E74 
+ 3487      00
+ 3488              	.LASF35:
+ 3489 0254 41737365 		.ascii	"AssemblePSetPacket\000"
+ 3489      6D626C65 
+ 3489      50536574 
+ 3489      5061636B 
+ 3489      657400
+ 3490              	.LASF48:
+ 3491 0267 73776974 		.ascii	"switches\000"
+ 3491      63686573 
+ 3491      00
+ 3492              	.LASF25:
+ 3493 0270 41737365 		.ascii	"AssembleModeSetPacket\000"
+ 3493      6D626C65 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 67
+
+
+ 3493      4D6F6465 
+ 3493      53657450 
+ 3493      61636B65 
+ 3494              	.LASF3:
+ 3495 0286 5F5F7569 		.ascii	"__uint8_t\000"
+ 3495      6E74385F 
+ 3495      7400
+ 3496              	.LASF30:
+ 3497 0290 47657450 		.ascii	"GetPWMFromPacket\000"
+ 3497      574D4672 
+ 3497      6F6D5061 
+ 3497      636B6574 
+ 3497      00
+ 3498              	.LASF52:
+ 3499 02a1 47657445 		.ascii	"GetEncoderPPJRFromPacket\000"
+ 3499      6E636F64 
+ 3499      65725050 
+ 3499      4A524672 
+ 3499      6F6D5061 
+ 3500              	.LASF56:
+ 3501 02ba 436F6E73 		.ascii	"ConstructCANID\000"
+ 3501      74727563 
+ 3501      7443414E 
+ 3501      494400
+ 3502              	.LASF1:
+ 3503 02c9 756E7369 		.ascii	"unsigned char\000"
+ 3503      676E6564 
+ 3503      20636861 
+ 3503      7200
+ 3504              	.LASF60:
+ 3505 02d7 57726974 		.ascii	"WriteSenderSerialAndPacketID\000"
+ 3505      6553656E 
+ 3505      64657253 
+ 3505      65726961 
+ 3505      6C416E64 
+ 3506              	.LASF0:
+ 3507 02f4 7369676E 		.ascii	"signed char\000"
+ 3507      65642063 
+ 3507      68617200 
+ 3508              	.LASF11:
+ 3509 0300 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3509      206C6F6E 
+ 3509      6720756E 
+ 3509      7369676E 
+ 3509      65642069 
+ 3510              	.LASF16:
+ 3511 0317 75696E74 		.ascii	"uint32_t\000"
+ 3511      33325F74 
+ 3511      00
+ 3512              	.LASF12:
+ 3513 0320 756E7369 		.ascii	"unsigned int\000"
+ 3513      676E6564 
+ 3513      20696E74 
+ 3513      00
+ 3514              	.LASF14:
+ 3515 032d 75696E74 		.ascii	"uint16_t\000"
+ 3515      31365F74 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 68
+
+
+ 3515      00
+ 3516              	.LASF21:
+ 3517 0336 74617267 		.ascii	"targetDeviceGroup\000"
+ 3517      65744465 
+ 3517      76696365 
+ 3517      47726F75 
+ 3517      7000
+ 3518              	.LASF62:
+ 3519 0348 2E2E5C43 		.ascii	"..\\CANLib\\CANMotorUnit.c\000"
+ 3519      414E4C69 
+ 3519      625C4341 
+ 3519      4E4D6F74 
+ 3519      6F72556E 
+ 3520              	.LASF5:
+ 3521 0361 73686F72 		.ascii	"short unsigned int\000"
+ 3521      7420756E 
+ 3521      7369676E 
+ 3521      65642069 
+ 3521      6E7400
+ 3522              	.LASF22:
+ 3523 0374 74617267 		.ascii	"targetDeviceSerial\000"
+ 3523      65744465 
+ 3523      76696365 
+ 3523      53657269 
+ 3523      616C00
+ 3524              	.LASF29:
+ 3525 0387 4765744D 		.ascii	"GetModeFromPacket\000"
+ 3525      6F646546 
+ 3525      726F6D50 
+ 3525      61636B65 
+ 3525      7400
+ 3526              	.LASF15:
+ 3527 0399 696E7433 		.ascii	"int32_t\000"
+ 3527      325F7400 
+ 3528              	.LASF51:
+ 3529 03a1 70756C73 		.ascii	"pulses\000"
+ 3529      657300
+ 3530              	.LASF17:
+ 3531 03a8 64617461 		.ascii	"data\000"
+ 3531      00
+ 3532              	.LASF32:
+ 3533 03ad 41737365 		.ascii	"AssemblePIDTargetSetPacket\000"
+ 3533      6D626C65 
+ 3533      50494454 
+ 3533      61726765 
+ 3533      74536574 
+ 3534              	.LASF9:
+ 3535 03c8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3535      20756E73 
+ 3535      69676E65 
+ 3535      6420696E 
+ 3535      7400
+ 3536              	.LASF39:
+ 3537 03da 69436F65 		.ascii	"iCoef\000"
+ 3537      6600
+ 3538              	.LASF47:
+ 3539 03e0 41737365 		.ascii	"AssembleLimitSwitchAlertPacket\000"
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 69
+
+
+ 3539      6D626C65 
+ 3539      4C696D69 
+ 3539      74537769 
+ 3539      74636841 
+ 3540              	.LASF46:
+ 3541 03ff 47657449 		.ascii	"GetInitModeFromPacket\000"
+ 3541      6E69744D 
+ 3541      6F646546 
+ 3541      726F6D50 
+ 3541      61636B65 
+ 3542              	.LASF6:
+ 3543 0415 5F5F696E 		.ascii	"__int32_t\000"
+ 3543      7433325F 
+ 3543      7400
+ 3544              	.LASF43:
+ 3545 041f 47657444 		.ascii	"GetDFromPacket\000"
+ 3545      46726F6D 
+ 3545      5061636B 
+ 3545      657400
+ 3546              	.LASF44:
+ 3547 042e 41737365 		.ascii	"AssembleInitializePacket\000"
+ 3547      6D626C65 
+ 3547      496E6974 
+ 3547      69616C69 
+ 3547      7A655061 
+ 3548              	.LASF53:
+ 3549 0447 41737365 		.ascii	"AssembleMaxJointRevolutionPacket\000"
+ 3549      6D626C65 
+ 3549      4D61784A 
+ 3549      6F696E74 
+ 3549      5265766F 
+ 3550              	.LASF57:
+ 3551 0468 57726974 		.ascii	"WritePacketIDOnly\000"
+ 3551      65506163 
+ 3551      6B657449 
+ 3551      444F6E6C 
+ 3551      7900
+ 3552              	.LASF34:
+ 3553 047a 47657450 		.ascii	"GetPIDTargetFromPacket\000"
+ 3553      49445461 
+ 3553      72676574 
+ 3553      46726F6D 
+ 3553      5061636B 
+ 3554              	.LASF58:
+ 3555 0491 5061636B 		.ascii	"PackIntIntoDataMSBFirst\000"
+ 3555      496E7449 
+ 3555      6E746F44 
+ 3555      6174614D 
+ 3555      53424669 
+ 3556              	.LASF38:
+ 3557 04a9 41737365 		.ascii	"AssembleISetPacket\000"
+ 3557      6D626C65 
+ 3557      49536574 
+ 3557      5061636B 
+ 3557      657400
+ 3558              	.LASF41:
+ 3559 04bc 41737365 		.ascii	"AssembleDSetPacket\000"
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccIYKIEb.s 			page 70
+
+
+ 3559      6D626C65 
+ 3559      44536574 
+ 3559      5061636B 
+ 3559      657400
+ 3560              	.LASF54:
+ 3561 04cf 7265766F 		.ascii	"revolutions\000"
+ 3561      6C757469 
+ 3561      6F6E7300 
+ 3562              	.LASF49:
+ 3563 04db 4765744C 		.ascii	"GetLimStatusFromPacket\000"
+ 3563      696D5374 
+ 3563      61747573 
+ 3563      46726F6D 
+ 3563      5061636B 
+ 3564              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

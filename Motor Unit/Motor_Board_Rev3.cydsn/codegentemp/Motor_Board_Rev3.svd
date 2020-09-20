@@ -7,6 +7,2044 @@
   <width>32</width>
   <peripherals>
     <peripheral>
+      <name>Can_addr</name>
+      <description>No description available</description>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x0</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>Can_addr_STATUS_REG</name>
+          <description>No description available</description>
+          <addressOffset>0x400F0062</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>Can_addr_MASK_REG</name>
+          <description>No description available</description>
+          <addressOffset>0x400F0082</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>Can_addr_STATUS_AUX_CTL_REG</name>
+          <description>No description available</description>
+          <addressOffset>0x400F0092</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>FIFO0</name>
+              <description>FIFO0 clear</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>ENABLED</name>
+                  <description>Enable counter</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DISABLED</name>
+                  <description>Disable counter</description>
+                  <value>0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>INTRENBL</name>
+              <description>Enables or disables the Interrupt</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>ENABLED</name>
+                  <description>Interrupt enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DISABLED</name>
+                  <description>Interrupt disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO1LEVEL</name>
+              <description>FIFO level</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>ENABLED</name>
+                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DISABLED</name>
+                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
+                  <value>0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO0LEVEL</name>
+              <description>FIFO level</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>ENABLED</name>
+                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DISABLED</name>
+                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
+                  <value>0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO1CLEAR</name>
+              <description>FIFO clear</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>ENABLED</name>
+                  <description>Clear FIFO state</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DISABLED</name>
+                  <description>Normal FIFO operation</description>
+                  <value>0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO0CLEAR</name>
+              <description>FIFO clear</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>ENABLED</name>
+                  <description>Clear FIFO state</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>DISABLED</name>
+                  <description>Normal FIFO operation</description>
+                  <value>0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>ADC_SAR_Seq_1</name>
+      <description>Sequencing SAR ADC</description>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x0</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>CTRL</name>
+          <description>Analog control register</description>
+          <addressOffset>0x403A0000</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>VREF_SEL</name>
+              <description>SARADC internal VREF selection</description>
+              <lsb>4</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>VREF_BYP_CAP_EN</name>
+              <description>VREF bypass cap enable for when VREF buffer is on</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>NEG_SEL</name>
+              <description>SARADC internal NEG selection for Single ended conversion</description>
+              <lsb>9</lsb>
+              <msb>11</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SAR_HW_CTRL_NEGVREF</name>
+              <description>Hardware control: 0=firmware, 1=hardware.</description>
+              <lsb>13</lsb>
+              <msb>13</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PWR_CTRL_VREF</name>
+              <description>VREF buffer low power mode.</description>
+              <lsb>14</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SPARE</name>
+              <description>Spare controls</description>
+              <lsb>16</lsb>
+              <msb>19</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ICONT_LV</name>
+              <description>SARADC low power mode</description>
+              <lsb>24</lsb>
+              <msb>25</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_SYNC_CONFIG</name>
+              <description>Synchronize the DSI config signals to peripheral clock domain</description>
+              <lsb>28</lsb>
+              <msb>28</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_MODE</name>
+              <description>SAR sequencer takes configuration from DSI signals</description>
+              <lsb>29</lsb>
+              <msb>29</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SWITCH_DISABLE</name>
+              <description>Disable SAR sequencer from enabling routing switches</description>
+              <lsb>30</lsb>
+              <msb>30</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ENABLED</name>
+              <description>0: SAR IP disabled, 1: SAR IP enabled.</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SAMPLE_CTRL</name>
+          <description>Sample control register</description>
+          <addressOffset>0x403A0004</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>SUB_RESOLUTION</name>
+              <description>Conversion resolution for channels that have sub-resolution enabled (RESOLUTION=1) (otherwise resolution is 12-bit).</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LEFT_ALIGN</name>
+              <description>Left align data in data[15:0], default data is right aligned in data[11:0], with sign extension to 16 bits if the channel is differential.</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SINGLE_ENDED_SIGNED</name>
+              <description>Output data from a single ended conversion as a signed value</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DIFFERENTIAL_SIGNED</name>
+              <description>Output data from a differential conversion as a signed value</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AVG_CNT</name>
+              <description>Averaging Count for channels that have over sampling enabled</description>
+              <lsb>4</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AVG_SHIFT</name>
+              <description>Averaging shifting: after averaging the result is shifted right to fit in the sample resolution, i.e. 12 bits.</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CONTINUOUS</name>
+              <description>0: Wait for next FW_TRIGGER or hardware trigger before scanning enabled channels. 1: Continuously scan enabled channels..</description>
+              <lsb>16</lsb>
+              <msb>16</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_TRIGGER_EN</name>
+              <description>0: firmware trigger only, 1: enable hardware (DSI) trigger.</description>
+              <lsb>17</lsb>
+              <msb>17</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_TRIGGER_LEVEL</name>
+              <description>0: DSI trigger signal is a pulse input, 1: DSI trigger signal is a level inpu.t</description>
+              <lsb>18</lsb>
+              <msb>18</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_SYNC_TRIGGER</name>
+              <description>0: bypass clock domain synchronisation of the DSI trigger signal, 1: synchronize the DSI trigger signal to the SAR clock domain.</description>
+              <lsb>19</lsb>
+              <msb>19</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EOS_DSI_OUT_EN</name>
+              <description>Enable to output EOS_INTR to DSI</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SAMPLE_TIME01</name>
+          <description>Sample time specification ST0 and ST1</description>
+          <addressOffset>0x403A0010</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>SAMPLE_TIME0</name>
+              <description>Sample time0 (aperture) in ADC clock cycles</description>
+              <lsb>0</lsb>
+              <msb>9</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SAMPLE_TIME1</name>
+              <description>Sample time1</description>
+              <lsb>16</lsb>
+              <msb>25</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SAMPLE_TIME23</name>
+          <description>Sample time specification ST2 and ST3</description>
+          <addressOffset>0x403A0014</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>SAMPLE_TIME2</name>
+              <description>Sample time2</description>
+              <lsb>0</lsb>
+              <msb>9</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SAMPLE_TIME3</name>
+              <description>Sample time3</description>
+              <lsb>16</lsb>
+              <msb>25</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RANGE_THRES</name>
+          <description>Global range detect threshold register</description>
+          <addressOffset>0x403A0018</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RANGE_LOW</name>
+              <description>Low threshold for range detect</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RANGE_HIGH</name>
+              <description>High threshold for range detect</description>
+              <lsb>16</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RANGE_COND</name>
+          <description>Global range detect mode register</description>
+          <addressOffset>0x403A001C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RANGE_COND</name>
+              <description>Range condition select</description>
+              <lsb>30</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_EN</name>
+          <description>Enable bits for the channels</description>
+          <addressOffset>0x403A0020</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>CHAN_EN</name>
+              <description>Channel enable. 0: the corresponding channel is disabled. 1: the corresponding channel is enabled, it will be included in the next scan.</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>START_CTRL</name>
+          <description>Start control register (firmware trigger)</description>
+          <addressOffset>0x403A0024</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>FW_TRIGGER</name>
+              <description>When firmware writes a 1 here it will trigger the next scan of enabled channels</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DFT_CTRL</name>
+          <description>DFT control register</description>
+          <addressOffset>0x403A0030</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>CHAN_CONFIG0</name>
+          <description>Channel0 configuration register</description>
+          <addressOffset>0x403A0080</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>PIN_ADDR</name>
+              <description>Address of the pin to be sampled by this channel</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PORT_ADDR</name>
+              <description>Address of the port that contains the pin to be sampled by this channel</description>
+              <lsb>4</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DIFFERENTIAL_EN</name>
+              <description>Differential enable for this channel</description>
+              <lsb>8</lsb>
+              <msb>8</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RESOLUTION</name>
+              <description>Resolution for this channel</description>
+              <lsb>9</lsb>
+              <msb>9</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AVG_EN</name>
+              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
+              <lsb>10</lsb>
+              <msb>10</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SAMPLE_TIME_SEL</name>
+              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
+              <lsb>12</lsb>
+              <msb>13</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_OUT_EN</name>
+              <description>DSI data output enable for this channel</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_CONFIG1</name>
+          <description>Channel1 configuration register</description>
+          <addressOffset>0x403A0084</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>PIN_ADDR</name>
+              <description>Address of the pin to be sampled by this channel</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PORT_ADDR</name>
+              <description>Address of the port that contains the pin to be sampled by this channel</description>
+              <lsb>4</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DIFFERENTIAL_EN</name>
+              <description>Differential enable for this channel</description>
+              <lsb>8</lsb>
+              <msb>8</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RESOLUTION</name>
+              <description>Resolution for this channel</description>
+              <lsb>9</lsb>
+              <msb>9</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AVG_EN</name>
+              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
+              <lsb>10</lsb>
+              <msb>10</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SAMPLE_TIME_SEL</name>
+              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
+              <lsb>12</lsb>
+              <msb>13</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_OUT_EN</name>
+              <description>DSI data output enable for this channel</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_CONFIG2</name>
+          <description>Channel2 configuration register</description>
+          <addressOffset>0x403A0088</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>PIN_ADDR</name>
+              <description>Address of the pin to be sampled by this channel</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PORT_ADDR</name>
+              <description>Address of the port that contains the pin to be sampled by this channel</description>
+              <lsb>4</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DIFFERENTIAL_EN</name>
+              <description>Differential enable for this channel</description>
+              <lsb>8</lsb>
+              <msb>8</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RESOLUTION</name>
+              <description>Resolution for this channel</description>
+              <lsb>9</lsb>
+              <msb>9</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AVG_EN</name>
+              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
+              <lsb>10</lsb>
+              <msb>10</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SAMPLE_TIME_SEL</name>
+              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
+              <lsb>12</lsb>
+              <msb>13</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_OUT_EN</name>
+              <description>DSI data output enable for this channel</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_CONFIG3</name>
+          <description>Channel3 configuration register</description>
+          <addressOffset>0x403A008C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>PIN_ADDR</name>
+              <description>Address of the pin to be sampled by this channel</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PORT_ADDR</name>
+              <description>Address of the port that contains the pin to be sampled by this channel</description>
+              <lsb>4</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DIFFERENTIAL_EN</name>
+              <description>Differential enable for this channel</description>
+              <lsb>8</lsb>
+              <msb>8</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RESOLUTION</name>
+              <description>Resolution for this channel</description>
+              <lsb>9</lsb>
+              <msb>9</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AVG_EN</name>
+              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
+              <lsb>10</lsb>
+              <msb>10</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SAMPLE_TIME_SEL</name>
+              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
+              <lsb>12</lsb>
+              <msb>13</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_OUT_EN</name>
+              <description>DSI data output enable for this channel</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_CONFIG4</name>
+          <description>Channel4 configuration register</description>
+          <addressOffset>0x403A0090</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>PIN_ADDR</name>
+              <description>Address of the pin to be sampled by this channel</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PORT_ADDR</name>
+              <description>Address of the port that contains the pin to be sampled by this channel</description>
+              <lsb>4</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DIFFERENTIAL_EN</name>
+              <description>Differential enable for this channel</description>
+              <lsb>8</lsb>
+              <msb>8</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RESOLUTION</name>
+              <description>Resolution for this channel</description>
+              <lsb>9</lsb>
+              <msb>9</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AVG_EN</name>
+              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
+              <lsb>10</lsb>
+              <msb>10</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SAMPLE_TIME_SEL</name>
+              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
+              <lsb>12</lsb>
+              <msb>13</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_OUT_EN</name>
+              <description>DSI data output enable for this channel</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_CONFIG5</name>
+          <description>Channel5 configuration register</description>
+          <addressOffset>0x403A0094</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>PIN_ADDR</name>
+              <description>Address of the pin to be sampled by this channel</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PORT_ADDR</name>
+              <description>Address of the port that contains the pin to be sampled by this channel</description>
+              <lsb>4</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DIFFERENTIAL_EN</name>
+              <description>Differential enable for this channel</description>
+              <lsb>8</lsb>
+              <msb>8</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RESOLUTION</name>
+              <description>Resolution for this channel</description>
+              <lsb>9</lsb>
+              <msb>9</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AVG_EN</name>
+              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
+              <lsb>10</lsb>
+              <msb>10</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SAMPLE_TIME_SEL</name>
+              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
+              <lsb>12</lsb>
+              <msb>13</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_OUT_EN</name>
+              <description>DSI data output enable for this channel</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_CONFIG6</name>
+          <description>Channel6 configuration register</description>
+          <addressOffset>0x403A0098</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>PIN_ADDR</name>
+              <description>Address of the pin to be sampled by this channel</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PORT_ADDR</name>
+              <description>Address of the port that contains the pin to be sampled by this channel</description>
+              <lsb>4</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DIFFERENTIAL_EN</name>
+              <description>Differential enable for this channel</description>
+              <lsb>8</lsb>
+              <msb>8</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RESOLUTION</name>
+              <description>Resolution for this channel</description>
+              <lsb>9</lsb>
+              <msb>9</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AVG_EN</name>
+              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
+              <lsb>10</lsb>
+              <msb>10</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SAMPLE_TIME_SEL</name>
+              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
+              <lsb>12</lsb>
+              <msb>13</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_OUT_EN</name>
+              <description>DSI data output enable for this channel</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_CONFIG7</name>
+          <description>Channel7 configuration register</description>
+          <addressOffset>0x403A009C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>PIN_ADDR</name>
+              <description>Address of the pin to be sampled by this channel</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PORT_ADDR</name>
+              <description>Address of the port that contains the pin to be sampled by this channel</description>
+              <lsb>4</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DIFFERENTIAL_EN</name>
+              <description>Differential enable for this channel</description>
+              <lsb>8</lsb>
+              <msb>8</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RESOLUTION</name>
+              <description>Resolution for this channel</description>
+              <lsb>9</lsb>
+              <msb>9</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>AVG_EN</name>
+              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
+              <lsb>10</lsb>
+              <msb>10</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SAMPLE_TIME_SEL</name>
+              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
+              <lsb>12</lsb>
+              <msb>13</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_OUT_EN</name>
+              <description>DSI data output enable for this channel</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_WORK0</name>
+          <description>Channel0 working data register</description>
+          <addressOffset>0x403A0100</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>WORK</name>
+              <description>SAR conversion working data of the channel</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_WORK_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_WORK1</name>
+          <description>Channel1 working data register</description>
+          <addressOffset>0x403A0104</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>WORK</name>
+              <description>SAR conversion working data of the channel</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_WORK_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_WORK2</name>
+          <description>Channel2 working data register</description>
+          <addressOffset>0x403A0108</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>WORK</name>
+              <description>SAR conversion working data of the channel</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_WORK_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_WORK3</name>
+          <description>Channel3 working data register</description>
+          <addressOffset>0x403A010C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>WORK</name>
+              <description>SAR conversion working data of the channel</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_WORK_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_WORK4</name>
+          <description>Channel4 working data register</description>
+          <addressOffset>0x403A0110</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>WORK</name>
+              <description>SAR conversion working data of the channel</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_WORK_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_WORK5</name>
+          <description>Channel5 working data register</description>
+          <addressOffset>0x403A0114</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>WORK</name>
+              <description>SAR conversion working data of the channel</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_WORK_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_WORK6</name>
+          <description>Channel6 working data register</description>
+          <addressOffset>0x403A0118</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>WORK</name>
+              <description>SAR conversion working data of the channel</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_WORK_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_WORK7</name>
+          <description>Channel7 working data register</description>
+          <addressOffset>0x403A011C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>WORK</name>
+              <description>SAR conversion working data of the channel</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_WORK_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_RESULT0</name>
+          <description>Channel0 result data register</description>
+          <addressOffset>0x403A0180</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RESULT</name>
+              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SATURATE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>29</lsb>
+              <msb>29</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RANGE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
+              <lsb>30</lsb>
+              <msb>30</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_RESULT_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_RESULT1</name>
+          <description>Channel1 result data register</description>
+          <addressOffset>0x403A0184</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RESULT</name>
+              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SATURATE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>29</lsb>
+              <msb>29</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RANGE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
+              <lsb>30</lsb>
+              <msb>30</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_RESULT_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_RESULT2</name>
+          <description>Channel2 result data register</description>
+          <addressOffset>0x403A0188</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RESULT</name>
+              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SATURATE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>29</lsb>
+              <msb>29</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RANGE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
+              <lsb>30</lsb>
+              <msb>30</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_RESULT_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_RESULT3</name>
+          <description>Channel3 result data register</description>
+          <addressOffset>0x403A018C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RESULT</name>
+              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SATURATE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>29</lsb>
+              <msb>29</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RANGE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
+              <lsb>30</lsb>
+              <msb>30</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_RESULT_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_RESULT4</name>
+          <description>Channel4 result data register</description>
+          <addressOffset>0x403A0190</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RESULT</name>
+              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SATURATE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>29</lsb>
+              <msb>29</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RANGE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
+              <lsb>30</lsb>
+              <msb>30</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_RESULT_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_RESULT5</name>
+          <description>Channel5 result data register</description>
+          <addressOffset>0x403A0194</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RESULT</name>
+              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SATURATE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>29</lsb>
+              <msb>29</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RANGE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
+              <lsb>30</lsb>
+              <msb>30</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_RESULT_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_RESULT6</name>
+          <description>Channel6 result data register</description>
+          <addressOffset>0x403A0198</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RESULT</name>
+              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SATURATE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>29</lsb>
+              <msb>29</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RANGE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
+              <lsb>30</lsb>
+              <msb>30</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_RESULT_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_RESULT7</name>
+          <description>Channel7 result data register</description>
+          <addressOffset>0x403A019C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RESULT</name>
+              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>SATURATE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>29</lsb>
+              <msb>29</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RANGE_INTR_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
+              <lsb>30</lsb>
+              <msb>30</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>CHAN_RESULT_VALID_MIR</name>
+              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
+              <lsb>31</lsb>
+              <msb>31</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_WORK_VALID</name>
+          <description>Channel working data register valid bits</description>
+          <addressOffset>0x403A0200</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>CHAN_WORK_VALID</name>
+              <description>If set the corresponding WORK data is valid, i.e. was already sampled during the current scan.</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CHAN_RESULT_VALID</name>
+          <description>Channel result data register valid bits</description>
+          <addressOffset>0x403A0204</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>CHAN_RESULT_VALID</name>
+              <description>If set the corresponding RESULT data is valid, i.e. was sampled during the last scan.</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>STATUS</name>
+          <description>Current status of internal SAR registers (mostly for debug)</description>
+          <addressOffset>0x403A0208</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>AVG_STAT</name>
+          <description>Current averaging status (for debug)</description>
+          <addressOffset>0x403A020C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>INTR</name>
+          <description>Interrupt request register</description>
+          <addressOffset>0x403A0210</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>EOS_INTR</name>
+              <description>End Of Scan Interrupt</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OVERFLOW_INTR</name>
+              <description>Overflow Interrupt</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FW_COLLISION_INTR</name>
+              <description>Firmware Collision Interrupt</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_COLLISION_INTR</name>
+              <description>DSI Collision Interrupt</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_EOC_INTR</name>
+              <description>Injection End of Conversion Interrupt</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_SATURATE_INTR</name>
+              <description>Injection Saturation Interrupt</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_RANGE_INTR</name>
+              <description>Injection Range detect Interrupt</description>
+              <lsb>6</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_COLLISION_INTR</name>
+              <description>Injection Collision Interrupt</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INTR_SET</name>
+          <description>Not really a register, intended for verification/debug. When read, this register reflects the interrupt request register.</description>
+          <addressOffset>0x403A0214</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>EOS_INTR</name>
+              <description>End Of Scan Interrupt</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OVERFLOW_INTR</name>
+              <description>Overflow Interrupt</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FW_COLLISION_INTR</name>
+              <description>Firmware Collision Interrupt</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_COLLISION_INTR</name>
+              <description>DSI Collision Interrupt</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_EOC_INTR</name>
+              <description>Injection End of Conversion Interrupt</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_SATURATE_INTR</name>
+              <description>Injection Saturation Interrupt</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_RANGE_INTR</name>
+              <description>Injection Range detect Interrupt</description>
+              <lsb>6</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_COLLISION_INTR</name>
+              <description>Injection Collision Interrupt</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INTR_MASK</name>
+          <description>Interrupt mask register</description>
+          <addressOffset>0x403A0218</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>EOS_INTR</name>
+              <description>End Of Scan Interrupt</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OVERFLOW_INTR</name>
+              <description>Overflow Interrupt</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FW_COLLISION_INTR</name>
+              <description>Firmware Collision Interrupt</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_COLLISION_INTR</name>
+              <description>DSI Collision Interrupt</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_EOC_INTR</name>
+              <description>Injection End of Conversion Interrupt</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_SATURATE_INTR</name>
+              <description>Injection Saturation Interrupt</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_RANGE_INTR</name>
+              <description>Injection Range detect Interrupt</description>
+              <lsb>6</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_COLLISION_INTR</name>
+              <description>Injection Collision Interrupt</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INTR_MASKED</name>
+          <description>Interrupt masked request register</description>
+          <addressOffset>0x403A021C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>EOS_INTR</name>
+              <description>End Of Scan Interrupt</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OVERFLOW_INTR</name>
+              <description>Overflow Interrupt</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FW_COLLISION_INTR</name>
+              <description>Firmware Collision Interrupt</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>DSI_COLLISION_INTR</name>
+              <description>DSI Collision Interrupt</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_EOC_INTR</name>
+              <description>Injection End of Conversion Interrupt</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_SATURATE_INTR</name>
+              <description>Injection Saturation Interrupt</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_RANGE_INTR</name>
+              <description>Injection Range detect Interrupt</description>
+              <lsb>6</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>INJ_COLLISION_INTR</name>
+              <description>Injection Collision Interrupt</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SATURATE_INTR</name>
+          <description>Saturate interrupt request register</description>
+          <addressOffset>0x403A0220</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>SATURATE_INTR</name>
+              <description>Saturate Interrupt</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SATURATE_INTR_SET</name>
+          <description>Saturate interrupt set request register</description>
+          <addressOffset>0x403A0224</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>SATURATE_INTR</name>
+              <description>Saturate Interrupt</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SATURATE_INTR_MASK</name>
+          <description>Saturate interrupt mask register</description>
+          <addressOffset>0x403A0228</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>SATURATE_INTR</name>
+              <description>Saturate Interrupt</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SATURATE_INTR_MASKED</name>
+          <description>Saturate interrupt masked request register</description>
+          <addressOffset>0x403A022C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>SATURATE_INTR</name>
+              <description>Saturate Interrupt</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RANGE_INTR</name>
+          <description>Range detect interrupt request register</description>
+          <addressOffset>0x403A0230</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RANGE_INTR</name>
+              <description>Range detect Interrupt</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RANGE_INTR_SET</name>
+          <description>Range detect interrupt set request register</description>
+          <addressOffset>0x403A0234</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RANGE_INTR</name>
+              <description>Range detect Interrupt</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RANGE_INTR_MASK</name>
+          <description>Range detect interrupt mask register</description>
+          <addressOffset>0x403A0238</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RANGE_INTR</name>
+              <description>Range detect Interrupt</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RANGE_INTR_MASKED</name>
+          <description>Range interrupt masked request register</description>
+          <addressOffset>0x403A023C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RANGE_INTR</name>
+              <description>Range detect Interrupt</description>
+              <lsb>0</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INTR_CAUSE</name>
+          <description>Interrupt cause register</description>
+          <addressOffset>0x403A0240</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>MUX_SWITCH0</name>
+          <description>SARMUX Firmware switch controls</description>
+          <addressOffset>0x403A0300</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>MUX_SWITCH_CLEAR0</name>
+          <description>SARMUX Firmware switch control clear</description>
+          <addressOffset>0x403A0304</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>MUX_SWITCH1</name>
+          <description>SARMUX Firmware switch controls</description>
+          <addressOffset>0x403A0308</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>MUX_SWITCH_CLEAR1</name>
+          <description>SARMUX Firmware switch control clear</description>
+          <addressOffset>0x403A030C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>MUX_SWITCH_HW_CTRL</name>
+          <description>SARMUX switch hardware control</description>
+          <addressOffset>0x403A0340</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>MUX_SWITCH_STATUS</name>
+          <description>SARMUX switch status</description>
+          <addressOffset>0x403A0348</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>PUMP_CTRL</name>
+          <description>Switch pump control</description>
+          <addressOffset>0x403A0380</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>ANA_TRIM</name>
+          <description>Analog trim register</description>
+          <addressOffset>0x403A0F00</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>WOUNDING</name>
+          <description>SAR wounding register</description>
+          <addressOffset>0x403A0F04</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>WOUND_RESOLUTION</name>
+              <description>Maximum SAR resolution allowed</description>
+              <lsb>0</lsb>
+              <msb>1</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
       <name>UART</name>
       <description>Serial Communication Block</description>
       <baseAddress>0x0</baseAddress>
@@ -3990,7 +6028,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>StripLights_StringSel</name>
+      <name>Timer_1</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
@@ -4000,2047 +6038,228 @@
       </addressBlock>
       <registers>
         <register>
-          <name>StripLights_StringSel_CONTROL_REG</name>
-          <description>No description available</description>
-          <addressOffset>0x400F0070</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>ADC_SAR_Seq_1</name>
-      <description>Sequencing SAR ADC</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>CTRL</name>
-          <description>Analog control register</description>
-          <addressOffset>0x403A0000</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>VREF_SEL</name>
-              <description>SARADC internal VREF selection</description>
-              <lsb>4</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>VREF_BYP_CAP_EN</name>
-              <description>VREF bypass cap enable for when VREF buffer is on</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>NEG_SEL</name>
-              <description>SARADC internal NEG selection for Single ended conversion</description>
-              <lsb>9</lsb>
-              <msb>11</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SAR_HW_CTRL_NEGVREF</name>
-              <description>Hardware control: 0=firmware, 1=hardware.</description>
-              <lsb>13</lsb>
-              <msb>13</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PWR_CTRL_VREF</name>
-              <description>VREF buffer low power mode.</description>
-              <lsb>14</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SPARE</name>
-              <description>Spare controls</description>
-              <lsb>16</lsb>
-              <msb>19</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ICONT_LV</name>
-              <description>SARADC low power mode</description>
-              <lsb>24</lsb>
-              <msb>25</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_SYNC_CONFIG</name>
-              <description>Synchronize the DSI config signals to peripheral clock domain</description>
-              <lsb>28</lsb>
-              <msb>28</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_MODE</name>
-              <description>SAR sequencer takes configuration from DSI signals</description>
-              <lsb>29</lsb>
-              <msb>29</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SWITCH_DISABLE</name>
-              <description>Disable SAR sequencer from enabling routing switches</description>
-              <lsb>30</lsb>
-              <msb>30</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ENABLED</name>
-              <description>0: SAR IP disabled, 1: SAR IP enabled.</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SAMPLE_CTRL</name>
-          <description>Sample control register</description>
-          <addressOffset>0x403A0004</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>SUB_RESOLUTION</name>
-              <description>Conversion resolution for channels that have sub-resolution enabled (RESOLUTION=1) (otherwise resolution is 12-bit).</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>LEFT_ALIGN</name>
-              <description>Left align data in data[15:0], default data is right aligned in data[11:0], with sign extension to 16 bits if the channel is differential.</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SINGLE_ENDED_SIGNED</name>
-              <description>Output data from a single ended conversion as a signed value</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIFFERENTIAL_SIGNED</name>
-              <description>Output data from a differential conversion as a signed value</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>AVG_CNT</name>
-              <description>Averaging Count for channels that have over sampling enabled</description>
-              <lsb>4</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>AVG_SHIFT</name>
-              <description>Averaging shifting: after averaging the result is shifted right to fit in the sample resolution, i.e. 12 bits.</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CONTINUOUS</name>
-              <description>0: Wait for next FW_TRIGGER or hardware trigger before scanning enabled channels. 1: Continuously scan enabled channels..</description>
-              <lsb>16</lsb>
-              <msb>16</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_TRIGGER_EN</name>
-              <description>0: firmware trigger only, 1: enable hardware (DSI) trigger.</description>
-              <lsb>17</lsb>
-              <msb>17</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_TRIGGER_LEVEL</name>
-              <description>0: DSI trigger signal is a pulse input, 1: DSI trigger signal is a level inpu.t</description>
-              <lsb>18</lsb>
-              <msb>18</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_SYNC_TRIGGER</name>
-              <description>0: bypass clock domain synchronisation of the DSI trigger signal, 1: synchronize the DSI trigger signal to the SAR clock domain.</description>
-              <lsb>19</lsb>
-              <msb>19</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>EOS_DSI_OUT_EN</name>
-              <description>Enable to output EOS_INTR to DSI</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SAMPLE_TIME01</name>
-          <description>Sample time specification ST0 and ST1</description>
-          <addressOffset>0x403A0010</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>SAMPLE_TIME0</name>
-              <description>Sample time0 (aperture) in ADC clock cycles</description>
-              <lsb>0</lsb>
-              <msb>9</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SAMPLE_TIME1</name>
-              <description>Sample time1</description>
-              <lsb>16</lsb>
-              <msb>25</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SAMPLE_TIME23</name>
-          <description>Sample time specification ST2 and ST3</description>
-          <addressOffset>0x403A0014</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>SAMPLE_TIME2</name>
-              <description>Sample time2</description>
-              <lsb>0</lsb>
-              <msb>9</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SAMPLE_TIME3</name>
-              <description>Sample time3</description>
-              <lsb>16</lsb>
-              <msb>25</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>RANGE_THRES</name>
-          <description>Global range detect threshold register</description>
-          <addressOffset>0x403A0018</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RANGE_LOW</name>
-              <description>Low threshold for range detect</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RANGE_HIGH</name>
-              <description>High threshold for range detect</description>
-              <lsb>16</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>RANGE_COND</name>
-          <description>Global range detect mode register</description>
-          <addressOffset>0x403A001C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RANGE_COND</name>
-              <description>Range condition select</description>
-              <lsb>30</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_EN</name>
-          <description>Enable bits for the channels</description>
-          <addressOffset>0x403A0020</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>CHAN_EN</name>
-              <description>Channel enable. 0: the corresponding channel is disabled. 1: the corresponding channel is enabled, it will be included in the next scan.</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>START_CTRL</name>
-          <description>Start control register (firmware trigger)</description>
-          <addressOffset>0x403A0024</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>FW_TRIGGER</name>
-              <description>When firmware writes a 1 here it will trigger the next scan of enabled channels</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>DFT_CTRL</name>
-          <description>DFT control register</description>
-          <addressOffset>0x403A0030</addressOffset>
-          <size>32</size>
+          <name>Timer_1_COUNTER</name>
+          <description>UDB.A0 - Current Down Counter Value</description>
+          <addressOffset>0x400F0002</addressOffset>
+          <size>24</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>CHAN_CONFIG0</name>
-          <description>Channel0 configuration register</description>
-          <addressOffset>0x403A0080</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>PIN_ADDR</name>
-              <description>Address of the pin to be sampled by this channel</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PORT_ADDR</name>
-              <description>Address of the port that contains the pin to be sampled by this channel</description>
-              <lsb>4</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIFFERENTIAL_EN</name>
-              <description>Differential enable for this channel</description>
-              <lsb>8</lsb>
-              <msb>8</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RESOLUTION</name>
-              <description>Resolution for this channel</description>
-              <lsb>9</lsb>
-              <msb>9</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>AVG_EN</name>
-              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
-              <lsb>10</lsb>
-              <msb>10</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SAMPLE_TIME_SEL</name>
-              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
-              <lsb>12</lsb>
-              <msb>13</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_OUT_EN</name>
-              <description>DSI data output enable for this channel</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_CONFIG1</name>
-          <description>Channel1 configuration register</description>
-          <addressOffset>0x403A0084</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>PIN_ADDR</name>
-              <description>Address of the pin to be sampled by this channel</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PORT_ADDR</name>
-              <description>Address of the port that contains the pin to be sampled by this channel</description>
-              <lsb>4</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIFFERENTIAL_EN</name>
-              <description>Differential enable for this channel</description>
-              <lsb>8</lsb>
-              <msb>8</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RESOLUTION</name>
-              <description>Resolution for this channel</description>
-              <lsb>9</lsb>
-              <msb>9</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>AVG_EN</name>
-              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
-              <lsb>10</lsb>
-              <msb>10</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SAMPLE_TIME_SEL</name>
-              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
-              <lsb>12</lsb>
-              <msb>13</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_OUT_EN</name>
-              <description>DSI data output enable for this channel</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_CONFIG2</name>
-          <description>Channel2 configuration register</description>
-          <addressOffset>0x403A0088</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>PIN_ADDR</name>
-              <description>Address of the pin to be sampled by this channel</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PORT_ADDR</name>
-              <description>Address of the port that contains the pin to be sampled by this channel</description>
-              <lsb>4</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIFFERENTIAL_EN</name>
-              <description>Differential enable for this channel</description>
-              <lsb>8</lsb>
-              <msb>8</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RESOLUTION</name>
-              <description>Resolution for this channel</description>
-              <lsb>9</lsb>
-              <msb>9</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>AVG_EN</name>
-              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
-              <lsb>10</lsb>
-              <msb>10</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SAMPLE_TIME_SEL</name>
-              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
-              <lsb>12</lsb>
-              <msb>13</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_OUT_EN</name>
-              <description>DSI data output enable for this channel</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_CONFIG3</name>
-          <description>Channel3 configuration register</description>
-          <addressOffset>0x403A008C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>PIN_ADDR</name>
-              <description>Address of the pin to be sampled by this channel</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PORT_ADDR</name>
-              <description>Address of the port that contains the pin to be sampled by this channel</description>
-              <lsb>4</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIFFERENTIAL_EN</name>
-              <description>Differential enable for this channel</description>
-              <lsb>8</lsb>
-              <msb>8</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RESOLUTION</name>
-              <description>Resolution for this channel</description>
-              <lsb>9</lsb>
-              <msb>9</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>AVG_EN</name>
-              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
-              <lsb>10</lsb>
-              <msb>10</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SAMPLE_TIME_SEL</name>
-              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
-              <lsb>12</lsb>
-              <msb>13</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_OUT_EN</name>
-              <description>DSI data output enable for this channel</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_CONFIG4</name>
-          <description>Channel4 configuration register</description>
-          <addressOffset>0x403A0090</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>PIN_ADDR</name>
-              <description>Address of the pin to be sampled by this channel</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PORT_ADDR</name>
-              <description>Address of the port that contains the pin to be sampled by this channel</description>
-              <lsb>4</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIFFERENTIAL_EN</name>
-              <description>Differential enable for this channel</description>
-              <lsb>8</lsb>
-              <msb>8</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RESOLUTION</name>
-              <description>Resolution for this channel</description>
-              <lsb>9</lsb>
-              <msb>9</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>AVG_EN</name>
-              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
-              <lsb>10</lsb>
-              <msb>10</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SAMPLE_TIME_SEL</name>
-              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
-              <lsb>12</lsb>
-              <msb>13</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_OUT_EN</name>
-              <description>DSI data output enable for this channel</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_CONFIG5</name>
-          <description>Channel5 configuration register</description>
-          <addressOffset>0x403A0094</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>PIN_ADDR</name>
-              <description>Address of the pin to be sampled by this channel</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PORT_ADDR</name>
-              <description>Address of the port that contains the pin to be sampled by this channel</description>
-              <lsb>4</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIFFERENTIAL_EN</name>
-              <description>Differential enable for this channel</description>
-              <lsb>8</lsb>
-              <msb>8</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RESOLUTION</name>
-              <description>Resolution for this channel</description>
-              <lsb>9</lsb>
-              <msb>9</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>AVG_EN</name>
-              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
-              <lsb>10</lsb>
-              <msb>10</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SAMPLE_TIME_SEL</name>
-              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
-              <lsb>12</lsb>
-              <msb>13</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_OUT_EN</name>
-              <description>DSI data output enable for this channel</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_CONFIG6</name>
-          <description>Channel6 configuration register</description>
-          <addressOffset>0x403A0098</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>PIN_ADDR</name>
-              <description>Address of the pin to be sampled by this channel</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PORT_ADDR</name>
-              <description>Address of the port that contains the pin to be sampled by this channel</description>
-              <lsb>4</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIFFERENTIAL_EN</name>
-              <description>Differential enable for this channel</description>
-              <lsb>8</lsb>
-              <msb>8</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RESOLUTION</name>
-              <description>Resolution for this channel</description>
-              <lsb>9</lsb>
-              <msb>9</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>AVG_EN</name>
-              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
-              <lsb>10</lsb>
-              <msb>10</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SAMPLE_TIME_SEL</name>
-              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
-              <lsb>12</lsb>
-              <msb>13</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_OUT_EN</name>
-              <description>DSI data output enable for this channel</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_CONFIG7</name>
-          <description>Channel7 configuration register</description>
-          <addressOffset>0x403A009C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>PIN_ADDR</name>
-              <description>Address of the pin to be sampled by this channel</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PORT_ADDR</name>
-              <description>Address of the port that contains the pin to be sampled by this channel</description>
-              <lsb>4</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DIFFERENTIAL_EN</name>
-              <description>Differential enable for this channel</description>
-              <lsb>8</lsb>
-              <msb>8</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RESOLUTION</name>
-              <description>Resolution for this channel</description>
-              <lsb>9</lsb>
-              <msb>9</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>AVG_EN</name>
-              <description>Averaging enable for this channel. If set the AVG_CNT and AVG_SHIFT settings are used for sampling the addressed pin(s).</description>
-              <lsb>10</lsb>
-              <msb>10</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SAMPLE_TIME_SEL</name>
-              <description>Sample time select: select which of the 4 global sample times to use for this channel.</description>
-              <lsb>12</lsb>
-              <msb>13</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_OUT_EN</name>
-              <description>DSI data output enable for this channel</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_WORK0</name>
-          <description>Channel0 working data register</description>
-          <addressOffset>0x403A0100</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>WORK</name>
-              <description>SAR conversion working data of the channel</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_WORK_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_WORK1</name>
-          <description>Channel1 working data register</description>
-          <addressOffset>0x403A0104</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>WORK</name>
-              <description>SAR conversion working data of the channel</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_WORK_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_WORK2</name>
-          <description>Channel2 working data register</description>
-          <addressOffset>0x403A0108</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>WORK</name>
-              <description>SAR conversion working data of the channel</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_WORK_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_WORK3</name>
-          <description>Channel3 working data register</description>
-          <addressOffset>0x403A010C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>WORK</name>
-              <description>SAR conversion working data of the channel</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_WORK_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_WORK4</name>
-          <description>Channel4 working data register</description>
-          <addressOffset>0x403A0110</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>WORK</name>
-              <description>SAR conversion working data of the channel</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_WORK_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_WORK5</name>
-          <description>Channel5 working data register</description>
-          <addressOffset>0x403A0114</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>WORK</name>
-              <description>SAR conversion working data of the channel</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_WORK_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_WORK6</name>
-          <description>Channel6 working data register</description>
-          <addressOffset>0x403A0118</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>WORK</name>
-              <description>SAR conversion working data of the channel</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_WORK_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_WORK7</name>
-          <description>Channel7 working data register</description>
-          <addressOffset>0x403A011C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>WORK</name>
-              <description>SAR conversion working data of the channel</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_WORK_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_CHAN_WORK_VALID register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_RESULT0</name>
-          <description>Channel0 result data register</description>
-          <addressOffset>0x403A0180</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RESULT</name>
-              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>SATURATE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>29</lsb>
-              <msb>29</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RANGE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
-              <lsb>30</lsb>
-              <msb>30</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_RESULT_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_RESULT1</name>
-          <description>Channel1 result data register</description>
-          <addressOffset>0x403A0184</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RESULT</name>
-              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>SATURATE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>29</lsb>
-              <msb>29</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RANGE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
-              <lsb>30</lsb>
-              <msb>30</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_RESULT_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_RESULT2</name>
-          <description>Channel2 result data register</description>
-          <addressOffset>0x403A0188</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RESULT</name>
-              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>SATURATE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>29</lsb>
-              <msb>29</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RANGE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
-              <lsb>30</lsb>
-              <msb>30</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_RESULT_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_RESULT3</name>
-          <description>Channel3 result data register</description>
-          <addressOffset>0x403A018C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RESULT</name>
-              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>SATURATE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>29</lsb>
-              <msb>29</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RANGE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
-              <lsb>30</lsb>
-              <msb>30</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_RESULT_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_RESULT4</name>
-          <description>Channel4 result data register</description>
-          <addressOffset>0x403A0190</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RESULT</name>
-              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>SATURATE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>29</lsb>
-              <msb>29</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RANGE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
-              <lsb>30</lsb>
-              <msb>30</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_RESULT_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_RESULT5</name>
-          <description>Channel5 result data register</description>
-          <addressOffset>0x403A0194</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RESULT</name>
-              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>SATURATE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>29</lsb>
-              <msb>29</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RANGE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
-              <lsb>30</lsb>
-              <msb>30</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_RESULT_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_RESULT6</name>
-          <description>Channel6 result data register</description>
-          <addressOffset>0x403A0198</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RESULT</name>
-              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>SATURATE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>29</lsb>
-              <msb>29</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RANGE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
-              <lsb>30</lsb>
-              <msb>30</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_RESULT_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_RESULT7</name>
-          <description>Channel7 result data register</description>
-          <addressOffset>0x403A019C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RESULT</name>
-              <description>SAR conversion result of the channel. The data is copied here from the WORK field after all enabled channels in this scan have been sampled.</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>SATURATE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>29</lsb>
-              <msb>29</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RANGE_INTR_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_RANGE_INTR register</description>
-              <lsb>30</lsb>
-              <msb>30</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>CHAN_RESULT_VALID_MIR</name>
-              <description>Mirror bit of corresponding bit in SAR_SATURATE_INTR register</description>
-              <lsb>31</lsb>
-              <msb>31</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_WORK_VALID</name>
-          <description>Channel working data register valid bits</description>
-          <addressOffset>0x403A0200</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>CHAN_WORK_VALID</name>
-              <description>If set the corresponding WORK data is valid, i.e. was already sampled during the current scan.</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CHAN_RESULT_VALID</name>
-          <description>Channel result data register valid bits</description>
-          <addressOffset>0x403A0204</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>CHAN_RESULT_VALID</name>
-              <description>If set the corresponding RESULT data is valid, i.e. was sampled during the last scan.</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>STATUS</name>
-          <description>Current status of internal SAR registers (mostly for debug)</description>
-          <addressOffset>0x403A0208</addressOffset>
-          <size>32</size>
+          <name>Timer_1_PERIOD</name>
+          <description>UDB.D0 - Assigned Period</description>
+          <addressOffset>0x400F0022</addressOffset>
+          <size>24</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>AVG_STAT</name>
-          <description>Current averaging status (for debug)</description>
-          <addressOffset>0x403A020C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>INTR</name>
-          <description>Interrupt request register</description>
-          <addressOffset>0x403A0210</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>EOS_INTR</name>
-              <description>End Of Scan Interrupt</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVERFLOW_INTR</name>
-              <description>Overflow Interrupt</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FW_COLLISION_INTR</name>
-              <description>Firmware Collision Interrupt</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_COLLISION_INTR</name>
-              <description>DSI Collision Interrupt</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_EOC_INTR</name>
-              <description>Injection End of Conversion Interrupt</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_SATURATE_INTR</name>
-              <description>Injection Saturation Interrupt</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_RANGE_INTR</name>
-              <description>Injection Range detect Interrupt</description>
-              <lsb>6</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_COLLISION_INTR</name>
-              <description>Injection Collision Interrupt</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>INTR_SET</name>
-          <description>Not really a register, intended for verification/debug. When read, this register reflects the interrupt request register.</description>
-          <addressOffset>0x403A0214</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>EOS_INTR</name>
-              <description>End Of Scan Interrupt</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVERFLOW_INTR</name>
-              <description>Overflow Interrupt</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FW_COLLISION_INTR</name>
-              <description>Firmware Collision Interrupt</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_COLLISION_INTR</name>
-              <description>DSI Collision Interrupt</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_EOC_INTR</name>
-              <description>Injection End of Conversion Interrupt</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_SATURATE_INTR</name>
-              <description>Injection Saturation Interrupt</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_RANGE_INTR</name>
-              <description>Injection Range detect Interrupt</description>
-              <lsb>6</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_COLLISION_INTR</name>
-              <description>Injection Collision Interrupt</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>INTR_MASK</name>
-          <description>Interrupt mask register</description>
-          <addressOffset>0x403A0218</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>EOS_INTR</name>
-              <description>End Of Scan Interrupt</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVERFLOW_INTR</name>
-              <description>Overflow Interrupt</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FW_COLLISION_INTR</name>
-              <description>Firmware Collision Interrupt</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_COLLISION_INTR</name>
-              <description>DSI Collision Interrupt</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_EOC_INTR</name>
-              <description>Injection End of Conversion Interrupt</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_SATURATE_INTR</name>
-              <description>Injection Saturation Interrupt</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_RANGE_INTR</name>
-              <description>Injection Range detect Interrupt</description>
-              <lsb>6</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_COLLISION_INTR</name>
-              <description>Injection Collision Interrupt</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>INTR_MASKED</name>
-          <description>Interrupt masked request register</description>
-          <addressOffset>0x403A021C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>EOS_INTR</name>
-              <description>End Of Scan Interrupt</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVERFLOW_INTR</name>
-              <description>Overflow Interrupt</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FW_COLLISION_INTR</name>
-              <description>Firmware Collision Interrupt</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DSI_COLLISION_INTR</name>
-              <description>DSI Collision Interrupt</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_EOC_INTR</name>
-              <description>Injection End of Conversion Interrupt</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_SATURATE_INTR</name>
-              <description>Injection Saturation Interrupt</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_RANGE_INTR</name>
-              <description>Injection Range detect Interrupt</description>
-              <lsb>6</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>INJ_COLLISION_INTR</name>
-              <description>Injection Collision Interrupt</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SATURATE_INTR</name>
-          <description>Saturate interrupt request register</description>
-          <addressOffset>0x403A0220</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>SATURATE_INTR</name>
-              <description>Saturate Interrupt</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SATURATE_INTR_SET</name>
-          <description>Saturate interrupt set request register</description>
-          <addressOffset>0x403A0224</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>SATURATE_INTR</name>
-              <description>Saturate Interrupt</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SATURATE_INTR_MASK</name>
-          <description>Saturate interrupt mask register</description>
-          <addressOffset>0x403A0228</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>SATURATE_INTR</name>
-              <description>Saturate Interrupt</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>SATURATE_INTR_MASKED</name>
-          <description>Saturate interrupt masked request register</description>
-          <addressOffset>0x403A022C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>SATURATE_INTR</name>
-              <description>Saturate Interrupt</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>RANGE_INTR</name>
-          <description>Range detect interrupt request register</description>
-          <addressOffset>0x403A0230</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RANGE_INTR</name>
-              <description>Range detect Interrupt</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>RANGE_INTR_SET</name>
-          <description>Range detect interrupt set request register</description>
-          <addressOffset>0x403A0234</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RANGE_INTR</name>
-              <description>Range detect Interrupt</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>RANGE_INTR_MASK</name>
-          <description>Range detect interrupt mask register</description>
-          <addressOffset>0x403A0238</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RANGE_INTR</name>
-              <description>Range detect Interrupt</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>RANGE_INTR_MASKED</name>
-          <description>Range interrupt masked request register</description>
-          <addressOffset>0x403A023C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RANGE_INTR</name>
-              <description>Range detect Interrupt</description>
-              <lsb>0</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>INTR_CAUSE</name>
-          <description>Interrupt cause register</description>
-          <addressOffset>0x403A0240</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>MUX_SWITCH0</name>
-          <description>SARMUX Firmware switch controls</description>
-          <addressOffset>0x403A0300</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>MUX_SWITCH_CLEAR0</name>
-          <description>SARMUX Firmware switch control clear</description>
-          <addressOffset>0x403A0304</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>MUX_SWITCH1</name>
-          <description>SARMUX Firmware switch controls</description>
-          <addressOffset>0x403A0308</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>MUX_SWITCH_CLEAR1</name>
-          <description>SARMUX Firmware switch control clear</description>
-          <addressOffset>0x403A030C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>MUX_SWITCH_HW_CTRL</name>
-          <description>SARMUX switch hardware control</description>
-          <addressOffset>0x403A0340</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>MUX_SWITCH_STATUS</name>
-          <description>SARMUX switch status</description>
-          <addressOffset>0x403A0348</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>PUMP_CTRL</name>
-          <description>Switch pump control</description>
-          <addressOffset>0x403A0380</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>ANA_TRIM</name>
-          <description>Analog trim register</description>
-          <addressOffset>0x403A0F00</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>WOUNDING</name>
-          <description>SAR wounding register</description>
-          <addressOffset>0x403A0F04</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>WOUND_RESOLUTION</name>
-              <description>Maximum SAR resolution allowed</description>
-              <lsb>0</lsb>
-              <msb>1</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>Can_addr</name>
-      <description>No description available</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>Can_addr_STATUS_REG</name>
-          <description>No description available</description>
-          <addressOffset>0x400F0063</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>Can_addr_MASK_REG</name>
-          <description>No description available</description>
-          <addressOffset>0x400F0083</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>Can_addr_STATUS_AUX_CTL_REG</name>
-          <description>No description available</description>
-          <addressOffset>0x400F0093</addressOffset>
+          <name>Timer_1_Control_Reg</name>
+          <description>UDB Control Register - Assigned Control Register Value</description>
+          <addressOffset>0x400F0073</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
           <fields>
             <field>
-              <name>FIFO0</name>
+              <name>CTRL_ENABLE</name>
+              <description>Enable the Timer</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_CMODE</name>
+              <description>Capture Mode</description>
+              <lsb>5</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_TEN</name>
+              <description>Trigger Enable Bit</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_TMODE</name>
+              <description>Trigger Mode</description>
+              <lsb>2</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_IC</name>
+              <description>Interrupt Count</description>
+              <lsb>0</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>Timer_1_STATUS_MASK</name>
+          <description>UDB Status bits Interrupt Mask Enable Register</description>
+          <addressOffset>0x400F0080</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>TIMER_STS_TC</name>
+              <description>Enables the Interrupt on TC</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TIMER_STS_CAPT</name>
+              <description>Enables the Interrupt on Capture</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TIMER_STS_FIFO_FULL</name>
+              <description>FIFO Full Status </description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TIMER_STS_FIFO_NEMPTY</name>
+              <description>FIFO Empty status </description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>Timer_1_STATUS_AUX_CTRL</name>
+          <description>UDB Auxilliary Control Register</description>
+          <addressOffset>0x400F0090</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>FIFO0_CLR</name>
+              <description>FIFO0 clear</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_0</name>
+                  <description>Normal FIFO operation</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_1</name>
+                  <description>Clear FIFO state</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO1_CLR</name>
+              <description>FIFO1 clear</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_0</name>
+                  <description>Normal FIFO operation</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_1</name>
+                  <description>Clear FIFO state</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO0_LVL</name>
+              <description>FIFO level</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_0</name>
+                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_1</name>
+                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO1_LVL</name>
+              <description>FIFO level</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_0</name>
+                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_1</name>
+                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>INT_EN</name>
+              <description>No description available</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_INT_EN0</name>
+                  <description>Interrupt disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_INT_EN1</name>
+                  <description>Interrupt enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>CNT_START</name>
               <description>FIFO0 clear</description>
               <lsb>5</lsb>
               <msb>5</msb>
               <access>read-write</access>
               <enumeratedValues>
                 <enumeratedValue>
-                  <name>ENABLED</name>
-                  <description>Enable counter</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>DISABLED</name>
+                  <name>E_CNT_START0</name>
                   <description>Disable counter</description>
                   <value>0</value>
                 </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>INTRENBL</name>
-              <description>Enables or disables the Interrupt</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-              <enumeratedValues>
                 <enumeratedValue>
-                  <name>ENABLED</name>
-                  <description>Interrupt enabled</description>
+                  <name>E_CNT_START1</name>
+                  <description>Enable counter</description>
                   <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>DISABLED</name>
-                  <description>Interrupt disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO1LEVEL</name>
-              <description>FIFO level</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>ENABLED</name>
-                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>DISABLED</name>
-                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
-                  <value>0</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO0LEVEL</name>
-              <description>FIFO level</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>ENABLED</name>
-                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>DISABLED</name>
-                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
-                  <value>0</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO1CLEAR</name>
-              <description>FIFO clear</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>ENABLED</name>
-                  <description>Clear FIFO state</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>DISABLED</name>
-                  <description>Normal FIFO operation</description>
-                  <value>0</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO0CLEAR</name>
-              <description>FIFO clear</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>ENABLED</name>
-                  <description>Clear FIFO state</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>DISABLED</name>
-                  <description>Normal FIFO operation</description>
-                  <value>0</value>
                 </enumeratedValue>
               </enumeratedValues>
             </field>
@@ -28347,7 +28566,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>Timer_1</name>
+      <name>PWM_Motor</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
@@ -28357,27 +28576,154 @@
       </addressBlock>
       <registers>
         <register>
-          <name>Timer_1_COUNTER</name>
-          <description>UDB.A0 - Current Down Counter Value</description>
-          <addressOffset>0x400F0002</addressOffset>
-          <size>24</size>
+          <name>COUNTER</name>
+          <description>Current counter value</description>
+          <addressOffset>0x40200108</addressOffset>
+          <size>32</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>Timer_1_PERIOD</name>
+          <name>CC</name>
+          <description>Compare / capture value</description>
+          <addressOffset>0x4020010C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>CC_BUF</name>
+          <description>Compare / capture buffer value</description>
+          <addressOffset>0x40200110</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>PERIOD</name>
+          <description>Period value</description>
+          <addressOffset>0x40200114</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>PERIOD_BUF</name>
+          <description>Period buffer value</description>
+          <addressOffset>0x40200118</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>QuadDec</name>
+      <description>No description available</description>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x0</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>QuadDec_Cnt16_COUNTER</name>
+          <description>Counter value</description>
+          <addressOffset>0x400F0006</addressOffset>
+          <size>16</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>QuadDec_STATUS_REG</name>
+          <description>Quadrature Decoder Status Register</description>
+          <addressOffset>0x400F0064</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>OVERFLOW</name>
+              <description>Counter overflow</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UNDERFLOW</name>
+              <description>Counter underflow</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RESET</name>
+              <description>Counter Reset due index</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>INVALID_IN</name>
+              <description>Invalid state transition on the A and B inputs</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>QuadDec_Cnt16</name>
+      <description>No description available</description>
+      <alternatePeripheral>QuadDec</alternatePeripheral>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x0</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>QuadDec_Cnt16_COUNTER</name>
+          <description>UDB.A0 - Current Counter Value</description>
+          <addressOffset>0x400F0006</addressOffset>
+          <size>16</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>QuadDec_Cnt16_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x400F0022</addressOffset>
-          <size>24</size>
+          <addressOffset>0x400F0026</addressOffset>
+          <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>Timer_1_Control_Reg</name>
+          <name>QuadDec_Cnt16_COMPARE</name>
+          <description>UDB.D1 - Assigned Compare Value</description>
+          <addressOffset>0x400F0036</addressOffset>
+          <size>16</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>QuadDec_Cnt16_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x400F0073</addressOffset>
+          <addressOffset>0x400F0075</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28385,43 +28731,29 @@
           <fields>
             <field>
               <name>CTRL_ENABLE</name>
-              <description>Enable the Timer</description>
+              <description>Enable Counter</description>
               <lsb>7</lsb>
               <msb>7</msb>
               <access>read-write</access>
             </field>
             <field>
-              <name>CTRL_CMODE</name>
-              <description>Capture Mode</description>
-              <lsb>5</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_TEN</name>
-              <description>Trigger Enable Bit</description>
-              <lsb>4</lsb>
+              <name>CTRL_CAPMODE</name>
+              <description>Capture mode</description>
+              <lsb>3</lsb>
               <msb>4</msb>
               <access>read-write</access>
             </field>
             <field>
-              <name>CTRL_TMODE</name>
-              <description>Trigger Mode</description>
-              <lsb>2</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_IC</name>
-              <description>Interrupt Count</description>
+              <name>CTRL_CMPMODE</name>
+              <description>Compare mode</description>
               <lsb>0</lsb>
-              <msb>1</msb>
+              <msb>2</msb>
               <access>read-write</access>
             </field>
           </fields>
         </register>
         <register>
-          <name>Timer_1_STATUS_MASK</name>
+          <name>QuadDec_Cnt16_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
           <addressOffset>0x400F0087</addressOffset>
           <size>8</size>
@@ -28430,37 +28762,58 @@
           <resetMask>0</resetMask>
           <fields>
             <field>
-              <name>TIMER_STS_TC</name>
-              <description>Enables the Interrupt on TC</description>
+              <name>COUNTER_STS_CMP</name>
+              <description>Compare output status</description>
               <lsb>0</lsb>
               <msb>0</msb>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
-              <name>TIMER_STS_CAPT</name>
-              <description>Enables the Interrupt on Capture</description>
+              <name>COUNTER_STS_A0ZERO</name>
+              <description>A0 Zero ouput status</description>
               <lsb>1</lsb>
               <msb>1</msb>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
-              <name>TIMER_STS_FIFO_FULL</name>
-              <description>FIFO Full Status </description>
+              <name>COUNTER_STS_OVERFLOW</name>
+              <description>Overflow status </description>
               <lsb>2</lsb>
               <msb>2</msb>
-              <access>read-only</access>
+              <access>read-write</access>
             </field>
             <field>
-              <name>TIMER_STS_FIFO_NEMPTY</name>
-              <description>FIFO Empty status </description>
+              <name>COUNTER_STS_UNDERFLOW</name>
+              <description>Underflow status </description>
               <lsb>3</lsb>
               <msb>3</msb>
-              <access>read-only</access>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_CAPTURE</name>
+              <description>Capture Status</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_FIFO_FULL</name>
+              <description>FIFO Full Status </description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_FIFO_NEMPTY</name>
+              <description>FIFO Not Empty Status </description>
+              <lsb>6</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
         <register>
-          <name>Timer_1_STATUS_AUX_CTRL</name>
+          <name>QuadDec_Cnt16_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
           <addressOffset>0x400F0097</addressOffset>
           <size>8</size>
@@ -28583,63 +28936,6 @@
               </enumeratedValues>
             </field>
           </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>PWM_Motor</name>
-      <description>No description available</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>COUNTER</name>
-          <description>Current counter value</description>
-          <addressOffset>0x40200108</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>CC</name>
-          <description>Compare / capture value</description>
-          <addressOffset>0x4020010C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>CC_BUF</name>
-          <description>Compare / capture buffer value</description>
-          <addressOffset>0x40200110</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>PERIOD</name>
-          <description>Period value</description>
-          <addressOffset>0x40200114</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>PERIOD_BUF</name>
-          <description>Period buffer value</description>
-          <addressOffset>0x40200118</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
         </register>
       </registers>
     </peripheral>
@@ -28799,7 +29095,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>QuadDec</name>
+      <name>StripLights_StringSel</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
@@ -28809,309 +29105,13 @@
       </addressBlock>
       <registers>
         <register>
-          <name>QuadDec_Cnt16_COUNTER</name>
-          <description>Counter value</description>
-          <addressOffset>0x400F0006</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>QuadDec_STATUS_REG</name>
-          <description>Quadrature Decoder Status Register</description>
-          <addressOffset>0x400F0060</addressOffset>
+          <name>StripLights_StringSel_CONTROL_REG</name>
+          <description>No description available</description>
+          <addressOffset>0x400F0072</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>OVERFLOW</name>
-              <description>Counter overflow</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UNDERFLOW</name>
-              <description>Counter underflow</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RESET</name>
-              <description>Counter Reset due index</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>INVALID_IN</name>
-              <description>Invalid state transition on the A and B inputs</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>QuadDec_Cnt16</name>
-      <description>No description available</description>
-      <alternatePeripheral>QuadDec</alternatePeripheral>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>QuadDec_Cnt16_COUNTER</name>
-          <description>UDB.A0 - Current Counter Value</description>
-          <addressOffset>0x400F0006</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>QuadDec_Cnt16_PERIOD</name>
-          <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x400F0026</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>QuadDec_Cnt16_COMPARE</name>
-          <description>UDB.D1 - Assigned Compare Value</description>
-          <addressOffset>0x400F0036</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>QuadDec_Cnt16_Control_Reg</name>
-          <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x400F0076</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>CTRL_ENABLE</name>
-              <description>Enable Counter</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_CAPMODE</name>
-              <description>Capture mode</description>
-              <lsb>3</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_CMPMODE</name>
-              <description>Compare mode</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>QuadDec_Cnt16_STATUS_MASK</name>
-          <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x400F0084</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>COUNTER_STS_CMP</name>
-              <description>Compare output status</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_A0ZERO</name>
-              <description>A0 Zero ouput status</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_OVERFLOW</name>
-              <description>Overflow status </description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_UNDERFLOW</name>
-              <description>Underflow status </description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_CAPTURE</name>
-              <description>Capture Status</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_FIFO_FULL</name>
-              <description>FIFO Full Status </description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_FIFO_NEMPTY</name>
-              <description>FIFO Not Empty Status </description>
-              <lsb>6</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>QuadDec_Cnt16_STATUS_AUX_CTRL</name>
-          <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x400F0094</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>FIFO0_CLR</name>
-              <description>FIFO0 clear</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_0</name>
-                  <description>Normal FIFO operation</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_1</name>
-                  <description>Clear FIFO state</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO1_CLR</name>
-              <description>FIFO1 clear</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_0</name>
-                  <description>Normal FIFO operation</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_1</name>
-                  <description>Clear FIFO state</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO0_LVL</name>
-              <description>FIFO level</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_0</name>
-                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_1</name>
-                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO1_LVL</name>
-              <description>FIFO level</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_0</name>
-                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_1</name>
-                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>INT_EN</name>
-              <description>No description available</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_INT_EN0</name>
-                  <description>Interrupt disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_INT_EN1</name>
-                  <description>Interrupt enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CNT_START</name>
-              <description>FIFO0 clear</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_CNT_START0</name>
-                  <description>Disable counter</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_CNT_START1</name>
-                  <description>Enable counter</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
       </registers>
     </peripheral>

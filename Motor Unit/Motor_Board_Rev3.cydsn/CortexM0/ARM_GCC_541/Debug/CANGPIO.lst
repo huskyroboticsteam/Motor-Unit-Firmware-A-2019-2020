@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cchyVSjc.s 			page 1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccDUWq00.s 			page 1
 
 
    1              		.syntax unified
@@ -10,7 +10,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cchyVSjc.s 			page 1
    7              		.eabi_attribute 24, 1
    8              		.eabi_attribute 25, 1
    9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 30, 6
   11              		.eabi_attribute 34, 0
   12              		.eabi_attribute 18, 4
   13              		.thumb
@@ -27,9 +27,9 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cchyVSjc.s 			page 1
   24 0006 00000000 		.4byte	.Ldebug_abbrev0
   25 000a 04       		.byte	0x4
   26 000b 01       		.uleb128 0x1
-  27 000c 11010000 		.4byte	.LASF10
+  27 000c C6000000 		.4byte	.LASF10
   28 0010 0C       		.byte	0xc
-  29 0011 FD000000 		.4byte	.LASF11
+  29 0011 74010000 		.4byte	.LASF11
   30 0015 48000000 		.4byte	.LASF12
   31 0019 00000000 		.4byte	.Ldebug_line0
   32 001d 02       		.uleb128 0x2
@@ -39,7 +39,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cchyVSjc.s 			page 1
   36 0024 02       		.uleb128 0x2
   37 0025 01       		.byte	0x1
   38 0026 08       		.byte	0x8
-  39 0027 DD000000 		.4byte	.LASF1
+  39 0027 54010000 		.4byte	.LASF1
   40 002b 02       		.uleb128 0x2
   41 002c 02       		.byte	0x2
   42 002d 05       		.byte	0x5
@@ -51,14 +51,14 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cchyVSjc.s 			page 1
   48 0039 02       		.uleb128 0x2
   49 003a 04       		.byte	0x4
   50 003b 05       		.byte	0x5
-  51 003c EB000000 		.4byte	.LASF4
+  51 003c 62010000 		.4byte	.LASF4
   52 0040 02       		.uleb128 0x2
   53 0041 04       		.byte	0x4
   54 0042 07       		.byte	0x7
   55 0043 0D000000 		.4byte	.LASF5
   56 0047 02       		.uleb128 0x2
   57 0048 08       		.byte	0x8
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cchyVSjc.s 			page 2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccDUWq00.s 			page 2
 
 
   58 0049 05       		.byte	0x5
@@ -66,7 +66,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cchyVSjc.s 			page 1
   60 004e 02       		.uleb128 0x2
   61 004f 08       		.byte	0x8
   62 0050 07       		.byte	0x7
-  63 0051 C6000000 		.4byte	.LASF7
+  63 0051 88010000 		.4byte	.LASF7
   64 0055 03       		.uleb128 0x3
   65 0056 04       		.byte	0x4
   66 0057 05       		.byte	0x5
@@ -78,7 +78,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cchyVSjc.s 			page 1
   72 0063 02       		.uleb128 0x2
   73 0064 04       		.byte	0x4
   74 0065 07       		.byte	0x7
-  75 0066 F4000000 		.4byte	.LASF9
+  75 0066 6B010000 		.4byte	.LASF9
   76 006a 00       		.byte	0
   77              		.section	.debug_abbrev,"",%progbits
   78              	.Ldebug_abbrev0:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cchyVSjc.s 			page 1
  112 0021 03       		.uleb128 0x3
  113 0022 08       		.uleb128 0x8
  114 0023 00       		.byte	0
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cchyVSjc.s 			page 3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccDUWq00.s 			page 3
 
 
  115 0024 00       		.byte	0
@@ -178,53 +178,53 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cchyVSjc.s 			page 1
  142      746F722D 
  143 00a6 746F7220 		.ascii	"tor Unit\\Motor_Board_Rev3.cydsn\000"
  143      556E6974 
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\cchyVSjc.s 			page 4
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccDUWq00.s 			page 4
 
 
  143      5C4D6F74 
  143      6F725F42 
  143      6F617264 
- 144              	.LASF7:
- 145 00c6 6C6F6E67 		.ascii	"long long unsigned int\000"
- 145      206C6F6E 
- 145      6720756E 
- 145      7369676E 
- 145      65642069 
- 146              	.LASF1:
- 147 00dd 756E7369 		.ascii	"unsigned char\000"
- 147      676E6564 
- 147      20636861 
- 147      7200
- 148              	.LASF4:
- 149 00eb 6C6F6E67 		.ascii	"long int\000"
- 149      20696E74 
- 149      00
- 150              	.LASF9:
- 151 00f4 73697A65 		.ascii	"sizetype\000"
- 151      74797065 
+ 144              	.LASF10:
+ 145 00c6 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 145      43313120 
+ 145      352E342E 
+ 145      31203230 
+ 145      31363036 
+ 146 00f9 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 146      20726576 
+ 146      6973696F 
+ 146      6E203233 
+ 146      37373135 
+ 147 012c 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 147      66756E63 
+ 147      74696F6E 
+ 147      2D736563 
+ 147      74696F6E 
+ 148              	.LASF1:
+ 149 0154 756E7369 		.ascii	"unsigned char\000"
+ 149      676E6564 
+ 149      20636861 
+ 149      7200
+ 150              	.LASF4:
+ 151 0162 6C6F6E67 		.ascii	"long int\000"
+ 151      20696E74 
  151      00
- 152              	.LASF11:
- 153 00fd 2E2E5C43 		.ascii	"..\\CANLib\\CANGPIO.c\000"
- 153      414E4C69 
- 153      625C4341 
- 153      4E475049 
- 153      4F2E6300 
- 154              	.LASF10:
- 155 0111 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 155      43313120 
- 155      352E342E 
- 155      31203230 
- 155      31363036 
- 156 0144 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 156      20726576 
- 156      6973696F 
- 156      6E203233 
- 156      37373135 
- 157 0177 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 157      66756E63 
- 157      74696F6E 
- 157      2D736563 
- 157      74696F6E 
+ 152              	.LASF9:
+ 153 016b 73697A65 		.ascii	"sizetype\000"
+ 153      74797065 
+ 153      00
+ 154              	.LASF11:
+ 155 0174 2E2E5C43 		.ascii	"..\\CANLib\\CANGPIO.c\000"
+ 155      414E4C69 
+ 155      625C4341 
+ 155      4E475049 
+ 155      4F2E6300 
+ 156              	.LASF7:
+ 157 0188 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 157      206C6F6E 
+ 157      6720756E 
+ 157      7369676E 
+ 157      65642069 
  158              	.LASF6:
  159 019f 6C6F6E67 		.ascii	"long long int\000"
  159      206C6F6E 

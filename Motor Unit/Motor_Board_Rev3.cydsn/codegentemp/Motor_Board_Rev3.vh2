@@ -2,7 +2,7 @@
 --	Conversion of Motor_Board_Rev3.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Aug 29 12:58:58 2020
+--	Sat Sep 19 16:58:06 2020
 --
 
 USE cypress.cypress.all;
@@ -715,11 +715,11 @@ SIGNAL tmpFB_0__TX_1_net_0 : bit;
 SIGNAL tmpIO_0__TX_1_net_0 : bit;
 TERMINAL tmpSIOVREF__TX_1_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__TX_1_net_0 : bit;
-SIGNAL Net_1421 : bit;
+SIGNAL Net_1431 : bit;
 SIGNAL \CAN:Net_15\ : bit;
 SIGNAL \CAN:Net_13\ : bit;
 SIGNAL \CAN:Net_14\ : bit;
-SIGNAL Net_1420 : bit;
+SIGNAL Net_1430 : bit;
 SIGNAL \UART:Net_847\ : bit;
 SIGNAL \UART:select_s_wire\ : bit;
 SIGNAL \UART:rx_wire\ : bit;
@@ -768,29 +768,33 @@ SIGNAL Net_499 : bit;
 SIGNAL Net_501 : bit;
 SIGNAL Net_504 : bit;
 SIGNAL tmpOE__Dip_1_net_0 : bit;
-SIGNAL Net_525 : bit;
+SIGNAL Net_1427 : bit;
 SIGNAL tmpIO_0__Dip_1_net_0 : bit;
 TERMINAL tmpSIOVREF__Dip_1_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Dip_1_net_0 : bit;
 SIGNAL tmpOE__Dip_3_net_0 : bit;
-SIGNAL Net_527 : bit;
+SIGNAL Net_1424 : bit;
 SIGNAL tmpIO_0__Dip_3_net_0 : bit;
 TERMINAL tmpSIOVREF__Dip_3_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Dip_3_net_0 : bit;
 SIGNAL tmpOE__Dip_2_net_0 : bit;
-SIGNAL Net_526 : bit;
+SIGNAL Net_1425 : bit;
 SIGNAL tmpIO_0__Dip_2_net_0 : bit;
 TERMINAL tmpSIOVREF__Dip_2_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Dip_2_net_0 : bit;
 SIGNAL tmpOE__Dip_4_net_0 : bit;
-SIGNAL Net_528 : bit;
+SIGNAL Net_1423 : bit;
 SIGNAL tmpIO_0__Dip_4_net_0 : bit;
 TERMINAL tmpSIOVREF__Dip_4_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Dip_4_net_0 : bit;
 SIGNAL \Can_addr:status_0\ : bit;
+SIGNAL Net_525 : bit;
 SIGNAL \Can_addr:status_1\ : bit;
+SIGNAL Net_526 : bit;
 SIGNAL \Can_addr:status_2\ : bit;
+SIGNAL Net_527 : bit;
 SIGNAL \Can_addr:status_3\ : bit;
+SIGNAL Net_528 : bit;
 SIGNAL \Can_addr:status_4\ : bit;
 SIGNAL \Can_addr:status_5\ : bit;
 SIGNAL \Can_addr:status_6\ : bit;
@@ -1235,6 +1239,14 @@ Net_1393 <= ((\StripLights:B_WS2811:control_4\ and \StripLights:B_WS2811:control
 	OR (not \StripLights:B_WS2811:control_5\ and \StripLights:B_WS2811:state_1\ and \StripLights:B_WS2811:state_0\));
 
 \Timer_1:TimerUDB:status_tc\ <= ((\Timer_1:TimerUDB:control_7\ and \Timer_1:TimerUDB:per_zero\));
+
+Net_525 <= (not Net_1427);
+
+Net_526 <= (not Net_1425);
+
+Net_527 <= (not Net_1424);
+
+Net_528 <= (not Net_1423);
 
 Pin_Limit_1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba",
@@ -3017,7 +3029,7 @@ TX_1:cy_psoc3_pins_v1_10
 \CAN:isr\:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10",
 		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_1421);
+	PORT MAP(int_signal=>Net_1431);
 \CAN:HFCLK\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"2c366327-8ea9-4813-ab0d-a7ce473af76e/7f2e0196-39e5-4161-97bb-5d609ca138cf",
@@ -3032,8 +3044,8 @@ TX_1:cy_psoc3_pins_v1_10
 	GENERIC MAP(cy_registers=>"")
 	PORT MAP(can_rx=>Net_11,
 		can_tx=>Net_12,
-		can_tx_en=>Net_1420,
-		interrupt=>Net_1421);
+		can_tx_en=>Net_1430,
+		interrupt=>Net_1431);
 \UART:SCBCLK\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/2dc2d7a8-ce2b-43c7-af4a-821c8cd73ccf",
@@ -3263,7 +3275,7 @@ Dip_1:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__Pin_Limit_1_net_0),
 		y=>(zero),
-		fb=>Net_525,
+		fb=>Net_1427,
 		analog=>(open),
 		io=>(tmpIO_0__Dip_1_net_0),
 		siovref=>(tmpSIOVREF__Dip_1_net_0),
@@ -3333,7 +3345,7 @@ Dip_3:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__Pin_Limit_1_net_0),
 		y=>(zero),
-		fb=>Net_527,
+		fb=>Net_1424,
 		analog=>(open),
 		io=>(tmpIO_0__Dip_3_net_0),
 		siovref=>(tmpSIOVREF__Dip_3_net_0),
@@ -3403,7 +3415,7 @@ Dip_2:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__Pin_Limit_1_net_0),
 		y=>(zero),
-		fb=>Net_526,
+		fb=>Net_1425,
 		analog=>(open),
 		io=>(tmpIO_0__Dip_2_net_0),
 		siovref=>(tmpSIOVREF__Dip_2_net_0),
@@ -3473,7 +3485,7 @@ Dip_4:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__Pin_Limit_1_net_0),
 		y=>(zero),
-		fb=>Net_528,
+		fb=>Net_1423,
 		analog=>(open),
 		io=>(tmpIO_0__Dip_4_net_0),
 		siovref=>(tmpSIOVREF__Dip_4_net_0),

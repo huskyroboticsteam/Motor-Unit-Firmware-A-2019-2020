@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
   28:Generated_Source\PSoC4/cyPm.c **** * It means that the CPU has indicated that it is in the sleep mode and
   29:Generated_Source\PSoC4/cyPm.c **** * its main clock can be removed. It is identical to Active from a peripheral
   30:Generated_Source\PSoC4/cyPm.c **** * point of view. Any enabled interrupts can cause wakeup from the Sleep mode.
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 2
 
 
   31:Generated_Source\PSoC4/cyPm.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
   66              		.section	.text.CySysPmDeepSleep,"ax",%progbits
   67              		.align	2
   68              		.global	CySysPmDeepSleep
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 3
 
 
   69              		.code	16
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
   80:Generated_Source\PSoC4/cyPm.c ****             pllResoreFlag = 1u;
   81:Generated_Source\PSoC4/cyPm.c ****             
   82:Generated_Source\PSoC4/cyPm.c ****             /* Set default state = IMO for HFCLK_SEL bit mask */
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 4
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 4
 
 
   83:Generated_Source\PSoC4/cyPm.c ****             CY_SYS_CLK_SELECT_REG &= (uint32)(~CY_SYS_CLK_SELECT_DIRECT_SEL_MASK);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  111:Generated_Source\PSoC4/cyPm.c ****     CY_PM_WFI;
  116              		.loc 1 111 0
  117              		.syntax divided
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 5
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 5
 
 
  118              	@ 111 "Generated_Source\PSoC4\cyPm.c" 1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  153              	CySysPmHibernate:
  154              	.LFB4:
  131:Generated_Source\PSoC4/cyPm.c **** 
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 6
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 6
 
 
  132:Generated_Source\PSoC4/cyPm.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
    8:Generated_Source\PSoC4/cyPm.h **** * Reference Guide provided with PSoC Creator.
    9:Generated_Source\PSoC4/cyPm.h **** *
   10:Generated_Source\PSoC4/cyPm.h **** ********************************************************************************
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 7
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 7
 
 
   11:Generated_Source\PSoC4/cyPm.h **** * \copyright
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
   65:Generated_Source\PSoC4/cyPm.h **** ------------------|---------------------------------|-----------|------------------ |
   66:Generated_Source\PSoC4/cyPm.h **** Unmasked          | IRQ priority > current level    | Yes       |   Yes             |
   67:Generated_Source\PSoC4/cyPm.h **** Unmasked          | IRQ priority ≤ current level    | No        |   No              |
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 8
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 8
 
 
   68:Generated_Source\PSoC4/cyPm.h **** Masked            | IRQ priority > current level    | Yes       |   No              |
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  122:Generated_Source\PSoC4/cyPm.h ****     #define CY_PM_RESET_REASON_UNKN             (0u)    /**< Unknown reset reason. */
  123:Generated_Source\PSoC4/cyPm.h ****     #define CY_PM_RESET_REASON_XRES             (1u)    /**< Transition from OFF/XRES to RESET */
  124:Generated_Source\PSoC4/cyPm.h ****     #define CY_PM_RESET_REASON_WAKEUP_HIB       (2u)    /**< Transition/wakeup from HIBERNATE to RE
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 9
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 9
 
 
  125:Generated_Source\PSoC4/cyPm.h ****     #define CY_PM_RESET_REASON_WAKEUP_STOP      (3u)    /**< Transition/wakeup from STOP to RESET *
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  179:Generated_Source\PSoC4/cyPm.h **** /* CM0 System Control Register Constants */
  180:Generated_Source\PSoC4/cyPm.h **** #define CY_PM_CPU_SCR_SLEEPDEEP             ((uint32)(0x04u))
  181:Generated_Source\PSoC4/cyPm.h **** 
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 10
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 10
 
 
  182:Generated_Source\PSoC4/cyPm.h **** #if(CY_IP_SRSSV2)
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  175              		.loc 2 229 0
  176 0010 2C4A     		ldr	r2, .L8+4
  177 0012 1368     		ldr	r3, [r2]
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 11
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 11
 
 
  178 0014 9B00     		lsls	r3, r3, #2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  251:Generated_Source\PSoC4/cyPm.h **** 
  252:Generated_Source\PSoC4/cyPm.h ****             #ifdef CYREG_GPIO_PRT7_PC
  253:Generated_Source\PSoC4/cyPm.h ****                 CY_CLEAR_REG32_FIELD( CYREG_GPIO_PRT7_PC, CYFLD_GPIO_PRT_PORT_IB_MODE_SEL);
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 12
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 12
 
 
  211              		.loc 2 253 0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  245 0084 9B08     		lsrs	r3, r3, #2
  246 0086 1360     		str	r3, [r2]
  247              	.LBE5:
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 13
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 13
 
 
  248              	.LBE4:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  191:Generated_Source\PSoC4/cyPm.c ****         CY_PM_WFI;
  276              		.loc 1 191 0
  277              		.syntax divided
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 14
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 14
 
 
  278              	@ 191 "Generated_Source\PSoC4\cyPm.c" 1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  202:Generated_Source\PSoC4/cyPm.c ****     * no state is retained.
  203:Generated_Source\PSoC4/cyPm.c ****     *
  204:Generated_Source\PSoC4/cyPm.c ****     * Wakeup from Stop is performed by toggling the wakeup pin, causing
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 15
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 15
 
 
  205:Generated_Source\PSoC4/cyPm.c ****     * a normal boot procedure to occur. To configure the wakeup pin,
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  259:Generated_Source\PSoC4/cyPm.c ****     * \param polarity
  260:Generated_Source\PSoC4/cyPm.c ****     * - \ref CY_PM_STOP_WAKEUP_ACTIVE_LOW Logical zero will wakeup the chip
  261:Generated_Source\PSoC4/cyPm.c ****     * - \ref CY_PM_STOP_WAKEUP_ACTIVE_HIGH Logical one will wakeup the chip
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 16
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 16
 
 
  262:Generated_Source\PSoC4/cyPm.c ****     *
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  360              		@ sp needed
  361              	.LVL12:
  362 0028 10BD     		pop	{r4, pc}
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 17
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 17
 
 
  363              	.L14:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  294:Generated_Source\PSoC4/cyPm.c ****         uint32 reason = CY_PM_RESET_REASON_UNKN;
  396              		.loc 1 294 0
  397 0014 0020     		movs	r0, #0
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 18
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 18
 
 
  398 0016 04E0     		b	.L19
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  428              		.align	2
  429              		.global	CySysPmFreezeIo
  430              		.code	16
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 19
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 19
 
 
  431              		.thumb_func
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  454 0012 074A     		ldr	r2, .L25+4
  455 0014 0A40     		ands	r2, r1
  349:Generated_Source\PSoC4/cyPm.c ****                                 (CY_PM_PWR_STOP_REG & (CY_PM_PWR_STOP_TOKEN_MASK | CY_PM_PWR_STOP_P
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 20
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 20
 
 
  456              		.loc 1 349 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  496              		.cfi_def_cfa_offset 8
  497              		.cfi_offset 4, -8
  498              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 21
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 21
 
 
  221:Generated_Source\PSoC4/cyPm.c **** 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  545              		.cfi_endproc
  546              	.LFE5:
  547              		.size	CySysPmStop, .-CySysPmStop
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 22
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 22
 
 
  548              		.section	.text.CySysPmUnfreezeIo,"ax",%progbits
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  572              		.loc 1 391 0
  573 000e E824     		movs	r4, #232
  574 0010 A401     		lsls	r4, r4, #6
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 23
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 23
 
 
  575 0012 2243     		orrs	r2, r4
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  617 0025 02       		.uleb128 0x2
  618 0026 01       		.byte	0x1
  619 0027 06       		.byte	0x6
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 24
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 24
 
 
  620 0028 F3020000 		.4byte	.LASF0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  674 0091 04       		.byte	0x4
  675 0092 74000000 		.4byte	.LASF12
  676 0096 02       		.uleb128 0x2
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 25
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 25
 
 
  677 0097 08       		.byte	0x8
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  731 0111 40       		.byte	0x40
  732 0112 00000000 		.4byte	.LFB3
  733 0116 58000000 		.4byte	.LFE3-.LFB3
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 26
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 26
 
 
  734 011a 01       		.uleb128 0x1
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  788 0183 B8010000 		.4byte	0x1b8
  789 0187 07       		.uleb128 0x7
  790 0188 1D010000 		.4byte	.LASF21
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 27
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 27
 
 
  791 018c 01       		.byte	0x1
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  845 0217 2C020000 		.4byte	0x22c
  846 021b 11       		.uleb128 0x11
  847 021c C8010000 		.4byte	.LASF25
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 28
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 28
 
 
  848 0220 01       		.byte	0x1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  902 02a8 01       		.byte	0x1
  903 02a9 8001     		.2byte	0x180
  904 02ab 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 29
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 29
 
 
  905 02af CE000000 		.4byte	.LLST7
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  959 001c 00       		.byte	0
  960 001d 00       		.byte	0
  961 001e 03       		.uleb128 0x3
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 30
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 30
 
 
  962 001f 24       		.uleb128 0x24
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  1016 0056 00       		.byte	0
  1017 0057 07       		.uleb128 0x7
  1018 0058 34       		.uleb128 0x34
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 31
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 31
 
 
  1019 0059 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  1073 0096 18       		.uleb128 0x18
  1074 0097 00       		.byte	0
  1075 0098 00       		.byte	0
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 32
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 32
 
 
  1076 0099 0C       		.uleb128 0xc
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  1130 00d1 12       		.uleb128 0x12
  1131 00d2 06       		.uleb128 0x6
  1132 00d3 40       		.uleb128 0x40
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 33
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 33
 
 
  1133 00d4 18       		.uleb128 0x18
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  1187 010b 12       		.uleb128 0x12
  1188 010c 06       		.uleb128 0x6
  1189 010d 40       		.uleb128 0x40
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 34
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 34
 
 
  1190 010e 18       		.uleb128 0x18
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  1244 0048 28000000 		.4byte	.LVL12
  1245 004c 0100     		.2byte	0x1
  1246 004e 54       		.byte	0x54
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 35
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 35
 
 
  1247 004f 28000000 		.4byte	.LVL12
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  1301 00d8 50       		.byte	0x50
  1302 00d9 00000000 		.4byte	0
  1303 00dd 00000000 		.4byte	0
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 36
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 36
 
 
  1304              		.section	.debug_aranges,"",%progbits
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  1354 0000 72656731 		.ascii	"reg16\000"
  1354      3600
  1355              	.LASF16:
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 37
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 37
 
 
  1356 0006 72656733 		.ascii	"reg32\000"
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  1374      6F725F42 
  1374      6F617264 
  1375              	.LASF1:
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 38
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 38
 
 
  1376 010f 756E7369 		.ascii	"unsigned char\000"
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  1399              	.LASF31:
  1400 01b1 43795379 		.ascii	"CySysClkWriteSysclkDiv\000"
  1400      73436C6B 
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 39
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 39
 
 
  1400      57726974 
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 1
  1422 02af 43795379 		.ascii	"CySysPmDeepSleep\000"
  1422      73506D44 
  1422      65657053 
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccNQxIE3.s 			page 40
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccWEnl8y.s 			page 40
 
 
  1422      6C656570 
