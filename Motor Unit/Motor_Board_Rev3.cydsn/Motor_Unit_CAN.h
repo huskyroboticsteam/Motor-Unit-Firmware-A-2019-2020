@@ -9,11 +9,12 @@
  *
  * ========================================
 */
-#ifndef Init_CAN
-#define Init_CAN
-    #include <stdio.h>
-    #include <project.h>
-    
-#endif
 
 /* [] END OF FILE */
+
+#ifndef MOTOR_CAN_H
+#define MOTOR_CAN_H
+    #include <project.h>
+    void NextStateFromCAN(CANPacket *receivedPacket);
+#endif
+    

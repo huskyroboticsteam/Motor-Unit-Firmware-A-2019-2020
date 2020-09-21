@@ -1,0 +1,614 @@
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccenyKgi.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Motor_Unit_FSM.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.gotoUninitState,"ax",%progbits
+  20              		.align	2
+  21              		.global	gotoUninitState
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	gotoUninitState, %function
+  25              	gotoUninitState:
+  26              	.LFB35:
+  27              		.file 1 "Motor_Unit_FSM.c"
+   1:Motor_Unit_FSM.c **** /* ========================================
+   2:Motor_Unit_FSM.c ****  *
+   3:Motor_Unit_FSM.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:Motor_Unit_FSM.c ****  * All Rights Reserved
+   5:Motor_Unit_FSM.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:Motor_Unit_FSM.c ****  *
+   7:Motor_Unit_FSM.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:Motor_Unit_FSM.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:Motor_Unit_FSM.c ****  *
+  10:Motor_Unit_FSM.c ****  * ========================================
+  11:Motor_Unit_FSM.c **** */
+  12:Motor_Unit_FSM.c **** 
+  13:Motor_Unit_FSM.c **** /* [] END OF FILE */
+  14:Motor_Unit_FSM.c **** #include "Motor_Unit_FSM.h"
+  15:Motor_Unit_FSM.c **** #include "MotorDrive.h"
+  16:Motor_Unit_FSM.c **** 
+  17:Motor_Unit_FSM.c **** /*drive mode
+  18:Motor_Unit_FSM.c **** 0xFF = un-init
+  19:Motor_Unit_FSM.c **** 0x0 = pwm
+  20:Motor_Unit_FSM.c **** 0x1 = PID*/
+  21:Motor_Unit_FSM.c **** uint8_t motorUnitMode   = 0xFF;
+  22:Motor_Unit_FSM.c **** uint8_t motorUnitState  = UNINIT;
+  23:Motor_Unit_FSM.c **** 
+  24:Motor_Unit_FSM.c **** extern const uint32 StripLights_CLUT[ ];
+  25:Motor_Unit_FSM.c **** 
+  26:Motor_Unit_FSM.c **** void gotoUninitState() {
+  28              		.loc 1 26 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccenyKgi.s 			page 2
+
+
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  27:Motor_Unit_FSM.c ****     //halt motor
+  28:Motor_Unit_FSM.c ****     StripLights_DisplayClear(StripLights_BLACK);
+  36              		.loc 1 28 0
+  37 0002 044B     		ldr	r3, .L2
+  38 0004 186E     		ldr	r0, [r3, #96]
+  39 0006 FFF7FEFF 		bl	StripLights_DisplayClear
+  40              	.LVL0:
+  29:Motor_Unit_FSM.c ****     motorUnitMode = 0xFF;
+  41              		.loc 1 29 0
+  42 000a 034B     		ldr	r3, .L2+4
+  43 000c FF22     		movs	r2, #255
+  44 000e 1A70     		strb	r2, [r3]
+  30:Motor_Unit_FSM.c ****     motorUnitState = UNINIT;
+  45              		.loc 1 30 0
+  46 0010 5A70     		strb	r2, [r3, #1]
+  31:Motor_Unit_FSM.c **** }...
+  47              		.loc 1 31 0
+  48              		@ sp needed
+  49 0012 10BD     		pop	{r4, pc}
+  50              	.L3:
+  51              		.align	2
+  52              	.L2:
+  53 0014 00000000 		.word	StripLights_CLUT
+  54 0018 00000000 		.word	.LANCHOR0
+  55              		.cfi_endproc
+  56              	.LFE35:
+  57              		.size	gotoUninitState, .-gotoUninitState
+  58              		.global	motorUnitState
+  59              		.global	motorUnitMode
+  60              		.data
+  61              		.set	.LANCHOR0,. + 0
+  62              		.type	motorUnitMode, %object
+  63              		.size	motorUnitMode, 1
+  64              	motorUnitMode:
+  65 0000 FF       		.byte	-1
+  66              		.type	motorUnitState, %object
+  67              		.size	motorUnitState, 1
+  68              	motorUnitState:
+  69 0001 FF       		.byte	-1
+  70              		.text
+  71              	.Letext0:
+  72              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+  73              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+  74              		.file 4 "Generated_Source\\PSoC4/cytypes.h"
+  75              		.file 5 "Generated_Source\\PSoC4/StripLights.h"
+  76              		.section	.debug_info,"",%progbits
+  77              	.Ldebug_info0:
+  78 0000 19010000 		.4byte	0x119
+  79 0004 0400     		.2byte	0x4
+  80 0006 00000000 		.4byte	.Ldebug_abbrev0
+  81 000a 04       		.byte	0x4
+  82 000b 01       		.uleb128 0x1
+  83 000c 5F010000 		.4byte	.LASF20
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccenyKgi.s 			page 3
+
+
+  84 0010 0C       		.byte	0xc
+  85 0011 FB000000 		.4byte	.LASF21
+  86 0015 5E000000 		.4byte	.LASF22
+  87 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  88 001d 00000000 		.4byte	0
+  89 0021 00000000 		.4byte	.Ldebug_line0
+  90 0025 02       		.uleb128 0x2
+  91 0026 01       		.byte	0x1
+  92 0027 06       		.byte	0x6
+  93 0028 00020000 		.4byte	.LASF0
+  94 002c 03       		.uleb128 0x3
+  95 002d 37010000 		.4byte	.LASF9
+  96 0031 02       		.byte	0x2
+  97 0032 1D       		.byte	0x1d
+  98 0033 37000000 		.4byte	0x37
+  99 0037 02       		.uleb128 0x2
+ 100 0038 01       		.byte	0x1
+ 101 0039 08       		.byte	0x8
+ 102 003a 29010000 		.4byte	.LASF1
+ 103 003e 02       		.uleb128 0x2
+ 104 003f 02       		.byte	0x2
+ 105 0040 05       		.byte	0x5
+ 106 0041 1E020000 		.4byte	.LASF2
+ 107 0045 02       		.uleb128 0x2
+ 108 0046 02       		.byte	0x2
+ 109 0047 07       		.byte	0x7
+ 110 0048 ED010000 		.4byte	.LASF3
+ 111 004c 02       		.uleb128 0x2
+ 112 004d 04       		.byte	0x4
+ 113 004e 05       		.byte	0x5
+ 114 004f 46010000 		.4byte	.LASF4
+ 115 0053 02       		.uleb128 0x2
+ 116 0054 04       		.byte	0x4
+ 117 0055 07       		.byte	0x7
+ 118 0056 4C000000 		.4byte	.LASF5
+ 119 005a 02       		.uleb128 0x2
+ 120 005b 08       		.byte	0x8
+ 121 005c 05       		.byte	0x5
+ 122 005d 00000000 		.4byte	.LASF6
+ 123 0061 02       		.uleb128 0x2
+ 124 0062 08       		.byte	0x8
+ 125 0063 07       		.byte	0x7
+ 126 0064 DC000000 		.4byte	.LASF7
+ 127 0068 04       		.uleb128 0x4
+ 128 0069 04       		.byte	0x4
+ 129 006a 05       		.byte	0x5
+ 130 006b 696E7400 		.ascii	"int\000"
+ 131 006f 02       		.uleb128 0x2
+ 132 0070 04       		.byte	0x4
+ 133 0071 07       		.byte	0x7
+ 134 0072 27000000 		.4byte	.LASF8
+ 135 0076 03       		.uleb128 0x3
+ 136 0077 F3000000 		.4byte	.LASF10
+ 137 007b 03       		.byte	0x3
+ 138 007c 18       		.byte	0x18
+ 139 007d 2C000000 		.4byte	0x2c
+ 140 0081 05       		.uleb128 0x5
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccenyKgi.s 			page 4
+
+
+ 141 0082 45000000 		.4byte	.LASF11
+ 142 0086 04       		.byte	0x4
+ 143 0087 E601     		.2byte	0x1e6
+ 144 0089 53000000 		.4byte	0x53
+ 145 008d 02       		.uleb128 0x2
+ 146 008e 04       		.byte	0x4
+ 147 008f 04       		.byte	0x4
+ 148 0090 18020000 		.4byte	.LASF12
+ 149 0094 02       		.uleb128 0x2
+ 150 0095 08       		.byte	0x8
+ 151 0096 04       		.byte	0x4
+ 152 0097 58010000 		.4byte	.LASF13
+ 153 009b 02       		.uleb128 0x2
+ 154 009c 01       		.byte	0x1
+ 155 009d 08       		.byte	0x8
+ 156 009e 41010000 		.4byte	.LASF14
+ 157 00a2 02       		.uleb128 0x2
+ 158 00a3 08       		.byte	0x8
+ 159 00a4 04       		.byte	0x4
+ 160 00a5 0C020000 		.4byte	.LASF15
+ 161 00a9 02       		.uleb128 0x2
+ 162 00aa 04       		.byte	0x4
+ 163 00ab 07       		.byte	0x7
+ 164 00ac 4F010000 		.4byte	.LASF16
+ 165 00b0 06       		.uleb128 0x6
+ 166 00b1 28020000 		.4byte	.LASF23
+ 167 00b5 01       		.byte	0x1
+ 168 00b6 1A       		.byte	0x1a
+ 169 00b7 00000000 		.4byte	.LFB35
+ 170 00bb 1C000000 		.4byte	.LFE35-.LFB35
+ 171 00bf 01       		.uleb128 0x1
+ 172 00c0 9C       		.byte	0x9c
+ 173 00c1 CF000000 		.4byte	0xcf
+ 174 00c5 07       		.uleb128 0x7
+ 175 00c6 0A000000 		.4byte	.LVL0
+ 176 00ca 11010000 		.4byte	0x111
+ 177 00ce 00       		.byte	0
+ 178 00cf 08       		.uleb128 0x8
+ 179 00d0 0C010000 		.4byte	.LASF17
+ 180 00d4 01       		.byte	0x1
+ 181 00d5 15       		.byte	0x15
+ 182 00d6 76000000 		.4byte	0x76
+ 183 00da 05       		.uleb128 0x5
+ 184 00db 03       		.byte	0x3
+ 185 00dc 00000000 		.4byte	motorUnitMode
+ 186 00e0 08       		.uleb128 0x8
+ 187 00e1 1A010000 		.4byte	.LASF18
+ 188 00e5 01       		.byte	0x1
+ 189 00e6 16       		.byte	0x16
+ 190 00e7 76000000 		.4byte	0x76
+ 191 00eb 05       		.uleb128 0x5
+ 192 00ec 03       		.byte	0x3
+ 193 00ed 00000000 		.4byte	motorUnitState
+ 194 00f1 09       		.uleb128 0x9
+ 195 00f2 FC000000 		.4byte	0xfc
+ 196 00f6 FC000000 		.4byte	0xfc
+ 197 00fa 0A       		.uleb128 0xa
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccenyKgi.s 			page 5
+
+
+ 198 00fb 00       		.byte	0
+ 199 00fc 0B       		.uleb128 0xb
+ 200 00fd 81000000 		.4byte	0x81
+ 201 0101 0C       		.uleb128 0xc
+ 202 0102 34000000 		.4byte	.LASF19
+ 203 0106 01       		.byte	0x1
+ 204 0107 18       		.byte	0x18
+ 205 0108 0C010000 		.4byte	0x10c
+ 206 010c 0B       		.uleb128 0xb
+ 207 010d F1000000 		.4byte	0xf1
+ 208 0111 0D       		.uleb128 0xd
+ 209 0112 0E000000 		.4byte	.LASF24
+ 210 0116 0E000000 		.4byte	.LASF24
+ 211 011a 05       		.byte	0x5
+ 212 011b 15       		.byte	0x15
+ 213 011c 00       		.byte	0
+ 214              		.section	.debug_abbrev,"",%progbits
+ 215              	.Ldebug_abbrev0:
+ 216 0000 01       		.uleb128 0x1
+ 217 0001 11       		.uleb128 0x11
+ 218 0002 01       		.byte	0x1
+ 219 0003 25       		.uleb128 0x25
+ 220 0004 0E       		.uleb128 0xe
+ 221 0005 13       		.uleb128 0x13
+ 222 0006 0B       		.uleb128 0xb
+ 223 0007 03       		.uleb128 0x3
+ 224 0008 0E       		.uleb128 0xe
+ 225 0009 1B       		.uleb128 0x1b
+ 226 000a 0E       		.uleb128 0xe
+ 227 000b 55       		.uleb128 0x55
+ 228 000c 17       		.uleb128 0x17
+ 229 000d 11       		.uleb128 0x11
+ 230 000e 01       		.uleb128 0x1
+ 231 000f 10       		.uleb128 0x10
+ 232 0010 17       		.uleb128 0x17
+ 233 0011 00       		.byte	0
+ 234 0012 00       		.byte	0
+ 235 0013 02       		.uleb128 0x2
+ 236 0014 24       		.uleb128 0x24
+ 237 0015 00       		.byte	0
+ 238 0016 0B       		.uleb128 0xb
+ 239 0017 0B       		.uleb128 0xb
+ 240 0018 3E       		.uleb128 0x3e
+ 241 0019 0B       		.uleb128 0xb
+ 242 001a 03       		.uleb128 0x3
+ 243 001b 0E       		.uleb128 0xe
+ 244 001c 00       		.byte	0
+ 245 001d 00       		.byte	0
+ 246 001e 03       		.uleb128 0x3
+ 247 001f 16       		.uleb128 0x16
+ 248 0020 00       		.byte	0
+ 249 0021 03       		.uleb128 0x3
+ 250 0022 0E       		.uleb128 0xe
+ 251 0023 3A       		.uleb128 0x3a
+ 252 0024 0B       		.uleb128 0xb
+ 253 0025 3B       		.uleb128 0x3b
+ 254 0026 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccenyKgi.s 			page 6
+
+
+ 255 0027 49       		.uleb128 0x49
+ 256 0028 13       		.uleb128 0x13
+ 257 0029 00       		.byte	0
+ 258 002a 00       		.byte	0
+ 259 002b 04       		.uleb128 0x4
+ 260 002c 24       		.uleb128 0x24
+ 261 002d 00       		.byte	0
+ 262 002e 0B       		.uleb128 0xb
+ 263 002f 0B       		.uleb128 0xb
+ 264 0030 3E       		.uleb128 0x3e
+ 265 0031 0B       		.uleb128 0xb
+ 266 0032 03       		.uleb128 0x3
+ 267 0033 08       		.uleb128 0x8
+ 268 0034 00       		.byte	0
+ 269 0035 00       		.byte	0
+ 270 0036 05       		.uleb128 0x5
+ 271 0037 16       		.uleb128 0x16
+ 272 0038 00       		.byte	0
+ 273 0039 03       		.uleb128 0x3
+ 274 003a 0E       		.uleb128 0xe
+ 275 003b 3A       		.uleb128 0x3a
+ 276 003c 0B       		.uleb128 0xb
+ 277 003d 3B       		.uleb128 0x3b
+ 278 003e 05       		.uleb128 0x5
+ 279 003f 49       		.uleb128 0x49
+ 280 0040 13       		.uleb128 0x13
+ 281 0041 00       		.byte	0
+ 282 0042 00       		.byte	0
+ 283 0043 06       		.uleb128 0x6
+ 284 0044 2E       		.uleb128 0x2e
+ 285 0045 01       		.byte	0x1
+ 286 0046 3F       		.uleb128 0x3f
+ 287 0047 19       		.uleb128 0x19
+ 288 0048 03       		.uleb128 0x3
+ 289 0049 0E       		.uleb128 0xe
+ 290 004a 3A       		.uleb128 0x3a
+ 291 004b 0B       		.uleb128 0xb
+ 292 004c 3B       		.uleb128 0x3b
+ 293 004d 0B       		.uleb128 0xb
+ 294 004e 11       		.uleb128 0x11
+ 295 004f 01       		.uleb128 0x1
+ 296 0050 12       		.uleb128 0x12
+ 297 0051 06       		.uleb128 0x6
+ 298 0052 40       		.uleb128 0x40
+ 299 0053 18       		.uleb128 0x18
+ 300 0054 9742     		.uleb128 0x2117
+ 301 0056 19       		.uleb128 0x19
+ 302 0057 01       		.uleb128 0x1
+ 303 0058 13       		.uleb128 0x13
+ 304 0059 00       		.byte	0
+ 305 005a 00       		.byte	0
+ 306 005b 07       		.uleb128 0x7
+ 307 005c 898201   		.uleb128 0x4109
+ 308 005f 00       		.byte	0
+ 309 0060 11       		.uleb128 0x11
+ 310 0061 01       		.uleb128 0x1
+ 311 0062 31       		.uleb128 0x31
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccenyKgi.s 			page 7
+
+
+ 312 0063 13       		.uleb128 0x13
+ 313 0064 00       		.byte	0
+ 314 0065 00       		.byte	0
+ 315 0066 08       		.uleb128 0x8
+ 316 0067 34       		.uleb128 0x34
+ 317 0068 00       		.byte	0
+ 318 0069 03       		.uleb128 0x3
+ 319 006a 0E       		.uleb128 0xe
+ 320 006b 3A       		.uleb128 0x3a
+ 321 006c 0B       		.uleb128 0xb
+ 322 006d 3B       		.uleb128 0x3b
+ 323 006e 0B       		.uleb128 0xb
+ 324 006f 49       		.uleb128 0x49
+ 325 0070 13       		.uleb128 0x13
+ 326 0071 3F       		.uleb128 0x3f
+ 327 0072 19       		.uleb128 0x19
+ 328 0073 02       		.uleb128 0x2
+ 329 0074 18       		.uleb128 0x18
+ 330 0075 00       		.byte	0
+ 331 0076 00       		.byte	0
+ 332 0077 09       		.uleb128 0x9
+ 333 0078 01       		.uleb128 0x1
+ 334 0079 01       		.byte	0x1
+ 335 007a 49       		.uleb128 0x49
+ 336 007b 13       		.uleb128 0x13
+ 337 007c 01       		.uleb128 0x1
+ 338 007d 13       		.uleb128 0x13
+ 339 007e 00       		.byte	0
+ 340 007f 00       		.byte	0
+ 341 0080 0A       		.uleb128 0xa
+ 342 0081 21       		.uleb128 0x21
+ 343 0082 00       		.byte	0
+ 344 0083 00       		.byte	0
+ 345 0084 00       		.byte	0
+ 346 0085 0B       		.uleb128 0xb
+ 347 0086 26       		.uleb128 0x26
+ 348 0087 00       		.byte	0
+ 349 0088 49       		.uleb128 0x49
+ 350 0089 13       		.uleb128 0x13
+ 351 008a 00       		.byte	0
+ 352 008b 00       		.byte	0
+ 353 008c 0C       		.uleb128 0xc
+ 354 008d 34       		.uleb128 0x34
+ 355 008e 00       		.byte	0
+ 356 008f 03       		.uleb128 0x3
+ 357 0090 0E       		.uleb128 0xe
+ 358 0091 3A       		.uleb128 0x3a
+ 359 0092 0B       		.uleb128 0xb
+ 360 0093 3B       		.uleb128 0x3b
+ 361 0094 0B       		.uleb128 0xb
+ 362 0095 49       		.uleb128 0x49
+ 363 0096 13       		.uleb128 0x13
+ 364 0097 3F       		.uleb128 0x3f
+ 365 0098 19       		.uleb128 0x19
+ 366 0099 3C       		.uleb128 0x3c
+ 367 009a 19       		.uleb128 0x19
+ 368 009b 00       		.byte	0
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccenyKgi.s 			page 8
+
+
+ 369 009c 00       		.byte	0
+ 370 009d 0D       		.uleb128 0xd
+ 371 009e 2E       		.uleb128 0x2e
+ 372 009f 00       		.byte	0
+ 373 00a0 3F       		.uleb128 0x3f
+ 374 00a1 19       		.uleb128 0x19
+ 375 00a2 3C       		.uleb128 0x3c
+ 376 00a3 19       		.uleb128 0x19
+ 377 00a4 6E       		.uleb128 0x6e
+ 378 00a5 0E       		.uleb128 0xe
+ 379 00a6 03       		.uleb128 0x3
+ 380 00a7 0E       		.uleb128 0xe
+ 381 00a8 3A       		.uleb128 0x3a
+ 382 00a9 0B       		.uleb128 0xb
+ 383 00aa 3B       		.uleb128 0x3b
+ 384 00ab 0B       		.uleb128 0xb
+ 385 00ac 00       		.byte	0
+ 386 00ad 00       		.byte	0
+ 387 00ae 00       		.byte	0
+ 388              		.section	.debug_aranges,"",%progbits
+ 389 0000 1C000000 		.4byte	0x1c
+ 390 0004 0200     		.2byte	0x2
+ 391 0006 00000000 		.4byte	.Ldebug_info0
+ 392 000a 04       		.byte	0x4
+ 393 000b 00       		.byte	0
+ 394 000c 0000     		.2byte	0
+ 395 000e 0000     		.2byte	0
+ 396 0010 00000000 		.4byte	.LFB35
+ 397 0014 1C000000 		.4byte	.LFE35-.LFB35
+ 398 0018 00000000 		.4byte	0
+ 399 001c 00000000 		.4byte	0
+ 400              		.section	.debug_ranges,"",%progbits
+ 401              	.Ldebug_ranges0:
+ 402 0000 00000000 		.4byte	.LFB35
+ 403 0004 1C000000 		.4byte	.LFE35
+ 404 0008 00000000 		.4byte	0
+ 405 000c 00000000 		.4byte	0
+ 406              		.section	.debug_line,"",%progbits
+ 407              	.Ldebug_line0:
+ 408 0000 72010000 		.section	.debug_str,"MS",%progbits,1
+ 408      02005901 
+ 408      00000201 
+ 408      FB0E0D00 
+ 408      01010101 
+ 409              	.LASF6:
+ 410 0000 6C6F6E67 		.ascii	"long long int\000"
+ 410      206C6F6E 
+ 410      6720696E 
+ 410      7400
+ 411              	.LASF24:
+ 412 000e 53747269 		.ascii	"StripLights_DisplayClear\000"
+ 412      704C6967 
+ 412      6874735F 
+ 412      44697370 
+ 412      6C617943 
+ 413              	.LASF8:
+ 414 0027 756E7369 		.ascii	"unsigned int\000"
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccenyKgi.s 			page 9
+
+
+ 414      676E6564 
+ 414      20696E74 
+ 414      00
+ 415              	.LASF19:
+ 416 0034 53747269 		.ascii	"StripLights_CLUT\000"
+ 416      704C6967 
+ 416      6874735F 
+ 416      434C5554 
+ 416      00
+ 417              	.LASF11:
+ 418 0045 75696E74 		.ascii	"uint32\000"
+ 418      333200
+ 419              	.LASF5:
+ 420 004c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 420      20756E73 
+ 420      69676E65 
+ 420      6420696E 
+ 420      7400
+ 421              	.LASF22:
+ 422 005e 433A5C55 		.ascii	"C:\\Users\\Austcha\\Documents\\Husky Robotics\\Moto"
+ 422      73657273 
+ 422      5C417573 
+ 422      74636861 
+ 422      5C446F63 
+ 423 008c 7220426F 		.ascii	"r Boards\\Rev3\\Motor-Unit-Firmware-A-2019-2020\\Mo"
+ 423      61726473 
+ 423      5C526576 
+ 423      335C4D6F 
+ 423      746F722D 
+ 424 00bc 746F7220 		.ascii	"tor Unit\\Motor_Board_Rev3.cydsn\000"
+ 424      556E6974 
+ 424      5C4D6F74 
+ 424      6F725F42 
+ 424      6F617264 
+ 425              	.LASF7:
+ 426 00dc 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 426      206C6F6E 
+ 426      6720756E 
+ 426      7369676E 
+ 426      65642069 
+ 427              	.LASF10:
+ 428 00f3 75696E74 		.ascii	"uint8_t\000"
+ 428      385F7400 
+ 429              	.LASF21:
+ 430 00fb 4D6F746F 		.ascii	"Motor_Unit_FSM.c\000"
+ 430      725F556E 
+ 430      69745F46 
+ 430      534D2E63 
+ 430      00
+ 431              	.LASF17:
+ 432 010c 6D6F746F 		.ascii	"motorUnitMode\000"
+ 432      72556E69 
+ 432      744D6F64 
+ 432      6500
+ 433              	.LASF18:
+ 434 011a 6D6F746F 		.ascii	"motorUnitState\000"
+ 434      72556E69 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccenyKgi.s 			page 10
+
+
+ 434      74537461 
+ 434      746500
+ 435              	.LASF1:
+ 436 0129 756E7369 		.ascii	"unsigned char\000"
+ 436      676E6564 
+ 436      20636861 
+ 436      7200
+ 437              	.LASF9:
+ 438 0137 5F5F7569 		.ascii	"__uint8_t\000"
+ 438      6E74385F 
+ 438      7400
+ 439              	.LASF14:
+ 440 0141 63686172 		.ascii	"char\000"
+ 440      00
+ 441              	.LASF4:
+ 442 0146 6C6F6E67 		.ascii	"long int\000"
+ 442      20696E74 
+ 442      00
+ 443              	.LASF16:
+ 444 014f 73697A65 		.ascii	"sizetype\000"
+ 444      74797065 
+ 444      00
+ 445              	.LASF13:
+ 446 0158 646F7562 		.ascii	"double\000"
+ 446      6C6500
+ 447              	.LASF20:
+ 448 015f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 448      43313120 
+ 448      352E342E 
+ 448      31203230 
+ 448      31363036 
+ 449 0192 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 449      20726576 
+ 449      6973696F 
+ 449      6E203233 
+ 449      37373135 
+ 450 01c5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 450      66756E63 
+ 450      74696F6E 
+ 450      2D736563 
+ 450      74696F6E 
+ 451              	.LASF3:
+ 452 01ed 73686F72 		.ascii	"short unsigned int\000"
+ 452      7420756E 
+ 452      7369676E 
+ 452      65642069 
+ 452      6E7400
+ 453              	.LASF0:
+ 454 0200 7369676E 		.ascii	"signed char\000"
+ 454      65642063 
+ 454      68617200 
+ 455              	.LASF15:
+ 456 020c 6C6F6E67 		.ascii	"long double\000"
+ 456      20646F75 
+ 456      626C6500 
+ 457              	.LASF12:
+ 458 0218 666C6F61 		.ascii	"float\000"
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccenyKgi.s 			page 11
+
+
+ 458      7400
+ 459              	.LASF2:
+ 460 021e 73686F72 		.ascii	"short int\000"
+ 460      7420696E 
+ 460      7400
+ 461              	.LASF23:
+ 462 0228 676F746F 		.ascii	"gotoUninitState\000"
+ 462      556E696E 
+ 462      69745374 
+ 462      61746500 
+ 463              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

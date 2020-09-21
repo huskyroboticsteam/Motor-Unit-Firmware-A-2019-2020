@@ -9,12 +9,12 @@
  *
  * ========================================
 */
-#ifndef MotorDrive
-    #define MotorDrive
-#endif
-
-#include <stdio.h>
-
-void set_PWM(int32_t compare, uint8_t disable_limit, uint8_t limitSW);
 
 /* [] END OF FILE */
+#ifndef MOTOR_UNIT_FSM_H
+    #define MOTOR_UNIT_FSM_H
+    #include <project.h>
+    
+    void gotoUninitState();
+    
+#endif

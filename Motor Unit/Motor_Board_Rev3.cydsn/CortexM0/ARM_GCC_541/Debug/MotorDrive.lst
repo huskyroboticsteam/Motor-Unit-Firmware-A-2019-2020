@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 1
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 1
 
 
    1              		.syntax unified
@@ -44,785 +44,898 @@ ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 1
   14:MotorDrive.c  **** #include <stdio.h>
   15:MotorDrive.c  **** #include "MotorDrive.h"
   16:MotorDrive.c  **** 
-  17:MotorDrive.c  **** extern volatile uint8 uart_debug;
-  18:MotorDrive.c  **** extern uint8 invalidate;
-  19:MotorDrive.c  **** extern char8 txData[TX_DATA_SIZE];
-  20:MotorDrive.c  **** 
-  21:MotorDrive.c  **** //uint8 limitSW = Status_Reg_Switches_Read();
-  22:MotorDrive.c  **** 
-  23:MotorDrive.c  **** // takes between -255 and 255
-  24:MotorDrive.c  **** void set_PWM(int compare, uint8_t disable_limit, uint8 limitSW) {
-  28              		.loc 1 24 0
+  17:MotorDrive.c  **** extern uint8 invalidate;
+  18:MotorDrive.c  **** extern char8 txData[TX_DATA_SIZE];
+  19:MotorDrive.c  **** 
+  20:MotorDrive.c  **** //uint8 limitSW = Status_Reg_Switches_Read();
+  21:MotorDrive.c  **** 
+  22:MotorDrive.c  **** // takes between -255 and 255
+  23:MotorDrive.c  **** void set_PWM(int32_t compare, uint8_t disable_limit, uint8 limitSW) {
+  28              		.loc 1 23 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32              	.LVL0:
-  33 0000 10B5     		push	{r4, lr}
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 2
+  33 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  34              		.cfi_def_cfa_offset 24
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 2
 
 
-  34              		.cfi_def_cfa_offset 8
-  35              		.cfi_offset 4, -8
-  36              		.cfi_offset 14, -4
-  37 0002 0400     		movs	r4, r0
-  25:MotorDrive.c  ****    /* if(uart_debug) {
-  26:MotorDrive.c  ****         sprintf(txData, "PWM:%d disable_limit: %d\r\n",compare,disable_limit);
-  27:MotorDrive.c  ****         UART_UartPutString(txData); 
-  28:MotorDrive.c  ****     }*/
-  29:MotorDrive.c  ****     invalidate = 0;
-  38              		.loc 1 29 0
-  39 0004 0020     		movs	r0, #0
-  40              	.LVL1:
-  41 0006 134B     		ldr	r3, .L7
-  42 0008 1870     		strb	r0, [r3]
-  30:MotorDrive.c  ****     if (compare < -255 || compare > 255) { return; }
-  43              		.loc 1 30 0
-  44 000a 2000     		movs	r0, r4
-  45 000c FF30     		adds	r0, r0, #255
-  46 000e FF23     		movs	r3, #255
-  47 0010 5B00     		lsls	r3, r3, #1
-  48 0012 9842     		cmp	r0, r3
-  49 0014 1CD8     		bhi	.L1
-  31:MotorDrive.c  ****     if (compare < 0 && (!(limitSW & 0b01) || disable_limit) ) {
-  50              		.loc 1 31 0
-  51 0016 002C     		cmp	r4, #0
-  52 0018 0ADA     		bge	.L3
-  53              		.loc 1 31 0 is_stmt 0 discriminator 1
-  54 001a D307     		lsls	r3, r2, #31
-  55 001c 01D5     		bpl	.L4
-  56              		.loc 1 31 0 discriminator 2
-  57 001e 0029     		cmp	r1, #0
-  58 0020 06D0     		beq	.L3
-  59              	.L4:
-  32:MotorDrive.c  ****         Pin_Direction_Write(0);
-  60              		.loc 1 32 0 is_stmt 1
-  61 0022 0020     		movs	r0, #0
-  62 0024 FFF7FEFF 		bl	Pin_Direction_Write
-  63              	.LVL2:
-  33:MotorDrive.c  ****         PWM_Motor_WriteCompare(-compare);
-  64              		.loc 1 33 0
-  65 0028 6042     		rsbs	r0, r4, #0
-  66 002a FFF7FEFF 		bl	PWM_Motor_WriteCompare
-  67              	.LVL3:
-  68 002e 0FE0     		b	.L1
-  69              	.LVL4:
-  70              	.L3:
-  34:MotorDrive.c  ****     } else if (compare > 0 && (!(limitSW & 0b10) || disable_limit) ){
-  71              		.loc 1 34 0
-  72 0030 002C     		cmp	r4, #0
-  73 0032 0ADD     		ble	.L5
-  74              		.loc 1 34 0 is_stmt 0 discriminator 1
-  75 0034 9307     		lsls	r3, r2, #30
-  76 0036 01D5     		bpl	.L6
-  77              		.loc 1 34 0 discriminator 2
-  78 0038 0029     		cmp	r1, #0
-  79 003a 06D0     		beq	.L5
-  80              	.L6:
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 3
+  35              		.cfi_offset 3, -24
+  36              		.cfi_offset 4, -20
+  37              		.cfi_offset 5, -16
+  38              		.cfi_offset 6, -12
+  39              		.cfi_offset 7, -8
+  40              		.cfi_offset 14, -4
+  41 0002 0400     		movs	r4, r0
+  42 0004 0E00     		movs	r6, r1
+  43 0006 1700     		movs	r7, r2
+  24:MotorDrive.c  **** 
+  25:MotorDrive.c  ****     sprintf(txData, "PWM:%d disable_limit: %d\r\n",compare,disable_limit);
+  44              		.loc 1 25 0
+  45 0008 174D     		ldr	r5, .L7
+  46 000a 0B00     		movs	r3, r1
+  47 000c 0200     		movs	r2, r0
+  48              	.LVL1:
+  49 000e 1749     		ldr	r1, .L7+4
+  50              	.LVL2:
+  51 0010 2800     		movs	r0, r5
+  52              	.LVL3:
+  53 0012 FFF7FEFF 		bl	sprintf
+  54              	.LVL4:
+  26:MotorDrive.c  ****     UART_UartPutString(txData); 
+  55              		.loc 1 26 0
+  56 0016 2800     		movs	r0, r5
+  57 0018 FFF7FEFF 		bl	UART_UartPutString
+  58              	.LVL5:
+  27:MotorDrive.c  **** 
+  28:MotorDrive.c  ****     invalidate = 0;
+  59              		.loc 1 28 0
+  60 001c 0022     		movs	r2, #0
+  61 001e 144B     		ldr	r3, .L7+8
+  62 0020 1A70     		strb	r2, [r3]
+  29:MotorDrive.c  ****     if (compare < -65535 || compare > 65535) { return; }
+  63              		.loc 1 29 0
+  64 0022 144B     		ldr	r3, .L7+12
+  65 0024 E218     		adds	r2, r4, r3
+  66 0026 144B     		ldr	r3, .L7+16
+  67 0028 9A42     		cmp	r2, r3
+  68 002a 1CD8     		bhi	.L1
+  30:MotorDrive.c  ****     if (compare < 0 && (!(limitSW & 0b01) || disable_limit) ) {
+  69              		.loc 1 30 0
+  70 002c 002C     		cmp	r4, #0
+  71 002e 0ADA     		bge	.L3
+  72              		.loc 1 30 0 is_stmt 0 discriminator 1
+  73 0030 FB07     		lsls	r3, r7, #31
+  74 0032 01D5     		bpl	.L4
+  75              		.loc 1 30 0 discriminator 2
+  76 0034 002E     		cmp	r6, #0
+  77 0036 06D0     		beq	.L3
+  78              	.L4:
+  31:MotorDrive.c  ****         Pin_Direction_Write(0);
+  79              		.loc 1 31 0 is_stmt 1
+  80 0038 0020     		movs	r0, #0
+  81 003a FFF7FEFF 		bl	Pin_Direction_Write
+  82              	.LVL6:
+  32:MotorDrive.c  ****         PWM_Motor_WriteCompare(-compare);
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 3
 
 
-  35:MotorDrive.c  ****         Pin_Direction_Write(1);
-  81              		.loc 1 35 0 is_stmt 1
-  82 003c 0120     		movs	r0, #1
-  83 003e FFF7FEFF 		bl	Pin_Direction_Write
-  84              	.LVL5:
-  36:MotorDrive.c  ****         PWM_Motor_WriteCompare(compare);
-  85              		.loc 1 36 0
-  86 0042 2000     		movs	r0, r4
-  87 0044 FFF7FEFF 		bl	PWM_Motor_WriteCompare
-  88              	.LVL6:
-  89 0048 02E0     		b	.L1
-  90              	.LVL7:
-  91              	.L5:
-  37:MotorDrive.c  ****     } else {
-  38:MotorDrive.c  ****         PWM_Motor_WriteCompare(0);
-  92              		.loc 1 38 0
-  93 004a 0020     		movs	r0, #0
-  94 004c FFF7FEFF 		bl	PWM_Motor_WriteCompare
-  95              	.LVL8:
-  96              	.L1:
-  39:MotorDrive.c  ****     }
-  40:MotorDrive.c  **** }
-  97              		.loc 1 40 0
-  98              		@ sp needed
-  99              	.LVL9:
- 100 0050 10BD     		pop	{r4, pc}
- 101              	.L8:
- 102 0052 C046     		.align	2
- 103              	.L7:
- 104 0054 00000000 		.word	invalidate
- 105              		.cfi_endproc
- 106              	.LFE35:
- 107              		.size	set_PWM, .-set_PWM
- 108              		.text
- 109              	.Letext0:
- 110              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
- 111              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
- 112              		.file 4 "Generated_Source\\PSoC4/cytypes.h"
- 113              		.file 5 "Generated_Source\\PSoC4/Pin_Direction.h"
- 114              		.file 6 "Generated_Source\\PSoC4/PWM_Motor.h"
- 115              		.section	.debug_info,"",%progbits
- 116              	.Ldebug_info0:
- 117 0000 70010000 		.4byte	0x170
- 118 0004 0400     		.2byte	0x4
- 119 0006 00000000 		.4byte	.Ldebug_abbrev0
- 120 000a 04       		.byte	0x4
- 121 000b 01       		.uleb128 0x1
- 122 000c 60010000 		.4byte	.LASF22
- 123 0010 0C       		.byte	0xc
- 124 0011 A6000000 		.4byte	.LASF23
- 125 0015 BB000000 		.4byte	.LASF24
- 126 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 127 001d 00000000 		.4byte	0
- 128 0021 00000000 		.4byte	.Ldebug_line0
- 129 0025 02       		.uleb128 0x2
- 130 0026 01       		.byte	0x1
- 131 0027 06       		.byte	0x6
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 4
+  83              		.loc 1 32 0
+  84 003e 6042     		rsbs	r0, r4, #0
+  85 0040 FFF7FEFF 		bl	PWM_Motor_WriteCompare
+  86              	.LVL7:
+  87 0044 0FE0     		b	.L1
+  88              	.L3:
+  33:MotorDrive.c  ****     } else if (compare > 0 && (!(limitSW & 0b10) || disable_limit) ){
+  89              		.loc 1 33 0
+  90 0046 002C     		cmp	r4, #0
+  91 0048 0ADD     		ble	.L5
+  92              		.loc 1 33 0 is_stmt 0 discriminator 1
+  93 004a BB07     		lsls	r3, r7, #30
+  94 004c 01D5     		bpl	.L6
+  95              		.loc 1 33 0 discriminator 2
+  96 004e 002E     		cmp	r6, #0
+  97 0050 06D0     		beq	.L5
+  98              	.L6:
+  34:MotorDrive.c  ****         Pin_Direction_Write(1);
+  99              		.loc 1 34 0 is_stmt 1
+ 100 0052 0120     		movs	r0, #1
+ 101 0054 FFF7FEFF 		bl	Pin_Direction_Write
+ 102              	.LVL8:
+  35:MotorDrive.c  ****         PWM_Motor_WriteCompare(compare);
+ 103              		.loc 1 35 0
+ 104 0058 2000     		movs	r0, r4
+ 105 005a FFF7FEFF 		bl	PWM_Motor_WriteCompare
+ 106              	.LVL9:
+ 107 005e 02E0     		b	.L1
+ 108              	.L5:
+  36:MotorDrive.c  ****     } else {
+  37:MotorDrive.c  ****         PWM_Motor_WriteCompare(0);
+ 109              		.loc 1 37 0
+ 110 0060 0020     		movs	r0, #0
+ 111 0062 FFF7FEFF 		bl	PWM_Motor_WriteCompare
+ 112              	.LVL10:
+ 113              	.L1:
+  38:MotorDrive.c  ****     }
+  39:MotorDrive.c  **** }
+ 114              		.loc 1 39 0
+ 115              		@ sp needed
+ 116              	.LVL11:
+ 117 0066 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 118              	.L8:
+ 119              		.align	2
+ 120              	.L7:
+ 121 0068 00000000 		.word	txData
+ 122 006c 00000000 		.word	.LC0
+ 123 0070 00000000 		.word	invalidate
+ 124 0074 FFFF0000 		.word	65535
+ 125 0078 FEFF0100 		.word	131070
+ 126              		.cfi_endproc
+ 127              	.LFE35:
+ 128              		.size	set_PWM, .-set_PWM
+ 129              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 130              		.align	2
+ 131              	.LC0:
+ 132 0000 50574D3A 		.ascii	"PWM:%d disable_limit: %d\015\012\000"
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 4
 
 
- 132 0028 01020000 		.4byte	.LASF0
- 133 002c 03       		.uleb128 0x3
- 134 002d 77000000 		.4byte	.LASF9
- 135 0031 02       		.byte	0x2
- 136 0032 1D       		.byte	0x1d
- 137 0033 37000000 		.4byte	0x37
- 138 0037 02       		.uleb128 0x2
- 139 0038 01       		.byte	0x1
- 140 0039 08       		.byte	0x8
- 141 003a 2F000000 		.4byte	.LASF1
- 142 003e 02       		.uleb128 0x2
- 143 003f 02       		.byte	0x2
- 144 0040 05       		.byte	0x5
- 145 0041 47010000 		.4byte	.LASF2
- 146 0045 02       		.uleb128 0x2
- 147 0046 02       		.byte	0x2
- 148 0047 07       		.byte	0x7
- 149 0048 EE010000 		.4byte	.LASF3
- 150 004c 02       		.uleb128 0x2
- 151 004d 04       		.byte	0x4
- 152 004e 05       		.byte	0x5
- 153 004f 3E010000 		.4byte	.LASF4
- 154 0053 02       		.uleb128 0x2
- 155 0054 04       		.byte	0x4
- 156 0055 07       		.byte	0x7
- 157 0056 43000000 		.4byte	.LASF5
- 158 005a 02       		.uleb128 0x2
- 159 005b 08       		.byte	0x8
- 160 005c 05       		.byte	0x5
- 161 005d 00000000 		.4byte	.LASF6
- 162 0061 02       		.uleb128 0x2
- 163 0062 08       		.byte	0x8
- 164 0063 07       		.byte	0x7
- 165 0064 60000000 		.4byte	.LASF7
- 166 0068 04       		.uleb128 0x4
- 167 0069 04       		.byte	0x4
- 168 006a 05       		.byte	0x5
- 169 006b 696E7400 		.ascii	"int\000"
- 170 006f 02       		.uleb128 0x2
- 171 0070 04       		.byte	0x4
- 172 0071 07       		.byte	0x7
- 173 0072 22000000 		.4byte	.LASF8
- 174 0076 03       		.uleb128 0x3
- 175 0077 B3000000 		.4byte	.LASF10
- 176 007b 03       		.byte	0x3
- 177 007c 18       		.byte	0x18
- 178 007d 2C000000 		.4byte	0x2c
- 179 0081 05       		.uleb128 0x5
- 180 0082 3D000000 		.4byte	.LASF11
- 181 0086 04       		.byte	0x4
- 182 0087 E401     		.2byte	0x1e4
- 183 0089 37000000 		.4byte	0x37
- 184 008d 02       		.uleb128 0x2
- 185 008e 04       		.byte	0x4
- 186 008f 04       		.byte	0x4
- 187 0090 19020000 		.4byte	.LASF12
- 188 0094 02       		.uleb128 0x2
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 5
+ 132      25642064 
+ 132      69736162 
+ 132      6C655F6C 
+ 132      696D6974 
+ 133              		.text
+ 134              	.Letext0:
+ 135              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 136              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 137              		.file 4 "Generated_Source\\PSoC4/cytypes.h"
+ 138              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
+ 139              		.file 6 "Generated_Source\\PSoC4/UART_SPI_UART.h"
+ 140              		.file 7 "Generated_Source\\PSoC4/Pin_Direction.h"
+ 141              		.file 8 "Generated_Source\\PSoC4/PWM_Motor.h"
+ 142              		.section	.debug_info,"",%progbits
+ 143              	.Ldebug_info0:
+ 144 0000 01020000 		.4byte	0x201
+ 145 0004 0400     		.2byte	0x4
+ 146 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 147 000a 04       		.byte	0x4
+ 148 000b 01       		.uleb128 0x1
+ 149 000c 6F010000 		.4byte	.LASF29
+ 150 0010 0C       		.byte	0xc
+ 151 0011 2E000000 		.4byte	.LASF30
+ 152 0015 60000000 		.4byte	.LASF31
+ 153 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 154 001d 00000000 		.4byte	0
+ 155 0021 00000000 		.4byte	.Ldebug_line0
+ 156 0025 02       		.uleb128 0x2
+ 157 0026 01       		.byte	0x1
+ 158 0027 06       		.byte	0x6
+ 159 0028 54000000 		.4byte	.LASF0
+ 160 002c 03       		.uleb128 0x3
+ 161 002d 00000000 		.4byte	.LASF4
+ 162 0031 02       		.byte	0x2
+ 163 0032 1D       		.byte	0x1d
+ 164 0033 37000000 		.4byte	0x37
+ 165 0037 02       		.uleb128 0x2
+ 166 0038 01       		.byte	0x1
+ 167 0039 08       		.byte	0x8
+ 168 003a EC000000 		.4byte	.LASF1
+ 169 003e 02       		.uleb128 0x2
+ 170 003f 02       		.byte	0x2
+ 171 0040 05       		.byte	0x5
+ 172 0041 21020000 		.4byte	.LASF2
+ 173 0045 02       		.uleb128 0x2
+ 174 0046 02       		.byte	0x2
+ 175 0047 07       		.byte	0x7
+ 176 0048 1B000000 		.4byte	.LASF3
+ 177 004c 03       		.uleb128 0x3
+ 178 004d 0A000000 		.4byte	.LASF5
+ 179 0051 02       		.byte	0x2
+ 180 0052 3F       		.byte	0x3f
+ 181 0053 57000000 		.4byte	0x57
+ 182 0057 02       		.uleb128 0x2
+ 183 0058 04       		.byte	0x4
+ 184 0059 05       		.byte	0x5
+ 185 005a 45020000 		.4byte	.LASF6
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 5
 
 
- 189 0095 08       		.byte	0x8
- 190 0096 04       		.byte	0x4
- 191 0097 51010000 		.4byte	.LASF13
- 192 009b 02       		.uleb128 0x2
- 193 009c 01       		.byte	0x1
- 194 009d 08       		.byte	0x8
- 195 009e 39010000 		.4byte	.LASF14
- 196 00a2 02       		.uleb128 0x2
- 197 00a3 08       		.byte	0x8
- 198 00a4 04       		.byte	0x4
- 199 00a5 0D020000 		.4byte	.LASF15
- 200 00a9 02       		.uleb128 0x2
- 201 00aa 04       		.byte	0x4
- 202 00ab 07       		.byte	0x7
- 203 00ac 2F020000 		.4byte	.LASF16
- 204 00b0 06       		.uleb128 0x6
- 205 00b1 1F020000 		.4byte	.LASF25
- 206 00b5 01       		.byte	0x1
- 207 00b6 18       		.byte	0x18
- 208 00b7 00000000 		.4byte	.LFB35
- 209 00bb 58000000 		.4byte	.LFE35-.LFB35
- 210 00bf 01       		.uleb128 0x1
- 211 00c0 9C       		.byte	0x9c
- 212 00c1 51010000 		.4byte	0x151
- 213 00c5 07       		.uleb128 0x7
- 214 00c6 58010000 		.4byte	.LASF17
- 215 00ca 01       		.byte	0x1
- 216 00cb 18       		.byte	0x18
- 217 00cc 68000000 		.4byte	0x68
- 218 00d0 00000000 		.4byte	.LLST0
- 219 00d4 07       		.uleb128 0x7
- 220 00d5 81000000 		.4byte	.LASF18
- 221 00d9 01       		.byte	0x1
- 222 00da 18       		.byte	0x18
- 223 00db 76000000 		.4byte	0x76
- 224 00df 2C000000 		.4byte	.LLST1
- 225 00e3 07       		.uleb128 0x7
- 226 00e4 27020000 		.4byte	.LASF19
- 227 00e8 01       		.byte	0x1
- 228 00e9 18       		.byte	0x18
- 229 00ea 81000000 		.4byte	0x81
- 230 00ee 7F000000 		.4byte	.LLST2
- 231 00f2 08       		.uleb128 0x8
- 232 00f3 28000000 		.4byte	.LVL2
- 233 00f7 5C010000 		.4byte	0x15c
- 234 00fb 05010000 		.4byte	0x105
- 235 00ff 09       		.uleb128 0x9
- 236 0100 01       		.uleb128 0x1
- 237 0101 50       		.byte	0x50
- 238 0102 01       		.uleb128 0x1
- 239 0103 30       		.byte	0x30
- 240 0104 00       		.byte	0
- 241 0105 08       		.uleb128 0x8
- 242 0106 2E000000 		.4byte	.LVL3
- 243 010a 67010000 		.4byte	0x167
- 244 010e 1A010000 		.4byte	0x11a
- 245 0112 09       		.uleb128 0x9
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 6
+ 186 005e 02       		.uleb128 0x2
+ 187 005f 04       		.byte	0x4
+ 188 0060 07       		.byte	0x7
+ 189 0061 00010000 		.4byte	.LASF7
+ 190 0065 02       		.uleb128 0x2
+ 191 0066 08       		.byte	0x8
+ 192 0067 05       		.byte	0x5
+ 193 0068 0E020000 		.4byte	.LASF8
+ 194 006c 02       		.uleb128 0x2
+ 195 006d 08       		.byte	0x8
+ 196 006e 07       		.byte	0x7
+ 197 006f 50010000 		.4byte	.LASF9
+ 198 0073 04       		.uleb128 0x4
+ 199 0074 04       		.byte	0x4
+ 200 0075 05       		.byte	0x5
+ 201 0076 696E7400 		.ascii	"int\000"
+ 202 007a 02       		.uleb128 0x2
+ 203 007b 04       		.byte	0x4
+ 204 007c 07       		.byte	0x7
+ 205 007d 43010000 		.4byte	.LASF10
+ 206 0081 03       		.uleb128 0x3
+ 207 0082 67010000 		.4byte	.LASF11
+ 208 0086 03       		.byte	0x3
+ 209 0087 18       		.byte	0x18
+ 210 0088 2C000000 		.4byte	0x2c
+ 211 008c 03       		.uleb128 0x3
+ 212 008d FD010000 		.4byte	.LASF12
+ 213 0091 03       		.byte	0x3
+ 214 0092 2C       		.byte	0x2c
+ 215 0093 4C000000 		.4byte	0x4c
+ 216 0097 05       		.uleb128 0x5
+ 217 0098 3F020000 		.4byte	.LASF13
+ 218 009c 04       		.byte	0x4
+ 219 009d E401     		.2byte	0x1e4
+ 220 009f 37000000 		.4byte	0x37
+ 221 00a3 02       		.uleb128 0x2
+ 222 00a4 04       		.byte	0x4
+ 223 00a5 04       		.byte	0x4
+ 224 00a6 4E000000 		.4byte	.LASF14
+ 225 00aa 02       		.uleb128 0x2
+ 226 00ab 08       		.byte	0x8
+ 227 00ac 04       		.byte	0x4
+ 228 00ad 3C010000 		.4byte	.LASF15
+ 229 00b1 05       		.uleb128 0x5
+ 230 00b2 FA000000 		.4byte	.LASF16
+ 231 00b6 04       		.byte	0x4
+ 232 00b7 F501     		.2byte	0x1f5
+ 233 00b9 BD000000 		.4byte	0xbd
+ 234 00bd 02       		.uleb128 0x2
+ 235 00be 01       		.byte	0x1
+ 236 00bf 08       		.byte	0x8
+ 237 00c0 1C020000 		.4byte	.LASF17
+ 238 00c4 02       		.uleb128 0x2
+ 239 00c5 08       		.byte	0x8
+ 240 00c6 04       		.byte	0x4
+ 241 00c7 4E020000 		.4byte	.LASF18
+ 242 00cb 02       		.uleb128 0x2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 6
 
 
- 246 0113 01       		.uleb128 0x1
- 247 0114 50       		.byte	0x50
- 248 0115 03       		.uleb128 0x3
- 249 0116 74       		.byte	0x74
- 250 0117 00       		.sleb128 0
- 251 0118 1F       		.byte	0x1f
- 252 0119 00       		.byte	0
- 253 011a 08       		.uleb128 0x8
- 254 011b 42000000 		.4byte	.LVL5
- 255 011f 5C010000 		.4byte	0x15c
- 256 0123 2D010000 		.4byte	0x12d
- 257 0127 09       		.uleb128 0x9
- 258 0128 01       		.uleb128 0x1
- 259 0129 50       		.byte	0x50
- 260 012a 01       		.uleb128 0x1
- 261 012b 31       		.byte	0x31
- 262 012c 00       		.byte	0
- 263 012d 08       		.uleb128 0x8
- 264 012e 48000000 		.4byte	.LVL6
- 265 0132 67010000 		.4byte	0x167
- 266 0136 41010000 		.4byte	0x141
- 267 013a 09       		.uleb128 0x9
- 268 013b 01       		.uleb128 0x1
- 269 013c 50       		.byte	0x50
- 270 013d 02       		.uleb128 0x2
- 271 013e 74       		.byte	0x74
- 272 013f 00       		.sleb128 0
- 273 0140 00       		.byte	0
- 274 0141 0A       		.uleb128 0xa
- 275 0142 50000000 		.4byte	.LVL8
- 276 0146 67010000 		.4byte	0x167
- 277 014a 09       		.uleb128 0x9
- 278 014b 01       		.uleb128 0x1
- 279 014c 50       		.byte	0x50
- 280 014d 01       		.uleb128 0x1
- 281 014e 30       		.byte	0x30
- 282 014f 00       		.byte	0
- 283 0150 00       		.byte	0
- 284 0151 0B       		.uleb128 0xb
- 285 0152 55000000 		.4byte	.LASF26
- 286 0156 01       		.byte	0x1
- 287 0157 12       		.byte	0x12
- 288 0158 81000000 		.4byte	0x81
- 289 015c 0C       		.uleb128 0xc
- 290 015d 0E000000 		.4byte	.LASF20
- 291 0161 0E000000 		.4byte	.LASF20
- 292 0165 05       		.byte	0x5
- 293 0166 33       		.byte	0x33
- 294 0167 0D       		.uleb128 0xd
- 295 0168 8F000000 		.4byte	.LASF21
- 296 016c 8F000000 		.4byte	.LASF21
- 297 0170 06       		.byte	0x6
- 298 0171 5501     		.2byte	0x155
- 299 0173 00       		.byte	0
- 300              		.section	.debug_abbrev,"",%progbits
- 301              	.Ldebug_abbrev0:
- 302 0000 01       		.uleb128 0x1
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 7
+ 243 00cc 04       		.byte	0x4
+ 244 00cd 07       		.byte	0x7
+ 245 00ce 05020000 		.4byte	.LASF19
+ 246 00d2 06       		.uleb128 0x6
+ 247 00d3 5A020000 		.4byte	.LASF32
+ 248 00d7 01       		.byte	0x1
+ 249 00d8 17       		.byte	0x17
+ 250 00d9 00000000 		.4byte	.LFB35
+ 251 00dd 7C000000 		.4byte	.LFE35-.LFB35
+ 252 00e1 01       		.uleb128 0x1
+ 253 00e2 9C       		.byte	0x9c
+ 254 00e3 B0010000 		.4byte	0x1b0
+ 255 00e7 07       		.uleb128 0x7
+ 256 00e8 62020000 		.4byte	.LASF20
+ 257 00ec 01       		.byte	0x1
+ 258 00ed 17       		.byte	0x17
+ 259 00ee 8C000000 		.4byte	0x8c
+ 260 00f2 00000000 		.4byte	.LLST0
+ 261 00f6 07       		.uleb128 0x7
+ 262 00f7 DE000000 		.4byte	.LASF21
+ 263 00fb 01       		.byte	0x1
+ 264 00fc 17       		.byte	0x17
+ 265 00fd 81000000 		.4byte	0x81
+ 266 0101 37000000 		.4byte	.LLST1
+ 267 0105 07       		.uleb128 0x7
+ 268 0106 34010000 		.4byte	.LASF22
+ 269 010a 01       		.byte	0x1
+ 270 010b 17       		.byte	0x17
+ 271 010c 97000000 		.4byte	0x97
+ 272 0110 58000000 		.4byte	.LLST2
+ 273 0114 08       		.uleb128 0x8
+ 274 0115 16000000 		.4byte	.LVL4
+ 275 0119 D6010000 		.4byte	0x1d6
+ 276 011d 3D010000 		.4byte	0x13d
+ 277 0121 09       		.uleb128 0x9
+ 278 0122 01       		.uleb128 0x1
+ 279 0123 50       		.byte	0x50
+ 280 0124 02       		.uleb128 0x2
+ 281 0125 75       		.byte	0x75
+ 282 0126 00       		.sleb128 0
+ 283 0127 09       		.uleb128 0x9
+ 284 0128 01       		.uleb128 0x1
+ 285 0129 51       		.byte	0x51
+ 286 012a 05       		.uleb128 0x5
+ 287 012b 03       		.byte	0x3
+ 288 012c 00000000 		.4byte	.LC0
+ 289 0130 09       		.uleb128 0x9
+ 290 0131 01       		.uleb128 0x1
+ 291 0132 52       		.byte	0x52
+ 292 0133 02       		.uleb128 0x2
+ 293 0134 74       		.byte	0x74
+ 294 0135 00       		.sleb128 0
+ 295 0136 09       		.uleb128 0x9
+ 296 0137 01       		.uleb128 0x1
+ 297 0138 53       		.byte	0x53
+ 298 0139 02       		.uleb128 0x2
+ 299 013a 76       		.byte	0x76
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 7
 
 
- 303 0001 11       		.uleb128 0x11
- 304 0002 01       		.byte	0x1
- 305 0003 25       		.uleb128 0x25
- 306 0004 0E       		.uleb128 0xe
- 307 0005 13       		.uleb128 0x13
- 308 0006 0B       		.uleb128 0xb
- 309 0007 03       		.uleb128 0x3
- 310 0008 0E       		.uleb128 0xe
- 311 0009 1B       		.uleb128 0x1b
- 312 000a 0E       		.uleb128 0xe
- 313 000b 55       		.uleb128 0x55
- 314 000c 17       		.uleb128 0x17
- 315 000d 11       		.uleb128 0x11
- 316 000e 01       		.uleb128 0x1
- 317 000f 10       		.uleb128 0x10
- 318 0010 17       		.uleb128 0x17
- 319 0011 00       		.byte	0
- 320 0012 00       		.byte	0
- 321 0013 02       		.uleb128 0x2
- 322 0014 24       		.uleb128 0x24
- 323 0015 00       		.byte	0
- 324 0016 0B       		.uleb128 0xb
- 325 0017 0B       		.uleb128 0xb
- 326 0018 3E       		.uleb128 0x3e
- 327 0019 0B       		.uleb128 0xb
- 328 001a 03       		.uleb128 0x3
- 329 001b 0E       		.uleb128 0xe
- 330 001c 00       		.byte	0
- 331 001d 00       		.byte	0
- 332 001e 03       		.uleb128 0x3
- 333 001f 16       		.uleb128 0x16
- 334 0020 00       		.byte	0
- 335 0021 03       		.uleb128 0x3
- 336 0022 0E       		.uleb128 0xe
- 337 0023 3A       		.uleb128 0x3a
- 338 0024 0B       		.uleb128 0xb
- 339 0025 3B       		.uleb128 0x3b
- 340 0026 0B       		.uleb128 0xb
- 341 0027 49       		.uleb128 0x49
- 342 0028 13       		.uleb128 0x13
- 343 0029 00       		.byte	0
- 344 002a 00       		.byte	0
- 345 002b 04       		.uleb128 0x4
- 346 002c 24       		.uleb128 0x24
- 347 002d 00       		.byte	0
- 348 002e 0B       		.uleb128 0xb
- 349 002f 0B       		.uleb128 0xb
- 350 0030 3E       		.uleb128 0x3e
- 351 0031 0B       		.uleb128 0xb
- 352 0032 03       		.uleb128 0x3
- 353 0033 08       		.uleb128 0x8
- 354 0034 00       		.byte	0
- 355 0035 00       		.byte	0
- 356 0036 05       		.uleb128 0x5
- 357 0037 16       		.uleb128 0x16
- 358 0038 00       		.byte	0
- 359 0039 03       		.uleb128 0x3
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 8
+ 300 013b 00       		.sleb128 0
+ 301 013c 00       		.byte	0
+ 302 013d 08       		.uleb128 0x8
+ 303 013e 1C000000 		.4byte	.LVL5
+ 304 0142 E1010000 		.4byte	0x1e1
+ 305 0146 51010000 		.4byte	0x151
+ 306 014a 09       		.uleb128 0x9
+ 307 014b 01       		.uleb128 0x1
+ 308 014c 50       		.byte	0x50
+ 309 014d 02       		.uleb128 0x2
+ 310 014e 75       		.byte	0x75
+ 311 014f 00       		.sleb128 0
+ 312 0150 00       		.byte	0
+ 313 0151 08       		.uleb128 0x8
+ 314 0152 3E000000 		.4byte	.LVL6
+ 315 0156 ED010000 		.4byte	0x1ed
+ 316 015a 64010000 		.4byte	0x164
+ 317 015e 09       		.uleb128 0x9
+ 318 015f 01       		.uleb128 0x1
+ 319 0160 50       		.byte	0x50
+ 320 0161 01       		.uleb128 0x1
+ 321 0162 30       		.byte	0x30
+ 322 0163 00       		.byte	0
+ 323 0164 08       		.uleb128 0x8
+ 324 0165 44000000 		.4byte	.LVL7
+ 325 0169 F8010000 		.4byte	0x1f8
+ 326 016d 79010000 		.4byte	0x179
+ 327 0171 09       		.uleb128 0x9
+ 328 0172 01       		.uleb128 0x1
+ 329 0173 50       		.byte	0x50
+ 330 0174 03       		.uleb128 0x3
+ 331 0175 74       		.byte	0x74
+ 332 0176 00       		.sleb128 0
+ 333 0177 1F       		.byte	0x1f
+ 334 0178 00       		.byte	0
+ 335 0179 08       		.uleb128 0x8
+ 336 017a 58000000 		.4byte	.LVL8
+ 337 017e ED010000 		.4byte	0x1ed
+ 338 0182 8C010000 		.4byte	0x18c
+ 339 0186 09       		.uleb128 0x9
+ 340 0187 01       		.uleb128 0x1
+ 341 0188 50       		.byte	0x50
+ 342 0189 01       		.uleb128 0x1
+ 343 018a 31       		.byte	0x31
+ 344 018b 00       		.byte	0
+ 345 018c 08       		.uleb128 0x8
+ 346 018d 5E000000 		.4byte	.LVL9
+ 347 0191 F8010000 		.4byte	0x1f8
+ 348 0195 A0010000 		.4byte	0x1a0
+ 349 0199 09       		.uleb128 0x9
+ 350 019a 01       		.uleb128 0x1
+ 351 019b 50       		.byte	0x50
+ 352 019c 02       		.uleb128 0x2
+ 353 019d 74       		.byte	0x74
+ 354 019e 00       		.sleb128 0
+ 355 019f 00       		.byte	0
+ 356 01a0 0A       		.uleb128 0xa
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 8
 
 
- 360 003a 0E       		.uleb128 0xe
- 361 003b 3A       		.uleb128 0x3a
- 362 003c 0B       		.uleb128 0xb
- 363 003d 3B       		.uleb128 0x3b
- 364 003e 05       		.uleb128 0x5
- 365 003f 49       		.uleb128 0x49
- 366 0040 13       		.uleb128 0x13
- 367 0041 00       		.byte	0
- 368 0042 00       		.byte	0
- 369 0043 06       		.uleb128 0x6
- 370 0044 2E       		.uleb128 0x2e
- 371 0045 01       		.byte	0x1
- 372 0046 3F       		.uleb128 0x3f
- 373 0047 19       		.uleb128 0x19
- 374 0048 03       		.uleb128 0x3
- 375 0049 0E       		.uleb128 0xe
- 376 004a 3A       		.uleb128 0x3a
- 377 004b 0B       		.uleb128 0xb
- 378 004c 3B       		.uleb128 0x3b
- 379 004d 0B       		.uleb128 0xb
- 380 004e 27       		.uleb128 0x27
- 381 004f 19       		.uleb128 0x19
- 382 0050 11       		.uleb128 0x11
- 383 0051 01       		.uleb128 0x1
- 384 0052 12       		.uleb128 0x12
- 385 0053 06       		.uleb128 0x6
- 386 0054 40       		.uleb128 0x40
- 387 0055 18       		.uleb128 0x18
- 388 0056 9742     		.uleb128 0x2117
- 389 0058 19       		.uleb128 0x19
- 390 0059 01       		.uleb128 0x1
- 391 005a 13       		.uleb128 0x13
- 392 005b 00       		.byte	0
- 393 005c 00       		.byte	0
- 394 005d 07       		.uleb128 0x7
- 395 005e 05       		.uleb128 0x5
- 396 005f 00       		.byte	0
- 397 0060 03       		.uleb128 0x3
- 398 0061 0E       		.uleb128 0xe
- 399 0062 3A       		.uleb128 0x3a
- 400 0063 0B       		.uleb128 0xb
- 401 0064 3B       		.uleb128 0x3b
- 402 0065 0B       		.uleb128 0xb
- 403 0066 49       		.uleb128 0x49
- 404 0067 13       		.uleb128 0x13
- 405 0068 02       		.uleb128 0x2
- 406 0069 17       		.uleb128 0x17
- 407 006a 00       		.byte	0
- 408 006b 00       		.byte	0
- 409 006c 08       		.uleb128 0x8
- 410 006d 898201   		.uleb128 0x4109
- 411 0070 01       		.byte	0x1
- 412 0071 11       		.uleb128 0x11
- 413 0072 01       		.uleb128 0x1
- 414 0073 31       		.uleb128 0x31
- 415 0074 13       		.uleb128 0x13
- 416 0075 01       		.uleb128 0x1
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 9
+ 357 01a1 66000000 		.4byte	.LVL10
+ 358 01a5 F8010000 		.4byte	0x1f8
+ 359 01a9 09       		.uleb128 0x9
+ 360 01aa 01       		.uleb128 0x1
+ 361 01ab 50       		.byte	0x50
+ 362 01ac 01       		.uleb128 0x1
+ 363 01ad 30       		.byte	0x30
+ 364 01ae 00       		.byte	0
+ 365 01af 00       		.byte	0
+ 366 01b0 0B       		.uleb128 0xb
+ 367 01b1 12010000 		.4byte	.LASF23
+ 368 01b5 01       		.byte	0x1
+ 369 01b6 11       		.byte	0x11
+ 370 01b7 97000000 		.4byte	0x97
+ 371 01bb 0C       		.uleb128 0xc
+ 372 01bc B1000000 		.4byte	0xb1
+ 373 01c0 CB010000 		.4byte	0x1cb
+ 374 01c4 0D       		.uleb128 0xd
+ 375 01c5 CB000000 		.4byte	0xcb
+ 376 01c9 63       		.byte	0x63
+ 377 01ca 00       		.byte	0
+ 378 01cb 0B       		.uleb128 0xb
+ 379 01cc 14000000 		.4byte	.LASF24
+ 380 01d0 01       		.byte	0x1
+ 381 01d1 12       		.byte	0x12
+ 382 01d2 BB010000 		.4byte	0x1bb
+ 383 01d6 0E       		.uleb128 0xe
+ 384 01d7 6A020000 		.4byte	.LASF25
+ 385 01db 6A020000 		.4byte	.LASF25
+ 386 01df 05       		.byte	0x5
+ 387 01e0 E7       		.byte	0xe7
+ 388 01e1 0F       		.uleb128 0xf
+ 389 01e2 3B000000 		.4byte	.LASF26
+ 390 01e6 3B000000 		.4byte	.LASF26
+ 391 01ea 06       		.byte	0x6
+ 392 01eb 2A03     		.2byte	0x32a
+ 393 01ed 0E       		.uleb128 0xe
+ 394 01ee 2B020000 		.4byte	.LASF27
+ 395 01f2 2B020000 		.4byte	.LASF27
+ 396 01f6 07       		.byte	0x7
+ 397 01f7 33       		.byte	0x33
+ 398 01f8 0F       		.uleb128 0xf
+ 399 01f9 1D010000 		.4byte	.LASF28
+ 400 01fd 1D010000 		.4byte	.LASF28
+ 401 0201 08       		.byte	0x8
+ 402 0202 5501     		.2byte	0x155
+ 403 0204 00       		.byte	0
+ 404              		.section	.debug_abbrev,"",%progbits
+ 405              	.Ldebug_abbrev0:
+ 406 0000 01       		.uleb128 0x1
+ 407 0001 11       		.uleb128 0x11
+ 408 0002 01       		.byte	0x1
+ 409 0003 25       		.uleb128 0x25
+ 410 0004 0E       		.uleb128 0xe
+ 411 0005 13       		.uleb128 0x13
+ 412 0006 0B       		.uleb128 0xb
+ 413 0007 03       		.uleb128 0x3
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 9
 
 
- 417 0076 13       		.uleb128 0x13
- 418 0077 00       		.byte	0
- 419 0078 00       		.byte	0
- 420 0079 09       		.uleb128 0x9
- 421 007a 8A8201   		.uleb128 0x410a
- 422 007d 00       		.byte	0
- 423 007e 02       		.uleb128 0x2
- 424 007f 18       		.uleb128 0x18
- 425 0080 9142     		.uleb128 0x2111
- 426 0082 18       		.uleb128 0x18
- 427 0083 00       		.byte	0
- 428 0084 00       		.byte	0
- 429 0085 0A       		.uleb128 0xa
- 430 0086 898201   		.uleb128 0x4109
- 431 0089 01       		.byte	0x1
- 432 008a 11       		.uleb128 0x11
- 433 008b 01       		.uleb128 0x1
- 434 008c 31       		.uleb128 0x31
- 435 008d 13       		.uleb128 0x13
- 436 008e 00       		.byte	0
- 437 008f 00       		.byte	0
- 438 0090 0B       		.uleb128 0xb
- 439 0091 34       		.uleb128 0x34
- 440 0092 00       		.byte	0
- 441 0093 03       		.uleb128 0x3
- 442 0094 0E       		.uleb128 0xe
- 443 0095 3A       		.uleb128 0x3a
- 444 0096 0B       		.uleb128 0xb
- 445 0097 3B       		.uleb128 0x3b
- 446 0098 0B       		.uleb128 0xb
- 447 0099 49       		.uleb128 0x49
- 448 009a 13       		.uleb128 0x13
- 449 009b 3F       		.uleb128 0x3f
- 450 009c 19       		.uleb128 0x19
- 451 009d 3C       		.uleb128 0x3c
- 452 009e 19       		.uleb128 0x19
- 453 009f 00       		.byte	0
- 454 00a0 00       		.byte	0
- 455 00a1 0C       		.uleb128 0xc
- 456 00a2 2E       		.uleb128 0x2e
- 457 00a3 00       		.byte	0
- 458 00a4 3F       		.uleb128 0x3f
- 459 00a5 19       		.uleb128 0x19
- 460 00a6 3C       		.uleb128 0x3c
- 461 00a7 19       		.uleb128 0x19
- 462 00a8 6E       		.uleb128 0x6e
- 463 00a9 0E       		.uleb128 0xe
- 464 00aa 03       		.uleb128 0x3
- 465 00ab 0E       		.uleb128 0xe
- 466 00ac 3A       		.uleb128 0x3a
- 467 00ad 0B       		.uleb128 0xb
- 468 00ae 3B       		.uleb128 0x3b
- 469 00af 0B       		.uleb128 0xb
- 470 00b0 00       		.byte	0
- 471 00b1 00       		.byte	0
- 472 00b2 0D       		.uleb128 0xd
- 473 00b3 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 10
+ 414 0008 0E       		.uleb128 0xe
+ 415 0009 1B       		.uleb128 0x1b
+ 416 000a 0E       		.uleb128 0xe
+ 417 000b 55       		.uleb128 0x55
+ 418 000c 17       		.uleb128 0x17
+ 419 000d 11       		.uleb128 0x11
+ 420 000e 01       		.uleb128 0x1
+ 421 000f 10       		.uleb128 0x10
+ 422 0010 17       		.uleb128 0x17
+ 423 0011 00       		.byte	0
+ 424 0012 00       		.byte	0
+ 425 0013 02       		.uleb128 0x2
+ 426 0014 24       		.uleb128 0x24
+ 427 0015 00       		.byte	0
+ 428 0016 0B       		.uleb128 0xb
+ 429 0017 0B       		.uleb128 0xb
+ 430 0018 3E       		.uleb128 0x3e
+ 431 0019 0B       		.uleb128 0xb
+ 432 001a 03       		.uleb128 0x3
+ 433 001b 0E       		.uleb128 0xe
+ 434 001c 00       		.byte	0
+ 435 001d 00       		.byte	0
+ 436 001e 03       		.uleb128 0x3
+ 437 001f 16       		.uleb128 0x16
+ 438 0020 00       		.byte	0
+ 439 0021 03       		.uleb128 0x3
+ 440 0022 0E       		.uleb128 0xe
+ 441 0023 3A       		.uleb128 0x3a
+ 442 0024 0B       		.uleb128 0xb
+ 443 0025 3B       		.uleb128 0x3b
+ 444 0026 0B       		.uleb128 0xb
+ 445 0027 49       		.uleb128 0x49
+ 446 0028 13       		.uleb128 0x13
+ 447 0029 00       		.byte	0
+ 448 002a 00       		.byte	0
+ 449 002b 04       		.uleb128 0x4
+ 450 002c 24       		.uleb128 0x24
+ 451 002d 00       		.byte	0
+ 452 002e 0B       		.uleb128 0xb
+ 453 002f 0B       		.uleb128 0xb
+ 454 0030 3E       		.uleb128 0x3e
+ 455 0031 0B       		.uleb128 0xb
+ 456 0032 03       		.uleb128 0x3
+ 457 0033 08       		.uleb128 0x8
+ 458 0034 00       		.byte	0
+ 459 0035 00       		.byte	0
+ 460 0036 05       		.uleb128 0x5
+ 461 0037 16       		.uleb128 0x16
+ 462 0038 00       		.byte	0
+ 463 0039 03       		.uleb128 0x3
+ 464 003a 0E       		.uleb128 0xe
+ 465 003b 3A       		.uleb128 0x3a
+ 466 003c 0B       		.uleb128 0xb
+ 467 003d 3B       		.uleb128 0x3b
+ 468 003e 05       		.uleb128 0x5
+ 469 003f 49       		.uleb128 0x49
+ 470 0040 13       		.uleb128 0x13
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 10
 
 
- 474 00b4 00       		.byte	0
- 475 00b5 3F       		.uleb128 0x3f
- 476 00b6 19       		.uleb128 0x19
- 477 00b7 3C       		.uleb128 0x3c
- 478 00b8 19       		.uleb128 0x19
- 479 00b9 6E       		.uleb128 0x6e
- 480 00ba 0E       		.uleb128 0xe
- 481 00bb 03       		.uleb128 0x3
- 482 00bc 0E       		.uleb128 0xe
- 483 00bd 3A       		.uleb128 0x3a
- 484 00be 0B       		.uleb128 0xb
- 485 00bf 3B       		.uleb128 0x3b
- 486 00c0 05       		.uleb128 0x5
- 487 00c1 00       		.byte	0
- 488 00c2 00       		.byte	0
- 489 00c3 00       		.byte	0
- 490              		.section	.debug_loc,"",%progbits
- 491              	.Ldebug_loc0:
- 492              	.LLST0:
- 493 0000 00000000 		.4byte	.LVL0
- 494 0004 06000000 		.4byte	.LVL1
- 495 0008 0100     		.2byte	0x1
- 496 000a 50       		.byte	0x50
- 497 000b 06000000 		.4byte	.LVL1
- 498 000f 50000000 		.4byte	.LVL9
- 499 0013 0100     		.2byte	0x1
- 500 0015 54       		.byte	0x54
- 501 0016 50000000 		.4byte	.LVL9
- 502 001a 58000000 		.4byte	.LFE35
- 503 001e 0400     		.2byte	0x4
- 504 0020 F3       		.byte	0xf3
- 505 0021 01       		.uleb128 0x1
- 506 0022 50       		.byte	0x50
- 507 0023 9F       		.byte	0x9f
- 508 0024 00000000 		.4byte	0
- 509 0028 00000000 		.4byte	0
- 510              	.LLST1:
- 511 002c 00000000 		.4byte	.LVL0
- 512 0030 27000000 		.4byte	.LVL2-1
- 513 0034 0100     		.2byte	0x1
- 514 0036 51       		.byte	0x51
- 515 0037 27000000 		.4byte	.LVL2-1
- 516 003b 30000000 		.4byte	.LVL4
- 517 003f 0400     		.2byte	0x4
- 518 0041 F3       		.byte	0xf3
- 519 0042 01       		.uleb128 0x1
- 520 0043 51       		.byte	0x51
- 521 0044 9F       		.byte	0x9f
- 522 0045 30000000 		.4byte	.LVL4
- 523 0049 41000000 		.4byte	.LVL5-1
- 524 004d 0100     		.2byte	0x1
- 525 004f 51       		.byte	0x51
- 526 0050 41000000 		.4byte	.LVL5-1
- 527 0054 4A000000 		.4byte	.LVL7
- 528 0058 0400     		.2byte	0x4
- 529 005a F3       		.byte	0xf3
- 530 005b 01       		.uleb128 0x1
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 11
+ 471 0041 00       		.byte	0
+ 472 0042 00       		.byte	0
+ 473 0043 06       		.uleb128 0x6
+ 474 0044 2E       		.uleb128 0x2e
+ 475 0045 01       		.byte	0x1
+ 476 0046 3F       		.uleb128 0x3f
+ 477 0047 19       		.uleb128 0x19
+ 478 0048 03       		.uleb128 0x3
+ 479 0049 0E       		.uleb128 0xe
+ 480 004a 3A       		.uleb128 0x3a
+ 481 004b 0B       		.uleb128 0xb
+ 482 004c 3B       		.uleb128 0x3b
+ 483 004d 0B       		.uleb128 0xb
+ 484 004e 27       		.uleb128 0x27
+ 485 004f 19       		.uleb128 0x19
+ 486 0050 11       		.uleb128 0x11
+ 487 0051 01       		.uleb128 0x1
+ 488 0052 12       		.uleb128 0x12
+ 489 0053 06       		.uleb128 0x6
+ 490 0054 40       		.uleb128 0x40
+ 491 0055 18       		.uleb128 0x18
+ 492 0056 9742     		.uleb128 0x2117
+ 493 0058 19       		.uleb128 0x19
+ 494 0059 01       		.uleb128 0x1
+ 495 005a 13       		.uleb128 0x13
+ 496 005b 00       		.byte	0
+ 497 005c 00       		.byte	0
+ 498 005d 07       		.uleb128 0x7
+ 499 005e 05       		.uleb128 0x5
+ 500 005f 00       		.byte	0
+ 501 0060 03       		.uleb128 0x3
+ 502 0061 0E       		.uleb128 0xe
+ 503 0062 3A       		.uleb128 0x3a
+ 504 0063 0B       		.uleb128 0xb
+ 505 0064 3B       		.uleb128 0x3b
+ 506 0065 0B       		.uleb128 0xb
+ 507 0066 49       		.uleb128 0x49
+ 508 0067 13       		.uleb128 0x13
+ 509 0068 02       		.uleb128 0x2
+ 510 0069 17       		.uleb128 0x17
+ 511 006a 00       		.byte	0
+ 512 006b 00       		.byte	0
+ 513 006c 08       		.uleb128 0x8
+ 514 006d 898201   		.uleb128 0x4109
+ 515 0070 01       		.byte	0x1
+ 516 0071 11       		.uleb128 0x11
+ 517 0072 01       		.uleb128 0x1
+ 518 0073 31       		.uleb128 0x31
+ 519 0074 13       		.uleb128 0x13
+ 520 0075 01       		.uleb128 0x1
+ 521 0076 13       		.uleb128 0x13
+ 522 0077 00       		.byte	0
+ 523 0078 00       		.byte	0
+ 524 0079 09       		.uleb128 0x9
+ 525 007a 8A8201   		.uleb128 0x410a
+ 526 007d 00       		.byte	0
+ 527 007e 02       		.uleb128 0x2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 11
 
 
- 531 005c 51       		.byte	0x51
- 532 005d 9F       		.byte	0x9f
- 533 005e 4A000000 		.4byte	.LVL7
- 534 0062 4F000000 		.4byte	.LVL8-1
- 535 0066 0100     		.2byte	0x1
- 536 0068 51       		.byte	0x51
- 537 0069 4F000000 		.4byte	.LVL8-1
- 538 006d 58000000 		.4byte	.LFE35
- 539 0071 0400     		.2byte	0x4
- 540 0073 F3       		.byte	0xf3
- 541 0074 01       		.uleb128 0x1
- 542 0075 51       		.byte	0x51
- 543 0076 9F       		.byte	0x9f
- 544 0077 00000000 		.4byte	0
- 545 007b 00000000 		.4byte	0
- 546              	.LLST2:
- 547 007f 00000000 		.4byte	.LVL0
- 548 0083 27000000 		.4byte	.LVL2-1
- 549 0087 0100     		.2byte	0x1
- 550 0089 52       		.byte	0x52
- 551 008a 27000000 		.4byte	.LVL2-1
- 552 008e 30000000 		.4byte	.LVL4
- 553 0092 0400     		.2byte	0x4
- 554 0094 F3       		.byte	0xf3
- 555 0095 01       		.uleb128 0x1
- 556 0096 52       		.byte	0x52
- 557 0097 9F       		.byte	0x9f
- 558 0098 30000000 		.4byte	.LVL4
- 559 009c 41000000 		.4byte	.LVL5-1
- 560 00a0 0100     		.2byte	0x1
- 561 00a2 52       		.byte	0x52
- 562 00a3 41000000 		.4byte	.LVL5-1
- 563 00a7 4A000000 		.4byte	.LVL7
- 564 00ab 0400     		.2byte	0x4
- 565 00ad F3       		.byte	0xf3
- 566 00ae 01       		.uleb128 0x1
- 567 00af 52       		.byte	0x52
- 568 00b0 9F       		.byte	0x9f
- 569 00b1 4A000000 		.4byte	.LVL7
- 570 00b5 4F000000 		.4byte	.LVL8-1
- 571 00b9 0100     		.2byte	0x1
- 572 00bb 52       		.byte	0x52
- 573 00bc 4F000000 		.4byte	.LVL8-1
- 574 00c0 58000000 		.4byte	.LFE35
- 575 00c4 0400     		.2byte	0x4
- 576 00c6 F3       		.byte	0xf3
- 577 00c7 01       		.uleb128 0x1
- 578 00c8 52       		.byte	0x52
- 579 00c9 9F       		.byte	0x9f
- 580 00ca 00000000 		.4byte	0
- 581 00ce 00000000 		.4byte	0
- 582              		.section	.debug_aranges,"",%progbits
- 583 0000 1C000000 		.4byte	0x1c
- 584 0004 0200     		.2byte	0x2
- 585 0006 00000000 		.4byte	.Ldebug_info0
- 586 000a 04       		.byte	0x4
- 587 000b 00       		.byte	0
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 12
+ 528 007f 18       		.uleb128 0x18
+ 529 0080 9142     		.uleb128 0x2111
+ 530 0082 18       		.uleb128 0x18
+ 531 0083 00       		.byte	0
+ 532 0084 00       		.byte	0
+ 533 0085 0A       		.uleb128 0xa
+ 534 0086 898201   		.uleb128 0x4109
+ 535 0089 01       		.byte	0x1
+ 536 008a 11       		.uleb128 0x11
+ 537 008b 01       		.uleb128 0x1
+ 538 008c 31       		.uleb128 0x31
+ 539 008d 13       		.uleb128 0x13
+ 540 008e 00       		.byte	0
+ 541 008f 00       		.byte	0
+ 542 0090 0B       		.uleb128 0xb
+ 543 0091 34       		.uleb128 0x34
+ 544 0092 00       		.byte	0
+ 545 0093 03       		.uleb128 0x3
+ 546 0094 0E       		.uleb128 0xe
+ 547 0095 3A       		.uleb128 0x3a
+ 548 0096 0B       		.uleb128 0xb
+ 549 0097 3B       		.uleb128 0x3b
+ 550 0098 0B       		.uleb128 0xb
+ 551 0099 49       		.uleb128 0x49
+ 552 009a 13       		.uleb128 0x13
+ 553 009b 3F       		.uleb128 0x3f
+ 554 009c 19       		.uleb128 0x19
+ 555 009d 3C       		.uleb128 0x3c
+ 556 009e 19       		.uleb128 0x19
+ 557 009f 00       		.byte	0
+ 558 00a0 00       		.byte	0
+ 559 00a1 0C       		.uleb128 0xc
+ 560 00a2 01       		.uleb128 0x1
+ 561 00a3 01       		.byte	0x1
+ 562 00a4 49       		.uleb128 0x49
+ 563 00a5 13       		.uleb128 0x13
+ 564 00a6 01       		.uleb128 0x1
+ 565 00a7 13       		.uleb128 0x13
+ 566 00a8 00       		.byte	0
+ 567 00a9 00       		.byte	0
+ 568 00aa 0D       		.uleb128 0xd
+ 569 00ab 21       		.uleb128 0x21
+ 570 00ac 00       		.byte	0
+ 571 00ad 49       		.uleb128 0x49
+ 572 00ae 13       		.uleb128 0x13
+ 573 00af 2F       		.uleb128 0x2f
+ 574 00b0 0B       		.uleb128 0xb
+ 575 00b1 00       		.byte	0
+ 576 00b2 00       		.byte	0
+ 577 00b3 0E       		.uleb128 0xe
+ 578 00b4 2E       		.uleb128 0x2e
+ 579 00b5 00       		.byte	0
+ 580 00b6 3F       		.uleb128 0x3f
+ 581 00b7 19       		.uleb128 0x19
+ 582 00b8 3C       		.uleb128 0x3c
+ 583 00b9 19       		.uleb128 0x19
+ 584 00ba 6E       		.uleb128 0x6e
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 12
 
 
- 588 000c 0000     		.2byte	0
- 589 000e 0000     		.2byte	0
- 590 0010 00000000 		.4byte	.LFB35
- 591 0014 58000000 		.4byte	.LFE35-.LFB35
- 592 0018 00000000 		.4byte	0
- 593 001c 00000000 		.4byte	0
- 594              		.section	.debug_ranges,"",%progbits
- 595              	.Ldebug_ranges0:
- 596 0000 00000000 		.4byte	.LFB35
- 597 0004 58000000 		.4byte	.LFE35
- 598 0008 00000000 		.4byte	0
- 599 000c 00000000 		.4byte	0
- 600              		.section	.debug_line,"",%progbits
- 601              	.Ldebug_line0:
- 602 0000 9D010000 		.section	.debug_str,"MS",%progbits,1
- 602      02006601 
- 602      00000201 
- 602      FB0E0D00 
- 602      01010101 
- 603              	.LASF6:
- 604 0000 6C6F6E67 		.ascii	"long long int\000"
- 604      206C6F6E 
- 604      6720696E 
- 604      7400
- 605              	.LASF20:
- 606 000e 50696E5F 		.ascii	"Pin_Direction_Write\000"
- 606      44697265 
- 606      6374696F 
- 606      6E5F5772 
- 606      69746500 
- 607              	.LASF8:
- 608 0022 756E7369 		.ascii	"unsigned int\000"
- 608      676E6564 
- 608      20696E74 
- 608      00
- 609              	.LASF1:
- 610 002f 756E7369 		.ascii	"unsigned char\000"
- 610      676E6564 
- 610      20636861 
- 610      7200
- 611              	.LASF11:
- 612 003d 75696E74 		.ascii	"uint8\000"
- 612      3800
- 613              	.LASF5:
- 614 0043 6C6F6E67 		.ascii	"long unsigned int\000"
- 614      20756E73 
- 614      69676E65 
- 614      6420696E 
- 614      7400
- 615              	.LASF26:
- 616 0055 696E7661 		.ascii	"invalidate\000"
- 616      6C696461 
- 616      746500
- 617              	.LASF7:
- 618 0060 6C6F6E67 		.ascii	"long long unsigned int\000"
- 618      206C6F6E 
- 618      6720756E 
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 13
+ 585 00bb 0E       		.uleb128 0xe
+ 586 00bc 03       		.uleb128 0x3
+ 587 00bd 0E       		.uleb128 0xe
+ 588 00be 3A       		.uleb128 0x3a
+ 589 00bf 0B       		.uleb128 0xb
+ 590 00c0 3B       		.uleb128 0x3b
+ 591 00c1 0B       		.uleb128 0xb
+ 592 00c2 00       		.byte	0
+ 593 00c3 00       		.byte	0
+ 594 00c4 0F       		.uleb128 0xf
+ 595 00c5 2E       		.uleb128 0x2e
+ 596 00c6 00       		.byte	0
+ 597 00c7 3F       		.uleb128 0x3f
+ 598 00c8 19       		.uleb128 0x19
+ 599 00c9 3C       		.uleb128 0x3c
+ 600 00ca 19       		.uleb128 0x19
+ 601 00cb 6E       		.uleb128 0x6e
+ 602 00cc 0E       		.uleb128 0xe
+ 603 00cd 03       		.uleb128 0x3
+ 604 00ce 0E       		.uleb128 0xe
+ 605 00cf 3A       		.uleb128 0x3a
+ 606 00d0 0B       		.uleb128 0xb
+ 607 00d1 3B       		.uleb128 0x3b
+ 608 00d2 05       		.uleb128 0x5
+ 609 00d3 00       		.byte	0
+ 610 00d4 00       		.byte	0
+ 611 00d5 00       		.byte	0
+ 612              		.section	.debug_loc,"",%progbits
+ 613              	.Ldebug_loc0:
+ 614              	.LLST0:
+ 615 0000 00000000 		.4byte	.LVL0
+ 616 0004 12000000 		.4byte	.LVL3
+ 617 0008 0100     		.2byte	0x1
+ 618 000a 50       		.byte	0x50
+ 619 000b 12000000 		.4byte	.LVL3
+ 620 000f 15000000 		.4byte	.LVL4-1
+ 621 0013 0100     		.2byte	0x1
+ 622 0015 52       		.byte	0x52
+ 623 0016 15000000 		.4byte	.LVL4-1
+ 624 001a 66000000 		.4byte	.LVL11
+ 625 001e 0100     		.2byte	0x1
+ 626 0020 54       		.byte	0x54
+ 627 0021 66000000 		.4byte	.LVL11
+ 628 0025 7C000000 		.4byte	.LFE35
+ 629 0029 0400     		.2byte	0x4
+ 630 002b F3       		.byte	0xf3
+ 631 002c 01       		.uleb128 0x1
+ 632 002d 50       		.byte	0x50
+ 633 002e 9F       		.byte	0x9f
+ 634 002f 00000000 		.4byte	0
+ 635 0033 00000000 		.4byte	0
+ 636              	.LLST1:
+ 637 0037 00000000 		.4byte	.LVL0
+ 638 003b 10000000 		.4byte	.LVL2
+ 639 003f 0100     		.2byte	0x1
+ 640 0041 51       		.byte	0x51
+ 641 0042 10000000 		.4byte	.LVL2
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 13
 
 
- 618      7369676E 
- 618      65642069 
- 619              	.LASF9:
- 620 0077 5F5F7569 		.ascii	"__uint8_t\000"
- 620      6E74385F 
- 620      7400
- 621              	.LASF18:
- 622 0081 64697361 		.ascii	"disable_limit\000"
- 622      626C655F 
- 622      6C696D69 
- 622      7400
- 623              	.LASF21:
- 624 008f 50574D5F 		.ascii	"PWM_Motor_WriteCompare\000"
- 624      4D6F746F 
- 624      725F5772 
- 624      69746543 
- 624      6F6D7061 
- 625              	.LASF23:
- 626 00a6 4D6F746F 		.ascii	"MotorDrive.c\000"
- 626      72447269 
- 626      76652E63 
- 626      00
- 627              	.LASF10:
- 628 00b3 75696E74 		.ascii	"uint8_t\000"
- 628      385F7400 
- 629              	.LASF24:
- 630 00bb 433A5C55 		.ascii	"C:\\Users\\Austcha\\Documents\\Husky Robotics\\Moto"
- 630      73657273 
- 630      5C417573 
- 630      74636861 
- 630      5C446F63 
- 631 00e9 7220426F 		.ascii	"r Boards\\Rev3\\Motor-Unit-Firmware-A-2019-2020\\Mo"
- 631      61726473 
- 631      5C526576 
- 631      335C4D6F 
- 631      746F722D 
- 632 0119 746F7220 		.ascii	"tor Unit\\Motor_Board_Rev3.cydsn\000"
- 632      556E6974 
- 632      5C4D6F74 
- 632      6F725F42 
- 632      6F617264 
- 633              	.LASF14:
- 634 0139 63686172 		.ascii	"char\000"
- 634      00
- 635              	.LASF4:
- 636 013e 6C6F6E67 		.ascii	"long int\000"
- 636      20696E74 
- 636      00
- 637              	.LASF2:
- 638 0147 73686F72 		.ascii	"short int\000"
- 638      7420696E 
- 638      7400
- 639              	.LASF13:
- 640 0151 646F7562 		.ascii	"double\000"
- 640      6C6500
- 641              	.LASF17:
- 642 0158 636F6D70 		.ascii	"compare\000"
-ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccrQoQzN.s 			page 14
+ 642 0046 7C000000 		.4byte	.LFE35
+ 643 004a 0400     		.2byte	0x4
+ 644 004c F3       		.byte	0xf3
+ 645 004d 01       		.uleb128 0x1
+ 646 004e 51       		.byte	0x51
+ 647 004f 9F       		.byte	0x9f
+ 648 0050 00000000 		.4byte	0
+ 649 0054 00000000 		.4byte	0
+ 650              	.LLST2:
+ 651 0058 00000000 		.4byte	.LVL0
+ 652 005c 0E000000 		.4byte	.LVL1
+ 653 0060 0100     		.2byte	0x1
+ 654 0062 52       		.byte	0x52
+ 655 0063 0E000000 		.4byte	.LVL1
+ 656 0067 7C000000 		.4byte	.LFE35
+ 657 006b 0400     		.2byte	0x4
+ 658 006d F3       		.byte	0xf3
+ 659 006e 01       		.uleb128 0x1
+ 660 006f 52       		.byte	0x52
+ 661 0070 9F       		.byte	0x9f
+ 662 0071 00000000 		.4byte	0
+ 663 0075 00000000 		.4byte	0
+ 664              		.section	.debug_aranges,"",%progbits
+ 665 0000 1C000000 		.4byte	0x1c
+ 666 0004 0200     		.2byte	0x2
+ 667 0006 00000000 		.4byte	.Ldebug_info0
+ 668 000a 04       		.byte	0x4
+ 669 000b 00       		.byte	0
+ 670 000c 0000     		.2byte	0
+ 671 000e 0000     		.2byte	0
+ 672 0010 00000000 		.4byte	.LFB35
+ 673 0014 7C000000 		.4byte	.LFE35-.LFB35
+ 674 0018 00000000 		.4byte	0
+ 675 001c 00000000 		.4byte	0
+ 676              		.section	.debug_ranges,"",%progbits
+ 677              	.Ldebug_ranges0:
+ 678 0000 00000000 		.4byte	.LFB35
+ 679 0004 7C000000 		.4byte	.LFE35
+ 680 0008 00000000 		.4byte	0
+ 681 000c 00000000 		.4byte	0
+ 682              		.section	.debug_line,"",%progbits
+ 683              	.Ldebug_line0:
+ 684 0000 25020000 		.section	.debug_str,"MS",%progbits,1
+ 684      0200EC01 
+ 684      00000201 
+ 684      FB0E0D00 
+ 684      01010101 
+ 685              	.LASF4:
+ 686 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 686      6E74385F 
+ 686      7400
+ 687              	.LASF5:
+ 688 000a 5F5F696E 		.ascii	"__int32_t\000"
+ 688      7433325F 
+ 688      7400
+ 689              	.LASF24:
+ 690 0014 74784461 		.ascii	"txData\000"
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 14
 
 
- 642      61726500 
- 643              	.LASF22:
- 644 0160 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 644      43313120 
- 644      352E342E 
- 644      31203230 
- 644      31363036 
- 645 0193 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 645      20726576 
- 645      6973696F 
- 645      6E203233 
- 645      37373135 
- 646 01c6 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 646      66756E63 
- 646      74696F6E 
- 646      2D736563 
- 646      74696F6E 
- 647              	.LASF3:
- 648 01ee 73686F72 		.ascii	"short unsigned int\000"
- 648      7420756E 
- 648      7369676E 
- 648      65642069 
- 648      6E7400
- 649              	.LASF0:
- 650 0201 7369676E 		.ascii	"signed char\000"
- 650      65642063 
- 650      68617200 
- 651              	.LASF15:
- 652 020d 6C6F6E67 		.ascii	"long double\000"
- 652      20646F75 
- 652      626C6500 
- 653              	.LASF12:
- 654 0219 666C6F61 		.ascii	"float\000"
- 654      7400
- 655              	.LASF25:
- 656 021f 7365745F 		.ascii	"set_PWM\000"
- 656      50574D00 
- 657              	.LASF19:
- 658 0227 6C696D69 		.ascii	"limitSW\000"
- 658      74535700 
- 659              	.LASF16:
- 660 022f 73697A65 		.ascii	"sizetype\000"
- 660      74797065 
- 660      00
- 661              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 690      746100
+ 691              	.LASF3:
+ 692 001b 73686F72 		.ascii	"short unsigned int\000"
+ 692      7420756E 
+ 692      7369676E 
+ 692      65642069 
+ 692      6E7400
+ 693              	.LASF30:
+ 694 002e 4D6F746F 		.ascii	"MotorDrive.c\000"
+ 694      72447269 
+ 694      76652E63 
+ 694      00
+ 695              	.LASF26:
+ 696 003b 55415254 		.ascii	"UART_UartPutString\000"
+ 696      5F556172 
+ 696      74507574 
+ 696      53747269 
+ 696      6E6700
+ 697              	.LASF14:
+ 698 004e 666C6F61 		.ascii	"float\000"
+ 698      7400
+ 699              	.LASF0:
+ 700 0054 7369676E 		.ascii	"signed char\000"
+ 700      65642063 
+ 700      68617200 
+ 701              	.LASF31:
+ 702 0060 433A5C55 		.ascii	"C:\\Users\\Austcha\\Documents\\Husky Robotics\\Moto"
+ 702      73657273 
+ 702      5C417573 
+ 702      74636861 
+ 702      5C446F63 
+ 703 008e 7220426F 		.ascii	"r Boards\\Rev3\\Motor-Unit-Firmware-A-2019-2020\\Mo"
+ 703      61726473 
+ 703      5C526576 
+ 703      335C4D6F 
+ 703      746F722D 
+ 704 00be 746F7220 		.ascii	"tor Unit\\Motor_Board_Rev3.cydsn\000"
+ 704      556E6974 
+ 704      5C4D6F74 
+ 704      6F725F42 
+ 704      6F617264 
+ 705              	.LASF21:
+ 706 00de 64697361 		.ascii	"disable_limit\000"
+ 706      626C655F 
+ 706      6C696D69 
+ 706      7400
+ 707              	.LASF1:
+ 708 00ec 756E7369 		.ascii	"unsigned char\000"
+ 708      676E6564 
+ 708      20636861 
+ 708      7200
+ 709              	.LASF16:
+ 710 00fa 63686172 		.ascii	"char8\000"
+ 710      3800
+ 711              	.LASF7:
+ 712 0100 6C6F6E67 		.ascii	"long unsigned int\000"
+ 712      20756E73 
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 15
+
+
+ 712      69676E65 
+ 712      6420696E 
+ 712      7400
+ 713              	.LASF23:
+ 714 0112 696E7661 		.ascii	"invalidate\000"
+ 714      6C696461 
+ 714      746500
+ 715              	.LASF28:
+ 716 011d 50574D5F 		.ascii	"PWM_Motor_WriteCompare\000"
+ 716      4D6F746F 
+ 716      725F5772 
+ 716      69746543 
+ 716      6F6D7061 
+ 717              	.LASF22:
+ 718 0134 6C696D69 		.ascii	"limitSW\000"
+ 718      74535700 
+ 719              	.LASF15:
+ 720 013c 646F7562 		.ascii	"double\000"
+ 720      6C6500
+ 721              	.LASF10:
+ 722 0143 756E7369 		.ascii	"unsigned int\000"
+ 722      676E6564 
+ 722      20696E74 
+ 722      00
+ 723              	.LASF9:
+ 724 0150 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 724      206C6F6E 
+ 724      6720756E 
+ 724      7369676E 
+ 724      65642069 
+ 725              	.LASF11:
+ 726 0167 75696E74 		.ascii	"uint8_t\000"
+ 726      385F7400 
+ 727              	.LASF29:
+ 728 016f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 728      43313120 
+ 728      352E342E 
+ 728      31203230 
+ 728      31363036 
+ 729 01a2 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 729      20726576 
+ 729      6973696F 
+ 729      6E203233 
+ 729      37373135 
+ 730 01d5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 730      66756E63 
+ 730      74696F6E 
+ 730      2D736563 
+ 730      74696F6E 
+ 731              	.LASF12:
+ 732 01fd 696E7433 		.ascii	"int32_t\000"
+ 732      325F7400 
+ 733              	.LASF19:
+ 734 0205 73697A65 		.ascii	"sizetype\000"
+ 734      74797065 
+ 734      00
+ 735              	.LASF8:
+ARM GAS  C:\Users\Austcha\AppData\Local\Temp\ccD9Srrr.s 			page 16
+
+
+ 736 020e 6C6F6E67 		.ascii	"long long int\000"
+ 736      206C6F6E 
+ 736      6720696E 
+ 736      7400
+ 737              	.LASF17:
+ 738 021c 63686172 		.ascii	"char\000"
+ 738      00
+ 739              	.LASF2:
+ 740 0221 73686F72 		.ascii	"short int\000"
+ 740      7420696E 
+ 740      7400
+ 741              	.LASF27:
+ 742 022b 50696E5F 		.ascii	"Pin_Direction_Write\000"
+ 742      44697265 
+ 742      6374696F 
+ 742      6E5F5772 
+ 742      69746500 
+ 743              	.LASF13:
+ 744 023f 75696E74 		.ascii	"uint8\000"
+ 744      3800
+ 745              	.LASF6:
+ 746 0245 6C6F6E67 		.ascii	"long int\000"
+ 746      20696E74 
+ 746      00
+ 747              	.LASF18:
+ 748 024e 6C6F6E67 		.ascii	"long double\000"
+ 748      20646F75 
+ 748      626C6500 
+ 749              	.LASF32:
+ 750 025a 7365745F 		.ascii	"set_PWM\000"
+ 750      50574D00 
+ 751              	.LASF20:
+ 752 0262 636F6D70 		.ascii	"compare\000"
+ 752      61726500 
+ 753              	.LASF25:
+ 754 026a 73707269 		.ascii	"sprintf\000"
+ 754      6E746600 
+ 755              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

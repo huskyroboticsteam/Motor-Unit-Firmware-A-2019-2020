@@ -2410,6 +2410,15 @@
 <dep name=".\main.c" />
 </file>
 <file name=".\main.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\CANPacket.o">
+<dep name="..\CANLib\CANPacket.c" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
+</file>
+<file name="..\CANLib\CANPacket.c" />
+<file name="..\CANLib\CANPacket.h" />
+<file name="..\CANLib\CANSerialNumbers.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CANCommon.o">
 <dep name="..\CANLib\CANCommon.c" />
 <dep name="..\CANLib\CANCommon.h" />
@@ -2419,8 +2428,6 @@
 </file>
 <file name="..\CANLib\CANCommon.c" />
 <file name="..\CANLib\CANCommon.h" />
-<file name="..\CANLib\CANPacket.h" />
-<file name="..\CANLib\CANSerialNumbers.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CANGPIO.o">
 <dep name="..\CANLib\CANGPIO.c" />
 <dep name="..\CANLib\CANPacket.h" />
@@ -2442,13 +2449,6 @@
 </file>
 <file name="..\CANLib\CANMotorUnit.c" />
 <file name="..\CANLib\CANMotorUnit.h" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\CANPacket.o">
-<dep name="..\CANLib\CANPacket.c" />
-<dep name="..\CANLib\CANPacket.h" />
-<dep name="..\CANLib\CANSerialNumbers.h" />
-<dep name="..\CANLib\Port.h" />
-</file>
-<file name="..\CANLib\CANPacket.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CANPower.o">
 <dep name="..\CANLib\CANPacket.h" />
 <dep name="..\CANLib\CANPower.c" />
@@ -4344,7 +4344,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="132450443491849502" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="132451225063336711" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>

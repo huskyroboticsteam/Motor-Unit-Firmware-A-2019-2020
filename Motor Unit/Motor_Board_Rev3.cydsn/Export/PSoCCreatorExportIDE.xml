@@ -37,15 +37,17 @@
       <Folder BuildType="STRICT" Path="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn">
         <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
-          <File BuildType="BUILD" Toolchain="">Initialize_CAN_addr.c</File>
           <File BuildType="BUILD" Toolchain="">MotorDrive.c</File>
           <File BuildType="BUILD" Toolchain="">PositionPID.c</File>
           <File BuildType="BUILD" Toolchain="">LED_Array.c</File>
+          <File BuildType="BUILD" Toolchain="">Motor_Unit_CAN.c</File>
+          <File BuildType="BUILD" Toolchain="">Motor_Unit_FSM.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">MotorDrive.h</File>
-          <File BuildType="BUILD" Toolchain="">Initialize_CAN_addr.h</File>
           <File BuildType="BUILD" Toolchain="">PositionPID.h</File>
           <File BuildType="BUILD" Toolchain="">LED_Array.h</File>
+          <File BuildType="BUILD" Toolchain="">Motor_Unit_CAN.h</File>
+          <File BuildType="BUILD" Toolchain="">Motor_Unit_FSM.h</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANCommon.c</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANCommon.h</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANGPIO.c</File>

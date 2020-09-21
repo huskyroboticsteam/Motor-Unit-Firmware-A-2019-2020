@@ -88,17 +88,49 @@ int main(void)
     }
     for(;;)
     {
-
-        can_send.data[0] = test;
-        if(test == 0 && can_send.data[1] == 1) {
-            can_send.data[1] = 0;
-        } else if (test == 0) {
-            can_send.data[1] = 1;
-        }
-        test++;
-        SendCANPacket(&can_send);
-        CyDelay(10);//send rate of bottom board
-
+    switch(address) {
+        case(0)://spam
+            can_send.data[0] = test;
+            if(test == 0 && can_send.data[1] == 1) {
+                can_send.data[1] = 0;
+            } else if (test == 0) {
+                can_send.data[1] = 1;
+            }
+            test++;
+            SendCANPacket(&can_send);
+            CyDelay(10);//send rate of bottom board
+        break;
+        case(1):
+            can_send.data[0] = 0;
+            can_send.data[1] = MOTOR_UNIT_MODE_PWM;
+            SendCANPacket(&can_send);
+            CyDelay(1000);
+            can_send.data[0] = 0;
+            can_send.data[1] = MOTOR_UNIT_MODE_PID;
+            SendCANPacket(&can_send);
+            CyDelay(1000);
+        break;
+        case(2):
+            for(int i = 0; i < 8; i++) {
+                can_send.data[i] = 0;
+             }
+            can_send.data[0] = 0;
+            can_send.data[1] = MOTOR_UNIT_MODE_PWM;
+            SendCANPacket(&can_send);
+            CyDelay(1000);
+            can_send.data[0] = 3;
+            for(int i = 0; i < 65535; i+= 1000) {
+            PackIntIntoDataMSBFirst(can_send.data,i,1);
+            SendCANPacket(&can_send);
+            CyDelay(100);
+            PackIntIntoDataMSBFirst(can_send.data,-i,1);
+            SendCANPacket(&can_send);
+            CyDelay(100);
+            
+            }
+            
+            break;
+    }
         
     }
 }

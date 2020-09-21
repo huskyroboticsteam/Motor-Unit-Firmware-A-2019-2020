@@ -10,36 +10,37 @@
  * ========================================
 */
 #ifndef CYAPICALLBACKS_H
-#define CYAPICALLBACKS_H
-
-//States in FSM
-#define UNINIT          0xFF
-#define SET_PWM         0x0
-#define CALC_PID        0x1
-#define SEND_TELE       0x2
-#define CHECK_CAN       0x3
-#define QUEUE_ERROR     0x4
+    #define CYAPICALLBACKS_H
+    #include "project.h"
+    #include "../CANLib/CANLibrary.h"
     
-    
-#define LED_ON  0
-#define LED_OFF 1
+    //States in FSM
+    #define UNINIT          0xFF
+    #define SET_PWM         0x0
+    #define CALC_PID        0x1
+    #define SEND_TELE       0x2
+    #define CHECK_CAN       0x3
+    #define QUEUE_ERROR     0x4
+        
+        
+    #define LED_ON  0
+    #define LED_OFF 1
 
 
-#include "project.h"
-#include "../CANLib/CANLibrary.h"
 
-#define TX_DATA_SIZE            (100u)
 
-#define CHIP_TYPE CHIP_TYPE_PSOC_CY8C4248AZI_L485
-//void check_Pin(void);
-    struct Error
-    {
-        uint8 code, param, done;  
-    };
-    
-    void Initialize(void);
-void PrintCanPacket(CANPacket receivedPacket);
-uint8_t ReadCAN(CANPacket *receivedPacket);
+    #define TX_DATA_SIZE            (100u)
+
+    #define CHIP_TYPE CHIP_TYPE_PSOC_CY8C4248AZI_L485
+    //void check_Pin(void);
+        struct Error
+        {
+            uint8 code, param, done;  
+        };
+        
+        void Initialize(void);
+    void PrintCanPacket(CANPacket receivedPacket);
+    uint8_t ReadCAN(CANPacket *receivedPacket);
 
     
 #endif /* CYAPICALLBACKS_H */   
