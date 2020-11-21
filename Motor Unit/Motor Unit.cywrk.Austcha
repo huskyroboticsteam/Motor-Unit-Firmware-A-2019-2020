@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Motor Unit\Motor_Board_Rev3_CAN_Send">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Motor Unit\Motor_Board_Rev3\TopDesign">
 <ExpandedNodeIds>
 <v>Motor Unit</v>
 <v>Motor Unit\Blink Rev 3 Debug\TopDesign</v>
@@ -42,7 +42,6 @@
 <v>Motor Unit\CAN_Basic_P4_Example01\Source Files</v>
 <v>Motor Unit\CAN_Basic_P4_Example01\Source Files\main.c</v>
 <v>Motor Unit\CAN_Basic_P4_Example01\CAN_Basic_P4_Example.pdf</v>
-<v>Motor Unit\Motor Board Rev1</v>
 <v>Motor Unit\Motor Board Rev1\TopDesign</v>
 <v>Motor Unit\Motor Board Rev1\Motor Board Rev1.cydwr</v>
 <v>Motor Unit\Motor Board Rev1\Motor Board Rev1.cydwr\Pins</v>
@@ -57,7 +56,6 @@
 <v>Motor Unit\Motor Board Rev1\Header Files\cyapicallbacks.h</v>
 <v>Motor Unit\Motor Board Rev1\Source Files</v>
 <v>Motor Unit\Motor Board Rev1\Source Files\main.c</v>
-<v>Motor Unit\Motor Board Rev1\Generated_Source</v>
 <v>Motor Unit\Motor Board Rev1\Generated_Source\PSoC4</v>
 <v>Motor Unit\Motor Board Rev2\TopDesign</v>
 <v>Motor Unit\Motor Board Rev2\Motor Board Rev2.cydwr</v>
@@ -115,7 +113,6 @@
 <v>Motor Unit\Motor_Board_Rev3\CAN Library\CANSerialNumbers.h</v>
 <v>Motor Unit\Motor_Board_Rev3\CAN Library\Port.h</v>
 <v>Motor Unit\Motor_Board_Rev3\CAN Library\PortPSOC_CY8C4248AZI_L485.c</v>
-<v>Motor Unit\Motor_Board_Rev3\Header Files</v>
 <v>Motor Unit\Motor_Board_Rev3\Header Files\cyapicallbacks.h</v>
 <v>Motor Unit\Motor_Board_Rev3\Header Files\LED_Array.h</v>
 <v>Motor Unit\Motor_Board_Rev3\Header Files\Motor_Unit_CAN.h</v>
@@ -132,9 +129,7 @@
 <v>Motor Unit\Motor_Board_Rev3\Generated_Source\PSoC4</v>
 <v>Motor Unit\Motor_Board_Rev3\Generated_Source\PSoC4\CAN</v>
 <v>Motor Unit\Motor_Board_Rev3\Generated_Source\PSoC4\CAN_isr</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send</v>
 <v>Motor Unit\Motor_Board_Rev3_CAN_Send\TopDesign</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Motor_Board_Rev3_CAN_Send.cydwr</v>
 <v>Motor Unit\Motor_Board_Rev3_CAN_Send\Motor_Board_Rev3_CAN_Send.cydwr\Pins</v>
 <v>Motor Unit\Motor_Board_Rev3_CAN_Send\Motor_Board_Rev3_CAN_Send.cydwr\Analog</v>
 <v>Motor Unit\Motor_Board_Rev3_CAN_Send\Motor_Board_Rev3_CAN_Send.cydwr\DMA</v>
@@ -171,55 +166,37 @@
 <v>Motor Unit\Motor_Board_Rev3_CAN_Send\Source Files\main.c</v>
 <v>Motor Unit\Motor_Board_Rev3_CAN_Send\Source Files\MotorDrive.c</v>
 <v>Motor Unit\Motor_Board_Rev3_CAN_Send\Source Files\PositionPID.c</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source</v>
 <v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>Motor Unit</v>
+<v>Motor Unit\Blink Rev 3 Debug</v>
+<v>Motor Unit\CAN_Basic_P4_Example01</v>
+<v>Motor Unit\Motor Board Rev1</v>
+<v>Motor Unit\Motor Board Rev2</v>
+<v>Motor Unit\Motor Board Rev3 old firmware</v>
+<v>Motor Unit\Motor_Board_Rev3</v>
+<v>Motor Unit\Motor_Board_Rev3\TopDesign</v>
+<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr</v>
+<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\Pins</v>
+<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\Analog</v>
+<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\DMA</v>
+<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\Clocks</v>
+<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\Interrupts</v>
+<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\System</v>
+<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\Directives</v>
+<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\Flash Security</v>
+<v>Motor Unit\Motor_Board_Rev3\CAN Library</v>
+<v>Motor Unit\Motor_Board_Rev3\Header Files</v>
+<v>Motor Unit\Motor_Board_Rev3\Source Files</v>
+<v>Motor Unit\Motor_Board_Rev3\Source Files\LED_Array.c</v>
+<v>Motor Unit\Motor_Board_Rev3\Source Files\main.c</v>
+<v>Motor Unit\Motor_Board_Rev3\Source Files\Motor_Unit_CAN.c</v>
 <v>Motor Unit\Motor_Board_Rev3\Source Files\Motor_Unit_FSM.c</v>
 <v>Motor Unit\Motor_Board_Rev3\Source Files\MotorDrive.c</v>
 <v>Motor Unit\Motor_Board_Rev3\Source Files\PositionPID.c</v>
 <v>Motor Unit\Motor_Board_Rev3\Generated_Source</v>
 <v>Motor Unit\Motor_Board_Rev3_CAN_Send</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\TopDesign</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Motor_Board_Rev3_CAN_Send.cydwr</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Motor_Board_Rev3_CAN_Send.cydwr\Pins</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Motor_Board_Rev3_CAN_Send.cydwr\Analog</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Motor_Board_Rev3_CAN_Send.cydwr\DMA</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Motor_Board_Rev3_CAN_Send.cydwr\Clocks</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Motor_Board_Rev3_CAN_Send.cydwr\Interrupts</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Motor_Board_Rev3_CAN_Send.cydwr\System</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Motor_Board_Rev3_CAN_Send.cydwr\Directives</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Motor_Board_Rev3_CAN_Send.cydwr\Flash Security</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\CAN Library</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Header Files</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Header Files\cyapicallbacks.h</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Header Files\Initialize_CAN_addr.h</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Header Files\LED_Array.h</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Header Files\MotorDrive.h</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Header Files\PositionPID.h</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Source Files</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Source Files\Initialize_CAN_addr.c</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Source Files\LED_Array.c</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Source Files\main.c</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Source Files\MotorDrive.c</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Source Files\PositionPID.c</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\ADC_SAR_Seq_1</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\Array_LED</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\CAN</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\Can_addr</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\CAN_HFCLK</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\CAN_isr</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\CAN_LED</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\Clock_1</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\Clock_2</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\Clock_PWM</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\cy_boot</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\cy_dmac</v>
-<v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4\cy_lfclk</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -709,7 +686,6 @@
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\CANMotorUnit.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\CANPacket.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\CANPower.lst</v>
-<v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_PWM.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
@@ -740,7 +716,7 @@
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\FAULT_MOTOR.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\FAULT_MOTOR_PM.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\isr_Limit_1.lst</v>
-<v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\isr_period.lst</v>
+<v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\isr_period_PWM.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_Array.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Motor_Unit_CAN.lst</v>
@@ -757,12 +733,16 @@
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Limit_2.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Limit_2_PM.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Motor.lst</v>
+<v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Motor_1.lst</v>
+<v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Motor_1_PM.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Motor_PM.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Pot.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Pot_PM.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\PortPSOC_CY8C4248AZI_L485.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\PositionPID.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_Motor.lst</v>
+<v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_Motor_1.lst</v>
+<v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_Motor_1_PM.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_Motor_PM.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec_Cnt16.lst</v>
@@ -777,9 +757,9 @@
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_fonts.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_StringSel.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_StringSel_PM.lst</v>
-<v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
-<v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
+<v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_PWM.lst</v>
+<v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\Timer_PWM_PM.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\TX_1.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\TX_1_PM.lst</v>
 <v>Motor Unit\Motor_Board_Rev3\CortexM0\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
@@ -957,13 +937,6 @@
 <v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_3_PM.lst</v>
 <v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_4.lst</v>
 <v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_4_PM.lst</v>
-<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Direction.lst</v>
-<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Direction_PM.lst</v>
-<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
-<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_Motor.lst</v>
-<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_Motor_PM.lst</v>
-<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_PM.lst</v>
-<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Status_Reg_1.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -1125,7 +1098,8 @@
 <v>Motor Unit\Motor_Board_Rev3\StripLights.pdf</v>
 <v>Motor Unit\Motor_Board_Rev3\SwitchSPST_v1_0</v>
 <v>Motor Unit\Motor_Board_Rev3\SwitchSPST_v1_0\SwitchSPST_v1_0.pdf</v>
-<v>Motor Unit\Motor_Board_Rev3\TCPWM_P4_v2_10.pdf</v>
+<v>Motor Unit\Motor_Board_Rev3\TCPWM_P4_v2_10</v>
+<v>Motor Unit\Motor_Board_Rev3\TCPWM_P4_v2_10\TCPWM_P4_v2_10.pdf</v>
 <v>Motor Unit\Motor_Board_Rev3\Timer_v2_80.pdf</v>
 <v>Motor Unit\Motor_Board_Rev3\ZeroTerminal.pdf</v>
 <v>Motor Unit\Motor_Board_Rev3_CAN_Send</v>
@@ -1198,13 +1172,6 @@
 <v>Motor Unit\Motor Board Rev1\PSoC 4 Architecture TRM</v>
 <v>Motor Unit\Motor Board Rev1\PSoC 4200L Family Datasheet</v>
 <v>Motor Unit\Motor Board Rev1\System Reference Guides</v>
-<v>Motor Unit\Motor Board Rev1\System Reference Guides\cy_boot_v5_70</v>
-<v>Motor Unit\Motor Board Rev1\System Reference Guides\cy_dmac_v1_10</v>
-<v>Motor Unit\Motor Board Rev1\System Reference Guides\cy_lfclk_v1_20</v>
-<v>Motor Unit\Motor Board Rev1\CAN_v3_0.pdf</v>
-<v>Motor Unit\Motor Board Rev1\cy_clock_v2_20</v>
-<v>Motor Unit\Motor Board Rev1\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>Motor Unit\Motor Board Rev1\cy_isr_v1_70</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -1376,16 +1343,76 @@
 <CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="101" DocumentName=".\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="52" DocumentName=".\Motor_Board_Rev3.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="89" DocumentName=".\Motor_Board_Rev3.cydsn\main.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="64" DocumentName=".\Motor_Board_Rev3.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="26" DocumentName=".\Motor_Board_Rev3.cydsn\Motor_Unit_CAN.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="90" DocumentName=".\Motor_Board_Rev3.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="98" DocumentName=".\Motor_Board_Rev3.cydsn\Motor_Unit_CAN.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 <CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
-<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="91" DocumentName=".\Motor_Board_Rev3.cydsn\main.c" />
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="150" DocumentName=".\Motor_Board_Rev3.cydsn\main.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="41" DocumentName=".\Motor_Board_Rev3.cydsn\main.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="78" DocumentName=".\CANLib\CANPacket.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="80" DocumentName=".\CANLib\CANPacket.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="165" DocumentName=".\CANLib\CANPacket.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="172" DocumentName=".\CANLib\CANPacket.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="61" DocumentName=".\CANLib\CANPacket.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="64" DocumentName=".\CANLib\CANPacket.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="66" DocumentName=".\CANLib\CANPacket.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="75" DocumentName=".\CANLib\CANPacket.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="47" DocumentName=".\Motor_Board_Rev3.cydsn\PositionPID.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="43" DocumentName=".\Motor_Board_Rev3.cydsn\PositionPID.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="45" DocumentName=".\Motor_Board_Rev3.cydsn\PositionPID.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="69" DocumentName=".\Motor_Board_Rev3.cydsn\main.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="86" DocumentName=".\Motor_Board_Rev3.cydsn\main.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="113" DocumentName=".\Motor_Board_Rev3.cydsn\main.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="119" DocumentName=".\Motor_Board_Rev3.cydsn\main.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="40" DocumentName=".\Motor_Board_Rev3.cydsn\Motor_Unit_CAN.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="51" DocumentName=".\Motor_Board_Rev3.cydsn\Motor_Unit_CAN.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="61" DocumentName=".\Motor_Board_Rev3.cydsn\Motor_Unit_CAN.c" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="24" DocumentName=".\Motor_Board_Rev3.cydsn\MotorDrive.c" />
 </CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
 </indicators>
 </CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
@@ -1395,18 +1422,12 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\Motor_Board_Rev3.cydsn\main.c" />
-<name v=".\Motor_Board_Rev3.cydsn\LED_Array.c" />
-<name v=".\Motor_Board_Rev3.cydsn\Generated_Source\PSoC4\StripLights.c" />
-<name v=".\Motor_Board_Rev3.cydsn\Generated_Source\PSoC4\StripLights.h" />
 <name v=".\Motor_Board_Rev3.cydsn\cyapicallbacks.h" />
-<name v=".\CANLib\CANMotorUnit.h" />
-<name v=".\Motor_Board_Rev3_CAN_Send.cydsn\main.c" />
-<name v=".\Motor_Board_Rev3_CAN_Send.cydsn\Generated_Source\PSoC4\StripLights.h" />
-<name v=".\Motor_Board_Rev3_CAN_Send.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Motor_Board_Rev3_CAN_Send.cydsn\cyapicallbacks.h" />
-<name v=".\Motor Board Rev1.cydsn\main.c" />
-<name v=".\CANLib\CANMotorUnit.c" />
-<name v=".\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c" />
+<name v=".\Motor_Board_Rev3.cydsn\Motor_Unit_CAN.c" />
+<name v=".\Motor_Board_Rev3.cydsn\LED_Array.h" />
+<name v=".\Motor_Board_Rev3.cydsn\LED_Array.c" />
+<name v=".\Motor_Board_Rev3.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Motor_Board_Rev3.cydsn\Motor_Unit_FSM.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -1414,7 +1435,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="884, 923" SelectedTabbedMdiWindow="489db30c-5676-4967-9454-020736659f39"><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\main.c" Guid="489db30c-5676-4967-9454-020736659f39" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\LED_Array.c" Guid="bea45873-49f5-4a4b-af6b-1687a7fc7426" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Generated_Source\PSoC4\StripLights.c" Guid="55f40ba9-7ad5-436b-8098-f796d44186d1" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Generated_Source\PSoC4\StripLights.h" Guid="308225d1-1583-4497-a86f-79a5e57665de" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\cyapicallbacks.h" Guid="2bef4549-e8e8-40a7-9075-e79564eee593" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\CANLib\CANMotorUnit.h" Guid="f789c316-efe4-486f-a781-1efcb66cfc0c" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\main.c" Guid="637e6dcf-ab5a-43f6-a5e8-65745f4df1d5" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Generated_Source\PSoC4\StripLights.h" Guid="fe32fe25-da7d-4ab8-a862-b557004cc2ff" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\TopDesign\TopDesign.cysch" Guid="f44da43f-3dcf-4465-966e-e3f81f389aac" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\cyapicallbacks.h" Guid="b1bc733e-fe1d-4aed-a1de-60777f89fe4b" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev1.cydsn\main.c" Guid="bffcac84-3955-4a4b-8014-523d08e951d4" /></TabbedMdiContainer><TabbedMdiContainer Size="710, 923" SelectedTabbedMdiWindow="d58122b9-9135-47e2-82ab-0f9c816b9796"><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\CANLib\CANMotorUnit.c" Guid="8d8841fc-ef63-4da8-a96d-fe9faa2ea183" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c" Guid="d58122b9-9135-47e2-82ab-0f9c816b9796" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="960, 757" SelectedTabbedMdiWindow="7c99820d-2c1b-4cc3-8a1b-c9c93d70bef3"><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\main.c" Guid="e9bd7f7d-d189-4bf8-82d7-d946190077e2" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\cyapicallbacks.h" Guid="497125a9-78d1-421f-a183-323c9ed1b685" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Motor_Unit_CAN.c" Guid="5d6137ae-666e-4d7e-87fd-18ab346272a2" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\LED_Array.h" Guid="d24c9917-9331-41c4-9fd1-d8a3125a3bb1" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\LED_Array.c" Guid="99b3492b-9ab6-4648-b618-1a16fc82de02" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="7532dcd2-657a-4751-b76e-cc4189f5b076" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\TopDesign\TopDesign.cysch" Guid="7c99820d-2c1b-4cc3-8a1b-c9c93d70bef3" /><DocumentWindow Key="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Motor_Unit_FSM.c" Guid="0646a6ae-c368-45bb-8fb0-aa0a42c6aa71" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

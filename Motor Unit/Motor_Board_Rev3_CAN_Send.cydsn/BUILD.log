@@ -1,4 +1,4 @@
---------------- Build Started: 09/20/2020 17:41:41 Project: Motor_Board_Rev3_CAN_Send, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 10/01/2020 16:49:35 Project: Motor_Board_Rev3_CAN_Send, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 In file included from ./../CANLib/CANLibrary.h:12:0,
@@ -201,7 +201,6 @@ In file included from ./../CANLib/CANLibrary.h:21:0,
                  from Generated_Source\PSoC4/CAN.h:25,
                  from Generated_Source\PSoC4/project.h:55,
                  from MotorDrive.c:12:
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/LED_Array.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c LED_Array.c -o .\CortexM0\ARM_GCC_541\Debug\LED_Array.o
 ./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
  #define DEVICE_GROUP_POWER      0x3
  ^
@@ -213,6 +212,8 @@ In file included from ./../CANLib/CANLibrary.h:12:0,
 ./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/PositionPID.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c PositionPID.c -o .\CortexM0\ARM_GCC_541\Debug\PositionPID.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/LED_Array.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c LED_Array.c -o .\CortexM0\ARM_GCC_541\Debug\LED_Array.o
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4/CAN.h:25,
@@ -301,7 +302,6 @@ In file included from ./../CANLib/CANLibrary.h:21:0,
                  from Generated_Source\PSoC4/CAN.h:25,
                  from Generated_Source\PSoC4/project.h:55,
                  from LED_Array.c:13:
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/PortPSOC_CY8C4248AZI_L485.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c -o .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
 ./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
  #define DEVICE_GROUP_POWER      0x3
  ^
@@ -313,6 +313,35 @@ In file included from ./../CANLib/CANLibrary.h:12:0,
 ./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/CANPacket.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\CANLib\CANPacket.c -o .\CortexM0\ARM_GCC_541\Debug\CANPacket.o
+In file included from ..\CANLib\CANPacket.c:10:0:
+..\CANLib\CANPacket.h:48:0: warning: "DEVICE_GROUP_BROADCAST" redefined
+ #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
+ ^
+In file included from ..\CANLib\CANPacket.h:13:0,
+                 from ..\CANLib\CANPacket.c:10:
+..\CANLib\CANSerialNumbers.h:55:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_BROADCAST  0x0
+ ^
+In file included from ..\CANLib\CANPacket.c:10:0:
+..\CANLib\CANPacket.h:49:0: warning: "DEVICE_GROUP_RESERVED" redefined
+ #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
+ ^
+In file included from ..\CANLib\CANPacket.h:13:0,
+                 from ..\CANLib\CANPacket.c:10:
+..\CANLib\CANSerialNumbers.h:56:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_RESERVED   0x1
+ ^
+In file included from ..\CANLib\CANPacket.c:10:0:
+..\CANLib\CANPacket.h:51:0: warning: "DEVICE_GROUP_POWER" redefined
+ #define DEVICE_GROUP_POWER              (uint8_t) 0x03
+ ^
+In file included from ..\CANLib\CANPacket.h:13:0,
+                 from ..\CANLib\CANPacket.c:10:
+..\CANLib\CANSerialNumbers.h:58:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_POWER      0x3
+ ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/PortPSOC_CY8C4248AZI_L485.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c -o .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
 In file included from ..\CANLib\PortFiles\../Port.h:18:0,
                  from ..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c:10:
 ..\CANLib\PortFiles\../CANPacket.h:48:0: warning: "DEVICE_GROUP_BROADCAST" redefined
@@ -457,7 +486,6 @@ In file included from ./../CANLib/CANLibrary.h:12:0,
 In file included from ./../CANLib/CANLibrary.h:21:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\cyfitter_cfg.c:26:
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/Cm0Start.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\Cm0Start.c -o .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
 ./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
  #define DEVICE_GROUP_POWER      0x3
  ^
@@ -467,234 +495,235 @@ In file included from ./../CANLib/CANLibrary.h:12:0,
 ./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/Cm0Start.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\Cm0Start.c -o .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\Cm0Start.c:21:
+./../CANLib/CANPacket.h:48:0: warning: "DEVICE_GROUP_BROADCAST" redefined
+ #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
+ ^
+In file included from ./../CANLib/CANPacket.h:13:0,
+                 from ./../CANLib/CANLibrary.h:12,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\Cm0Start.c:21:
+./../CANLib/CANSerialNumbers.h:55:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_BROADCAST  0x0
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\Cm0Start.c:21:
+./../CANLib/CANPacket.h:49:0: warning: "DEVICE_GROUP_RESERVED" redefined
+ #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
+ ^
+In file included from ./../CANLib/CANPacket.h:13:0,
+                 from ./../CANLib/CANLibrary.h:12,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\Cm0Start.c:21:
+./../CANLib/CANSerialNumbers.h:56:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_RESERVED   0x1
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\Cm0Start.c:21:
+./../CANLib/CANPacket.h:51:0: warning: "DEVICE_GROUP_POWER" redefined
+ #define DEVICE_GROUP_POWER              (uint8_t) 0x03
+ ^
+In file included from ./../CANLib/CANPacket.h:13:0,
+                 from ./../CANLib/CANLibrary.h:12,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\Cm0Start.c:21:
+./../CANLib/CANSerialNumbers.h:58:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_POWER      0x3
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\Cm0Start.c:21:
+./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
+ #define DEVICE_GROUP_BROADCAST  0x0
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\Cm0Start.c:21:
+./../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\Cm0Start.c:21:
+./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
+ #define DEVICE_GROUP_RESERVED   0x1
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\Cm0Start.c:21:
+./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\Cm0Start.c:21:
+./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
+ #define DEVICE_GROUP_POWER      0x3
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\Cm0Start.c:21:
+./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_POWER              (uint8_t) 0x03
+ ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/isr_Limit_1.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\isr_Limit_1.c -o .\CortexM0\ARM_GCC_541\Debug\isr_Limit_1.o
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
 ./../CANLib/CANPacket.h:48:0: warning: "DEVICE_GROUP_BROADCAST" redefined
  #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
  ^
 In file included from ./../CANLib/CANPacket.h:13:0,
                  from ./../CANLib/CANLibrary.h:12,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\Cm0Start.c:21:
+                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
 ./../CANLib/CANSerialNumbers.h:55:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_BROADCAST  0x0
  ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\Cm0Start.c:21:
+                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
 ./../CANLib/CANPacket.h:49:0: warning: "DEVICE_GROUP_RESERVED" redefined
  #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
  ^
 In file included from ./../CANLib/CANPacket.h:13:0,
                  from ./../CANLib/CANLibrary.h:12,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\Cm0Start.c:21:
+                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
 ./../CANLib/CANSerialNumbers.h:56:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_RESERVED   0x1
  ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\Cm0Start.c:21:
+                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
 ./../CANLib/CANPacket.h:51:0: warning: "DEVICE_GROUP_POWER" redefined
  #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
 In file included from ./../CANLib/CANPacket.h:13:0,
                  from ./../CANLib/CANLibrary.h:12,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\Cm0Start.c:21:
+                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
 ./../CANLib/CANSerialNumbers.h:58:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_POWER      0x3
  ^
 In file included from ./../CANLib/CANLibrary.h:21:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\Cm0Start.c:21:
+                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
 ./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
  #define DEVICE_GROUP_BROADCAST  0x0
  ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\Cm0Start.c:21:
+                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
 ./../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
  ^
 In file included from ./../CANLib/CANLibrary.h:21:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\Cm0Start.c:21:
+                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
 ./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
  #define DEVICE_GROUP_RESERVED   0x1
  ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\Cm0Start.c:21:
+                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
 ./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
  ^
 In file included from ./../CANLib/CANLibrary.h:21:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\Cm0Start.c:21:
+                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
 ./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
  #define DEVICE_GROUP_POWER      0x3
  ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\Cm0Start.c:21:
+                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
 ./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
-./../CANLib/CANPacket.h:48:0: warning: "DEVICE_GROUP_BROADCAST" redefined
- #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
- ^
-In file included from ./../CANLib/CANPacket.h:13:0,
-                 from ./../CANLib/CANLibrary.h:12,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
-./../CANLib/CANSerialNumbers.h:55:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_BROADCAST  0x0
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
-./../CANLib/CANPacket.h:49:0: warning: "DEVICE_GROUP_RESERVED" redefined
- #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
- ^
-In file included from ./../CANLib/CANPacket.h:13:0,
-                 from ./../CANLib/CANLibrary.h:12,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
-./../CANLib/CANSerialNumbers.h:56:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_RESERVED   0x1
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
-./../CANLib/CANPacket.h:51:0: warning: "DEVICE_GROUP_POWER" redefined
- #define DEVICE_GROUP_POWER              (uint8_t) 0x03
- ^
-In file included from ./../CANLib/CANPacket.h:13:0,
-                 from ./../CANLib/CANLibrary.h:12,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
-./../CANLib/CANSerialNumbers.h:58:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_POWER      0x3
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/ADC_SAR_Seq_1_INT.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c -o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_INT.o
-./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
- #define DEVICE_GROUP_BROADCAST  0x0
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
-./../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
-./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
- #define DEVICE_GROUP_RESERVED   0x1
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
-./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
-./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
- #define DEVICE_GROUP_POWER      0x3
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\isr_Limit_1.c:22:
-./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_POWER              (uint8_t) 0x03
- ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
 ./../CANLib/CANPacket.h:48:0: warning: "DEVICE_GROUP_BROADCAST" redefined
  #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
+ ^
+In file included from ./../CANLib/CANPacket.h:13:0,
+                 from ./../CANLib/CANLibrary.h:12,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
+./../CANLib/CANSerialNumbers.h:55:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_BROADCAST  0x0
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
+./../CANLib/CANPacket.h:49:0: warning: "DEVICE_GROUP_RESERVED" redefined
+ #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
+ ^
+In file included from ./../CANLib/CANPacket.h:13:0,
+                 from ./../CANLib/CANLibrary.h:12,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
+./../CANLib/CANSerialNumbers.h:56:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_RESERVED   0x1
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
+./../CANLib/CANPacket.h:51:0: warning: "DEVICE_GROUP_POWER" redefined
+ #define DEVICE_GROUP_POWER              (uint8_t) 0x03
+ ^
+In file included from ./../CANLib/CANPacket.h:13:0,
+                 from ./../CANLib/CANLibrary.h:12,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
+./../CANLib/CANSerialNumbers.h:58:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_POWER      0x3
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
+./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
+ #define DEVICE_GROUP_BROADCAST  0x0
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
+./../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
+./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
+ #define DEVICE_GROUP_RESERVED   0x1
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
+./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
+./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
+ #define DEVICE_GROUP_POWER      0x3
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
+./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/ADC_SAR_Seq_1_IRQ.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c -o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_IRQ.o
-In file included from ./../CANLib/CANPacket.h:13:0,
-                 from ./../CANLib/CANLibrary.h:12,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
-./../CANLib/CANSerialNumbers.h:55:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_BROADCAST  0x0
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
-./../CANLib/CANPacket.h:49:0: warning: "DEVICE_GROUP_RESERVED" redefined
- #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
- ^
-In file included from ./../CANLib/CANPacket.h:13:0,
-                 from ./../CANLib/CANLibrary.h:12,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
-./../CANLib/CANSerialNumbers.h:56:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_RESERVED   0x1
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
-./../CANLib/CANPacket.h:51:0: warning: "DEVICE_GROUP_POWER" redefined
- #define DEVICE_GROUP_POWER              (uint8_t) 0x03
- ^
-In file included from ./../CANLib/CANPacket.h:13:0,
-                 from ./../CANLib/CANLibrary.h:12,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
-./../CANLib/CANSerialNumbers.h:58:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_POWER      0x3
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
-./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
- #define DEVICE_GROUP_BROADCAST  0x0
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
-./../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
-./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
- #define DEVICE_GROUP_RESERVED   0x1
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
-./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
-./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
- #define DEVICE_GROUP_POWER      0x3
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c:19:
-./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_POWER              (uint8_t) 0x03
- ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c:22:
@@ -737,40 +766,40 @@ In file included from ./../CANLib/CANPacket.h:13:0,
 In file included from ./../CANLib/CANLibrary.h:21:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c:22:
+./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
+ #define DEVICE_GROUP_BROADCAST  0x0
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c:22:
+./../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c:22:
+./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
+ #define DEVICE_GROUP_RESERVED   0x1
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c:22:
+./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c:22:
+./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
+ #define DEVICE_GROUP_POWER      0x3
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c:22:
+./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_POWER              (uint8_t) 0x03
+ ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/CAN.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\CAN.c -o .\CortexM0\ARM_GCC_541\Debug\CAN.o
-./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
- #define DEVICE_GROUP_BROADCAST  0x0
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c:22:
-./../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c:22:
-./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
- #define DEVICE_GROUP_RESERVED   0x1
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c:22:
-./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c:22:
-./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
- #define DEVICE_GROUP_POWER      0x3
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c:22:
-./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_POWER              (uint8_t) 0x03
- ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\CAN.h:25,
@@ -834,31 +863,31 @@ In file included from ./../CANLib/CANLibrary.h:21:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\CAN.h:25,
                  from Generated_Source\PSoC4\CAN.c:20:
+./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
+ #define DEVICE_GROUP_RESERVED   0x1
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN.c:20:
+./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN.c:20:
+./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
+ #define DEVICE_GROUP_POWER      0x3
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN.c:20:
+./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_POWER              (uint8_t) 0x03
+ ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/CAN_INT.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\CAN_INT.c -o .\CortexM0\ARM_GCC_541\Debug\CAN_INT.o
-./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
- #define DEVICE_GROUP_RESERVED   0x1
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN.c:20:
-./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN.c:20:
-./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
- #define DEVICE_GROUP_POWER      0x3
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN.c:20:
-./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_POWER              (uint8_t) 0x03
- ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\CAN.h:25,
@@ -893,60 +922,60 @@ In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\CAN.h:25,
                  from Generated_Source\PSoC4\CAN_INT.c:20:
+./../CANLib/CANPacket.h:51:0: warning: "DEVICE_GROUP_POWER" redefined
+ #define DEVICE_GROUP_POWER              (uint8_t) 0x03
+ ^
+In file included from ./../CANLib/CANPacket.h:13:0,
+                 from ./../CANLib/CANLibrary.h:12,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN_INT.c:20:
+./../CANLib/CANSerialNumbers.h:58:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_POWER      0x3
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN_INT.c:20:
+./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
+ #define DEVICE_GROUP_BROADCAST  0x0
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN_INT.c:20:
+./../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN_INT.c:20:
+./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
+ #define DEVICE_GROUP_RESERVED   0x1
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN_INT.c:20:
+./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN_INT.c:20:
+./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
+ #define DEVICE_GROUP_POWER      0x3
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN_INT.c:20:
+./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_POWER              (uint8_t) 0x03
+ ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/CAN_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\CAN_PM.c -o .\CortexM0\ARM_GCC_541\Debug\CAN_PM.o
-./../CANLib/CANPacket.h:51:0: warning: "DEVICE_GROUP_POWER" redefined
- #define DEVICE_GROUP_POWER              (uint8_t) 0x03
- ^
-In file included from ./../CANLib/CANPacket.h:13:0,
-                 from ./../CANLib/CANLibrary.h:12,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN_INT.c:20:
-./../CANLib/CANSerialNumbers.h:58:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_POWER      0x3
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN_INT.c:20:
-./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
- #define DEVICE_GROUP_BROADCAST  0x0
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN_INT.c:20:
-./../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN_INT.c:20:
-./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
- #define DEVICE_GROUP_RESERVED   0x1
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN_INT.c:20:
-./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN_INT.c:20:
-./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
- #define DEVICE_GROUP_POWER      0x3
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN_INT.c:20:
-./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_POWER              (uint8_t) 0x03
- ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\CAN.h:25,
@@ -1010,31 +1039,31 @@ In file included from ./../CANLib/CANLibrary.h:21:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\CAN.h:25,
                  from Generated_Source\PSoC4\CAN_PM.c:18:
+./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
+ #define DEVICE_GROUP_RESERVED   0x1
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN_PM.c:18:
+./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN_PM.c:18:
+./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
+ #define DEVICE_GROUP_POWER      0x3
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN_PM.c:18:
+./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_POWER              (uint8_t) 0x03
+ ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/CAN_TX_RX_func.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\CAN_TX_RX_func.c -o .\CortexM0\ARM_GCC_541\Debug\CAN_TX_RX_func.o
-./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
- #define DEVICE_GROUP_RESERVED   0x1
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN_PM.c:18:
-./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN_PM.c:18:
-./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
- #define DEVICE_GROUP_POWER      0x3
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN_PM.c:18:
-./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_POWER              (uint8_t) 0x03
- ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\CAN.h:25,
@@ -1112,17 +1141,17 @@ In file included from ./../CANLib/CANLibrary.h:21:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\CAN.h:25,
                  from Generated_Source\PSoC4\CAN_TX_RX_func.c:24:
+./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
+ #define DEVICE_GROUP_POWER      0x3
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN.h:25,
+                 from Generated_Source\PSoC4\CAN_TX_RX_func.c:24:
+./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_POWER              (uint8_t) 0x03
+ ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/CAN_isr.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\CAN_isr.c -o .\CortexM0\ARM_GCC_541\Debug\CAN_isr.o
-./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
- #define DEVICE_GROUP_POWER      0x3
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN.h:25,
-                 from Generated_Source\PSoC4\CAN_TX_RX_func.c:24:
-./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_POWER              (uint8_t) 0x03
- ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\CAN_isr.c:22:
@@ -1189,168 +1218,168 @@ In file included from ./../CANLib/CANLibrary.h:12:0,
 In file included from ./../CANLib/CANLibrary.h:21:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\CAN_isr.c:22:
+./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
+ #define DEVICE_GROUP_POWER      0x3
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\CAN_isr.c:22:
+./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_POWER              (uint8_t) 0x03
+ ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/UART_SPI_UART_INT.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\UART_SPI_UART_INT.c -o .\CortexM0\ARM_GCC_541\Debug\UART_SPI_UART_INT.o
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+./../CANLib/CANPacket.h:48:0: warning: "DEVICE_GROUP_BROADCAST" redefined
+ #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
+ ^
+In file included from ./../CANLib/CANPacket.h:13:0,
+                 from ./../CANLib/CANLibrary.h:12,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+./../CANLib/CANSerialNumbers.h:55:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_BROADCAST  0x0
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+./../CANLib/CANPacket.h:49:0: warning: "DEVICE_GROUP_RESERVED" redefined
+ #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
+ ^
+In file included from ./../CANLib/CANPacket.h:13:0,
+                 from ./../CANLib/CANLibrary.h:12,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+./../CANLib/CANSerialNumbers.h:56:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_RESERVED   0x1
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+./../CANLib/CANPacket.h:51:0: warning: "DEVICE_GROUP_POWER" redefined
+ #define DEVICE_GROUP_POWER              (uint8_t) 0x03
+ ^
+In file included from ./../CANLib/CANPacket.h:13:0,
+                 from ./../CANLib/CANLibrary.h:12,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+./../CANLib/CANSerialNumbers.h:58:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_POWER      0x3
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
+ #define DEVICE_GROUP_BROADCAST  0x0
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+./../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
+ #define DEVICE_GROUP_RESERVED   0x1
+ ^
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
+ #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
+ ^
+In file included from ./../CANLib/CANLibrary.h:21:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
 ./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
  #define DEVICE_GROUP_POWER      0x3
  ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\CAN_isr.c:22:
+                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
 ./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/UART_UART.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\UART_UART.c -o .\CortexM0\ARM_GCC_541\Debug\UART_UART.o
+In file included from ./../CANLib/CANLibrary.h:12:0,
+                 from ./cyapicallbacks.h:20,
+                 from Generated_Source\PSoC4\UART_UART.c:21:
 ./../CANLib/CANPacket.h:48:0: warning: "DEVICE_GROUP_BROADCAST" redefined
  #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
  ^
 In file included from ./../CANLib/CANPacket.h:13:0,
                  from ./../CANLib/CANLibrary.h:12,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+                 from Generated_Source\PSoC4\UART_UART.c:21:
 ./../CANLib/CANSerialNumbers.h:55:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_BROADCAST  0x0
  ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+                 from Generated_Source\PSoC4\UART_UART.c:21:
 ./../CANLib/CANPacket.h:49:0: warning: "DEVICE_GROUP_RESERVED" redefined
  #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
  ^
 In file included from ./../CANLib/CANPacket.h:13:0,
                  from ./../CANLib/CANLibrary.h:12,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+                 from Generated_Source\PSoC4\UART_UART.c:21:
 ./../CANLib/CANSerialNumbers.h:56:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_RESERVED   0x1
  ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+                 from Generated_Source\PSoC4\UART_UART.c:21:
 ./../CANLib/CANPacket.h:51:0: warning: "DEVICE_GROUP_POWER" redefined
  #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
 In file included from ./../CANLib/CANPacket.h:13:0,
                  from ./../CANLib/CANLibrary.h:12,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+                 from Generated_Source\PSoC4\UART_UART.c:21:
 ./../CANLib/CANSerialNumbers.h:58:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_POWER      0x3
  ^
 In file included from ./../CANLib/CANLibrary.h:21:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+                 from Generated_Source\PSoC4\UART_UART.c:21:
 ./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
  #define DEVICE_GROUP_BROADCAST  0x0
  ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+                 from Generated_Source\PSoC4\UART_UART.c:21:
 ./../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
  ^
 In file included from ./../CANLib/CANLibrary.h:21:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+                 from Generated_Source\PSoC4\UART_UART.c:21:
 ./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
  #define DEVICE_GROUP_RESERVED   0x1
  ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+                 from Generated_Source\PSoC4\UART_UART.c:21:
 ./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
  ^
 In file included from ./../CANLib/CANLibrary.h:21:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+                 from Generated_Source\PSoC4\UART_UART.c:21:
 ./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
  #define DEVICE_GROUP_POWER      0x3
  ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_SPI_UART_INT.c:21:
+                 from Generated_Source\PSoC4\UART_UART.c:21:
 ./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_UART.c:21:
-./../CANLib/CANPacket.h:48:0: warning: "DEVICE_GROUP_BROADCAST" redefined
- #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
- ^
-In file included from ./../CANLib/CANPacket.h:13:0,
-                 from ./../CANLib/CANLibrary.h:12,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_UART.c:21:
-./../CANLib/CANSerialNumbers.h:55:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_BROADCAST  0x0
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_UART.c:21:
-./../CANLib/CANPacket.h:49:0: warning: "DEVICE_GROUP_RESERVED" redefined
- #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
- ^
-In file included from ./../CANLib/CANPacket.h:13:0,
-                 from ./../CANLib/CANLibrary.h:12,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_UART.c:21:
-./../CANLib/CANSerialNumbers.h:56:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_RESERVED   0x1
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_UART.c:21:
-./../CANLib/CANPacket.h:51:0: warning: "DEVICE_GROUP_POWER" redefined
- #define DEVICE_GROUP_POWER              (uint8_t) 0x03
- ^
-In file included from ./../CANLib/CANPacket.h:13:0,
-                 from ./../CANLib/CANLibrary.h:12,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_UART.c:21:
-./../CANLib/CANSerialNumbers.h:58:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_POWER      0x3
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_UART.c:21:
-./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
- #define DEVICE_GROUP_BROADCAST  0x0
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/isr_period.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\isr_period.c -o .\CortexM0\ARM_GCC_541\Debug\isr_period.o
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_UART.c:21:
-./../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_UART.c:21:
-./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
- #define DEVICE_GROUP_RESERVED   0x1
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_UART.c:21:
-./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
- ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_UART.c:21:
-./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
- #define DEVICE_GROUP_POWER      0x3
- ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:20,
-                 from Generated_Source\PSoC4\UART_UART.c:21:
-./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
- #define DEVICE_GROUP_POWER              (uint8_t) 0x03
- ^
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\isr_period.c:22:
@@ -1367,7 +1396,6 @@ In file included from ./../CANLib/CANPacket.h:13:0,
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\isr_period.c:22:
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/StripLights.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\StripLights.c -o .\CortexM0\ARM_GCC_541\Debug\StripLights.o
 ./../CANLib/CANPacket.h:49:0: warning: "DEVICE_GROUP_RESERVED" redefined
  #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
  ^
@@ -1427,6 +1455,7 @@ In file included from ./../CANLib/CANLibrary.h:12:0,
 ./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/StripLights.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\StripLights.c -o .\CortexM0\ARM_GCC_541\Debug\StripLights.o
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4/CAN.h:25,
@@ -1619,7 +1648,6 @@ In file included from ./../CANLib/CANLibrary.h:21:0,
                  from Generated_Source\PSoC4/CAN.h:25,
                  from Generated_Source\PSoC4/project.h:55,
                  from Generated_Source\PSoC4\StripLights_fonts.c:12:
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/StripLights_cisr.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\StripLights_cisr.c -o .\CortexM0\ARM_GCC_541\Debug\StripLights_cisr.o
 ./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
  #define DEVICE_GROUP_POWER      0x3
  ^
@@ -1631,6 +1659,7 @@ In file included from ./../CANLib/CANLibrary.h:12:0,
 ./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/StripLights_cisr.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\StripLights_cisr.c -o .\CortexM0\ARM_GCC_541\Debug\StripLights_cisr.o
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\StripLights_cisr.c:22:
@@ -1673,7 +1702,6 @@ In file included from ./../CANLib/CANPacket.h:13:0,
 In file included from ./../CANLib/CANLibrary.h:21:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\StripLights_cisr.c:22:
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/StripLights_fisr.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\StripLights_fisr.c -o .\CortexM0\ARM_GCC_541\Debug\StripLights_fisr.o
 ./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
  #define DEVICE_GROUP_BROADCAST  0x0
  ^
@@ -1707,6 +1735,7 @@ In file included from ./../CANLib/CANLibrary.h:12:0,
 ./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/StripLights_fisr.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\StripLights_fisr.c -o .\CortexM0\ARM_GCC_541\Debug\StripLights_fisr.o
 In file included from ./../CANLib/CANLibrary.h:12:0,
                  from ./cyapicallbacks.h:20,
                  from Generated_Source\PSoC4\StripLights_fisr.c:22:
@@ -1790,6 +1819,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S "C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\CortexM0\ARM_GCC_541\Debug\Motor_Board_Rev3_CAN_Send.elf"
-Flash used: 13854 of 262144 bytes (5.3%).
+Flash used: 14190 of 262144 bytes (5.4%).
 SRAM used: 3024 of 32768 bytes (9.2%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 09/20/2020 17:41:46 ---------------
+--------------- Build Succeeded: 10/01/2020 16:49:44 ---------------

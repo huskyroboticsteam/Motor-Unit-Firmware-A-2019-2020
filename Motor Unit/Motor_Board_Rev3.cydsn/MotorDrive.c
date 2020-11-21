@@ -17,15 +17,18 @@
 extern uint8 invalidate;
 extern char8 txData[TX_DATA_SIZE];
 
+
 //uint8 limitSW = Status_Reg_Switches_Read();
 
-// takes between -255 and 255
+
 void set_PWM(int32_t compare, uint8_t disable_limit, uint8 limitSW) {
 
     sprintf(txData, "PWM:%d disable_limit: %d\r\n",compare,disable_limit);
-    UART_UartPutString(txData); 
+   // UART_UartPutString(txData); 
 
     invalidate = 0;
+    
+    //16bit clamp
     if (compare < -65535 || compare > 65535) { return; }
     if (compare < 0 && (!(limitSW & 0b01) || disable_limit) ) {
         Pin_Direction_Write(0);

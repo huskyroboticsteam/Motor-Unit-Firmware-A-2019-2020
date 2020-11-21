@@ -11,15 +11,22 @@
 <CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
+<file name=".\CortexM0\ARM_GCC_541\Debug\CANPacket.o">
+<dep name="..\CANLib\CANPacket.c" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
+</file>
+<file name="..\CANLib\CANPacket.c" />
+<file name="..\CANLib\CANPacket.h" />
+<file name="..\CANLib\CANSerialNumbers.h" />
+<file name="..\CANLib\Port.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o">
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANCommon.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\CAN.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
@@ -112,6 +119,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name="..\CANLib\Port.h" />
 <dep name="..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c" />
 <dep name=".\cyapicallbacks.h" />
@@ -120,10 +130,7 @@
 <file name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <file name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <file name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<file name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <file name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<file name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<file name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <file name=".\Generated_Source\PSoC4\CAN.h" />
 <file name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <file name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
@@ -215,7 +222,6 @@
 <file name=".\Generated_Source\PSoC4\project.h" />
 <file name=".\Generated_Source\PSoC4\timer_clock.h" />
 <file name="..\CANLib\CANLibrary.h" />
-<file name="..\CANLib\Port.h" />
 <file name="..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c" />
 <file name=".\cyapicallbacks.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_INT.o">
@@ -223,10 +229,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -318,6 +321,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_INT.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -327,10 +333,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -422,6 +425,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -431,10 +437,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -526,6 +529,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\CAN.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -535,10 +541,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -630,6 +633,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\CAN_INT.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -639,10 +645,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -734,6 +737,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\CAN_PM.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -743,10 +749,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -838,6 +841,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\CAN_TX_RX_func.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -847,10 +853,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -942,6 +945,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\CAN_isr.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -951,10 +957,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -1046,6 +1049,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\Cm0Start.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -1055,10 +1061,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -1150,6 +1153,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\StripLights.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -1159,10 +1165,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -1254,6 +1257,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\StripLights_cisr.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -1263,10 +1269,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -1358,6 +1361,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\StripLights_fisr.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -1367,10 +1373,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -1462,6 +1465,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\StripLights_fonts.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -1471,10 +1477,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -1566,6 +1569,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\UART_SPI_UART_INT.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -1575,10 +1581,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -1670,6 +1673,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\UART_UART.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -1679,10 +1685,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -1774,6 +1777,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter_cfg.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -1783,10 +1789,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -1878,6 +1881,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\isr_Limit_1.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -1887,10 +1893,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -1982,6 +1985,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\isr_period.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
@@ -1991,10 +1997,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -2086,6 +2089,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\Initialize_CAN_addr.c" />
 <dep name=".\Initialize_CAN_addr.h" />
 <dep name=".\cyapicallbacks.h" />
@@ -2097,10 +2103,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -2192,6 +2195,9 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\LED_Array.c" />
 <dep name=".\LED_Array.h" />
 <dep name=".\cyapicallbacks.h" />
@@ -2203,10 +2209,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -2298,21 +2301,21 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\MotorDrive.c" />
 <dep name=".\MotorDrive.h" />
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\MotorDrive.c" />
 <file name=".\MotorDrive.h" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\main.o">
+<file name=".\CortexM0\ARM_GCC_541\Debug\PositionPID.o">
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANCommon.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
 <dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
-<dep name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
@@ -2404,21 +2407,131 @@
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\Generated_Source\PSoC4\timer_clock.h" />
 <dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
+<dep name=".\PositionPID.c" />
+<dep name=".\cyapicallbacks.h" />
+</file>
+<file name=".\PositionPID.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\main.o">
+<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANCommon.h" />
+<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANGPIO.h" />
+<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANLocalization.h" />
+<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANMotorUnit.h" />
+<dep name=".\CortexM0\ARM_GCC_541\CANLib\CANPower.h" />
+<dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1.h" />
+<dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_IRQ.h" />
+<dep name=".\Generated_Source\PSoC4\ADC_SAR_Seq_1_intClock.h" />
+<dep name=".\Generated_Source\PSoC4\Array_LED.h" />
+<dep name=".\Generated_Source\PSoC4\Array_LED_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\CAN.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_HFCLK.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_LED.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_LED_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_isr.h" />
+<dep name=".\Generated_Source\PSoC4\Can_addr.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_1.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_2.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_PWM.h" />
+<dep name=".\Generated_Source\PSoC4\CyDMA.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\Debug_1.h" />
+<dep name=".\Generated_Source\PSoC4\Debug_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Debug_2.h" />
+<dep name=".\Generated_Source\PSoC4\Debug_2_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Dip_1.h" />
+<dep name=".\Generated_Source\PSoC4\Dip_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Dip_2.h" />
+<dep name=".\Generated_Source\PSoC4\Dip_2_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Dip_3.h" />
+<dep name=".\Generated_Source\PSoC4\Dip_3_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Dip_4.h" />
+<dep name=".\Generated_Source\PSoC4\Dip_4_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\ERROR_LED.h" />
+<dep name=".\Generated_Source\PSoC4\ERROR_LED_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\FAULT_MOTOR.h" />
+<dep name=".\Generated_Source\PSoC4\FAULT_MOTOR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\PWM_Motor.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Direction.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Direction_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Encoder_A.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Encoder_A_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Encoder_B.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Encoder_B_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Limit_1.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Limit_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Limit_2.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Limit_2_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Motor.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Motor_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Pot.h" />
+<dep name=".\Generated_Source\PSoC4\Pin_Pot_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_Cnt16.h" />
+<dep name=".\Generated_Source\PSoC4\RX_1.h" />
+<dep name=".\Generated_Source\PSoC4\RX_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Status_Reg_Switches.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_StringSel.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_cisr.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_fisr.h" />
+<dep name=".\Generated_Source\PSoC4\StripLights_fonts.h" />
+<dep name=".\Generated_Source\PSoC4\TX_1.h" />
+<dep name=".\Generated_Source\PSoC4\TX_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_1.h" />
+<dep name=".\Generated_Source\PSoC4\UART.h" />
+<dep name=".\Generated_Source\PSoC4\UART_BOOT.h" />
+<dep name=".\Generated_Source\PSoC4\UART_PINS.h" />
+<dep name=".\Generated_Source\PSoC4\UART_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\UART_SCBCLK.h" />
+<dep name=".\Generated_Source\PSoC4\UART_SPI_UART.h" />
+<dep name=".\Generated_Source\PSoC4\UART_SPI_UART_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\UART_rx.h" />
+<dep name=".\Generated_Source\PSoC4\UART_rx_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\UART_tx.h" />
+<dep name=".\Generated_Source\PSoC4\UART_tx_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<dep name=".\Generated_Source\PSoC4\cyPm.h" />
+<dep name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\isr_Limit_1.h" />
+<dep name=".\Generated_Source\PSoC4\isr_period.h" />
+<dep name=".\Generated_Source\PSoC4\project.h" />
+<dep name=".\Generated_Source\PSoC4\timer_clock.h" />
+<dep name="..\CANLib\CANLibrary.h" />
+<dep name="..\CANLib\CANPacket.h" />
+<dep name="..\CANLib\CANSerialNumbers.h" />
+<dep name="..\CANLib\Port.h" />
 <dep name=".\LED_Array.h" />
 <dep name=".\MotorDrive.h" />
 <dep name=".\cyapicallbacks.h" />
 <dep name=".\main.c" />
 </file>
 <file name=".\main.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\CANPacket.o">
-<dep name="..\CANLib\CANPacket.c" />
+<file name=".\CortexM0\ARM_GCC_541\CANLib\CANPacket.h" />
+<file name=".\CortexM0\ARM_GCC_541\CANLib\CANSerialNumbers.h" />
+<file name=".\CortexM0\ARM_GCC_541\CANLib\Port.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o">
+<dep name="..\CANLib\CANMotorUnit.c" />
+<dep name="..\CANLib\CANMotorUnit.h" />
 <dep name="..\CANLib\CANPacket.h" />
 <dep name="..\CANLib\CANSerialNumbers.h" />
 <dep name="..\CANLib\Port.h" />
 </file>
-<file name="..\CANLib\CANPacket.c" />
-<file name="..\CANLib\CANPacket.h" />
-<file name="..\CANLib\CANSerialNumbers.h" />
+<file name="..\CANLib\CANMotorUnit.c" />
+<file name="..\CANLib\CANMotorUnit.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CANCommon.o">
 <dep name="..\CANLib\CANCommon.c" />
 <dep name="..\CANLib\CANCommon.h" />
@@ -2440,15 +2553,6 @@
 <dep name="..\CANLib\CANSerialNumbers.h" />
 </file>
 <file name="..\CANLib\CANLocalization.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o">
-<dep name="..\CANLib\CANMotorUnit.c" />
-<dep name="..\CANLib\CANMotorUnit.h" />
-<dep name="..\CANLib\CANPacket.h" />
-<dep name="..\CANLib\CANSerialNumbers.h" />
-<dep name="..\CANLib\Port.h" />
-</file>
-<file name="..\CANLib\CANMotorUnit.c" />
-<file name="..\CANLib\CANMotorUnit.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CANPower.o">
 <dep name="..\CANLib\CANPacket.h" />
 <dep name="..\CANLib\CANPower.c" />
@@ -3244,10 +3348,6 @@
 <dep name=".\Generated_Source\PSoC4\timer_clock.c" />
 </file>
 <file name=".\Generated_Source\PSoC4\timer_clock.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\PositionPID.o">
-<dep name=".\PositionPID.c" />
-</file>
-<file name=".\PositionPID.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o">
 <dep name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
 <dep name=".\Generated_Source\PSoC4\cydevicegnu_trm.inc" />
@@ -4344,14 +4444,22 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="132451225063336711" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="132460697839540829" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
 <dataGuid v="504337dd-7d07-4bc7-9057-90e60cf6c469">
 <CyGuid_504337dd-7d07-4bc7-9057-90e60cf6c469 type_name="CyDesigner.Common.Debugger.CyBreakpointList" version="1">
-<debugger_breakpoint_list />
+<debugger_breakpoint_list>
+<CyGuid_76464711-0ae1-4583-b869-f07a0403fc6e type_name="CyDesigner.Common.Debugger.CyFileLineBreakpoint" version="1" hitcount="0" condition="" enabled="True" hardware="True" temparary="False" filename="..\Motor_Board_Rev3.cydsn\Motor_Unit_CAN.c" linenumber="90" />
+<CyGuid_76464711-0ae1-4583-b869-f07a0403fc6e type_name="CyDesigner.Common.Debugger.CyFileLineBreakpoint" version="1" hitcount="0" condition="" enabled="True" hardware="True" temparary="False" filename="..\Motor_Board_Rev3.cydsn\Motor_Unit_CAN.c" linenumber="89" />
+</debugger_breakpoint_list>
 </CyGuid_504337dd-7d07-4bc7-9057-90e60cf6c469>
+</dataGuid>
+<dataGuid v="bf610382-39c6-441f-80b8-b04622ea7845">
+<CyGuid_bf610382-39c6-441f-80b8-b04622ea7845 type_name="CyDesigner.Common.Debugger.CyWatchedVariableList" version="1">
+<debugger_watch_list />
+</CyGuid_bf610382-39c6-441f-80b8-b04622ea7845>
 </dataGuid>
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>

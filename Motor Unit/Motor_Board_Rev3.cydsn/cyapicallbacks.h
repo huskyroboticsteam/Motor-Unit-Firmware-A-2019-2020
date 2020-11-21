@@ -25,7 +25,21 @@
         
     #define LED_ON  0
     #define LED_OFF 1
-
+    
+    //#defines for Revs
+    #define MOTOR_REV1
+    
+    #ifdef MOTOR_REV1
+    #endif
+    
+    #ifdef MOTOR_REV2
+    #endif
+    
+    #ifdef MOTOR_REV3
+        #define DEBUG_LEDS
+        #define RGB_LED_ARRAY
+    #endif
+    
 
 
 
@@ -41,6 +55,7 @@
         void Initialize(void);
     void PrintCanPacket(CANPacket receivedPacket);
     uint8_t ReadCAN(CANPacket *receivedPacket);
+    void DisplayErrorCode(uint8_t code);
 
     
 #endif /* CYAPICALLBACKS_H */   

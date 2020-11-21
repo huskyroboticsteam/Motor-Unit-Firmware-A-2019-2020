@@ -11,3 +11,7 @@
 */
 
 /* [] END OF FILE */
+#include <project.h>
+void SetPosition(int32 miliDegrees) ;
+int MiliDegreesToTicks(int32_t miliDegrees);
+int position_PID(int target);

@@ -11,73 +11,73 @@
 */
 
 //PID varaibles
-/*
+#include <project.h>
+#include "PositionPID.h"
+#include "MotorDrive.h"
+
+extern int32_t kPosition;
+extern int32_t kIntegral;
+extern int32_t kDerivative;
+extern uint32_t kPPJR;
+extern int32_t currentPWM;
+extern uint8_t ignoreLimSw;
+
+
 int8 flipEncoder = 1;
-int16 final_angle = 0;
-int i = 0;
-int lastp = 0;
-int kp;
-int ki;
-int kd;
+
+int16 final_angle = 0;//needs to be reset upon mode change
+int integral = 0;     //needs to be reset upon mode change
+int lastPosition = 0; //needs to be reset upon mode change
+int integralClamp = 500;
+
 double ratio;
 uint8 complete = 0;
-uint8 maxV = 0;
+uint16 maxV = 0xFFFF;
 
-void set_Position(int16 degrees) {
-    if(uart_debug) {
-        sprintf(txData, "complete: %d\r\n",complete);
-        UART_UartPutString(txData);
-    }
-    //while(!complete) {
-        int PWM = position_PID(degrees_to_tick(degrees));
-        if(uart_debug) {
-            sprintf(txData, "PWM: %d\r\n",PWM);
-            UART_UartPutString(txData);
-        }
-        if(PWM > maxV){
-            set_PWM(maxV);   
-        } else if(PWM < -maxV) {
-            set_PWM(-maxV);
+void SetPosition(int32 miliDegrees) {
+
+        currentPWM = position_PID(MiliDegreesToTicks(miliDegrees));
+        
+        //Max Power clamp
+        if(currentPWM > maxV){
+            set_PWM(maxV, ignoreLimSw, Status_Reg_Switches_Read());   
+        } else if(currentPWM < -maxV) {
+            set_PWM(-maxV, ignoreLimSw, Status_Reg_Switches_Read());
         } else {
-            set_PWM(PWM);   
+            set_PWM(currentPWM, ignoreLimSw, Status_Reg_Switches_Read());   
         }
-   // }
 }
 
-int degrees_to_tick(int16 degrees){
-    int ticks = (int)((double)degrees * ratio);
-    if(uart_debug) {
-        sprintf(txData, "degree: %d ticks: %d\r\n", degrees, ticks);
-        UART_UartPutString(txData);
-    }
+int MiliDegreesToTicks(int32_t miliDegrees){
+    int ticks = (int)((float)miliDegrees * (float)kPPJR/(float)(360*1000));// make float
+
     return(ticks);
 }
 
 int position_PID(int target){
-    int16 current =  QuadDec_GetCounter() * flipEncoder;
-    int p = target - current;
-    if(p <= 5 && p >= -5) {
-        if(uart_debug) {
-            sprintf(txData, "p: %d\r\n",p);
-            UART_UartPutString(txData);
-        }
-      //complete =  1;
+    int16 current =  QuadDec_GetCounter();
+    int position = target - current;
+    
+    //if within tolerance exit
+    if(position <= 5 && position >= -5) {
       return(0);
     }
-    i = i + p;
-    if ( i > 500) {
-        i = 500;   
+    
+    integral = integral + position;
+    
+    //integral clamp
+    if (integral > integralClamp) {
+        integral = integralClamp;   
     }
-    if ( i < -500) {
-        i = -500;
+    if (integral < -integralClamp) {
+        integral = -integralClamp;
     }
-    int d = p - lastp;
-    lastp = p;
-    if(uart_debug) {
-        sprintf(txData, "p: %d, i: %d d %d current %d\r\n",p, i, d, current);
-        UART_UartPutString(txData);
-    }
-    return (p*kp/10 + i*ki/10 + d*kd/10);
+    
+    int derivative = position - lastPosition;
+    
+    lastPosition = position;
+    
+    return (position*kPosition + integral*kIntegral + derivative*kDerivative);
 }
-*/
+
 /* [] END OF FILE */

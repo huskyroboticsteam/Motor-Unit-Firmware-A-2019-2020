@@ -100,7 +100,7 @@ int main(void)
             SendCANPacket(&can_send);
             CyDelay(10);//send rate of bottom board
         break;
-        case(1):
+        case(1)://mode select test
             can_send.data[0] = 0;
             can_send.data[1] = MOTOR_UNIT_MODE_PWM;
             SendCANPacket(&can_send);
@@ -110,7 +110,7 @@ int main(void)
             SendCANPacket(&can_send);
             CyDelay(1000);
         break;
-        case(2):
+        case(2): //PWM Check
             for(int i = 0; i < 8; i++) {
                 can_send.data[i] = 0;
              }
@@ -128,6 +128,24 @@ int main(void)
             CyDelay(100);
             
             }
+            break;
+        case(3):
+            can_send.data[0] = 0;
+            can_send.data[1] = MOTOR_UNIT_MODE_PID;
+            SendCANPacket(&can_send);
+            CyDelay(1000);
+            AssemblePSetPacket(&can_send,0x4,0xF,1000);
+            SendCANPacket(&can_send);
+            CyDelay(1000);
+            AssembleISetPacket(&can_send,0x4,0xF,2000);
+            SendCANPacket(&can_send);
+            CyDelay(1000);
+            AssembleDSetPacket(&can_send,0x4,0xF,3000);
+            SendCANPacket(&can_send);
+            CyDelay(1000);
+            AssembleEncoderPPJRSetPacket(&can_send,0x4,0xF,5000);
+            SendCANPacket(&can_send);
+            CyDelay(1000);
             
             break;
     }

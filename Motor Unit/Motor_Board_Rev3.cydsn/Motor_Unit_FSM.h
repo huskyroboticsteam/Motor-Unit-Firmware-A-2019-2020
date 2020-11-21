@@ -15,6 +15,14 @@
     #define MOTOR_UNIT_FSM_H
     #include <project.h>
     
-    void gotoUninitState();
+    void GotoUninitState();
+    
+    void PositionConstIsSet();
+    void IntegralConstIsSet();
+    void DerivativeConstIsSet();
+    void PPJRConstIsSet();
+    void MaxJointRevIsSet();
+    uint8_t PIDconstsSet();
+    void ClearPIDconst();
     
 #endif
