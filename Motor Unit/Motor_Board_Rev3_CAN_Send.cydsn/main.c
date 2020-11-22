@@ -117,17 +117,54 @@ int main(void)
             can_send.data[0] = 0;
             can_send.data[1] = MOTOR_UNIT_MODE_PWM;
             SendCANPacket(&can_send);
-            CyDelay(1000);
+            CyDelay(10);
             can_send.data[0] = 3;
-            for(int i = 0; i < 65535; i+= 1000) {
-            PackIntIntoDataMSBFirst(can_send.data,i,1);
+            /*
+            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, 12345);
             SendCANPacket(&can_send);
             CyDelay(100);
-            PackIntIntoDataMSBFirst(can_send.data,-i,1);
+            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, -12345);
+            SendCANPacket(&can_send);
+            CyDelay(1000);
+            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, 22345);
             SendCANPacket(&can_send);
             CyDelay(100);
-            
+            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, -22345);
+            SendCANPacket(&can_send);
+            CyDelay(1000);
+            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, 32767);
+            SendCANPacket(&can_send);
+            CyDelay(100);
+            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, -32768);
+            SendCANPacket(&can_send);
+            CyDelay(1000);
+            */
+            for(int i = 0; i < 32767; i+= 100) {
+            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, i);
+            SendCANPacket(&can_send);
+            CyDelay(10);
             }
+            CyDelay(5000);
+            for(int i = 32767; i > 0; i -= 100) {
+            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, i);
+            SendCANPacket(&can_send);
+            CyDelay(10);
+            }
+            CyDelay(5000);
+            for(int i = 0; i < 32767; i+= 100) {
+            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, -i);
+            SendCANPacket(&can_send);
+            CyDelay(10);
+            }
+            CyDelay(5000);
+            for(int i = 32767; i > 0; i -= 100) {
+            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, -i);
+            SendCANPacket(&can_send);
+            CyDelay(10);
+            }
+            CyDelay(5000);
+            
+            
             break;
         case(3):
             can_send.data[0] = 0;

@@ -10,47 +10,35 @@
  * ========================================
 */
 
+#include "main.h"
 #include "cyapicallbacks.h"
-#include <stdio.h>
-#include <stdint.h>
 #include "MotorDrive.h"
-
-#ifdef RGB_LED_ARRAY
-#include "LED_Array.h"
-#endif
-
 #include "Motor_Unit_CAN.h"
 #include "Motor_Unit_FSM.h"
 #include "PositionPID.h"
 
-
-
+#ifdef RGB_LED_ARRAY
+#include "LED_Array.h"
 extern const uint32 StripLights_CLUT[ ];
+#endif
 
-extern uint8_t motorUnitState;
-extern uint8_t motorUnitMode;
+
+
+
 
 //LED
-uint8 CAN_time_LED = 0;
+uint8_t CAN_time_LED = 0;
 uint8_t ERRORTimeLED = 0;
-
-//PID Constants
-int32_t kPosition   = 0;
-int32_t kIntegral   = 0;
-int32_t kDerivative = 0;
-uint32_t kPPJR      = 0;//pulses per joint revolution
 
 int32_t millidegreeTarget = 0;
 
-
 //Uart variables
-char8 txData[TX_DATA_SIZE];
+char txData[TX_DATA_SIZE];
 
 //drive varaible
-uint8 invalidate = 0;
-int32_t currentPWM = 0;
+int16 nextPWM = 0;
+extern uint8 invalidate;
 uint8_t ignoreLimSw = 0;
-
 
 uint8 address = 0;
 
@@ -65,25 +53,35 @@ CY_ISR(Period_Reset_Handler) {
     CAN_time_LED++;
     CAN_check_delay ++;
     ERRORTimeLED++;
+    //TODO: SEND PACKET QUEUE 10x a second
     if(invalidate >= 20){
         set_PWM(0, 0, 0);   
     }
     if(ERRORTimeLED >= 3) {
+        #ifdef ERROR_LED
         ERROR_LED_Write(LED_OFF);
+        #endif
+        #ifdef DEBUG_LED1   
         Debug_1_Write(LED_OFF);
+        #endif
+        #ifdef DEBUG_LED2
         Debug_2_Write(LED_OFF);
+        #endif
     }
     if(CAN_time_LED >= 3){
+        #ifdef CAN_LED
         CAN_LED_Write(LED_OFF);
+        #endif
     }
 }
   
 CY_ISR(Pin_Limit_Handler){
-   /* if(uart_debug) {
-        sprintf(txData,"Limit interupt triggerd\r\n");
-        UART_UartPutString(txData);
-    }*/
-    set_PWM(currentPWM, ignoreLimSw, Status_Reg_Switches_Read());
+    #ifdef PRINT_LIMIT_SW_TRIGGER
+    sprintf(txData,"Limit interupt triggerd\r\n");
+    UART_UartPutString(txData);
+    #endif
+    
+    set_PWM(GetCurrentPWM(), ignoreLimSw, Status_Reg_Switches_Read());
     
     //for only one of the limit switches
     QuadDec_SetCounter(0);
@@ -97,82 +95,79 @@ int main(void)
     #endif
     CANPacket can_recieve;
     CANPacket can_send;
-    CANPacket test_packet;
-    volatile int error = 0;
-    
-    can_send.id = 0x5 << 6 | 0xf;
-    can_send.dlc = 0x8;
-    uint8_t test = 0;
-    for(int i = 0; i < 8; i++) {
-        can_send.data[i] = i;
-    }
-    can_send.data[0] = 1;
     
     for(;;)
     {
-        switch(motorUnitState) {
+        switch(GetState()) {
             case(UNINIT):
                 //idle animation
-                motorUnitState = CHECK_CAN;
+                SetStateTo(CHECK_CAN);
                 break;
             case(SET_PWM):
-                set_PWM(currentPWM, ignoreLimSw, Status_Reg_Switches_Read());
-                motorUnitState = SEND_TELE;
+                set_PWM(nextPWM, ignoreLimSw, Status_Reg_Switches_Read());
+                SetStateTo(CHECK_CAN);
                 break;
             case(CALC_PID):
                 SetPosition(millidegreeTarget);   
-                motorUnitState = SEND_TELE;
-                break;
-            case(SEND_TELE):
-                //SendCANPacket(&can_send);
-                motorUnitState = CHECK_CAN;
+                SetStateTo(CHECK_CAN);
                 break;
             case(QUEUE_ERROR):
-                motorUnitState = SEND_TELE;
+                SetStateTo(CHECK_CAN);
                 break;
             case(CHECK_CAN):
                 NextStateFromCAN(&can_recieve);
+                #ifdef PRINT_CAN_PACKET
                 PrintCanPacket(can_recieve);
-                //sprintf(txData, "Mode: %x \r\n", mode);
-                //UART_UartPutString(txData);
+                #endif
                 break;
             default:
+                //Should Never Get Here
+                //TODO: ERROR
                 GotoUninitState();
                 break;
 
         }
-        //sprintf(txData, "Mode: %x State:%x \r\n", motorUnitMode, motorUnitState);
-        //UART_UartPutString(txData);
-        //PackIntIntoDataMSBFirst(test_packet.data, 12345, 1);
-        //sprintf(txData, "Mode: %d \r\n", DecodeBytesToIntMSBFirst(test_packet.data, 1, 5));
-        //UART_UartPutString(txData);
-        
-        //sprintf(txData, "P: %d I: %d D: %d PPJ: %d Ready: %d \r\n", kPosition, kIntegral ,kDerivative, kPPJR, PIDconstsSet());
-       // UART_UartPutString(txData);
+        #ifdef PRINT_FSM_STATE_MODE
+        sprintf(txData, "Mode: %x State:%x \r\n", GetMode(), GetState());
+        UART_UartPutString(txData);
+        #endif
+        #ifdef PRINT_SET_PID_CONST
+        sprintf(txData, "P: %d I: %d D: %d PPJ: %d Ready: %d \r\n", GetkPosition(), GetkIntegral() 
+        ,GetkDerivative(), GetkPPJR(), PIDconstsSet());
+        UART_UartPutString(txData);
+        #endif
 
         
     }
 }
  
-
-
 void Initialize(void) {
     CyGlobalIntEnable; /* Enable global interrupts. LED arrays need this first */
+    
     #ifdef RGB_LED_ARRAY
     initalize_LEDs(LOW_LED_POWER);
     #endif
+    
     Status_Reg_Switches_InterruptEnable();
     
-    //display Dip Status
     address = Can_addr_Read();
+    
+    #ifdef ENABLE_DEBUG_UART
     UART_Start();
     sprintf(txData, "Dip Addr: %x \r\n", address);
     UART_UartPutString(txData);
+    #endif
     
-    #ifdef DEBUG_LEDS
+    #ifdef ERROR_LED
     ERROR_LED_Write(~(address >> 3 & 1));
+    #endif
+    #ifdef DEBUG_LED2
     Debug_2_Write(~(address >> 2) & 1);
+    #endif
+    #ifdef DEBUG_LED1
     Debug_1_Write(~(address >> 1) & 1);
+    #endif 
+    #ifdef CAN_LED
     CAN_LED_Write(~address & 1);
     #endif
     
@@ -185,9 +180,8 @@ void Initialize(void) {
     isr_period_PWM_StartEx(Period_Reset_Handler);
 }
 
-//debug tool for that prints packet to UART
 void PrintCanPacket(CANPacket receivedPacket){
-    for(int i = 0; i < 8; i++ ) {
+    for(int i = 0; i < receivedPacket.dlc; i++ ) {
         sprintf(txData,"Byte%d %x   ", i+1, receivedPacket.data[i]);
         UART_UartPutString(txData);
     }
@@ -196,42 +190,64 @@ void PrintCanPacket(CANPacket receivedPacket){
     UART_UartPutString(txData);
 }
 
-/*Returns the Packet ID or 0xFF if there is no Packet
-This pulls from the CAN lib's FIFO
-Also Triggers LED
-*/
 uint8_t ReadCAN(CANPacket *receivedPacket){
     volatile int error = PollAndReceiveCANPacket(receivedPacket);
     if(!error){
+        #ifdef CAN_LED
         CAN_LED_Write(LED_ON);
+        #endif
         CAN_time_LED = 0;
         return receivedPacket->data[0];
     }
-   // sprintf(txData, "Mode: %x \r\n", mode);
     return 0xFF;//Means Errored Out
     
 }
 
 void DisplayErrorCode(uint8_t code) {
+    
+    #ifdef ERROR_LED
+    ERROR_LED_Write(LED_OFF);
+    #endif
+    #ifdef DEBUG_LED1   
+    Debug_1_Write(LED_OFF);
+    #endif
+    #ifdef DEBUG_LED2
+    Debug_2_Write(LED_OFF);
+    #endif
+    
     ERRORTimeLED = 0;
     ERROR_LED_Write(LED_ON);
     
-    #ifdef DEBUG_LEDS
+    #ifdef PRINT_MOTOR_ERROR
+        //TODO: PRINT ERROR
+    #endif
+
     switch(code)
     {   
         //case0: CAN Packet ERROR
         case 1://Mode Error
+            #ifdef DEBUG_LED1
             Debug_1_Write(LED_ON);
+            #endif
             break;
         case 2:
+            #ifdef DEBUG_LED2
             Debug_2_Write(LED_ON);
+            #endif
             break;
         case 3:
+            #ifdef DEBUG_LED1
             Debug_1_Write(LED_ON);
+            #endif
+            #ifdef DEBUG_LED2
             Debug_2_Write(LED_ON);
+            #endif
+            break;
+        default:
+            //some error
             break;
     }
-    #endif
+
 }
 
 /* [] END OF FILE */

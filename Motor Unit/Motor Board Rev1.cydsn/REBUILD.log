@@ -1,7 +1,12 @@
---------------- Rebuild Started: 02/26/2019 20:23:22 Project: main.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
-main.c: In function 'main':
-main.c:109:9: warning: unused variable 'up' [-Wunused-variable]
-     int up = 0;
-         ^
---------------- Rebuild Succeeded: 02/26/2019 20:23:23 ---------------
+--------------- Rebuild Started: 11/21/2020 20:22:24 Project: PortPSOC_CY8C4248AZI_L485.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/PortPSOC_CY8C4248AZI_L485.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c -o .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
+..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c: In function 'getChipType':
+..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c:126:12: error: 'CHIP_TYPE' undeclared (first use in this function)
+     return CHIP_TYPE; 
+            ^
+..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c:126:12: note: each undeclared identifier is reported only once for each function it appears in
+..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c:128:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Rebuild Failed: 11/21/2020 20:22:24 ---------------

@@ -15,11 +15,11 @@
 #include "PositionPID.h"
 #include "MotorDrive.h"
 
-extern int32_t kPosition;
-extern int32_t kIntegral;
-extern int32_t kDerivative;
-extern uint32_t kPPJR;
-extern int32_t currentPWM;
+int32_t kPosition = 0;
+int32_t kIntegral = 0;
+int32_t kDerivative = 0;
+uint32_t kPPJR = 0;
+extern int16_t nextPWM;
 extern uint8_t ignoreLimSw;
 
 
@@ -34,17 +34,43 @@ double ratio;
 uint8 complete = 0;
 uint16 maxV = 0xFFFF;
 
+void SetkPosition(int32_t kP){
+    kPosition = kP;
+}
+void SetkIntegral(int32_t kI){
+    kIntegral = kI;
+}
+void SetkDerivative(int32_t kD){
+    kDerivative = kD;
+}
+void SetkPPJR(uint32_t kppjr){
+    kPPJR = kppjr;
+}
+
+int32_t GetkPosition(){
+    return kPosition;
+}
+int32_t GetkIntegral(){
+    return kIntegral;
+}
+int32_t GetkDerivative(){
+    return kDerivative;
+}
+uint32_t GetkPPJR(){
+    return kPPJR;
+}
+
 void SetPosition(int32 miliDegrees) {
 
-        currentPWM = position_PID(MiliDegreesToTicks(miliDegrees));
+        nextPWM = Position_PID(MiliDegreesToTicks(miliDegrees));
         
         //Max Power clamp
-        if(currentPWM > maxV){
+        if(nextPWM > maxV){
             set_PWM(maxV, ignoreLimSw, Status_Reg_Switches_Read());   
-        } else if(currentPWM < -maxV) {
+        } else if(nextPWM < -maxV) {
             set_PWM(-maxV, ignoreLimSw, Status_Reg_Switches_Read());
         } else {
-            set_PWM(currentPWM, ignoreLimSw, Status_Reg_Switches_Read());   
+            set_PWM(nextPWM, ignoreLimSw, Status_Reg_Switches_Read());   
         }
 }
 
@@ -54,7 +80,7 @@ int MiliDegreesToTicks(int32_t miliDegrees){
     return(ticks);
 }
 
-int position_PID(int target){
+int Position_PID(int target){
     int16 current =  QuadDec_GetCounter();
     int position = target - current;
     

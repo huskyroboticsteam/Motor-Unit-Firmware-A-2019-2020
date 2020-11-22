@@ -11,24 +11,27 @@
 */
 
 /* [] END OF FILE */
+#include "../CANLib/CANLibrary.h"
+#include "main.h"
 #include "Motor_Unit_CAN.h"
 #include "Motor_Unit_FSM.h"
 #include "MotorDrive.h"
-#include "LED_Array.h"
+#include "PositionPID.h"
 
-extern uint8_t motorUnitMode;
-extern uint8_t motorUnitState;
-extern int currentPWM;
+#ifdef RGB_LED_ARRAY
+#include "LED_Array.h"
 extern const uint32 StripLights_CLUT[ ];
-extern int32_t kPosition;
-extern int32_t kIntegral;
-extern int32_t kDerivative;
-extern uint32_t kPPJR;
+#endif
+
+
+
+extern int16_t nextPWM;
 extern int32_t millidegreeTarget;
 
 //Reads from CAN FIFO and changes the state and mode accordingly
 void NextStateFromCAN(CANPacket *receivedPacket) {
-    switch(ReadCAN(receivedPacket)){
+    uint8_t packageID = ReadCAN(receivedPacket);
+    switch(packageID){
                     case(ID_MOTOR_UNIT_MODE_SEL):
                         if(GetModeFromPacket(receivedPacket) == MOTOR_UNIT_MODE_PWM) {
                             //<init stuff for PWM>
@@ -38,8 +41,8 @@ void NextStateFromCAN(CANPacket *receivedPacket) {
                             StripLights_Trigger(1);
                             #endif
                             set_PWM(0,1,1);
-                            motorUnitMode = MOTOR_UNIT_MODE_PWM;
-                            motorUnitState = SEND_TELE;
+                            SetModeTo(MOTOR_UNIT_MODE_PWM);
+                            SetStateTo(CHECK_CAN);
                         }
                         else if (GetModeFromPacket(receivedPacket) == MOTOR_UNIT_MODE_PID) {
                             //<init stuff for PID>
@@ -49,55 +52,55 @@ void NextStateFromCAN(CANPacket *receivedPacket) {
                             StripLights_Trigger(1);
                             #endif
                             set_PWM(0,1,1);
-                            motorUnitMode = MOTOR_UNIT_MODE_PID;
-                            motorUnitState = SEND_TELE;
+                            SetModeTo(MOTOR_UNIT_MODE_PID);
+                            SetStateTo(CHECK_CAN);
                         } else {
                             GotoUninitState();
                         }
                         break;
                         
                     case(ID_MOTOR_UNIT_PWM_DIR_SET):
-                        if(motorUnitMode == MOTOR_UNIT_MODE_PWM){
-                            motorUnitState = SET_PWM;
-                            currentPWM = GetPWMFromPacket(receivedPacket);
+                        if(GetMode() == MOTOR_UNIT_MODE_PWM){
+                            SetStateTo(SET_PWM);
+                            nextPWM = GetPWMFromPacket(receivedPacket);
                         } else {
-                            motorUnitState = QUEUE_ERROR;
+                            SetStateTo(QUEUE_ERROR);
                             DisplayErrorCode(1);
                         }
                         break;
                         
                     case(ID_MOTOR_UNIT_PID_P_SET):
-                        kPosition = GetPFromPacket(receivedPacket);
+                        SetkPosition(GetPFromPacket(receivedPacket));
                         PositionConstIsSet();
-                        motorUnitState = SEND_TELE;
+                        SetStateTo(CHECK_CAN);
                         break;
                     
                     case(ID_MOTOR_UNIT_PID_I_SET):
-                        kIntegral = GetIFromPacket(receivedPacket);
+                        SetkIntegral(GetIFromPacket(receivedPacket));
                         IntegralConstIsSet();
-                        motorUnitState = SEND_TELE;
+                        SetStateTo(CHECK_CAN);
                         break;
                     
                     case(ID_MOTOR_UNIT_PID_D_SET):
-                        kDerivative = GetDFromPacket(receivedPacket);
+                        SetkDerivative(GetDFromPacket(receivedPacket));
                         DerivativeConstIsSet();
-                        motorUnitState = SEND_TELE;
+                        SetStateTo(CHECK_CAN);
                         break;
                     
                     case(ID_MOTOR_UNIT_PID_POS_TGT_SET):
-                        if(motorUnitMode == MOTOR_UNIT_MODE_PID && PIDconstsSet() ) {//&& PID values set
+                        if(GetMode() == MOTOR_UNIT_MODE_PID && PIDconstsSet() ) {//&& PID values set
                             millidegreeTarget = GetPIDTargetFromPacket(receivedPacket);
-                            motorUnitState = CALC_PID;
+                            SetStateTo(CALC_PID);
                         } else {
-                            motorUnitState = QUEUE_ERROR;
+                            SetStateTo(QUEUE_ERROR);
                             DisplayErrorCode(1);
                         }
                         break;
                      
                     case(ID_MOTOR_UNIT_ENC_PPJR_SET):
-                        kPPJR = GetEncoderPPJRFromPacket(receivedPacket);
+                        SetkPPJR(GetEncoderPPJRFromPacket(receivedPacket));
                         PPJRConstIsSet();
-                        motorUnitState = SEND_TELE;
+                        SetStateTo(CHECK_CAN);
                         break;
                     /*
                     case(ID_MOTOR_UNIT_MAX_JNT_REV_SET):
@@ -105,16 +108,16 @@ void NextStateFromCAN(CANPacket *receivedPacket) {
                     */
                     default://for 0xFF/no packets or Non recognized Packets
                         
-                        if(motorUnitState == MOTOR_UNIT_MODE_PID){ //need to check if values set;
-                            motorUnitState = CALC_PID;
-                        } else if( motorUnitState == MOTOR_UNIT_MODE_PWM){ //skips PWM state to not reset saftey timer
-                            motorUnitState = SEND_TELE;
+                        if(GetState() == MOTOR_UNIT_MODE_PID){ //need to check if values set;
+                            SetStateTo(CALC_PID);
+                        } else if(GetState() == MOTOR_UNIT_MODE_PWM){ //skips PWM state to not reset saftey timer
+                            SetStateTo(CHECK_CAN);
                         } else {
-                            motorUnitState = CHECK_CAN;
+                            SetStateTo(CHECK_CAN);
                         }
                         
                         //recieved Packet with Non Valid ID
-                        if(receivedPacket->data[0] != 0xFF) {
+                        if(packageID != 0xFF) {
                             DisplayErrorCode(0);
                         }
                         break;

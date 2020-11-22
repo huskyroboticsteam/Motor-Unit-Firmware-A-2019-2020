@@ -13,6 +13,7 @@
 /* [] END OF FILE */
 #include "Motor_Unit_FSM.h"
 #include "MotorDrive.h"
+#include "project.h"
 
 /*drive mode
 0xFF = un-init
@@ -26,11 +27,24 @@ extern const uint32 StripLights_CLUT[ ];
 
 void GotoUninitState() {
     //halt motor
+    #ifdef RGB_LED_ARRAY
     StripLights_DisplayClear(StripLights_BLACK);
+    #endif
     motorUnitMode = 0xFF;
     motorUnitState = UNINIT;
 }
-
+void SetStateTo(uint8_t state) {
+    motorUnitState = state;
+}
+void SetModeTo(uint8_t mode) {
+    motorUnitMode = mode;
+}
+uint8_t GetState(){
+    return motorUnitState;
+}
+uint8_t GetMode(){
+    return motorUnitMode;
+}
 void PositionConstIsSet() {
     PIDConstSetReg |= 0b100;
 }

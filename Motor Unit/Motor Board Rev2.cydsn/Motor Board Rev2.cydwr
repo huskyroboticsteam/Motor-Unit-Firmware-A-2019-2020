@@ -29,7 +29,7 @@
       <Data key="3dbba19d-7851-4a83-b204-a0a386fe8d68/22863ebe-a37b-476f-b252-6e49a8c00b12" value="I2C_1_scl" />
       <Data key="4ce312fd-9104-400b-8807-23b68d7cfa69" value="Pin_Manual_2" />
       <Data key="5b07726f-35a2-4125-a8f1-1e99e4166073" value="fault" />
-      <Data key="5e7847a7-4d2e-4262-9527-8af7ff6cb23a" value="Error" />
+      <Data key="5e7847a7-4d2e-4262-9527-8af7ff6cb23a" value="ERROR_LED" />
       <Data key="6c935a40-edd8-47ad-81fc-14aeffd067c7" value="Pin_Test" />
       <Data key="7a801abf-7478-41b1-9f25-a3cc9c5bd216" value="Spare1" />
       <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="Pin_Limit_1" />
@@ -40,9 +40,9 @@
       <Data key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/78e33e5d-45ea-4b75-88d5-73274e8a7ce4" value="UART_rx" />
       <Data key="068bddb1-817a-434f-8762-cd4b531b6db9" value="Pin_Limit_2" />
       <Data key="69dbbfed-7e82-43d0-aea3-4a98e23e044b" value="Pin_Encoder_B" />
-      <Data key="99a54865-2e0c-4e8b-8979-f2d08319ddba" value="Dip_3" />
-      <Data key="2191e2b0-f8f5-4999-991d-75baf300fdf4" value="Dip_1" />
-      <Data key="4427cead-47ee-4ed3-ad16-0ab643204edc" value="Test_LED" />
+      <Data key="99a54865-2e0c-4e8b-8979-f2d08319ddba" value="Dip_2" />
+      <Data key="2191e2b0-f8f5-4999-991d-75baf300fdf4" value="Dip_4" />
+      <Data key="4427cead-47ee-4ed3-ad16-0ab643204edc" value="CAN_LED" />
       <Data key="9841dd34-43ec-4df8-9469-e9b68a40d741" value="Current_sense" />
       <Data key="15830d94-5781-4997-8746-10cefae5bafc" value="Pin_Encoder_Z" />
       <Data key="236538ba-5d50-4140-9353-fb0c2202e8e6" value="vin" />
@@ -52,13 +52,13 @@
       <Data key="b2e2a122-1970-4129-9d32-9cbf5a47a5f1" value="Vref" />
       <Data key="b6e0625e-c05a-4fe1-9c40-482b87196bc9" value="Spare6" />
       <Data key="c1a71756-15fd-4711-83ad-c4e1d4e1cccf" value="SLP" />
-      <Data key="cc6bc75b-64eb-421a-ab21-42a67353811a" value="Dip_4" />
+      <Data key="cc6bc75b-64eb-421a-ab21-42a67353811a" value="Dip_1" />
       <Data key="e8c16d68-dd50-4e55-902e-9c7904411a15" value="Pin_1" />
       <Data key="e13f97ae-2993-4d94-911a-5897373c2d8b" value="Servo" />
       <Data key="e17ba827-c9dc-462a-be9b-0e0cdb6a9036" value="Spare5" />
       <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Pin_Motor" />
       <Data key="ed092b9b-d398-4703-be89-cebf998501f6" value="TX_1" />
-      <Data key="f4aa77f2-7f08-4cf0-a8ef-c2eec1eb35ad" value="Dip_2" />
+      <Data key="f4aa77f2-7f08-4cf0-a8ef-c2eec1eb35ad" value="Dip_3" />
       <Data key="f5b8d6d8-5c2c-4d3a-b6b3-f323b2d95168" value="Pin_count_neg_10" />
       <Data key="f350dccf-570a-47d7-9fe0-79002284ad5a" value="Laser" />
       <Data key="fc2db3e4-0677-4f0d-9737-7ba9a2b60a3c" value="Pin_count_neg_20" />
@@ -3970,12 +3970,12 @@
     </Group>
     <Group key="99a54865-2e0c-4e8b-8979-f2d08319ddba">
       <Group key="0">
-        <Data key="Port Format" value="4,2" />
+        <Data key="Port Format" value="4,1" />
       </Group>
     </Group>
     <Group key="2191e2b0-f8f5-4999-991d-75baf300fdf4">
       <Group key="0">
-        <Data key="Port Format" value="4,0" />
+        <Data key="Port Format" value="4,3" />
       </Group>
     </Group>
     <Group key="4427cead-47ee-4ed3-ad16-0ab643204edc">
@@ -4030,7 +4030,7 @@
     </Group>
     <Group key="cc6bc75b-64eb-421a-ab21-42a67353811a">
       <Group key="0">
-        <Data key="Port Format" value="4,3" />
+        <Data key="Port Format" value="4,0" />
       </Group>
     </Group>
     <Group key="e13f97ae-2993-4d94-911a-5897373c2d8b">
@@ -4055,7 +4055,7 @@
     </Group>
     <Group key="f4aa77f2-7f08-4cf0-a8ef-c2eec1eb35ad">
       <Group key="0">
-        <Data key="Port Format" value="4,1" />
+        <Data key="Port Format" value="4,2" />
       </Group>
     </Group>
     <Group key="f5b8d6d8-5c2c-4d3a-b6b3-f323b2d95168">

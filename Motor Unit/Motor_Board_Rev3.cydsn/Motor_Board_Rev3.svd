@@ -19,7 +19,7 @@
         <register>
           <name>Can_addr_STATUS_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0061</addressOffset>
+          <addressOffset>0x400F0067</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28,7 +28,7 @@
         <register>
           <name>Can_addr_MASK_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0081</addressOffset>
+          <addressOffset>0x400F0087</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -37,7 +37,7 @@
         <register>
           <name>Can_addr_STATUS_AUX_CTL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0091</addressOffset>
+          <addressOffset>0x400F0097</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -174,7 +174,7 @@
         <register>
           <name>Timer_PWM_COUNTER</name>
           <description>UDB.A0 - Current Down Counter Value</description>
-          <addressOffset>0x400F0002</addressOffset>
+          <addressOffset>0x400F0004</addressOffset>
           <size>24</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -183,7 +183,7 @@
         <register>
           <name>Timer_PWM_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x400F0022</addressOffset>
+          <addressOffset>0x400F0024</addressOffset>
           <size>24</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -192,7 +192,7 @@
         <register>
           <name>Timer_PWM_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x400F0072</addressOffset>
+          <addressOffset>0x400F0075</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -238,7 +238,7 @@
         <register>
           <name>Timer_PWM_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x400F0084</addressOffset>
+          <addressOffset>0x400F0086</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -277,7 +277,7 @@
         <register>
           <name>Timer_PWM_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x400F0094</addressOffset>
+          <addressOffset>0x400F0096</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -396,6 +396,1813 @@
                   <value>1</value>
                 </enumeratedValue>
               </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>CAN</name>
+      <description>No description available</description>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x0</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>CAN_CAN_INT_SR</name>
+          <description>The interrupt status register stores internal interrupt events.  ? Once a bit is set it remains set until it is cleared by writing a '1' to it.  ? The interrupt enable register has no effect on the interrupt status register.  ? A pending interrupt occurs when the flag is set to '1'. To acknowledge an interrupt, set the flag to '1'</description>
+          <addressOffset>0x402F0000</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ARB_LOSS</name>
+              <description>Arbitration Loss</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>OVR_LOAD</name>
+              <description>Overload Interrupt</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BIT_ERR</name>
+              <description>Bit Error Interrupt</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>STUF_ERR</name>
+              <description>Stuff Error Interrupt</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ACK_ERR</name>
+              <description>Ack Error Interrupt</description>
+              <lsb>6</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FORM_ERR</name>
+              <description>Form Error Interrupt</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CRC_ERR</name>
+              <description>CRC Error Interrupt</description>
+              <lsb>8</lsb>
+              <msb>8</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>BUS_OFF</name>
+              <description>Bus Off State</description>
+              <lsb>9</lsb>
+              <msb>9</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG_LOSS</name>
+              <description>Rx msg loss Interrupt</description>
+              <lsb>10</lsb>
+              <msb>10</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TX_MSG</name>
+              <description>Tx msg Sent</description>
+              <lsb>11</lsb>
+              <msb>11</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG</name>
+              <description>Msg Recieved</description>
+              <lsb>12</lsb>
+              <msb>12</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RTR_MSG</name>
+              <description>RTR auto-reply message sent</description>
+              <lsb>13</lsb>
+              <msb>13</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>STUCK_AT_ZERO</name>
+              <description>Stuck at dominant error</description>
+              <lsb>14</lsb>
+              <msb>14</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SST_FAILURE</name>
+              <description>Single shot transmission failure</description>
+              <lsb>15</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_BUF_SR</name>
+          <description>These status indicators bundle the respective flags from all RxMessage and TxMessage buffers.  ? Note All flags are read only. To acknowledge a MsgAv flag, the CPU must write to the respective RxMessage buffer</description>
+          <addressOffset>0x402F0008</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>RX_MSG0</name>
+              <description>Rx Msg0 Available</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG1</name>
+              <description>Rx Msg1 Available</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG2</name>
+              <description>Rx Msg2 Available</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG3</name>
+              <description>Rx Msg3 Available</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG4</name>
+              <description>Rx Msg4 Available</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG5</name>
+              <description>Rx Msg5 Available</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG6</name>
+              <description>Rx Msg6 Available</description>
+              <lsb>6</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG7</name>
+              <description>Rx Msg7 Available</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG8</name>
+              <description>Rx Msg8 Available</description>
+              <lsb>8</lsb>
+              <msb>8</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG9</name>
+              <description>Rx Msg9 Available</description>
+              <lsb>9</lsb>
+              <msb>9</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG10</name>
+              <description>Rx Msg10 Available</description>
+              <lsb>10</lsb>
+              <msb>10</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG11</name>
+              <description>Rx Msg11 Available</description>
+              <lsb>11</lsb>
+              <msb>11</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG12</name>
+              <description>Rx Msg12 Available</description>
+              <lsb>12</lsb>
+              <msb>12</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG13</name>
+              <description>Rx Msg13 Available</description>
+              <lsb>13</lsb>
+              <msb>13</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG14</name>
+              <description>Rx Msg14 Available</description>
+              <lsb>14</lsb>
+              <msb>14</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_MSG15</name>
+              <description>Rx Msg15 Available</description>
+              <lsb>15</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TX_MSG0</name>
+              <description>Tx req Pending for Tx Msg0</description>
+              <lsb>16</lsb>
+              <msb>16</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TX_MSG1</name>
+              <description>Tx req Pending for Tx Msg1</description>
+              <lsb>17</lsb>
+              <msb>17</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TX_MSG2</name>
+              <description>Tx req Pending for Tx Msg2</description>
+              <lsb>18</lsb>
+              <msb>18</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TX_MSG3</name>
+              <description>Tx req Pending for Tx Msg3</description>
+              <lsb>19</lsb>
+              <msb>19</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TX_MSG4</name>
+              <description>Tx req Pending for Tx Msg4</description>
+              <lsb>20</lsb>
+              <msb>20</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TX_MSG5</name>
+              <description>Tx req Pending for Tx Msg5</description>
+              <lsb>21</lsb>
+              <msb>21</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TX_MSG6</name>
+              <description>Tx req Pending for Tx Msg6</description>
+              <lsb>22</lsb>
+              <msb>22</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TX_MSG7</name>
+              <description>Tx req Pending for Tx Msg7</description>
+              <lsb>23</lsb>
+              <msb>23</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_ERR_SR</name>
+          <description>Status indicators are provided to report the CAN controller error state, receive error count, and transmit error count. ? Special flags report error counter values equal to or in excess of 96 errors are available to indicate heavily disturbed bus situations.  ? The transmitter error counter according to the CAN standard. When it is greater than 255 Decimal, it is fixed at 255 Decimal.</description>
+          <addressOffset>0x402F000C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>TX_ERR_CNT</name>
+              <description>Tx error Count</description>
+              <lsb>0</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RX_ERR_CNT</name>
+              <description>Rx error Count. When in bus-off state,this counter is used to count 128 groups of 11 recessive bits</description>
+              <lsb>8</lsb>
+              <msb>15</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ERR_STATE</name>
+              <description>Error State of CAN node, 00 error active, 01 error passive, 1x bus off</description>
+              <lsb>16</lsb>
+              <msb>17</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TXGTE96</name>
+              <description>Tx Error Count is greater or equal to 96 Decimal</description>
+              <lsb>18</lsb>
+              <msb>18</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>RXGTE96</name>
+              <description>Rx Error Count is greater or equal to 96 Decimal</description>
+              <lsb>19</lsb>
+              <msb>19</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_ECR</name>
+          <description>The Error Capture register operates in two different modes: ? Free running mode - ECR displays the fiels and bit positions within the current CAN frame ? Error Capture mode - ECR samples the field and bit position when a CAN error is detected ? In order to sample such an event, the ECR needs to be armed by performing a write access to it. ? When armed, the ECR only captures one error event.  ? For successive error captures, the ECR needs to be armed again.</description>
+          <addressOffset>0x402F0018</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ECR_STATUS</name>
+              <description>ECR STATUS: ?         0: ECR register captured an error, or it is in free running mode ?         1: ECR register is armed</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ERROR_TYPE</name>
+              <description>Error type: ?         000 : Arbitration loss ?         001 : Bit Error ?         010 : Bit Stuffing Error ?         011 : Acknowledge Error ?         100 : Form Error ?         101 : CRC Error ?         Others : N/A</description>
+              <lsb>1</lsb>
+              <msb>3</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RX_MODE</name>
+              <description>RX Mode: ?         0: No status ?         1: CAN Controller is receiver</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TX_MODE</name>
+              <description>TX Mode: ?         0: No status ?         1: CAN Controller is transmitter</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>BIT</name>
+              <description>Bit number inside of Field</description>
+              <lsb>6</lsb>
+              <msb>11</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>Field</name>
+              <description>Field: ?         0x00 : Stopped ?         0x01 : Synchronize ?         0x05 : Interframe ?         0x06 : Bus Idle ?         0x07 : Start of Frame ?         0x08 : Arbitration ?         0x09 : Control ?         0x0A : Data ?         0x0B : CRC ?         0x0C : ACK ?         0x0D : End of frame ?         0x10 : Error flag ?         0x11 : Error echo ?         0x12 : Error delimiter ?         0x18 : Overload flag ?         0x19 : Overload echo ?         0x1A : Overload delimiter ?         Others : N/A</description>
+              <lsb>12</lsb>
+              <msb>16</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX0_ID</name>
+          <description>CAN Tx Msg Identifier</description>
+          <addressOffset>0x402F0024</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ID</name>
+              <description>Tx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX0_DH</name>
+          <description>CAN Tx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0028</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX0_DL</name>
+          <description>CAN Tx Msg Lower Data Bytes</description>
+          <addressOffset>0x402F002C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX1_ID</name>
+          <description>CAN Tx Msg Identifier</description>
+          <addressOffset>0x402F0034</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ID</name>
+              <description>Tx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX1_DH</name>
+          <description>CAN Tx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0038</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX1_DL</name>
+          <description>CAN Tx Msg Lower Data Bytes</description>
+          <addressOffset>0x402F003C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX2_ID</name>
+          <description>CAN Tx Msg Identifier</description>
+          <addressOffset>0x402F0044</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ID</name>
+              <description>Tx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX2_DH</name>
+          <description>CAN Tx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0048</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX2_DL</name>
+          <description>CAN Tx Msg Lower Data Bytes</description>
+          <addressOffset>0x402F004C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX3_ID</name>
+          <description>CAN Tx Msg Identifier</description>
+          <addressOffset>0x402F0054</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ID</name>
+              <description>Tx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX3_DH</name>
+          <description>CAN Tx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0058</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX3_DL</name>
+          <description>CAN Tx Msg Lower Data Bytes</description>
+          <addressOffset>0x402F005C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX4_ID</name>
+          <description>CAN Tx Msg Identifier</description>
+          <addressOffset>0x402F0064</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ID</name>
+              <description>Tx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX4_DH</name>
+          <description>CAN Tx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0068</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX4_DL</name>
+          <description>CAN Tx Msg Lower Data Bytes</description>
+          <addressOffset>0x402F006C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX5_ID</name>
+          <description>CAN Tx Msg Identifier</description>
+          <addressOffset>0x402F0074</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ID</name>
+              <description>Tx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX5_DH</name>
+          <description>CAN Tx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0078</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX5_DL</name>
+          <description>CAN Tx Msg Lower Data Bytes</description>
+          <addressOffset>0x402F007C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX6_ID</name>
+          <description>CAN Tx Msg Identifier</description>
+          <addressOffset>0x402F0084</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ID</name>
+              <description>Tx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX6_DH</name>
+          <description>CAN Tx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0088</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX6_DL</name>
+          <description>CAN Tx Msg Lower Data Bytes</description>
+          <addressOffset>0x402F008C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX7_ID</name>
+          <description>CAN Tx Msg Identifier</description>
+          <addressOffset>0x402F0094</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ID</name>
+              <description>Tx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX7_DH</name>
+          <description>CAN Tx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0098</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_TX7_DL</name>
+          <description>CAN Tx Msg Lower Data Bytes</description>
+          <addressOffset>0x402F009C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX0_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F00A4</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX0_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F00A8</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX0_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F00AC</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX1_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F00C4</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX1_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F00C8</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX1_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F00CC</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX2_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F00E4</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX2_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F00E8</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX2_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F00EC</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX3_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F0104</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX3_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0108</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX3_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F010C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX4_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F0124</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX4_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0128</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX4_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F012C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX5_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F0144</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX5_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0148</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX5_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F014C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX6_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F0164</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX6_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0168</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX6_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F016C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX7_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F0184</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX7_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0188</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX7_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F018C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX8_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F01A4</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX8_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F01A8</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX8_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F01AC</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX9_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F01C4</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX9_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F01C8</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX9_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F01CC</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX10_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F01E4</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX10_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F01E8</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX10_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F01EC</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX11_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F0204</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX11_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0208</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX11_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F020C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX12_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F0224</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX12_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0228</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX12_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F022C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX13_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F0244</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX13_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0248</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX13_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F024C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX14_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F0264</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX14_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0268</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX14_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F026C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX15_ID</name>
+          <description>The register contains Rx Msg Identifier</description>
+          <addressOffset>0x402F0284</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>ZEROES</name>
+              <description>zeros</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ID</name>
+              <description>Rx Msg Indentifier</description>
+              <lsb>3</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX15_DH</name>
+          <description>The register contains the Rx Msg Upper Data Bytes</description>
+          <addressOffset>0x402F0288</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_HIGH</name>
+              <description>Upper Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CAN_CAN_RX15_DL</name>
+          <description>The register contains the Rx Msg Lover Data Bytes</description>
+          <addressOffset>0x402F028C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>DATA_LOW</name>
+              <description>Lower Data Bytes</description>
+              <lsb>0</lsb>
+              <msb>31</msb>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -2571,1813 +4378,6 @@
               <description>Logical and of corresponding request and mask bits</description>
               <lsb>11</lsb>
               <msb>11</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>CAN</name>
-      <description>No description available</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>CAN_CAN_INT_SR</name>
-          <description>The interrupt status register stores internal interrupt events.  ? Once a bit is set it remains set until it is cleared by writing a '1' to it.  ? The interrupt enable register has no effect on the interrupt status register.  ? A pending interrupt occurs when the flag is set to '1'. To acknowledge an interrupt, set the flag to '1'</description>
-          <addressOffset>0x402F0000</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ARB_LOSS</name>
-              <description>Arbitration Loss</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OVR_LOAD</name>
-              <description>Overload Interrupt</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BIT_ERR</name>
-              <description>Bit Error Interrupt</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>STUF_ERR</name>
-              <description>Stuff Error Interrupt</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ACK_ERR</name>
-              <description>Ack Error Interrupt</description>
-              <lsb>6</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FORM_ERR</name>
-              <description>Form Error Interrupt</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CRC_ERR</name>
-              <description>CRC Error Interrupt</description>
-              <lsb>8</lsb>
-              <msb>8</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BUS_OFF</name>
-              <description>Bus Off State</description>
-              <lsb>9</lsb>
-              <msb>9</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG_LOSS</name>
-              <description>Rx msg loss Interrupt</description>
-              <lsb>10</lsb>
-              <msb>10</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TX_MSG</name>
-              <description>Tx msg Sent</description>
-              <lsb>11</lsb>
-              <msb>11</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG</name>
-              <description>Msg Recieved</description>
-              <lsb>12</lsb>
-              <msb>12</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RTR_MSG</name>
-              <description>RTR auto-reply message sent</description>
-              <lsb>13</lsb>
-              <msb>13</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>STUCK_AT_ZERO</name>
-              <description>Stuck at dominant error</description>
-              <lsb>14</lsb>
-              <msb>14</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SST_FAILURE</name>
-              <description>Single shot transmission failure</description>
-              <lsb>15</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_BUF_SR</name>
-          <description>These status indicators bundle the respective flags from all RxMessage and TxMessage buffers.  ? Note All flags are read only. To acknowledge a MsgAv flag, the CPU must write to the respective RxMessage buffer</description>
-          <addressOffset>0x402F0008</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>RX_MSG0</name>
-              <description>Rx Msg0 Available</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG1</name>
-              <description>Rx Msg1 Available</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG2</name>
-              <description>Rx Msg2 Available</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG3</name>
-              <description>Rx Msg3 Available</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG4</name>
-              <description>Rx Msg4 Available</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG5</name>
-              <description>Rx Msg5 Available</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG6</name>
-              <description>Rx Msg6 Available</description>
-              <lsb>6</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG7</name>
-              <description>Rx Msg7 Available</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG8</name>
-              <description>Rx Msg8 Available</description>
-              <lsb>8</lsb>
-              <msb>8</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG9</name>
-              <description>Rx Msg9 Available</description>
-              <lsb>9</lsb>
-              <msb>9</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG10</name>
-              <description>Rx Msg10 Available</description>
-              <lsb>10</lsb>
-              <msb>10</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG11</name>
-              <description>Rx Msg11 Available</description>
-              <lsb>11</lsb>
-              <msb>11</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG12</name>
-              <description>Rx Msg12 Available</description>
-              <lsb>12</lsb>
-              <msb>12</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG13</name>
-              <description>Rx Msg13 Available</description>
-              <lsb>13</lsb>
-              <msb>13</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG14</name>
-              <description>Rx Msg14 Available</description>
-              <lsb>14</lsb>
-              <msb>14</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_MSG15</name>
-              <description>Rx Msg15 Available</description>
-              <lsb>15</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TX_MSG0</name>
-              <description>Tx req Pending for Tx Msg0</description>
-              <lsb>16</lsb>
-              <msb>16</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TX_MSG1</name>
-              <description>Tx req Pending for Tx Msg1</description>
-              <lsb>17</lsb>
-              <msb>17</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TX_MSG2</name>
-              <description>Tx req Pending for Tx Msg2</description>
-              <lsb>18</lsb>
-              <msb>18</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TX_MSG3</name>
-              <description>Tx req Pending for Tx Msg3</description>
-              <lsb>19</lsb>
-              <msb>19</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TX_MSG4</name>
-              <description>Tx req Pending for Tx Msg4</description>
-              <lsb>20</lsb>
-              <msb>20</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TX_MSG5</name>
-              <description>Tx req Pending for Tx Msg5</description>
-              <lsb>21</lsb>
-              <msb>21</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TX_MSG6</name>
-              <description>Tx req Pending for Tx Msg6</description>
-              <lsb>22</lsb>
-              <msb>22</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TX_MSG7</name>
-              <description>Tx req Pending for Tx Msg7</description>
-              <lsb>23</lsb>
-              <msb>23</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_ERR_SR</name>
-          <description>Status indicators are provided to report the CAN controller error state, receive error count, and transmit error count. ? Special flags report error counter values equal to or in excess of 96 errors are available to indicate heavily disturbed bus situations.  ? The transmitter error counter according to the CAN standard. When it is greater than 255 Decimal, it is fixed at 255 Decimal.</description>
-          <addressOffset>0x402F000C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>TX_ERR_CNT</name>
-              <description>Tx error Count</description>
-              <lsb>0</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RX_ERR_CNT</name>
-              <description>Rx error Count. When in bus-off state,this counter is used to count 128 groups of 11 recessive bits</description>
-              <lsb>8</lsb>
-              <msb>15</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ERR_STATE</name>
-              <description>Error State of CAN node, 00 error active, 01 error passive, 1x bus off</description>
-              <lsb>16</lsb>
-              <msb>17</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TXGTE96</name>
-              <description>Tx Error Count is greater or equal to 96 Decimal</description>
-              <lsb>18</lsb>
-              <msb>18</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RXGTE96</name>
-              <description>Rx Error Count is greater or equal to 96 Decimal</description>
-              <lsb>19</lsb>
-              <msb>19</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_ECR</name>
-          <description>The Error Capture register operates in two different modes: ? Free running mode - ECR displays the fiels and bit positions within the current CAN frame ? Error Capture mode - ECR samples the field and bit position when a CAN error is detected ? In order to sample such an event, the ECR needs to be armed by performing a write access to it. ? When armed, the ECR only captures one error event.  ? For successive error captures, the ECR needs to be armed again.</description>
-          <addressOffset>0x402F0018</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ECR_STATUS</name>
-              <description>ECR STATUS: ?         0: ECR register captured an error, or it is in free running mode ?         1: ECR register is armed</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ERROR_TYPE</name>
-              <description>Error type: ?         000 : Arbitration loss ?         001 : Bit Error ?         010 : Bit Stuffing Error ?         011 : Acknowledge Error ?         100 : Form Error ?         101 : CRC Error ?         Others : N/A</description>
-              <lsb>1</lsb>
-              <msb>3</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RX_MODE</name>
-              <description>RX Mode: ?         0: No status ?         1: CAN Controller is receiver</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>TX_MODE</name>
-              <description>TX Mode: ?         0: No status ?         1: CAN Controller is transmitter</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>BIT</name>
-              <description>Bit number inside of Field</description>
-              <lsb>6</lsb>
-              <msb>11</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>Field</name>
-              <description>Field: ?         0x00 : Stopped ?         0x01 : Synchronize ?         0x05 : Interframe ?         0x06 : Bus Idle ?         0x07 : Start of Frame ?         0x08 : Arbitration ?         0x09 : Control ?         0x0A : Data ?         0x0B : CRC ?         0x0C : ACK ?         0x0D : End of frame ?         0x10 : Error flag ?         0x11 : Error echo ?         0x12 : Error delimiter ?         0x18 : Overload flag ?         0x19 : Overload echo ?         0x1A : Overload delimiter ?         Others : N/A</description>
-              <lsb>12</lsb>
-              <msb>16</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX0_ID</name>
-          <description>CAN Tx Msg Identifier</description>
-          <addressOffset>0x402F0024</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ID</name>
-              <description>Tx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX0_DH</name>
-          <description>CAN Tx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0028</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX0_DL</name>
-          <description>CAN Tx Msg Lower Data Bytes</description>
-          <addressOffset>0x402F002C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX1_ID</name>
-          <description>CAN Tx Msg Identifier</description>
-          <addressOffset>0x402F0034</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ID</name>
-              <description>Tx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX1_DH</name>
-          <description>CAN Tx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0038</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX1_DL</name>
-          <description>CAN Tx Msg Lower Data Bytes</description>
-          <addressOffset>0x402F003C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX2_ID</name>
-          <description>CAN Tx Msg Identifier</description>
-          <addressOffset>0x402F0044</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ID</name>
-              <description>Tx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX2_DH</name>
-          <description>CAN Tx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0048</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX2_DL</name>
-          <description>CAN Tx Msg Lower Data Bytes</description>
-          <addressOffset>0x402F004C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX3_ID</name>
-          <description>CAN Tx Msg Identifier</description>
-          <addressOffset>0x402F0054</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ID</name>
-              <description>Tx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX3_DH</name>
-          <description>CAN Tx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0058</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX3_DL</name>
-          <description>CAN Tx Msg Lower Data Bytes</description>
-          <addressOffset>0x402F005C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX4_ID</name>
-          <description>CAN Tx Msg Identifier</description>
-          <addressOffset>0x402F0064</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ID</name>
-              <description>Tx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX4_DH</name>
-          <description>CAN Tx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0068</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX4_DL</name>
-          <description>CAN Tx Msg Lower Data Bytes</description>
-          <addressOffset>0x402F006C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX5_ID</name>
-          <description>CAN Tx Msg Identifier</description>
-          <addressOffset>0x402F0074</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ID</name>
-              <description>Tx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX5_DH</name>
-          <description>CAN Tx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0078</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX5_DL</name>
-          <description>CAN Tx Msg Lower Data Bytes</description>
-          <addressOffset>0x402F007C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX6_ID</name>
-          <description>CAN Tx Msg Identifier</description>
-          <addressOffset>0x402F0084</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ID</name>
-              <description>Tx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX6_DH</name>
-          <description>CAN Tx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0088</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX6_DL</name>
-          <description>CAN Tx Msg Lower Data Bytes</description>
-          <addressOffset>0x402F008C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX7_ID</name>
-          <description>CAN Tx Msg Identifier</description>
-          <addressOffset>0x402F0094</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ID</name>
-              <description>Tx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX7_DH</name>
-          <description>CAN Tx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0098</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_TX7_DL</name>
-          <description>CAN Tx Msg Lower Data Bytes</description>
-          <addressOffset>0x402F009C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX0_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F00A4</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX0_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F00A8</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX0_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F00AC</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX1_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F00C4</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX1_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F00C8</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX1_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F00CC</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX2_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F00E4</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX2_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F00E8</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX2_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F00EC</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX3_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F0104</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX3_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0108</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX3_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F010C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX4_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F0124</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX4_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0128</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX4_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F012C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX5_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F0144</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX5_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0148</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX5_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F014C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX6_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F0164</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX6_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0168</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX6_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F016C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX7_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F0184</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX7_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0188</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX7_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F018C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX8_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F01A4</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX8_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F01A8</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX8_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F01AC</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX9_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F01C4</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX9_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F01C8</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX9_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F01CC</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX10_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F01E4</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX10_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F01E8</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX10_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F01EC</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX11_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F0204</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX11_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0208</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX11_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F020C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX12_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F0224</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX12_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0228</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX12_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F022C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX13_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F0244</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX13_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0248</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX13_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F024C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX14_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F0264</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX14_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0268</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX14_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F026C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX15_ID</name>
-          <description>The register contains Rx Msg Identifier</description>
-          <addressOffset>0x402F0284</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>ZEROES</name>
-              <description>zeros</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Rx Msg Indentifier</description>
-              <lsb>3</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX15_DH</name>
-          <description>The register contains the Rx Msg Upper Data Bytes</description>
-          <addressOffset>0x402F0288</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_HIGH</name>
-              <description>Upper Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>CAN_CAN_RX15_DL</name>
-          <description>The register contains the Rx Msg Lover Data Bytes</description>
-          <addressOffset>0x402F028C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>DATA_LOW</name>
-              <description>Lower Data Bytes</description>
-              <lsb>0</lsb>
-              <msb>31</msb>
               <access>read-write</access>
             </field>
           </fields>
@@ -26683,458 +26683,6 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>PWM_Motor_1</name>
-      <description>No description available</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>COUNTER</name>
-          <description>Current counter value</description>
-          <addressOffset>0x40200188</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>CC</name>
-          <description>Compare / capture value</description>
-          <addressOffset>0x4020018C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>CC_BUF</name>
-          <description>Compare / capture buffer value</description>
-          <addressOffset>0x40200190</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>PERIOD</name>
-          <description>Period value</description>
-          <addressOffset>0x40200194</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>PERIOD_BUF</name>
-          <description>Period buffer value</description>
-          <addressOffset>0x40200198</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>QuadDec</name>
-      <description>No description available</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>QuadDec_Cnt16_COUNTER</name>
-          <description>Counter value</description>
-          <addressOffset>0x400F0006</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>QuadDec_STATUS_REG</name>
-          <description>Quadrature Decoder Status Register</description>
-          <addressOffset>0x400F0066</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>OVERFLOW</name>
-              <description>Counter overflow</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>UNDERFLOW</name>
-              <description>Counter underflow</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>RESET</name>
-              <description>Counter Reset due index</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-only</access>
-            </field>
-            <field>
-              <name>INVALID_IN</name>
-              <description>Invalid state transition on the A and B inputs</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-only</access>
-            </field>
-          </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>QuadDec_Cnt16</name>
-      <description>No description available</description>
-      <alternatePeripheral>QuadDec</alternatePeripheral>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>QuadDec_Cnt16_COUNTER</name>
-          <description>UDB.A0 - Current Counter Value</description>
-          <addressOffset>0x400F0006</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>QuadDec_Cnt16_PERIOD</name>
-          <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x400F0026</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>QuadDec_Cnt16_COMPARE</name>
-          <description>UDB.D1 - Assigned Compare Value</description>
-          <addressOffset>0x400F0036</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>QuadDec_Cnt16_Control_Reg</name>
-          <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x400F0076</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>CTRL_ENABLE</name>
-              <description>Enable Counter</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_CAPMODE</name>
-              <description>Capture mode</description>
-              <lsb>3</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_CMPMODE</name>
-              <description>Compare mode</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>QuadDec_Cnt16_STATUS_MASK</name>
-          <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x400F0087</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>COUNTER_STS_CMP</name>
-              <description>Compare output status</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_A0ZERO</name>
-              <description>A0 Zero ouput status</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_OVERFLOW</name>
-              <description>Overflow status </description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_UNDERFLOW</name>
-              <description>Underflow status </description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_CAPTURE</name>
-              <description>Capture Status</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_FIFO_FULL</name>
-              <description>FIFO Full Status </description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_FIFO_NEMPTY</name>
-              <description>FIFO Not Empty Status </description>
-              <lsb>6</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>QuadDec_Cnt16_STATUS_AUX_CTRL</name>
-          <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x400F0097</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>FIFO0_CLR</name>
-              <description>FIFO0 clear</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_0</name>
-                  <description>Normal FIFO operation</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_1</name>
-                  <description>Clear FIFO state</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO1_CLR</name>
-              <description>FIFO1 clear</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_0</name>
-                  <description>Normal FIFO operation</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_1</name>
-                  <description>Clear FIFO state</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO0_LVL</name>
-              <description>FIFO level</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_0</name>
-                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_1</name>
-                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO1_LVL</name>
-              <description>FIFO level</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_0</name>
-                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_1</name>
-                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>INT_EN</name>
-              <description>No description available</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_INT_EN0</name>
-                  <description>Interrupt disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_INT_EN1</name>
-                  <description>Interrupt enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CNT_START</name>
-              <description>FIFO0 clear</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_CNT_START0</name>
-                  <description>Disable counter</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_CNT_START1</name>
-                  <description>Enable counter</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>PWM_Motor</name>
-      <description>No description available</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>COUNTER</name>
-          <description>Current counter value</description>
-          <addressOffset>0x40200108</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>CC</name>
-          <description>Compare / capture value</description>
-          <addressOffset>0x4020010C</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>CC_BUF</name>
-          <description>Compare / capture buffer value</description>
-          <addressOffset>0x40200110</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>PERIOD</name>
-          <description>Period value</description>
-          <addressOffset>0x40200114</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>PERIOD_BUF</name>
-          <description>Period buffer value</description>
-          <addressOffset>0x40200118</addressOffset>
-          <size>32</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>StripLights_StringSel</name>
-      <description>No description available</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>StripLights_StringSel_CONTROL_REG</name>
-          <description>No description available</description>
-          <addressOffset>0x400F0070</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
       <name>ADC_SAR_Seq_1</name>
       <description>Sequencing SAR ADC</description>
       <baseAddress>0x0</baseAddress>
@@ -29018,6 +28566,63 @@
       </registers>
     </peripheral>
     <peripheral>
+      <name>PWM_Motor</name>
+      <description>No description available</description>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x0</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>COUNTER</name>
+          <description>Current counter value</description>
+          <addressOffset>0x40200108</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>CC</name>
+          <description>Compare / capture value</description>
+          <addressOffset>0x4020010C</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>CC_BUF</name>
+          <description>Compare / capture buffer value</description>
+          <addressOffset>0x40200110</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>PERIOD</name>
+          <description>Period value</description>
+          <addressOffset>0x40200114</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>PERIOD_BUF</name>
+          <description>Period buffer value</description>
+          <addressOffset>0x40200118</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
       <name>Status_Reg_Switches</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
@@ -29030,7 +28635,7 @@
         <register>
           <name>Status_Reg_Switches_STATUS_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0062</addressOffset>
+          <addressOffset>0x400F0065</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -29039,7 +28644,7 @@
         <register>
           <name>Status_Reg_Switches_MASK_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0082</addressOffset>
+          <addressOffset>0x400F0085</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -29048,7 +28653,7 @@
         <register>
           <name>Status_Reg_Switches_STATUS_AUX_CTL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0092</addressOffset>
+          <addressOffset>0x400F0095</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -29165,6 +28770,344 @@
                   <name>DISABLED</name>
                   <description>Normal FIFO operation</description>
                   <value>0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>StripLights_StringSel</name>
+      <description>No description available</description>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x0</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>StripLights_StringSel_CONTROL_REG</name>
+          <description>No description available</description>
+          <addressOffset>0x400F0077</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>QuadDec</name>
+      <description>No description available</description>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x0</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>QuadDec_Cnt16_COUNTER</name>
+          <description>Counter value</description>
+          <addressOffset>0x400F0000</addressOffset>
+          <size>16</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>QuadDec_STATUS_REG</name>
+          <description>Quadrature Decoder Status Register</description>
+          <addressOffset>0x400F0062</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>OVERFLOW</name>
+              <description>Counter overflow</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>UNDERFLOW</name>
+              <description>Counter underflow</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>RESET</name>
+              <description>Counter Reset due index</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>INVALID_IN</name>
+              <description>Invalid state transition on the A and B inputs</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>QuadDec_Cnt16</name>
+      <description>No description available</description>
+      <alternatePeripheral>QuadDec</alternatePeripheral>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x0</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>QuadDec_Cnt16_COUNTER</name>
+          <description>UDB.A0 - Current Counter Value</description>
+          <addressOffset>0x400F0000</addressOffset>
+          <size>16</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>QuadDec_Cnt16_PERIOD</name>
+          <description>UDB.D0 - Assigned Period</description>
+          <addressOffset>0x400F0020</addressOffset>
+          <size>16</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>QuadDec_Cnt16_COMPARE</name>
+          <description>UDB.D1 - Assigned Compare Value</description>
+          <addressOffset>0x400F0030</addressOffset>
+          <size>16</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>QuadDec_Cnt16_Control_Reg</name>
+          <description>UDB Control Register - Assigned Control Register Value</description>
+          <addressOffset>0x400F0072</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>CTRL_ENABLE</name>
+              <description>Enable Counter</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_CAPMODE</name>
+              <description>Capture mode</description>
+              <lsb>3</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_CMPMODE</name>
+              <description>Compare mode</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>QuadDec_Cnt16_STATUS_MASK</name>
+          <description>UDB Status bits Interrupt Mask Enable Register</description>
+          <addressOffset>0x400F0081</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>COUNTER_STS_CMP</name>
+              <description>Compare output status</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_A0ZERO</name>
+              <description>A0 Zero ouput status</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_OVERFLOW</name>
+              <description>Overflow status </description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_UNDERFLOW</name>
+              <description>Underflow status </description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_CAPTURE</name>
+              <description>Capture Status</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_FIFO_FULL</name>
+              <description>FIFO Full Status </description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_FIFO_NEMPTY</name>
+              <description>FIFO Not Empty Status </description>
+              <lsb>6</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>QuadDec_Cnt16_STATUS_AUX_CTRL</name>
+          <description>UDB Auxilliary Control Register</description>
+          <addressOffset>0x400F0091</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>FIFO0_CLR</name>
+              <description>FIFO0 clear</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_0</name>
+                  <description>Normal FIFO operation</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_1</name>
+                  <description>Clear FIFO state</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO1_CLR</name>
+              <description>FIFO1 clear</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_0</name>
+                  <description>Normal FIFO operation</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_1</name>
+                  <description>Clear FIFO state</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO0_LVL</name>
+              <description>FIFO level</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_0</name>
+                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_1</name>
+                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO1_LVL</name>
+              <description>FIFO level</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_0</name>
+                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_1</name>
+                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>INT_EN</name>
+              <description>No description available</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_INT_EN0</name>
+                  <description>Interrupt disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_INT_EN1</name>
+                  <description>Interrupt enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>CNT_START</name>
+              <description>FIFO0 clear</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_CNT_START0</name>
+                  <description>Disable counter</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_CNT_START1</name>
+                  <description>Enable counter</description>
+                  <value>1</value>
                 </enumeratedValue>
               </enumeratedValues>
             </field>

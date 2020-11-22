@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="Motor Board Rev2" Path="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" Version="5.70" Type="Normal">
+  <Project Name="Motor Board Rev2" Path="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" Version="5.70" Type="Normal">
     <CMSIS_SVD_File>Motor Board Rev2.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,14 +34,33 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC4\Cm0Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="STRICT" Path="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn">
-        <Files Root="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn">
-          <File BuildType="BUILD" Toolchain="">main.c</File>
+      <Folder BuildType="STRICT" Path="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn">
+        <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn">
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\main.c</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\Motor_Unit_CAN.c</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\Motor_Unit_FSM.c</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\MotorDrive.c</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\PositionPID.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\main.h</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\Motor_Unit_CAN.h</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\Motor_Unit_FSM.h</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\MotorDrive.h</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\PositionPID.h</File>
+          <File BuildType="BUILD" Toolchain="">..\CANLib\CANCommon.c</File>
+          <File BuildType="BUILD" Toolchain="">..\CANLib\CANCommon.h</File>
+          <File BuildType="BUILD" Toolchain="">..\CANLib\CANLibrary.h</File>
+          <File BuildType="BUILD" Toolchain="">..\CANLib\CANMotorUnit.c</File>
+          <File BuildType="BUILD" Toolchain="">..\CANLib\CANMotorUnit.h</File>
+          <File BuildType="BUILD" Toolchain="">..\CANLib\CANPacket.c</File>
+          <File BuildType="BUILD" Toolchain="">..\CANLib\CANPacket.h</File>
+          <File BuildType="BUILD" Toolchain="">..\CANLib\CANSerialNumbers.h</File>
+          <File BuildType="BUILD" Toolchain="">..\CANLib\Port.h</File>
+          <File BuildType="BUILD" Toolchain="">..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn\Generated_Source\PSoC4">
-        <Files Root="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn\Generated_Source\PSoC4">
+        <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn">
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cymetadata.c</File>
@@ -204,46 +223,12 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Dip_4_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Can_addr.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Can_addr.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Current_sense.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Current_sense.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Current_sense_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Current_sense_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fault.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fault.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fault_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fault_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_period.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_period.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\timer_clock.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\timer_clock.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_I2C.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_I2C_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_I2C.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_I2C_BOOT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_I2C_MASTER.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_BOOT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_PINS.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_I2C_PVT.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_PVT.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_BOOT.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_SCBCLK.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_SCBCLK.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_sda.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_sda.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_sda_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_sda_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_scl.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_scl.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_scl_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_scl_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_SCB_IRQ.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\I2C_1_SCB_IRQ.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\SLP.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\SLP.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\SLP_aliases.h</File>
@@ -260,10 +245,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Spare6.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Spare6_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Spare6_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Error.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Error.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Error_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Error_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Opamp_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Opamp_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Opamp_1_PM.c</File>
@@ -275,10 +256,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\vout.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\vout_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\vout_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Test_LED.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Test_LED.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Test_LED_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Test_LED_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Laser.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Laser.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Laser_aliases.h</File>
@@ -287,44 +264,50 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Alert.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Alert_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Alert_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Servo.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Servo.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Servo_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Servo_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_Servo.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_Servo.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_Servo_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_period_PWM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_period_PWM.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ERROR_LED.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ERROR_LED.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ERROR_LED_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ERROR_LED_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_LED.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_LED.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_LED_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_LED_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_PWM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_PWM.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_PWM_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
+        <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
+        <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
+        <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
+        <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
+        <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
+        <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0p">
-        <Files Root="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
+        <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
+        <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM4">
-        <Files Root="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
+        <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM7">
-        <Files Root="C:\Users\austc\OneDrive\Documents\Altium\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
+        <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn" />
       </Folder>
     </Folders>
   </Project>

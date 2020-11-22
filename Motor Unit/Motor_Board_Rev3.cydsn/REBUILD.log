@@ -1,114 +1,102 @@
---------------- Rebuild Started: 10/01/2020 17:01:50 Project: Motor_Unit_FSM.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/Motor_Unit_FSM.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c Motor_Unit_FSM.c -o .\CortexM0\ARM_GCC_541\Debug\Motor_Unit_FSM.o
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:15,
-                 from Generated_Source\PSoC4/CAN.h:25,
-                 from Generated_Source\PSoC4/project.h:55,
-                 from Motor_Unit_FSM.h:16,
-                 from Motor_Unit_FSM.c:14:
-./../CANLib/CANPacket.h:48:0: warning: "DEVICE_GROUP_BROADCAST" redefined
+--------------- Rebuild Started: 11/21/2020 16:07:44 Project: main.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\MotorFirmware\main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
+In file included from ..\MotorFirmware\../CANLib/CANLibrary.h:12:0,
+                 from ..\MotorFirmware\main.h:15,
+                 from ..\MotorFirmware\main.c:14:
+..\MotorFirmware\../CANLib/CANPacket.h:48:0: warning: "DEVICE_GROUP_BROADCAST" redefined
  #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
  ^
-In file included from ./../CANLib/CANPacket.h:13:0,
-                 from ./../CANLib/CANLibrary.h:12,
-                 from ./cyapicallbacks.h:15,
-                 from Generated_Source\PSoC4/CAN.h:25,
-                 from Generated_Source\PSoC4/project.h:55,
-                 from Motor_Unit_FSM.h:16,
-                 from Motor_Unit_FSM.c:14:
-./../CANLib/CANSerialNumbers.h:55:0: note: this is the location of the previous definition
+In file included from ..\MotorFirmware\../CANLib/CANPacket.h:13:0,
+                 from ..\MotorFirmware\../CANLib/CANLibrary.h:12,
+                 from ..\MotorFirmware\main.h:15,
+                 from ..\MotorFirmware\main.c:14:
+..\MotorFirmware\../CANLib/CANSerialNumbers.h:55:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_BROADCAST  0x0
  ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:15,
-                 from Generated_Source\PSoC4/CAN.h:25,
-                 from Generated_Source\PSoC4/project.h:55,
-                 from Motor_Unit_FSM.h:16,
-                 from Motor_Unit_FSM.c:14:
-./../CANLib/CANPacket.h:49:0: warning: "DEVICE_GROUP_RESERVED" redefined
+In file included from ..\MotorFirmware\../CANLib/CANLibrary.h:12:0,
+                 from ..\MotorFirmware\main.h:15,
+                 from ..\MotorFirmware\main.c:14:
+..\MotorFirmware\../CANLib/CANPacket.h:49:0: warning: "DEVICE_GROUP_RESERVED" redefined
  #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
  ^
-In file included from ./../CANLib/CANPacket.h:13:0,
-                 from ./../CANLib/CANLibrary.h:12,
-                 from ./cyapicallbacks.h:15,
-                 from Generated_Source\PSoC4/CAN.h:25,
-                 from Generated_Source\PSoC4/project.h:55,
-                 from Motor_Unit_FSM.h:16,
-                 from Motor_Unit_FSM.c:14:
-./../CANLib/CANSerialNumbers.h:56:0: note: this is the location of the previous definition
+In file included from ..\MotorFirmware\../CANLib/CANPacket.h:13:0,
+                 from ..\MotorFirmware\../CANLib/CANLibrary.h:12,
+                 from ..\MotorFirmware\main.h:15,
+                 from ..\MotorFirmware\main.c:14:
+..\MotorFirmware\../CANLib/CANSerialNumbers.h:56:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_RESERVED   0x1
  ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:15,
-                 from Generated_Source\PSoC4/CAN.h:25,
-                 from Generated_Source\PSoC4/project.h:55,
-                 from Motor_Unit_FSM.h:16,
-                 from Motor_Unit_FSM.c:14:
-./../CANLib/CANPacket.h:51:0: warning: "DEVICE_GROUP_POWER" redefined
+In file included from ..\MotorFirmware\../CANLib/CANLibrary.h:12:0,
+                 from ..\MotorFirmware\main.h:15,
+                 from ..\MotorFirmware\main.c:14:
+..\MotorFirmware\../CANLib/CANPacket.h:51:0: warning: "DEVICE_GROUP_POWER" redefined
  #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
-In file included from ./../CANLib/CANPacket.h:13:0,
-                 from ./../CANLib/CANLibrary.h:12,
-                 from ./cyapicallbacks.h:15,
-                 from Generated_Source\PSoC4/CAN.h:25,
-                 from Generated_Source\PSoC4/project.h:55,
-                 from Motor_Unit_FSM.h:16,
-                 from Motor_Unit_FSM.c:14:
-./../CANLib/CANSerialNumbers.h:58:0: note: this is the location of the previous definition
+In file included from ..\MotorFirmware\../CANLib/CANPacket.h:13:0,
+                 from ..\MotorFirmware\../CANLib/CANLibrary.h:12,
+                 from ..\MotorFirmware\main.h:15,
+                 from ..\MotorFirmware\main.c:14:
+..\MotorFirmware\../CANLib/CANSerialNumbers.h:58:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_POWER      0x3
  ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:15,
-                 from Generated_Source\PSoC4/CAN.h:25,
-                 from Generated_Source\PSoC4/project.h:55,
-                 from Motor_Unit_FSM.h:16,
-                 from Motor_Unit_FSM.c:14:
-./../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
+In file included from ..\MotorFirmware\../CANLib/CANLibrary.h:21:0,
+                 from ..\MotorFirmware\main.h:15,
+                 from ..\MotorFirmware\main.c:14:
+..\MotorFirmware\../CANLib/CANSerialNumbers.h:55:0: warning: "DEVICE_GROUP_BROADCAST" redefined
  #define DEVICE_GROUP_BROADCAST  0x0
  ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:15,
-                 from Generated_Source\PSoC4/CAN.h:25,
-                 from Generated_Source\PSoC4/project.h:55,
-                 from Motor_Unit_FSM.h:16,
-                 from Motor_Unit_FSM.c:14:
-./../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
+In file included from ..\MotorFirmware\../CANLib/CANLibrary.h:12:0,
+                 from ..\MotorFirmware\main.h:15,
+                 from ..\MotorFirmware\main.c:14:
+..\MotorFirmware\../CANLib/CANPacket.h:48:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_BROADCAST          (uint8_t) 0x00
  ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:15,
-                 from Generated_Source\PSoC4/CAN.h:25,
-                 from Generated_Source\PSoC4/project.h:55,
-                 from Motor_Unit_FSM.h:16,
-                 from Motor_Unit_FSM.c:14:
-./../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
+In file included from ..\MotorFirmware\../CANLib/CANLibrary.h:21:0,
+                 from ..\MotorFirmware\main.h:15,
+                 from ..\MotorFirmware\main.c:14:
+..\MotorFirmware\../CANLib/CANSerialNumbers.h:56:0: warning: "DEVICE_GROUP_RESERVED" redefined
  #define DEVICE_GROUP_RESERVED   0x1
  ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:15,
-                 from Generated_Source\PSoC4/CAN.h:25,
-                 from Generated_Source\PSoC4/project.h:55,
-                 from Motor_Unit_FSM.h:16,
-                 from Motor_Unit_FSM.c:14:
-./../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
+In file included from ..\MotorFirmware\../CANLib/CANLibrary.h:12:0,
+                 from ..\MotorFirmware\main.h:15,
+                 from ..\MotorFirmware\main.c:14:
+..\MotorFirmware\../CANLib/CANPacket.h:49:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_RESERVED           (uint8_t) 0x01 // DO NOT USE. For future expansion
  ^
-In file included from ./../CANLib/CANLibrary.h:21:0,
-                 from ./cyapicallbacks.h:15,
-                 from Generated_Source\PSoC4/CAN.h:25,
-                 from Generated_Source\PSoC4/project.h:55,
-                 from Motor_Unit_FSM.h:16,
-                 from Motor_Unit_FSM.c:14:
-./../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
+In file included from ..\MotorFirmware\../CANLib/CANLibrary.h:21:0,
+                 from ..\MotorFirmware\main.h:15,
+                 from ..\MotorFirmware\main.c:14:
+..\MotorFirmware\../CANLib/CANSerialNumbers.h:58:0: warning: "DEVICE_GROUP_POWER" redefined
  #define DEVICE_GROUP_POWER      0x3
  ^
-In file included from ./../CANLib/CANLibrary.h:12:0,
-                 from ./cyapicallbacks.h:15,
-                 from Generated_Source\PSoC4/CAN.h:25,
-                 from Generated_Source\PSoC4/project.h:55,
-                 from Motor_Unit_FSM.h:16,
-                 from Motor_Unit_FSM.c:14:
-./../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
+In file included from ..\MotorFirmware\../CANLib/CANLibrary.h:12:0,
+                 from ..\MotorFirmware\main.h:15,
+                 from ..\MotorFirmware\main.c:14:
+..\MotorFirmware\../CANLib/CANPacket.h:51:0: note: this is the location of the previous definition
  #define DEVICE_GROUP_POWER              (uint8_t) 0x03
  ^
---------------- Rebuild Succeeded: 10/01/2020 17:01:50 ---------------
+..\MotorFirmware\main.c: In function 'Period_Reset_Handler':
+..\MotorFirmware\main.c:50:9: warning: unused variable 'timer' [-Wunused-variable]
+     int timer = Timer_PWM_ReadStatusRegister();
+         ^
+..\MotorFirmware\main.c: In function 'main':
+..\MotorFirmware\main.c:139:25: warning: format '%d' expects argument of type 'int', but argument 3 has type 'int32_t {aka long int}' [-Wformat=]
+         sprintf(txData, "P: %d I: %d D: %d PPJ: %d Ready: %d \r\n", GetkPosition(), GetkIntegral() 
+                         ^
+..\MotorFirmware\main.c:139:25: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32_t {aka long int}' [-Wformat=]
+..\MotorFirmware\main.c:139:25: warning: format '%d' expects argument of type 'int', but argument 5 has type 'int32_t {aka long int}' [-Wformat=]
+..\MotorFirmware\main.c:139:25: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+..\MotorFirmware\main.c:139:25: warning: format '%d' expects argument of type 'int', but argument 3 has type 'int32_t {aka long int}' [-Wformat=]
+..\MotorFirmware\main.c:139:25: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int32_t {aka long int}' [-Wformat=]
+..\MotorFirmware\main.c:139:25: warning: format '%d' expects argument of type 'int', but argument 5 has type 'int32_t {aka long int}' [-Wformat=]
+..\MotorFirmware\main.c:139:25: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+..\MotorFirmware\main.c:97:18: warning: unused variable 'error' [-Wunused-variable]
+     volatile int error = 0;
+                  ^
+..\MotorFirmware\main.c:96:15: warning: unused variable 'test_packet' [-Wunused-variable]
+     CANPacket test_packet;
+               ^
+..\MotorFirmware\main.c:95:15: warning: unused variable 'can_send' [-Wunused-variable]
+     CANPacket can_send;
+               ^
+--------------- Rebuild Succeeded: 11/21/2020 16:07:45 ---------------

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="ZeroTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="timer_clock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Can_addr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="Can_addr_STATUS_REG" address="0x400F0061" bitWidth="8" desc="" hidden="false" />
-    <register name="Can_addr_MASK_REG" address="0x400F0081" bitWidth="8" desc="" hidden="false" />
-    <register name="Can_addr_STATUS_AUX_CTL_REG" address="0x400F0091" bitWidth="8" desc="" hidden="false">
+    <register name="Can_addr_STATUS_REG" address="0x400F0067" bitWidth="8" desc="" hidden="false" />
+    <register name="Can_addr_MASK_REG" address="0x400F0087" bitWidth="8" desc="" hidden="false" />
+    <register name="Can_addr_STATUS_AUX_CTL_REG" address="0x400F0097" bitWidth="8" desc="" hidden="false">
       <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="ENABLED" value="1" desc="Enable counter" />
         <value name="DISABLED" value="0" desc="Disable counter" />
@@ -32,26 +30,26 @@
       </field>
     </register>
   </block>
-  <block name="CAN_LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="isr_period_PWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Dip_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Dip_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Timer_PWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="TimerUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="Timer_PWM_COUNTER" address="0x400F0002" bitWidth="24" desc="UDB.A0 - Current Down Counter Value" hidden="false" />
-    <register name="Timer_PWM_PERIOD" address="0x400F0022" bitWidth="24" desc="UDB.D0 - Assigned Period" hidden="false" />
-    <register name="Timer_PWM_Control_Reg" address="0x400F0072" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+    <register name="Timer_PWM_COUNTER" address="0x400F0004" bitWidth="24" desc="UDB.A0 - Current Down Counter Value" hidden="false" />
+    <register name="Timer_PWM_PERIOD" address="0x400F0024" bitWidth="24" desc="UDB.D0 - Assigned Period" hidden="false" />
+    <register name="Timer_PWM_Control_Reg" address="0x400F0075" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
       <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable the Timer" hidden="false" />
       <field name="CTRL_CMODE" from="6" to="5" access="RW" resetVal="" desc="Capture Mode" hidden="false" />
       <field name="CTRL_TEN" from="4" to="4" access="RW" resetVal="" desc="Trigger Enable Bit" hidden="false" />
       <field name="CTRL_TMODE" from="3" to="2" access="RW" resetVal="" desc="Trigger Mode" hidden="false" />
       <field name="CTRL_IC" from="1" to="0" access="RW" resetVal="" desc="Interrupt Count" hidden="false" />
     </register>
-    <register name="Timer_PWM_STATUS_MASK" address="0x400F0084" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+    <register name="Timer_PWM_STATUS_MASK" address="0x400F0086" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
       <field name="TIMER_STS_TC" from="0" to="0" access="R" resetVal="" desc="Enables the Interrupt on TC" hidden="false" />
       <field name="TIMER_STS_CAPT" from="1" to="1" access="R" resetVal="" desc="Enables the Interrupt on Capture" hidden="false" />
       <field name="TIMER_STS_FIFO_FULL" from="2" to="2" access="R" resetVal="" desc="FIFO Full Status " hidden="false" />
       <field name="TIMER_STS_FIFO_NEMPTY" from="3" to="3" access="R" resetVal="" desc="FIFO Empty status " hidden="false" />
     </register>
-    <register name="Timer_PWM_STATUS_AUX_CTRL" address="0x400F0094" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="Timer_PWM_STATUS_AUX_CTRL" address="0x400F0096" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -78,7 +76,308 @@
       </field>
     </register>
   </block>
-  <block name="Dip_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="ZeroTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="timer_clock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="CAN" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <block name="or_bclk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="isr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="ZeroTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="CanIP" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="HFCLK" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <register name="CAN_CAN_INT_SR" address="0x402F0000" bitWidth="32" desc="The interrupt status register stores internal interrupt events.  &#xA; Once a bit is set it remains set until it is cleared by writing a '1' to it.  &#xA; The interrupt enable register has no effect on the interrupt status register.  &#xA; A pending interrupt occurs when the flag is set to '1'. To acknowledge an interrupt, set the flag to '1'" hidden="false">
+      <field name="ARB_LOSS" from="2" to="2" access="RW" resetVal="" desc="Arbitration Loss" hidden="false" />
+      <field name="OVR_LOAD" from="3" to="3" access="RW" resetVal="" desc="Overload Interrupt" hidden="false" />
+      <field name="BIT_ERR" from="4" to="4" access="RW" resetVal="" desc="Bit Error Interrupt" hidden="false" />
+      <field name="STUF_ERR" from="5" to="5" access="RW" resetVal="" desc="Stuff Error Interrupt" hidden="false" />
+      <field name="ACK_ERR" from="6" to="6" access="RW" resetVal="" desc="Ack Error Interrupt" hidden="false" />
+      <field name="FORM_ERR" from="7" to="7" access="RW" resetVal="" desc="Form Error Interrupt" hidden="false" />
+      <field name="CRC_ERR" from="8" to="8" access="RW" resetVal="" desc="CRC Error Interrupt" hidden="false" />
+      <field name="BUS_OFF" from="9" to="9" access="RW" resetVal="" desc="Bus Off State" hidden="false" />
+      <field name="RX_MSG_LOSS" from="10" to="10" access="RW" resetVal="" desc="Rx msg loss Interrupt" hidden="false" />
+      <field name="TX_MSG" from="11" to="11" access="RW" resetVal="" desc="Tx msg Sent" hidden="false" />
+      <field name="RX_MSG" from="12" to="12" access="RW" resetVal="" desc="Msg Recieved" hidden="false" />
+      <field name="RTR_MSG" from="13" to="13" access="RW" resetVal="" desc="RTR auto-reply message sent" hidden="false" />
+      <field name="STUCK_AT_ZERO" from="14" to="14" access="RW" resetVal="" desc="Stuck at dominant error" hidden="false" />
+      <field name="SST_FAILURE" from="15" to="15" access="RW" resetVal="" desc="Single shot transmission failure" hidden="false" />
+    </register>
+    <register name="CAN_CAN_BUF_SR" address="0x402F0008" bitWidth="32" desc="These status indicators bundle the respective flags from all RxMessage and TxMessage buffers.  &#xA; Note All flags are read only. To acknowledge a MsgAv flag, the CPU must write to the respective RxMessage buffer" hidden="false">
+      <field name="RX_MSG0" from="0" to="0" access="RW" resetVal="" desc="Rx Msg0 Available" hidden="false" />
+      <field name="RX_MSG1" from="1" to="1" access="RW" resetVal="" desc="Rx Msg1 Available" hidden="false" />
+      <field name="RX_MSG2" from="2" to="2" access="RW" resetVal="" desc="Rx Msg2 Available" hidden="false" />
+      <field name="RX_MSG3" from="3" to="3" access="RW" resetVal="" desc="Rx Msg3 Available" hidden="false" />
+      <field name="RX_MSG4" from="4" to="4" access="RW" resetVal="" desc="Rx Msg4 Available" hidden="false" />
+      <field name="RX_MSG5" from="5" to="5" access="RW" resetVal="" desc="Rx Msg5 Available" hidden="false" />
+      <field name="RX_MSG6" from="6" to="6" access="RW" resetVal="" desc="Rx Msg6 Available" hidden="false" />
+      <field name="RX_MSG7" from="7" to="7" access="RW" resetVal="" desc="Rx Msg7 Available" hidden="false" />
+      <field name="RX_MSG8" from="8" to="8" access="RW" resetVal="" desc="Rx Msg8 Available" hidden="false" />
+      <field name="RX_MSG9" from="9" to="9" access="RW" resetVal="" desc="Rx Msg9 Available" hidden="false" />
+      <field name="RX_MSG10" from="10" to="10" access="RW" resetVal="" desc="Rx Msg10 Available" hidden="false" />
+      <field name="RX_MSG11" from="11" to="11" access="RW" resetVal="" desc="Rx Msg11 Available" hidden="false" />
+      <field name="RX_MSG12" from="12" to="12" access="RW" resetVal="" desc="Rx Msg12 Available" hidden="false" />
+      <field name="RX_MSG13" from="13" to="13" access="RW" resetVal="" desc="Rx Msg13 Available" hidden="false" />
+      <field name="RX_MSG14" from="14" to="14" access="RW" resetVal="" desc="Rx Msg14 Available" hidden="false" />
+      <field name="RX_MSG15" from="15" to="15" access="RW" resetVal="" desc="Rx Msg15 Available" hidden="false" />
+      <field name="TX_MSG0" from="16" to="16" access="RW" resetVal="" desc="Tx req Pending for Tx Msg0" hidden="false" />
+      <field name="TX_MSG1" from="17" to="17" access="RW" resetVal="" desc="Tx req Pending for Tx Msg1" hidden="false" />
+      <field name="TX_MSG2" from="18" to="18" access="RW" resetVal="" desc="Tx req Pending for Tx Msg2" hidden="false" />
+      <field name="TX_MSG3" from="19" to="19" access="RW" resetVal="" desc="Tx req Pending for Tx Msg3" hidden="false" />
+      <field name="TX_MSG4" from="20" to="20" access="RW" resetVal="" desc="Tx req Pending for Tx Msg4" hidden="false" />
+      <field name="TX_MSG5" from="21" to="21" access="RW" resetVal="" desc="Tx req Pending for Tx Msg5" hidden="false" />
+      <field name="TX_MSG6" from="22" to="22" access="RW" resetVal="" desc="Tx req Pending for Tx Msg6" hidden="false" />
+      <field name="TX_MSG7" from="23" to="23" access="RW" resetVal="" desc="Tx req Pending for Tx Msg7" hidden="false" />
+    </register>
+    <register name="CAN_CAN_ERR_SR" address="0x402F000C" bitWidth="32" desc="Status indicators are provided to report the CAN controller error state, receive error count, and transmit error count. &#xA; Special flags report error counter values equal to or in excess of 96 errors are available to indicate heavily disturbed bus situations.  &#xA; The transmitter error counter according to the CAN standard. When it is greater than 255 Decimal, it is fixed at 255 Decimal." hidden="false">
+      <field name="TX_ERR_CNT" from="7" to="0" access="RW" resetVal="" desc="Tx error Count" hidden="false" />
+      <field name="RX_ERR_CNT" from="15" to="8" access="RW" resetVal="" desc="Rx error Count. When in bus-off state,this counter is used to count 128 groups of 11 recessive bits" hidden="false" />
+      <field name="ERR_STATE" from="17" to="16" access="RW" resetVal="" desc="Error State of CAN node, 00 error active, 01 error passive, 1x bus off" hidden="false" />
+      <field name="TXGTE96" from="18" to="18" access="RW" resetVal="" desc="Tx Error Count is greater or equal to 96 Decimal" hidden="false" />
+      <field name="RXGTE96" from="19" to="19" access="RW" resetVal="" desc="Rx Error Count is greater or equal to 96 Decimal" hidden="false" />
+    </register>
+    <register name="CAN_CAN_ECR" address="0x402F0018" bitWidth="32" desc="The Error Capture register operates in two different modes: &#xA; Free running mode - ECR displays the fiels and bit positions within the current CAN frame &#xA; Error Capture mode - ECR samples the field and bit position when a CAN error is detected &#xA; In order to sample such an event, the ECR needs to be armed by performing a write access to it. &#xA; When armed, the ECR only captures one error event.  &#xA; For successive error captures, the ECR needs to be armed again." hidden="false">
+      <field name="ECR_STATUS" from="0" to="0" access="RW" resetVal="" desc="ECR STATUS: &#xA;         0: ECR register captured an error, or it is in free running mode &#xA;         1: ECR register is armed" hidden="false" />
+      <field name="ERROR_TYPE" from="3" to="1" access="R" resetVal="" desc="Error type: &#xA;         000 : Arbitration loss &#xA;         001 : Bit Error &#xA;         010 : Bit Stuffing Error &#xA;         011 : Acknowledge Error &#xA;         100 : Form Error &#xA;         101 : CRC Error &#xA;         Others : N/A" hidden="false" />
+      <field name="RX_MODE" from="4" to="4" access="R" resetVal="" desc="RX Mode: &#xA;         0: No status &#xA;         1: CAN Controller is receiver" hidden="false" />
+      <field name="TX_MODE" from="5" to="5" access="R" resetVal="" desc="TX Mode: &#xA;         0: No status &#xA;         1: CAN Controller is transmitter" hidden="false" />
+      <field name="BIT" from="11" to="6" access="R" resetVal="" desc="Bit number inside of Field" hidden="false" />
+      <field name="Field" from="16" to="12" access="R" resetVal="" desc="Field: &#xA;         0x00 : Stopped &#xA;         0x01 : Synchronize &#xA;         0x05 : Interframe &#xA;         0x06 : Bus Idle &#xA;         0x07 : Start of Frame &#xA;         0x08 : Arbitration &#xA;         0x09 : Control &#xA;         0x0A : Data &#xA;         0x0B : CRC &#xA;         0x0C : ACK &#xA;         0x0D : End of frame &#xA;         0x10 : Error flag &#xA;         0x11 : Error echo &#xA;         0x12 : Error delimiter &#xA;         0x18 : Overload flag &#xA;         0x19 : Overload echo &#xA;         0x1A : Overload delimiter &#xA;         Others : N/A" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX0_ID" address="0x402F0024" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX0_DH" address="0x402F0028" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX0_DL" address="0x402F002C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX1_ID" address="0x402F0034" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX1_DH" address="0x402F0038" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX1_DL" address="0x402F003C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX2_ID" address="0x402F0044" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX2_DH" address="0x402F0048" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX2_DL" address="0x402F004C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX3_ID" address="0x402F0054" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX3_DH" address="0x402F0058" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX3_DL" address="0x402F005C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX4_ID" address="0x402F0064" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX4_DH" address="0x402F0068" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX4_DL" address="0x402F006C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX5_ID" address="0x402F0074" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX5_DH" address="0x402F0078" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX5_DL" address="0x402F007C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX6_ID" address="0x402F0084" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX6_DH" address="0x402F0088" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX6_DL" address="0x402F008C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX7_ID" address="0x402F0094" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX7_DH" address="0x402F0098" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_TX7_DL" address="0x402F009C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX0_ID" address="0x402F00A4" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX0_DH" address="0x402F00A8" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX0_DL" address="0x402F00AC" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX1_ID" address="0x402F00C4" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX1_DH" address="0x402F00C8" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX1_DL" address="0x402F00CC" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX2_ID" address="0x402F00E4" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX2_DH" address="0x402F00E8" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX2_DL" address="0x402F00EC" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX3_ID" address="0x402F0104" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX3_DH" address="0x402F0108" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX3_DL" address="0x402F010C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX4_ID" address="0x402F0124" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX4_DH" address="0x402F0128" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX4_DL" address="0x402F012C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX5_ID" address="0x402F0144" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX5_DH" address="0x402F0148" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX5_DL" address="0x402F014C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX6_ID" address="0x402F0164" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX6_DH" address="0x402F0168" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX6_DL" address="0x402F016C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX7_ID" address="0x402F0184" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX7_DH" address="0x402F0188" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX7_DL" address="0x402F018C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX8_ID" address="0x402F01A4" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX8_DH" address="0x402F01A8" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX8_DL" address="0x402F01AC" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX9_ID" address="0x402F01C4" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX9_DH" address="0x402F01C8" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX9_DL" address="0x402F01CC" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX10_ID" address="0x402F01E4" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX10_DH" address="0x402F01E8" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX10_DL" address="0x402F01EC" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX11_ID" address="0x402F0204" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX11_DH" address="0x402F0208" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX11_DL" address="0x402F020C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX12_ID" address="0x402F0224" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX12_DH" address="0x402F0228" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX12_DL" address="0x402F022C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX13_ID" address="0x402F0244" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX13_DH" address="0x402F0248" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX13_DL" address="0x402F024C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX14_ID" address="0x402F0264" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX14_DH" address="0x402F0268" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX14_DL" address="0x402F026C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX15_ID" address="0x402F0284" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
+      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
+      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX15_DH" address="0x402F0288" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
+      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
+    </register>
+    <register name="CAN_CAN_RX15_DL" address="0x402F028C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
+      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
+    </register>
+  </block>
+  <block name="TX_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="RX_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Dip_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Dip_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="UART" BASE="0x0" SIZE="0x0" desc="Serial Communication Block" visible="true" hidden="false">
     <block name="clock_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="sclk_s_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -424,309 +723,9 @@
       <field name="BREAK_DETECT" from="11" to="11" access="RW" resetVal="" desc="Logical and of corresponding request and mask bits" hidden="false" />
     </register>
   </block>
-  <block name="CAN" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <block name="or_bclk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="isr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="ZeroTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="CanIP" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="HFCLK" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="CAN_CAN_INT_SR" address="0x402F0000" bitWidth="32" desc="The interrupt status register stores internal interrupt events.  &#xA; Once a bit is set it remains set until it is cleared by writing a '1' to it.  &#xA; The interrupt enable register has no effect on the interrupt status register.  &#xA; A pending interrupt occurs when the flag is set to '1'. To acknowledge an interrupt, set the flag to '1'" hidden="false">
-      <field name="ARB_LOSS" from="2" to="2" access="RW" resetVal="" desc="Arbitration Loss" hidden="false" />
-      <field name="OVR_LOAD" from="3" to="3" access="RW" resetVal="" desc="Overload Interrupt" hidden="false" />
-      <field name="BIT_ERR" from="4" to="4" access="RW" resetVal="" desc="Bit Error Interrupt" hidden="false" />
-      <field name="STUF_ERR" from="5" to="5" access="RW" resetVal="" desc="Stuff Error Interrupt" hidden="false" />
-      <field name="ACK_ERR" from="6" to="6" access="RW" resetVal="" desc="Ack Error Interrupt" hidden="false" />
-      <field name="FORM_ERR" from="7" to="7" access="RW" resetVal="" desc="Form Error Interrupt" hidden="false" />
-      <field name="CRC_ERR" from="8" to="8" access="RW" resetVal="" desc="CRC Error Interrupt" hidden="false" />
-      <field name="BUS_OFF" from="9" to="9" access="RW" resetVal="" desc="Bus Off State" hidden="false" />
-      <field name="RX_MSG_LOSS" from="10" to="10" access="RW" resetVal="" desc="Rx msg loss Interrupt" hidden="false" />
-      <field name="TX_MSG" from="11" to="11" access="RW" resetVal="" desc="Tx msg Sent" hidden="false" />
-      <field name="RX_MSG" from="12" to="12" access="RW" resetVal="" desc="Msg Recieved" hidden="false" />
-      <field name="RTR_MSG" from="13" to="13" access="RW" resetVal="" desc="RTR auto-reply message sent" hidden="false" />
-      <field name="STUCK_AT_ZERO" from="14" to="14" access="RW" resetVal="" desc="Stuck at dominant error" hidden="false" />
-      <field name="SST_FAILURE" from="15" to="15" access="RW" resetVal="" desc="Single shot transmission failure" hidden="false" />
-    </register>
-    <register name="CAN_CAN_BUF_SR" address="0x402F0008" bitWidth="32" desc="These status indicators bundle the respective flags from all RxMessage and TxMessage buffers.  &#xA; Note All flags are read only. To acknowledge a MsgAv flag, the CPU must write to the respective RxMessage buffer" hidden="false">
-      <field name="RX_MSG0" from="0" to="0" access="RW" resetVal="" desc="Rx Msg0 Available" hidden="false" />
-      <field name="RX_MSG1" from="1" to="1" access="RW" resetVal="" desc="Rx Msg1 Available" hidden="false" />
-      <field name="RX_MSG2" from="2" to="2" access="RW" resetVal="" desc="Rx Msg2 Available" hidden="false" />
-      <field name="RX_MSG3" from="3" to="3" access="RW" resetVal="" desc="Rx Msg3 Available" hidden="false" />
-      <field name="RX_MSG4" from="4" to="4" access="RW" resetVal="" desc="Rx Msg4 Available" hidden="false" />
-      <field name="RX_MSG5" from="5" to="5" access="RW" resetVal="" desc="Rx Msg5 Available" hidden="false" />
-      <field name="RX_MSG6" from="6" to="6" access="RW" resetVal="" desc="Rx Msg6 Available" hidden="false" />
-      <field name="RX_MSG7" from="7" to="7" access="RW" resetVal="" desc="Rx Msg7 Available" hidden="false" />
-      <field name="RX_MSG8" from="8" to="8" access="RW" resetVal="" desc="Rx Msg8 Available" hidden="false" />
-      <field name="RX_MSG9" from="9" to="9" access="RW" resetVal="" desc="Rx Msg9 Available" hidden="false" />
-      <field name="RX_MSG10" from="10" to="10" access="RW" resetVal="" desc="Rx Msg10 Available" hidden="false" />
-      <field name="RX_MSG11" from="11" to="11" access="RW" resetVal="" desc="Rx Msg11 Available" hidden="false" />
-      <field name="RX_MSG12" from="12" to="12" access="RW" resetVal="" desc="Rx Msg12 Available" hidden="false" />
-      <field name="RX_MSG13" from="13" to="13" access="RW" resetVal="" desc="Rx Msg13 Available" hidden="false" />
-      <field name="RX_MSG14" from="14" to="14" access="RW" resetVal="" desc="Rx Msg14 Available" hidden="false" />
-      <field name="RX_MSG15" from="15" to="15" access="RW" resetVal="" desc="Rx Msg15 Available" hidden="false" />
-      <field name="TX_MSG0" from="16" to="16" access="RW" resetVal="" desc="Tx req Pending for Tx Msg0" hidden="false" />
-      <field name="TX_MSG1" from="17" to="17" access="RW" resetVal="" desc="Tx req Pending for Tx Msg1" hidden="false" />
-      <field name="TX_MSG2" from="18" to="18" access="RW" resetVal="" desc="Tx req Pending for Tx Msg2" hidden="false" />
-      <field name="TX_MSG3" from="19" to="19" access="RW" resetVal="" desc="Tx req Pending for Tx Msg3" hidden="false" />
-      <field name="TX_MSG4" from="20" to="20" access="RW" resetVal="" desc="Tx req Pending for Tx Msg4" hidden="false" />
-      <field name="TX_MSG5" from="21" to="21" access="RW" resetVal="" desc="Tx req Pending for Tx Msg5" hidden="false" />
-      <field name="TX_MSG6" from="22" to="22" access="RW" resetVal="" desc="Tx req Pending for Tx Msg6" hidden="false" />
-      <field name="TX_MSG7" from="23" to="23" access="RW" resetVal="" desc="Tx req Pending for Tx Msg7" hidden="false" />
-    </register>
-    <register name="CAN_CAN_ERR_SR" address="0x402F000C" bitWidth="32" desc="Status indicators are provided to report the CAN controller error state, receive error count, and transmit error count. &#xA; Special flags report error counter values equal to or in excess of 96 errors are available to indicate heavily disturbed bus situations.  &#xA; The transmitter error counter according to the CAN standard. When it is greater than 255 Decimal, it is fixed at 255 Decimal." hidden="false">
-      <field name="TX_ERR_CNT" from="7" to="0" access="RW" resetVal="" desc="Tx error Count" hidden="false" />
-      <field name="RX_ERR_CNT" from="15" to="8" access="RW" resetVal="" desc="Rx error Count. When in bus-off state,this counter is used to count 128 groups of 11 recessive bits" hidden="false" />
-      <field name="ERR_STATE" from="17" to="16" access="RW" resetVal="" desc="Error State of CAN node, 00 error active, 01 error passive, 1x bus off" hidden="false" />
-      <field name="TXGTE96" from="18" to="18" access="RW" resetVal="" desc="Tx Error Count is greater or equal to 96 Decimal" hidden="false" />
-      <field name="RXGTE96" from="19" to="19" access="RW" resetVal="" desc="Rx Error Count is greater or equal to 96 Decimal" hidden="false" />
-    </register>
-    <register name="CAN_CAN_ECR" address="0x402F0018" bitWidth="32" desc="The Error Capture register operates in two different modes: &#xA; Free running mode - ECR displays the fiels and bit positions within the current CAN frame &#xA; Error Capture mode - ECR samples the field and bit position when a CAN error is detected &#xA; In order to sample such an event, the ECR needs to be armed by performing a write access to it. &#xA; When armed, the ECR only captures one error event.  &#xA; For successive error captures, the ECR needs to be armed again." hidden="false">
-      <field name="ECR_STATUS" from="0" to="0" access="RW" resetVal="" desc="ECR STATUS: &#xA;         0: ECR register captured an error, or it is in free running mode &#xA;         1: ECR register is armed" hidden="false" />
-      <field name="ERROR_TYPE" from="3" to="1" access="R" resetVal="" desc="Error type: &#xA;         000 : Arbitration loss &#xA;         001 : Bit Error &#xA;         010 : Bit Stuffing Error &#xA;         011 : Acknowledge Error &#xA;         100 : Form Error &#xA;         101 : CRC Error &#xA;         Others : N/A" hidden="false" />
-      <field name="RX_MODE" from="4" to="4" access="R" resetVal="" desc="RX Mode: &#xA;         0: No status &#xA;         1: CAN Controller is receiver" hidden="false" />
-      <field name="TX_MODE" from="5" to="5" access="R" resetVal="" desc="TX Mode: &#xA;         0: No status &#xA;         1: CAN Controller is transmitter" hidden="false" />
-      <field name="BIT" from="11" to="6" access="R" resetVal="" desc="Bit number inside of Field" hidden="false" />
-      <field name="Field" from="16" to="12" access="R" resetVal="" desc="Field: &#xA;         0x00 : Stopped &#xA;         0x01 : Synchronize &#xA;         0x05 : Interframe &#xA;         0x06 : Bus Idle &#xA;         0x07 : Start of Frame &#xA;         0x08 : Arbitration &#xA;         0x09 : Control &#xA;         0x0A : Data &#xA;         0x0B : CRC &#xA;         0x0C : ACK &#xA;         0x0D : End of frame &#xA;         0x10 : Error flag &#xA;         0x11 : Error echo &#xA;         0x12 : Error delimiter &#xA;         0x18 : Overload flag &#xA;         0x19 : Overload echo &#xA;         0x1A : Overload delimiter &#xA;         Others : N/A" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX0_ID" address="0x402F0024" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX0_DH" address="0x402F0028" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX0_DL" address="0x402F002C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX1_ID" address="0x402F0034" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX1_DH" address="0x402F0038" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX1_DL" address="0x402F003C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX2_ID" address="0x402F0044" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX2_DH" address="0x402F0048" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX2_DL" address="0x402F004C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX3_ID" address="0x402F0054" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX3_DH" address="0x402F0058" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX3_DL" address="0x402F005C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX4_ID" address="0x402F0064" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX4_DH" address="0x402F0068" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX4_DL" address="0x402F006C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX5_ID" address="0x402F0074" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX5_DH" address="0x402F0078" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX5_DL" address="0x402F007C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX6_ID" address="0x402F0084" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX6_DH" address="0x402F0088" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX6_DL" address="0x402F008C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX7_ID" address="0x402F0094" bitWidth="32" desc="CAN Tx Msg Identifier" hidden="false">
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Tx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX7_DH" address="0x402F0098" bitWidth="32" desc="CAN Tx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_TX7_DL" address="0x402F009C" bitWidth="32" desc="CAN Tx Msg Lower Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX0_ID" address="0x402F00A4" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX0_DH" address="0x402F00A8" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX0_DL" address="0x402F00AC" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX1_ID" address="0x402F00C4" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX1_DH" address="0x402F00C8" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX1_DL" address="0x402F00CC" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX2_ID" address="0x402F00E4" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX2_DH" address="0x402F00E8" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX2_DL" address="0x402F00EC" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX3_ID" address="0x402F0104" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX3_DH" address="0x402F0108" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX3_DL" address="0x402F010C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX4_ID" address="0x402F0124" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX4_DH" address="0x402F0128" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX4_DL" address="0x402F012C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX5_ID" address="0x402F0144" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX5_DH" address="0x402F0148" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX5_DL" address="0x402F014C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX6_ID" address="0x402F0164" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX6_DH" address="0x402F0168" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX6_DL" address="0x402F016C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX7_ID" address="0x402F0184" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX7_DH" address="0x402F0188" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX7_DL" address="0x402F018C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX8_ID" address="0x402F01A4" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX8_DH" address="0x402F01A8" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX8_DL" address="0x402F01AC" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX9_ID" address="0x402F01C4" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX9_DH" address="0x402F01C8" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX9_DL" address="0x402F01CC" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX10_ID" address="0x402F01E4" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX10_DH" address="0x402F01E8" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX10_DL" address="0x402F01EC" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX11_ID" address="0x402F0204" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX11_DH" address="0x402F0208" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX11_DL" address="0x402F020C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX12_ID" address="0x402F0224" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX12_DH" address="0x402F0228" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX12_DL" address="0x402F022C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX13_ID" address="0x402F0244" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX13_DH" address="0x402F0248" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX13_DL" address="0x402F024C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX14_ID" address="0x402F0264" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX14_DH" address="0x402F0268" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX14_DL" address="0x402F026C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX15_ID" address="0x402F0284" bitWidth="32" desc="The register contains Rx Msg Identifier" hidden="false">
-      <field name="ZEROES" from="2" to="0" access="RW" resetVal="" desc="zeros" hidden="false" />
-      <field name="ID" from="31" to="3" access="RW" resetVal="" desc="Rx Msg Indentifier" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX15_DH" address="0x402F0288" bitWidth="32" desc="The register contains the Rx Msg Upper Data Bytes" hidden="false">
-      <field name="DATA_HIGH" from="31" to="0" access="RW" resetVal="" desc="Upper Data Bytes" hidden="false" />
-    </register>
-    <register name="CAN_CAN_RX15_DL" address="0x402F028C" bitWidth="32" desc="The register contains the Rx Msg Lover Data Bytes" hidden="false">
-      <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
-    </register>
-  </block>
-  <block name="TX_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Dip_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Dip_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Dip_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Clock_PWM_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Motor_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="not_6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="not_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_lfclk" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="DMAC" BASE="0x0" SIZE="0x0" desc="DMAC Registers" visible="true" hidden="false">
@@ -5036,132 +5035,12 @@
       <field name="CURR_DATA_NR" from="15" to="0" access="RW" resetVal="" desc="Specifies the index of the current data transfer. This value increases from 0 to CONTROL.DATA_NR. HW sets this field: &#xA; - When a descriptor is done (RESPONSE is DONE), the field is set to '0' when PING_CTL.INV_DESCR is '0' and the field is set to PING_CTL.DATA_NR when PING_CTL.INV_DESCR is '1'.                                                                 &#xA; - When a descriptor is not done (RESPONSE is NO_ERROR), the field reflects the progress of a data transfer.                                                                 &#xA; - In case of erroneous behavior (RESPONSE is neither DONE or NO_ERROR), the field is not updated, but keeps its value to ease debugging.                                                                 &#xA; HW only modifies this field for an active descriptor (STATUS.VALID to be '1'). At descriptor initialization, SW should set this field to '0'.                                                                 &#xA; This field allows software to read the progress of the data transfer. Note that SRC.ADDR and DST.ADDR represent base addresses and are not modified during data transfer. However, STATUS.CURR_DATA_NR is modified during data transfer and provides an offset wrt. the base addresses." hidden="false" />
     </register>
   </block>
-  <block name="PWM_Motor_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <block name="VMux_count" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_reload" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_start" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_stop" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_capture" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_clock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="cy_m0s8_tcpwm_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="COUNTER" address="0x40200188" bitWidth="32" desc="Current counter value" hidden="false" />
-    <register name="CC" address="0x4020018C" bitWidth="32" desc="Compare / capture value" hidden="false" />
-    <register name="CC_BUF" address="0x40200190" bitWidth="32" desc="Compare / capture buffer value" hidden="false" />
-    <register name="PERIOD" address="0x40200194" bitWidth="32" desc="Period value" hidden="false" />
-    <register name="PERIOD_BUF" address="0x40200198" bitWidth="32" desc="Period buffer value" hidden="false" />
-  </block>
+  <block name="ERROR_LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="CAN_LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="isr_period_PWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="not_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="not_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="FAULT_MOTOR" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="ERROR_LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="not_6" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="not_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="not_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="GND_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="SW_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Direction" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="QuadDec" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="and_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="and_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="not_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VirtualMux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="QuadDec_Cnt16" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <block name="ZeroTerminal_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-      <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-      <block name="CounterUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-      <register name="QuadDec_Cnt16_COUNTER" address="0x400F0006" bitWidth="16" desc="UDB.A0 - Current Counter Value" hidden="false" />
-      <register name="QuadDec_Cnt16_PERIOD" address="0x400F0026" bitWidth="16" desc="UDB.D0 - Assigned Period" hidden="false" />
-      <register name="QuadDec_Cnt16_COMPARE" address="0x400F0036" bitWidth="16" desc="UDB.D1 - Assigned Compare Value" hidden="false" />
-      <register name="QuadDec_Cnt16_Control_Reg" address="0x400F0076" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
-        <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable Counter" hidden="false" />
-        <field name="CTRL_CAPMODE" from="4" to="3" access="RW" resetVal="" desc="Capture mode" hidden="false" />
-        <field name="CTRL_CMPMODE" from="2" to="0" access="RW" resetVal="" desc="Compare mode" hidden="false" />
-      </register>
-      <register name="QuadDec_Cnt16_STATUS_MASK" address="0x400F0087" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
-        <field name="COUNTER_STS_CMP" from="0" to="0" access="RW" resetVal="" desc="Compare output status" hidden="false" />
-        <field name="COUNTER_STS_A0ZERO" from="1" to="1" access="RW" resetVal="" desc="A0 Zero ouput status" hidden="false" />
-        <field name="COUNTER_STS_OVERFLOW" from="2" to="2" access="RW" resetVal="" desc="Overflow status " hidden="false" />
-        <field name="COUNTER_STS_UNDERFLOW" from="3" to="3" access="RW" resetVal="" desc="Underflow status " hidden="false" />
-        <field name="COUNTER_STS_CAPTURE" from="4" to="4" access="RW" resetVal="" desc="Capture Status" hidden="false" />
-        <field name="COUNTER_STS_FIFO_FULL" from="5" to="5" access="RW" resetVal="" desc="FIFO Full Status " hidden="false" />
-        <field name="COUNTER_STS_FIFO_NEMPTY" from="6" to="6" access="RW" resetVal="" desc="FIFO Not Empty Status " hidden="false" />
-      </register>
-      <register name="QuadDec_Cnt16_STATUS_AUX_CTRL" address="0x400F0097" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
-        <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
-          <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
-          <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
-        </field>
-        <field name="FIFO1_CLR" from="1" to="1" access="RW" resetVal="" desc="FIFO1 clear" hidden="false">
-          <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
-          <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
-        </field>
-        <field name="FIFO0_LVL" from="2" to="2" access="RW" resetVal="" desc="FIFO level" hidden="false">
-          <value name="E_FIFO_LVL_0" value="0" desc="FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty" />
-          <value name="E_FIFO_LVL_1" value="1" desc="FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full" />
-        </field>
-        <field name="FIFO1_LVL" from="3" to="3" access="RW" resetVal="" desc="FIFO level" hidden="false">
-          <value name="E_FIFO_LVL_0" value="0" desc="FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty" />
-          <value name="E_FIFO_LVL_1" value="1" desc="FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full" />
-        </field>
-        <field name="INT_EN" from="4" to="4" access="RW" resetVal="" desc="" hidden="false">
-          <value name="E_INT_EN0" value="0" desc="Interrupt disabled" />
-          <value name="E_INT_EN1" value="1" desc="Interrupt enabled" />
-        </field>
-        <field name="CNT_START" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
-          <value name="E_CNT_START0" value="0" desc="Disable counter" />
-          <value name="E_CNT_START1" value="1" desc="Enable counter" />
-        </field>
-      </register>
-    </block>
-    <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VirtualMux_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="bQuadDec" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="QuadDec_Cnt16_COUNTER" address="0x400F0006" bitWidth="16" desc="Counter value" hidden="false" />
-    <register name="QuadDec_STATUS_REG" address="0x400F0066" bitWidth="8" desc="Quadrature Decoder Status Register" hidden="false">
-      <field name="OVERFLOW" from="0" to="0" access="R" resetVal="" desc="Counter overflow" hidden="false" />
-      <field name="UNDERFLOW" from="1" to="1" access="R" resetVal="" desc="Counter underflow" hidden="false" />
-      <field name="RESET" from="2" to="2" access="R" resetVal="" desc="Counter Reset due index" hidden="false" />
-      <field name="INVALID_IN" from="3" to="3" access="R" resetVal="" desc="Invalid state transition on the A and B inputs" hidden="false" />
-    </register>
-  </block>
-  <block name="GND_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="SW_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Pot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="PWM_Motor" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <block name="VMux_count" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_reload" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_start" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_stop" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_capture" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VMux_clock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="cy_m0s8_tcpwm_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="COUNTER" address="0x40200108" bitWidth="32" desc="Current counter value" hidden="false" />
-    <register name="CC" address="0x4020010C" bitWidth="32" desc="Compare / capture value" hidden="false" />
-    <register name="CC_BUF" address="0x40200110" bitWidth="32" desc="Compare / capture buffer value" hidden="false" />
-    <register name="PERIOD" address="0x40200114" bitWidth="32" desc="Period value" hidden="false" />
-    <register name="PERIOD_BUF" address="0x40200118" bitWidth="32" desc="Period buffer value" hidden="false" />
-  </block>
-  <block name="Pin_Limit_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Limit_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Clock_PWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Motor" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="isr_Limit_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="StripLights" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <block name="demux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="B_WS2811" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="fisr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="ZeroTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="StripLights_StringSel" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="StripLights_StringSel_CONTROL_REG" address="0x400F0070" bitWidth="8" desc="" hidden="false" />
-    </block>
-    <block name="cisr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  </block>
-  <block name="not_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="RX_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="ADC_SAR_Seq_1" BASE="0x0" SIZE="0x0" desc="Sequencing SAR ADC" visible="true" hidden="false">
     <block name="cy_analog_noconnect_31" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="cy_analog_noconnect_32" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -5550,15 +5429,37 @@
       <field name="WOUND_RESOLUTION" from="1" to="0" access="R" resetVal="" desc="Maximum SAR resolution allowed" hidden="false" />
     </register>
   </block>
-  <block name="Array_LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Direction" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Pot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="PWM_Motor" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <block name="VMux_count" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_reload" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_start" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_stop" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_capture" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VMux_clock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="cy_m0s8_tcpwm_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <register name="COUNTER" address="0x40200108" bitWidth="32" desc="Current counter value" hidden="false" />
+    <register name="CC" address="0x4020010C" bitWidth="32" desc="Compare / capture value" hidden="false" />
+    <register name="CC_BUF" address="0x40200110" bitWidth="32" desc="Compare / capture buffer value" hidden="false" />
+    <register name="PERIOD" address="0x40200114" bitWidth="32" desc="Period value" hidden="false" />
+    <register name="PERIOD_BUF" address="0x40200118" bitWidth="32" desc="Period buffer value" hidden="false" />
+  </block>
+  <block name="Pin_Limit_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Limit_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_PWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Motor" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="isr_Limit_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Debug_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Encoder_B" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Pin_Encoder_A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Status_Reg_Switches" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="Status_Reg_Switches_STATUS_REG" address="0x400F0062" bitWidth="8" desc="" hidden="false" />
-    <register name="Status_Reg_Switches_MASK_REG" address="0x400F0082" bitWidth="8" desc="" hidden="false" />
-    <register name="Status_Reg_Switches_STATUS_AUX_CTL_REG" address="0x400F0092" bitWidth="8" desc="" hidden="false">
+    <register name="Status_Reg_Switches_STATUS_REG" address="0x400F0065" bitWidth="8" desc="" hidden="false" />
+    <register name="Status_Reg_Switches_MASK_REG" address="0x400F0085" bitWidth="8" desc="" hidden="false" />
+    <register name="Status_Reg_Switches_STATUS_AUX_CTL_REG" address="0x400F0095" bitWidth="8" desc="" hidden="false">
       <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="ENABLED" value="1" desc="Enable counter" />
         <value name="DISABLED" value="0" desc="Disable counter" />
@@ -5585,6 +5486,89 @@
       </field>
     </register>
   </block>
+  <block name="Array_LED" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="StripLights" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <block name="demux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="B_WS2811" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="fisr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="ZeroTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="StripLights_StringSel" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="StripLights_StringSel_CONTROL_REG" address="0x400F0077" bitWidth="8" desc="" hidden="false" />
+    </block>
+    <block name="cisr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  </block>
+  <block name="not_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Encoder_B" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Pin_Encoder_A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="QuadDec" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="and_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="and_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="not_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="QuadDec_Cnt16" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <block name="ZeroTerminal_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+      <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+      <block name="CounterUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+      <register name="QuadDec_Cnt16_COUNTER" address="0x400F0000" bitWidth="16" desc="UDB.A0 - Current Counter Value" hidden="false" />
+      <register name="QuadDec_Cnt16_PERIOD" address="0x400F0020" bitWidth="16" desc="UDB.D0 - Assigned Period" hidden="false" />
+      <register name="QuadDec_Cnt16_COMPARE" address="0x400F0030" bitWidth="16" desc="UDB.D1 - Assigned Compare Value" hidden="false" />
+      <register name="QuadDec_Cnt16_Control_Reg" address="0x400F0072" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+        <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable Counter" hidden="false" />
+        <field name="CTRL_CAPMODE" from="4" to="3" access="RW" resetVal="" desc="Capture mode" hidden="false" />
+        <field name="CTRL_CMPMODE" from="2" to="0" access="RW" resetVal="" desc="Compare mode" hidden="false" />
+      </register>
+      <register name="QuadDec_Cnt16_STATUS_MASK" address="0x400F0081" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+        <field name="COUNTER_STS_CMP" from="0" to="0" access="RW" resetVal="" desc="Compare output status" hidden="false" />
+        <field name="COUNTER_STS_A0ZERO" from="1" to="1" access="RW" resetVal="" desc="A0 Zero ouput status" hidden="false" />
+        <field name="COUNTER_STS_OVERFLOW" from="2" to="2" access="RW" resetVal="" desc="Overflow status " hidden="false" />
+        <field name="COUNTER_STS_UNDERFLOW" from="3" to="3" access="RW" resetVal="" desc="Underflow status " hidden="false" />
+        <field name="COUNTER_STS_CAPTURE" from="4" to="4" access="RW" resetVal="" desc="Capture Status" hidden="false" />
+        <field name="COUNTER_STS_FIFO_FULL" from="5" to="5" access="RW" resetVal="" desc="FIFO Full Status " hidden="false" />
+        <field name="COUNTER_STS_FIFO_NEMPTY" from="6" to="6" access="RW" resetVal="" desc="FIFO Not Empty Status " hidden="false" />
+      </register>
+      <register name="QuadDec_Cnt16_STATUS_AUX_CTRL" address="0x400F0091" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+        <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
+          <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
+          <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
+        </field>
+        <field name="FIFO1_CLR" from="1" to="1" access="RW" resetVal="" desc="FIFO1 clear" hidden="false">
+          <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
+          <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
+        </field>
+        <field name="FIFO0_LVL" from="2" to="2" access="RW" resetVal="" desc="FIFO level" hidden="false">
+          <value name="E_FIFO_LVL_0" value="0" desc="FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty" />
+          <value name="E_FIFO_LVL_1" value="1" desc="FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full" />
+        </field>
+        <field name="FIFO1_LVL" from="3" to="3" access="RW" resetVal="" desc="FIFO level" hidden="false">
+          <value name="E_FIFO_LVL_0" value="0" desc="FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty" />
+          <value name="E_FIFO_LVL_1" value="1" desc="FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full" />
+        </field>
+        <field name="INT_EN" from="4" to="4" access="RW" resetVal="" desc="" hidden="false">
+          <value name="E_INT_EN0" value="0" desc="Interrupt disabled" />
+          <value name="E_INT_EN1" value="1" desc="Interrupt enabled" />
+        </field>
+        <field name="CNT_START" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
+          <value name="E_CNT_START0" value="0" desc="Disable counter" />
+          <value name="E_CNT_START1" value="1" desc="Enable counter" />
+        </field>
+      </register>
+    </block>
+    <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="bQuadDec" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <register name="QuadDec_Cnt16_COUNTER" address="0x400F0000" bitWidth="16" desc="Counter value" hidden="false" />
+    <register name="QuadDec_STATUS_REG" address="0x400F0062" bitWidth="8" desc="Quadrature Decoder Status Register" hidden="false">
+      <field name="OVERFLOW" from="0" to="0" access="R" resetVal="" desc="Counter overflow" hidden="false" />
+      <field name="UNDERFLOW" from="1" to="1" access="R" resetVal="" desc="Counter underflow" hidden="false" />
+      <field name="RESET" from="2" to="2" access="R" resetVal="" desc="Counter Reset due index" hidden="false" />
+      <field name="INVALID_IN" from="3" to="3" access="R" resetVal="" desc="Invalid state transition on the A and B inputs" hidden="false" />
+    </register>
+  </block>
   <block name="Debouncer_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Debug_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Debug_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
 </blockRegMap>

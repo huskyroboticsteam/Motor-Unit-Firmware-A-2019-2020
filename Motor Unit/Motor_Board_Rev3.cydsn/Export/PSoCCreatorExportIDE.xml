@@ -36,34 +36,29 @@
     <Folders>
       <Folder BuildType="STRICT" Path="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn">
         <Files Root="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn">
-          <File BuildType="BUILD" Toolchain="">main.c</File>
-          <File BuildType="BUILD" Toolchain="">MotorDrive.c</File>
-          <File BuildType="BUILD" Toolchain="">PositionPID.c</File>
-          <File BuildType="BUILD" Toolchain="">LED_Array.c</File>
-          <File BuildType="BUILD" Toolchain="">Motor_Unit_CAN.c</File>
-          <File BuildType="BUILD" Toolchain="">Motor_Unit_FSM.c</File>
-          <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
-          <File BuildType="BUILD" Toolchain="">MotorDrive.h</File>
-          <File BuildType="BUILD" Toolchain="">PositionPID.h</File>
-          <File BuildType="BUILD" Toolchain="">LED_Array.h</File>
-          <File BuildType="BUILD" Toolchain="">Motor_Unit_CAN.h</File>
-          <File BuildType="BUILD" Toolchain="">Motor_Unit_FSM.h</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\main.c</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\Motor_Unit_CAN.c</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\Motor_Unit_FSM.c</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\MotorDrive.c</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\PositionPID.c</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\LED_Array.c</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANCommon.c</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANCommon.h</File>
-          <File BuildType="BUILD" Toolchain="">..\CANLib\CANGPIO.c</File>
-          <File BuildType="BUILD" Toolchain="">..\CANLib\CANGPIO.h</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANLibrary.h</File>
-          <File BuildType="BUILD" Toolchain="">..\CANLib\CANLocalization.c</File>
-          <File BuildType="BUILD" Toolchain="">..\CANLib\CANLocalization.h</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANMotorUnit.c</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANMotorUnit.h</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANPacket.c</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANPacket.h</File>
-          <File BuildType="BUILD" Toolchain="">..\CANLib\CANPower.c</File>
-          <File BuildType="BUILD" Toolchain="">..\CANLib\CANPower.h</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANSerialNumbers.h</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\Port.h</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\LED_Array.h</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\main.h</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\Motor_Unit_CAN.h</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\Motor_Unit_FSM.h</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\MotorDrive.h</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\PositionPID.h</File>
+          <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Generated_Source\PSoC4">
@@ -226,9 +221,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Can_addr.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\timer_clock.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\timer_clock.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_Motor_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_Motor_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_Motor_1_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Debug_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Debug_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Debug_1_aliases.h</File>
@@ -264,17 +256,11 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FAULT_MOTOR.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FAULT_MOTOR_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FAULT_MOTOR_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Motor_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Motor_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Motor_1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Motor_1_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_PWM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_PWM.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_PWM_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_period_PWM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_period_PWM.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_PWM_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_PWM_1.h</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
