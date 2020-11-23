@@ -119,26 +119,11 @@ int main(void)
             SendCANPacket(&can_send);
             CyDelay(10);
             can_send.data[0] = 3;
-            /*
-            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, 12345);
+            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, 30000);
             SendCANPacket(&can_send);
             CyDelay(100);
-            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, -12345);
-            SendCANPacket(&can_send);
-            CyDelay(1000);
-            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, 22345);
-            SendCANPacket(&can_send);
-            CyDelay(100);
-            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, -22345);
-            SendCANPacket(&can_send);
-            CyDelay(1000);
-            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, 32767);
-            SendCANPacket(&can_send);
-            CyDelay(100);
-            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, -32768);
-            SendCANPacket(&can_send);
-            CyDelay(1000);
-            */
+            
+/*
             for(int i = 0; i < 32767; i+= 100) {
             AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, i);
             SendCANPacket(&can_send);
@@ -162,7 +147,7 @@ int main(void)
             SendCANPacket(&can_send);
             CyDelay(10);
             }
-            CyDelay(5000);
+     */
             
             
             break;

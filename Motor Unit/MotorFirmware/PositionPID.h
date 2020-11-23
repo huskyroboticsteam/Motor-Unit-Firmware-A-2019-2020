@@ -13,13 +13,22 @@
 /* [] END OF FILE */
 #include <project.h>
 void SetPosition(int32 miliDegrees) ;
-int MiliDegreesToTicks(int32_t miliDegrees);
-int Position_PID(int target);
+int32_t MiliDegreesToTicks(int32_t miliDegrees);
+int32_t Position_PID(int target);
+int32_t CurrentPositionMiliDegree();
 
 void SetkPosition(int32_t kP);
 void SetkIntegral(int32_t kI);
 void SetkDerivative(int32_t kD);
 void SetkPPJR(uint32_t kppjr);
+
+//used for mode change 
+void ClearPIDProgress();
+void InitializePID();
+
+int32_t GetEncoderValWithFlip();
+void SetEncoderDirDefault();
+void SetEncoderDirReverse();
 
 int32_t GetkPosition();
 int32_t GetkIntegral();

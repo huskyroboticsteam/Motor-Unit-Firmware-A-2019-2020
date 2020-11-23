@@ -15,6 +15,8 @@
 #ifndef MOTOR_CAN_H
 #define MOTOR_CAN_H
     #include <project.h>
+    #include "../CANLib/CANLibrary.h"
     void NextStateFromCAN(CANPacket *receivedPacket);
+    void SendEncoderData(CANPacket *packetToSend);
 #endif
     

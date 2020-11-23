@@ -14,6 +14,7 @@
 #include "Motor_Unit_FSM.h"
 #include "MotorDrive.h"
 #include "project.h"
+#include "PositionPID.h"
 
 /*drive mode
 0xFF = un-init
@@ -30,6 +31,7 @@ void GotoUninitState() {
     #ifdef RGB_LED_ARRAY
     StripLights_DisplayClear(StripLights_BLACK);
     #endif
+    ClearPIDProgress();
     motorUnitMode = 0xFF;
     motorUnitState = UNINIT;
 }

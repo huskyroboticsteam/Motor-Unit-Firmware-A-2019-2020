@@ -1,4 +1,4 @@
---------------- Build Started: 11/21/2020 21:43:47 Project: Motor_Board_Rev3_CAN_Send, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 11/22/2020 16:20:40 Project: Motor_Board_Rev3_CAN_Send, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 main.c: In function 'Period_Reset_Handler':
@@ -16,6 +16,7 @@ arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/MotorDrive.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c MotorDrive.c -o .\CortexM0\ARM_GCC_541\Debug\MotorDrive.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/PositionPID.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c PositionPID.c -o .\CortexM0\ARM_GCC_541\Debug\PositionPID.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/LED_Array.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c LED_Array.c -o .\CortexM0\ARM_GCC_541\Debug\LED_Array.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/CANMotorUnit.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\CANLib\CANMotorUnit.c -o .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/PortPSOC_CY8C4248AZI_L485.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c -o .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
 In file included from Generated_Source\PSoC4/project.h:55:0,
                  from ..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c:12:
@@ -55,6 +56,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S "C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\CortexM0\ARM_GCC_541\Debug\Motor_Board_Rev3_CAN_Send.elf"
-Flash used: 14342 of 262144 bytes (5.5%).
+Flash used: 14198 of 262144 bytes (5.4%).
 SRAM used: 3024 of 32768 bytes (9.2%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 11/21/2020 21:43:52 ---------------
+--------------- Build Succeeded: 11/22/2020 16:20:45 ---------------

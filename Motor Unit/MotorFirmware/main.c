@@ -11,6 +11,7 @@
 */
 
 #include "main.h"
+#include "Motor_Unit_Debug.h"
 #include "cyapicallbacks.h"
 #include "MotorDrive.h"
 #include "Motor_Unit_CAN.h"
@@ -21,10 +22,6 @@
 #include "LED_Array.h"
 extern const uint32 StripLights_CLUT[ ];
 #endif
-
-
-
-
 
 //LED
 uint8_t CAN_time_LED = 0;
@@ -39,13 +36,15 @@ char txData[TX_DATA_SIZE];
 int16 nextPWM = 0;
 extern uint8 invalidate;
 uint8_t ignoreLimSw = 0;
+uint8_t encoderTimeOut = 0;
 
 uint8 address = 0;
 
 //Status and Data Structs
 volatile uint8 drive = 0;
 uint8_t CAN_check_delay = 0;
-
+CANPacket can_recieve;
+CANPacket can_send;
 
 CY_ISR(Period_Reset_Handler) {
     int timer = Timer_PWM_ReadStatusRegister();
@@ -53,7 +52,12 @@ CY_ISR(Period_Reset_Handler) {
     CAN_time_LED++;
     CAN_check_delay ++;
     ERRORTimeLED++;
+    encoderTimeOut++;
     //TODO: SEND PACKET QUEUE 10x a second
+    if(encoderTimeOut >= 2){
+        encoderTimeOut = 0;
+        SendEncoderData(&can_send);
+    }
     if(invalidate >= 20){
         set_PWM(0, 0, 0);   
     }
@@ -77,14 +81,18 @@ CY_ISR(Period_Reset_Handler) {
   
 CY_ISR(Pin_Limit_Handler){
     #ifdef PRINT_LIMIT_SW_TRIGGER
-    sprintf(txData,"Limit interupt triggerd\r\n");
+    sprintf(txData,"LimitSW triggerd Stat: %x \r\n", Status_Reg_Switches_Read() & 0b11);
     UART_UartPutString(txData);
     #endif
     
     set_PWM(GetCurrentPWM(), ignoreLimSw, Status_Reg_Switches_Read());
     
-    //for only one of the limit switches
-    QuadDec_SetCounter(0);
+    #ifdef CAN_TELEM_SEND
+    AssembleLimitSwitchAlertPacket(&can_send, 0x4, address, Status_Reg_Switches_Read() & 0b11);
+    SendCANPacket(&can_send);
+    #endif
+    //TODO: Select Which Encoder zeros
+    //QuadDec_SetCounter(0);
 }
 
 int main(void)
@@ -93,8 +101,6 @@ int main(void)
     #ifdef RGB_LED_ARRAY
     StripLights_DisplayClear(StripLights_BLACK);
     #endif
-    CANPacket can_recieve;
-    CANPacket can_send;
     
     for(;;)
     {
@@ -134,6 +140,10 @@ int main(void)
         #ifdef PRINT_SET_PID_CONST
         sprintf(txData, "P: %d I: %d D: %d PPJ: %d Ready: %d \r\n", GetkPosition(), GetkIntegral() 
         ,GetkDerivative(), GetkPPJR(), PIDconstsSet());
+        UART_UartPutString(txData);
+        #endif
+        #ifdef PRINT_ENCODER_VALUE
+        sprintf(txData, "Encoder Value: %d  \r\n", QuadDec_GetCounter());
         UART_UartPutString(txData);
         #endif
 

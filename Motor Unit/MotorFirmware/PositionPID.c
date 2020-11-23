@@ -21,11 +21,10 @@ int32_t kDerivative = 0;
 uint32_t kPPJR = 0;
 extern int16_t nextPWM;
 extern uint8_t ignoreLimSw;
-
-
 int8 flipEncoder = 1;
+uint8_t usingPot = 0;
 
-int16 final_angle = 0;//needs to be reset upon mode change
+int32 final_angle = 0;//needs to be reset upon mode change
 int integral = 0;     //needs to be reset upon mode change
 int lastPosition = 0; //needs to be reset upon mode change
 int integralClamp = 500;
@@ -33,6 +32,15 @@ int integralClamp = 500;
 double ratio;
 uint8 complete = 0;
 uint16 maxV = 0xFFFF;
+
+void ClearPIDProgress() {
+    final_angle = 0;
+    integral = 0;
+    lastPosition = 0;
+}
+void InitializePID() {
+    lastPosition = GetEncoderValWithFlip();
+}
 
 void SetkPosition(int32_t kP){
     kPosition = kP;
@@ -46,7 +54,6 @@ void SetkDerivative(int32_t kD){
 void SetkPPJR(uint32_t kppjr){
     kPPJR = kppjr;
 }
-
 int32_t GetkPosition(){
     return kPosition;
 }
@@ -60,8 +67,23 @@ uint32_t GetkPPJR(){
     return kPPJR;
 }
 
+int32_t GetEncoderValWithFlip() {
+    return flipEncoder * QuadDec_GetCounter();
+}
+void SetEncoderDirDefault(){
+    flipEncoder = 1;
+}
+void SetEncoderDirReverse(){
+    flipEncoder = -1;
+}
+int32_t CurrentPositionMiliDegree(){
+    if(kPPJR == 0){
+        return(0);
+    }
+    return (int32_t)((float)GetEncoderValWithFlip() / (float)kPPJR * (float)(360*1000));
+}
 void SetPosition(int32 miliDegrees) {
-
+        //TODO: Make Potentiometer Compatible
         nextPWM = Position_PID(MiliDegreesToTicks(miliDegrees));
         
         //Max Power clamp
@@ -74,14 +96,15 @@ void SetPosition(int32 miliDegrees) {
         }
 }
 
-int MiliDegreesToTicks(int32_t miliDegrees){
-    int ticks = (int)((float)miliDegrees * (float)kPPJR/(float)(360*1000));// make float
-
+int32_t MiliDegreesToTicks(int32_t miliDegrees){
+    int32_t ticks = (int32_t)((float)miliDegrees * (float)kPPJR/(float)(360*1000));// make float
     return(ticks);
 }
 
-int Position_PID(int target){
-    int16 current =  QuadDec_GetCounter();
+int32_t Position_PID(int target){
+    
+    //TODO: Make Potenitometer Compatible
+    int32 current =  GetEncoderValWithFlip();
     int position = target - current;
     
     //if within tolerance exit
@@ -100,10 +123,14 @@ int Position_PID(int target){
     }
     
     int derivative = position - lastPosition;
-    
+    int PWMOut = position*kPosition + integral*kIntegral + derivative*kDerivative;
     lastPosition = position;
     
-    return (position*kPosition + integral*kIntegral + derivative*kDerivative);
+    #ifdef PRINT_PID_DEBUG
+        sprintf(txData,"c:%d, P:%d, I%d, D:%d, Out:%d", current, position, integral, derivative, PWMOut);
+    #endif
+        
+    return (PWMOut);
 }
 
 /* [] END OF FILE */

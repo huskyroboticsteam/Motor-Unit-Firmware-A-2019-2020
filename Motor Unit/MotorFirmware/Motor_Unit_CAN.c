@@ -11,7 +11,6 @@
 */
 
 /* [] END OF FILE */
-#include "../CANLib/CANLibrary.h"
 #include "main.h"
 #include "Motor_Unit_CAN.h"
 #include "Motor_Unit_FSM.h"
@@ -21,12 +20,19 @@
 #ifdef RGB_LED_ARRAY
 #include "LED_Array.h"
 extern const uint32 StripLights_CLUT[ ];
+extern uint8_t address;
 #endif
 
 
 
 extern int16_t nextPWM;
 extern int32_t millidegreeTarget;
+
+void SendEncoderData (CANPacket *packetToSend){
+    AssembleTelemetryReportPacket(packetToSend, 0x4, address, 
+        PACKET_TELEMETRY_ANG_POSITION, CurrentPositionMiliDegree());
+    SendCANPacket(packetToSend);
+}
 
 //Reads from CAN FIFO and changes the state and mode accordingly
 void NextStateFromCAN(CANPacket *receivedPacket) {
@@ -40,7 +46,7 @@ void NextStateFromCAN(CANPacket *receivedPacket) {
                             StripLights_Pixel(0, 0, get_color_packet(0,0,255));
                             StripLights_Trigger(1);
                             #endif
-                            set_PWM(0,1,1);
+                            ClearPIDProgress();
                             SetModeTo(MOTOR_UNIT_MODE_PWM);
                             SetStateTo(CHECK_CAN);
                         }
@@ -51,7 +57,7 @@ void NextStateFromCAN(CANPacket *receivedPacket) {
                             StripLights_Pixel(1, 0, get_color_packet(0,0,255));
                             StripLights_Trigger(1);
                             #endif
-                            set_PWM(0,1,1);
+                            InitializePID();
                             SetModeTo(MOTOR_UNIT_MODE_PID);
                             SetStateTo(CHECK_CAN);
                         } else {
@@ -106,6 +112,17 @@ void NextStateFromCAN(CANPacket *receivedPacket) {
                     case(ID_MOTOR_UNIT_MAX_JNT_REV_SET):
                         break;
                     */
+                    case(ID_MOTOR_UNIT_ENC_INIT):
+                        if(GetEncoderZeroFromPacket(receivedPacket)) {
+                            QuadDec_SetCounter(0);                        
+                        }
+                        if(GetEncoderDirectionFromPacket(receivedPacket)) {
+                            SetEncoderDirReverse();
+                        } else {
+                            SetEncoderDirDefault();
+                        }
+                        SetStateTo(CHECK_CAN);
+                        break;
                     default://for 0xFF/no packets or Non recognized Packets
                         
                         if(GetState() == MOTOR_UNIT_MODE_PID){ //need to check if values set;

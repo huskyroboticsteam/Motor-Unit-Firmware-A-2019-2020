@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
   <block name="Can_addr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="Can_addr_STATUS_REG" address="0x400F0067" bitWidth="8" desc="" hidden="false" />
-    <register name="Can_addr_MASK_REG" address="0x400F0087" bitWidth="8" desc="" hidden="false" />
-    <register name="Can_addr_STATUS_AUX_CTL_REG" address="0x400F0097" bitWidth="8" desc="" hidden="false">
+    <register name="Can_addr_STATUS_REG" address="0x400F0060" bitWidth="8" desc="" hidden="false" />
+    <register name="Can_addr_MASK_REG" address="0x400F0080" bitWidth="8" desc="" hidden="false" />
+    <register name="Can_addr_STATUS_AUX_CTL_REG" address="0x400F0090" bitWidth="8" desc="" hidden="false">
       <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="ENABLED" value="1" desc="Enable counter" />
         <value name="DISABLED" value="0" desc="Disable counter" />
@@ -34,22 +34,22 @@
   <block name="Dip_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Timer_PWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="TimerUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="Timer_PWM_COUNTER" address="0x400F0004" bitWidth="24" desc="UDB.A0 - Current Down Counter Value" hidden="false" />
-    <register name="Timer_PWM_PERIOD" address="0x400F0024" bitWidth="24" desc="UDB.D0 - Assigned Period" hidden="false" />
-    <register name="Timer_PWM_Control_Reg" address="0x400F0075" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+    <register name="Timer_PWM_COUNTER" address="0x400F0002" bitWidth="24" desc="UDB.A0 - Current Down Counter Value" hidden="false" />
+    <register name="Timer_PWM_PERIOD" address="0x400F0022" bitWidth="24" desc="UDB.D0 - Assigned Period" hidden="false" />
+    <register name="Timer_PWM_Control_Reg" address="0x400F0073" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
       <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable the Timer" hidden="false" />
       <field name="CTRL_CMODE" from="6" to="5" access="RW" resetVal="" desc="Capture Mode" hidden="false" />
       <field name="CTRL_TEN" from="4" to="4" access="RW" resetVal="" desc="Trigger Enable Bit" hidden="false" />
       <field name="CTRL_TMODE" from="3" to="2" access="RW" resetVal="" desc="Trigger Mode" hidden="false" />
       <field name="CTRL_IC" from="1" to="0" access="RW" resetVal="" desc="Interrupt Count" hidden="false" />
     </register>
-    <register name="Timer_PWM_STATUS_MASK" address="0x400F0086" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+    <register name="Timer_PWM_STATUS_MASK" address="0x400F0083" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
       <field name="TIMER_STS_TC" from="0" to="0" access="R" resetVal="" desc="Enables the Interrupt on TC" hidden="false" />
       <field name="TIMER_STS_CAPT" from="1" to="1" access="R" resetVal="" desc="Enables the Interrupt on Capture" hidden="false" />
       <field name="TIMER_STS_FIFO_FULL" from="2" to="2" access="R" resetVal="" desc="FIFO Full Status " hidden="false" />
       <field name="TIMER_STS_FIFO_NEMPTY" from="3" to="3" access="R" resetVal="" desc="FIFO Empty status " hidden="false" />
     </register>
-    <register name="Timer_PWM_STATUS_AUX_CTRL" address="0x400F0096" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="Timer_PWM_STATUS_AUX_CTRL" address="0x400F0093" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -5457,9 +5457,9 @@
   <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Status_Reg_Switches" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="Status_Reg_Switches_STATUS_REG" address="0x400F0065" bitWidth="8" desc="" hidden="false" />
-    <register name="Status_Reg_Switches_MASK_REG" address="0x400F0085" bitWidth="8" desc="" hidden="false" />
-    <register name="Status_Reg_Switches_STATUS_AUX_CTL_REG" address="0x400F0095" bitWidth="8" desc="" hidden="false">
+    <register name="Status_Reg_Switches_STATUS_REG" address="0x400F0062" bitWidth="8" desc="" hidden="false" />
+    <register name="Status_Reg_Switches_MASK_REG" address="0x400F0082" bitWidth="8" desc="" hidden="false" />
+    <register name="Status_Reg_Switches_STATUS_AUX_CTL_REG" address="0x400F0092" bitWidth="8" desc="" hidden="false">
       <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="ENABLED" value="1" desc="Enable counter" />
         <value name="DISABLED" value="0" desc="Disable counter" />
@@ -5494,7 +5494,7 @@
     <block name="fisr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="ZeroTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="StripLights_StringSel" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="StripLights_StringSel_CONTROL_REG" address="0x400F0077" bitWidth="8" desc="" hidden="false" />
+      <register name="StripLights_StringSel_CONTROL_REG" address="0x400F0076" bitWidth="8" desc="" hidden="false" />
     </block>
     <block name="cisr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   </block>
@@ -5504,23 +5504,26 @@
   <block name="QuadDec" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="and_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="and_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="not_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="and_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="isr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="QuadDec_Cnt16" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
       <block name="ZeroTerminal_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
       <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
       <block name="CounterUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-      <register name="QuadDec_Cnt16_COUNTER" address="0x400F0000" bitWidth="16" desc="UDB.A0 - Current Counter Value" hidden="false" />
-      <register name="QuadDec_Cnt16_PERIOD" address="0x400F0020" bitWidth="16" desc="UDB.D0 - Assigned Period" hidden="false" />
-      <register name="QuadDec_Cnt16_COMPARE" address="0x400F0030" bitWidth="16" desc="UDB.D1 - Assigned Compare Value" hidden="false" />
-      <register name="QuadDec_Cnt16_Control_Reg" address="0x400F0072" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+      <register name="QuadDec_Cnt16_COUNTER" address="0x400F0006" bitWidth="16" desc="UDB.A0 - Current Counter Value" hidden="false" />
+      <register name="QuadDec_Cnt16_PERIOD" address="0x400F0026" bitWidth="16" desc="UDB.D0 - Assigned Period" hidden="false" />
+      <register name="QuadDec_Cnt16_COMPARE" address="0x400F0036" bitWidth="16" desc="UDB.D1 - Assigned Compare Value" hidden="false" />
+      <register name="QuadDec_Cnt16_Control_Reg" address="0x400F0074" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
         <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable Counter" hidden="false" />
         <field name="CTRL_CAPMODE" from="4" to="3" access="RW" resetVal="" desc="Capture mode" hidden="false" />
         <field name="CTRL_CMPMODE" from="2" to="0" access="RW" resetVal="" desc="Compare mode" hidden="false" />
       </register>
-      <register name="QuadDec_Cnt16_STATUS_MASK" address="0x400F0081" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+      <register name="QuadDec_Cnt16_STATUS_MASK" address="0x400F0084" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
         <field name="COUNTER_STS_CMP" from="0" to="0" access="RW" resetVal="" desc="Compare output status" hidden="false" />
         <field name="COUNTER_STS_A0ZERO" from="1" to="1" access="RW" resetVal="" desc="A0 Zero ouput status" hidden="false" />
         <field name="COUNTER_STS_OVERFLOW" from="2" to="2" access="RW" resetVal="" desc="Overflow status " hidden="false" />
@@ -5529,7 +5532,7 @@
         <field name="COUNTER_STS_FIFO_FULL" from="5" to="5" access="RW" resetVal="" desc="FIFO Full Status " hidden="false" />
         <field name="COUNTER_STS_FIFO_NEMPTY" from="6" to="6" access="RW" resetVal="" desc="FIFO Not Empty Status " hidden="false" />
       </register>
-      <register name="QuadDec_Cnt16_STATUS_AUX_CTRL" address="0x400F0091" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+      <register name="QuadDec_Cnt16_STATUS_AUX_CTRL" address="0x400F0094" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
         <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
           <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
           <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -5556,12 +5559,10 @@
         </field>
       </register>
     </block>
-    <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VirtualMux_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="bQuadDec" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="QuadDec_Cnt16_COUNTER" address="0x400F0000" bitWidth="16" desc="Counter value" hidden="false" />
-    <register name="QuadDec_STATUS_REG" address="0x400F0062" bitWidth="8" desc="Quadrature Decoder Status Register" hidden="false">
+    <block name="VirtualMux_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <register name="QuadDec_Cnt16_COUNTER" address="0x400F0006" bitWidth="16" desc="Counter value" hidden="false" />
+    <register name="QuadDec_STATUS_REG" address="0x400F0067" bitWidth="8" desc="Quadrature Decoder Status Register" hidden="false">
       <field name="OVERFLOW" from="0" to="0" access="R" resetVal="" desc="Counter overflow" hidden="false" />
       <field name="UNDERFLOW" from="1" to="1" access="R" resetVal="" desc="Counter underflow" hidden="false" />
       <field name="RESET" from="2" to="2" access="R" resetVal="" desc="Counter Reset due index" hidden="false" />
