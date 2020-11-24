@@ -56,10 +56,12 @@
         This pulls from the CAN lib's FIFO
         Also Triggers LED
         */
-        uint8_t ReadCAN(CANPacket *receivedPacket);
-        
+        uint16_t ReadCAN(CANPacket *receivedPacket);
         
         void DisplayErrorCode(uint8_t code);
+        #define MOTOR_ERROR_INVALID_PACKET  0x0
+        #define MOTOR_ERROR_WRONG_MODE      0x1
+
 #endif
     
 /* [] END OF FILE */

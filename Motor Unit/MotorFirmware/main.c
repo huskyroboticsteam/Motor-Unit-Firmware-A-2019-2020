@@ -88,7 +88,8 @@ CY_ISR(Pin_Limit_Handler){
     set_PWM(GetCurrentPWM(), ignoreLimSw, Status_Reg_Switches_Read());
     
     #ifdef CAN_TELEM_SEND
-    AssembleLimitSwitchAlertPacket(&can_send, 0x4, address, Status_Reg_Switches_Read() & 0b11);
+    AssembleLimitSwitchAlertPacket(&can_send, DEVICE_GROUP_JETSON, 
+        DEVICE_SERIAL_JETSON, Status_Reg_Switches_Read() & 0b11);
     SendCANPacket(&can_send);
     #endif
     //TODO: Select Which Encoder zeros
@@ -196,11 +197,12 @@ void PrintCanPacket(CANPacket receivedPacket){
         UART_UartPutString(txData);
     }
 
-    sprintf(txData,"\r\n");
+    sprintf(txData,"ID:%x %x %x\r\n",receivedPacket.id >> 10, 
+        (receivedPacket.id >> 6) & 0xF , receivedPacket.id & 0x3F);
     UART_UartPutString(txData);
 }
 
-uint8_t ReadCAN(CANPacket *receivedPacket){
+uint16_t ReadCAN(CANPacket *receivedPacket){
     volatile int error = PollAndReceiveCANPacket(receivedPacket);
     if(!error){
         #ifdef CAN_LED
@@ -209,8 +211,7 @@ uint8_t ReadCAN(CANPacket *receivedPacket){
         CAN_time_LED = 0;
         return receivedPacket->data[0];
     }
-    return 0xFF;//Means Errored Out
-    
+    return NO_NEW_CAN_PACKET; //Means no Packet
 }
 
 void DisplayErrorCode(uint8_t code) {

@@ -18,5 +18,6 @@
     #include "../CANLib/CANLibrary.h"
     void NextStateFromCAN(CANPacket *receivedPacket);
     void SendEncoderData(CANPacket *packetToSend);
+    #define NO_NEW_CAN_PACKET 0xFFFF
 #endif
     

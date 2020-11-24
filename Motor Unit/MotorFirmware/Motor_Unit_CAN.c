@@ -29,14 +29,14 @@ extern int16_t nextPWM;
 extern int32_t millidegreeTarget;
 
 void SendEncoderData (CANPacket *packetToSend){
-    AssembleTelemetryReportPacket(packetToSend, 0x4, address, 
+    AssembleTelemetryReportPacket(packetToSend, DEVICE_GROUP_JETSON, DEVICE_SERIAL_JETSON, 
         PACKET_TELEMETRY_ANG_POSITION, CurrentPositionMiliDegree());
     SendCANPacket(packetToSend);
 }
 
 //Reads from CAN FIFO and changes the state and mode accordingly
 void NextStateFromCAN(CANPacket *receivedPacket) {
-    uint8_t packageID = ReadCAN(receivedPacket);
+    uint16_t packageID = ReadCAN(receivedPacket);
     switch(packageID){
                     case(ID_MOTOR_UNIT_MODE_SEL):
                         if(GetModeFromPacket(receivedPacket) == MOTOR_UNIT_MODE_PWM) {
@@ -71,7 +71,7 @@ void NextStateFromCAN(CANPacket *receivedPacket) {
                             nextPWM = GetPWMFromPacket(receivedPacket);
                         } else {
                             SetStateTo(QUEUE_ERROR);
-                            DisplayErrorCode(1);
+                            DisplayErrorCode(MOTOR_ERROR_WRONG_MODE);
                         }
                         break;
                         
@@ -99,7 +99,7 @@ void NextStateFromCAN(CANPacket *receivedPacket) {
                             SetStateTo(CALC_PID);
                         } else {
                             SetStateTo(QUEUE_ERROR);
-                            DisplayErrorCode(1);
+                            DisplayErrorCode(MOTOR_ERROR_WRONG_MODE);
                         }
                         break;
                      
@@ -134,8 +134,8 @@ void NextStateFromCAN(CANPacket *receivedPacket) {
                         }
                         
                         //recieved Packet with Non Valid ID
-                        if(packageID != 0xFF) {
-                            DisplayErrorCode(0);
+                        if(packageID != NO_NEW_CAN_PACKET) {
+                            DisplayErrorCode(MOTOR_ERROR_INVALID_PACKET);
                         }
                         break;
                 }

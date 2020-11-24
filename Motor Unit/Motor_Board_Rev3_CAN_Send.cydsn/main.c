@@ -147,9 +147,7 @@ int main(void)
             SendCANPacket(&can_send);
             CyDelay(10);
             }
-     */
-            
-            
+     */     
             break;
         case(3):
             can_send.data[0] = 0;
@@ -168,6 +166,19 @@ int main(void)
             AssembleEncoderPPJRSetPacket(&can_send,0x4,0xF,5000);
             SendCANPacket(&can_send);
             CyDelay(1000);
+            break;
+        case(4):
+            for(int group = 0; group <= 0xF; group++) {
+                for(int device = 0; device <= 0x3F; device++){
+                    can_send.id = group << 6 | device;
+                    can_send.dlc = 0x3;
+                    can_send.data[0] = 0xFF;
+                    can_send.data[1] = group;
+                    can_send.data[2] = device;
+                    SendCANPacket(&can_send);
+                    CyDelay(100);
+                }
+            }
             
             break;
     }
