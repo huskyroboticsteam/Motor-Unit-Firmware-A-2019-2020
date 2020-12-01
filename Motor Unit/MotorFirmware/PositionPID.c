@@ -80,7 +80,7 @@ int32_t CurrentPositionMiliDegree(){
     if(kPPJR == 0){
         return(0);
     }
-    return (int32_t)((float)GetEncoderValWithFlip() / (float)kPPJR * (float)(360*1000));
+    return GetEncoderValWithFlip() * (360*1000) / kPPJR;
 }
 void SetPosition(int32 miliDegrees) {
         //TODO: Make Potentiometer Compatible
@@ -97,7 +97,7 @@ void SetPosition(int32 miliDegrees) {
 }
 
 int32_t MiliDegreesToTicks(int32_t miliDegrees){
-    int32_t ticks = (int32_t)((float)miliDegrees * (float)kPPJR/(float)(360*1000));// make float
+    int32_t ticks = miliDegrees * kPPJR/(360*1000);// make float
     return(ticks);
 }
 

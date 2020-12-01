@@ -123,6 +123,16 @@ void NextStateFromCAN(CANPacket *receivedPacket) {
                         }
                         SetStateTo(CHECK_CAN);
                         break;
+                    case(ID_ESTOP):
+                        set_PWM(0, 0, 0);
+                        GotoUninitState();
+                        #ifdef RGB_LED_ARRAY
+                        StripLights_MemClear(StripLights_BLACK);
+                        StripLights_Pixel(0, 0, get_color_packet(0,0,255));
+                        StripLights_Trigger(1);
+                        #endif
+               
+                        break;
                     default://for 0xFF/no packets or Non recognized Packets
                         
                         if(GetState() == MOTOR_UNIT_MODE_PID){ //need to check if values set;
