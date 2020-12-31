@@ -35,7 +35,7 @@ void SendEncoderData (CANPacket *packetToSend){
 }
 
 //Reads from CAN FIFO and changes the state and mode accordingly
-void NextStateFromCAN(CANPacket *receivedPacket) {
+void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
     uint16_t packageID = ReadCAN(receivedPacket);
     switch(packageID){
                     case(ID_MOTOR_UNIT_MODE_SEL):
@@ -123,6 +123,8 @@ void NextStateFromCAN(CANPacket *receivedPacket) {
                         }
                         SetStateTo(CHECK_CAN);
                         break;
+                        
+                    // Common Packets 
                     case(ID_ESTOP):
                         set_PWM(0, 0, 0);
                         GotoUninitState();
@@ -131,8 +133,20 @@ void NextStateFromCAN(CANPacket *receivedPacket) {
                         StripLights_Pixel(0, 0, get_color_packet(0,0,255));
                         StripLights_Trigger(1);
                         #endif
-               
                         break;
+                    
+                    case(ID_TELEMETRY_PULL):
+                        AssembleChipTypeReportPacket(packetToSend, GetSenderDeviceGroupCode(receivedPacket),
+                            GetSenderDeviceSerialNumber(receivedPacket));
+                        SendCANPacket(packetToSend);
+                        break;
+                        
+                        /*
+                    case(ID_LED_COLOR):
+                        break;
+                        */
+                        
+                        
                     default://for 0xFF/no packets or Non recognized Packets
                         
                         if(GetState() == MOTOR_UNIT_MODE_PID){ //need to check if values set;

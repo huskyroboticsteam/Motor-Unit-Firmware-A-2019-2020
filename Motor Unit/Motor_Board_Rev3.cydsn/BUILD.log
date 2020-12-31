@@ -1,5 +1,20 @@
---------------- Build Started: 11/23/2020 21:51:16 Project: Motor_Board_Rev3, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
-The code generation step is up to date.
+--------------- Build Started: 12/30/2020 19:37:53 Project: Motor_Board_Rev3, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+cydsfit.exe -.appdatapath "C:\Users\Austcha\AppData\Local\Cypress Semiconductor\PSoC Creator\4.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p "C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Motor_Board_Rev3.cyprj" -d CY8C4248AZI-L485 -s "C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+HDL Generation...
+Synthesis...
+Tech Mapping...
+Analog Placement...
+Analog Routing...
+Analog Code Generation...
+Digital Placement...
+Digital Routing...
+Bitstream Generation...
+Bitstream Verification...
+Static timing analysis...
+API Generation...
+Dependency Generation...
+Cleanup...
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\MotorFirmware\main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 ..\MotorFirmware\main.c: In function 'Period_Reset_Handler':
 ..\MotorFirmware\main.c:50:9: warning: unused variable 'timer' [-Wunused-variable]
@@ -7,19 +22,6 @@ arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-
          ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/Motor_Unit_CAN.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\MotorFirmware\Motor_Unit_CAN.c -o .\CortexM0\ARM_GCC_541\Debug\Motor_Unit_CAN.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/MotorDrive.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\MotorFirmware\MotorDrive.c -o .\CortexM0\ARM_GCC_541\Debug\MotorDrive.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/CANCommon.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\CANLib\CANCommon.c -o .\CortexM0\ARM_GCC_541\Debug\CANCommon.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/CANMotorUnit.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\CANLib\CANMotorUnit.c -o .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/CANPacket.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\CANLib\CANPacket.c -o .\CortexM0\ARM_GCC_541\Debug\CANPacket.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/PortPSOC_CY8C4248AZI_L485.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c -o .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o
-In file included from Generated_Source\PSoC4/project.h:55:0,
-                 from ..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c:12:
-..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c: In function 'CAN_FLAG_ISR':
-Generated_Source\PSoC4/CAN.h:566:58: warning: 'mailbox' may be used uninitialized in this function [-Wmaybe-uninitialized]
- #define CAN_RX_CMD_REG(i)            (*(reg32 *) (&CAN_RX[i].rxcmd))
-                                                          ^
-..\CANLib\PortFiles\PortPSOC_CY8C4248AZI_L485.c:172:13: note: 'mailbox' was declared here
-     uint8_t mailbox;
-             ^
 arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_541\Debug\Motor_Board_Rev3.a .\CortexM0\ARM_GCC_541\Debug\CyFlash.o .\CortexM0\ARM_GCC_541\Debug\CyLib.o .\CortexM0\ARM_GCC_541\Debug\cyPm.o .\CortexM0\ARM_GCC_541\Debug\cyutils.o .\CortexM0\ARM_GCC_541\Debug\CyDMA.o .\CortexM0\ARM_GCC_541\Debug\CyLFClk.o .\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM0\ARM_GCC_541\Debug\Pin_Limit_1.o .\CortexM0\ARM_GCC_541\Debug\Pin_Limit_1_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_Limit_2.o .\CortexM0\ARM_GCC_541\Debug\Pin_Limit_2_PM.o .\CortexM0\ARM_GCC_541\Debug\PWM_Motor.o .\CortexM0\ARM_GCC_541\Debug\PWM_Motor_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_Motor.o .\CortexM0\ARM_GCC_541\Debug\Pin_Motor_PM.o .\CortexM0\ARM_GCC_541\Debug\Clock_PWM.o .\CortexM0\ARM_GCC_541\Debug\Pin_Pot.o .\CortexM0\ARM_GCC_541\Debug\Pin_Pot_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_Direction.o .\CortexM0\ARM_GCC_541\Debug\Pin_Direction_PM.o .\CortexM0\ARM_GCC_541\Debug\isr_Limit_1.o .\CortexM0\ARM_GCC_541\Debug\QuadDec.o .\CortexM0\ARM_GCC_541\Debug\QuadDec_PM.o .\CortexM0\ARM_GCC_541\Debug\QuadDec_INT.o .\CortexM0\ARM_GCC_541\Debug\Pin_Encoder_A.o .\CortexM0\ARM_GCC_541\Debug\Pin_Encoder_A_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_Encoder_B.o .\CortexM0\ARM_GCC_541\Debug\Pin_Encoder_B_PM.o .\CortexM0\ARM_GCC_541\Debug\QuadDec_Cnt16.o .\CortexM0\ARM_GCC_541\Debug\QuadDec_Cnt16_PM.o .\CortexM0\ARM_GCC_541\Debug\Status_Reg_Switches.o .\CortexM0\ARM_GCC_541\Debug\Clock_2.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_PM.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_INT.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_IRQ.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_intClock.o .\CortexM0\ARM_GCC_541\Debug\RX_1.o .\CortexM0\ARM_GCC_541\Debug\RX_1_PM.o .\CortexM0\ARM_GCC_541\Debug\TX_1.o .\CortexM0\ARM_GCC_541\Debug\TX_1_PM.o .\CortexM0\ARM_GCC_541\Debug\CAN.o .\CortexM0\ARM_GCC_541\Debug\CAN_INT.o .\CortexM0\ARM_GCC_541\Debug\CAN_PM.o .\CortexM0\ARM_GCC_541\Debug\CAN_TX_RX_func.o .\CortexM0\ARM_GCC_541\Debug\CAN_isr.o .\CortexM0\ARM_GCC_541\Debug\CAN_HFCLK.o .\CortexM0\ARM_GCC_541\Debug\UART.o .\CortexM0\ARM_GCC_541\Debug\UART_SPI_UART.o .\CortexM0\ARM_GCC_541\Debug\UART_SPI_UART_INT.o .\CortexM0\ARM_GCC_541\Debug\UART_PM.o .\CortexM0\ARM_GCC_541\Debug\UART_UART.o .\CortexM0\ARM_GCC_541\Debug\UART_BOOT.o .\CortexM0\ARM_GCC_541\Debug\UART_UART_BOOT.o .\CortexM0\ARM_GCC_541\Debug\UART_SCBCLK.o .\CortexM0\ARM_GCC_541\Debug\UART_tx.o .\CortexM0\ARM_GCC_541\Debug\UART_tx_PM.o .\CortexM0\ARM_GCC_541\Debug\UART_rx.o .\CortexM0\ARM_GCC_541\Debug\UART_rx_PM.o .\CortexM0\ARM_GCC_541\Debug\Dip_1.o .\CortexM0\ARM_GCC_541\Debug\Dip_1_PM.o .\CortexM0\ARM_GCC_541\Debug\Dip_3.o .\CortexM0\ARM_GCC_541\Debug\Dip_3_PM.o .\CortexM0\ARM_GCC_541\Debug\Dip_2.o .\CortexM0\ARM_GCC_541\Debug\Dip_2_PM.o .\CortexM0\ARM_GCC_541\Debug\Dip_4.o .\CortexM0\ARM_GCC_541\Debug\Dip_4_PM.o .\CortexM0\ARM_GCC_541\Debug\Can_addr.o .\CortexM0\ARM_GCC_541\Debug\timer_clock.o .\CortexM0\ARM_GCC_541\Debug\Debug_1.o .\CortexM0\ARM_GCC_541\Debug\Debug_1_PM.o .\CortexM0\ARM_GCC_541\Debug\Debug_2.o .\CortexM0\ARM_GCC_541\Debug\Debug_2_PM.o .\CortexM0\ARM_GCC_541\Debug\StripLights.o .\CortexM0\ARM_GCC_541\Debug\StripLights_fonts.o .\CortexM0\ARM_GCC_541\Debug\Array_LED.o .\CortexM0\ARM_GCC_541\Debug\Array_LED_PM.o .\CortexM0\ARM_GCC_541\Debug\CAN_LED.o .\CortexM0\ARM_GCC_541\Debug\CAN_LED_PM.o .\CortexM0\ARM_GCC_541\Debug\ERROR_LED.o .\CortexM0\ARM_GCC_541\Debug\ERROR_LED_PM.o .\CortexM0\ARM_GCC_541\Debug\StripLights_StringSel.o .\CortexM0\ARM_GCC_541\Debug\StripLights_StringSel_PM.o .\CortexM0\ARM_GCC_541\Debug\StripLights_cisr.o .\CortexM0\ARM_GCC_541\Debug\StripLights_fisr.o .\CortexM0\ARM_GCC_541\Debug\FAULT_MOTOR.o .\CortexM0\ARM_GCC_541\Debug\FAULT_MOTOR_PM.o .\CortexM0\ARM_GCC_541\Debug\Timer_PWM.o .\CortexM0\ARM_GCC_541\Debug\Timer_PWM_PM.o .\CortexM0\ARM_GCC_541\Debug\isr_period_PWM.o .\CortexM0\ARM_GCC_541\Debug\QuadDec_isr.o .\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o
 arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_541\Debug\Motor_Board_Rev3.a
 arm-none-eabi-gcc.exe -Wl,--start-group -o "C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\CortexM0\ARM_GCC_541\Debug\Motor_Board_Rev3.elf" .\CortexM0\ARM_GCC_541\Debug\main.o .\CortexM0\ARM_GCC_541\Debug\Motor_Unit_CAN.o .\CortexM0\ARM_GCC_541\Debug\Motor_Unit_FSM.o .\CortexM0\ARM_GCC_541\Debug\MotorDrive.o .\CortexM0\ARM_GCC_541\Debug\PositionPID.o .\CortexM0\ARM_GCC_541\Debug\LED_Array.o .\CortexM0\ARM_GCC_541\Debug\CANCommon.o .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o .\CortexM0\ARM_GCC_541\Debug\CANPacket.o .\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_541\Debug\cymetadata.o .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o .\CortexM0\ARM_GCC_541\Debug\Motor_Board_Rev3.a -mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0\ARM_GCC_541\Debug/Motor_Board_Rev3.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
@@ -28,6 +30,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S "C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\CortexM0\ARM_GCC_541\Debug\Motor_Board_Rev3.elf"
-Flash used: 17838 of 262144 bytes (6.8%).
+Flash used: 16222 of 262144 bytes (6.2%).
 SRAM used: 3112 of 32768 bytes (9.5%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 11/23/2020 21:51:18 ---------------
+--------------- Build Succeeded: 12/30/2020 19:38:06 ---------------

@@ -53,7 +53,6 @@ CY_ISR(Period_Reset_Handler) {
     CAN_check_delay ++;
     ERRORTimeLED++;
     encoderTimeOut++;
-    //TODO: SEND PACKET QUEUE 10x a second
     if(encoderTimeOut >= 2){
         encoderTimeOut = 0;
         SendEncoderData(&can_send);
@@ -122,7 +121,7 @@ int main(void)
                 SetStateTo(CHECK_CAN);
                 break;
             case(CHECK_CAN):
-                NextStateFromCAN(&can_recieve);
+                NextStateFromCAN(&can_recieve, &can_send);
                 #ifdef PRINT_CAN_PACKET
                 PrintCanPacket(can_recieve);
                 #endif
