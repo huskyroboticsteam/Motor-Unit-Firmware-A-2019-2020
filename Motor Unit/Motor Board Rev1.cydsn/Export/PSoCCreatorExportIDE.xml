@@ -47,6 +47,7 @@
           <File BuildType="BUILD" Toolchain="">..\MotorFirmware\Motor_Unit_FSM.h</File>
           <File BuildType="BUILD" Toolchain="">..\MotorFirmware\MotorDrive.h</File>
           <File BuildType="BUILD" Toolchain="">..\MotorFirmware\PositionPID.h</File>
+          <File BuildType="BUILD" Toolchain="">..\MotorFirmware\Motor_Unit_Debug.h</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANCommon.c</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANCommon.h</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANLibrary.h</File>
@@ -132,6 +133,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\QuadDec.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\QuadDec.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\QuadDec_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\QuadDec_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\QuadDec_PVT.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Encoder_A.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Encoder_A.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_Encoder_A_aliases.h</File>
@@ -234,6 +237,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_PWM_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_period_PWM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_period_PWM.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\QuadDec_isr.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\QuadDec_isr.h</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">

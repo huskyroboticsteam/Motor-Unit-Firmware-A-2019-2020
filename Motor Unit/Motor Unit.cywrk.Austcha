@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Motor Unit\Motor_Board_Rev3\Header Files\main.h">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Motor Unit\Motor Board Rev1">
 <ExpandedNodeIds>
 <v>Motor Unit</v>
 <v>Motor Unit\Blink Rev 3 Debug\TopDesign</v>
@@ -42,6 +42,7 @@
 <v>Motor Unit\CAN_Basic_P4_Example01\Source Files</v>
 <v>Motor Unit\CAN_Basic_P4_Example01\Source Files\main.c</v>
 <v>Motor Unit\CAN_Basic_P4_Example01\CAN_Basic_P4_Example.pdf</v>
+<v>Motor Unit\Motor Board Rev1</v>
 <v>Motor Unit\Motor Board Rev1\TopDesign</v>
 <v>Motor Unit\Motor Board Rev1\Motor Board Rev1.cydwr</v>
 <v>Motor Unit\Motor Board Rev1\Motor Board Rev1.cydwr\Pins</v>
@@ -67,6 +68,7 @@
 <v>Motor Unit\Motor Board Rev1\Header Files\cyapicallbacks.h</v>
 <v>Motor Unit\Motor Board Rev1\Header Files\main.h</v>
 <v>Motor Unit\Motor Board Rev1\Header Files\Motor_Unit_CAN.h</v>
+<v>Motor Unit\Motor Board Rev1\Header Files\Motor_Unit_Debug.h</v>
 <v>Motor Unit\Motor Board Rev1\Header Files\Motor_Unit_FSM.h</v>
 <v>Motor Unit\Motor Board Rev1\Header Files\MotorDrive.h</v>
 <v>Motor Unit\Motor Board Rev1\Header Files\PositionPID.h</v>
@@ -77,7 +79,6 @@
 <v>Motor Unit\Motor Board Rev1\Source Files\MotorDrive.c</v>
 <v>Motor Unit\Motor Board Rev1\Source Files\PositionPID.c</v>
 <v>Motor Unit\Motor Board Rev1\Generated_Source</v>
-<v>Motor Unit\Motor Board Rev1_old_firmware</v>
 <v>Motor Unit\Motor Board Rev1_old_firmware\TopDesign</v>
 <v>Motor Unit\Motor Board Rev1_old_firmware\Motor Board Rev1_old_firmware.cydwr</v>
 <v>Motor Unit\Motor Board Rev1_old_firmware\Motor Board Rev1_old_firmware.cydwr\Pins</v>
@@ -93,6 +94,7 @@
 <v>Motor Unit\Motor Board Rev1_old_firmware\Source Files\main.c</v>
 <v>Motor Unit\Motor Board Rev1_old_firmware\Generated_Source\PSoC4</v>
 <v>Motor Unit\Motor Board Rev1_old_firmware\Generated_Source\PSoC4\UART_tx</v>
+<v>Motor Unit\Motor Board Rev2</v>
 <v>Motor Unit\Motor Board Rev2\TopDesign</v>
 <v>Motor Unit\Motor Board Rev2\Motor Board Rev2.cydwr</v>
 <v>Motor Unit\Motor Board Rev2\Motor Board Rev2.cydwr\Pins</v>
@@ -118,6 +120,7 @@
 <v>Motor Unit\Motor Board Rev2\Header Files\cyapicallbacks.h</v>
 <v>Motor Unit\Motor Board Rev2\Header Files\main.h</v>
 <v>Motor Unit\Motor Board Rev2\Header Files\Motor_Unit_CAN.h</v>
+<v>Motor Unit\Motor Board Rev2\Header Files\Motor_Unit_Debug.h</v>
 <v>Motor Unit\Motor Board Rev2\Header Files\Motor_Unit_FSM.h</v>
 <v>Motor Unit\Motor Board Rev2\Header Files\MotorDrive.h</v>
 <v>Motor Unit\Motor Board Rev2\Header Files\PositionPID.h</v>
@@ -158,7 +161,6 @@
 <v>Motor Unit\Motor Board Rev3 old firmware\Header Files\cyapicallbacks.h</v>
 <v>Motor Unit\Motor Board Rev3 old firmware\Source Files</v>
 <v>Motor Unit\Motor Board Rev3 old firmware\Source Files\main.c</v>
-<v>Motor Unit\Motor_Board_Rev3</v>
 <v>Motor Unit\Motor_Board_Rev3\TopDesign</v>
 <v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr</v>
 <v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\Pins</v>
@@ -238,41 +240,55 @@
 <v>Motor Unit\Motor_Board_Rev3_CAN_Send\Generated_Source\PSoC4</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>Motor Unit\Motor Board Rev1_old_firmware\Motor Board Rev1_old_firmware.cydwr\Clocks</v>
-<v>Motor Unit\Motor Board Rev1_old_firmware\Motor Board Rev1_old_firmware.cydwr\Interrupts</v>
-<v>Motor Unit\Motor Board Rev1_old_firmware\Motor Board Rev1_old_firmware.cydwr\System</v>
-<v>Motor Unit\Motor Board Rev1_old_firmware\Motor Board Rev1_old_firmware.cydwr\Directives</v>
-<v>Motor Unit\Motor Board Rev1_old_firmware\Motor Board Rev1_old_firmware.cydwr\Flash Security</v>
-<v>Motor Unit\Motor Board Rev1_old_firmware\Header Files</v>
-<v>Motor Unit\Motor Board Rev1_old_firmware\Header Files\cyapicallbacks.h</v>
-<v>Motor Unit\Motor Board Rev1_old_firmware\Source Files</v>
-<v>Motor Unit\Motor Board Rev1_old_firmware\Generated_Source</v>
+<v>Motor Unit</v>
+<v>Motor Unit\Blink Rev 3 Debug</v>
+<v>Motor Unit\CAN_Basic_P4_Example01</v>
+<v>Motor Unit\Motor Board Rev1</v>
+<v>Motor Unit\Motor Board Rev1\TopDesign</v>
+<v>Motor Unit\Motor Board Rev1\Motor Board Rev1.cydwr</v>
+<v>Motor Unit\Motor Board Rev1\Motor Board Rev1.cydwr\Pins</v>
+<v>Motor Unit\Motor Board Rev1\Motor Board Rev1.cydwr\Analog</v>
+<v>Motor Unit\Motor Board Rev1\Motor Board Rev1.cydwr\DMA</v>
+<v>Motor Unit\Motor Board Rev1\Motor Board Rev1.cydwr\Clocks</v>
+<v>Motor Unit\Motor Board Rev1\Motor Board Rev1.cydwr\Interrupts</v>
+<v>Motor Unit\Motor Board Rev1\Motor Board Rev1.cydwr\System</v>
+<v>Motor Unit\Motor Board Rev1\Motor Board Rev1.cydwr\Directives</v>
+<v>Motor Unit\Motor Board Rev1\Motor Board Rev1.cydwr\Flash Security</v>
+<v>Motor Unit\Motor Board Rev1\CAN Library</v>
+<v>Motor Unit\Motor Board Rev1\CAN Library\CANCommon.c</v>
+<v>Motor Unit\Motor Board Rev1\CAN Library\CANCommon.h</v>
+<v>Motor Unit\Motor Board Rev1\CAN Library\CANLibrary.h</v>
+<v>Motor Unit\Motor Board Rev1\CAN Library\CANMotorUnit.c</v>
+<v>Motor Unit\Motor Board Rev1\CAN Library\CANMotorUnit.h</v>
+<v>Motor Unit\Motor Board Rev1\CAN Library\CANPacket.c</v>
+<v>Motor Unit\Motor Board Rev1\CAN Library\CANPacket.h</v>
+<v>Motor Unit\Motor Board Rev1\CAN Library\CANSerialNumbers.h</v>
+<v>Motor Unit\Motor Board Rev1\CAN Library\Port.h</v>
+<v>Motor Unit\Motor Board Rev1\CAN Library\PortPSOC_CY8C4248AZI_L485.c</v>
+<v>Motor Unit\Motor Board Rev1\Header Files</v>
+<v>Motor Unit\Motor Board Rev1\Header Files\cyapicallbacks.h</v>
+<v>Motor Unit\Motor Board Rev1\Header Files\main.h</v>
+<v>Motor Unit\Motor Board Rev1\Header Files\Motor_Unit_CAN.h</v>
+<v>Motor Unit\Motor Board Rev1\Header Files\Motor_Unit_Debug.h</v>
+<v>Motor Unit\Motor Board Rev1\Header Files\Motor_Unit_FSM.h</v>
+<v>Motor Unit\Motor Board Rev1\Header Files\MotorDrive.h</v>
+<v>Motor Unit\Motor Board Rev1\Header Files\PositionPID.h</v>
+<v>Motor Unit\Motor Board Rev1\Source Files</v>
+<v>Motor Unit\Motor Board Rev1\Source Files\main.c</v>
+<v>Motor Unit\Motor Board Rev1\Source Files\Motor_Unit_CAN.c</v>
+<v>Motor Unit\Motor Board Rev1\Source Files\Motor_Unit_FSM.c</v>
+<v>Motor Unit\Motor Board Rev1\Source Files\MotorDrive.c</v>
+<v>Motor Unit\Motor Board Rev1\Source Files\PositionPID.c</v>
+<v>Motor Unit\Motor Board Rev1\Generated_Source</v>
+<v>Motor Unit\Motor Board Rev1\Generated_Source\PSoC4</v>
+<v>Motor Unit\Motor Board Rev1_old_firmware</v>
 <v>Motor Unit\Motor Board Rev2</v>
-<v>Motor Unit\Motor Board Rev2_old_firmware</v>
-<v>Motor Unit\Motor Board Rev3 old firmware</v>
-<v>Motor Unit\Motor_Board_Rev3</v>
-<v>Motor Unit\Motor_Board_Rev3\TopDesign</v>
-<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr</v>
-<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\Pins</v>
-<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\Analog</v>
-<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\DMA</v>
-<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\Clocks</v>
-<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\Interrupts</v>
-<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\System</v>
-<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\Directives</v>
-<v>Motor Unit\Motor_Board_Rev3\Motor_Board_Rev3.cydwr\Flash Security</v>
-<v>Motor Unit\Motor_Board_Rev3\CAN Library</v>
-<v>Motor Unit\Motor_Board_Rev3\CAN Library\CANCommon.c</v>
-<v>Motor Unit\Motor_Board_Rev3\CAN Library\CANCommon.h</v>
-<v>Motor Unit\Motor_Board_Rev3\CAN Library\CANLibrary.h</v>
-<v>Motor Unit\Motor_Board_Rev3\CAN Library\CANMotorUnit.c</v>
-<v>Motor Unit\Motor_Board_Rev3\CAN Library\CANMotorUnit.h</v>
-<v>Motor Unit\Motor_Board_Rev3\CAN Library\CANPacket.c</v>
-<v>Motor Unit\Motor_Board_Rev3\CAN Library\CANPacket.h</v>
-<v>Motor Unit\Motor_Board_Rev3\CAN Library\CANSerialNumbers.h</v>
-<v>Motor Unit\Motor_Board_Rev3\CAN Library\Port.h</v>
-<v>Motor Unit\Motor_Board_Rev3\CAN Library\PortPSOC_CY8C4248AZI_L485.c</v>
-<v>Motor Unit\Motor_Board_Rev3\Header Files</v>
+<v>Motor Unit\Motor Board Rev2\TopDesign</v>
+<v>Motor Unit\Motor Board Rev2\Motor Board Rev2.cydwr</v>
+<v>Motor Unit\Motor Board Rev2\Motor Board Rev2.cydwr\Pins</v>
+<v>Motor Unit\Motor Board Rev2\Motor Board Rev2.cydwr\Analog</v>
+<v>Motor Unit\Motor Board Rev2\Motor Board Rev2.cydwr\DMA</v>
+<v>Motor Unit\Motor Board Rev2\Motor Board Rev2.cydwr\Clocks</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -480,6 +496,8 @@
 <v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec.lst</v>
 <v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec_Cnt16.lst</v>
 <v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec_Cnt16_PM.lst</v>
+<v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec_INT.lst</v>
+<v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec_isr.lst</v>
 <v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec_PM.lst</v>
 <v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_1.lst</v>
 <v>Motor Unit\Motor Board Rev1\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_1_PM.lst</v>
@@ -602,6 +620,8 @@
 <v>Motor Unit\Motor Board Rev2\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec.lst</v>
 <v>Motor Unit\Motor Board Rev2\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec_Cnt16.lst</v>
 <v>Motor Unit\Motor Board Rev2\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec_Cnt16_PM.lst</v>
+<v>Motor Unit\Motor Board Rev2\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec_INT.lst</v>
+<v>Motor Unit\Motor Board Rev2\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec_isr.lst</v>
 <v>Motor Unit\Motor Board Rev2\CortexM0\ARM_GCC_541\Debug\Listing Files\QuadDec_PM.lst</v>
 <v>Motor Unit\Motor Board Rev2\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_1.lst</v>
 <v>Motor Unit\Motor Board Rev2\CortexM0\ARM_GCC_541\Debug\Listing Files\RX_1_PM.lst</v>
@@ -1022,6 +1042,21 @@
 <v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_1_PM.lst</v>
 <v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
 <v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_2_PM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_3.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_3_PM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_4.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_4_PM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Direction.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_Direction_PM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_Motor.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_Motor_PM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\PWM_PM.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\Status_Reg_1.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_cisr.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_fisr.lst</v>
+<v>Motor Unit\Blink Rev 3 Debug\CortexM0\ARM_GCC_541\Debug\Listing Files\StripLights_fonts.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -1310,6 +1345,21 @@
 <v>Motor Unit\CAN_Basic_P4_Example01\SCB_P4_v3_20.pdf</v>
 <v>Motor Unit\CAN_Basic_P4_Example01\SwitchSPST_v1_0.pdf</v>
 <v>Motor Unit\CAN_Basic_P4_Example01\TCPWM_P4_v2_10.pdf</v>
+<v>Motor Unit\Motor Board Rev1</v>
+<v>Motor Unit\Motor Board Rev1\PSoC 4 Architecture TRM</v>
+<v>Motor Unit\Motor Board Rev1\PSoC 4200L Family Datasheet</v>
+<v>Motor Unit\Motor Board Rev1\System Reference Guides</v>
+<v>Motor Unit\Motor Board Rev1\System Reference Guides\cy_boot_v5_70</v>
+<v>Motor Unit\Motor Board Rev1\System Reference Guides\cy_dmac_v1_10</v>
+<v>Motor Unit\Motor Board Rev1\System Reference Guides\cy_lfclk_v1_20</v>
+<v>Motor Unit\Motor Board Rev1\CAN_v3_0.pdf</v>
+<v>Motor Unit\Motor Board Rev1\cy_clock_v2_20</v>
+<v>Motor Unit\Motor Board Rev1\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>Motor Unit\Motor Board Rev1\cy_isr_v1_70</v>
+<v>Motor Unit\Motor Board Rev1\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>Motor Unit\Motor Board Rev1\cy_pins_v2_20</v>
+<v>Motor Unit\Motor Board Rev1\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Motor Unit\Motor Board Rev1\CyStatusReg_v1_90</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>

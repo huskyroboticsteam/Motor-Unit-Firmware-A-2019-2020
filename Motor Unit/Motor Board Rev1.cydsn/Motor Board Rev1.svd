@@ -19,7 +19,7 @@
         <register>
           <name>Can_addr_STATUS_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0064</addressOffset>
+          <addressOffset>0x400F0067</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28,7 +28,7 @@
         <register>
           <name>Can_addr_MASK_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0084</addressOffset>
+          <addressOffset>0x400F0087</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -37,7 +37,7 @@
         <register>
           <name>Can_addr_STATUS_AUX_CTL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0094</addressOffset>
+          <addressOffset>0x400F0097</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -26473,7 +26473,7 @@
         <register>
           <name>Timer_PWM_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x400F0075</addressOffset>
+          <addressOffset>0x400F0074</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -26916,7 +26916,7 @@
         <register>
           <name>QuadDec_STATUS_REG</name>
           <description>Quadrature Decoder Status Register</description>
-          <addressOffset>0x400F0060</addressOffset>
+          <addressOffset>0x400F0061</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>

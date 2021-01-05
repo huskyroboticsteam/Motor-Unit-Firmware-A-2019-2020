@@ -88,6 +88,8 @@
 <dep name=".\Generated_Source\PSoC4\Pin_Pot_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec_Cnt16.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_isr.h" />
 <dep name=".\Generated_Source\PSoC4\RX_1.h" />
 <dep name=".\Generated_Source\PSoC4\RX_1_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\SLP.h" />
@@ -192,6 +194,8 @@
 <file name=".\Generated_Source\PSoC4\Pin_Pot_aliases.h" />
 <file name=".\Generated_Source\PSoC4\QuadDec.h" />
 <file name=".\Generated_Source\PSoC4\QuadDec_Cnt16.h" />
+<file name=".\Generated_Source\PSoC4\QuadDec_PVT.h" />
+<file name=".\Generated_Source\PSoC4\QuadDec_isr.h" />
 <file name=".\Generated_Source\PSoC4\RX_1.h" />
 <file name=".\Generated_Source\PSoC4\RX_1_aliases.h" />
 <file name=".\Generated_Source\PSoC4\SLP.h" />
@@ -782,6 +786,7 @@
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec_Cnt16.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_PVT.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
@@ -808,6 +813,19 @@
 <dep name=".\Generated_Source\PSoC4\QuadDec_Cnt16_PM.c" />
 </file>
 <file name=".\Generated_Source\PSoC4\QuadDec_Cnt16_PM.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\QuadDec_INT.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_Cnt16.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_INT.c" />
+<dep name=".\cyapicallbacks.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\QuadDec_INT.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\QuadDec_PM.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -819,6 +837,17 @@
 <dep name=".\Generated_Source\PSoC4\QuadDec_PM.c" />
 </file>
 <file name=".\Generated_Source\PSoC4\QuadDec_PM.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\QuadDec_isr.o">
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_isr.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_isr.c" />
+<dep name=".\cyapicallbacks.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\QuadDec_isr.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\RX_1.o">
 <dep name=".\Generated_Source\PSoC4\RX_1.h" />
 <dep name=".\Generated_Source\PSoC4\RX_1_aliases.h" />
@@ -1213,10 +1242,6 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\cyfitter_cfg.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\cymetadata.o">
-<dep name=".\Generated_Source\PSoC4\cymetadata.c" />
-</file>
-<file name=".\Generated_Source\PSoC4\cymetadata.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\cyutils.o">
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
@@ -1366,6 +1391,8 @@
 <dep name=".\Generated_Source\PSoC4\Pin_Pot_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec_Cnt16.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_isr.h" />
 <dep name=".\Generated_Source\PSoC4\RX_1.h" />
 <dep name=".\Generated_Source\PSoC4\RX_1_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\SLP.h" />
@@ -1486,6 +1513,8 @@
 <dep name=".\Generated_Source\PSoC4\Pin_Pot_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec_Cnt16.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_isr.h" />
 <dep name=".\Generated_Source\PSoC4\RX_1.h" />
 <dep name=".\Generated_Source\PSoC4\RX_1_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\SLP.h" />
@@ -1605,6 +1634,8 @@
 <dep name=".\Generated_Source\PSoC4\Pin_Pot_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec_Cnt16.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_isr.h" />
 <dep name=".\Generated_Source\PSoC4\RX_1.h" />
 <dep name=".\Generated_Source\PSoC4\RX_1_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\SLP.h" />
@@ -1659,6 +1690,7 @@
 <dep name="..\MotorFirmware\MotorDrive.h" />
 <dep name="..\MotorFirmware\Motor_Unit_FSM.c" />
 <dep name="..\MotorFirmware\Motor_Unit_FSM.h" />
+<dep name="..\MotorFirmware\PositionPID.h" />
 </file>
 <file name="..\MotorFirmware\Motor_Unit_FSM.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\PositionPID.o">
@@ -1710,6 +1742,8 @@
 <dep name=".\Generated_Source\PSoC4\Pin_Pot_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec_Cnt16.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_isr.h" />
 <dep name=".\Generated_Source\PSoC4\RX_1.h" />
 <dep name=".\Generated_Source\PSoC4\RX_1_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\SLP.h" />
@@ -1818,6 +1852,8 @@
 <dep name=".\Generated_Source\PSoC4\Pin_Pot_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec.h" />
 <dep name=".\Generated_Source\PSoC4\QuadDec_Cnt16.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\QuadDec_isr.h" />
 <dep name=".\Generated_Source\PSoC4\RX_1.h" />
 <dep name=".\Generated_Source\PSoC4\RX_1_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\SLP.h" />
@@ -1878,11 +1914,13 @@
 <dep name="..\MotorFirmware\LED_Array.h" />
 <dep name="..\MotorFirmware\MotorDrive.h" />
 <dep name="..\MotorFirmware\Motor_Unit_CAN.h" />
+<dep name="..\MotorFirmware\Motor_Unit_Debug.h" />
 <dep name="..\MotorFirmware\Motor_Unit_FSM.h" />
 <dep name="..\MotorFirmware\PositionPID.h" />
 <dep name="..\MotorFirmware\main.c" />
 <dep name="..\MotorFirmware\main.h" />
 </file>
+<file name="..\MotorFirmware\Motor_Unit_Debug.h" />
 <file name="..\MotorFirmware\main.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o">
 <dep name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
@@ -1892,6 +1930,10 @@
 <file name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
 <file name=".\Generated_Source\PSoC4\cydevicegnu_trm.inc" />
 <file name=".\Generated_Source\PSoC4\cyfittergnu.inc" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\cymetadata.o">
+<dep name=".\Generated_Source\PSoC4\cymetadata.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\cymetadata.c" />
 </CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
 </dependency_info>
 </CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256>
@@ -1937,6 +1979,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\Debug\isr_Limit_1.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\QuadDec.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\QuadDec_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\QuadDec_INT.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\Pin_Encoder_A.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\Pin_Encoder_A_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\Pin_Encoder_B.o" />
@@ -2012,6 +2055,7 @@
 <dep name=".\CortexM0\ARM_GCC_541\Debug\CAN_LED_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_PWM.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_PWM_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\QuadDec_isr.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\Motor Board Rev2.a" />
 </file>
 </CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
@@ -2138,6 +2182,8 @@
 <name_val_pair name="Generated_Source\PSoC4\Timer_PWM.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="Generated_Source\PSoC4\Timer_PWM_PM.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 <name_val_pair name="C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn\CortexM0\ARM_GCC_541\Debug\Motor Board Rev2.hex" v="-mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
+<name_val_pair name="Generated_Source\PSoC4\QuadDec_INT.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+<name_val_pair name="Generated_Source\PSoC4\QuadDec_isr.c" v="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\Austcha\AppData\Local\Cypress Semiconductor\PSoC Creator\4.3&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p &quot;C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn\Motor Board Rev2.cyprj&quot; -d CY8C4248AZI-L485 -s &quot;C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn\Generated_Source\PSoC4&quot; -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
@@ -2650,6 +2696,8 @@
 <v>Generated_Source\PSoC4\QuadDec.c</v>
 <v>Generated_Source\PSoC4\QuadDec.h</v>
 <v>Generated_Source\PSoC4\QuadDec_PM.c</v>
+<v>Generated_Source\PSoC4\QuadDec_INT.c</v>
+<v>Generated_Source\PSoC4\QuadDec_PVT.h</v>
 <v>Generated_Source\PSoC4\Pin_Encoder_A.c</v>
 <v>Generated_Source\PSoC4\Pin_Encoder_A.h</v>
 <v>Generated_Source\PSoC4\Pin_Encoder_A_aliases.h</v>
@@ -2926,6 +2974,8 @@
 <v>Generated_Source\PSoC4\Timer_PWM.c</v>
 <v>Generated_Source\PSoC4\Timer_PWM.h</v>
 <v>Generated_Source\PSoC4\Timer_PWM_PM.c</v>
+<v>Generated_Source\PSoC4\QuadDec_isr.c</v>
+<v>Generated_Source\PSoC4\QuadDec_isr.h</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -2935,7 +2985,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="132504956187760562" />
+<deps_time v="132542826188964776" />
 <top_block v="TopDesign" />
 <last_generation v="4" />
 <pdl_path v="" />
@@ -2945,7 +2995,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="132504956329159050" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="132542826310689319" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>

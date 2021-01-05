@@ -4795,10 +4795,13 @@
   <block name="QuadDec" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="and_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="and_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="not_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="and_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="isr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="QuadDec_Cnt16" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
       <block name="ZeroTerminal_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
       <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -4847,10 +4850,8 @@
         </field>
       </register>
     </block>
-    <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VirtualMux_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="bQuadDec" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <register name="QuadDec_Cnt16_COUNTER" address="0x400F0002" bitWidth="16" desc="Counter value" hidden="false" />
     <register name="QuadDec_STATUS_REG" address="0x400F0060" bitWidth="8" desc="Quadrature Decoder Status Register" hidden="false">
       <field name="OVERFLOW" from="0" to="0" access="R" resetVal="" desc="Counter overflow" hidden="false" />
@@ -5575,9 +5576,9 @@
   <block name="Pin_Encoder_A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Spare1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Status_Reg_Switches" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="Status_Reg_Switches_STATUS_REG" address="0x400F0065" bitWidth="8" desc="" hidden="false" />
-    <register name="Status_Reg_Switches_MASK_REG" address="0x400F0085" bitWidth="8" desc="" hidden="false" />
-    <register name="Status_Reg_Switches_STATUS_AUX_CTL_REG" address="0x400F0095" bitWidth="8" desc="" hidden="false">
+    <register name="Status_Reg_Switches_STATUS_REG" address="0x400F0067" bitWidth="8" desc="" hidden="false" />
+    <register name="Status_Reg_Switches_MASK_REG" address="0x400F0087" bitWidth="8" desc="" hidden="false" />
+    <register name="Status_Reg_Switches_STATUS_AUX_CTL_REG" address="0x400F0097" bitWidth="8" desc="" hidden="false">
       <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="ENABLED" value="1" desc="Enable counter" />
         <value name="DISABLED" value="0" desc="Disable counter" />

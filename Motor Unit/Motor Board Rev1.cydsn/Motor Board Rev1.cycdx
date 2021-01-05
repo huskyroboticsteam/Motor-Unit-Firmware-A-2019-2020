@@ -3,9 +3,9 @@
   <block name="Dip_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Dip_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Can_addr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="Can_addr_STATUS_REG" address="0x400F0064" bitWidth="8" desc="" hidden="false" />
-    <register name="Can_addr_MASK_REG" address="0x400F0084" bitWidth="8" desc="" hidden="false" />
-    <register name="Can_addr_STATUS_AUX_CTL_REG" address="0x400F0094" bitWidth="8" desc="" hidden="false">
+    <register name="Can_addr_STATUS_REG" address="0x400F0067" bitWidth="8" desc="" hidden="false" />
+    <register name="Can_addr_MASK_REG" address="0x400F0087" bitWidth="8" desc="" hidden="false" />
+    <register name="Can_addr_STATUS_AUX_CTL_REG" address="0x400F0097" bitWidth="8" desc="" hidden="false">
       <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="ENABLED" value="1" desc="Enable counter" />
         <value name="DISABLED" value="0" desc="Disable counter" />
@@ -4997,7 +4997,7 @@
     <block name="TimerUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <register name="Timer_PWM_COUNTER" address="0x400F0004" bitWidth="24" desc="UDB.A0 - Current Down Counter Value" hidden="false" />
     <register name="Timer_PWM_PERIOD" address="0x400F0024" bitWidth="24" desc="UDB.D0 - Assigned Period" hidden="false" />
-    <register name="Timer_PWM_Control_Reg" address="0x400F0075" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+    <register name="Timer_PWM_Control_Reg" address="0x400F0074" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
       <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable the Timer" hidden="false" />
       <field name="CTRL_CMODE" from="6" to="5" access="RW" resetVal="" desc="Capture Mode" hidden="false" />
       <field name="CTRL_TEN" from="4" to="4" access="RW" resetVal="" desc="Trigger Enable Bit" hidden="false" />
@@ -5104,10 +5104,13 @@
   <block name="QuadDec" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="and_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="and_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="not_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="and_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="isr" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="QuadDec_Cnt16" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
       <block name="ZeroTerminal_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
       <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -5156,12 +5159,10 @@
         </field>
       </register>
     </block>
-    <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VirtualMux_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="bQuadDec" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <register name="QuadDec_Cnt16_COUNTER" address="0x400F0002" bitWidth="16" desc="Counter value" hidden="false" />
-    <register name="QuadDec_STATUS_REG" address="0x400F0060" bitWidth="8" desc="Quadrature Decoder Status Register" hidden="false">
+    <register name="QuadDec_STATUS_REG" address="0x400F0061" bitWidth="8" desc="Quadrature Decoder Status Register" hidden="false">
       <field name="OVERFLOW" from="0" to="0" access="R" resetVal="" desc="Counter overflow" hidden="false" />
       <field name="UNDERFLOW" from="1" to="1" access="R" resetVal="" desc="Counter underflow" hidden="false" />
       <field name="RESET" from="2" to="2" access="R" resetVal="" desc="Counter Reset due index" hidden="false" />
