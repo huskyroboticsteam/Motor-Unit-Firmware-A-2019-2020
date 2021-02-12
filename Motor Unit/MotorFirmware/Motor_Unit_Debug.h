@@ -22,8 +22,8 @@
     
     //comment out things you don't want to see
     #ifdef ENABLE_DEBUG_UART
-    #define PRINT_CAN_PACKET
-   /* #define PRINT_LIMIT_SW_TRIGGER
+    /*#define PRINT_CAN_PACKET
+    #define PRINT_LIMIT_SW_TRIGGER
     #define PRINT_MOTOR_ERROR
     #define PRINT_FSM_STATE_MODE
     #define PRINT_SET_PID_CONST
