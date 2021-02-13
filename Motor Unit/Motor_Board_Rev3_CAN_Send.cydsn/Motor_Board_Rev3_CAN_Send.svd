@@ -19,7 +19,7 @@
         <register>
           <name>Can_addr_STATUS_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0062</addressOffset>
+          <addressOffset>0x400F0065</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28,7 +28,7 @@
         <register>
           <name>Can_addr_MASK_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0082</addressOffset>
+          <addressOffset>0x400F0085</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -37,7 +37,7 @@
         <register>
           <name>Can_addr_STATUS_AUX_CTL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0092</addressOffset>
+          <addressOffset>0x400F0095</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -6040,7 +6040,7 @@
         <register>
           <name>Timer_1_COUNTER</name>
           <description>UDB.A0 - Current Down Counter Value</description>
-          <addressOffset>0x400F0002</addressOffset>
+          <addressOffset>0x400F0004</addressOffset>
           <size>24</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -6049,7 +6049,7 @@
         <register>
           <name>Timer_1_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x400F0022</addressOffset>
+          <addressOffset>0x400F0024</addressOffset>
           <size>24</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -6058,7 +6058,7 @@
         <register>
           <name>Timer_1_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x400F0073</addressOffset>
+          <addressOffset>0x400F0075</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -6104,7 +6104,7 @@
         <register>
           <name>Timer_1_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x400F0080</addressOffset>
+          <addressOffset>0x400F0086</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -6143,7 +6143,7 @@
         <register>
           <name>Timer_1_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x400F0090</addressOffset>
+          <addressOffset>0x400F0096</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28635,7 +28635,7 @@
         <register>
           <name>QuadDec_Cnt16_COUNTER</name>
           <description>Counter value</description>
-          <addressOffset>0x400F0006</addressOffset>
+          <addressOffset>0x400F0000</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28644,7 +28644,7 @@
         <register>
           <name>QuadDec_STATUS_REG</name>
           <description>Quadrature Decoder Status Register</description>
-          <addressOffset>0x400F0064</addressOffset>
+          <addressOffset>0x400F0062</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28696,7 +28696,7 @@
         <register>
           <name>QuadDec_Cnt16_COUNTER</name>
           <description>UDB.A0 - Current Counter Value</description>
-          <addressOffset>0x400F0006</addressOffset>
+          <addressOffset>0x400F0000</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28705,7 +28705,7 @@
         <register>
           <name>QuadDec_Cnt16_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x400F0026</addressOffset>
+          <addressOffset>0x400F0020</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28714,7 +28714,7 @@
         <register>
           <name>QuadDec_Cnt16_COMPARE</name>
           <description>UDB.D1 - Assigned Compare Value</description>
-          <addressOffset>0x400F0036</addressOffset>
+          <addressOffset>0x400F0030</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28723,7 +28723,7 @@
         <register>
           <name>QuadDec_Cnt16_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x400F0075</addressOffset>
+          <addressOffset>0x400F0072</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28755,7 +28755,7 @@
         <register>
           <name>QuadDec_Cnt16_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x400F0087</addressOffset>
+          <addressOffset>0x400F0081</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28815,7 +28815,7 @@
         <register>
           <name>QuadDec_Cnt16_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x400F0097</addressOffset>
+          <addressOffset>0x400F0091</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28952,7 +28952,7 @@
         <register>
           <name>Status_Reg_Switches_STATUS_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0061</addressOffset>
+          <addressOffset>0x400F0067</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28961,7 +28961,7 @@
         <register>
           <name>Status_Reg_Switches_MASK_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0081</addressOffset>
+          <addressOffset>0x400F0087</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28970,7 +28970,7 @@
         <register>
           <name>Status_Reg_Switches_STATUS_AUX_CTL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0091</addressOffset>
+          <addressOffset>0x400F0097</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -29107,7 +29107,7 @@
         <register>
           <name>StripLights_StringSel_CONTROL_REG</name>
           <description>No description available</description>
-          <addressOffset>0x400F0072</addressOffset>
+          <addressOffset>0x400F0076</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>

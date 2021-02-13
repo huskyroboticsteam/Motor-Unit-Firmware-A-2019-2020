@@ -41,11 +41,13 @@
           <File BuildType="BUILD" Toolchain="">MotorDrive.c</File>
           <File BuildType="BUILD" Toolchain="">PositionPID.c</File>
           <File BuildType="BUILD" Toolchain="">LED_Array.c</File>
+          <File BuildType="BUILD" Toolchain="">DebugMessages.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">MotorDrive.h</File>
           <File BuildType="BUILD" Toolchain="">Initialize_CAN_addr.h</File>
           <File BuildType="BUILD" Toolchain="">PositionPID.h</File>
           <File BuildType="BUILD" Toolchain="">LED_Array.h</File>
+          <File BuildType="BUILD" Toolchain="">DebugMessages.h</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANCommon.c</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANCommon.h</File>
           <File BuildType="BUILD" Toolchain="">..\CANLib\CANGPIO.c</File>
@@ -266,6 +268,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FAULT_MOTOR.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FAULT_MOTOR_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\FAULT_MOTOR_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_SCB_IRQ.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_SCB_IRQ.h</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">

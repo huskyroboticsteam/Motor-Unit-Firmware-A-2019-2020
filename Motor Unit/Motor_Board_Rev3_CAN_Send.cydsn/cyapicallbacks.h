@@ -29,6 +29,7 @@
     };
     
 void Initialize(void);
+
 void PrintCanPacket(CANPacket receivedPacket);
 void ReadCan(CANPacket *receivedPacket);
 

@@ -16,6 +16,7 @@
 //#include "../CANLib/CANLibrary.h"
 #include "MotorDrive.h"
 #include "LED_Array.h"
+#include "DebugMessages.h"
 
 //LED
 uint8 time_LED = 0;
@@ -45,10 +46,6 @@ CAN_RX_CFG rxMailbox;
 
 CY_ISR(Period_Reset_Handler) {
     volatile int timer = Timer_1_ReadStatusRegister();
-   /* if(uart_debug) {
-        sprintf(txData,"Period interupt triggerd %x\r\n", timer);
-        //UART_UartPutString(txData);
-    }*/
     invalidate++;
     time_LED++;
     send_animation = send_animation >= 12 ? 0 : send_animation;
@@ -58,15 +55,10 @@ CY_ISR(Period_Reset_Handler) {
     send_animation++;
     if(invalidate >= 20){
         set_PWM(0, 0, 0);   
-        //Can_rx_pwm.done = 1;
     }
 }
   
 CY_ISR(Pin_Limit_Handler){
-   /* if(uart_debug) {
-        sprintf(txData,"Limit interupt triggerd\r\n");
-        UART_UartPutString(txData);
-    }*/
     set_PWM(0, 0, 0);
     QuadDec_SetCounter(0);
 }
@@ -75,114 +67,44 @@ int main(void)
 { 
     Initialize();
     set_all_LED_Colors(get_color_packet(0,0,255));
-   // CyDelay(2000);
     CANPacket can_recieve;
     CANPacket can_send;
     volatile int error = 0;
     can_send.id = 0x4 << 6 | 0xf;
-    can_send.dlc = 0x8;
-    uint8_t test = 0;
-
-    for(int i = 0; i < 8; i++) {
-        can_send.data[i] = i;
-    }
+    uint8_t destSerial = 1;
     for(;;)
     {
-    switch(address) {
-        case(0)://spam
-            can_send.data[0] = test;
-            if(test == 0 && can_send.data[1] == 1) {
-                can_send.data[1] = 0;
-            } else if (test == 0) {
-                can_send.data[1] = 1;
-            }
-            test++;
-            SendCANPacket(&can_send);
-            CyDelay(10);//send rate of bottom board
-        break;
-        case(1)://mode select test
-            can_send.data[0] = 0;
-            can_send.data[1] = MOTOR_UNIT_MODE_PWM;
-            SendCANPacket(&can_send);
-            CyDelay(1000);
-            can_send.data[0] = 0;
-            can_send.data[1] = MOTOR_UNIT_MODE_PID;
-            SendCANPacket(&can_send);
-            CyDelay(1000);
-        break;
-        case(2): //PWM Check
-            for(int i = 0; i < 8; i++) {
-                can_send.data[i] = 0;
-             }
-            can_send.data[0] = 0;
-            can_send.data[1] = MOTOR_UNIT_MODE_PWM;
-            SendCANPacket(&can_send);
-            CyDelay(10);
-            can_send.data[0] = 3;
-            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, 30000);
-            SendCANPacket(&can_send);
-            CyDelay(100);
-            
-/*
-            for(int i = 0; i < 32767; i+= 100) {
-            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, i);
-            SendCANPacket(&can_send);
-            CyDelay(10);
-            }
-            CyDelay(5000);
-            for(int i = 32767; i > 0; i -= 100) {
-            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, i);
-            SendCANPacket(&can_send);
-            CyDelay(10);
-            }
-            CyDelay(5000);
-            for(int i = 0; i < 32767; i+= 100) {
-            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, -i);
-            SendCANPacket(&can_send);
-            CyDelay(10);
-            }
-            CyDelay(5000);
-            for(int i = 32767; i > 0; i -= 100) {
-            AssemblePWMDirSetPacket(&can_send, 0x4, 0xF, -i);
-            SendCANPacket(&can_send);
-            CyDelay(10);
-            }
-     */     
-            break;
-        case(3):
-            can_send.data[0] = 0;
-            can_send.data[1] = MOTOR_UNIT_MODE_PID;
-            SendCANPacket(&can_send);
-            CyDelay(1000);
-            AssemblePSetPacket(&can_send,0x4,0xF,1000);
-            SendCANPacket(&can_send);
-            CyDelay(1000);
-            AssembleISetPacket(&can_send,0x4,0xF,2000);
-            SendCANPacket(&can_send);
-            CyDelay(1000);
-            AssembleDSetPacket(&can_send,0x4,0xF,3000);
-            SendCANPacket(&can_send);
-            CyDelay(1000);
-            AssembleEncoderPPJRSetPacket(&can_send,0x4,0xF,5000);
-            SendCANPacket(&can_send);
-            CyDelay(1000);
-            break;
-        case(4):
-            for(int group = 0; group <= 0xF; group++) {
-                for(int device = 0; device <= 0x3F; device++){
-                    can_send.id = group << 6 | device;
-                    can_send.dlc = 0x3;
-                    can_send.data[0] = 0xFF;
-                    can_send.data[1] = group;
-                    can_send.data[2] = device;
-                    SendCANPacket(&can_send);
-                    CyDelay(100);
+        switch(mode){
+            case(UNINIT):
+                InitializeMessage();
+                destSerial = SetTargetSerial();
+                mode = MODE_SEL;
+                break;
+            case(MODE_SEL):
+                mode = SelectModeMessage();
+                AssembleModeSetPacket(&can_send, 0x4, destSerial, mode);
+                SendCANPacket(&can_send);
+                if(mode == UNINIT){
+                    mode = MODE_SEL;
                 }
-            }
-            
-            break;
-    }
-        
+                break;
+            case(CONSTRUCT_PWM):
+                AssemblePWMDirSetPacket(&can_send, 0x4, destSerial, SetMotorPWM());
+                SendCANPacket(&can_send);
+                UART_UartPutString(txData);
+                mode = SEND_PACKET;
+                break;
+            case(CONSTRUCT_PID):
+                mode = SEND_PACKET;
+                break;
+            case(SEND_PACKET):
+                mode = CONSTRUCT_PWM;
+                break;
+            case(READ_CAN):
+            default:
+                mode = UNINIT;
+                break;
+        }
     }
 }
  
@@ -195,18 +117,13 @@ void Initialize(void) {
     //display Dip Status
     address = Can_addr_Read();
     UART_Start();
-    sprintf(txData, "Dip Addr: %x \r\n", address);
-    UART_UartPutString(txData);
     ERROR_LED_Write(~(address >> 3 & 1));
     Debug_2_Write(~(address >> 2) & 1);
     Debug_1_Write(~(address >> 1) & 1);
     CAN_LED_Write(~address & 1);
-    
-    
     InitCAN(0x4, (int)address);
     Timer_1_Start();
     QuadDec_Start();
-
     isr_Limit_1_StartEx(Pin_Limit_Handler);
     isr_period_StartEx(Period_Reset_Handler);
 }
