@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.246ms
+Loading plugins phase: Elapsed time ==> 0s.451ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -d CY8C4248AZI-L485 -s C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -d CY8C4248AZI-L485 -s C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.884ms
+Elaboration phase: Elapsed time ==> 6s.078ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.114ms
+HDL generation phase: Elapsed time ==> 0s.344ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.114ms
 ======================================================================
 Compiling:  Motor_Board_Rev3_CAN_Send.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -dcpsoc3 Motor_Board_Rev3_CAN_Send.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -dcpsoc3 Motor_Board_Rev3_CAN_Send.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Motor_Board_Rev3_CAN_Send.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -dcpsoc3 Motor_Board_Rev3_CAN_Send.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -dcpsoc3 Motor_Board_Rev3_CAN_Send.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Motor_Board_Rev3_CAN_Send.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -dcpsoc3 -verilog Motor_Board_Rev3_CAN_Send.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -dcpsoc3 -verilog Motor_Board_Rev3_CAN_Send.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Fri Feb 12 14:00:46 2021
+Fri Feb 12 17:13:10 2021
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Motor_Board_Rev3_CAN_Send.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Fri Feb 12 14:00:46 2021
+Fri Feb 12 17:13:10 2021
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
@@ -70,7 +70,7 @@ Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\wa
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cypress.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\demux_v1_10\demux_v1_10.v'
-Flattening file 'C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\FunWithLEDs\StripLightLib.cylib\B_WS2811_v1_3\B_WS2811_v1_3.v'
+Flattening file 'C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\FunWithLEDs\StripLightLib.cylib\B_WS2811_v1_3\B_WS2811_v1_3.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cypress.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'
@@ -94,7 +94,7 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
 Using control file 'Motor_Board_Rev3_CAN_Send.ctl'.
-C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\FunWithLEDs\StripLightLib.cylib\B_WS2811_v1_3\B_WS2811_v1_3.v (line 165, col 50):  Note: Substituting module 'add_vv_vv' for '+'.
+C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\FunWithLEDs\StripLightLib.cylib\B_WS2811_v1_3\B_WS2811_v1_3.v (line 165, col 50):  Note: Substituting module 'add_vv_vv' for '+'.
 C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v (line 368, col 46):  Note: Substituting module 'cmp_vv_vv' for '='.
 C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v (line 374, col 62):  Note: Substituting module 'add_vv_vv' for '+'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
@@ -106,11 +106,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  Motor_Board_Rev3_CAN_Send.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -dcpsoc3 -verilog Motor_Board_Rev3_CAN_Send.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -dcpsoc3 -verilog Motor_Board_Rev3_CAN_Send.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Fri Feb 12 14:00:47 2021
+Fri Feb 12 17:13:11 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -121,9 +121,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\codegentemp\Motor_Board_Rev3_CAN_Send.ctl'.
+Linking 'C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\codegentemp\Motor_Board_Rev3_CAN_Send.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
-Linking 'C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\codegentemp\Motor_Board_Rev3_CAN_Send.v'.
+Linking 'C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\codegentemp\Motor_Board_Rev3_CAN_Send.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Counter_v3_0\B_Counter_v3_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cypress.v'.
@@ -136,7 +136,7 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\conte
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyStatusReg_v1_90\CyStatusReg_v1_90.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\demux_v1_10\demux_v1_10.v'.
-Linking 'C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\FunWithLEDs\StripLightLib.cylib\B_WS2811_v1_3\B_WS2811_v1_3.v'.
+Linking 'C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\FunWithLEDs\StripLightLib.cylib\B_WS2811_v1_3\B_WS2811_v1_3.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
@@ -151,11 +151,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  Motor_Board_Rev3_CAN_Send.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -dcpsoc3 -verilog Motor_Board_Rev3_CAN_Send.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -dcpsoc3 -verilog Motor_Board_Rev3_CAN_Send.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Fri Feb 12 14:00:47 2021
+Fri Feb 12 17:13:14 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -166,9 +166,9 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\codegentemp\Motor_Board_Rev3_CAN_Send.ctl'.
+Linking 'C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\codegentemp\Motor_Board_Rev3_CAN_Send.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
-Linking 'C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\codegentemp\Motor_Board_Rev3_CAN_Send.v'.
+Linking 'C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\codegentemp\Motor_Board_Rev3_CAN_Send.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Counter_v3_0\B_Counter_v3_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\lib\common\cypress.v'.
@@ -181,7 +181,7 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\conte
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyStatusReg_v1_90\CyStatusReg_v1_90.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\demux_v1_10\demux_v1_10.v'.
-Linking 'C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\FunWithLEDs\StripLightLib.cylib\B_WS2811_v1_3\B_WS2811_v1_3.v'.
+Linking 'C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\FunWithLEDs\StripLightLib.cylib\B_WS2811_v1_3\B_WS2811_v1_3.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_analog_virtualmux_v1_0\cy_analog_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\Bus_Connect_v2_50\Bus_Connect_v2_50.v'.
@@ -699,16 +699,16 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj" -dcpsoc3 Motor_Board_Rev3_CAN_Send.v -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj" -dcpsoc3 Motor_Board_Rev3_CAN_Send.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 1s.292ms
+Warp synthesis phase: Elapsed time ==> 5s.104ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.3.0.1445, Family: PSoC3, Started at: Friday, 12 February 2021 14:00:48
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -d CY8C4248AZI-L485 Motor_Board_Rev3_CAN_Send.v -verilog
+cyp3fit: V4.3.0.1445, Family: PSoC3, Started at: Friday, 12 February 2021 17:13:15
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Christian\Documents\PSoC MotorBoard Firmware\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3_CAN_Send.cydsn\Motor_Board_Rev3_CAN_Send.cyprj -d CY8C4248AZI-L485 Motor_Board_Rev3_CAN_Send.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.078ms
+Design parsing phase: Elapsed time ==> 0s.062ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -2880,8 +2880,8 @@ DAC                           :      :      :      :
   7-bit IDAC                  :    0 :    2 :    2 :  0.00 %
   8-bit IDAC                  :    0 :    2 :    2 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.283ms
-Tech Mapping phase: Elapsed time ==> 0s.389ms
+Technology Mapping: Elapsed time ==> 0s.344ms
+Tech Mapping phase: Elapsed time ==> 0s.461ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="FFB & IO Pre Placement">
@@ -2920,15 +2920,15 @@ ClockGenBlock                       : CLK_GEN_[FFB(CLK_GEN,0)]
 </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Real Analog Placement">
-Elapsed time ==> 0.2972974s
+Elapsed time ==> 0.7700780s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.720ms
+Analog Placement phase: Elapsed time ==> 1s.684ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0226489 secs
+Route success=True, Iterations=1 Elapsed=0.0121964 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.027ms
+Analog Routing phase: Elapsed time ==> 0s.012ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -2959,11 +2959,11 @@ Map of item to net {
 }
 Mux Info {
 }
-Analog Code Generation phase: Elapsed time ==> 0s.050ms
+Analog Code Generation phase: Elapsed time ==> 0s.054ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 0.7 sec.
+I2076: Total run-time: 2.2 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -2987,14 +2987,14 @@ PLD Packing Summary
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.021ms
+PLD Packing: Elapsed time ==> 0s.006ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.105ms
+Partitioning: Elapsed time ==> 0s.122ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -5443,33 +5443,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |                      Name | 
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.072ms
-Digital Placement phase: Elapsed time ==> 1s.167ms
+Digital component placer commit/Report: Elapsed time ==> 0s.154ms
+Digital Placement phase: Elapsed time ==> 3s.183ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.3\PSoC Creator\dev\psoc4/2/route_arch-rrg.cydata" --vh2-path "Motor_Board_Rev3_CAN_Send_r.vh2" --pcf-path "Motor_Board_Rev3_CAN_Send.pco" --des-name "Motor_Board_Rev3_CAN_Send" --dsf-path "Motor_Board_Rev3_CAN_Send.dsf" --sdc-path "Motor_Board_Rev3_CAN_Send.sdc" --lib-path "Motor_Board_Rev3_CAN_Send_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 1s.226ms
+Digital Routing phase: Elapsed time ==> 3s.197ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.401ms
+Bitstream Generation phase: Elapsed time ==> 0s.812ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.055ms
+Bitstream Verification phase: Elapsed time ==> 0s.098ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Motor_Board_Rev3_CAN_Send_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.362ms
+Static timing analysis phase: Elapsed time ==> 1s.083ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
-Data reporting phase: Elapsed time ==> 0s.004ms
+Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.248ms
+Design database save phase: Elapsed time ==> 0s.608ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 4s.797ms
+cydsfit: Elapsed time ==> 11s.396ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 4s.805ms
-API generation phase: Elapsed time ==> 2s.559ms
-Dependency generation phase: Elapsed time ==> 0s.031ms
-Cleanup phase: Elapsed time ==> 0s.002ms
+Fitter phase: Elapsed time ==> 11s.404ms
+API generation phase: Elapsed time ==> 10s.075ms
+Dependency generation phase: Elapsed time ==> 0s.103ms
+Cleanup phase: Elapsed time ==> 0s.005ms

@@ -29,8 +29,11 @@
     #define PRINT_SET_PID_CONST
     #define PRINT_ENCODER_VALUE
     #define PRINT_PID_DEBUG
-    #define PRINT_PWM_COMMAND
         */
+        #define PRINT_CAN_PACKET
+        #define PRINT_MOTOR_ERROR
+    #define PRINT_PWM_COMMAND
+    
     #endif
     
     #define DEV_TEST
