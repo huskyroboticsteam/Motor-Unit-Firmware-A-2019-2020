@@ -39,7 +39,7 @@ void set_PWM(int16_t compare, uint8_t disable_limit, uint8 limitSW) {
     
     if (clampedCompare < 0 && (!(limitSW & 0b01) || disable_limit) ) {
         Pin_Direction_Write(0);
-        currentPWM = -clampedCompare;
+        currentPWM = clampedCompare;
         PWM_Motor_WriteCompare(-clampedCompare);
     } else if (clampedCompare > 0 && (!(limitSW & 0b10) || disable_limit) ){
         Pin_Direction_Write(1);
