@@ -14,6 +14,7 @@
 #include <project.h>
 #include "PositionPID.h"
 #include "MotorDrive.h"
+#include "main.h"
 
 int32_t kPosition = 0;
 int32_t kIntegral = 0;
@@ -21,6 +22,8 @@ int32_t kDerivative = 0;
 uint32_t kPPJR = 0;
 extern int16_t nextPWM;
 extern uint8_t ignoreLimSw;
+
+extern char txData[TX_DATA_SIZE];
 int8 flipEncoder = 1;
 uint8_t usingPot = 0;
 
@@ -31,7 +34,7 @@ int integralClamp = 500;
 
 double ratio;
 uint8 complete = 0;
-uint16 maxV = 0xFFFF;
+int32 maxV = 32767;
 
 void ClearPIDProgress() {
     final_angle = 0;
@@ -128,8 +131,9 @@ int32_t Position_PID(int target){
     
     #ifdef PRINT_PID_DEBUG
         sprintf(txData,"c:%d, P:%d, I%d, D:%d, Out:%d", current, position, integral, derivative, PWMOut);
+        UART_UartPutString(txData);   
     #endif
-        
+ 
     return (PWMOut);
 }
 
