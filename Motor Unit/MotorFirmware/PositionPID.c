@@ -20,7 +20,7 @@ int32_t kPosition = 0;
 int32_t kIntegral = 0;
 int32_t kDerivative = 0;
 uint32_t kPPJR = 0;
-extern int16_t nextPWM;
+int32_t PWM;
 extern uint8_t ignoreLimSw;
 
 extern char txData[TX_DATA_SIZE];
@@ -87,15 +87,15 @@ int32_t CurrentPositionMiliDegree(){
 }
 void SetPosition(int32 miliDegrees) {
         //TODO: Make Potentiometer Compatible
-        nextPWM = Position_PID(MiliDegreesToTicks(miliDegrees));
+        PWM = Position_PID(MiliDegreesToTicks(miliDegrees));
         
         //Max Power clamp
-        if(nextPWM > maxV){
+        if(PWM > maxV){
             set_PWM(maxV, ignoreLimSw, Status_Reg_Switches_Read());   
-        } else if(nextPWM < -maxV) {
+        } else if(PWM < -maxV) {
             set_PWM(-maxV, ignoreLimSw, Status_Reg_Switches_Read());
         } else {
-            set_PWM(nextPWM, ignoreLimSw, Status_Reg_Switches_Read());   
+            set_PWM(PWM, ignoreLimSw, Status_Reg_Switches_Read());   
         }
 }
 
@@ -107,7 +107,7 @@ int32_t MiliDegreesToTicks(int32_t miliDegrees){
 int32_t Position_PID(int target){
     
     //TODO: Make Potenitometer Compatible
-    int32 current =  GetEncoderValWithFlip();
+    int32 current =  CurrentPositionMiliDegree();
     int position = target - current;
     
     //if within tolerance exit
