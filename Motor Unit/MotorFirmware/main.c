@@ -55,7 +55,7 @@ CY_ISR(Period_Reset_Handler) {
     encoderTimeOut++;
     if(encoderTimeOut >= 2){
         encoderTimeOut = 0;
-        //SendEncoderData(&can_send);
+        SendEncoderData(&can_send);
     }
     if(invalidate >= 20){
         set_PWM(0, 0, 0);   
