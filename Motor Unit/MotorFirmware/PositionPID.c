@@ -19,7 +19,7 @@
 int32_t kPosition = 0;
 int32_t kIntegral = 0;
 int32_t kDerivative = 0;
-uint32_t kPPJR = 0;
+int32_t kPPJR = 0;
 int32_t PWM;
 extern uint8_t ignoreLimSw;
 
@@ -107,7 +107,7 @@ int32_t MiliDegreesToTicks(int32_t miliDegrees){
 int32_t Position_PID(int target){
     
     //TODO: Make Potenitometer Compatible
-    int32 current =  CurrentPositionMiliDegree();
+    int32 current =  GetEncoderValWithFlip();
     int position = target - current;
     
     //if within tolerance exit
@@ -126,7 +126,7 @@ int32_t Position_PID(int target){
     }
     
     int derivative = position - lastPosition;
-    int PWMOut = position*kPosition + integral*kIntegral + derivative*kDerivative;
+    int PWMOut = position*kPosition/10 + integral*kIntegral/10 + derivative*kDerivative/10;
     lastPosition = position;
     
     #ifdef PRINT_PID_DEBUG
