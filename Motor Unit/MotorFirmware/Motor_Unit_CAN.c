@@ -149,9 +149,9 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
                         
                     default://for 0xFF/no packets or Non recognized Packets
                         
-                        if(GetState() == MOTOR_UNIT_MODE_PID){ //need to check if values set;
+                        if(GetMode() == MOTOR_UNIT_MODE_PID){ //need to check if values set;
                             SetStateTo(CALC_PID);
-                        } else if(GetState() == MOTOR_UNIT_MODE_PWM){ //skips PWM state to not reset saftey timer
+                        } else if(GetMode() == MOTOR_UNIT_MODE_PWM){ //skips PWM state to not reset saftey timer
                             SetStateTo(CHECK_CAN);
                         } else {
                             SetStateTo(CHECK_CAN);

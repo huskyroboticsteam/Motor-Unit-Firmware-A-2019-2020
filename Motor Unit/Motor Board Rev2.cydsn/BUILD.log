@@ -1,4 +1,4 @@
---------------- Build Started: 05/05/2021 20:04:03 Project: Motor Board Rev2, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 05/18/2021 11:05:46 Project: Motor Board Rev2, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\MotorFirmware\main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 ..\MotorFirmware\main.c: In function 'Period_Reset_Handler':
@@ -16,6 +16,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S "C:\Users\Austcha\Documents\Husky Robotics\Motor Boards\Rev3\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor Board Rev2.cydsn\CortexM0\ARM_GCC_541\Debug\Motor Board Rev2.elf"
-Flash used: 13502 of 262144 bytes (5.2%).
-SRAM used: 3064 of 32768 bytes (9.4%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 05/05/2021 20:04:05 ---------------
+Flash used: 14166 of 262144 bytes (5.4%).
+SRAM used: 3056 of 32768 bytes (9.3%). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 05/18/2021 11:05:47 ---------------

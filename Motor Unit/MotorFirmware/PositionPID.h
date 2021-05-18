@@ -14,7 +14,7 @@
 #include <project.h>
 void SetPosition(int32 miliDegrees) ;
 int32_t MiliDegreesToTicks(int32_t miliDegrees);
-int32_t Position_PID(int target);
+int32_t Position_PID(int32 targetTick);
 int32_t CurrentPositionMiliDegree();
 
 void SetkPosition(int32_t kP);

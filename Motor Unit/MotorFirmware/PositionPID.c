@@ -20,7 +20,7 @@ int32_t kPosition = 0;
 int32_t kIntegral = 0;
 int32_t kDerivative = 0;
 int32_t kPPJR = 0;
-int32_t PWM;
+int32_t PWM = 0;
 extern uint8_t ignoreLimSw;
 
 extern char txData[TX_DATA_SIZE];
@@ -104,11 +104,11 @@ int32_t MiliDegreesToTicks(int32_t miliDegrees){
     return(ticks);
 }
 
-int32_t Position_PID(int target){
+int32_t Position_PID(int32 targetTick){
     
     //TODO: Make Potenitometer Compatible
-    int32 current =  GetEncoderValWithFlip();
-    int position = target - current;
+    volatile int32 current =  GetEncoderValWithFlip();
+    int32 position = targetTick - current;
     
     //if within tolerance exit
     if(position <= 5 && position >= -5) {
