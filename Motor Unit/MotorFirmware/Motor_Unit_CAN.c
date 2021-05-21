@@ -40,24 +40,22 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
     switch(packageID){
                     case(ID_MOTOR_UNIT_MODE_SEL):
                         if(GetModeFromPacket(receivedPacket) == MOTOR_UNIT_MODE_PWM) {
-                            //<init stuff for PWM>
+                            set_PWM(0, 0, 0);
                             #ifdef RGB_LED_ARRAY
                             StripLights_MemClear(StripLights_BLACK);
                             StripLights_Pixel(0, 0, get_color_packet(0,0,255));
                             StripLights_Trigger(1);
                             #endif
-                            ClearPIDProgress();
                             SetModeTo(MOTOR_UNIT_MODE_PWM);
                             SetStateTo(CHECK_CAN);
                         }
                         else if (GetModeFromPacket(receivedPacket) == MOTOR_UNIT_MODE_PID) {
-                            //<init stuff for PID>
+                            InitializePID();
                             #ifdef RGB_LED_ARRAY
                             StripLights_MemClear(StripLights_BLACK);
                             StripLights_Pixel(1, 0, get_color_packet(0,0,255));
                             StripLights_Trigger(1);
                             #endif
-                            InitializePID();
                             SetModeTo(MOTOR_UNIT_MODE_PID);
                             SetStateTo(CHECK_CAN);
                         } else {
@@ -94,7 +92,8 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
                         break;
                     
                     case(ID_MOTOR_UNIT_PID_POS_TGT_SET):
-                        if(GetMode() == MOTOR_UNIT_MODE_PID && PIDconstsSet() ) {//&& PID values set
+                        if(GetMode() == MOTOR_UNIT_MODE_PID && PIDconstsSet()) {//&& PID values set
+                            EnablePID();
                             millidegreeTarget = GetPIDTargetFromPacket(receivedPacket);
                             SetStateTo(CALC_PID);
                         } else {
@@ -113,6 +112,11 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
                         break;
                     */
                     case(ID_MOTOR_UNIT_ENC_INIT):
+                        if(GetMode() == MOTOR_UNIT_MODE_PID){ //turn off and clear PID Loop if encoder is reinit while running
+                            set_PWM(0, 0, 0);
+                            ClearPIDProgress();
+                            DisablePID();
+                        }
                         if(GetEncoderZeroFromPacket(receivedPacket)) {
                             QuadDec_SetCounter(0);                        
                         }

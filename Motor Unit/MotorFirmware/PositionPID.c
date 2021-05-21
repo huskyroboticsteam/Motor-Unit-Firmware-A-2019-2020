@@ -27,7 +27,6 @@ extern char txData[TX_DATA_SIZE];
 int8 flipEncoder = 1;
 uint8_t usingPot = 0;
 
-int32 final_angle = 0;//needs to be reset upon mode change
 int integral = 0;     //needs to be reset upon mode change
 int lastPosition = 0; //needs to be reset upon mode change
 int integralClamp = 500;
@@ -36,12 +35,26 @@ double ratio;
 uint8 complete = 0;
 int32 maxV = 32767;
 
+uint8_t enabledPID = 0;
+
 void ClearPIDProgress() {
-    final_angle = 0;
     integral = 0;
     lastPosition = 0;
 }
+
+void DisablePID() {
+    enabledPID = 0;
+}
+void EnablePID() {
+    enabledPID = 1;
+}
+uint8_t PIDIsEnabled() {
+    return(enabledPID);
+}
 void InitializePID() {
+    set_PWM(0, 0, 0);
+    ClearPIDProgress();
+    DisablePID();
     lastPosition = GetEncoderValWithFlip();
 }
 
@@ -105,7 +118,9 @@ int32_t MiliDegreesToTicks(int32_t miliDegrees){
 }
 
 int32_t Position_PID(int32 targetTick){
-    
+    if(!PIDIsEnabled()){
+        return(0);
+    }
     //TODO: Make Potenitometer Compatible
     volatile int32 current =  GetEncoderValWithFlip();
     int32 position = targetTick - current;

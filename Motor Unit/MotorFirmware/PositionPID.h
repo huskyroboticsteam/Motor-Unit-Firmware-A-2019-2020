@@ -26,6 +26,10 @@ void SetkPPJR(uint32_t kppjr);
 void ClearPIDProgress();
 void InitializePID();
 
+void DisablePID();
+void EnablePID();
+uint8_t PIDIsEnabled();
+
 int32_t GetEncoderValWithFlip();
 void SetEncoderDirDefault();
 void SetEncoderDirReverse();

@@ -1,3 +1,3 @@
---------------- Rebuild Started: 05/13/2021 21:21:41 Project: CANMotorUnit.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/CANMotorUnit.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\CANLib\CANMotorUnit.c -o .\CortexM0\ARM_GCC_541\Debug\CANMotorUnit.o
---------------- Rebuild Succeeded: 05/13/2021 21:21:42 ---------------
+--------------- Rebuild Started: 05/21/2021 10:27:05 Project: Motor_Unit_CAN.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/Motor_Unit_CAN.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\MotorFirmware\Motor_Unit_CAN.c -o .\CortexM0\ARM_GCC_541\Debug\Motor_Unit_CAN.o
+--------------- Rebuild Succeeded: 05/21/2021 10:27:08 ---------------
