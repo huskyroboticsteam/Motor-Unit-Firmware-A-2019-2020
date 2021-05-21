@@ -33,6 +33,8 @@ uint8_t PIDIsEnabled();
 int32_t GetEncoderValWithFlip();
 void SetEncoderDirDefault();
 void SetEncoderDirReverse();
+void SetMaxPIDPWM(uint16_t setValue);
+int32_t GetMaxPIDPWM();
 
 int32_t GetkPosition();
 int32_t GetkIntegral();

@@ -127,7 +127,11 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
                         }
                         SetStateTo(CHECK_CAN);
                         break;
-                        
+                    case(ID_MOTOR_UNIT_MAX_PID_PWM):
+                        SetMaxPIDPWM(GetChipTypeFromPacket(receivedPacket));
+                        SetStateTo(CHECK_CAN);
+                        break;    
+                    
                     // Common Packets 
                     case(ID_ESTOP):
                         set_PWM(0, 0, 0);
@@ -144,6 +148,7 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
                             GetSenderDeviceSerialNumber(receivedPacket));
                         SendCANPacket(packetToSend);
                         break;
+
                         
                         /*
                     case(ID_LED_COLOR):

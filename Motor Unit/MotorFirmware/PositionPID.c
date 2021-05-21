@@ -33,7 +33,7 @@ int integralClamp = 500;
 
 double ratio;
 uint8 complete = 0;
-int32 maxV = 32767;
+int32 maxPWM = 32767;
 
 uint8_t enabledPID = 0;
 
@@ -41,7 +41,6 @@ void ClearPIDProgress() {
     integral = 0;
     lastPosition = 0;
 }
-
 void DisablePID() {
     enabledPID = 0;
 }
@@ -83,6 +82,13 @@ uint32_t GetkPPJR(){
     return kPPJR;
 }
 
+void SetMaxPIDPWM(uint16_t setValue){
+    maxPWM = setValue;
+}
+int32_t GetMaxPIDPWM(){
+    return maxPWM;
+}
+
 int32_t GetEncoderValWithFlip() {
     return flipEncoder * QuadDec_GetCounter();
 }
@@ -103,10 +109,10 @@ void SetPosition(int32 miliDegrees) {
         PWM = Position_PID(MiliDegreesToTicks(miliDegrees));
         
         //Max Power clamp
-        if(PWM > maxV){
-            set_PWM(maxV, ignoreLimSw, Status_Reg_Switches_Read());   
-        } else if(PWM < -maxV) {
-            set_PWM(-maxV, ignoreLimSw, Status_Reg_Switches_Read());
+        if(PWM > GetMaxPIDPWM()){
+            set_PWM(GetMaxPIDPWM(), ignoreLimSw, Status_Reg_Switches_Read());   
+        } else if(PWM < -GetMaxPIDPWM()) {
+            set_PWM(-GetMaxPIDPWM(), ignoreLimSw, Status_Reg_Switches_Read());
         } else {
             set_PWM(PWM, ignoreLimSw, Status_Reg_Switches_Read());   
         }
