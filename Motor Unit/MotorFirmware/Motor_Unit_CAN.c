@@ -128,7 +128,7 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
                         SetStateTo(CHECK_CAN);
                         break;
                     case(ID_MOTOR_UNIT_MAX_PID_PWM):
-                        SetMaxPIDPWM(GetChipTypeFromPacket(receivedPacket));
+                        SetMaxPIDPWM(GetMaxPIDPWMFromPacket(receivedPacket));
                         SetStateTo(CHECK_CAN);
                         break;    
                     
