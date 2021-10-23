@@ -30,8 +30,7 @@
     #define PRINT_ENCODER_VALUE
     #define PRINT_PID_DEBUG
         */
-        #define PRINT_CAN_PACKET
-        #define PRINT_MOTOR_ERROR
+    #define PRINT_MOTOR_ERROR
     #define PRINT_PWM_COMMAND
     
     #endif
