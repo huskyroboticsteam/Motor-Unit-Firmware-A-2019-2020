@@ -144,9 +144,10 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
                         break;
                     
                     case(ID_TELEMETRY_PULL):
-                        AssembleChipTypeReportPacket(packetToSend, GetSenderDeviceGroupCode(receivedPacket),
-                            GetSenderDeviceSerialNumber(receivedPacket));
-                        SendCANPacket(packetToSend);
+                        //AssembleChipTypeReportPacket(packetToSend, GetSenderDeviceGroupCode(receivedPacket),
+                        //    GetSenderDeviceSerialNumber(receivedPacket));
+                        //SendCANPacket(packetToSend);
+			SendEncoderData(packetToSend);
                         break;
 
                         
