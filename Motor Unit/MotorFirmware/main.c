@@ -46,8 +46,37 @@ uint8_t CAN_check_delay = 0;
 CANPacket can_recieve;
 CANPacket can_send;
 
+
+uint16_t ReadPot() {
+    ADC_Pot_StartConvert();
+    ADC_Pot_IsEndConversion(ADC_Pot_WAIT_FOR_RESULT);
+    return ADC_Pot_GetResult16(0);
+}
+
+void DebugPrint(char input) {
+    switch(input) {
+        case 'e':
+            sprintf(txData, "Encoder Value: %li  \r\n", QuadDec_GetCounter());
+            UART_UartPutString(txData);
+            break;
+        case 'f':
+            sprintf(txData, "Mode: %x State:%x \r\n", GetMode(), GetState());
+            UART_UartPutString(txData);
+            break;
+        case 'd':
+            sprintf(txData, "P: %li I: %li D: %li PPJ: %li Ready: %i \r\n", 
+            GetkPosition(), GetkIntegral(), GetkDerivative(), GetkPPJR(), PIDconstsSet());
+            UART_UartPutString(txData);
+            break;
+        case 'p':
+            sprintf(txData, "Potentiometer Value: %d \r\n", ReadPot());
+            UART_UartPutString(txData);
+            break;
+    }
+}
+
 CY_ISR(Period_Reset_Handler) {
-    int timer = Timer_PWM_ReadStatusRegister();
+    // int timer = Timer_PWM_ReadStatusRegister();
     invalidate++;
     CAN_time_LED++;
     CAN_check_delay ++;
@@ -77,7 +106,7 @@ CY_ISR(Period_Reset_Handler) {
         #endif
     }
 }
-  
+
 CY_ISR(Pin_Limit_Handler){
     #ifdef PRINT_LIMIT_SW_TRIGGER
     sprintf(txData,"LimitSW triggerd Stat: %x \r\n", Status_Reg_Switches_Read() & 0b11);
@@ -93,6 +122,10 @@ CY_ISR(Pin_Limit_Handler){
     #endif
     //TODO: Select Which Encoder zeros
     //QuadDec_SetCounter(0);
+}
+
+CY_ISR(Telemetry_Send) {
+    SendTelemetry(&can_send);
 }
 
 int main(void)
@@ -131,23 +164,9 @@ int main(void)
                 //TODO: ERROR
                 GotoUninitState();
                 break;
-
         }
-        #ifdef PRINT_FSM_STATE_MODE
-        sprintf(txData, "Mode: %x State:%x \r\n", GetMode(), GetState());
-        UART_UartPutString(txData);
-        #endif
-        #ifdef PRINT_SET_PID_CONST
-        sprintf(txData, "P: %d I: %d D: %d PPJ: %d Ready: %d \r\n", GetkPosition(), GetkIntegral() 
-        ,GetkDerivative(), GetkPPJR(), PIDconstsSet());
-        UART_UartPutString(txData);
-        #endif
-        #ifdef PRINT_ENCODER_VALUE
-        sprintf(txData, "Encoder Value: %d  \r\n", QuadDec_GetCounter());
-        UART_UartPutString(txData);
-        #endif
-
         
+        DebugPrint(UART_UartGetByte());
     }
 }
  
@@ -183,11 +202,15 @@ void Initialize(void) {
     
     InitCAN(0x4, (int)address);
     Timer_PWM_Start();
+    Timer_Telemetry_Start();
     QuadDec_Start();
-    PWM_Motor_Start();  
+    PWM_Motor_Start();
+    ADC_Pot_Start();
+    ReadPot();
 
     isr_Limit_1_StartEx(Pin_Limit_Handler);
     isr_period_PWM_StartEx(Period_Reset_Handler);
+    isr_telemetry_StartEx(Telemetry_Send);
 }
 
 void PrintCanPacket(CANPacket receivedPacket){
