@@ -23,9 +23,7 @@ extern const uint32 StripLights_CLUT[ ];
 extern uint8_t address;
 #endif
 
-// Pot init packet IDs: ID_MOTOR_UNIT_POT_INIT_LO
-//                      ID_MOTOR_UNIT_POT_INIT_HI
-//                      DLC_MOTOR_UNIT_POT_INIT
+
 
 extern int16_t nextPWM;
 extern int32_t millidegreeTarget;

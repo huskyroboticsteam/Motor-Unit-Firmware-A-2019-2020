@@ -21,11 +21,6 @@ int32_t kIntegral = 0;
 int32_t kDerivative = 0;
 int32_t kPPJR = 0;
 int32_t PWM = 0;
-int32_t mDegMin = 0;
-int32_t mDegMax = MDEG_PER_REV;
-int32_t tickMin = 0;
-int32_t tickMax = 0;
-
 extern uint8_t ignoreLimSw;
 
 extern char txData[TX_DATA_SIZE];
@@ -59,7 +54,7 @@ void InitializePID() {
     set_PWM(0, 0, 0);
     ClearPIDProgress();
     DisablePID();
-    lastPosition = GetTicks();
+    lastPosition = GetEncoderValWithFlip();
 }
 
 void SetkPosition(int32_t kP){
@@ -86,11 +81,6 @@ int32_t GetkDerivative(){
 uint32_t GetkPPJR(){
     return kPPJR;
 }
-uint32_t updatekPPJR() {
-    if (mDegMin == mDegMax) return 0;
-    kPPJR = MDEG_PER_REV*(tickMax-tickMin)/(mDegMax-mDegMin);
-    return kPPJR
-}
 
 void SetMaxPIDPWM(uint16_t setValue){
     maxPWM = setValue;
@@ -99,11 +89,6 @@ int32_t GetMaxPIDPWM(){
     return maxPWM;
 }
 
-int32_t GetPotentiometerVal() {
-    ADC_Pot_StartConvert();
-    ADC_Pot_IsEndConversion(ADC_Pot_WAIT_FOR_RESULT);
-    return ADC_Pot_GetResult16(0);
-}
 int32_t GetEncoderValWithFlip() {
     return flipEncoder * QuadDec_GetCounter();
 }
@@ -113,13 +98,14 @@ void SetEncoderDirDefault(){
 void SetEncoderDirReverse(){
     flipEncoder = -1;
 }
-int32_t GetTicks() {
-    if (usingPot)
-        return GetPotentiometerVal();
-  
-    return GetEncoderValWithFlip();
+int32_t CurrentPositionMiliDegree(){
+    if(kPPJR == 0){
+        return(0);
+    }
+    return GetEncoderValWithFlip() * (360*1000) / kPPJR;
 }
 void SetPosition(int32 miliDegrees) {
+        //TODO: Make Potentiometer Compatible
         PWM = Position_PID(MiliDegreesToTicks(miliDegrees));
         
         //Max Power clamp
@@ -131,14 +117,10 @@ void SetPosition(int32 miliDegrees) {
             set_PWM(PWM, ignoreLimSw, Status_Reg_Switches_Read());   
         }
 }
-int32_t TicksToMiliDegrees(int32_t ticks){
-    if(kPPJR == 0) return 0;
-    
-    return mDegMin + (ticks-tickMin) * MDEG_PER_REV / kPPJR;
-}
+
 int32_t MiliDegreesToTicks(int32_t miliDegrees){
-    int32_t ticks = tickMin + (miliDegrees-mDegMin) * kPPJR / MDEG_PER_REV;// make float
-    return ticks;
+    int32_t ticks = miliDegrees * kPPJR/(360*1000);// make float
+    return(ticks);
 }
 
 int32_t Position_PID(int32 targetTick){
@@ -146,7 +128,7 @@ int32_t Position_PID(int32 targetTick){
         return(0);
     }
     //TODO: Make Potenitometer Compatible
-    volatile int32 current =  GetTicks();
+    volatile int32 current =  GetEncoderValWithFlip();
     int32 position = targetTick - current;
     
     //if within tolerance exit

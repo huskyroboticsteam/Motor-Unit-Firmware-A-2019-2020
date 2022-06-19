@@ -46,6 +46,13 @@ uint8_t CAN_check_delay = 0;
 CANPacket can_recieve;
 CANPacket can_send;
 
+
+uint16_t ReadPot() {
+    ADC_Pot_StartConvert();
+    ADC_Pot_IsEndConversion(ADC_Pot_WAIT_FOR_RESULT);
+    return ADC_Pot_GetResult16(0);
+}
+
 void DebugPrint(char input) {
     switch(input) {
         case 'e':
@@ -62,7 +69,7 @@ void DebugPrint(char input) {
             UART_UartPutString(txData);
             break;
         case 'p':
-            sprintf(txData, "Potentiometer Value: %d \r\n", GetPotentiometerVal());
+            sprintf(txData, "Potentiometer Value: %d \r\n", ReadPot());
             UART_UartPutString(txData);
             break;
     }

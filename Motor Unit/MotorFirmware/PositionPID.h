@@ -12,19 +12,15 @@
 
 /* [] END OF FILE */
 #include <project.h>
-
-#define MDEG_PER_REV 360000
-
 void SetPosition(int32 miliDegrees) ;
 int32_t MiliDegreesToTicks(int32_t miliDegrees);
 int32_t Position_PID(int32 targetTick);
-int32_t TicksToMiliDegrees(int32_t ticks);
+int32_t CurrentPositionMiliDegree();
 
 void SetkPosition(int32_t kP);
 void SetkIntegral(int32_t kI);
 void SetkDerivative(int32_t kD);
 void SetkPPJR(uint32_t kppjr);
-uint32_t updatekPPJR();
 
 //used for mode change 
 void ClearPIDProgress();
@@ -44,4 +40,3 @@ int32_t GetkPosition();
 int32_t GetkIntegral();
 int32_t GetkDerivative();
 uint32_t GetkPPJR();//pulses per joint revolution
-
