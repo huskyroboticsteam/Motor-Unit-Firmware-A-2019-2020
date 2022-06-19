@@ -34,10 +34,6 @@ void SendEncoderData (CANPacket *packetToSend){
     SendCANPacket(packetToSend);
 }
 
-void SendTelemetry (CANPacket *packetToSend) {
-    SendEncoderData(packetToSend);
-}
-
 //Reads from CAN FIFO and changes the state and mode accordingly
 void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
     uint16_t packageID = ReadCAN(receivedPacket);
