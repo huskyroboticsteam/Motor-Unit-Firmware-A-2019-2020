@@ -46,6 +46,37 @@ uint8_t CAN_check_delay = 0;
 CANPacket can_recieve;
 CANPacket can_send;
 
+// send debug info over UART
+void DebugPrint(char input) {
+    switch(input) {
+        case 'e':
+            sprintf(txData, "Encoder Value: %li  \r\n", QuadDec_GetCounter());
+            UART_UartPutString(txData);
+            break;
+        case 'f':
+            sprintf(txData, "Mode: %x State:%x \r\n", GetMode(), GetState());
+            UART_UartPutString(txData);
+            break;
+        case 'd':
+            sprintf(txData, "P: %li I: %li D: %li PPJ: %li Ready: %i \r\n", 
+            GetkPosition(), GetkIntegral(), GetkDerivative(), GetkPPJR(), PIDconstsSet());
+            UART_UartPutString(txData);
+            break;
+        case 'p':
+            sprintf(txData, "Position: %d \r\n", GetPosition());
+            UART_UartPutString(txData);
+            break;
+        case 'x':
+            sprintf(txData, "Value: %d  ADC range: %d-%d  mDeg range: %d-%d  usePot=%d\r\n", 
+                            GetPotVal(), 
+                            getTickMin(), getTickMax(),
+                            getmDegMin(), getmDegMax(),
+                            UsingPot());
+            UART_UartPutString(txData);
+            break;
+    }
+}
+
 CY_ISR(Period_Reset_Handler) {
     int timer = Timer_PWM_ReadStatusRegister();
     invalidate++;
@@ -131,23 +162,8 @@ int main(void)
                 //TODO: ERROR
                 GotoUninitState();
                 break;
-
-        }
-        #ifdef PRINT_FSM_STATE_MODE
-        sprintf(txData, "Mode: %x State:%x \r\n", GetMode(), GetState());
-        UART_UartPutString(txData);
-        #endif
-        #ifdef PRINT_SET_PID_CONST
-        sprintf(txData, "P: %d I: %d D: %d PPJ: %d Ready: %d \r\n", GetkPosition(), GetkIntegral() 
-        ,GetkDerivative(), GetkPPJR(), PIDconstsSet());
-        UART_UartPutString(txData);
-        #endif
-        #ifdef PRINT_ENCODER_VALUE
-        sprintf(txData, "Encoder Value: %d  \r\n", QuadDec_GetCounter());
-        UART_UartPutString(txData);
-        #endif
-
-        
+        }    
+        DebugPrint(UART_UartGetByte());
     }
 }
  

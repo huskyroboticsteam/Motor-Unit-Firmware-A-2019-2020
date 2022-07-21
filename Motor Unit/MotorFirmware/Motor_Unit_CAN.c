@@ -30,7 +30,7 @@ extern int32_t millidegreeTarget;
 
 void SendEncoderData (CANPacket *packetToSend){
     AssembleTelemetryReportPacket(packetToSend, DEVICE_GROUP_JETSON, DEVICE_SERIAL_JETSON, 
-        PACKET_TELEMETRY_ANG_POSITION, CurrentPositionMiliDegree());
+        PACKET_TELEMETRY_ANG_POSITION, GetPosition());
     SendCANPacket(packetToSend);
 }
 
@@ -111,6 +111,20 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
                     case(ID_MOTOR_UNIT_MAX_JNT_REV_SET):
                         break;
                     */
+                    case (ID_MOTOR_UNIT_POT_INIT_LO):
+                        setTickMin(GetPotADCFromPacket(receivedPacket));
+                        setmDegMin(GetPotmDegFromPacket(receivedPacket));
+                        usePot();
+                        SetStateTo(CHECK_CAN);
+                        break;
+                        
+                    case (ID_MOTOR_UNIT_POT_INIT_HI):
+                        setTickMax(GetPotADCFromPacket(receivedPacket));
+                        setmDegMax(GetPotmDegFromPacket(receivedPacket));
+                        usePot();
+                        SetStateTo(CHECK_CAN);
+                        break;
+                        
                     case(ID_MOTOR_UNIT_ENC_INIT):
                         if(GetMode() == MOTOR_UNIT_MODE_PID){ //turn off and clear PID Loop if encoder is reinit while running
                             set_PWM(0, 0, 0);
@@ -125,6 +139,7 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
                         } else {
                             SetEncoderDirDefault();
                         }
+                        useEnc();
                         SetStateTo(CHECK_CAN);
                         break;
                     case(ID_MOTOR_UNIT_MAX_PID_PWM):
