@@ -201,6 +201,8 @@ void Initialize(void) {
     Timer_PWM_Start();
     QuadDec_Start();
     PWM_Motor_Start();  
+    ADC_Pot_Start();
+    GetPotVal();
 
     isr_Limit_1_StartEx(Pin_Limit_Handler);
     isr_period_PWM_StartEx(Period_Reset_Handler);

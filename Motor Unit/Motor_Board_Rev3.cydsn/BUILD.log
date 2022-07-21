@@ -1,4 +1,4 @@
---------------- Build Started: 07/20/2022 18:10:19 Project: Motor_Board_Rev3, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 07/21/2022 08:58:27 Project: Motor_Board_Rev3, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485 -Wall -ffunction-sections -ffat-lto-objects -Og -c ..\MotorFirmware\main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 ..\MotorFirmware\main.c: In function 'DebugPrint':
@@ -50,6 +50,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S "C:\Users\casey\Desktop\Summer22_Robotics\Motor-Unit-Firmware-A-2019-2020\Motor Unit\Motor_Board_Rev3.cydsn\CortexM0\ARM_GCC_541\Debug\Motor_Board_Rev3.elf"
-Flash used: 17726 of 262144 bytes (6.8%).
-SRAM used: 3136 of 32768 bytes (9.6%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 07/20/2022 18:10:21 ---------------
+Flash used: 18062 of 262144 bytes (6.9%).
+SRAM used: 3144 of 32768 bytes (9.6%). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 07/21/2022 08:58:31 ---------------
