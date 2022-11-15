@@ -115,6 +115,7 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
                         setTickMin(GetPotADCFromPacket(receivedPacket));
                         setmDegMin(GetPotmDegFromPacket(receivedPacket));
                         usePot();
+                        updatekPPJR();
                         SetStateTo(CHECK_CAN);
                         break;
                         
@@ -122,6 +123,7 @@ void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend) {
                         setTickMax(GetPotADCFromPacket(receivedPacket));
                         setmDegMax(GetPotmDegFromPacket(receivedPacket));
                         usePot();
+                        updatekPPJR();
                         SetStateTo(CHECK_CAN);
                         break;
                         
