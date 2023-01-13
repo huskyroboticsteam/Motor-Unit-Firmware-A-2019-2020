@@ -115,10 +115,16 @@ int32_t GetMaxPIDPWM(){
 }
 
 int32_t GetPotVal() {
-    ADC_Pot_StartConvert();
-    ADC_Pot_IsEndConversion(ADC_Pot_WAIT_FOR_RESULT);
-    return ADC_Pot_GetResult16(0);
+    int32_t n = 1000;
+    int32_t sum = 0;
+    for (int i = 0; i < n; i++) {
+        ADC_Pot_StartConvert();
+        ADC_Pot_IsEndConversion(ADC_Pot_WAIT_FOR_RESULT);
+        sum += ADC_Pot_GetResult16(0);
+    }
+    return sum/n;
 }
+
 int32_t GetEncoderValWithFlip() {
     return flipEncoder * QuadDec_GetCounter();
 }
